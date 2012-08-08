@@ -1,0 +1,662 @@
+Building documentation...
+Memory before build: 1026768
+Initializing...
+Merging XML documentation...
+Cached doc : evildicom.xml (0.016 sec.)
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Components.DicomObject':
+<summary>
+            The DICOMObject class contains all the necessary variables and methods of 
+            a DICOM object including a Tag, VR (with an encoding type), Byte Data, and a
+            boolean describing the byte encoding.
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.DicomObject.vr':
+<summary>
+            The two letter VR type in string format
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.DicomObject.tag':
+<summary>
+            The Tag which contains the id of this DICOM object
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.DicomObject.byteData':
+<summary>
+            The raw byte data of the DICOM object. It is not very useful without the VR necessary to decode it.
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.DicomObject.encodeType':
+<summary>
+            Describes the encoding type of the VR (Implicit, Explicit, Long Explicit)
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.DicomObject.littleEndian':
+<summary>
+            A boolean that indicates whether or not the bytes are written in little or big endian.
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomObject.#ctor':
+<summary>
+            The constructor for the DICOM object
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomObject.WriteBytes(System.IO.BinaryWriter,System.Boolean)':
+<summary>
+            A method which writes the bytes of this DICOM object in little or big endian encoding
+            based on the isLittleEndian variable
+            </summary>
+<param name="b">the Binary writer for writing the bytes</param>
+<param name="isLittleEndian"> A boolean that indicates whether or not the bytes are written in little or big endian.</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomObject.Encode(System.Boolean)':
+<summary>
+            This method is used to check the endian of the
+            Dicom object and arrange the byte data accordingly.
+            This method is normally only called by children of the DICOMObject
+            class and only when it is changing from one endianness to another.
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomObject.find(System.String[])':
+<summary>
+            This method is defined to be overridden by descendant classes such as
+            the Sequence class. For a normal DICOM object with no internal DICOM Objects,
+            this method returns null. 
+            </summary>
+<param name="p"></param>
+<returns></returns>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.DicomObject.VR':
+<summary>
+            The two letter VR type in string format
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.DicomObject.IsLittleEndian':
+<summary>
+            A boolean that indicates whether or not the bytes are written in little or big endian.
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.DicomObject.Length':
+<summary>
+            An integer representing the length of the entire DICOM object which includes
+            the byte data, length parameter, VR (sometimes explicitly), and Tag ID.
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.DicomObject.EncodeType':
+<summary>
+            Describes the encoding type of the VR (Implicit, Explicit, Long Explicit)
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.DicomObject.Tag':
+<summary>
+            The Tag which contains the id of this DICOM object
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.DicomObject.ByteData':
+<summary>
+            The raw byte data of the DICOM object. It is not very useful without the VR necessary to decode it.
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.DicomObject.IsSequence':
+<summary>
+            A boolean which indicates if this DICOM object is a sequence.
+            </summary>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.VR.SequenceItem':
+<summary>
+            The Sequence Item is the object contained within the Sequence Class.
+            Each Sequence Item holds a list of dicom objects, which can include a Sequence Object.
+            </summary>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Components.DicomCollection':
+<summary>
+            The DicomCollection class is an abstract class to be inherited by any class that
+            contains a collection of DICOM objects. It contains useful methods for searching
+            a collection of DICOM objects by Tag ID.
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.DicomCollection.collection':
+<summary>
+            The collection of DICOM objects
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.DicomCollection.isLittleEndian':
+<summary>
+            A boolean that indicates whether or not the bytes are written in little or big endian.
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomCollection.AddObject(EvilDicom.Components.DicomObject)':
+<summary>
+            Adds a DICOM object to the collection
+            </summary>
+<param name="d">the DICOM object to be added</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomCollection.Find(System.String)':
+<summary>
+            This method searches the dicom file for a particular tag.
+            </summary>
+<param name="id">The tag to be searched (eg. "00030000" for 0003,0000)</param>
+<returns>Returns the fist tag found in the dicom file that matches the id input parameter.</returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomCollection.Find(System.String[])':
+<summary>
+            This method searches the dicom file using a chain of strings. It is intended to be used to find particular tags deep within the Dicom structure.
+            To use it, simply input a string array containing the descending tags to be searched. The method will return results that match the last tag
+            in the string array if and only if they have parent tags that match the preceeding tags in the string array. A string array then looks like this:
+            new string[]{parent, child A, child B (child of A), clild C (child of B)..etc...,child Final (search taget)}
+            </summary>
+<param name="ids">string array that contains the descendant selection tags with the target in the last index</param>
+<returns>Returns a list of dicom objects that match the tag search chain</returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomCollection.WriteBytes(System.IO.BinaryWriter,System.Boolean)':
+<summary>
+            Writes the byte sequence of this collection in big or little endian
+            encoding, depending on the setting of the isLittleEndian variable.
+            </summary>
+<param name="b">a Binary writer used to write the bytes</param>
+<param name="isLittleEndian">A boolean that indicates whether or not the bytes are written in little or big endian.</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomCollection.WriteBytes(System.IO.BinaryWriter,System.Boolean,System.Int32)':
+<summary>
+            Writes the byte sequence of this collection in big or little endian
+            encoding, depending on the setting of the isLittleEndian variable. Only writes the number of
+            objects in the objects to write parameter
+            </summary>
+<param name="b">a Binary writer used to write the bytes</param>
+<param name="isLittleEndian">A boolean that indicates whether or not the bytes are written in little or big endian.</param>
+<param name="objectsToWrite">Number of objects to write</param>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.DicomCollection.Length':
+<summary>
+            The entire byte length of all DICOM objects in the collection added together
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.VR.SequenceItem.#ctor':
+<summary>
+            The Sequence Item does not have a VR as it is just a container to a 
+            list of dicom objects. Additionally, the Encode Type is set to Implicit because
+            the encoding is similar to Implicit encoding (eg. the length is written
+            in bytes 4-7 for both length types)
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.VR.SequenceItem.Length':
+<summary>
+            This length adds the tag to the length of all DICOM objects contained within the sequence item.
+            </summary>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Components.Constants':
+<summary>
+            The Constants class stores all of the Constant values (except for Tag IDs) that might need to be accessed from most DICOM programs.
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.IMPLICIT_VR_LITTLE_ENDIAN':
+<summary>
+            Unique ID that represents an implicit VR with little endian encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.EXPLICIT_VR_LITTLE_ENDIAN':
+<summary>
+            Unique ID that represents an explicit VR with little endian encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.EXPLICIT_VR_BIG_ENDIAN':
+<summary>
+            Unique ID that represents an explicit VR with big endian encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.RLE_LOSSLESS':
+<summary>
+            Unique ID that represents RLE lossless image encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.JPEG_BASELINE':
+<summary>
+            Unique ID that represents JPEG baseline image encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.JPEG_EXTENDED':
+<summary>
+            Unique ID that represents JPEG Extended image encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.JPEG_PROGRESSIVE':
+<summary>
+            Unique ID that represents JPEG Progressive image encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.JPEG_LOSSLESS_14':
+<summary>
+            Unique ID that represents JPEG lossless (Process 14) image encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.JPEG_LOSSLESS_15':
+<summary>
+             Unique ID that represents JPEG lossless (Process 15) image encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.JPEG_LOSSLESS_14_S1':
+<summary>
+             Unique ID that represents JPEG lossless (Process 14 Selection Value 1) image encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.JPEG_LS_LOSSLESS':
+<summary>
+             Unique ID that represents JPEG-LS lossless image encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.JPEG_LS_NEAR_LOSSLESS':
+<summary>
+            Unique ID that represents JPEG-LS near lossless image encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.JPEG_2000_LOSSLESS':
+<summary>
+            Unique ID that represents JPEG 2000 lossless image encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.JPEG_2000':
+<summary>
+            Unique ID that represents JPEG 2000 image encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.INDEFINITE_LENGTH':
+<summary>
+            A four byte array containing the bytes representing indefinite length of a sequence or sequence item.
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Constants.ZERO_LENGTH':
+<summary>
+            A four byte array containing the bytes representing zero length.
+            </summary>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Components.Constants.LengthType':
+<summary>
+            An enum to distiguish between finite and indefinite types of sequences or sequence items.
+            </summary>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Components.Constants.EncodeType':
+<summary>
+            An enum to distinguish between the three types of Value Representation coding.
+            Implicit = no VR specified
+            Explicit_2 = VR specified, 2 byte length
+            Explicit_4 = VR specified, 4 byte length
+            </summary>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Components.Constants.TransferSyntax':
+<summary>
+            An enum representing the transfer syntax of a given DICOM file.
+            </summary>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Helper.ArrayHelper':
+<summary>
+            A class used for working with arrays and lists.
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.ArrayHelper.ReverseArray``1(``0[])':
+<summary>
+            A method which returns a copy of the passed in array in reverse order.
+            </summary>
+<typeparam name="T">the class of the object type within the array</typeparam>
+<param name="array">the array to be reversed</param>
+<returns></returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.ArrayHelper.CopyArray``1(``0[])':
+<summary>
+            A method which returns a copy of the passed in array.
+            </summary>
+<typeparam name="T">the class of the object type within the array</typeparam>
+<param name="array">the array to be copied</param>
+<returns></returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.ArrayHelper.CopyList``1(System.Collections.Generic.List{``0})':
+<summary>
+            A method which returns a copy of the passed in list.
+            </summary>
+<typeparam name="T">the class type of the list</typeparam>
+<param name="list">the list to be copied
+            </param>
+<returns></returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.ArrayHelper.isEqualArray``1(``0[],``0[])':
+<summary>
+            A method that compares each object in two arrays to see if the arrays are equal
+            </summary>
+<typeparam name="T">the class type of the array</typeparam>
+<param name="array1">the first array to be compared</param>
+<param name="array2">the second array to be compared</param>
+<returns></returns>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Components.DicomFile':
+<summary>
+             The DICOMFile class is simply a DICOM Collection with methods
+             to read and write files. This class depends heavily on the DICOMReader
+             class in the EvilDicom.Helper namespace.
+             </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomFile.#ctor':
+<summary>
+            Empty constructor for the DicomFile object
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomFile.#ctor(System.String)':
+<summary>
+            The main constructor of the DicomFile object which takes a string
+            path of a DICOM file and parses the file into a collection of accessable
+            DICOM objects which it adds to its collection.
+            </summary>
+<param name="path">the string path to the DICOM file</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomFile.WriteFile(System.String,System.Boolean)':
+<summary>
+            This method writes the bytes of a DICOM file which includes the DICOM preamble of 
+            128 null bytes followed by the ASCII characters "DICM".
+            </summary>
+<param name="path">the string path indicating where to write the file and the name of the file</param>
+<param name="isLittleEndian">a boolean indicating whether or not the bytes are to be written in little or big endian encoding</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomFile.WriteFile(System.String)':
+<summary>
+            This method writes the bytes of a DICOM file which includes the DICOM preamble of 
+            128 null bytes followed by the ASCII characters "DICM".
+            </summary>
+             /// <param name="path">the string path indicating where to write the file and the name of the file</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomFile.WriteFile(System.String,System.Int32)':
+<summary>
+            This method writes the bytes of a DICOM file which includes the DICOM preamble of 
+            128 null bytes followed by the ASCII characters "DICM".
+            </summary>
+             /// <param name="path">the string path indicating where to write the file and the name of the file</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomFile.AddObject(EvilDicom.Components.DicomObject)':
+<summary>
+            Adds a Dicom object to the DicomObject stack and sorts by tag.
+            </summary>
+<param name="d">the Dicom object to be added</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomFile.RemoveObject(EvilDicom.Components.Tag)':
+<summary>
+            Removes an object from the DicomObject stack that has the input id
+            </summary>
+<param name="t">the tag containing the id to be removed</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomFile.RemoveObject(System.String)':
+<summary>
+            Removes an object from the DicomObject stack that has the input id
+            </summary>
+<param name="id">the tag id to be removed</param>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.DicomFile.Path':
+<summary>
+            The physical path to the Dicom file
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.DicomFile.HasBeenParsed':
+<summary>
+            Indicates whether or not this file has been parsed into Dicom objects
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.VR.PixelData.Format':
+<summary>
+            A property which declares this data to either be native or encapsulated
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.ImageHelper.PullProperties(EvilDicom.Components.DicomFile)':
+<summary>
+            This method retrieves the relevant image properties from a DICOM file for rendering
+            the image
+            </summary>
+<param name="df">the DICOM file to be processed</param>
+<returns>the image properties of the image</returns>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Helper.DicomWriter':
+<summary>
+            A class for writing DICOM files.
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomWriter.WriteDicomPreamble(System.IO.BinaryWriter)':
+<summary>
+            This method writes the bytes of the DICOM preamble which consists of 128 null bytes followed
+            byte ASCII characters DIC and M.
+            </summary>
+<param name="b">The Binary writer to write the bytes of the preamble</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomWriter.WriteTag(System.IO.BinaryWriter,EvilDicom.Components.Tag,System.Boolean)':
+<summary>
+            This method writes the bytes of the passed in tag to the binary writer
+            </summary>
+<param name="b">The Binary writer to write the bytes of the tag ID</param>
+<param name="tag">The Tag containing the ID to write</param>
+<param name="isLittleEndian">A boolean that indicates whether or not the bytes are written in little or big endian.</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomWriter.WriteTag(System.Byte[]@,EvilDicom.Components.Tag,System.Boolean)':
+<summary>
+            This method writes the bytes of the passed in tag to a byte array
+            </summary>
+<param name="b">The reference byte array to write the bytes of the tag ID</param>
+<param name="tag">The Tag containing the ID to write</param>
+<param name="isLittleEndian">A boolean that indicates whether or not the bytes are written in little or big endian.</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomWriter.WriteVR(System.IO.BinaryWriter,System.String,EvilDicom.Components.Constants.EncodeType)':
+<summary>
+            This method writes the two letter ASCII characters (in byte form) of the passed in VR to the
+            binary writer.
+            </summary>
+<param name="b">The Binary writer to write the bytes to</param>
+<param name="vr">The two letter string VR to write</param>
+<param name="encType">The encoding type of this VR</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomWriter.WriteLength(System.IO.BinaryWriter,EvilDicom.Components.Constants.EncodeType,System.Int32,System.Boolean)':
+<summary>
+            This method writes the length of the DICOM object to the binary writer
+            </summary>
+<param name="b">The Binary writer to write the bytes to</param>
+<param name="encType">The encoding type of the VR</param>
+<param name="length">The integer length of the byte data</param>
+<param name="isLittleEndian">A boolean that indicates whether or not the bytes are written in little or big endian.</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomWriter.WriteLength(System.IO.BinaryWriter,System.Byte[])':
+<summary>
+            This method should only be used to write the zero or indefinite
+            length attributes as there is no correction for endianess;
+            </summary>
+<param name="b">The Binary writer to write the bytes to</param>
+<param name="length">The integer length of the byte data</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomWriter.WriteData(System.IO.BinaryWriter,EvilDicom.Components.DicomObject,System.Boolean)':
+<summary>
+            This method writes the writes the byte data to the incoming Binary Writer
+            </summary>
+<param name="b">The Binary writer to write the bytes to</param>
+<param name="d">The DicomObject containing the data to be written</param>
+<param name="isLittleEndian">A boolean that indicates whether or not the bytes are written in little or big endian.</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomWriter.WriteBytes(System.IO.BinaryWriter,System.Byte[],System.Boolean)':
+<summary>
+            This method writes the writes the byte data to the incoming Binary Writer
+            </summary>
+<param name="b">The Binary writer to write the bytes to</param>
+<param name="d">The DicomObject containing the data to be written</param>
+<param name="isLittleEndian">A boolean that indicates whether or not the bytes are written in little or big endian.</param>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Helper.DicomReader':
+<summary>
+            A class for reading DICOM files.
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Helper.DicomReader.vrs':
+<summary>
+            A string array containing all possible VR types
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Helper.DicomReader.longVrs':
+<summary>
+            A string array containg all VR with long explicit encoding
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomReader.IsValidDicom(System.IO.BinaryReader)':
+<summary>
+            The method checks to see if the DICOM file is valid to begin.
+            All valid DICOM files have the first 128 bits set to null (0x00)
+            This is followed by 4 ASCII characters 'DICM'
+            Returns true if both of these conditions are met.
+            </summary>
+<returns></returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomReader.ReadTag(System.IO.BinaryReader,EvilDicom.Components.DicomObject)':
+<summary>
+            This method reads the next four bytes of a binary reader
+            object and parses out the DICOM tag. It then sets this tag as
+            the tag for the DicomObject parameter.
+            </summary>
+<param name="r">The BinaryReader object that is coming from the DicomFile.</param>
+<param name="d">The DicomObject that the tag will be set to.</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomReader.ReadTag(System.IO.BinaryReader,System.Boolean)':
+<summary>
+            This method reads the next four bytes of a binary reader
+            object and parses out the DICOM tag. It then returns
+            this tag.
+            </summary>
+<param name="r">The BinaryReader object that is coming from the DicomFile.</param>
+<param name="isLittleEndian">The boolean that indicates how the DicomFile was written.</param>
+<returns>A Tag with the correct group and element ids set.</returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomReader.ReadObject(System.IO.BinaryReader,System.Boolean)':
+<summary>
+            This method takes a binary reader and parses out the next DICOM object
+            in the sequence of objects.
+            </summary>
+<param name="r">the Binary reader containing the DICOM object</param>
+<param name="isLittleEndian">A boolean that indicates whether or not the bytes are written in little or big endian.</param>
+<returns>the parsed DICOM object</returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomReader.FindObject(System.IO.BinaryReader,System.Boolean,System.String)':
+<summary>
+            This method finds the next Dicom object matching the input tag and returns it. It is faster than parsing the entire Dicom
+            structure with the ReadObject method as it skips objects not matching the criteria.
+            </summary>
+<param name="r">the Binary reader containing the DICOM object</param>
+<param name="isLittleEndian">A boolean that indicates whether or not the bytes are written in little or big endian.</param>
+<param name="tag">the tag of the form "GGGGEEEE" that is being searched where G is group id and E is element id</param>
+<returns></returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomReader.ReadSequenceItem(System.IO.BinaryReader,System.Boolean)':
+<summary>
+            This method reads and returns the next Sequence Item from a Binary reader object.
+            </summary>
+<param name="r">A Binary reader containing the bytes of the sequence item.</param>
+<param name="isLittleEndian">A boolean that indicates whether or not the bytes are written in little or big endian.</param>
+<returns></returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.DicomReader.GetEncoding(System.IO.BinaryReader,System.String@,System.Int32@,EvilDicom.Components.Constants.EncodeType@,System.Boolean)':
+<summary>
+            This method determines the encoding type of the VR of the next DICOM object in a Binary reader.
+            </summary>
+<param name="r">The Binary reader containing the bytes of a DICOM object</param>
+<param name="vr">The two letter representation of the VR of the DICOM object</param>
+<param name="dataLength">The lenght of the data in this DICOM object</param>
+<param name="encType">The encoding type of the VR in this DICOM object</param>
+<param name="isLittleEndian">A boolean that indicates whether or not the bytes are written in little or big endian.</param>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Image.ImageMatrix':
+<summary>
+            The image matrix class holds the properties and methods necessary for handling the storage and display of image matrices.
+            The matrix can be either a 2D or 3D image.
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Image.ImageMatrix.#ctor(System.String[])':
+<summary>
+            This constructor takes a string of dicom file paths and parses out the image properties and the pixel data.
+            </summary>
+<param name="dicomFiles">A string array of all of the paths of the dicom files of the image(s) to load into the matrix</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Image.ImageMatrix.#ctor(System.String[],System.Windows.Forms.ProgressBar,System.Windows.Forms.Label)':
+<summary>
+            This constructor takes a string of dicom file paths and parses out the image properties and the pixel data. It also takes
+            a progress bar and progress label for updating a UI.
+            </summary>
+<param name="dicomFiles">A string array of all of the paths of the dicom files of the image(s) to load into the matrix</param>
+<param name="progressBar">The progress bar in the UI to be updated</param>
+<param name="progressLabel">The progress label in the UI to be updated</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Image.ImageMatrix.GetImage(System.Int32)':
+<summary>
+            This method is designed to return a 24bit RGB bitmap image from one slice of the cube
+            based on the window and level of the image.
+            </summary>
+<param name="slice">the integer slice number to be drawn. The first slice is zero.</param>
+<returns>The 24bit RGB image for display</returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Image.ImageMatrix.GetMaxVoxelValue':
+<summary>
+            This method searches the matrix for the highest voxel value
+            </summary>
+<returns>The highest voxel value</returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Image.ImageMatrix.GetMinVoxelValue':
+<summary>
+            This method searches the matrix for the lowest voxel value
+            </summary>
+<returns>The lowest voxel value</returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Image.ImageMatrix.TestDicomFile(EvilDicom.Components.DicomFile,EvilDicom.Image.ImageProperties@)':
+<summary>
+            This method checks to see if the rows and columns of this file match the dimensions of the initial set
+            </summary>
+<param name="file">the path to the DICOM file</param>
+<returns>boolean representing if this file belongs in the set</returns>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Image.ImageMatrix.Image':
+<summary>
+            This contains all of the pixel data as float elements in a one dimensional array.
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Image.ImageMatrix.BitImage':
+<summary>
+            This contains the bitmap image for displaying the image matrix with the proper window and level.
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Image.ImageMatrix.Properties':
+<summary>
+            The properties of the image file(s).
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.SequenceHelper.FindEndOfSequence(System.IO.BinaryReader,System.Boolean)':
+<summary>
+            This will find the index of the reader in which the ending tag delimeter for the sequence
+            ends. It successfully can skip all inner sequence items of indefinite length.
+            </summary>
+<param name="r"></param>
+<returns></returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.SequenceHelper.FindEndOfSequenceItem(System.IO.BinaryReader,System.Boolean)':
+<summary>
+            This will find the index of the reader in which the ending tag delimeter for the sequence
+            ends. It successfully can skip all inner sequence items of indefinite length.
+            </summary>
+<param name="r">the binary reader stream containing the sequence items</param>
+<returns></returns>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Helper.ByteHelper':
+<summary>
+            A class containing useful methods for working with bytes
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.ByteHelper.ByteArrayToHexString(System.Byte[])':
+<summary>
+            This method converts an array of bytes to a hexadecimal string
+            </summary>
+<param name="Bytes">the array of bytes to be converted</param>
+<returns>a hexadecimal string representing the array of bytes passed in</returns>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Helper.ByteHelper.HexStringToByteArray(System.String)':
+<summary>
+            This method converts a hexadecimal string to an array of bytes.
+            </summary>
+<param name="Hex">the hexadecimal string to be converted</param>
+<returns>an array of bytes representing the hexadecimal string passed in</returns>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Components.Tag':
+<summary>
+            The Tag class contains all of the properties and methods for working with DICOM tags.
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Tag.group':
+<summary>
+            The group ID of the tag
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Tag.element':
+<summary>
+            The element ID of the tag.
+            </summary>
+TRACE: processing comment '[EvilDicom]F:EvilDicom.Components.Tag.description':
+<summary>
+            The description of this tag as defined in the DICOM dictionary.
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.Tag.#ctor':
+<summary>
+            The empty constructor for the Tag class
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.Tag.#ctor(System.String,System.String)':
+<summary>
+            The main constructor for the Tag class which takes
+            a group id and element id to create a Tag object.
+            </summary>
+<param name="group">the string of the group id for this tag</param>
+<param name="element">the string of the element id for this tag</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.Tag.#ctor(System.Byte[],System.Boolean)':
+<summary>
+            A constructor which takes the raw bytes and converts them into a tag object, pulling
+            out the group id and element id from the bytes.
+            </summary>
+<param name="tagBytes">the raw (four) bytes for this tag</param>
+<param name="isLittleEndian"> A boolean that indicates whether or not the bytes are written in little or big endian.</param>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.Tag.GetTagBytes(System.Boolean)':
+<summary>
+            This method returns the bytes of the tag
+            </summary>
+<param name="isLittleEndian">Specifies whether or not the bytes should be in big or little endian format</param>
+<returns>a byte array of the tag</returns>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.Tag.Group':
+<summary>
+            The group ID of the tag
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.Tag.Element':
+<summary>
+            The element ID of the tag
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.Tag.Id':
+<summary>
+            The total ID of this tag without a comma. For example the Tag (0002,0000) would be
+            returned as 00020000.
+            </summary>
+TRACE: processing comment '[EvilDicom]P:EvilDicom.Components.Tag.Description':
+<summary>
+            The description of this tag as defined in the DICOM dictionary.
+            </summary>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Components.DicomDictionary':
+<summary>
+            The DICOMDictionary class is in charge of managing the definitions
+            in the DICOMDictionary. It has one main method.
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Components.DicomDictionary.LookupTag(EvilDicom.Components.Tag)':
+<summary>
+            This method takes a Tag with just the ID attribute and looks it up
+            to see if it is in the DICOM dictionary. If it is, it fills in extra
+            information about that tag including the descriptions of the tag.
+            It returns a string VR type indicating the VR of the tag.
+            </summary>
+<param name="t">a Tag with (normally with just the ID attribute non-null) that is to be looked up in the DICOM dictionary</param>
+<returns>a string indication the two letters of the VR type of the submitted Tag</returns>
+TRACE: processing comment '[EvilDicom]T:EvilDicom.Helper.TagHelper':
+<summary>
+            This class contains all of the useful tag IDs as static strings so they can be accessed programmatically
+            without having to memorize them all.
+            </summary>
+TRACE: processing comment '[EvilDicom]M:EvilDicom.Matrix.Matrix3D.moveI(System.Int32,System.Int32,System.Int32,System.Int32)':
+<summary>
+            This method calculates the new position in the matrix based on the current position and x, y and z shifts.
+            </summary>
+<param name="currentI">The starting position in the matrix</param>
+<param name="dx">The unit shift in the x direction</param>
+<param name="dy">The unit shift int the y direction</param>
+<param name="dz">The unit shift in the z direction</param>
+<returns></returns>
+Memory before making xml: 1756976
+MakeXML : 0.124 sec.
+Memory after making xml: 2019120
+An error occured while trying to build the documentation.
+
+
+
+Exception: NDoc3.Core.DocumenterException
+Could not load file or assembly 'r:\my documents\my dropbox\projects\evildicom\evildicom\evildicom\bin\debug\evildicom.dll' or one of its dependencies. This assembly is built by a runtime newer than the currently loaded runtime and cannot be loaded.
+
+Exception: System.BadImageFormatException
+Could not load file or assembly 'r:\my documents\my dropbox\projects\evildicom\evildicom\evildicom\bin\debug\evildicom.dll' or one of its dependencies. This assembly is built by a runtime newer than the currently loaded runtime and cannot be loaded.
+
+
+
+Exception: NDoc3.Core.DocumenterException
+   at NDoc3.Documenter.Msdn.MsdnDocumenter.Build(Project project)
+   at NDoc3.Gui.BuildWorker.ThreadProc()
+
+
