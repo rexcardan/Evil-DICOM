@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{1AFE008B-CCAC-45F5-828E-45908ADAF91F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EvilDICOM.Core</RootNamespace>
+    <AssemblyName>EvilDICOM.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>
+    </ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DICOMObject.cs" />
+    <Compile Include="Dictionaries\TagDictionary.cs" />
+    <Compile Include="Dictionaries\TagVRDictionary.cs" />
+    <Compile Include="Dictionaries\VRDictionary.cs" />
+    <Compile Include="Element\AbstractElement.cs" />
+    <Compile Include="Element\AgeString.cs" />
+    <Compile Include="Element\ApplicationEntity.cs" />
+    <Compile Include="Element\AttributeTag.cs" />
+    <Compile Include="Element\CodeString.cs" />
+    <Compile Include="Element\Date.cs" />
+    <Compile Include="Element\DateTime.cs" />
+    <Compile Include="Element\DecimalString.cs" />
+    <Compile Include="Element\FloatingPointDouble.cs" />
+    <Compile Include="Element\FloatingPointSingle.cs" />
+    <Compile Include="Element\IntegerString.cs" />
+    <Compile Include="Element\LongString.cs" />
+    <Compile Include="Element\LongText.cs" />
+    <Compile Include="Element\OtherByteString.cs" />
+    <Compile Include="Element\OtherFloatString.cs" />
+    <Compile Include="Element\OtherWordString.cs" />
+    <Compile Include="Element\PersonName.cs" />
+    <Compile Include="Element\Sequence.cs" />
+    <Compile Include="Element\ShortString.cs" />
+    <Compile Include="Element\ShortText.cs" />
+    <Compile Include="Element\SignedLong.cs" />
+    <Compile Include="Element\SignedShort.cs" />
+    <Compile Include="Element\Time.cs" />
+    <Compile Include="Element\UniqueIdentifier.cs" />
+    <Compile Include="Element\Unknown.cs" />
+    <Compile Include="Element\UnlimitedText.cs" />
+    <Compile Include="Element\UnsignedLong.cs" />
+    <Compile Include="Element\UnsignedShort.cs" />
+    <Compile Include="Element\_ElementFactory.cs" />
+    <Compile Include="Enums\AbortReason.cs" />
+    <Compile Include="Enums\AbortSource.cs" />
+    <Compile Include="Enums\CommandField.cs" />
+    <Compile Include="Enums\ItemType.cs" />
+    <Compile Include="Enums\NetworkState.cs" />
+    <Compile Include="Enums\PDUType.cs" />
+    <Compile Include="Enums\RejectReason.cs" />
+    <Compile Include="Enums\RejectResult.cs" />
+    <Compile Include="Enums\RejectSource.cs" />
+    <Compile Include="Enums\Status.cs" />
+    <Compile Include="Enums\TransferSyntax.cs" />
+    <Compile Include="Enums\VR.cs" />
+    <Compile Include="Enums\VREncoding.cs" />
+    <Compile Include="Extensions\ByteExtensions.cs" />
+    <Compile Include="Extensions\IDICOMElementExtensions.cs" />
+    <Compile Include="Extensions\IDICOMElementListExtensions.cs" />
+    <Compile Include="Extensions\StringExtensions.cs" />
+    <Compile Include="Helpers\AbstractSyntax.cs" />
+    <Compile Include="Helpers\ArrayHelper.cs" />
+    <Compile Include="Helpers\ByteHelper.cs" />
+    <Compile Include="Helpers\DoubleHelper.cs" />
+    <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="Helpers\ExceptionHelper.cs" />
+    <Compile Include="Helpers\PersonNameHelper.cs" />
+    <Compile Include="Helpers\TagHelper.cs" />
+    <Compile Include="Helpers\TagSorter.cs" />
+    <Compile Include="Helpers\TransferSyntaxHelper.cs" />
+    <Compile Include="Helpers\UIDHelper.cs" />
+    <Compile Include="Interfaces\IDICOMElement.cs" />
+    <Compile Include="Interfaces\IDICOMMessage.cs" />
+    <Compile Include="Interfaces\IDICOMString.cs" />
+    <Compile Include="Interfaces\IIOD.cs" />
+    <Compile Include="IO\Data\BigEndianReader.cs" />
+    <Compile Include="IO\Data\DataComposer.cs" />
+    <Compile Include="IO\Data\DataPadder.cs" />
+    <Compile Include="IO\Data\DataRestriction.cs" />
+    <Compile Include="IO\Data\DICOMString.cs" />
+    <Compile Include="IO\Data\LittleEndianReader.cs" />
+    <Compile Include="IO\Data\LittleEndianWriter.cs" />
+    <Compile Include="IO\Data\StringDataComposer.cs" />
+    <Compile Include="IO\Data\StringDataParser.cs" />
+    <Compile Include="IO\Reading\DataReader.cs" />
+    <Compile Include="IO\Reading\DICOMBinaryReader.cs" />
+    <Compile Include="IO\Reading\DICOMElementReader.cs" />
+    <Compile Include="IO\Reading\DICOMFileReader.cs" />
+    <Compile Include="IO\Reading\DICOMNetworkBinaryReader.cs" />
+    <Compile Include="IO\Reading\DICOMObjectReader.cs" />
+    <Compile Include="IO\Reading\DICOMPreambleReader.cs" />
+    <Compile Include="IO\Reading\LengthReader.cs" />
+    <Compile Include="IO\Reading\SequenceItemReader.cs" />
+    <Compile Include="IO\Reading\SequenceReader.cs" />
+    <Compile Include="IO\Reading\TagReader.cs" />
+    <Compile Include="IO\Reading\VRReader.cs" />
+    <Compile Include="IO\Writing\DataWriter.cs" />
+    <Compile Include="IO\Writing\DICOMBinaryWriter.cs" />
+    <Compile Include="IO\Writing\DICOMElementWriter.cs" />
+    <Compile Include="IO\Writing\DICOMFileWriter.cs" />
+    <Compile Include="IO\Writing\DICOMObjectWriter.cs" />
+    <Compile Include="IO\Writing\DICOMPreambleWriter.cs" />
+    <Compile Include="IO\Writing\DICOMTagWriter.cs" />
+    <Compile Include="IO\Writing\DICOMWriteSettings.cs" />
+    <Compile Include="IO\Writing\GroupWriter.cs" />
+    <Compile Include="IO\Writing\LengthWriter.cs" />
+    <Compile Include="IO\Writing\SequenceItemWriter.cs" />
+    <Compile Include="IO\Writing\SequenceWriter.cs" />
+    <Compile Include="IO\Writing\VRWriter.cs" />
+    <Compile Include="Modules\FileMetadata.cs" />
+    <Compile Include="Modules\Patient.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DICOMDictionary.xml" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
