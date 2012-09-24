@@ -9,16 +9,21 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class Sequence : AbstractElement
+    public class Sequence : AbstractElement<List<DICOMObject>>
     {
-        public List<DICOMObject> Items { get; set; }
-        public List<DICOMObject> Data
+        /// <summary>
+        /// Alternate property name for data (with a clearer name)
+        /// </summary>
+        public List<DICOMObject> Items
         {
             get
             {
-                return Items;
+                return base.Data;
+            }
+            set
+            {
+                base.Data = value;
             }
         }
-
     }
 }

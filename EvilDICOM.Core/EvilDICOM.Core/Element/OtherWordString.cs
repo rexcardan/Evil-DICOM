@@ -7,10 +7,8 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class OtherWordString : AbstractElement
+    public class OtherWordString : AbstractElement<byte[]>
     {
-        public byte[] Data { get; set; }
-
         public OtherWordString() { }
 
         public OtherWordString(Tag tag, byte[] data)

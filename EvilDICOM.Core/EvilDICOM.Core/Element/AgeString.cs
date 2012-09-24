@@ -7,10 +7,8 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class AgeString : AbstractElement, IDICOMString
+    public class AgeString : AbstractElement<string>
     {
-        public string Data { get; set; }
-
         public AgeString() { }
 
         public AgeString(Tag tag, string data)
@@ -30,7 +28,6 @@ namespace EvilDICOM.Core.Element
                 Data = StringDataComposer.ComposeAgeString(value);
             }
         }
-
     }
 
     public class Age

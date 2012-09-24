@@ -7,12 +7,12 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class UnlimitedText : AbstractElement, IDICOMString
+    public class UnlimitedText : AbstractElement<string>
     {
         public string Data
         {
-            get { return _data; }
-            set { _data = DataRestriction.EnforceLengthRestriction(uint.MaxValue - 1, value); }
+            get { return base.Data; }
+            set { base.Data = DataRestriction.EnforceLengthRestriction(uint.MaxValue - 1, value); }
         }
 
         public UnlimitedText() { }
@@ -22,7 +22,5 @@ namespace EvilDICOM.Core.Element
             Tag = tag;
             Data = data;
         }
-
-        private string _data;
     }
 }

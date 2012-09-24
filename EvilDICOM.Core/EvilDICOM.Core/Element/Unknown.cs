@@ -7,10 +7,8 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class Unknown : AbstractElement
+    public class Unknown : AbstractElement<byte[]>
     {
-        public byte[] Data { get; set; }
-
         public Unknown() { }
 
         public Unknown(Tag tag, byte[] data)

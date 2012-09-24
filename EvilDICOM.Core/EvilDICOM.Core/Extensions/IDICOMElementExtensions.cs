@@ -68,7 +68,7 @@ namespace EvilDICOM.Core.Extensions
                     return elem is Sequence;
                 case VR.Unknown:
                     return elem is Unknown;
-                default: return elem is AbstractElement;
+                default: return elem is AbstractElement<object>;
             }
         }
     }

@@ -7,12 +7,12 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class LongString : AbstractElement, IDICOMString
+    public class LongString : AbstractElement<string>
     {
-        public string Data
+        public new string Data
         {
-            get { return _data; }
-            set { _data = DataRestriction.EnforceLengthRestriction(64, value); }
+            get { return base.Data; }
+            set { base.Data= DataRestriction.EnforceLengthRestriction(64, value); }
         }
 
         public LongString() { }
@@ -22,7 +22,5 @@ namespace EvilDICOM.Core.Element
             Tag = tag;
             Data = data;
         }
-
-        private string _data;
     }
 }

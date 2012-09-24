@@ -7,10 +7,8 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class FloatingPointSingle : AbstractElement
+    public class FloatingPointSingle : AbstractElement<float?>
     {
-        public float? Data { get; set; }
-
         public FloatingPointSingle() { }
 
         public FloatingPointSingle(Tag tag, float? data)

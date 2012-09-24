@@ -7,7 +7,7 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class DateTime : AbstractElement
+    public class DateTime : AbstractElement<System.DateTime?>
     {
         public System.DateTime? Data { get; set; }
 

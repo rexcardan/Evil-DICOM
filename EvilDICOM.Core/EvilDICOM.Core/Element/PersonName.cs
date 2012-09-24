@@ -8,12 +8,12 @@ using EvilDICOM.Core.Helpers;
 
 namespace EvilDICOM.Core.Element
 {
-    public class PersonName : AbstractElement, IDICOMString
+    public class PersonName : AbstractElement<string>
     {
         public string Data
         {
-            get { return _data; }
-            set { _data = DataRestriction.EnforceLengthRestriction(64, value); }
+            get { return base.Data; }
+            set { base.Data = DataRestriction.EnforceLengthRestriction(64, value); }
         }
 
         public PersonName() { }
@@ -41,7 +41,5 @@ namespace EvilDICOM.Core.Element
             get { return PersonNameHelper.GetLastName(Data); }
             set { Data = PersonNameHelper.SetLastName(Data, value); }
         }
-
-        string _data;
     }
 }

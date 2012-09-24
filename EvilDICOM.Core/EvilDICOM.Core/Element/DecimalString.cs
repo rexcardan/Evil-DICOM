@@ -7,12 +7,8 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class DecimalString : AbstractElement
+    public class DecimalString : AbstractElement<double[]>
     {
-        public double[] Data { get; set; }
-
-        public DecimalString() { }
-
         public DecimalString(Tag tag, string data)
         {
             Tag = tag;

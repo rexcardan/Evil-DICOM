@@ -29,12 +29,11 @@ namespace EvilDICOM.Core.IO.Reading
         /// <returns>the next DICOM element</returns>
         public static IDICOMElement ReadElementExplicitLittleEndian(DICOMBinaryReader dr)
         {
-            AbstractElement el = new AbstractElement();
-            el.Tag = TagReader.ReadLittleEndian(dr);
-            el.VR = VRReader.Read(dr);
-            int length = LengthReader.ReadLittleEndian(el.VR, dr);
+            var tag = TagReader.ReadLittleEndian(dr);
+            var vr = VRReader.Read(dr);
+            int length = LengthReader.ReadLittleEndian(vr, dr);
             var data = DataReader.ReadLittleEndian(length, dr, TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN);
-            return ElementFactory.GenerateElement(el, data, TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN);
+            return ElementFactory.GenerateElement(tag, vr, data, TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN);
         }
 
         /// <summary>
@@ -44,12 +43,11 @@ namespace EvilDICOM.Core.IO.Reading
         /// <returns>the next DICOM element</returns>
         public static IDICOMElement ReadElementImplicitLittleEndian(DICOMBinaryReader dr)
         {
-            AbstractElement el = new AbstractElement();
-            el.Tag = TagReader.ReadLittleEndian(dr);
-            el.VR = _tagDictionary.GetVRFromTag(el.Tag);
+            var tag = TagReader.ReadLittleEndian(dr);
+            var vr = _tagDictionary.GetVRFromTag(tag);
             int length = LengthReader.ReadLittleEndian(VR.Null, dr);
             var data = DataReader.ReadLittleEndian(length, dr, TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN);
-            return ElementFactory.GenerateElement(el,data, TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN);
+            return ElementFactory.GenerateElement(tag, vr, data, TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN);
         }
 
         /// <summary>
@@ -59,12 +57,11 @@ namespace EvilDICOM.Core.IO.Reading
         /// <returns>the next DICOM element</returns>
         public static IDICOMElement ReadElementExplicitBigEndian(DICOMBinaryReader dr)
         {
-            AbstractElement el = new AbstractElement();
-            el.Tag = TagReader.ReadBigEndian(dr);
-            el.VR = VRReader.Read(dr);
-            int length = LengthReader.ReadBigEndian(el.VR, dr);
+            var tag = TagReader.ReadBigEndian(dr);
+            var vr = VRReader.Read(dr);
+            int length = LengthReader.ReadBigEndian(vr, dr);
             var data = DataReader.ReadBigEndian(length, dr);
-            return ElementFactory.GenerateElement(el, data, TransferSyntax.EXPLICIT_VR_BIG_ENDIAN);
+            return ElementFactory.GenerateElement(tag,vr, data, TransferSyntax.EXPLICIT_VR_BIG_ENDIAN);
         }
 
         #region SKIPPERS

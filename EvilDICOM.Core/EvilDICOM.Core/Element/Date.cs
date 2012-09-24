@@ -7,10 +7,8 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class Date : AbstractElement
+    public class Date : AbstractElement<System.DateTime?>
     {
-        public System.DateTime? Data { get; set; }
-
         public Date() { }
 
         public Date(Tag tag, string data)

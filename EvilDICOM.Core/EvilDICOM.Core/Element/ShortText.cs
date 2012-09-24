@@ -7,12 +7,12 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class ShortText : AbstractElement, IDICOMString
+    public class ShortText : AbstractElement<string>
     {
         public string Data
         {
-            get { return _data; }
-            set { _data = DataRestriction.EnforceLengthRestriction(1024, value); }
+            get { return base.Data; }
+            set { base.Data = DataRestriction.EnforceLengthRestriction(1024, value); }
         }
 
         public ShortText() { }

@@ -7,12 +7,12 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class UniqueIdentifier : AbstractElement, IDICOMString
+    public class UniqueIdentifier : AbstractElement<string>
     {
-        public string Data
+        public new string Data
         {
-            get { return _data; }
-            set { _data = DataRestriction.EnforceLengthRestriction(64, value); }
+            get { return base.Data; }
+            set { base.Data = DataRestriction.EnforceLengthRestriction(64, value); }
         }
 
         public UniqueIdentifier()
@@ -24,7 +24,5 @@ namespace EvilDICOM.Core.Element
             Tag = tag;
             Data = data;
         }
-
-        private string _data;    
     }
 }

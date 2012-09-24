@@ -7,10 +7,8 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class SignedLong : AbstractElement
-    {
-        public int? Data { get; set; }
-
+    public class SignedLong : AbstractElement<int?>
+    {      
         public SignedLong() { }
 
         public SignedLong(Tag tag, int? data)

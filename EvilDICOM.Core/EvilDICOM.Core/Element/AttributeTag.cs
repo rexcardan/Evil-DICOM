@@ -7,10 +7,8 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class AttributeTag : AbstractElement
+    public class AttributeTag : AbstractElement<Tag>
     {
-        public Tag Data { get; set; }
-
         public AttributeTag() { }
 
         public AttributeTag(Tag tag, Tag data)

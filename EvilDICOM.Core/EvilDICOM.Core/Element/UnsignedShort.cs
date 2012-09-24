@@ -7,10 +7,8 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class UnsignedShort : AbstractElement
+    public class UnsignedShort : AbstractElement<ushort?>
     {
-        public ushort? Data { get; set; }
-
         public UnsignedShort() { }
 
         public UnsignedShort(Tag tag, ushort? data)

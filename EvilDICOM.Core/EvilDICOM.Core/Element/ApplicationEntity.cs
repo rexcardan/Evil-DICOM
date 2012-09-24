@@ -7,10 +7,8 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class ApplicationEntity : AbstractElement, IDICOMString
+    public class ApplicationEntity : AbstractElement<string>
     {
-        public string Data { get; set; }
-
         public ApplicationEntity() { }
 
         public ApplicationEntity(Tag tag, string data)

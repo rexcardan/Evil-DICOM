@@ -120,7 +120,7 @@ namespace EvilDICOM.Core.Dictionaries
 
         /// <summary>
         /// Determines the encoding, meaning how many bytes to write the VR and length parameters, from a VR type. 
-        /// Options are explicit long (8 bytes), explicit short (4 bytes), or implicit (4 bytes). In UAB.RadOnc.Blazer, the null
+        /// Options are explicit long (8 bytes), explicit short (4 bytes), or implicit (4 bytes). In Evil DICOM, the null
         /// VR is used to represent an unknown VR (before dictionary lookup) that is implicitly encoded.
         /// </summary>
         /// <param name="vr">the VR type</param>

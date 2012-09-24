@@ -7,12 +7,12 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    public class ShortString : AbstractElement, IDICOMString
+    public class ShortString : AbstractElement<string>
     {
-        public string Data
+        public new string Data
         {
-            get { return _data; }
-            set { _data = DataRestriction.EnforceLengthRestriction(16, value); }
+            get { return base.Data; }
+            set { base.Data = DataRestriction.EnforceLengthRestriction(16, value); }
         }
 
         public ShortString() { }
@@ -22,7 +22,5 @@ namespace EvilDICOM.Core.Element
             Tag = tag;
             Data = data;
         }
-
-        private string _data;
     }
 }

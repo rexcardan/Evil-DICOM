@@ -8,7 +8,7 @@ using EvilDICOM.Core.Enums;
 
 namespace EvilDICOM.Core.Element
 {
-    public class AbstractElement : IDICOMElement
+    public abstract class AbstractElement<T> : IDICOMElement
     {
          public override string ToString()
         {
@@ -26,5 +26,7 @@ namespace EvilDICOM.Core.Element
              get;
              set;
          }
+
+         public T Data { get; set; }
     }
 }
