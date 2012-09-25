@@ -15,39 +15,50 @@ namespace EvilDICOM.Core.IO.Data
             return new AttributeTag(tag, aTag);
         }
 
-        internal static Tag ReadTag(byte[] p)
+        public static Tag ReadTag(byte[] data)
         {
-            throw new NotImplementedException();
+            if (CheckForNullData(data)) { return null; }
+            return TagReader.ReadBigEndian(data);
         }
 
-        internal static double? ReadDoublePrecision(byte[] p)
+        public static float? ReadSinglePrecision(byte[] data)
         {
-            throw new NotImplementedException();
+            if (CheckForNullData(data)) { return null; }
+            return BitConverter.ToSingle(data.Reverse().ToArray(), 0);
         }
 
-        internal static float? ReadSinglePrecision(byte[] p)
+        public static double? ReadDoublePrecision(byte[] data)
         {
-            throw new NotImplementedException();
+            if (CheckForNullData(data)) { return null; }
+            return BitConverter.ToDouble(data.Reverse().ToArray(), 0);
+        }      
+
+        public static int? ReadSignedLong(byte[] data)
+        {
+            if (CheckForNullData(data)) { return null; }
+            return BitConverter.ToInt32(data.Reverse().ToArray(), 0);
+        }
+        public static uint? ReadUnsignedLong(byte[] data)
+        {
+            if (CheckForNullData(data)) { return null; }
+            return BitConverter.ToUInt32(data.Reverse().ToArray(), 0);
         }
 
-        internal static int? ReadSignedLong(byte[] p)
+        public static short? ReadSignedShort(byte[] data)
         {
-            throw new NotImplementedException();
+            if (CheckForNullData(data)) { return null; }
+            return BitConverter.ToInt16(data.Reverse().ToArray(), 0);
         }
 
-        internal static short? ReadSignedShort(byte[] p)
+        public static ushort? ReadUnsignedShort(byte[] data)
         {
-            throw new NotImplementedException();
+            if (CheckForNullData(data)) { return null; }
+            return BitConverter.ToUInt16(data.Reverse().ToArray(), 0);
         }
 
-        internal static uint? ReadUnsignedLong(byte[] p)
+        private static bool CheckForNullData(byte[] data)
         {
-            throw new NotImplementedException();
-        }
-
-        internal static ushort? ReadUnsignedShort(byte[] p)
-        {
-            throw new NotImplementedException();
+            return data.Length == 0;
         }
     }
 }

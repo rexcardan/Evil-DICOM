@@ -205,37 +205,147 @@ namespace EvilDICOM.Core
         /// Replaces a current instance of the DICOM element in the DICOM object. If the object does not exist, this method
         /// exits. For this scenario, please use ReplaceOrAdd().
         /// </summary>
-        /// <typeparam name="T">the type of the element being added (eg. UnsignedLong)</typeparam>
+        /// <typeparam name="T">the type of the data the element holds (eg. double[], int, DataTime, etc)</typeparam>
         /// <param name="element">the instance of the element</param>
-        public void Replace<T>(T element)
+        /// <returns>bool indicating whether or not the element was replaced</returns>
+        private bool Replace<T>(AbstractElement<T> element)
         {
-            IDICOMElement elementCast = element as IDICOMElement;
-            T toReplace = (T)FindFirst(elementCast.Tag);
-            if (toReplace != null)
-            {
-                object newData = element.GetType().GetProperty("Data").GetValue(element, null);
-                toReplace.GetType().InvokeMember("Data", BindingFlags.SetProperty, null, toReplace, new object[] { newData });
-            }
+            var toReplace = FindFirst(element.Tag) as AbstractElement<T>;
+            if (toReplace == null) return false;
+            toReplace.Data = element.Data;
+            return true;
         }
+
+        #region REPLACE OVERLOADS
+        public bool Replace(AbstractElement<float[]> element)
+        {
+            return Replace<float[]>(element);
+        }
+        public bool Replace(AbstractElement<double[]> element)
+        {
+            return Replace<double[]>(element);
+        }
+        public bool Replace(AbstractElement<string> element)
+        {
+            return Replace<string>(element);
+        }
+        public bool Replace(AbstractElement<List<DICOMObject>> element)
+        {
+            return Replace<List<DICOMObject>>(element);
+        }
+        public bool Replace(AbstractElement<Tag> element)
+        {
+            return Replace<Tag>(element);
+        }
+        public bool Replace(AbstractElement<uint?> element)
+        {
+            return Replace<uint?>(element);
+        }
+        public bool Replace(AbstractElement<int?> element)
+        {
+            return Replace<int?>(element);
+        }
+        public bool Replace(AbstractElement<ushort?> element)
+        {
+            return Replace<ushort?>(element);
+        }
+        public bool Replace(AbstractElement<short?> element)
+        {
+            return Replace<short?>(element);
+        }
+        public bool Replace(AbstractElement<double?> element)
+        {
+            return Replace<double?>(element);
+        }
+        public bool Replace(AbstractElement<float?> element)
+        {
+            return Replace<float?>(element);
+        }
+        public bool Replace(AbstractElement<byte[]> element)
+        {
+            return Replace<byte[]>(element);
+        }
+        public bool Replace(AbstractElement<int[]> element)
+        {
+            return Replace<int[]>(element);
+        }
+        public bool Replace(AbstractElement<System.DateTime?> element)
+        {
+            return Replace<System.DateTime?>(element);
+        }
+        #endregion
+
         /// <summary>
         /// Replaces a current instance of the DICOM element in the DICOM object. If the object does not exist, this method 
         /// will add it to the object.
         /// </summary>
-        /// <typeparam name="T">the type of the element being added (eg. UnsignedLong)</typeparam>
+        /// <typeparam name="T">the type of the data the element holds (eg. double[], int, DataTime, etc)</typeparam>
         /// <param name="element">the instance of the element</param>
-        public void ReplaceOrAdd<T>(T element)
+        public void ReplaceOrAdd<T>(AbstractElement<T> element)
         {
-            IDICOMElement elementCast = element as IDICOMElement;
-            T toReplace = (T)FindFirst(elementCast.Tag);
-            if (toReplace != null)
+            if(!Replace<T>(element))
             {
-                object newData = element.GetType().GetProperty("Data").GetValue(element, null);
-                toReplace.GetType().InvokeMember("Data", BindingFlags.SetProperty, null, toReplace, new object[] { newData });
-            }
-            else
-            {
-                Add(elementCast);
+                Add(element);
             }
         }
+
+        #region REPLACE OR ADD OVERLOADS
+        public void ReplaceOrAdd(AbstractElement<float[]> element)
+        {
+            ReplaceOrAdd<float[]>(element);
+        }
+        public void ReplaceOrAdd(AbstractElement<double[]> element)
+        {
+            ReplaceOrAdd<double[]>(element);
+        }
+        public void ReplaceOrAdd(AbstractElement<string> element)
+        {
+            ReplaceOrAdd<string>(element);
+        }
+        public void ReplaceOrAdd(AbstractElement<List<DICOMObject>> element)
+        {
+            ReplaceOrAdd<List<DICOMObject>>(element);
+        }
+        public void ReplaceOrAdd(AbstractElement<Tag> element)
+        {
+            ReplaceOrAdd<Tag>(element);
+        }
+        public void ReplaceOrAdd(AbstractElement<uint?> element)
+        {
+            ReplaceOrAdd<uint?>(element);
+        }
+        public void ReplaceOrAdd(AbstractElement<int?> element)
+        {
+            ReplaceOrAdd<int?>(element);
+        }
+        public void ReplaceOrAdd(AbstractElement<ushort?> element)
+        {
+            ReplaceOrAdd<ushort?>(element);
+        }
+        public void ReplaceOrAdd(AbstractElement<short?> element)
+        {
+            ReplaceOrAdd<short?>(element);
+        }
+        public void ReplaceOrAdd(AbstractElement<double?> element)
+        {
+            ReplaceOrAdd<double?>(element);
+        }
+        public void ReplaceOrAdd(AbstractElement<float?> element)
+        {
+            ReplaceOrAdd<float?>(element);
+        }
+        public void ReplaceOrAdd(AbstractElement<byte[]> element)
+        {
+            ReplaceOrAdd<byte[]>(element);
+        }
+        public void ReplaceOrAdd(AbstractElement<int[]> element)
+        {
+            ReplaceOrAdd<int[]>(element);
+        }
+        public void ReplaceOrAdd(AbstractElement<System.DateTime?> element)
+        {
+            ReplaceOrAdd<System.DateTime?>(element);
+        }
+        #endregion
     }
 }

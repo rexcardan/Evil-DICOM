@@ -15,11 +15,6 @@ namespace EvilDICOM.Core.IO.Data
             return TagReader.ReadLittleEndian(data);
         }
 
-        private static bool CheckForNullData(byte[] data)
-        {
-            return data.Length == 0;
-        }
-
         public static float? ReadSinglePrecision(byte[] data)
         {
             if (CheckForNullData(data)) { return null; }
@@ -54,6 +49,11 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (CheckForNullData(data)) { return null; }
             return BitConverter.ToUInt16(data, 0);
+        }
+
+        private static bool CheckForNullData(byte[] data)
+        {
+            return data.Length == 0;
         }
     }
 }

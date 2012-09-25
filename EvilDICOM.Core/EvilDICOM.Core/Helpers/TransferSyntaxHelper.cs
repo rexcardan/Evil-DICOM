@@ -22,7 +22,7 @@ namespace EvilDICOM.Core.Helpers
         /// <summary>
         /// Unique ID that represents an explicit VR with big endian encoding
         /// </summary>
-        public const string EXPLICIT_VR_BIG_ENDIAN = "	1.2.840.10008.1.2.2";
+        public const string EXPLICIT_VR_BIG_ENDIAN = "1.2.840.10008.1.2.2";
         /// <summary>
         /// Unique ID that represents RLE lossless image encoding
         /// </summary>

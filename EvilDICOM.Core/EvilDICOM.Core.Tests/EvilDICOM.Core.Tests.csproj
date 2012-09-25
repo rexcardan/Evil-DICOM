@@ -50,8 +50,34 @@
     </Otherwise>
   </Choose>
   <ItemGroup>
-    <Compile Include="UnitTest1.cs" />
+    <Compile Include="DICOMReadTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DICOMManipulateTests.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\EvilDICOM.Core\EvilDICOM.Core.csproj">
+      <Project>{1afe008b-ccac-45f5-828e-45908adaf91f}</Project>
+      <Name>EvilDICOM.Core</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\explicitBigEndian.dcm" />
+    <None Include="Resources\explicitLittleEndian.dcm" />
+    <None Include="Resources\implicitLittleEndian.dcm" />
+    <None Include="Resources\implicitLittleJPEG.dcm" />
+    <None Include="Resources\RLELossless.dcm" />
   </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">

@@ -45,11 +45,18 @@ namespace EvilDICOM.Core.Helpers
 
         private static string[] Parse(string unparsedName)
         {
-            string[] nameParts = unparsedName.Split('^');
-            string lastName = nameParts.Length > 0 ? nameParts[0] : string.Empty;
-            string firstName = nameParts.Length > 1 ? nameParts[1] : string.Empty;
-            string middleName = nameParts.Length > 2 ? nameParts[2] : string.Empty;
-            return new string[] { firstName, middleName, lastName };
+            if (!string.IsNullOrEmpty(unparsedName))
+            {
+                string[] nameParts = unparsedName.Split('^');
+                string lastName = nameParts.Length > 0 ? nameParts[0] : string.Empty;
+                string firstName = nameParts.Length > 1 ? nameParts[1] : string.Empty;
+                string middleName = nameParts.Length > 2 ? nameParts[2] : string.Empty;
+                return new string[] { firstName, middleName, lastName };
+            }
+            else
+            {
+                return new string[] { string.Empty, string.Empty, string.Empty };
+            }
         }
 
         private static string FormatName(string firstName, string middleName, string lastName)
