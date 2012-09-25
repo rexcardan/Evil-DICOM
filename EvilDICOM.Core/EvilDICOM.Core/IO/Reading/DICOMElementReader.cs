@@ -120,14 +120,14 @@ namespace EvilDICOM.Core.IO.Reading
             List<IDICOMElement> elements;
             switch (syntax)
             {
-                case TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN:
-                    elements = ReadAllElementsExplicitLittleEndian(dr);
+                case TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN:
+                    elements = ReadAllElementsImplicitLittleEndian(dr);
                     break;
                 case TransferSyntax.EXPLICIT_VR_BIG_ENDIAN:
                     elements = ReadAllElementsExplicitBigEndian(dr);
                     break;
                 default:
-                    elements = ReadAllElementsImplicitLittleEndian(dr);
+                    elements = ReadAllElementsExplicitLittleEndian(dr);
                     break;
             }
             return elements;

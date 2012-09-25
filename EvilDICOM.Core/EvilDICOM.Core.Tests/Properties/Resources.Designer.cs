@@ -83,9 +83,9 @@ namespace EvilDICOM.Core.Tests.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] implicitLittleEndian {
+        internal static byte[] explicitLittleJPEG {
             get {
-                object obj = ResourceManager.GetObject("implicitLittleEndian", resourceCulture);
+                object obj = ResourceManager.GetObject("explicitLittleJPEG", resourceCulture);
                 return ((byte[])(obj));
             }
         }
@@ -93,9 +93,9 @@ namespace EvilDICOM.Core.Tests.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
-        internal static byte[] implicitLittleJPEG {
+        internal static byte[] implicitLittleEndian {
             get {
-                object obj = ResourceManager.GetObject("implicitLittleJPEG", resourceCulture);
+                object obj = ResourceManager.GetObject("implicitLittleEndian", resourceCulture);
                 return ((byte[])(obj));
             }
         }

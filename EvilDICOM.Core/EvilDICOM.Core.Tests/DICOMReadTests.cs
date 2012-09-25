@@ -31,5 +31,14 @@ namespace EvilDICOM.Core.Tests
             var elemCount = dcm.AllElements.Count;
             Assert.AreEqual(elemCount, 44);
         }
+
+        [TestMethod]
+        public void ReadJPEG()
+        {
+            var dcm = DICOMFileReader.Read(Resources.explicitLittleJPEG);
+            var elemCount = dcm.AllElements.Count;
+            Assert.AreEqual(elemCount, 80);
+        }
+
     }
 }
