@@ -17,6 +17,7 @@ namespace EvilDICOM.Core.Element
         {
             Tag = tag;
             Data = StringDataParser.ParseDateTime(data);
+            VR = Enums.VR.DateTime;
         }
     }
 }

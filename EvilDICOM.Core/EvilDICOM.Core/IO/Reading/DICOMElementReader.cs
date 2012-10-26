@@ -47,7 +47,8 @@ namespace EvilDICOM.Core.IO.Reading
             var vr = _tagDictionary.GetVRFromTag(tag);
             int length = LengthReader.ReadLittleEndian(VR.Null, dr);
             var data = DataReader.ReadLittleEndian(length, dr, TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN);
-            return ElementFactory.GenerateElement(tag, vr, data, TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN);
+            var el = ElementFactory.GenerateElement(tag, vr, data, TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN);
+            return el;
         }
 
         /// <summary>

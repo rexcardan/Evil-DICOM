@@ -23,6 +23,7 @@ namespace EvilDICOM.Core.Element
         {
             Tag = tag;
             Data = data;
+            VR = Enums.VR.UniqueIdentifier;
         }
     }
 }

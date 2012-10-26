@@ -22,6 +22,7 @@ namespace EvilDICOM.Core.Element
         {
             Tag = tag;
             Data = data;
+            VR = Enums.VR.PersonName;
         }
 
         public string FirstName

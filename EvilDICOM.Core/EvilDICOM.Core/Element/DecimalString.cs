@@ -13,6 +13,7 @@ namespace EvilDICOM.Core.Element
         {
             Tag = tag;
             Data = StringDataParser.ParseDecimalString(data);
+            VR = Enums.VR.DecimalString;
         }
     }
 }

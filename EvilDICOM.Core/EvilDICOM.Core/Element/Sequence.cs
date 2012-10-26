@@ -11,6 +11,11 @@ namespace EvilDICOM.Core.Element
 {
     public class Sequence : AbstractElement<List<DICOMObject>>
     {
+        public Sequence()
+        {
+            VR = Enums.VR.Sequence;
+            Items = new List<DICOMObject>();
+        }
         /// <summary>
         /// Alternate property name for data (with a clearer name)
         /// </summary>

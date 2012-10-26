@@ -15,6 +15,7 @@ namespace EvilDICOM.Core.Element
         {
             Tag = tag;
             Data = StringDataParser.ParseIntegerString(data);
+            VR = Enums.VR.IntegerString;
         }
     }
 }

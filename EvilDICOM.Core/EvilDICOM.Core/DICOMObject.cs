@@ -76,6 +76,27 @@ namespace EvilDICOM.Core
         }
 
         /// <summary>
+        /// Searches for a specific element. If it is found, it returns the data from the element. Otherwise,
+        /// it will return a provided default value for the element.
+        /// </summary>
+        /// <typeparam name="T">the type of data to return</typeparam>
+        /// <param name="tagToFind">the tag of the element containing the data</param>
+        /// <param name="defaultValueIfNull">the default value to return if the element is not found</param>
+        /// <returns></returns>
+        public T TryFindDataValue<T>(Tag tagToFind, object defaultValueIfNull)
+        {
+            var found = FindFirst(tagToFind) as AbstractElement<T>;
+            if (found != null)
+            {
+                return found.Data;
+            }
+            else
+            {
+                return (T)defaultValueIfNull;
+            }
+        }
+
+        /// <summary>
         /// Finds all DICOM elements that match a VR type
         /// </summary>
         /// <param name="vrToFind">the VR type to find</param>
