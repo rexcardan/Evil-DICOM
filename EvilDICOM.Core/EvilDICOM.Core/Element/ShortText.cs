@@ -7,9 +7,12 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the ShortText VR type
+    /// </summary>
     public class ShortText : AbstractElement<string>
     {
-        public string Data
+        public new string Data
         {
             get { return base.Data; }
             set { base.Data = DataRestriction.EnforceLengthRestriction(1024, value); }
@@ -23,7 +26,5 @@ namespace EvilDICOM.Core.Element
             Data = data;
             VR = Enums.VR.ShortText;
         }
-
-        private string _data;
     }
 }

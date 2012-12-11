@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the UnsignedShort VR type
+    /// </summary>
     public class UnsignedShort : AbstractElement<ushort?>
     {
         public UnsignedShort() { }

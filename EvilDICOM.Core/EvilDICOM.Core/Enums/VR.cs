@@ -5,6 +5,9 @@ using System.Text;
 
 namespace EvilDICOM.Core.Enums
 {
+    /// <summary>
+    /// An enum that contains all of the possible DICOM VR types. 
+    /// </summary>
     public enum VR
     {
         CodeString,

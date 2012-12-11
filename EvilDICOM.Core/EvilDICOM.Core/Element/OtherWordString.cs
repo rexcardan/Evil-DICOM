@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the OtherWordString VR type
+    /// </summary>
     public class OtherWordString : AbstractElement<byte[]>
     {
         public OtherWordString() { }

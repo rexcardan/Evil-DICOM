@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the SignedLong VR type
+    /// </summary>
     public class SignedLong : AbstractElement<int?>
     {      
         public SignedLong() { }

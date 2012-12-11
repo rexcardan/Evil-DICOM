@@ -9,8 +9,17 @@ using EvilDICOM.Core;
 
 namespace EvilDICOM.Core.Extensions
 {
+    /// <summary>
+    /// Adds useful methods to the IDICOMElement interface
+    /// </summary>
     public static class IDICOMElementExtensions
     {
+        /// <summary>
+        /// Checks to see if a certain IDICOMElement is of a given VR type
+        /// </summary>
+        /// <param name="elem">the DICOM element in question</param>
+        /// <param name="vr">the VR type to test the DICOM element</param>
+        /// <returns>a boolean indicating whether or not the DICOM element is of a given VR type</returns>
         public static bool IsVR(this IDICOMElement elem, VR vr){
             switch (vr)
             {

@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the OtherByteString VR type
+    /// </summary>
     public class OtherByteString : AbstractElement<byte[]>
     {
         public OtherByteString() { }

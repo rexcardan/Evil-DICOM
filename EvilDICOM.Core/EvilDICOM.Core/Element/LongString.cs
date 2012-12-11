@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the LongString VR type
+    /// </summary>
     public class LongString : AbstractElement<string>
     {
         public new string Data

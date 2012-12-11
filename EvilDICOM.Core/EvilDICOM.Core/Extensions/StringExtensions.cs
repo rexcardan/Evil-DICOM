@@ -5,8 +5,16 @@ using System.Text;
 
 namespace EvilDICOM.Core.Extensions
 {
+    /// <summary>
+    /// Adds useful methods to the string object
+    /// </summary>
     public static class StringExtensions
     {
+        /// <summary>
+        /// Changes a camel case string to uppercase with underscore between the words
+        /// </summary>
+        /// <param name="camelCase">the camel case string</param>
+        /// <returns>the uppercase with understore separator string</returns>
         public static string ToUpperUnderscore(this string camelCase){
             StringBuilder build = new StringBuilder();
             for (int i = 0; i < camelCase.Length; i++)

@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the UnsignedLong VR type
+    /// </summary>
     public class UnsignedLong : AbstractElement<uint?>
     {
         public UnsignedLong() { }

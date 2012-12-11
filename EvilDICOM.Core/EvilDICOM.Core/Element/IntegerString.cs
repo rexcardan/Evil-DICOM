@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the IntegerString VR type
+    /// </summary>
     public class IntegerString : AbstractElement<int[]>
     {
         public IntegerString() { }

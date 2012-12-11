@@ -7,10 +7,11 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the DateTime VR type
+    /// </summary>
     public class DateTime : AbstractElement<System.DateTime?>
     {
-        public System.DateTime? Data { get; set; }
-
         public DateTime() { }
 
         public DateTime(Tag tag, string data)

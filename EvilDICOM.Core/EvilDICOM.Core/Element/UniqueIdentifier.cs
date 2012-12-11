@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the UniqueIdentifier VR type
+    /// </summary>
     public class UniqueIdentifier : AbstractElement<string>
     {
         public new string Data

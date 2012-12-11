@@ -7,9 +7,12 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the UnlimitedText VR type
+    /// </summary>
     public class UnlimitedText : AbstractElement<string>
     {
-        public string Data
+        public new string Data
         {
             get { return base.Data; }
             set { base.Data = DataRestriction.EnforceLengthRestriction(uint.MaxValue - 1, value); }

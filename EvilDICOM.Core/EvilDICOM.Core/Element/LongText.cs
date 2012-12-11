@@ -7,9 +7,12 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the LongText VR type
+    /// </summary>
     public class LongText : AbstractElement<string>
     {
-        public string Data
+        public new string Data
         {
             get { return base.Data; }
             set { base.Data = DataRestriction.EnforceLengthRestriction(10240, value); }

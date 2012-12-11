@@ -10,6 +10,7 @@ using EvilDICOM.Core.Extensions;
 using EvilDICOM.Core.IO.Data;
 using EvilDICOM.Core.Helpers;
 using System.Reflection;
+using System.IO;
 
 namespace EvilDICOM.Core
 {
@@ -83,7 +84,7 @@ namespace EvilDICOM.Core
         /// <param name="tagToFind">the tag of the element containing the data</param>
         /// <param name="defaultValueIfNull">the default value to return if the element is not found</param>
         /// <returns></returns>
-        public T TryFindDataValue<T>(Tag tagToFind, object defaultValueIfNull)
+        public T TryGetDataValue<T>(Tag tagToFind, object defaultValueIfNull)
         {
             var found = FindFirst(tagToFind) as AbstractElement<T>;
             if (found != null)
@@ -93,6 +94,28 @@ namespace EvilDICOM.Core
             else
             {
                 return (T)defaultValueIfNull;
+            }
+        }
+
+
+        /// <summary>
+        /// Searches for a specific element (first instance). If it is found, it sets the data for this element and returns true, otherwise returns false;
+        /// </summary>
+        /// <typeparam name="T">the type of data to return</typeparam>
+        /// <param name="tagToFind">the tag of the element containing the data</param>
+        /// <param name="data">the data to set in this element</param>
+        /// <returns>a boolean indicating whether or not the operation was successful</returns>
+        public bool TrySetDataValue<T>(Tag tagToFind, T data)
+        {
+            var found = FindFirst(tagToFind) as AbstractElement<T>;
+            if (found != null)
+            {
+                found.Data = data;
+                return true;
+            }
+            else
+            {
+                return false;
             }
         }
 
@@ -111,10 +134,10 @@ namespace EvilDICOM.Core
         /// </summary>
         /// <typeparam name="T">the DICOM element class that is being filtered and returned</typeparam>
         /// <returns>a list of all elements that are strongly typed</returns>
-        public List<T> FindAll<T>() 
+        public List<T> FindAll<T>()
         {
             Type t = typeof(T);
-            return AllElements.Where(el => el is T).Select(el=>(T)Convert.ChangeType(el,t)).ToList();
+            return AllElements.Where(el => el is T).Select(el => (T)Convert.ChangeType(el, t)).ToList();
         }
 
         /// <summary>
@@ -304,7 +327,7 @@ namespace EvilDICOM.Core
         /// <param name="element">the instance of the element</param>
         public void ReplaceOrAdd<T>(AbstractElement<T> element)
         {
-            if(!Replace<T>(element))
+            if (!Replace<T>(element))
             {
                 Add(element);
             }
@@ -366,6 +389,27 @@ namespace EvilDICOM.Core
         public void ReplaceOrAdd(AbstractElement<System.DateTime?> element)
         {
             ReplaceOrAdd<System.DateTime?>(element);
+        }
+        #endregion
+
+        #region IMAGE PROPERTIES
+        /// <summary>
+        /// Grabs the pixel data bytes and sends it as a stream. Returns null if no pixel data element is found.
+        /// </summary>
+        public Stream PixelStream
+        {
+            get
+            {
+                var pixelData = FindFirst(TagHelper.PIXEL_DATA) as AbstractElement<byte[]>;
+                if (pixelData != null)
+                {
+                    return new MemoryStream(pixelData.Data);
+                }
+                else
+                {
+                    return null;
+                }
+            }
         }
         #endregion
     }

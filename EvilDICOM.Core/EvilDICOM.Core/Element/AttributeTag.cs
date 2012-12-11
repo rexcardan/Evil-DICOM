@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the AttributeTag VR type
+    /// </summary>
     public class AttributeTag : AbstractElement<Tag>
     {
         public AttributeTag() { }
@@ -19,6 +22,9 @@ namespace EvilDICOM.Core.Element
         }
     }
 
+    /// <summary>
+    /// A small helper class help work set and get the tag ids for DICOM elements.
+    /// </summary>
     public class Tag
     {
         public Tag(string group, string element)
@@ -32,8 +38,18 @@ namespace EvilDICOM.Core.Element
             this.CompleteID = DataRestriction.EnforceLengthRestriction(8, completeID);
         }
 
+        /// <summary>
+        /// The group id of the element
+        /// </summary>
         public string Group { get; set; }
+        /// <summary>
+        /// The element id of the element
+        /// </summary>
         public string Element { get; set; }
+
+        /// <summary>
+        /// The complete id, containing both the group id GGGG and the element id EEEE as GGGGEEEE
+        /// </summary>
         public string CompleteID
         {
             get

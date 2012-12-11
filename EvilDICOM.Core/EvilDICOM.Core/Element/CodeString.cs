@@ -7,6 +7,9 @@ using EvilDICOM.Core.Interfaces;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the CodeString VR type
+    /// </summary>
     public class CodeString : AbstractElement<string>
     {
         public new string Data

@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the FloatingPointDouble VR type
+    /// </summary>
     public class FloatingPointDouble : AbstractElement<double?>
     {
         public FloatingPointDouble() { }

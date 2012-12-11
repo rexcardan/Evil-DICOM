@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the AgeString VR type
+    /// </summary>
     public class AgeString : AbstractElement<string>
     {
         public AgeString() { }
@@ -18,6 +21,9 @@ namespace EvilDICOM.Core.Element
             VR = Enums.VR.AgeString;
         }
 
+        /// <summary>
+        /// The age stored in the element. Supplements the data property.
+        /// </summary>
         public Age Age
         {
             get
@@ -31,6 +37,9 @@ namespace EvilDICOM.Core.Element
         }
     }
 
+    /// <summary>
+    /// A small class to help manipulate the age in the AgeString class
+    /// </summary>
     public class Age
     {
         public int Number { get; set; }

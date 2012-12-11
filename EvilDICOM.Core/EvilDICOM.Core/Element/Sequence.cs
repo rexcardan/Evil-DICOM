@@ -9,6 +9,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the Sequence VR type
+    /// </summary>
     public class Sequence : AbstractElement<List<DICOMObject>>
     {
         public Sequence()

@@ -10,8 +10,19 @@ using EvilDICOM.Core.Helpers;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Responsible for building concrete elements from element pieces
+    /// </summary>
     public class ElementFactory
     {
+        /// <summary>
+        /// Generates a concrete element class from the VR, tag, data and syntax. Also directs the appropriate data interpretation.
+        /// </summary>
+        /// <param name="tag">the tag of the element to be generated</param>
+        /// <param name="vr">the VR of the element to be generated</param>
+        /// <param name="data">the raw data to be procesed (byte array)</param>
+        /// <param name="syntax">the transfer syntax by which to interepret the data</param>
+        /// <returns>a concrete DICOM element that uses the interface IDICOMElement</returns>
         public static IDICOMElement GenerateElement(Tag tag, VR vr, object data,TransferSyntax syntax)
         {
             //HANDLE NUMBERS
@@ -79,10 +90,9 @@ namespace EvilDICOM.Core.Element
         /// <summary>
         /// Reads string data and creates the appropriate DICOM element
         /// </summary>
-        /// <param name="d">an abstract element holding the tag of the object</param>
         /// <param name="data">the string data as an object (fresh from the DICOM reader)</param>
-        /// <param name="vr"></param>
-        /// <returns></returns>
+        /// <param name="vr">the VR of the element to be generated</param>
+        /// <returns>a concrete DICOM element that uses the interface IDICOMElement</returns>
         private static IDICOMElement ReadString(VR vr, Tag tag, object data)
         {
             switch (vr)

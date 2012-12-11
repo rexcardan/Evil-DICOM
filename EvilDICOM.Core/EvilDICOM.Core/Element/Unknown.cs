@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the Unknown VR type
+    /// </summary>
     public class Unknown : AbstractElement<byte[]>
     {
         public Unknown() { }

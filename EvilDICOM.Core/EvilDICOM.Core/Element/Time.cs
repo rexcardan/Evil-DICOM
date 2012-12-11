@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the Time VR type
+    /// </summary>
     public class Time : AbstractElement<System.DateTime?>
     {
         public Time() { }

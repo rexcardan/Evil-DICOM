@@ -7,6 +7,9 @@ using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
+    /// <summary>
+    /// Encapsulates the FloatingPointSingle VR type
+    /// </summary>
     public class FloatingPointSingle : AbstractElement<float?>
     {
         public FloatingPointSingle() { }
