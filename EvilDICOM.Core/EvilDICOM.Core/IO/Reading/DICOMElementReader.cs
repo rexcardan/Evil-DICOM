@@ -20,7 +20,7 @@ namespace EvilDICOM.Core.IO.Reading
         /// <summary>
         /// A dictionary containing a map of VR type in relation to tag id
         /// </summary>
-        static TagVRDictionary _tagDictionary = new TagVRDictionary();
+        static TagDictionary _tagDictionary = new TagDictionary();
 
         /// <summary>
         /// Reads and returns the next DICOM element starting at the current location in the DICOM binary reader

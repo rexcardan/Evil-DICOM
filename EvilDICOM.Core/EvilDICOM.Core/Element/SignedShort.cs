@@ -10,11 +10,11 @@ namespace EvilDICOM.Core.Element
     /// <summary>
     /// Encapsulates the SignedShort VR type
     /// </summary>
-    public class SignedShort : AbstractElement<short?>
+    public class SignedShort : AbstractElement<short[]>
     {
         public SignedShort() { }
 
-        public SignedShort(Tag tag, short? data)
+        public SignedShort(Tag tag, short[] data)
         {
             Tag = tag;
             Data = data;

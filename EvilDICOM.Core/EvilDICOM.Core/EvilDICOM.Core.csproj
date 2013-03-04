@@ -48,7 +48,7 @@
     <Compile Include="DICOMObject.cs" />
     <Compile Include="DICOMObjectWrapper.cs" />
     <Compile Include="Dictionaries\TagDictionary.cs" />
-    <Compile Include="Dictionaries\TagVRDictionary.cs" />
+    <Compile Include="Dictionaries\TagInfo.cs" />
     <Compile Include="Dictionaries\VRDictionary.cs" />
     <Compile Include="Element\AbstractElement.cs" />
     <Compile Include="Element\AgeString.cs" />
@@ -111,6 +111,7 @@
     <Compile Include="Interfaces\IDICOMMessage.cs" />
     <Compile Include="Interfaces\IImageDecoder.cs" />
     <Compile Include="Interfaces\IIOD.cs" />
+    <Compile Include="IO\Data\AbstractBinaryDataReader.cs" />
     <Compile Include="IO\Data\BigEndianReader.cs" />
     <Compile Include="IO\Data\DataComposer.cs" />
     <Compile Include="IO\Data\DataPadder.cs" />
@@ -118,6 +119,8 @@
     <Compile Include="IO\Data\DICOMString.cs" />
     <Compile Include="IO\Data\LittleEndianReader.cs" />
     <Compile Include="IO\Data\LittleEndianWriter.cs" />
+    <Compile Include="IO\Data\MultiplicityReader.cs" />
+    <Compile Include="IO\Data\MultiplicityComposer.cs" />
     <Compile Include="IO\Data\StringDataComposer.cs" />
     <Compile Include="IO\Data\StringDataParser.cs" />
     <Compile Include="IO\Reading\DataReader.cs" />

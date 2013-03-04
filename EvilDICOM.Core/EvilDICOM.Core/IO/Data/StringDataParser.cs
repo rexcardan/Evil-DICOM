@@ -70,7 +70,8 @@ namespace EvilDICOM.Core.IO.Data
             }
             else
             {
-                string[] sNumbers = data.Replace(" ", "").Split(new char[] { '\\' });
+                string[] sNumbers = data.Replace(" ", "") //Remove padding
+                    .Split(new char[] { '\\' });
                 double[] numbers = new double[sNumbers.Length];
                 for (int i = 0; i < sNumbers.Length; i++)
                 {

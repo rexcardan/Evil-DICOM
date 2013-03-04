@@ -23,7 +23,7 @@ namespace EvilDICOM.Core.Modules
         private OtherByteString _privateInfo = new OtherByteString { Tag = TagHelper.PRIVATE_INFORMATION };
         #endregion
 
-        public uint? GroupLength
+        public uint[] GroupLength
         {
             get
             {
@@ -31,7 +31,7 @@ namespace EvilDICOM.Core.Modules
             }
             set
             {
-                _groupLength.Data = value;
+                _groupLength.Data =  value;
             }
         }
 

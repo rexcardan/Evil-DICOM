@@ -10,11 +10,11 @@ namespace EvilDICOM.Core.Element
     /// <summary>
     /// Encapsulates the UnsignedLong VR type
     /// </summary>
-    public class UnsignedLong : AbstractElement<uint?>
+    public class UnsignedLong : AbstractElement<uint[]>
     {
         public UnsignedLong() { }
 
-        public UnsignedLong(Tag tag, uint? data)
+        public UnsignedLong(Tag tag, uint[] data)
         {
             Tag = tag;
             Data = data;

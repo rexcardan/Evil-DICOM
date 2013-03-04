@@ -10,11 +10,11 @@ namespace EvilDICOM.Core.Element
     /// <summary>
     /// Encapsulates the UnsignedShort VR type
     /// </summary>
-    public class UnsignedShort : AbstractElement<ushort?>
+    public class UnsignedShort : AbstractElement<ushort[]>
     {
         public UnsignedShort() { }
 
-        public UnsignedShort(Tag tag, ushort? data)
+        public UnsignedShort(Tag tag, ushort[] data)
         {
             Tag = tag;
             Data = data;

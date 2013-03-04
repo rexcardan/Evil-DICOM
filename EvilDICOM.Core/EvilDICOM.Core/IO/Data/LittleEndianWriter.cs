@@ -11,79 +11,76 @@ namespace EvilDICOM.Core.IO.Data
     {
         public static byte[] WriteTag(Tag tag)
         {
+            //TODO modify to make VM > 1 possible
+            return MultiplicityComposer.ComposeMultipleBinary<Tag>(new Tag[]{tag}, WriteTagSingle);
+        }
+
+        public static byte[] WriteSinglePrecision(float[] data)
+        {
+            return MultiplicityComposer.ComposeMultipleBinary<float>(data, WriteSinglePrecisionSingle);
+        }
+
+        public static byte[] WriteDoublePrecision(double[] data)
+        {
+            return MultiplicityComposer.ComposeMultipleBinary<double>(data, WriteDoublePrecisionSingle);
+        }
+
+        public static byte[] WriteSignedLong(int[] data)
+        {
+            return MultiplicityComposer.ComposeMultipleBinary<int>(data, WriteSignedLongSingle);
+        }
+
+        public static byte[] WriteUnsignedLong(uint[] data)
+        {
+            return MultiplicityComposer.ComposeMultipleBinary<uint>(data, WriteUnsignedLongSingle);
+        }
+
+        public static byte[] WriteSignedShort(short[] data)
+        {
+            return MultiplicityComposer.ComposeMultipleBinary<short>(data, WriteSignedShortSingle);
+        }
+
+        public static byte[] WriteUnsignedShort(ushort[] data)
+        {
+            return MultiplicityComposer.ComposeMultipleBinary<ushort>(data, WriteUnsignedShortSingle);
+        }
+
+        //Writes a single data element (VM = 1)
+        #region SINGLE WRITERS
+        public static byte[] WriteTagSingle(Tag tag)
+        {
             return DICOMTagWriter.WriteLittleEndian(tag);
         }
 
-        public static byte[] WriteSinglePrecision(float? data)
+        public static byte[] WriteSinglePrecisionSingle(float data)
         {
-            if (data == null)
-            {
-                return new byte[0];
-            }
-            else
-            {
-                return BitConverter.GetBytes((float)data);
-            }
+            return BitConverter.GetBytes(data);
         }
 
-        public static byte[] WriteDoublePrecision(double? data)
+        public static byte[] WriteDoublePrecisionSingle(double data)
         {
-            if (data == null)
-            {
-                return new byte[0];
-            }
-            else
-            {
-                return BitConverter.GetBytes((double)data);
-            }
+            return BitConverter.GetBytes(data);
         }
 
-        public static byte[] WriteSignedLong(int? data)
+        public static byte[] WriteSignedLongSingle(int data)
         {
-            if (data == null)
-            {
-                return new byte[0];
-            }
-            else
-            {
-                return BitConverter.GetBytes((int)data);
-            }
+            return BitConverter.GetBytes(data);
         }
 
-        public static byte[] WriteUnsignedLong(uint? data)
+        public static byte[] WriteUnsignedLongSingle(uint data)
         {
-            if (data == null)
-            {
-                return new byte[0];
-            }
-            else
-            {
-                return BitConverter.GetBytes((uint)data);
-            }
+            return BitConverter.GetBytes(data);
         }
 
-        public static byte[] WriteSignedShort(short? data)
+        public static byte[] WriteSignedShortSingle(short data)
         {
-            if (data == null)
-            {
-                return new byte[0];
-            }
-            else
-            {
-                return BitConverter.GetBytes((short)data);
-            }
+            return BitConverter.GetBytes(data);
         }
 
-        public static byte[] WriteUnsignedShort(ushort? data)
+        public static byte[] WriteUnsignedShortSingle(ushort data)
         {
-            if (data == null)
-            {
-                return new byte[0];
-            }
-            else
-            {
-                return BitConverter.GetBytes((ushort)data);
-            }
+            return BitConverter.GetBytes(data);
         }
+        #endregion
     }
 }

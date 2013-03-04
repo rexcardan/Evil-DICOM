@@ -15,7 +15,7 @@ namespace EvilDICOM.Core.IO.Writing
             byte[] groupBytes = WriteGroupBytesLittleEndian(d, settings, el.Tag.Group);
             int length = groupBytes.Length;
             UnsignedLong ul = el as UnsignedLong;
-            ul.Data = (uint)length;
+            ul.Data = new uint[]{(uint)length};
             DICOMElementWriter.WriteLittleEndian(dw, settings, ul);
             dw.Write(groupBytes);
             return d.Elements.Where(elm => elm.Tag.Group == ul.Tag.Group).ToList().Count - 1;

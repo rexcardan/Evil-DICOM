@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.IO.Reading;
+using EvilDICOM.Core.Interfaces;
 
 namespace EvilDICOM.Core.IO.Data
 {
-    public class BigEndianReader
+    public class BigEndianReader :AbstractBinaryDataReader
     {
         public static AttributeTag AttributeTag(Tag tag, byte[] data)
         {
@@ -17,48 +18,75 @@ namespace EvilDICOM.Core.IO.Data
 
         public static Tag ReadTag(byte[] data)
         {
-            if (CheckForNullData(data)) { return null; }
-            return TagReader.ReadBigEndian(data);
+            //TODO add support for VM > 1
+            return ReadTag(data, ReadTagSingle).First();
         }
 
-        public static float? ReadSinglePrecision(byte[] data)
+        public static float[] ReadSinglePrecision(byte[] data)
         {
-            if (CheckForNullData(data)) { return null; }
+            return ReadSinglePrecision(data, ReadSinglePrecisionSingle);
+        }
+
+        public static double[] ReadDoublePrecision(byte[] data)
+        {
+            return ReadDoublePrecision(data, ReadDoublePrecisionSingle);
+        }
+
+        public static int[] ReadSignedLong(byte[] data)
+        {
+            return ReadSignedLong(data, ReadSignedLongSingle);
+        }
+
+        public static uint[] ReadUnsignedLong(byte[] data)
+        {
+            return ReadUnsignedLong(data, ReadUnsignedLongSingle);
+        }
+
+        public static short[] ReadSignedShort(byte[] data)
+        {
+            return ReadSignedShort(data, ReadSignedShortSingle);
+        }
+
+        public static ushort[] ReadUnsignedShort(byte[] data)
+        {
+            return ReadUnsignedShort(data, ReadUnsignedShortSingle);
+        }
+
+        #region SINGLE DATA READERS
+        public static float ReadSinglePrecisionSingle(byte[] data)
+        {
             return BitConverter.ToSingle(data.Reverse().ToArray(), 0);
         }
 
-        public static double? ReadDoublePrecision(byte[] data)
+        public static Tag ReadTagSingle(byte[] data)
         {
-            if (CheckForNullData(data)) { return null; }
-            return BitConverter.ToDouble(data.Reverse().ToArray(), 0);
-        }      
+            return TagReader.ReadBigEndian(data);
+        }
 
-        public static int? ReadSignedLong(byte[] data)
+        public static double ReadDoublePrecisionSingle(byte[] data)
         {
-            if (CheckForNullData(data)) { return null; }
+            return BitConverter.ToDouble(data.Reverse().ToArray(), 0);
+        }
+
+        public static int ReadSignedLongSingle(byte[] data)
+        {
             return BitConverter.ToInt32(data.Reverse().ToArray(), 0);
         }
-        public static uint? ReadUnsignedLong(byte[] data)
+        public static uint ReadUnsignedLongSingle(byte[] data)
         {
-            if (CheckForNullData(data)) { return null; }
             return BitConverter.ToUInt32(data.Reverse().ToArray(), 0);
         }
 
-        public static short? ReadSignedShort(byte[] data)
+        public static short ReadSignedShortSingle(byte[] data)
         {
-            if (CheckForNullData(data)) { return null; }
             return BitConverter.ToInt16(data.Reverse().ToArray(), 0);
         }
 
-        public static ushort? ReadUnsignedShort(byte[] data)
+        public static ushort ReadUnsignedShortSingle(byte[] data)
         {
-            if (CheckForNullData(data)) { return null; }
             return BitConverter.ToUInt16(data.Reverse().ToArray(), 0);
         }
 
-        private static bool CheckForNullData(byte[] data)
-        {
-            return data.Length == 0;
-        }
+        #endregion
     }
 }

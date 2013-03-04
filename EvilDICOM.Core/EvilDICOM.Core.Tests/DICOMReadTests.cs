@@ -2,6 +2,7 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using EvilDICOM.Core.IO.Reading;
 using EvilDICOM.Core.Tests.Properties;
+using EvilDICOM.Core.Element;
 
 namespace EvilDICOM.Core.Tests
 {
@@ -14,6 +15,14 @@ namespace EvilDICOM.Core.Tests
             var dcm = DICOMFileReader.Read(Resources.explicitLittleEndian);
             var elemCount = dcm.AllElements.Count;
             Assert.AreEqual(elemCount, 72);
+        }
+
+        [TestMethod]
+        public void ReadMultipleFL()
+        {
+            var dcm = DICOMFileReader.Read(Resources.MultpleFL);
+            var vmGreaterThan1 = dcm.FindAll("300A030A");
+            Assert.IsTrue((vmGreaterThan1[0] as AbstractElement<float[]>).Data.Length > 1);
         }
 
         [TestMethod]

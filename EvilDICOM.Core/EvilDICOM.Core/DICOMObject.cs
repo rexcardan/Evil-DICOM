@@ -97,7 +97,6 @@ namespace EvilDICOM.Core
             }
         }
 
-
         /// <summary>
         /// Searches for a specific element (first instance). If it is found, it sets the data for this element and returns true, otherwise returns false;
         /// </summary>

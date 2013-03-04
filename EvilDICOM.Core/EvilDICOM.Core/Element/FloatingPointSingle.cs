@@ -10,11 +10,11 @@ namespace EvilDICOM.Core.Element
     /// <summary>
     /// Encapsulates the FloatingPointSingle VR type
     /// </summary>
-    public class FloatingPointSingle : AbstractElement<float?>
+    public class FloatingPointSingle : AbstractElement<float[]>
     {
         public FloatingPointSingle() { }
 
-        public FloatingPointSingle(Tag tag, float? data)
+        public FloatingPointSingle(Tag tag, float[] data)
         {
             Tag = tag;
             Data = data;

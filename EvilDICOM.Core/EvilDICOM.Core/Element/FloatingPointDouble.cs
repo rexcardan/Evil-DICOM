@@ -10,11 +10,11 @@ namespace EvilDICOM.Core.Element
     /// <summary>
     /// Encapsulates the FloatingPointDouble VR type
     /// </summary>
-    public class FloatingPointDouble : AbstractElement<double?>
+    public class FloatingPointDouble : AbstractElement<double[]>
     {
         public FloatingPointDouble() { }
 
-        public FloatingPointDouble(Tag tag, double? data)
+        public FloatingPointDouble(Tag tag, double[] data)
         {
             Tag = tag;
             Data = data;
