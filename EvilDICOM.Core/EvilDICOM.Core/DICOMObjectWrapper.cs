@@ -17,7 +17,7 @@ namespace EvilDICOM.Core
             this._dcm = dicom;
         }
 
-        public T GetValue<T>(Tag tag)
+        public DICOMData<T> GetValue<T>(Tag tag)
         {          
             return _dcm.TryGetDataValue<T>(tag, null);
         }
@@ -35,10 +35,10 @@ namespace EvilDICOM.Core
         /// <returns>a list of wrapped DICOM objects</returns>
         public List<T> GetWrappedSequence<T>(Tag tag) where T : DICOMObjectWrapper, new ()
         {
-            var seq = _dcm.TryGetDataValue<List<DICOMObject>>(tag, null);
+            var seq = _dcm.TryGetDataValue<DICOMObject>(tag, null);
             if (seq != null)
             {
-                return seq.Select(si => {var t = new T(); t._dcm = si; return t;}).ToList();
+                return seq.MultipicityValue.Select(si => {var t = new T(); t._dcm = si; return t;}).ToList();
             }
             else
             {

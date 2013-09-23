@@ -12,15 +12,19 @@ namespace EvilDICOM.Core.Element
     /// </summary>
     public class UnlimitedText : AbstractElement<string>
     {
+        /// <summary>
+        /// Data is overriden to enforce length restriction
+        /// </summary>
         public new string Data
         {
-            get { return base.Data; }
-            set { base.Data = DataRestriction.EnforceLengthRestriction(uint.MaxValue - 1, value); }
+            get { return base.Data.SingleValue; }
+            set { base.Data = base.Data ?? new DICOMData<string>(); base.Data.SingleValue = DataRestriction.EnforceLengthRestriction(uint.MaxValue - 1, value); }
         }
 
-        public UnlimitedText() { }
+        public UnlimitedText() : base() { }
 
         public UnlimitedText(Tag tag, string data)
+            : base()
         {
             Tag = tag;
             Data = data;

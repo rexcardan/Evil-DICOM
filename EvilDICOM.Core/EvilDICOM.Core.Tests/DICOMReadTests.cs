@@ -22,7 +22,8 @@ namespace EvilDICOM.Core.Tests
         {
             var dcm = DICOMFileReader.Read(Resources.MultpleFL);
             var vmGreaterThan1 = dcm.FindAll("300A030A");
-            Assert.IsTrue((vmGreaterThan1[0] as AbstractElement<float[]>).Data.Length > 1);
+            var el = vmGreaterThan1[0] as AbstractElement<float>;
+            Assert.IsTrue(el.Data.MultipicityValue.Count > 1);
         }
 
         [TestMethod]
@@ -47,6 +48,13 @@ namespace EvilDICOM.Core.Tests
             var dcm = DICOMFileReader.Read(Resources.explicitLittleJPEG);
             var elemCount = dcm.AllElements.Count;
             Assert.AreEqual(elemCount, 80);
+        }
+
+        [TestMethod]
+        public void Read()
+        {
+            var dcm = DICOMFileReader.Read(@"C:\Users\Rex\Desktop\BASSIN - 8577\IM-0001-0001.dcm");
+            var elemCount = dcm.AllElements.Count;
         }
 
     }

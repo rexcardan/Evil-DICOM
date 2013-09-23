@@ -58,6 +58,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="DataTests.cs" />
+    <Compile Include="DICOMWriteTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\EvilDICOM.Core\EvilDICOM.Core.csproj">
@@ -65,7 +67,6 @@
       <Name>EvilDICOM.Core</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -11,16 +11,19 @@ namespace EvilDICOM.Core.Element
     /// Encapsulates the LongText VR type
     /// </summary>
     public class LongText : AbstractElement<string>
-    {
+    {  
+        /// <summary>
+        /// Data overriden for enforcing length restriction
+        /// </summary>
         public new string Data
         {
-            get { return base.Data; }
-            set { base.Data = DataRestriction.EnforceLengthRestriction(10240, value); }
+            get { return base.Data.SingleValue; }
+            set { base.Data = base.Data ?? new DICOMData<string>(); base.Data.SingleValue = DataRestriction.EnforceLengthRestriction(10240, value); }
         }
 
-        public LongText() { }
+        public LongText() : base() { VR = Enums.VR.LongText; }
 
-        public LongText(Tag tag, string data)
+        public LongText(Tag tag, string data) :base()
         {
             Tag = tag;
             Data = data;

@@ -84,7 +84,7 @@ namespace EvilDICOM.Core
         /// <param name="tagToFind">the tag of the element containing the data</param>
         /// <param name="defaultValueIfNull">the default value to return if the element is not found</param>
         /// <returns></returns>
-        public T TryGetDataValue<T>(Tag tagToFind, object defaultValueIfNull)
+        public DICOMData<T> TryGetDataValue<T>(Tag tagToFind, object defaultValueIfNull)
         {
             var found = FindFirst(tagToFind) as AbstractElement<T>;
             if (found != null)
@@ -93,7 +93,10 @@ namespace EvilDICOM.Core
             }
             else
             {
-                return (T)defaultValueIfNull;
+                var data = new DICOMData<T>();
+                if (typeof(T).IsArray) { data.MultipicityValue = ((T[])defaultValueIfNull).ToList(); }
+                else { data.SingleValue = (T)defaultValueIfNull; }
+                return data;
             }
         }
 
@@ -109,7 +112,28 @@ namespace EvilDICOM.Core
             var found = FindFirst(tagToFind) as AbstractElement<T>;
             if (found != null)
             {
-                found.Data = data;
+                found.Data.SingleValue = data;
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Searches for a specific element (first instance). If it is found, it sets the data for this element and returns true, otherwise returns false;
+        /// </summary>
+        /// <typeparam name="T">the type of data to return</typeparam>
+        /// <param name="tagToFind">the tag of the element containing the data</param>
+        /// <param name="data">the data to set in this element</param>
+        /// <returns>a boolean indicating whether or not the operation was successful</returns>
+        public bool TrySetDataValue<T>(Tag tagToFind, List<T> data)
+        {
+            var found = FindFirst(tagToFind) as AbstractElement<T>;
+            if (found != null)
+            {
+                found.Data.MultipicityValue = data;
                 return true;
             }
             else
@@ -228,6 +252,10 @@ namespace EvilDICOM.Core
             return FindFirst(toFind.CompleteID);
         }
 
+        /// <summary>
+        /// Removes the element with the tag from the DICOM object
+        /// </summary>
+        /// <param name="tag">the tag string in the form of GGGGEEEE to be removed</param>
         public void Remove(string tag)
         {
             Elements.RemoveAll(el => el.Tag.CompleteID == tag);
@@ -245,6 +273,15 @@ namespace EvilDICOM.Core
         }
 
         /// <summary>
+        /// Removes the element with the tag from the DICOM object
+        /// </summary>
+        /// <param name="tag">the tag of the element to be removed</param>
+        public void Remove(Tag tag)
+        {
+            Remove(tag.CompleteID);
+        }
+
+        /// <summary>
         /// Replaces a current instance of the DICOM element in the DICOM object. If the object does not exist, this method
         /// exits. For this scenario, please use ReplaceOrAdd().
         /// </summary>
@@ -259,58 +296,60 @@ namespace EvilDICOM.Core
             return true;
         }
 
-        #region REPLACE OVERLOADS
-        public bool Replace(AbstractElement<float[]> element)
+        /// <summary>
+        /// Replaces the underlying DICOM element with input DICOM element of the same tag
+        /// </summary>
+        /// <param name="el">the new DICOM element</param>
+        /// <returns>whether or not the operation was successful</returns>
+        public bool Replace(IDICOMElement el)
         {
-            return Replace<float[]>(element);
+            var toReplace = FindFirst(el.Tag);
+            if (toReplace == null) return false;
+            toReplace.UntypedData = el.UntypedData;
+            return true;
+
         }
-        public bool Replace(AbstractElement<double[]> element)
+
+        #region REPLACE OVERLOADS
+        public bool Replace(AbstractElement<float> element)
         {
-            return Replace<double[]>(element);
+            return Replace<float>(element);
+        }
+        public bool Replace(AbstractElement<double> element)
+        {
+            return Replace<double>(element);
         }
         public bool Replace(AbstractElement<string> element)
         {
             return Replace<string>(element);
         }
-        public bool Replace(AbstractElement<List<DICOMObject>> element)
+        public bool Replace(AbstractElement<DICOMObject> element)
         {
-            return Replace<List<DICOMObject>>(element);
+            return Replace<DICOMObject>(element);
         }
         public bool Replace(AbstractElement<Tag> element)
         {
             return Replace<Tag>(element);
         }
-        public bool Replace(AbstractElement<uint?> element)
+        public bool Replace(AbstractElement<uint> element)
         {
-            return Replace<uint?>(element);
+            return Replace<uint>(element);
         }
-        public bool Replace(AbstractElement<int?> element)
+        public bool Replace(AbstractElement<int> element)
         {
-            return Replace<int?>(element);
+            return Replace<int>(element);
         }
-        public bool Replace(AbstractElement<ushort?> element)
+        public bool Replace(AbstractElement<ushort> element)
         {
-            return Replace<ushort?>(element);
+            return Replace<ushort>(element);
         }
-        public bool Replace(AbstractElement<short?> element)
+        public bool Replace(AbstractElement<short> element)
         {
-            return Replace<short?>(element);
+            return Replace<short>(element);
         }
-        public bool Replace(AbstractElement<double?> element)
+        public bool Replace(AbstractElement<byte> element)
         {
-            return Replace<double?>(element);
-        }
-        public bool Replace(AbstractElement<float?> element)
-        {
-            return Replace<float?>(element);
-        }
-        public bool Replace(AbstractElement<byte[]> element)
-        {
-            return Replace<byte[]>(element);
-        }
-        public bool Replace(AbstractElement<int[]> element)
-        {
-            return Replace<int[]>(element);
+            return Replace<byte>(element);
         }
         public bool Replace(AbstractElement<System.DateTime?> element)
         {
@@ -333,41 +372,41 @@ namespace EvilDICOM.Core
         }
 
         #region REPLACE OR ADD OVERLOADS
-        public void ReplaceOrAdd(AbstractElement<float[]> element)
+        public void ReplaceOrAdd(AbstractElement<float> element)
         {
-            ReplaceOrAdd<float[]>(element);
+            ReplaceOrAdd<float>(element);
         }
-        public void ReplaceOrAdd(AbstractElement<double[]> element)
+        public void ReplaceOrAdd(AbstractElement<double> element)
         {
-            ReplaceOrAdd<double[]>(element);
+            ReplaceOrAdd<double>(element);
         }
         public void ReplaceOrAdd(AbstractElement<string> element)
         {
             ReplaceOrAdd<string>(element);
         }
-        public void ReplaceOrAdd(AbstractElement<List<DICOMObject>> element)
+        public void ReplaceOrAdd(AbstractElement<DICOMObject> element)
         {
-            ReplaceOrAdd<List<DICOMObject>>(element);
+            ReplaceOrAdd<DICOMObject>(element);
         }
         public void ReplaceOrAdd(AbstractElement<Tag> element)
         {
             ReplaceOrAdd<Tag>(element);
         }
-        public void ReplaceOrAdd(AbstractElement<uint?> element)
+        public void ReplaceOrAdd(AbstractElement<uint> element)
         {
-            ReplaceOrAdd<uint?>(element);
+            ReplaceOrAdd<uint>(element);
         }
-        public void ReplaceOrAdd(AbstractElement<int?> element)
+        public void ReplaceOrAdd(AbstractElement<int> element)
         {
-            ReplaceOrAdd<int?>(element);
+            ReplaceOrAdd<int>(element);
         }
-        public void ReplaceOrAdd(AbstractElement<ushort?> element)
+        public void ReplaceOrAdd(AbstractElement<ushort> element)
         {
-            ReplaceOrAdd<ushort?>(element);
+            ReplaceOrAdd<ushort>(element);
         }
-        public void ReplaceOrAdd(AbstractElement<short?> element)
+        public void ReplaceOrAdd(AbstractElement<short> element)
         {
-            ReplaceOrAdd<short?>(element);
+            ReplaceOrAdd<short>(element);
         }
         public void ReplaceOrAdd(AbstractElement<double?> element)
         {
@@ -377,13 +416,9 @@ namespace EvilDICOM.Core
         {
             ReplaceOrAdd<float?>(element);
         }
-        public void ReplaceOrAdd(AbstractElement<byte[]> element)
+        public void ReplaceOrAdd(AbstractElement<byte> element)
         {
-            ReplaceOrAdd<byte[]>(element);
-        }
-        public void ReplaceOrAdd(AbstractElement<int[]> element)
-        {
-            ReplaceOrAdd<int[]>(element);
+            ReplaceOrAdd<byte>(element);
         }
         public void ReplaceOrAdd(AbstractElement<System.DateTime?> element)
         {
@@ -399,10 +434,10 @@ namespace EvilDICOM.Core
         {
             get
             {
-                var pixelData = FindFirst(TagHelper.PIXEL_DATA) as AbstractElement<byte[]>;
+                var pixelData = FindFirst(TagHelper.PIXEL_DATA) as AbstractElement<byte>;
                 if (pixelData != null)
                 {
-                    return new MemoryStream(pixelData.Data);
+                    return new MemoryStream(pixelData.Data.MultipicityValue.ToArray());
                 }
                 else
                 {

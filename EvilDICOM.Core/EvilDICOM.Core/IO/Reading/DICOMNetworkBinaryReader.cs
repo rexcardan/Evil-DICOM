@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Net.Sockets;
 using System.IO;
+using System.Threading.Tasks;
 
 namespace EvilDICOM.Core.IO.Reading
 {
@@ -72,6 +73,44 @@ namespace EvilDICOM.Core.IO.Reading
             return bytes;
         }
 
+        /// <summary>
+        /// Reads the specified number of bytes. Will block until bytes are completely read (waiting on the network).
+        /// </summary>
+        /// <param name="count">the number of bytes to be read</param>
+        /// <returns>the read bytes</returns>
+        public new byte[] ReadBytesAsync(int count)
+        {
+            List<byte> bytes= new List<byte>();
+            var myReadBuffer = new byte[1024];
+            int bytesRead = 0;
+            var leftToRead =count - bytesRead;
+
+            while (leftToRead > 0)
+            {
+                if (_stream.CanRead)
+                {
+                    Task readChunk = Task<int>.Factory.FromAsync(_stream.BeginRead, _stream.EndRead,
+                            myReadBuffer, bytesRead, myReadBuffer.Length - bytesRead, null)
+                    .ContinueWith((antecedent) =>
+                    {
+                        if (antecedent.Result < myReadBuffer.Length)
+                            Array.Resize(ref myReadBuffer, antecedent.Result);
+
+                        leftToRead -= antecedent.Result;
+
+                        foreach (var b in myReadBuffer)
+                        {
+                            bytes.Add(b);
+                        }
+                    });
+
+                    readChunk.Wait();
+                }
+            }
+                        
+            return bytes.ToArray();
+        }
+
         public new long StreamPosition
         {
             get
@@ -107,6 +146,20 @@ namespace EvilDICOM.Core.IO.Reading
                 }
             }
             return message;
+        }
+
+
+        public bool AwaitingData
+        {
+            get
+            {
+                return !DataAvailable;
+            }
+        }
+
+        public bool DataAvailable
+        {
+            get { return _stream.DataAvailable; }
         }
     }
 }

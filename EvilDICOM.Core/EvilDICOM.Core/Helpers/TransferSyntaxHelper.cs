@@ -107,7 +107,7 @@ namespace EvilDICOM.Core.Helpers
         }
 
         /// <summary>
-        /// Sets the transfer syntax of the DICOM object
+        /// Sets the transfer syntax of the DICOM object. The purpose of this is to go from an enum to a string.
         /// </summary>
         /// <param name="dicom">the DICOM object to set syntax</param>
         /// <param name="selector">the transfer syntax to set</param>
@@ -124,6 +124,28 @@ namespace EvilDICOM.Core.Helpers
                     case TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN: transferSyntax = TransferSyntaxHelper.EXPLICIT_VR_LITTLE_ENDIAN;
                         break;
                     case TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN: transferSyntax = TransferSyntaxHelper.IMPLICIT_VR_LITTLE_ENDIAN;
+                        break;
+                    case TransferSyntax.JPEG_2000: transferSyntax = TransferSyntaxHelper.JPEG_2000;
+                        break;
+                    case TransferSyntax.JPEG_2000_LOSSLESS: transferSyntax = TransferSyntaxHelper.JPEG_2000_LOSSLESS;
+                        break;
+                    case TransferSyntax.JPEG_BASELINE: transferSyntax = TransferSyntaxHelper.JPEG_BASELINE;
+                        break;
+                    case TransferSyntax.JPEG_EXTENDED: transferSyntax = TransferSyntaxHelper.JPEG_EXTENDED;
+                        break;
+                    case TransferSyntax.JPEG_LOSSLESS_14: transferSyntax = TransferSyntaxHelper.JPEG_LOSSLESS_14;
+                        break;
+                    case TransferSyntax.JPEG_LOSSLESS_14_S1: transferSyntax = TransferSyntaxHelper.JPEG_LOSSLESS_14_S1;
+                        break;
+                    case TransferSyntax.JPEG_LOSSLESS_15: transferSyntax = TransferSyntaxHelper.JPEG_LOSSLESS_15;
+                        break;
+                    case TransferSyntax.JPEG_LS_LOSSLESS: transferSyntax = TransferSyntaxHelper.JPEG_LS_LOSSLESS;
+                        break;
+                    case TransferSyntax.JPEG_LS_NEAR_LOSSLESS: transferSyntax = TransferSyntaxHelper.JPEG_LS_NEAR_LOSSLESS;
+                        break;
+                    case TransferSyntax.JPEG_PROGRESSIVE: transferSyntax = TransferSyntaxHelper.JPEG_PROGRESSIVE;
+                        break;
+                    case TransferSyntax.RLE_LOSSLESS: transferSyntax = TransferSyntaxHelper.RLE_LOSSLESS;
                         break;
                     default: transferSyntax = TransferSyntaxHelper.IMPLICIT_VR_LITTLE_ENDIAN;
                         break;

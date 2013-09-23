@@ -12,12 +12,11 @@ namespace EvilDICOM.Core.Element
     /// </summary>
     public class AgeString : AbstractElement<string>
     {
-        public AgeString() { }
+        public AgeString() : base() { VR = Enums.VR.AgeString; }
 
         public AgeString(Tag tag, string data)
+            : base(tag, data)
         {
-            Tag = tag;
-            Data = data;
             VR = Enums.VR.AgeString;
         }
 
@@ -28,11 +27,11 @@ namespace EvilDICOM.Core.Element
         {
             get
             {
-                return StringDataParser.ParseAgeString(Data);
+                return StringDataParser.ParseAgeString(Data.SingleValue);
             }
             set
             {
-                Data = StringDataComposer.ComposeAgeString(value);
+                Data.SingleValue = StringDataComposer.ComposeAgeString(value);
             }
         }
     }

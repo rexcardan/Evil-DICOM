@@ -12,12 +12,11 @@ namespace EvilDICOM.Core.Element
     /// </summary>
     public class AttributeTag : AbstractElement<Tag>
     {
-        public AttributeTag() { }
+        public AttributeTag() : base() { VR = Enums.VR.AttributeTag; }
 
         public AttributeTag(Tag tag, Tag data)
+            : base(tag, data)
         {
-            Tag = tag;
-            Data = data;
             VR = Enums.VR.AttributeTag;
         }
     }

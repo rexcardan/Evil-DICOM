@@ -27,11 +27,11 @@ namespace EvilDICOM.Core.Modules
         {
             get
             {
-                return _groupLength.Data;
+                return _groupLength.Data.MultipicityValue.ToArray();
             }
             set
             {
-                _groupLength.Data =  value;
+                _groupLength.Data.MultipicityValue = value.ToList();
             }
         }
 
@@ -39,11 +39,11 @@ namespace EvilDICOM.Core.Modules
         {
             get
             {
-                return _infoVersion.Data;
+                return _infoVersion.Data.MultipicityValue.ToArray();
             }
             set
             {
-                _infoVersion.Data = value;
+                _infoVersion.Data.MultipicityValue= value.ToList();
             }
         }
 
@@ -111,11 +111,11 @@ namespace EvilDICOM.Core.Modules
         {
             get
             {
-                return _sourceAETitle.Data;
+                return _sourceAETitle.Data.SingleValue;
             }
             set
             {
-                _sourceAETitle.Data = value;
+                _sourceAETitle.Data.SingleValue = value;
             }
         }
 
@@ -135,11 +135,11 @@ namespace EvilDICOM.Core.Modules
         {
             get
             {
-                return _privateInfo.Data;
+                return _privateInfo.Data.MultipicityValue.ToArray();
             }
             set
             {
-                _privateInfo.Data = value;
+                _privateInfo.Data.MultipicityValue = value.ToList();
             }
         }
 

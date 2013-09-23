@@ -14,12 +14,12 @@ namespace EvilDICOM.Core.IO.Data
         /// <param name="data">the data to be converted to binary</param>
         /// <param name="writeSingleFunc">the function that can convert a single data item into bytes</param>
         /// <returns>the concated array of bytes that contains all data items</returns>
-        public static byte[] ComposeMultipleBinary<T>(T[] data, Func<T, byte[]> writeSingleFunc)
+        public static byte[] ComposeMultipleBinary<T>(DICOMData<T> data, Func<T, byte[]> writeSingleFunc)
         {
             if (data != null)
             {
                 List<byte> bytes = new List<byte>();
-                foreach (var datum in data)
+                foreach (var datum in data.MultipicityValue)
                 {
                     //Write one data item
                     var single = writeSingleFunc(datum);

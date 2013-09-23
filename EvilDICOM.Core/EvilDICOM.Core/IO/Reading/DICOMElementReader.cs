@@ -62,7 +62,7 @@ namespace EvilDICOM.Core.IO.Reading
             var vr = VRReader.Read(dr);
             int length = LengthReader.ReadBigEndian(vr, dr);
             var data = DataReader.ReadBigEndian(length, dr);
-            return ElementFactory.GenerateElement(tag,vr, data, TransferSyntax.EXPLICIT_VR_BIG_ENDIAN);
+            return ElementFactory.GenerateElement(tag, vr, data, TransferSyntax.EXPLICIT_VR_BIG_ENDIAN);
         }
 
         #region SKIPPERS

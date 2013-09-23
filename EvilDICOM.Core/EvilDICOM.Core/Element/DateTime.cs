@@ -12,12 +12,17 @@ namespace EvilDICOM.Core.Element
     /// </summary>
     public class DateTime : AbstractElement<System.DateTime?>
     {
-        public DateTime() { }
+        public DateTime() : base() { VR = Enums.VR.DateTime; }
 
         public DateTime(Tag tag, string data)
+            : base(tag, StringDataParser.ParseDateTime(data))
         {
-            Tag = tag;
-            Data = StringDataParser.ParseDateTime(data);
+            VR = Enums.VR.DateTime;
+        }
+
+        public DateTime(Tag tag, System.DateTime? data)
+            : base(tag,data)
+        {
             VR = Enums.VR.DateTime;
         }
     }

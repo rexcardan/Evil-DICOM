@@ -10,14 +10,13 @@ namespace EvilDICOM.Core.Element
     /// <summary>
     /// Encapsulates the OtherFloatString VR type
     /// </summary>
-    public class OtherFloatString : AbstractElement<byte[]>
+    public class OtherFloatString : AbstractElement<byte>
     {
-        public OtherFloatString() { }
+        public OtherFloatString() : base() { VR = Enums.VR.OtherFloatString; }
 
         public OtherFloatString(Tag tag, byte[] data)
+            : base(tag,data)
         {
-            Tag = tag;
-            Data = data;
             VR = Enums.VR.OtherFloatString;
         }
     }

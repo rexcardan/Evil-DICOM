@@ -10,14 +10,13 @@ namespace EvilDICOM.Core.Element
     /// <summary>
     /// Encapsulates the Unknown VR type
     /// </summary>
-    public class Unknown : AbstractElement<byte[]>
+    public class Unknown : AbstractElement<byte>
     {
-        public Unknown() { }
+        public Unknown() : base() {}
 
         public Unknown(Tag tag, byte[] data)
+            : base(tag,data)
         {
-            Tag = tag;
-            Data = data;
             VR = Enums.VR.Unknown;
         }
     }

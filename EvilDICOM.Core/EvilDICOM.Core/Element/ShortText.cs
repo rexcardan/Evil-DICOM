@@ -11,16 +11,19 @@ namespace EvilDICOM.Core.Element
     /// Encapsulates the ShortText VR type
     /// </summary>
     public class ShortText : AbstractElement<string>
-    {
+    {  /// <summary>
+        /// Data is overriden to enforce length restriction
+        /// </summary>
         public new string Data
         {
-            get { return base.Data; }
-            set { base.Data = DataRestriction.EnforceLengthRestriction(1024, value); }
+            get { return base.Data.SingleValue; }
+            set { base.Data = base.Data?? new DICOMData<string>(); base.Data.SingleValue = DataRestriction.EnforceLengthRestriction(1024, value); }
         }
 
-        public ShortText() { }
+        public ShortText() : base() { VR = Enums.VR.ShortText; }
 
         public ShortText(Tag tag, string data)
+            : base()
         {
             Tag = tag;
             Data = data;

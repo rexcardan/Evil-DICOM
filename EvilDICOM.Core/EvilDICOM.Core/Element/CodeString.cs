@@ -12,15 +12,19 @@ namespace EvilDICOM.Core.Element
     /// </summary>
     public class CodeString : AbstractElement<string>
     {
+        /// <summary>
+        /// Data is overriden to enforce length restriction
+        /// </summary>
         public new string Data
         {
-            get { return base.Data; }
-            set { base.Data = DataRestriction.EnforceLengthRestriction(50, value); }
+            get { return base.Data.SingleValue; }
+            set { base.Data = base.Data ?? new DICOMData<string>(); base.Data.SingleValue = DataRestriction.EnforceLengthRestriction(50, value); }
         }
 
-        public CodeString() { }
+        public CodeString() : base() { VR = Enums.VR.CodeString; }
 
         public CodeString(Tag tag, string data)
+            : base()
         {
             Tag = tag;
             Data = data;

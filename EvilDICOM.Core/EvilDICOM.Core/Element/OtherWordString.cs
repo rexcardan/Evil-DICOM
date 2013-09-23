@@ -10,14 +10,13 @@ namespace EvilDICOM.Core.Element
     /// <summary>
     /// Encapsulates the OtherWordString VR type
     /// </summary>
-    public class OtherWordString : AbstractElement<byte[]>
+    public class OtherWordString : AbstractElement<byte>
     {
-        public OtherWordString() { }
+        public OtherWordString() : base() { VR = Enums.VR.OtherWordString; }
 
         public OtherWordString(Tag tag, byte[] data)
+            : base(tag,data)
         {
-            Tag = tag;
-            Data = data;
             VR = Enums.VR.OtherWordString;
         }
     }

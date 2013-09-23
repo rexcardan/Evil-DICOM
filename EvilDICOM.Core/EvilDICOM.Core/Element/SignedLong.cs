@@ -10,14 +10,19 @@ namespace EvilDICOM.Core.Element
     /// <summary>
     /// Encapsulates the SignedLong VR type
     /// </summary>
-    public class SignedLong : AbstractElement<int[]>
-    {      
-        public SignedLong() { }
+    public class SignedLong : AbstractElement<int>
+    {
+        public SignedLong() : base() { VR = Enums.VR.SignedLong; }
+
+        public SignedLong(Tag tag, int data)
+            : base(tag,data)
+        {
+            VR = Enums.VR.SignedLong;
+        }
 
         public SignedLong(Tag tag, int[] data)
+            : base(tag,data)
         {
-            Tag = tag;
-            Data = data;
             VR = Enums.VR.SignedLong;
         }
     }

@@ -12,9 +12,10 @@ namespace EvilDICOM.Core.Element
     /// <summary>
     /// Encapsulates the Sequence VR type
     /// </summary>
-    public class Sequence : AbstractElement<List<DICOMObject>>
+    public class Sequence : AbstractElement<DICOMObject>
     {
         public Sequence()
+            : base()
         {
             VR = Enums.VR.Sequence;
             Items = new List<DICOMObject>();
@@ -26,11 +27,11 @@ namespace EvilDICOM.Core.Element
         {
             get
             {
-                return base.Data;
+                return base.Data != null ? Data.MultipicityValue : null;
             }
             set
             {
-                base.Data = value;
+                base.Data = base.Data ?? new DICOMData<DICOMObject>(); base.Data.MultipicityValue = value;
             }
         }
     }

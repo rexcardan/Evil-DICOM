@@ -43,11 +43,11 @@ namespace EvilDICOM.Core.Modules
         {
             get
             {
-                return _birthdate.Data;
+                return _birthdate.Data.SingleValue;
             }
             set
             {
-                _birthdate.Data = value;
+                _birthdate.Data.SingleValue = value;
             }
         }
 

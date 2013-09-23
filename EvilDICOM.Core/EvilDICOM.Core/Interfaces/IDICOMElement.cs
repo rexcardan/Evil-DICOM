@@ -10,5 +10,7 @@ namespace EvilDICOM.Core.Interfaces
     public interface IDICOMElement
     {
         Tag Tag { get; set; }
+        Type DataType { get; }
+        object UntypedData { get; set; }
     }
 }

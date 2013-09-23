@@ -29,13 +29,13 @@ namespace EvilDICOM.Core.IO.Data
                     return LittleEndianWriter.WriteSinglePrecision(fps.Data);
                 case VR.OtherByteString:
                     OtherByteString obs = el as OtherByteString;
-                    return DataRestriction.EnforceEvenLength(obs.Data, vr);
+                    return DataRestriction.EnforceEvenLength(obs.Data.MultipicityValue.ToArray(), vr);
                 case VR.OtherFloatString:
                     OtherFloatString ofs = el as OtherFloatString;
-                    return ofs.Data;
+                    return ofs.Data.MultipicityValue.ToArray();
                 case VR.OtherWordString:
                     OtherWordString ows = el as OtherWordString;
-                    return ows.Data;
+                    return ows.Data.MultipicityValue.ToArray();
                 case VR.SignedLong:
                     SignedLong sl = el as SignedLong;
                     return LittleEndianWriter.WriteSignedLong(sl.Data);
@@ -44,7 +44,7 @@ namespace EvilDICOM.Core.IO.Data
                     return LittleEndianWriter.WriteSignedShort(sis.Data);
                 case VR.Unknown:
                     Unknown uk = el as Unknown;
-                    return DataRestriction.EnforceEvenLength(uk.Data, vr);
+                    return DataRestriction.EnforceEvenLength(uk.Data.MultipicityValue.ToArray(), vr);
                 case VR.UnsignedLong:
                     UnsignedLong ul = el as UnsignedLong;
                     return LittleEndianWriter.WriteUnsignedLong(ul.Data);
@@ -64,12 +64,12 @@ namespace EvilDICOM.Core.IO.Data
             {
                 case VR.AgeString:
                     AgeString age = el as AgeString;
-                    data = age.Data;
+                    data = age.Data.SingleValue;
                     unpadded = GetASCIIBytes(data);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.ApplicationEntity:
                     ApplicationEntity ae = el as ApplicationEntity;
-                    unpadded = GetASCIIBytes(ae.Data);
+                    unpadded = GetASCIIBytes(ae.Data.SingleValue);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.CodeString:
                     CodeString cs = el as CodeString;
@@ -77,22 +77,22 @@ namespace EvilDICOM.Core.IO.Data
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.Date:
                     Date d = el as Date;
-                    data = StringDataComposer.ComposeDate(d.Data);
+                    data = StringDataComposer.ComposeDate(d.Data.SingleValue);
                     unpadded = GetASCIIBytes(data);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.DateTime:
                     EvilDICOM.Core.Element.DateTime dt = el as EvilDICOM.Core.Element.DateTime;
-                    data = StringDataComposer.ComposeDateTime(dt.Data);
+                    data = StringDataComposer.ComposeDateTime(dt.Data.SingleValue);
                     unpadded = GetASCIIBytes(data);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.DecimalString:
                     DecimalString ds = el as DecimalString;
-                    data = StringDataComposer.ComposeDecimalString(ds.Data);
+                    data = StringDataComposer.ComposeDecimalString(ds.Data.MultipicityValue.ToArray());
                     unpadded = GetASCIIBytes(data);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.IntegerString:
                     IntegerString iSt = el as IntegerString;
-                    data = StringDataComposer.ComposeIntegerString(iSt.Data);
+                    data = StringDataComposer.ComposeIntegerString(iSt.Data.MultipicityValue.ToArray());
                     unpadded = GetASCIIBytes(data);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.LongString:
@@ -117,7 +117,7 @@ namespace EvilDICOM.Core.IO.Data
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.Time:
                     Time t = el as Time;
-                    data = StringDataComposer.ComposeTime(t.Data);
+                    data = StringDataComposer.ComposeTime(t.Data.SingleValue);
                     unpadded = GetASCIIBytes(data);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.UnlimitedText:
@@ -143,8 +143,5 @@ namespace EvilDICOM.Core.IO.Data
                 return new byte[0];
             }
         }
-
-
-
     }
 }

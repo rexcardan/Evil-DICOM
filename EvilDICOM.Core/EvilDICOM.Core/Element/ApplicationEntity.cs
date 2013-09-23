@@ -12,12 +12,11 @@ namespace EvilDICOM.Core.Element
     /// </summary>
     public class ApplicationEntity : AbstractElement<string>
     {
-        public ApplicationEntity() { }
+        public ApplicationEntity() : base() { VR = Enums.VR.ApplicationEntity; }
 
         public ApplicationEntity(Tag tag, string data)
+            : base(tag,data)
         {
-            Tag = tag;
-            Data = data;
             VR = Enums.VR.ApplicationEntity;
         }
     }

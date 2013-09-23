@@ -8,16 +8,19 @@ using EvilDICOM.Core.IO.Data;
 namespace EvilDICOM.Core.Element
 {
     public class ShortString : AbstractElement<string>
-    {
+    {  /// <summary>
+        /// Data is overriden to enforce length restriction
+        /// </summary>
         public new string Data
         {
-            get { return base.Data; }
-            set { base.Data = DataRestriction.EnforceLengthRestriction(16, value); }
+            get { return base.Data.SingleValue; }
+            set { base.Data = base.Data ?? new DICOMData<string>(); base.Data.SingleValue = DataRestriction.EnforceLengthRestriction(16, value); }
         }
 
-        public ShortString() { }
+        public ShortString() : base() { }
 
         public ShortString(Tag tag, string data)
+            : base()
         {
             Tag = tag;
             Data = data;

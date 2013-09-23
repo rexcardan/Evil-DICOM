@@ -15,13 +15,14 @@ namespace EvilDICOM.Core.Element
     {
         public new string Data
         {
-            get { return base.Data; }
-            set { base.Data = DataRestriction.EnforceLengthRestriction(64, value); }
+            get { return base.Data.SingleValue; }
+            set { base.Data = base.Data ?? new DICOMData<string>(); base.Data.SingleValue = DataRestriction.EnforceLengthRestriction(64, value); }
         }
 
-        public PersonName() { }
+        public PersonName() : base() { VR = Enums.VR.PersonName; }
 
         public PersonName(Tag tag, string data)
+            : base()
         {
             Tag = tag;
             Data = data;

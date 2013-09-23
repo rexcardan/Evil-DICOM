@@ -9,38 +9,38 @@ namespace EvilDICOM.Core.IO.Data
 {
     public class LittleEndianWriter
     {
-        public static byte[] WriteTag(Tag tag)
+        public static byte[] WriteTag(DICOMData<Tag> data)
         {
             //TODO modify to make VM > 1 possible
-            return MultiplicityComposer.ComposeMultipleBinary<Tag>(new Tag[]{tag}, WriteTagSingle);
+            return MultiplicityComposer.ComposeMultipleBinary<Tag>(data, WriteTagSingle);
         }
 
-        public static byte[] WriteSinglePrecision(float[] data)
+        public static byte[] WriteSinglePrecision(DICOMData<float> data)
         {
             return MultiplicityComposer.ComposeMultipleBinary<float>(data, WriteSinglePrecisionSingle);
         }
 
-        public static byte[] WriteDoublePrecision(double[] data)
+        public static byte[] WriteDoublePrecision(DICOMData<double> data)
         {
             return MultiplicityComposer.ComposeMultipleBinary<double>(data, WriteDoublePrecisionSingle);
         }
 
-        public static byte[] WriteSignedLong(int[] data)
+        public static byte[] WriteSignedLong(DICOMData<int> data)
         {
             return MultiplicityComposer.ComposeMultipleBinary<int>(data, WriteSignedLongSingle);
         }
 
-        public static byte[] WriteUnsignedLong(uint[] data)
+        public static byte[] WriteUnsignedLong(DICOMData<uint> data)
         {
             return MultiplicityComposer.ComposeMultipleBinary<uint>(data, WriteUnsignedLongSingle);
         }
 
-        public static byte[] WriteSignedShort(short[] data)
+        public static byte[] WriteSignedShort(DICOMData<short> data)
         {
             return MultiplicityComposer.ComposeMultipleBinary<short>(data, WriteSignedShortSingle);
         }
 
-        public static byte[] WriteUnsignedShort(ushort[] data)
+        public static byte[] WriteUnsignedShort(DICOMData<ushort> data)
         {
             return MultiplicityComposer.ComposeMultipleBinary<ushort>(data, WriteUnsignedShortSingle);
         }

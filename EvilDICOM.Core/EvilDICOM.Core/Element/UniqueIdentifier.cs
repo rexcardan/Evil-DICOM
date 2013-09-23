@@ -11,18 +11,23 @@ namespace EvilDICOM.Core.Element
     /// Encapsulates the UniqueIdentifier VR type
     /// </summary>
     public class UniqueIdentifier : AbstractElement<string>
-    {
+    {  /// <summary>
+        /// Data is overriden to enforce length restriction
+        /// </summary>
         public new string Data
         {
-            get { return base.Data; }
-            set { base.Data = DataRestriction.EnforceLengthRestriction(64, value); }
+            get { return base.Data.SingleValue; }
+            set { base.Data = base.Data ?? new DICOMData<string>(); base.Data.SingleValue = DataRestriction.EnforceLengthRestriction(64, value); }
         }
 
         public UniqueIdentifier()
+            : base()
         {
+            VR = Enums.VR.UniqueIdentifier;
         }
 
         public UniqueIdentifier(Tag tag, string data)
+            : base()
         {
             Tag = tag;
             Data = data;

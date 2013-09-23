@@ -66,7 +66,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (string.IsNullOrEmpty(data))
             {
-                return null;
+                return new double[0];
             }
             else
             {
@@ -86,7 +86,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (string.IsNullOrEmpty(data))
             {
-                return null;
+                return new int[0];
             }
             else
             {
