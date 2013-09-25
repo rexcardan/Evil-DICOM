@@ -16,21 +16,21 @@ namespace EvilDICOM.Core.Element
     {
         public AbstractElement()
         {
-            Data = new DICOMData<T>();
+            DataContainer = new DICOMData<T>();
         }
 
         public AbstractElement(Tag tag, T[] dataArray)
         {
-            Data = new DICOMData<T>();
+            DataContainer = new DICOMData<T>();
             this.Tag = tag;
-            this.Data = DICOMData<T>.CreateFromArray(dataArray);
+            this.DataContainer = DICOMData<T>.CreateFromArray(dataArray);
         }
 
         public AbstractElement(Tag tag, T data)
         {
-            Data = new DICOMData<T>();
+            DataContainer = new DICOMData<T>();
             this.Tag = tag;
-            this.Data.SingleValue = data;
+            this.DataContainer.SingleValue = data;
         }
 
         /// <summary>
@@ -63,21 +63,24 @@ namespace EvilDICOM.Core.Element
         /// <summary>
         /// The data of type T of the element
         /// </summary>
-        public DICOMData<T> Data { get; set; }
+        internal DICOMData<T> DataContainer { get; set; }
+
+        public T Data { get { return GetDataOrDefault(); } set { SetData(value); } }
+        public List<T> Data_ { get { return DataContainer.MultipicityValue; } set { SetData(value.ToArray()); } }
 
         public void SetData(T value)
         {
-            Data = DICOMData<T>.CreateFromSingle(value);
+            DataContainer = DICOMData<T>.CreateFromSingle(value);
         }
 
         public void SetData(T[] dataArray)
         {
-            Data = DICOMData<T>.CreateFromArray(dataArray);
+            DataContainer = DICOMData<T>.CreateFromArray(dataArray);
         }
 
         public T GetDataOrDefault()
         {
-            return Data != null ? Data.SingleValue : default(T);
+            return DataContainer != null ? DataContainer.SingleValue : default(T);
         }
 
         public Type DataType
@@ -87,8 +90,8 @@ namespace EvilDICOM.Core.Element
 
         public object UntypedData
         {
-            get { return Data; }
-            set { Data = (DICOMData<T>)value; }
+            get { return DataContainer; }
+            set { DataContainer = (DICOMData<T>)value; }
         }
 
 

@@ -16,8 +16,8 @@ namespace EvilDICOM.Core.Element
         /// </summary>
         public new string Data
         {
-            get { return base.Data.SingleValue; }
-            set { base.Data = base.Data?? new DICOMData<string>(); base.Data.SingleValue = DataRestriction.EnforceLengthRestriction(1024, value); }
+            get { return base.DataContainer.SingleValue; }
+            set { base.DataContainer = base.DataContainer?? new DICOMData<string>(); base.DataContainer.SingleValue = DataRestriction.EnforceLengthRestriction(1024, value); }
         }
 
         public ShortText() : base() { VR = Enums.VR.ShortText; }

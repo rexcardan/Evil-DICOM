@@ -27,11 +27,11 @@ namespace EvilDICOM.Core.Element
         {
             get
             {
-                return StringDataParser.ParseAgeString(Data.SingleValue);
+                return StringDataParser.ParseAgeString(DataContainer.SingleValue);
             }
             set
             {
-                Data.SingleValue = StringDataComposer.ComposeAgeString(value);
+                DataContainer.SingleValue = StringDataComposer.ComposeAgeString(value);
             }
         }
     }

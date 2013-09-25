@@ -15,8 +15,8 @@ namespace EvilDICOM.Core.Element
     {
         public new string Data
         {
-            get { return base.Data.SingleValue; }
-            set { base.Data = base.Data ?? new DICOMData<string>(); base.Data.SingleValue = DataRestriction.EnforceLengthRestriction(64, value); }
+            get { return base.DataContainer.SingleValue; }
+            set { base.DataContainer = base.DataContainer ?? new DICOMData<string>(); base.DataContainer.SingleValue = DataRestriction.EnforceLengthRestriction(64, value); }
         }
 
         public PersonName() : base() { VR = Enums.VR.PersonName; }

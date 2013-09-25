@@ -27,11 +27,11 @@ namespace EvilDICOM.Core.Element
         {
             get
             {
-                return base.Data != null ? Data.MultipicityValue : null;
+                return base.DataContainer != null ? DataContainer.MultipicityValue : null;
             }
             set
             {
-                base.Data = base.Data ?? new DICOMData<DICOMObject>(); base.Data.MultipicityValue = value;
+                base.DataContainer = base.DataContainer ?? new DICOMData<DICOMObject>(); base.DataContainer.MultipicityValue = value;
             }
         }
     }

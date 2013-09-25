@@ -89,7 +89,7 @@ namespace EvilDICOM.Core
             var found = FindFirst(tagToFind) as AbstractElement<T>;
             if (found != null)
             {
-                return found.Data;
+                return found.DataContainer;
             }
             else
             {
@@ -112,7 +112,7 @@ namespace EvilDICOM.Core
             var found = FindFirst(tagToFind) as AbstractElement<T>;
             if (found != null)
             {
-                found.Data.SingleValue = data;
+                found.DataContainer.SingleValue = data;
                 return true;
             }
             else
@@ -133,7 +133,7 @@ namespace EvilDICOM.Core
             var found = FindFirst(tagToFind) as AbstractElement<T>;
             if (found != null)
             {
-                found.Data.MultipicityValue = data;
+                found.DataContainer.MultipicityValue = data;
                 return true;
             }
             else
@@ -292,7 +292,7 @@ namespace EvilDICOM.Core
         {
             var toReplace = FindFirst(element.Tag) as AbstractElement<T>;
             if (toReplace == null) return false;
-            toReplace.Data = element.Data;
+            toReplace.DataContainer = element.DataContainer;
             return true;
         }
 
@@ -437,7 +437,7 @@ namespace EvilDICOM.Core
                 var pixelData = FindFirst(TagHelper.PIXEL_DATA) as AbstractElement<byte>;
                 if (pixelData != null)
                 {
-                    return new MemoryStream(pixelData.Data.MultipicityValue.ToArray());
+                    return new MemoryStream(pixelData.DataContainer.MultipicityValue.ToArray());
                 }
                 else
                 {

@@ -17,8 +17,8 @@ namespace EvilDICOM.Core.Element
         /// </summary>
         public new string Data
         {
-            get { return base.Data.SingleValue; }
-            set { base.Data = base.Data ?? new DICOMData<string>(); base.Data.SingleValue = DataRestriction.EnforceLengthRestriction(uint.MaxValue - 1, value); }
+            get { return base.DataContainer.SingleValue; }
+            set { base.DataContainer = base.DataContainer ?? new DICOMData<string>(); base.DataContainer.SingleValue = DataRestriction.EnforceLengthRestriction(uint.MaxValue - 1, value); }
         }
 
         public UnlimitedText() : base() { }
