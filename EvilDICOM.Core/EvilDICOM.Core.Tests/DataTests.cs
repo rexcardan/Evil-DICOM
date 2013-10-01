@@ -3,8 +3,10 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using EvilDICOM.Core.IO.Reading;
 using EvilDICOM.Core.Tests.Properties;
 using EvilDICOM.Core.Helpers;
-using EvilDICOM.Core.Element;
+using E=EvilDICOM.Core.Element;
 using System.Linq;
+using EvilDICOM.Core.Element;
+using EvilDICOM.Core.Enums;
 
 namespace EvilDICOM.Core.Tests
 {
@@ -12,7 +14,7 @@ namespace EvilDICOM.Core.Tests
     public class DataTests
     {
         [TestMethod]
-        public void TestMethod1()
+        public void WorkingWithSingleValuesTest()
         {
             var dcm = DICOMFileReader.Read(Resources.explicitLittleEndian);
 
@@ -30,29 +32,26 @@ namespace EvilDICOM.Core.Tests
 
             //Generic casting
             var genericName = dcm.FindFirst(TagHelper.PATIENT_NAME) as AbstractElement<string>;
-            var genValue = genericName.Data.SingleValue; // returns Flinstone^Fred
+            var genValue = genericName.Data; // returns Flinstone^Fred
         }
 
-         [TestMethod]
-        public void TestMethod2()
+        [TestMethod]
+        public void WorkingWithMultiValuesTest()
         {
-             var dcm = DICOMFileReader.Read(Resources.explicitLittleEndian);
+            var dcm = DICOMFileReader.Read(Resources.explicitLittleEndian);
 
-             //Patient's age is a single string value
-             var age = dcm.FindFirst(TagHelper.PATIENT_AGE) as AgeString;
-             var actualAge = age.Data.SingleValue; // data of type T (in this case string)
+            //Study time is a dateTime value
+            var studyTime = dcm.FindFirst(TagHelper.STUDY_TIME) as Time;
+            var time = studyTime.Data; // data of type T (in this case system.datetime)
 
-             //Patient position holds double values
-             var position = dcm.FindFirst(TagHelper.PATIENT_POSITION) as AbstractElement<double>;
-
-             //Patient position contains an array of double values {X,Y,Z}
-             var xyz = position.Data.MultipicityValue; //Data as List<T> (in this case List<double>)
-             var x = xyz[0];
-             var y = xyz[1];
-             var z = xyz[2];
+            //Patient position holds double values
+            var positionEl = dcm.FindFirst(TagHelper.IMAGE_POSITION_PATIENT);
+            var position = positionEl as DecimalString;
+            //Patient position contains an array of double values {X,Y,Z}
+            var xyz = position.Data_; //Data as List<T> (in this case List<double>)
+            var x = xyz[0];
+            var y = xyz[1];
+            var z = xyz[2];
         }
-    }
-
-   
     }
 }

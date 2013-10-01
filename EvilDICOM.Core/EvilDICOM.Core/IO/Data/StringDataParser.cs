@@ -120,6 +120,7 @@ namespace EvilDICOM.Core.IO.Data
             }
             else
             {
+                //throw new Exception("Time format is not DICOM 3.0 Compliant!");
                 return null;
             }
         }
