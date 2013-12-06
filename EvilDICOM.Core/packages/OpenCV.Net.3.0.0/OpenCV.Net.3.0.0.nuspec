@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>OpenCV.Net</id>
+    <version>3.0.0</version>
+    <title>OpenCV.NET</title>
+    <authors>Gonçalo Lopes</authors>
+    <owners>Gonçalo Lopes</owners>
+    <licenseUrl>http://bitbucket.org/horizongir/opencv.net/raw/49e2d06d594f859f7c7712cb052eb2b340a73f17/COPYING</licenseUrl>
+    <projectUrl>http://bitbucket.org/horizongir/opencv.net</projectUrl>
+    <iconUrl>http://opencvlibrary.svn.sourceforge.net/viewvc/opencvlibrary/trunk/opencv/doc/opencv-logo.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A .NET interface for the popular OpenCV computer vision and image processing library.</description>
+    <releaseNotes>First public release of the .NET interface targeting the C API of OpenCV 2.4.6.</releaseNotes>
+    <copyright>Gonçalo Lopes © 2013</copyright>
+    <language />
+    <tags>OpenCV Computer Vision Image Processing Wrapper</tags>
+    <dependencies>
+      <dependency id="OpenCV.redist" version="[2.4.6]" />
+    </dependencies>
+  </metadata>
+</package>

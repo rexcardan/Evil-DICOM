@@ -23,15 +23,15 @@ namespace EvilDICOM.Core.Modules
         private OtherByteString _privateInfo = new OtherByteString { Tag = TagHelper.PRIVATE_INFORMATION };
         #endregion
 
-        public uint[] GroupLength
+        public uint GroupLength
         {
             get
             {
-                return _groupLength.DataContainer.MultipicityValue.ToArray();
+                return _groupLength.Data;
             }
             set
             {
-                _groupLength.DataContainer.MultipicityValue = value.ToList();
+                _groupLength.Data = value;
             }
         }
 
@@ -39,11 +39,11 @@ namespace EvilDICOM.Core.Modules
         {
             get
             {
-                return _infoVersion.DataContainer.MultipicityValue.ToArray();
+                return _infoVersion.Data_.ToArray();
             }
             set
             {
-                _infoVersion.DataContainer.MultipicityValue= value.ToList();
+                _infoVersion.Data_= value.ToList();
             }
         }
 
@@ -111,11 +111,11 @@ namespace EvilDICOM.Core.Modules
         {
             get
             {
-                return _sourceAETitle.DataContainer.SingleValue;
+                return _sourceAETitle.Data;
             }
             set
             {
-                _sourceAETitle.DataContainer.SingleValue = value;
+                _sourceAETitle.Data = value;
             }
         }
 
@@ -135,11 +135,11 @@ namespace EvilDICOM.Core.Modules
         {
             get
             {
-                return _privateInfo.DataContainer.MultipicityValue.ToArray();
+                return _privateInfo.Data_.ToArray();
             }
             set
             {
-                _privateInfo.DataContainer.MultipicityValue = value.ToList();
+                _privateInfo.Data_ = value.ToList();
             }
         }
 

@@ -21,7 +21,7 @@ namespace EvilDICOM.Core.IO.Writing
             return d.Elements.Where(elm => elm.Tag.Group == ul.Tag.Group).ToList().Count - 1;
         }
 
-        private static byte[] WriteGroupBytesLittleEndian(DICOMObject d, DICOMWriteSettings settings, string groupID)
+        public static byte[] WriteGroupBytesLittleEndian(DICOMObject d, DICOMWriteSettings settings, string groupID)
         {
             List<IDICOMElement> groupElements = d.Elements.Where(el => el.Tag.Group == groupID).ToList();
             byte[] groupBytes;
