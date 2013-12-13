@@ -35,7 +35,7 @@ namespace EvilDICOM.Core.IO.Writing
                         lengthBytes = BitConverter.GetBytes(length);
                         break;
                     case VREncoding.ExplicitShort:
-                        lengthBytes = BitConverter.GetBytes((short)length);
+                        lengthBytes = BitConverter.GetBytes((ushort)length);
                         break;
                     case VREncoding.Implicit:
                         lengthBytes = BitConverter.GetBytes(length);
@@ -59,7 +59,7 @@ namespace EvilDICOM.Core.IO.Writing
             byte[] lengthBytes = new byte[0];
             switch (numberOfBytes)
             {
-                case 2: lengthBytes = BitConverter.GetBytes((short)length).Reverse().ToArray();
+                case 2: lengthBytes = BitConverter.GetBytes((ushort)length).Reverse().ToArray();
                     break;
                 case 4: lengthBytes = BitConverter.GetBytes(length).Reverse().ToArray();
                     break;

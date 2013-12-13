@@ -43,7 +43,7 @@ namespace EvilDICOM.Core.IO.Reading
             switch (length)
             {
                 case 2:
-                    return BitConverter.ToInt16(dr.Take(2), 0);
+                    return BitConverter.ToUInt16(dr.Take(2), 0);
                 case 4:
                     return BitConverter.ToInt32(dr.Take(4), 0);
                 default:
@@ -74,7 +74,7 @@ namespace EvilDICOM.Core.IO.Reading
                     break;
                 case VREncoding.ExplicitShort:
                     byteLength = dr.ReadBytes(2);
-                    length = BitConverter.ToInt16(byteLength, 0);
+                    length = BitConverter.ToUInt16(byteLength, 0);
                     break;
             }                      
             return length;
@@ -103,7 +103,7 @@ namespace EvilDICOM.Core.IO.Reading
                     break;
                 case VREncoding.ExplicitShort:
                     byteLength = dr.ReadBytes(2).Reverse().ToArray();
-                    length = BitConverter.ToInt16(byteLength, 0);
+                    length = BitConverter.ToUInt16(byteLength, 0);
                     break;
             }
             return length;
@@ -125,7 +125,7 @@ namespace EvilDICOM.Core.IO.Reading
             switch (length)
             {
                 case 2:
-                    return BitConverter.ToInt16(dr.Take(2).Reverse().ToArray(), 0);
+                    return BitConverter.ToUInt16(dr.Take(2).Reverse().ToArray(), 0);
                 case 4:
                     return BitConverter.ToInt32(dr.Take(4).Reverse().ToArray(), 0);
                 default:
