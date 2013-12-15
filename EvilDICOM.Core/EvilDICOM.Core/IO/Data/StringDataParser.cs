@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Globalization;
 using EvilDICOM.Core.Element;
+using DateTime = System.DateTime;
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -57,7 +58,16 @@ namespace EvilDICOM.Core.IO.Data
             }
             else
             {
-                return System.DateTime.ParseExact(data, "yyyyMMddHHmmss.ffffff", null);
+                System.DateTime? dateTime = null;
+                try
+                {
+                    dateTime = DateTime.ParseExact(data, "yyyyMMddHHmmss.ffffff", null);
+                }
+                catch (Exception e)
+                {
+                    Console.WriteLine(e);
+                }
+                return dateTime;
             }
         }
 
