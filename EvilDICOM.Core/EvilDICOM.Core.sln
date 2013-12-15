@@ -1,9 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2012
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvilDICOM.Core", "EvilDICOM.Core\EvilDICOM.Core.csproj", "{1AFE008B-CCAC-45F5-828E-45908ADAF91F}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvilDICOM.Core.Tests", "EvilDICOM.Core.Tests\EvilDICOM.Core.Tests.csproj", "{34D8C49F-88A5-4CDE-933D-3BA39E016218}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EvilDICOM.Facade", "EvilDICOM.Facade\EvilDICOM.Facade.csproj", "{7A00A048-6967-4860-92C9-9C4521FFFD1F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,6 +23,10 @@ Global
 		{34D8C49F-88A5-4CDE-933D-3BA39E016218}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{34D8C49F-88A5-4CDE-933D-3BA39E016218}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{34D8C49F-88A5-4CDE-933D-3BA39E016218}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7A00A048-6967-4860-92C9-9C4521FFFD1F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A00A048-6967-4860-92C9-9C4521FFFD1F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A00A048-6967-4860-92C9-9C4521FFFD1F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A00A048-6967-4860-92C9-9C4521FFFD1F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,0 +1,53 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="EvilDICOM.Facade.MedicalCase">
+    <Position X="1" Y="0.75" Width="2.25" />
+    <AssociationLine Name="_studiesList" Type="EvilDICOM.Facade.Study" ManuallyRouted="true" FixedFromPoint="true" FixedToPoint="true">
+      <Path>
+        <Point X="2.5" Y="1.853" />
+        <Point X="2.5" Y="3.184" />
+        <Point X="5.25" Y="3.184" />
+      </Path>
+    </AssociationLine>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAABACA=</HashCode>
+      <FileName>MedicalCase.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Field Name="_patient" />
+    </ShowAsAssociation>
+    <ShowAsCollectionAssociation>
+      <Field Name="_seriesList" />
+      <Field Name="_studiesList" />
+    </ShowAsCollectionAssociation>
+  </Class>
+  <Class Name="EvilDICOM.Facade.Patient" Collapsed="true">
+    <Position X="4.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Patient.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvilDICOM.Facade.Serie" Collapsed="true">
+    <Position X="6.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Serie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvilDICOM.Facade.Series">
+    <Position X="1" Y="3.75" Width="3" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Series.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EvilDICOM.Facade.Study">
+    <Position X="5.25" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Study.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
