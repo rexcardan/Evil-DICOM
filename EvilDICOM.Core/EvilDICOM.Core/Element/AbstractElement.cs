@@ -39,7 +39,7 @@ namespace EvilDICOM.Core.Element
         /// <returns></returns>
         public override string ToString()
         {
-            return string.Format("VR = {0}, Tag = {1},{2}", VR.ToString(), Tag.Group, Tag.Element);
+            return string.Format("{0}, {1}", Tag.ToString(), VR.ToString());
         }
 
         /// <summary>
@@ -65,35 +65,56 @@ namespace EvilDICOM.Core.Element
         /// </summary>
         internal DICOMData<T> DataContainer { get; set; }
 
+        /// <summary>
+        /// The data of the element
+        /// </summary>
         public T Data { get { return GetDataOrDefault(); } set { SetData(value); } }
+        /// <summary>
+        /// The data of the element as a list (for multiple data)
+        /// </summary>
         public List<T> Data_ { get { return DataContainer.MultipicityValue; } set { SetData(value.ToArray()); } }
 
+        /// <summary>
+        /// Plumbing method wrap the data in a DICOMData container
+        /// </summary>
+        /// <param name="value">the typed data</param>
         public void SetData(T value)
         {
             DataContainer = DICOMData<T>.CreateFromSingle(value);
         }
 
+        /// <summary>
+        /// Plumbing method wrap the data in a DICOMData container
+        /// </summary>
+        /// <param name="value">the array of typed data</param>
         public void SetData(T[] dataArray)
         {
             DataContainer = DICOMData<T>.CreateFromArray(dataArray);
         }
 
+        /// <summary>
+        /// Plumbing method to get data from the underlying DICOMData object
+        /// </summary>
         public T GetDataOrDefault()
         {
             return DataContainer != null ? DataContainer.SingleValue : default(T);
         }
 
+        /// <summary>
+        /// The clr type of the contained data
+        /// </summary>
         public Type DataType
         {
             get { return typeof(T); }
         }
 
-        public object UntypedData
+        /// <summary>
+        /// The non-typed data that can be accessed in a dynamic context
+        /// </summary>
+        public dynamic DynamicData
         {
             get { return DataContainer; }
             set { DataContainer = (DICOMData<T>)value; }
         }
-
-
     }
 }

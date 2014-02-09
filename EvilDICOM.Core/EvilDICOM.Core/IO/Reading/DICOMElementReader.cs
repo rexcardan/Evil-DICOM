@@ -18,11 +18,6 @@ namespace EvilDICOM.Core.IO.Reading
     public class DICOMElementReader
     {
         /// <summary>
-        /// A dictionary containing a map of VR type in relation to tag id
-        /// </summary>
-        static TagDictionary _tagDictionary = new TagDictionary();
-
-        /// <summary>
         /// Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
         /// </summary>
         /// <param name="dr">the binary reader which is reading the DICOM object</param>
@@ -44,7 +39,7 @@ namespace EvilDICOM.Core.IO.Reading
         public static IDICOMElement ReadElementImplicitLittleEndian(DICOMBinaryReader dr)
         {
             var tag = TagReader.ReadLittleEndian(dr);
-            var vr = _tagDictionary.GetVRFromTag(tag);
+            var vr = TagDictionary.GetVRFromTag(tag);
             int length = LengthReader.ReadLittleEndian(VR.Null, dr);
             var data = DataReader.ReadLittleEndian(length, dr, TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN);
             var el = ElementFactory.GenerateElement(tag, vr, data, TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN);

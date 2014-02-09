@@ -51,7 +51,6 @@
     <Compile Include="DICOMObject.cs" />
     <Compile Include="DICOMObjectWrapper.cs" />
     <Compile Include="Dictionaries\TagDictionary.cs" />
-    <Compile Include="Dictionaries\TagInfo.cs" />
     <Compile Include="Dictionaries\VRDictionary.cs" />
     <Compile Include="Element\AbstractElement.cs" />
     <Compile Include="Element\AgeString.cs" />
@@ -164,12 +163,11 @@
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\DICOMDictionary.xml">
-      <SubType>Designer</SubType>
-    </None>
+    <Folder Include="Resources\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="..\packages\OpenCV.redist.2.4.6\build\net40\OpenCV.redist.targets" Condition="Exists('..\packages\OpenCV.redist.2.4.6\build\net40\OpenCV.redist.targets')" />

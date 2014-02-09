@@ -305,7 +305,7 @@ namespace EvilDICOM.Core
         {
             var toReplace = FindFirst(el.Tag);
             if (toReplace == null) return false;
-            toReplace.UntypedData = el.UntypedData;
+            toReplace.DynamicData = el.DynamicData;
             return true;
 
         }

@@ -11,6 +11,6 @@ namespace EvilDICOM.Core.Interfaces
     {
         Tag Tag { get; set; }
         Type DataType { get; }
-        object UntypedData { get; set; }
+        dynamic DynamicData { get; set; }
     }
 }

@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.IO.Data;
+using EvilDICOM.Core.Dictionaries;
 
 namespace EvilDICOM.Core.Element
 {
@@ -61,6 +62,11 @@ namespace EvilDICOM.Core.Element
                 Group = completeID.Substring(0, 4);
                 Element = completeID.Substring(4, 4);
             }
+        }
+
+        public override string ToString()
+        {
+            return string.Format("({0},{1}) : {2}", Group, Element, TagDictionary.GetDescription(this));
         }
     }
 }
