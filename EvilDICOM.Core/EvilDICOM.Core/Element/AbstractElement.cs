@@ -111,10 +111,19 @@ namespace EvilDICOM.Core.Element
         /// <summary>
         /// The non-typed data that can be accessed in a dynamic context
         /// </summary>
-        public dynamic DynamicData
+        public dynamic DData
         {
-            get { return DataContainer; }
-            set { DataContainer = (DICOMData<T>)value; }
+            get { return DataContainer.SingleValue; }
+            set { DataContainer.SingleValue = (T)value; }
+        }
+
+        /// <summary>
+        /// The non-typed data that can be accessed in a dynamic context. Format is List<T>
+        /// </summary>
+        public dynamic DData_
+        {
+            get { return DataContainer.MultipicityValue; }
+            set { DataContainer.MultipicityValue = value; }
         }
     }
 }
