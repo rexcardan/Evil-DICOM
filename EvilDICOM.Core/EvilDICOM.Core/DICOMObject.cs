@@ -446,5 +446,10 @@ namespace EvilDICOM.Core
             }
         }
         #endregion
+
+        public override string ToString()
+        {
+            return string.Format("DICOM Obj : {0} Elements", Elements.Count);
+        }
     }
 }

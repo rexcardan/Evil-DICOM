@@ -6,6 +6,7 @@ using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.IO.Writing;
 using EvilDICOM.Core.IO.Data;
+using EvilDICOM.Core.Dictionaries;
 
 namespace EvilDICOM.Core.Element
 {
@@ -33,6 +34,11 @@ namespace EvilDICOM.Core.Element
             {
                 base.DataContainer = base.DataContainer ?? new DICOMData<DICOMObject>(); base.DataContainer.MultipicityValue = value;
             }
+        }
+
+        public override string ToString()
+        {
+            return string.Format("{0}, {1} {2}", Tag.ToString(), VR.ToString(), string.Format(" : {0} Items", Items.Count));
         }
     }
 }

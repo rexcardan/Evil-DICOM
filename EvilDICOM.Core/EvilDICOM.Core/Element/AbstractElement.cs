@@ -39,7 +39,7 @@ namespace EvilDICOM.Core.Element
         /// <returns></returns>
         public override string ToString()
         {
-            return string.Format("{0}, {1}", Tag.ToString(), VR.ToString());
+            return string.Format("{0}, {1}, {2}", Tag.ToString(), VR.ToString(), string.Join(" | ", DData_.ToArray()));
         }
 
         /// <summary>
