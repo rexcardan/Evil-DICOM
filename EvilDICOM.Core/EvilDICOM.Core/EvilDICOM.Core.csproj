@@ -158,6 +158,9 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="Selection\DICOMSelector.cs" />
+    <Compile Include="Selection\ListExtensions.cs" />
+    <Compile Include="Selection\SequenceSelector.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
