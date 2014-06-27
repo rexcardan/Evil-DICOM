@@ -84,7 +84,7 @@ namespace EvilDICOM.Core.IO.Data
                 double[] numbers = new double[sNumbers.Length];
                 for (int i = 0; i < sNumbers.Length; i++)
                 {
-                    double.TryParse(sNumbers[i], out numbers[i]);
+                    double.TryParse(sNumbers[i], NumberStyles.Any, CultureInfo.InvariantCulture, out numbers[i]);
                 }
                 return numbers;
             }
