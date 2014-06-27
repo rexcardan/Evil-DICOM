@@ -215,15 +215,26 @@
             The class is used to look up tags in a dictionary for relevant information such as vr type.
             </summary>
         </member>
-        <member name="F:EvilDICOM.Core.Dictionaries.TagDictionary._tags">
+        <member name="M:EvilDICOM.Core.Dictionaries.TagDictionary.GetVRFromTag(EvilDICOM.Core.Element.Tag)">
             <summary>
-            The DICOM Dictionary
+            Finds the appropriate VR for a given tag by looking up the tag in a DICOM dictionary
             </summary>
+            <param name="tag">the tag containing the id to find in the dictionary</param>
+            <returns></returns>
         </member>
-        <member name="P:EvilDICOM.Core.Dictionaries.TagDictionary.Tags">
+        <member name="M:EvilDICOM.Core.Dictionaries.TagDictionary.GetDescription(System.String)">
             <summary>
-            The tags in the dictionary.
+            Gets the description of the tag
             </summary>
+            <param name="tag">the tag containing the id</param>
+            <returns>a string description of the tag in camel case</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.TagDictionary.GetDescription(EvilDICOM.Core.Element.Tag)">
+            <summary>
+            Gets the description of the tag
+            </summary>
+            <param name="tag">the tag containing the id</param>
+            <returns>a string description of the tag in camel case</returns>
         </member>
         <member name="T:EvilDICOM.Core.Dictionaries.VRDictionary">
             <summary>
@@ -274,11 +285,38 @@
             </summary>
             <typeparam name="T">the data type of the element</typeparam>
         </member>
+        <member name="P:EvilDICOM.Core.Interfaces.IDICOMElement.DData">
+            <summary>
+            The dynamic single value data in the element of the first datum in the array (in the case of multiple datum)
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Interfaces.IDICOMElement.DData_">
+            <summary>
+            The dynamic data in the element stored in a list of type T
+            </summary>
+        </member>
         <member name="M:EvilDICOM.Core.Element.AbstractElement`1.ToString">
             <summary>
             To string override to visualize tag and vr of element
             </summary>
             <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)">
+            <summary>
+            Plumbing method wrap the data in a DICOMData container
+            </summary>
+            <param name="value">the typed data</param>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])">
+            <summary>
+            Plumbing method wrap the data in a DICOMData container
+            </summary>
+            <param name="value">the array of typed data</param>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault">
+            <summary>
+            Plumbing method to get data from the underlying DICOMData object
+            </summary>
         </member>
         <member name="P:EvilDICOM.Core.Element.AbstractElement`1.Tag">
             <summary>
@@ -295,6 +333,27 @@
             The data of type T of the element
             </summary>
         </member>
+        <member name="P:EvilDICOM.Core.Element.AbstractElement`1.Data">
+            <summary>
+            The data of the element
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.AbstractElement`1.Data_">
+            <summary>
+            The data of the element as a list (for multiple data)
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.AbstractElement`1.DataType">
+            <summary>
+            The clr type of the contained data
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.AbstractElement`1.DData">
+            <summary>
+            The non-typed data that can be accessed in a dynamic context
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:EvilDICOM.Core.Element.AbstractElement`1.DData_" -->
         <member name="T:EvilDICOM.Core.Element.AgeString">
             <summary>
             Encapsulates the AgeString VR type
@@ -877,11 +936,6 @@
             Reads in DICOM elements from a DICOM object
             </summary>
         </member>
-        <member name="F:EvilDICOM.Core.IO.Reading.DICOMElementReader._tagDictionary">
-            <summary>
-            A dictionary containing a map of VR type in relation to tag id
-            </summary>
-        </member>
         <member name="M:EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadElementExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)">
             <summary>
             Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
@@ -1060,16 +1114,6 @@
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
             </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.Properties.Resources.DICOMDictionary">
-             <summary>
-               Looks up a localized string similar to &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
-            &lt;dictionary tagclass=&quot;org.dcm4che2.data.Tag&quot;&gt;
-              &lt;element tag=&quot;00000000&quot; keyword=&quot;CommandGroupLength&quot; vr=&quot;UL&quot; vm=&quot;1&quot; ret=&quot;&quot;&gt;Command Group Length&lt;/element&gt;
-              &lt;element tag=&quot;00000001&quot; keyword=&quot;CommandLengthToEnd&quot; vr=&quot;UL&quot; vm=&quot;1&quot; ret=&quot;RET&quot;&gt;Length to End&lt;/element&gt;
-              &lt;element tag=&quot;00000002&quot; keyword=&quot;AffectedSOPClassUID&quot; vr=&quot;UI&quot; vm=&quot;1&quot; ret=&quot;&quot;&gt;Affected SOP Class UID&lt;/element&gt;
-              &lt;element tag=&quot;00000003&quot; keyword=&quot;RequestedSOPClassUID&quot; vr=&quot;UI&quot; vm=&quot;1&quot; ret=&quot;&quot;&gt;Requested SOP Class UID&lt;/ [rest of string was truncated]&quot;;.
-             </summary>
         </member>
     </members>
 </doc>
