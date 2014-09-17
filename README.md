@@ -1,4 +1,3 @@
-![Alt text](http://evildicom.rexcardan.com/images/evilDICOMlogo.png)
 
 Evil DICOM
 =============
