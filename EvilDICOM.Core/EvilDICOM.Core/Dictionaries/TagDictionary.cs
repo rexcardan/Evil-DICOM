@@ -35,7 +35,8 @@ namespace EvilDICOM.Core.Dictionaries
         /// <returns>a string description of the tag in camel case</returns>
         public static string GetDescription(string completeId)
         {
-            return completeId.Skip(4).Take(4) == GROUP_HEADER ? string.Format("Group header for group {0}", completeId.Take(4)) :
+            var element = new string(completeId.Skip(4).Take(4).ToArray());
+            return element == GROUP_HEADER ? string.Format("Group header for group {0}", new string(completeId.Take(4).ToArray())) :
                            Tags.ContainsKey(completeId) ?
                            Tags[completeId].Description : "Unknown Tag";
         }

@@ -33,6 +33,19 @@ namespace EvilDICOM.Core.IO.Writing
             DICOMTagWriter.WriteBigEndian(dw, toWrite.Tag);
             VR vr = VRDictionary.GetVRFromType(toWrite);
             VRWriter.WriteVR(dw, settings, vr);
+            DataWriter.WriteBigEndian(dw, vr, settings, toWrite);
+        }
+
+        public static void Write(DICOMBinaryWriter dw, DICOMWriteSettings settings, IDICOMElement el)
+        {
+            if (settings.TransferSyntax == TransferSyntax.EXPLICIT_VR_BIG_ENDIAN)
+            {
+                WriteBigEndian(dw, settings, el);
+            }
+            else
+            {
+                WriteLittleEndian(dw, settings, el);
+            }
         }
     }
 }

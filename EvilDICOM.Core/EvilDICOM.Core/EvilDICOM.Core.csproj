@@ -48,6 +48,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DICOMData.cs" />
+    <Compile Include="DICOMForge.cs" />
     <Compile Include="DICOMObject.cs" />
     <Compile Include="DICOMObjectWrapper.cs" />
     <Compile Include="Dictionaries\TagDictionary.cs" />
@@ -87,6 +88,9 @@
     <Compile Include="Enums\ItemType.cs" />
     <Compile Include="Enums\NetworkState.cs" />
     <Compile Include="Enums\PDUType.cs" />
+    <Compile Include="Enums\PresentationContextReason.cs" />
+    <Compile Include="Enums\Priority.cs" />
+    <Compile Include="Enums\QueryLevel.cs" />
     <Compile Include="Enums\RejectReason.cs" />
     <Compile Include="Enums\RejectResult.cs" />
     <Compile Include="Enums\RejectSource.cs" />
@@ -101,6 +105,7 @@
     <Compile Include="Helpers\AbstractSyntax.cs" />
     <Compile Include="Helpers\ArrayHelper.cs" />
     <Compile Include="Helpers\ByteHelper.cs" />
+    <Compile Include="Helpers\Constants.cs" />
     <Compile Include="Helpers\DoubleHelper.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
     <Compile Include="Helpers\ExceptionHelper.cs" />
@@ -115,6 +120,7 @@
     <Compile Include="Interfaces\IIOD.cs" />
     <Compile Include="IO\Data\AbstractBinaryDataReader.cs" />
     <Compile Include="IO\Data\BigEndianReader.cs" />
+    <Compile Include="IO\Data\BigEndianWriter.cs" />
     <Compile Include="IO\Data\DataComposer.cs" />
     <Compile Include="IO\Data\DataPadder.cs" />
     <Compile Include="IO\Data\DataRestriction.cs" />
@@ -129,7 +135,6 @@
     <Compile Include="IO\Reading\DICOMBinaryReader.cs" />
     <Compile Include="IO\Reading\DICOMElementReader.cs" />
     <Compile Include="IO\Reading\DICOMFileReader.cs" />
-    <Compile Include="IO\Reading\DICOMNetworkBinaryReader.cs" />
     <Compile Include="IO\Reading\DICOMObjectReader.cs" />
     <Compile Include="IO\Reading\DICOMPreambleReader.cs" />
     <Compile Include="IO\Reading\LengthReader.cs" />

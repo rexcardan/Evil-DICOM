@@ -55,6 +55,47 @@ namespace EvilDICOM.Core.IO.Data
             }
         }
 
+        public static byte[] GetDataBigEndian(IDICOMElement el)
+        {
+            VR vr = VRDictionary.GetVRFromType(el);
+            switch (vr)
+            {
+                case VR.AttributeTag:
+                    AttributeTag at = el as AttributeTag;
+                    return BigEndianWriter.WriteTag(at.DataContainer);
+                case VR.FloatingPointDouble:
+                    FloatingPointDouble fpd = el as FloatingPointDouble;
+                    return BigEndianWriter.WriteDoublePrecision(fpd.DataContainer);
+                case VR.FloatingPointSingle:
+                    FloatingPointSingle fps = el as FloatingPointSingle;
+                    return BigEndianWriter.WriteSinglePrecision(fps.DataContainer);
+                case VR.OtherByteString:
+                    OtherByteString obs = el as OtherByteString;
+                    return DataRestriction.EnforceEvenLength(obs.DataContainer.MultipicityValue.ToArray(), vr);
+                case VR.OtherFloatString:
+                    OtherFloatString ofs = el as OtherFloatString;
+                    return ofs.DataContainer.MultipicityValue.ToArray();
+                case VR.OtherWordString:
+                    OtherWordString ows = el as OtherWordString;
+                    return ows.DataContainer.MultipicityValue.ToArray();
+                case VR.SignedLong:
+                    SignedLong sl = el as SignedLong;
+                    return BigEndianWriter.WriteSignedLong(sl.DataContainer);
+                case VR.SignedShort:
+                    SignedShort sis = el as SignedShort;
+                    return BigEndianWriter.WriteSignedShort(sis.DataContainer);
+                case VR.Unknown:
+                    Unknown uk = el as Unknown;
+                    return DataRestriction.EnforceEvenLength(uk.DataContainer.MultipicityValue.ToArray(), vr);
+                case VR.UnsignedLong:
+                    UnsignedLong ul = el as UnsignedLong;
+                    return BigEndianWriter.WriteUnsignedLong(ul.DataContainer);
+                case VR.UnsignedShort:
+                    UnsignedShort ush = el as UnsignedShort;
+                    return BigEndianWriter.WriteUnsignedShort(ush.DataContainer);
+                default: return GetStringBytes(vr, el);
+            }
+        }
 
         public static byte[] GetStringBytes(VR vr, IDICOMElement el)
         {
@@ -77,7 +118,7 @@ namespace EvilDICOM.Core.IO.Data
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.Date:
                     Date d = el as Date;
-                    data = StringDataComposer.ComposeDate(d.DataContainer.SingleValue);
+                    data = StringDataComposer.ComposeDate(d.Data);
                     unpadded = GetASCIIBytes(data);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.DateTime:
@@ -143,5 +184,6 @@ namespace EvilDICOM.Core.IO.Data
                 return new byte[0];
             }
         }
+
     }
 }

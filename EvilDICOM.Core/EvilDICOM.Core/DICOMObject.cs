@@ -11,6 +11,8 @@ using EvilDICOM.Core.IO.Data;
 using EvilDICOM.Core.Helpers;
 using System.Reflection;
 using System.IO;
+using EvilDICOM.Core.IO.Reading;
+using EvilDICOM.Core.IO.Writing;
 
 namespace EvilDICOM.Core
 {
@@ -22,12 +24,20 @@ namespace EvilDICOM.Core
         private List<IDICOMElement> _elements = new List<IDICOMElement>();
 
         /// <summary>
-        /// Contructor
+        /// Constructor no parameters
+        /// </summary>
+        public DICOMObject()
+        {
+            _elements = new List<IDICOMElement>();
+        }
+        /// <summary>
+        /// Contructor with elements
         /// </summary>
         /// <param name="elements">a list of elements to be included in the object</param>
         public DICOMObject(List<IDICOMElement> elements)
         {
             _elements = elements;
+            _elements.SortByTagID();
         }
 
         /// <summary>
@@ -444,6 +454,22 @@ namespace EvilDICOM.Core
                     return null;
                 }
             }
+        }
+        #endregion
+
+        #region IO
+        public static DICOMObject Open(string file)
+        {
+            return DICOMFileReader.Read(file);
+        }
+        public static DICOMObject Read(byte[] file)
+        {
+            return DICOMFileReader.Read(file);
+        }
+        public void SaveAs(string file, DICOMWriteSettings settings = null)
+        {
+            settings = settings ?? DICOMWriteSettings.Default();
+            DICOMFileWriter.Write(file, settings, this);
         }
         #endregion
 

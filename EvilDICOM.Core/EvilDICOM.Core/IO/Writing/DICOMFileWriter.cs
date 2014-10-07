@@ -19,7 +19,7 @@ namespace EvilDICOM.Core.IO.Writing
             {
                 DICOMPreambleWriter.Write(dw);
                 TransferSyntaxHelper.SetSyntax(toWrite, settings.TransferSyntax);
-                DICOMObjectWriter.WriteObjectLittleEndian(dw, settings, toWrite);
+                DICOMObjectWriter.Write(dw, settings, toWrite);
             }
         }
 

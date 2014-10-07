@@ -44,10 +44,10 @@ namespace EvilDICOM.Core.IO.Writing
             {
                 using (DICOMBinaryWriter itemDw = new DICOMBinaryWriter(stream))
                 {
-                    DICOMObjectWriter.WriteObjectLittleEndian(itemDw, settings, d);
+                    DICOMObjectWriter.Write(itemDw, settings, d);
                     if (!settings.DoWriteIndefiniteSequences)
                     {
-                        LengthWriter.WriteLittleEndian(dw, VR.Null, settings, (int)stream.Length);
+                        LengthWriter.Write(dw, VR.Null, settings, (int)stream.Length);
                         dw.Write(stream.ToArray());
                     }
                     else

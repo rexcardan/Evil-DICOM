@@ -20,6 +20,10 @@ namespace EvilDICOM.Core.Helpers
         public static string STUDY_MOVE = "1.2.840.10008.5.1.4.1.2.2.2";
         public static string STUDY_GET = "1.2.840.10008.5.1.4.1.2.2.3";
 
+        //PATIENT-STUDY
+        public static string PATIENT_STUDY_FIND = "1.2.840.10008.5.1.4.1.2.3.1";
+        public static string PATIENT_STUDY_MOVE = "1.2.840.10008.5.1.4.1.2.3.2";
+
         //MODALITY WORK LIST
         public static string MODALITY_WORKLIST_FIND = "1.2.840.10008.5.1.4.31";
 
@@ -39,7 +43,10 @@ namespace EvilDICOM.Core.Helpers
         public static string RT_PLAN_STORAGE = "1.2.840.10008.5.1.4.1.1.481.5";
         public static string RT_BRACHY_TREATMENT_RECORD_STORAGE = "1.2.840.10008.5.1.4.1.1.481.6";
         public static string RT_BRACHY_TREATMENT_SUMMARY_STORAGE = "1.2.840.10008.5.1.4.1.1.481.7";
-
+        public static string SECONDARY_IMAGE_STORAGE = "1.2.840.10008.5.1.4.1.1.7";
+        public static string SPATIAL_IMAGE_STORAGE = "1.2.840.10008.5.1.4.1.1.66.1";
+        public static string XRAY_ANGIOGRAPHIC_STORAGE = "1.2.840.10008.5.1.4.1.1.12.1";
+        public static string VARIAN_MOTION_MANAGEMENT_PROTOCOL = "1.2.246.352.70.1.40";
         //ALL RADIOTHERAPY STORAGE
         public static List<string> ALL_RADIOTHERAPY_STORAGE = new List<string>(){
             VERIFICATION,
@@ -50,7 +57,12 @@ namespace EvilDICOM.Core.Helpers
             RT_BEAMS_TREAT_RECORD_STORAGE,
             RT_PLAN_STORAGE,
             RT_BRACHY_TREATMENT_RECORD_STORAGE,
-            RT_BRACHY_TREATMENT_SUMMARY_STORAGE
+            RT_BRACHY_TREATMENT_SUMMARY_STORAGE,
+            CR_IMAGE_STORAGE,MR_IMAGE_STORAGE,
+            SPATIAL_IMAGE_STORAGE,
+            ULTRASOUND_IMAGE_STORAGE,
+            XRAY_ANGIOGRAPHIC_STORAGE,
+            VARIAN_MOTION_MANAGEMENT_PROTOCOL
         };
     }
 }

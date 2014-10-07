@@ -76,7 +76,7 @@ namespace EvilDICOM.Core.IO.Reading
         /// <param name="dr">the binary reader which is reading the DICOM object</param>
         /// <param name="syntax">the transfer syntax of the DICOM file</param>
         /// <returns>elements preceeding and including transfer syntax element</returns>
-        private static List<IDICOMElement> ReadFileMetadata(DICOMBinaryReader dr, out TransferSyntax syntax)
+        public static List<IDICOMElement> ReadFileMetadata(DICOMBinaryReader dr, out TransferSyntax syntax)
         {
             List<IDICOMElement> elements = new List<IDICOMElement>();
             syntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN;

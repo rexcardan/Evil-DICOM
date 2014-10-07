@@ -28,7 +28,7 @@ namespace EvilDICOM.Core.IO.Writing
             else
             {
                 byte[] itemsBytes = SequenceItemWriter.WriteItemsLittleEndian(settings, s.Items);
-                LengthWriter.WriteLittleEndian(dw, VR.Sequence, settings, itemsBytes.Length);
+                LengthWriter.Write(dw, VR.Sequence, settings, itemsBytes.Length);
                 dw.Write(itemsBytes);
             }
         }

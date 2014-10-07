@@ -12,6 +12,7 @@ namespace EvilDICOM.Core.Element
     /// </summary>
     public class DecimalString : AbstractElement<double>
     {
+        public DecimalString() { }
         public DecimalString(Tag tag, string data)
             : base(tag, StringDataParser.ParseDecimalString(data))
         {      

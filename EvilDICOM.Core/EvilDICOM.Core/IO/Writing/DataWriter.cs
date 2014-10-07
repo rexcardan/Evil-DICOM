@@ -13,7 +13,14 @@ namespace EvilDICOM.Core.IO.Writing
         public static void WriteLittleEndian(DICOMBinaryWriter dw, VR vr, DICOMWriteSettings settings, IDICOMElement toWrite)
         {
             byte[] data = DataComposer.GetDataLittleEndian(toWrite);
-            LengthWriter.WriteLittleEndian(dw, vr, settings, data != null ? data.Length : 0);
+            LengthWriter.Write(dw, vr, settings, data != null ? data.Length : 0);
+            dw.Write(data != null ? data : new byte[0]);
+        }
+
+        public static void WriteBigEndian(DICOMBinaryWriter dw, VR vr, DICOMWriteSettings settings, IDICOMElement toWrite)
+        {
+            byte[] data = DataComposer.GetDataBigEndian(toWrite);
+            LengthWriter.Write(dw, vr, settings, data != null ? data.Length : 0);
             dw.Write(data != null ? data : new byte[0]);
         }
     }

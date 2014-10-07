@@ -39,14 +39,24 @@
             A list of the data within the element. This is designed to be accomodate the multiplicity aspect of DICOM data
             </summary>
         </member>
+        <member name="T:EvilDICOM.Core.DICOMForge">
+            <summary>
+            Class for creating strongly typed elements on the fly
+            </summary>
+        </member>
         <member name="T:EvilDICOM.Core.DICOMObject">
             <summary>
             The DICOM object is a container for DICOM elements. It contains methods for finding elements easily from within the structure.
             </summary>
         </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.#ctor">
+            <summary>
+            Constructor no parameters
+            </summary>
+        </member>
         <member name="M:EvilDICOM.Core.DICOMObject.#ctor(System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement})">
             <summary>
-            Contructor
+            Contructor with elements
             </summary>
             <param name="elements">a list of elements to be included in the object</param>
         </member>
@@ -1011,26 +1021,6 @@
             <param name="dr">the binary reader which is reading the DICOM object</param>
             <param name="syntax">the transfer syntax of the DICOM file</param>
             <returns>elements preceeding and including transfer syntax element</returns>
-        </member>
-        <member name="M:EvilDICOM.Core.IO.Reading.DICOMNetworkBinaryReader.#ctor(System.Net.Sockets.NetworkStream,System.Net.Sockets.Socket)">
-            <summary>
-            Constructs a new reader from a stream.
-            </summary>
-            <param name="byteStream">the byte array to be read</param>
-        </member>
-        <member name="M:EvilDICOM.Core.IO.Reading.DICOMNetworkBinaryReader.ReadBytes(System.Int32)">
-            <summary>
-            Reads the specified number of bytes. Will block until bytes are completely read (waiting on the network).
-            </summary>
-            <param name="count">the number of bytes to be read</param>
-            <returns>the read bytes</returns>
-        </member>
-        <member name="M:EvilDICOM.Core.IO.Reading.DICOMNetworkBinaryReader.ReadBytesAsync(System.Int32)">
-            <summary>
-            Reads the specified number of bytes. Will block until bytes are completely read (waiting on the network).
-            </summary>
-            <param name="count">the number of bytes to be read</param>
-            <returns>the read bytes</returns>
         </member>
         <member name="T:EvilDICOM.Core.IO.Reading.DICOMPreambleReader">
             <summary>

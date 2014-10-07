@@ -23,7 +23,7 @@ namespace EvilDICOM.Core.IO.Writing
             dw.Write(lengthBytes);
         }
 
-        public static void WriteLittleEndian(DICOMBinaryWriter dw, VR vr, DICOMWriteSettings settings, int length)
+        public static void Write(DICOMBinaryWriter dw, VR vr, DICOMWriteSettings settings, int length)
         {
             byte[] lengthBytes = new byte[0];
             if (!(settings.TransferSyntax == TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN))
@@ -42,11 +42,17 @@ namespace EvilDICOM.Core.IO.Writing
                         break;
                 }
             }
+            else if (settings.TransferSyntax == TransferSyntax.EXPLICIT_VR_BIG_ENDIAN)
+            {
+                lengthBytes = BitConverter.GetBytes(length);
+                lengthBytes.Reverse();
+            }
             else
             {
-                lengthBytes =BitConverter.GetBytes(length);
+                //Explicit VR Little Endian
+                lengthBytes = BitConverter.GetBytes(length);
             }
-            dw.Write(lengthBytes); 
+            dw.Write(lengthBytes);
         }
 
         public static void WriteBigEndian(DICOMBinaryWriter dw, VR vr, int length)
