@@ -293,6 +293,5 @@ namespace EvilDICOM.Core.Helpers
         public static string YUGOSLAVIA = "891";
         public static string ZAMBIA = "894";
         public static string ZIMBABWE = "716";
-
     }
 }

@@ -68,11 +68,11 @@ namespace EvilDICOM.Core.Element
         /// <summary>
         /// The data of the element
         /// </summary>
-        public T Data { get { return GetDataOrDefault(); } set { SetData(value); } }
+        public virtual T Data { get { return GetDataOrDefault(); } set { SetData(value); } }
         /// <summary>
         /// The data of the element as a list (for multiple data)
         /// </summary>
-        public List<T> Data_ { get { return DataContainer.MultipicityValue; } set { SetData(value.ToArray()); } }
+        public virtual List<T> Data_ { get { return DataContainer.MultipicityValue; } set { SetData(value.ToArray()); } }
 
         /// <summary>
         /// Plumbing method wrap the data in a DICOMData container
@@ -103,7 +103,7 @@ namespace EvilDICOM.Core.Element
         /// <summary>
         /// The clr type of the contained data
         /// </summary>
-        public Type DataType
+        public Type DatType
         {
             get { return typeof(T); }
         }

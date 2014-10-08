@@ -24,7 +24,7 @@ namespace EvilDICOM.Core.Element
         /// <summary>
         /// Alternate property name for data (with a clearer name)
         /// </summary>
-        public List<DICOMObject> Items
+        public virtual List<DICOMObject> Items
         {
             get
             {

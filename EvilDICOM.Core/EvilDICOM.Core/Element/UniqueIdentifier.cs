@@ -14,7 +14,7 @@ namespace EvilDICOM.Core.Element
     {  /// <summary>
         /// Data is overriden to enforce length restriction
         /// </summary>
-        public new string Data
+        public override string Data
         {
             get { return base.DataContainer.SingleValue; }
             set { base.DataContainer = base.DataContainer ?? new DICOMData<string>(); base.DataContainer.SingleValue = DataRestriction.EnforceLengthRestriction(64, value); }

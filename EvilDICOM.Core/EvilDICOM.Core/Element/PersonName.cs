@@ -13,7 +13,7 @@ namespace EvilDICOM.Core.Element
     /// </summary>
     public class PersonName : AbstractElement<string>
     {
-        public new string Data
+        public override string Data
         {
             get { return base.DataContainer.SingleValue; }
             set { base.DataContainer = base.DataContainer ?? new DICOMData<string>(); base.DataContainer.SingleValue = DataRestriction.EnforceLengthRestriction(64, value); }

@@ -10,7 +10,7 @@ namespace EvilDICOM.Core.Interfaces
     public interface IDICOMElement
     {
         Tag Tag { get; set; }
-        Type DataType { get; }
+        Type DatType { get; }
         /// <summary>
         /// The dynamic single value data in the element of the first datum in the array (in the case of multiple datum)
         /// </summary>
