@@ -2,10 +2,9 @@
 Evil DICOM
 =============
 
-A simple to use C# library for reading and manipulating DICOM files. What sets it apart?
-Ease of use.
+A simple to use C# library for reading and manipulating DICOM files. 
+Github is just the distro.
 
-Features
--------
+All support at http://rexcardan.com/evildicom
 
-* Fully object oriented DICOM access
+Online API and getting started stuff there.
