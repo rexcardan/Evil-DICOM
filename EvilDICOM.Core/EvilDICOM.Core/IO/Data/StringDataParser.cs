@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Globalization;
 using EvilDICOM.Core.Element;
+using EvilDICOM.Core.Helpers;
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -115,13 +116,22 @@ namespace EvilDICOM.Core.IO.Data
             {
                 return null;
             }
+            if (data.Length >= 8)
+            {
+                //At least one decimal
+                //Pad with zeros to achieve HHmmss.ffffff
+                var zeroPadLength = 13 - data.Length;
+                if (zeroPadLength > 1)
+                {
+                    Enumerable.Range(1, zeroPadLength).Select(r => "0").ToList().ForEach(z =>
+                    {
+                        data += z;
+                    });
+                }
+            }
             if (data.Length == 13)
             {
                 return System.DateTime.ParseExact(data, "HHmmss.ffffff", null);
-            }
-            else if (data.Length == 10)
-            {
-                return System.DateTime.ParseExact(data, "HHmmss.fff", null);
             }
             else if (data.Length == 6)
             {
@@ -129,7 +139,7 @@ namespace EvilDICOM.Core.IO.Data
             }
             else
             {
-                //throw new Exception("Time format is not DICOM 3.0 Compliant!");
+                EventLogger.Instance.RaiseToLogEvent("Time parse error. Format expected 'HHmmss.ffffff', actual is {0}", data);
                 return null;
             }
         }
