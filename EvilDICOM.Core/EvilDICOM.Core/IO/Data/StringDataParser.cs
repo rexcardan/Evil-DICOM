@@ -10,6 +10,8 @@ namespace EvilDICOM.Core.IO.Data
 {
     public class StringDataParser
     {
+        private static readonly string[] dicomTimeFormats = new string[] { "HHmmss.ffffff", "HHmmss.fffff", "HHmmss.ffff", "HHmmss.fff", "HHmmss.ff", "HHmmss.f", "HHmmss" };
+
         public static Age ParseAgeString(string data)
         {
             if (string.IsNullOrEmpty(data))
@@ -116,32 +118,16 @@ namespace EvilDICOM.Core.IO.Data
             {
                 return null;
             }
-            if (data.Length >= 8)
-            {
-                //At least one decimal
-                //Pad with zeros to achieve HHmmss.ffffff
-                var zeroPadLength = 13 - data.Length;
-                if (zeroPadLength > 1)
-                {
-                    Enumerable.Range(1, zeroPadLength).Select(r => "0").ToList().ForEach(z =>
-                    {
-                        data += z;
-                    });
-                }
-            }
-            if (data.Length == 13)
-            {
-                return System.DateTime.ParseExact(data, "HHmmss.ffffff", null);
-            }
-            else if (data.Length == 6)
-            {
-                return System.DateTime.ParseExact(data, "HHmmss", null);
-            }
-            else
+
+            System.DateTime time;
+            var success = System.DateTime.TryParseExact(data, dicomTimeFormats, null, DateTimeStyles.None, out time);
+
+            if (!success)
             {
                 EventLogger.Instance.RaiseToLogEvent("Time parse error. Format expected 'HHmmss.ffffff', actual is {0}", data);
                 return null;
             }
+            else { return time; }
         }
     }
 }
