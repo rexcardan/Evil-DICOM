@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,15 +21,16 @@ namespace EvilDICOM.Core.IO.Writing
             for (int i = 0; i < d.Elements.Count; i++)
             {
                 IDICOMElement el = d.Elements[i];
+
                 DICOMWriteSettings currentSettings = IsFileMetaGroup(el) ? settings.GetFileMetaSettings() : settings;
                 if (GroupWriter.IsGroupHeader(el))
                 {
-                    int skip = GroupWriter.WriteGroup(dw, settings, d, el);
+                    int skip = GroupWriter.WriteGroup(dw, currentSettings, d, el);
                     i += skip;
                 }
                 else
                 {
-                    DICOMElementWriter.Write(dw, settings, el);
+                    DICOMElementWriter.Write(dw, currentSettings, el);
                 }
             }
         }
