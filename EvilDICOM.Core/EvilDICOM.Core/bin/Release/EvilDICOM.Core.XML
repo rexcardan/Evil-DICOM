@@ -190,6 +190,20 @@
             <typeparam name="T">the type of the data the element holds (eg. double[], int, DataTime, etc)</typeparam>
             <param name="element">the instance of the element</param>
         </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.Read(System.String)">
+            <summary>
+            Reads a DICOM file from a path
+            </summary>
+            <param name="filePath">the path to the file</param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.Read(System.Byte[])">
+            <summary>
+            Reads a DICOM file from a byte array
+            </summary>
+            <param name="file">the bytes of the DICOM file</param>
+            <returns></returns>
+        </member>
         <member name="P:EvilDICOM.Core.DICOMObject.Elements">
             <summary>
             The list of first level DICOM elements inside this DICOM object
@@ -1088,6 +1102,22 @@
             Constructs a new writer from a file path.
             </summary>
             <param name="filePath">path to the file to be written</param>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Writing.DICOMFileWriter.Write(System.String,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.DICOMObject)">
+            <summary>
+            Writes DICOM file out as a file of a specified path
+            </summary>
+            <param name="filePath">the path to which to write the file</param>
+            <param name="settings">the write settings</param>
+            <param name="toWrite">the object to write</param>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Writing.DICOMFileWriter.Write(System.IO.Stream,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.DICOMObject)">
+            <summary>
+            Write DICOM file out (bytes) to a specified stream
+            </summary>
+            <param name="stream">the stream to which to write the file</param>
+            <param name="settings">the write settings</param>
+            <param name="toWrite">the object to write</param>
         </member>
         <member name="T:EvilDICOM.Core.Properties.Resources">
             <summary>

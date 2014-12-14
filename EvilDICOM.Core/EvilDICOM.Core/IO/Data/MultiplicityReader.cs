@@ -22,9 +22,9 @@ namespace EvilDICOM.Core.IO.Data
         public static T[] ReadMultipleBinary<T>(byte[] data, int singleLength,Func<byte[],T> readSingleFunc)
         {
             var values = new List<T>();
-            for (int i = 0; i < Math.Floor((double)data.Length / singleLength); i++)
+            for (int i = 0; i < data.Length; i+=singleLength)
             {
-                var singleBytes = data.Take(singleLength).ToArray();
+                var singleBytes = data.Skip(i).Take(singleLength).ToArray();
                 values.Add(readSingleFunc(singleBytes));
             }
             return values.ToArray();

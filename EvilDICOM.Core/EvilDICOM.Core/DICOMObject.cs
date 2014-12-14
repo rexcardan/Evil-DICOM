@@ -13,6 +13,7 @@ using System.Reflection;
 using System.IO;
 using EvilDICOM.Core.IO.Reading;
 using EvilDICOM.Core.IO.Writing;
+using EvilDICOM.Core.Selection;
 
 namespace EvilDICOM.Core
 {
@@ -457,19 +458,45 @@ namespace EvilDICOM.Core
         }
         #endregion
 
-        #region IO
-        public static DICOMObject Open(string file)
+        #region GET SELECTOR
+        public DICOMSelector GetSelector()
         {
-            return DICOMFileReader.Read(file);
+            return new DICOMSelector(this);
         }
+        #endregion
+
+        #region IO
+        /// <summary>
+        /// Reads a DICOM file from a path
+        /// </summary>
+        /// <param name="filePath">the path to the file</param>
+        /// <returns></returns>
+        public static DICOMObject Read(string filePath)
+        {
+            return DICOMFileReader.Read(filePath);
+        }
+        /// <summary>
+        /// Reads a DICOM file from a byte array
+        /// </summary>
+        /// <param name="file">the bytes of the DICOM file</param>
+        /// <returns></returns>
         public static DICOMObject Read(byte[] file)
         {
             return DICOMFileReader.Read(file);
         }
-        public void SaveAs(string file, DICOMWriteSettings settings = null)
+        public void Write(string file, DICOMWriteSettings settings = null)
         {
             settings = settings ?? DICOMWriteSettings.Default();
             DICOMFileWriter.Write(file, settings, this);
+        }
+        public byte[] GetBytes(DICOMWriteSettings settings = null)
+        {
+            settings = settings ?? DICOMWriteSettings.Default();
+            using (var stream = new MemoryStream())
+            {
+                DICOMFileWriter.Write(stream, settings, this);
+                return stream.ToArray();
+            }
         }
         #endregion
 
