@@ -113,7 +113,7 @@ namespace EvilDICOM.Core.Helpers
         /// <param name="selector">the transfer syntax to set</param>
         public static void SetSyntax(DICOMObject dicom, TransferSyntax selector)
         {
-            UniqueIdentifier syntax = dicom.FindFirst(TagHelper.TRANSFER_SYNTAX_UID) as UniqueIdentifier;
+            UniqueIdentifier syntax = DICOMForge.TransferSyntaxUID;
             if (syntax != null)
             {
                 string transferSyntax = string.Empty;
@@ -151,6 +151,7 @@ namespace EvilDICOM.Core.Helpers
                         break;
                 }
                 syntax.Data = transferSyntax;
+                dicom.ReplaceOrAdd(syntax);
             }
         }
     }
