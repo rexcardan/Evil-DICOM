@@ -56,7 +56,7 @@ namespace EvilDICOM.Core.Element
         public override bool Equals(object obj)
         {
             var tag = obj as Tag;
-            if (tag!=null)
+            if ((object)tag != null)
             {
                 return tag.CompleteID == this.CompleteID;
             }
@@ -65,11 +65,13 @@ namespace EvilDICOM.Core.Element
 
         public static bool operator ==(Tag t1, Tag t2)
         {
+            if ((object)t1 == null) return false;
             return t1.Equals(t2);
         }
 
         public static bool operator !=(Tag t1, Tag t2)
         {
+            if ((object)t1 == null) return false;
             return !t1.Equals(t2);
         }
         #endregion

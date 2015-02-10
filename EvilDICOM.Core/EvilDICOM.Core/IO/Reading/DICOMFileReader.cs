@@ -85,7 +85,8 @@ namespace EvilDICOM.Core.IO.Reading
                 {
                     dr.StreamPosition = position;
                     IDICOMElement el = DICOMElementReader.ReadElementExplicitLittleEndian(dr);
-                    if (el.Tag.CompleteID == TagHelper.TRANSFER_SYNTAX_UID.CompleteID)
+                    var uid = TagHelper.TRANSFER_SYNTAX_UID;
+                    if (el.Tag == uid)
                     {
                         syntax = TransferSyntaxHelper.GetSyntax(el);
                     }
