@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace EvilDICOM.Core.Enums
+﻿namespace EvilDICOM.Core.Enums
 {
     /// <summary>
-    /// An enum that contains all of the possible DICOM VR types. 
+    ///     An enum that contains all of the possible DICOM VR types.
     /// </summary>
     public enum VR
     {

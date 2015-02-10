@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace EvilDICOM.Core.Helpers
 {
@@ -15,7 +12,7 @@ namespace EvilDICOM.Core.Helpers
         }
 
         /// <summary>
-        /// A method that compares each object in two arrays to see if the arrays are equal
+        ///     A method that compares each object in two arrays to see if the arrays are equal
         /// </summary>
         /// <typeparam name="T">the class type of the array</typeparam>
         /// <param name="array1">the first array to be compared</param>
@@ -28,19 +25,15 @@ namespace EvilDICOM.Core.Helpers
             {
                 return false;
             }
-            //Check all elements are the same
-            else
+                //Check all elements are the same
+            for (int i = 0; i < array1.Length; i++)
             {
-                for (int i = 0; i < array1.Length; i++)
+                if (!array1[i].Equals(array2[i]))
                 {
-                    if (!array1[i].Equals(array2[i]))
-                    {
-                        return false;
-                    }
+                    return false;
                 }
-                return true;
             }
-
+            return true;
         }
     }
 }

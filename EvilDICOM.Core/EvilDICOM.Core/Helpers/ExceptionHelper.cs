@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace EvilDICOM.Core.Helpers
+﻿namespace EvilDICOM.Core.Helpers
 {
     public class ExceptionHelper
     {

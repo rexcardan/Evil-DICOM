@@ -1,18 +1,17 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 
 namespace EvilDICOM.Core
 {
     /// <summary>
-    /// A class to hold DICOM data. DICOM data is unique in that it can be a single value, multiple values and null. This class tries to encapsulate those attributes while maintaining a flexible programming interface.
+    ///     A class to hold DICOM data. DICOM data is unique in that it can be a single value, multiple values and null. This
+    ///     class tries to encapsulate those attributes while maintaining a flexible programming interface.
     /// </summary>
     /// <typeparam name="T"></typeparam>
     public class DICOMData<T>
     {
         /// <summary>
-        /// The constructor which ininitializes the underlying enumerable collection
+        ///     The constructor which ininitializes the underlying enumerable collection
         /// </summary>
         public DICOMData()
         {
@@ -22,14 +21,12 @@ namespace EvilDICOM.Core
         private List<T> _data { get; set; }
 
         /// <summary>
-        /// Gets and sets a single value for the data of the DICOM element. If the collection contains has more than one data element, only the first is returned. If setting a value, the data is cleared and only a single entry is saved.
+        ///     Gets and sets a single value for the data of the DICOM element. If the collection contains has more than one data
+        ///     element, only the first is returned. If setting a value, the data is cleared and only a single entry is saved.
         /// </summary>
         public T SingleValue
         {
-            get
-            {
-                return _data.Count > 0 ? _data.First() : default(T);
-            }
+            get { return _data.Count > 0 ? _data.First() : default(T); }
             set
             {
                 _data.Clear();
@@ -38,56 +35,44 @@ namespace EvilDICOM.Core
         }
 
         /// <summary>
-        /// A list of the data within the element. This is designed to be accomodate the multiplicity aspect of DICOM data
+        ///     A list of the data within the element. This is designed to be accomodate the multiplicity aspect of DICOM data
         /// </summary>
         public List<T> MultipicityValue
         {
-            get
-            {
-                return _data;
-            }
-            set
-            {
-                _data = value;
-            }
+            get { return _data; }
+            set { _data = value; }
         }
 
         /// <summary>
-        /// Creates a new DICOM Data object from a single data value
+        ///     Creates a new DICOM Data object from a single data value
         /// </summary>
         /// <param name="dataValue">the data value from which to initialize the DICOM Data object</param>
         /// <returns></returns>
         public static DICOMData<T> CreateFromSingle(T dataValue)
         {
-            DICOMData<T> data = new DICOMData<T>();
+            var data = new DICOMData<T>();
             if (dataValue != null)
             {
                 data.SingleValue = dataValue;
                 return data;
             }
-            else
-            {
-                return null;
-            }
+            return null;
         }
 
         /// <summary>
-        /// Creates a new DICOM Data object from an array of data
+        ///     Creates a new DICOM Data object from an array of data
         /// </summary>
         /// <param name="dataArray">the data array from which to initialize the DICOM Data object</param>
         /// <returns></returns>
         public static DICOMData<T> CreateFromArray(T[] dataArray)
         {
-            DICOMData<T> data = new DICOMData<T>();
+            var data = new DICOMData<T>();
             if (dataArray != null)
             {
                 data.MultipicityValue = dataArray.ToList();
                 return data;
             }
-            else
-            {
-                return null;
-            }
+            return null;
         }
 
         public override string ToString()
@@ -96,10 +81,7 @@ namespace EvilDICOM.Core
             {
                 return string.Join(" | ", MultipicityValue.ToArray());
             }
-            else
-            {
-                return SingleValue != null ? SingleValue.ToString() : "";
-            }
+            return SingleValue != null ? SingleValue.ToString() : "";
         }
     }
 }

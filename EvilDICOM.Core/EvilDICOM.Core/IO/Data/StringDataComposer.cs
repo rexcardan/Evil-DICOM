@@ -1,9 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using EvilDICOM.Core.Element;
-using EvilDICOM.Core.Helpers;
+using DateTime = System.DateTime;
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -16,38 +14,42 @@ namespace EvilDICOM.Core.IO.Data
                 string ageString = String.Format("{0:00#}", data.Number);
                 switch (data.Units)
                 {
-                    case Age.Unit.DAYS: ageString += "D"; break;
-                    case Age.Unit.WEEKS: ageString += "W"; break;
-                    case Age.Unit.MONTHS: ageString += "M"; break;
-                    case Age.Unit.YEARS: ageString += "Y"; break;
+                    case Age.Unit.DAYS:
+                        ageString += "D";
+                        break;
+                    case Age.Unit.WEEKS:
+                        ageString += "W";
+                        break;
+                    case Age.Unit.MONTHS:
+                        ageString += "M";
+                        break;
+                    case Age.Unit.YEARS:
+                        ageString += "Y";
+                        break;
                 }
                 return ageString;
             }
-            else
-            {
-                return string.Empty;
-            }
+            return string.Empty;
         }
 
-        public static string ComposeDate(System.DateTime? data)
+        public static string ComposeDate(DateTime? data)
         {
             if (data != null)
             {
-                System.DateTime date = (System.DateTime)data;
+                var date = (DateTime) data;
                 return date.ToString("yyyyMMdd");
             }
-            else { return string.Empty; }
+            return string.Empty;
         }
 
-        public static string ComposeDateTime(System.DateTime? data)
+        public static string ComposeDateTime(DateTime? data)
         {
             if (data != null)
             {
-                System.DateTime date = (System.DateTime)data;
+                var date = (DateTime) data;
                 return date.ToString("yyyyMMddHHmmss.ffffff");
             }
-            else { return string.Empty; }
-
+            return string.Empty;
         }
 
         public static string ComposeDecimalString(double[] data)
@@ -56,10 +58,7 @@ namespace EvilDICOM.Core.IO.Data
             {
                 return String.Join("\\", data.Select(d => d.ToString()).ToArray());
             }
-            else
-            {
-                return string.Empty;
-            }
+            return string.Empty;
         }
 
         public static string ComposeIntegerString(int[] data)
@@ -68,28 +67,21 @@ namespace EvilDICOM.Core.IO.Data
             {
                 return String.Join("\\", data.Select(d => d.ToString()).ToArray());
             }
-            else
-            {
-                return string.Empty;
-            }
+            return string.Empty;
         }
 
-        public static string ComposeTime(System.DateTime? data)
+        public static string ComposeTime(DateTime? data)
         {
             if (data != null)
             {
-                System.DateTime date = (System.DateTime)data;
+                var date = (DateTime) data;
                 if (data.Value.Millisecond > 0)
                 {
                     return date.ToString("HHmmss.ffffff");
                 }
-                else
-                {
-                    return date.ToString("HHmmss");
-                }
+                return date.ToString("HHmmss");
             }
-            else { return string.Empty; }
-
+            return string.Empty;
         }
     }
 }

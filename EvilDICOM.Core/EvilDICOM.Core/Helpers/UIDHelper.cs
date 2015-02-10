@@ -1,7 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+
 //using System.Numerics;
 
 namespace EvilDICOM.Core.Helpers
@@ -34,7 +33,7 @@ namespace EvilDICOM.Core.Helpers
         private static string GenerateSystemGuid()
         {
             Guid g = Guid.NewGuid();
-            uint[] uints = new uint[4];
+            var uints = new uint[4];
             Buffer.BlockCopy(g.ToByteArray(), 0, uints, 0, 16);
             return String.Join("", uints.Select(i => i.ToString()).ToArray());
         }

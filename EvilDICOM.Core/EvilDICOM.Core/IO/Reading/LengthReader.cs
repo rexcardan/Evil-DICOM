@@ -1,21 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Dictionaries;
-using EvilDICOM.Core.Helpers;
+using EvilDICOM.Core.Enums;
 
 namespace EvilDICOM.Core.IO.Reading
 {
     /// <summary>
-    /// Contains methods for reading the length of DICOM elements
+    ///     Contains methods for reading the length of DICOM elements
     /// </summary>
     public class LengthReader
     {
         /// <summary>
-        /// Reads the length from a series of bytes in a stream. The number of bytes is automatically determined from 
-        /// VR. 
+        ///     Reads the length from a series of bytes in a stream. The number of bytes is automatically determined from
+        ///     VR.
         /// </summary>
         /// <param name="vr">the value representation of the element</param>
         /// <param name="dr">the binary stream with a current position on the length parameter</param>
@@ -33,7 +30,7 @@ namespace EvilDICOM.Core.IO.Reading
         }
 
         /// <summary>
-        /// Reads the length in little endian byte format from a series of bytes in a stream
+        ///     Reads the length in little endian byte format from a series of bytes in a stream
         /// </summary>
         /// <param name="dr">the binary stream with a current position on the length parameter</param>
         /// <param name="length">the number of bytes containing the length</param>
@@ -52,8 +49,9 @@ namespace EvilDICOM.Core.IO.Reading
         }
 
         /// <summary>
-        /// Reads the length in little endian byte format from a series of bytes in a stream. The number of bytes is automatically determined from 
-        /// VR. 
+        ///     Reads the length in little endian byte format from a series of bytes in a stream. The number of bytes is
+        ///     automatically determined from
+        ///     VR.
         /// </summary>
         /// <param name="vr">the value representation of the element</param>
         /// <param name="dr">the binary stream with a current position on the length parameter</param>
@@ -70,19 +68,20 @@ namespace EvilDICOM.Core.IO.Reading
                     break;
                 case VREncoding.ExplicitLong:
                     byteLength = dr.Skip(2).ReadBytes(4);
-                    length = BitConverter.ToInt32(byteLength, 0); 
+                    length = BitConverter.ToInt32(byteLength, 0);
                     break;
                 case VREncoding.ExplicitShort:
                     byteLength = dr.ReadBytes(2);
                     length = BitConverter.ToUInt16(byteLength, 0);
                     break;
-            }                      
+            }
             return length;
         }
 
         /// <summary>
-        /// Reads the length in big endian byte format from a series of bytes in a stream. The number of bytes is automatically determined from 
-        /// VR. 
+        ///     Reads the length in big endian byte format from a series of bytes in a stream. The number of bytes is automatically
+        ///     determined from
+        ///     VR.
         /// </summary>
         /// <param name="vr">the value representation of the element</param>
         /// <param name="dr">the binary stream with a current position on the length parameter</param>
@@ -115,7 +114,7 @@ namespace EvilDICOM.Core.IO.Reading
         }
 
         /// <summary>
-        /// Reads the length in big endian byte format from a series of bytes in a stream
+        ///     Reads the length in big endian byte format from a series of bytes in a stream
         /// </summary>
         /// <param name="dr">the binary stream with a current position on the length parameter</param>
         /// <param name="length">the number of bytes containing the length</param>
@@ -128,6 +127,25 @@ namespace EvilDICOM.Core.IO.Reading
                     return BitConverter.ToUInt16(dr.Take(2).Reverse().ToArray(), 0);
                 case 4:
                     return BitConverter.ToInt32(dr.Take(4).Reverse().ToArray(), 0);
+                default:
+                    return 0;
+            }
+        }
+
+        /// <summary>
+        ///     Reads the length in big endian byte format from a series of bytes in a stream
+        /// </summary>
+        /// <param name="dr">the binary stream with a current position on the length parameter</param>
+        /// <param name="length">the number of bytes containing the length</param>
+        /// <returns>the length</returns>
+        public static int ReadBigEndian(byte[] length)
+        {
+            switch (length.Length)
+            {
+                case 2:
+                    return BitConverter.ToUInt16(length.Reverse().ToArray(), 0);
+                case 4:
+                    return BitConverter.ToInt32(length.Reverse().ToArray(), 0);
                 default:
                     return 0;
             }

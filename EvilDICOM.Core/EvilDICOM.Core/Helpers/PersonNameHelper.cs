@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace EvilDICOM.Core.Helpers
+﻿namespace EvilDICOM.Core.Helpers
 {
     public class PersonNameHelper
     {
@@ -51,12 +46,9 @@ namespace EvilDICOM.Core.Helpers
                 string lastName = nameParts.Length > 0 ? nameParts[0] : string.Empty;
                 string firstName = nameParts.Length > 1 ? nameParts[1] : string.Empty;
                 string middleName = nameParts.Length > 2 ? nameParts[2] : string.Empty;
-                return new string[] { firstName, middleName, lastName };
+                return new[] {firstName, middleName, lastName};
             }
-            else
-            {
-                return new string[] { string.Empty, string.Empty, string.Empty };
-            }
+            return new[] {string.Empty, string.Empty, string.Empty};
         }
 
         private static string FormatName(string firstName, string middleName, string lastName)

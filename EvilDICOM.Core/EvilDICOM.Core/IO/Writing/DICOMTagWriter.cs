@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using EvilDICOM.Core.Element;
+﻿using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
 
 namespace EvilDICOM.Core.IO.Writing
@@ -12,7 +8,7 @@ namespace EvilDICOM.Core.IO.Writing
         public static byte[] WriteLittleEndian(Tag tag)
         {
             byte[] tagBytes = ByteHelper.HexStringToByteArray(tag.CompleteID);
-            tagBytes = new byte[] { tagBytes[1], tagBytes[0], tagBytes[3], tagBytes[2] };
+            tagBytes = new[] {tagBytes[1], tagBytes[0], tagBytes[3], tagBytes[2]};
             return tagBytes;
         }
 

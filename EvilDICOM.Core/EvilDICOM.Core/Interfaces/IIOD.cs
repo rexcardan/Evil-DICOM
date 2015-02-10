@@ -1,15 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace EvilDICOM.Core.Interfaces
 {
     public interface IIOD
     {
-        List<IDICOMElement> Elements
-        {
-            get;
-        }
+        List<IDICOMElement> Elements { get; }
     }
 }

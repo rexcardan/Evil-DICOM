@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.IO.Writing;
 
@@ -12,41 +9,41 @@ namespace EvilDICOM.Core.IO.Data
         public static byte[] WriteTag(DICOMData<Tag> data)
         {
             //TODO modify to make VM > 1 possible
-            return MultiplicityComposer.ComposeMultipleBinary<Tag>(data, WriteTagSingle);
+            return MultiplicityComposer.ComposeMultipleBinary(data, WriteTagSingle);
         }
 
         public static byte[] WriteSinglePrecision(DICOMData<float> data)
         {
-            return MultiplicityComposer.ComposeMultipleBinary<float>(data, WriteSinglePrecisionSingle);
+            return MultiplicityComposer.ComposeMultipleBinary(data, WriteSinglePrecisionSingle);
         }
 
         public static byte[] WriteDoublePrecision(DICOMData<double> data)
         {
-            return MultiplicityComposer.ComposeMultipleBinary<double>(data, WriteDoublePrecisionSingle);
+            return MultiplicityComposer.ComposeMultipleBinary(data, WriteDoublePrecisionSingle);
         }
 
         public static byte[] WriteSignedLong(DICOMData<int> data)
         {
-            return MultiplicityComposer.ComposeMultipleBinary<int>(data, WriteSignedLongSingle);
+            return MultiplicityComposer.ComposeMultipleBinary(data, WriteSignedLongSingle);
         }
 
         public static byte[] WriteUnsignedLong(DICOMData<uint> data)
         {
-            return MultiplicityComposer.ComposeMultipleBinary<uint>(data, WriteUnsignedLongSingle);
+            return MultiplicityComposer.ComposeMultipleBinary(data, WriteUnsignedLongSingle);
         }
 
         public static byte[] WriteSignedShort(DICOMData<short> data)
         {
-            return MultiplicityComposer.ComposeMultipleBinary<short>(data, WriteSignedShortSingle);
+            return MultiplicityComposer.ComposeMultipleBinary(data, WriteSignedShortSingle);
         }
 
         public static byte[] WriteUnsignedShort(DICOMData<ushort> data)
         {
-            return MultiplicityComposer.ComposeMultipleBinary<ushort>(data, WriteUnsignedShortSingle);
+            return MultiplicityComposer.ComposeMultipleBinary(data, WriteUnsignedShortSingle);
         }
 
-        //Writes a single data element (VM = 1)
         #region SINGLE WRITERS
+
         public static byte[] WriteTagSingle(Tag tag)
         {
             return DICOMTagWriter.WriteLittleEndian(tag);
@@ -81,6 +78,9 @@ namespace EvilDICOM.Core.IO.Data
         {
             return BitConverter.GetBytes(data);
         }
+
         #endregion
+
+        //Writes a single data element (VM = 1)
     }
 }

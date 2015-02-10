@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.IO.Reading;
-using EvilDICOM.Core.Interfaces;
 
 namespace EvilDICOM.Core.IO.Data
 {
-    public class BigEndianReader :AbstractBinaryDataReader
+    public class BigEndianReader : AbstractBinaryDataReader
     {
         public static AttributeTag AttributeTag(Tag tag, byte[] data)
         {
@@ -53,6 +50,7 @@ namespace EvilDICOM.Core.IO.Data
         }
 
         #region SINGLE DATA READERS
+
         public static float ReadSinglePrecisionSingle(byte[] data)
         {
             return BitConverter.ToSingle(data.Reverse().ToArray(), 0);
@@ -72,6 +70,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             return BitConverter.ToInt32(data.Reverse().ToArray(), 0);
         }
+
         public static uint ReadUnsignedLongSingle(byte[] data)
         {
             return BitConverter.ToUInt32(data.Reverse().ToArray(), 0);

@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using EvilDICOM.Core.Element;
+﻿using EvilDICOM.Core.Element;
 
 namespace EvilDICOM.Core.Helpers
 {
@@ -3018,4 +3014,3 @@ namespace EvilDICOM.Core.Helpers
         public static Tag SEQUENCE_DELIMITATION_ITEM = new Tag("FFFEE0DD");
     }
 }
-

@@ -1,10 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Dictionaries;
-using EvilDICOM.Core.Helpers;
+using EvilDICOM.Core.Enums;
 
 namespace EvilDICOM.Core.IO.Writing
 {
@@ -12,12 +9,14 @@ namespace EvilDICOM.Core.IO.Writing
     {
         public static void WriteLittleEndian(DICOMBinaryWriter dw, int length, int numberOfBytes)
         {
-            byte[] lengthBytes = new byte[0];
+            var lengthBytes = new byte[0];
             switch (numberOfBytes)
             {
-                case 2: lengthBytes = BitConverter.GetBytes((short)length);
+                case 2:
+                    lengthBytes = BitConverter.GetBytes((short) length);
                     break;
-                case 4: lengthBytes = BitConverter.GetBytes(length);
+                case 4:
+                    lengthBytes = BitConverter.GetBytes(length);
                     break;
             }
             dw.Write(lengthBytes);
@@ -25,7 +24,7 @@ namespace EvilDICOM.Core.IO.Writing
 
         public static void Write(DICOMBinaryWriter dw, VR vr, DICOMWriteSettings settings, int length)
         {
-            byte[] lengthBytes = new byte[0];
+            var lengthBytes = new byte[0];
             if (!(settings.TransferSyntax == TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN))
             {
                 switch (VRDictionary.GetEncodingFromVR(vr))
@@ -35,7 +34,7 @@ namespace EvilDICOM.Core.IO.Writing
                         lengthBytes = BitConverter.GetBytes(length);
                         break;
                     case VREncoding.ExplicitShort:
-                        lengthBytes = BitConverter.GetBytes((ushort)length);
+                        lengthBytes = BitConverter.GetBytes((ushort) length);
                         break;
                     case VREncoding.Implicit:
                         lengthBytes = BitConverter.GetBytes(length);
@@ -57,17 +56,18 @@ namespace EvilDICOM.Core.IO.Writing
 
         public static void WriteBigEndian(DICOMBinaryWriter dw, VR vr, int length)
         {
-
         }
 
         public static void WriteBigEndian(DICOMBinaryWriter dw, int length, int numberOfBytes)
         {
-            byte[] lengthBytes = new byte[0];
+            var lengthBytes = new byte[0];
             switch (numberOfBytes)
             {
-                case 2: lengthBytes = BitConverter.GetBytes((ushort)length).Reverse().ToArray();
+                case 2:
+                    lengthBytes = BitConverter.GetBytes((ushort) length).Reverse().ToArray();
                     break;
-                case 4: lengthBytes = BitConverter.GetBytes(length).Reverse().ToArray();
+                case 4:
+                    lengthBytes = BitConverter.GetBytes(length).Reverse().ToArray();
                     break;
             }
             dw.Write(lengthBytes);

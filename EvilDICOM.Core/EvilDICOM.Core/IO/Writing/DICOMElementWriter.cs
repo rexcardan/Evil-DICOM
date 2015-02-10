@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using EvilDICOM.Core.Interfaces;
-using System.IO;
-using EvilDICOM.Core.Element;
-using EvilDICOM.Core.Dictionaries;
+﻿using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Enums;
+using EvilDICOM.Core.Interfaces;
 
 namespace EvilDICOM.Core.IO.Writing
 {
@@ -22,10 +16,9 @@ namespace EvilDICOM.Core.IO.Writing
             else
             {
                 DICOMTagWriter.WriteLittleEndian(dw, toWrite.Tag);
-                VRWriter.WriteVR(dw, settings, vr);               
+                VRWriter.WriteVR(dw, settings, vr);
                 DataWriter.WriteLittleEndian(dw, vr, settings, toWrite);
             }
-           
         }
 
         public static void WriteBigEndian(DICOMBinaryWriter dw, DICOMWriteSettings settings, IDICOMElement toWrite)

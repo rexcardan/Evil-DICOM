@@ -1,17 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using EvilDICOM.Core.Helpers;
-using EvilDICOM.Core.Interfaces;
+﻿using System.Collections.Generic;
 using EvilDICOM.Core.Enums;
+using EvilDICOM.Core.Helpers;
 
 namespace EvilDICOM.Core.IO.Reading
 {
     public class SequenceReader
     {
-        private static byte[] _endOfSequence_LE = new byte[] { 0xFE, 0xFF, 0xDD, 0xE0, 0x00, 0x00, 0x00, 0x00 };
-        private static byte[] _endOfSequence_BE = new byte[] { 0xFF, 0xFE, 0xE0, 0xDD, 0x00, 0x00, 0x00, 0x00 };
+        private static readonly byte[] _endOfSequence_LE = {0xFE, 0xFF, 0xDD, 0xE0, 0x00, 0x00, 0x00, 0x00};
+        private static readonly byte[] _endOfSequence_BE = {0xFF, 0xFE, 0xE0, 0xDD, 0x00, 0x00, 0x00, 0x00};
 
         public static int ReadIndefiniteLengthLittleEndian(DICOMBinaryReader dr, TransferSyntax syntax)
         {
@@ -21,7 +17,7 @@ namespace EvilDICOM.Core.IO.Reading
                 dr.StreamPosition -= 8;
                 SequenceItemReader.SkipItemLittleEndian(dr, syntax);
             }
-            return CalculateLength(dr, startingPos)-8;
+            return CalculateLength(dr, startingPos) - 8;
         }
 
         public static int ReadIndefiniteLengthBigEndian(DICOMBinaryReader dr)
@@ -32,7 +28,7 @@ namespace EvilDICOM.Core.IO.Reading
                 dr.StreamPosition -= 8;
                 SequenceItemReader.SkipItemBigEndian(dr);
             }
-            return CalculateLength(dr, startingPos)-8;
+            return CalculateLength(dr, startingPos) - 8;
         }
 
         private static bool IsEndOfSequenceLittleEndian(DICOMBinaryReader dr)
@@ -49,25 +45,25 @@ namespace EvilDICOM.Core.IO.Reading
 
         private static int CalculateLength(DICOMBinaryReader dr, long startingPos)
         {
-            int length = (int)(dr.StreamPosition - startingPos);
+            var length = (int) (dr.StreamPosition - startingPos);
             dr.StreamPosition = startingPos;
             return length;
         }
 
         public static List<DICOMObject> ReadItems(byte[] data, TransferSyntax syntax)
         {
-            List<DICOMObject> objects = new List<DICOMObject>();
-            using (DICOMBinaryReader dr = new DICOMBinaryReader(data))
+            var objects = new List<DICOMObject>();
+            using (var dr = new DICOMBinaryReader(data))
             {
                 while (dr.StreamPosition < dr.StreamLength)
                 {
                     switch (syntax)
                     {
                         case TransferSyntax.EXPLICIT_VR_BIG_ENDIAN:
-                            objects.Add(SequenceItemReader.ReadBigEndian(dr,syntax));
+                            objects.Add(SequenceItemReader.ReadBigEndian(dr, syntax));
                             break;
                         default:
-                            objects.Add(SequenceItemReader.ReadLittleEndian(dr,syntax));
+                            objects.Add(SequenceItemReader.ReadLittleEndian(dr, syntax));
                             break;
                     }
                 }

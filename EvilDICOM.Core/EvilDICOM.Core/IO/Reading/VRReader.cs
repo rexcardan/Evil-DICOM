@@ -1,9 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Dictionaries;
+using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
 
 namespace EvilDICOM.Core.IO.Reading

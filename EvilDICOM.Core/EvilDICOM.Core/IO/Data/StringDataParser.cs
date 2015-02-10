@@ -1,76 +1,82 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Globalization;
 using EvilDICOM.Core.Element;
-using EvilDICOM.Core.Helpers;
+using DateTime = System.DateTime;
+using EvilDICOM.Core.Logging;
 
 namespace EvilDICOM.Core.IO.Data
 {
     public class StringDataParser
     {
-        private static readonly string[] dicomTimeFormats = new string[] { "HHmmss.ffffff", "HHmmss.fffff", "HHmmss.ffff", "HHmmss.fff", "HHmmss.ff", "HHmmss.f", "HHmmss" };
-
         public static Age ParseAgeString(string data)
         {
             if (string.IsNullOrEmpty(data))
             {
                 return null;
             }
-            else
+            var a = new Age();
+            a.Number = int.Parse(data.Substring(1, 3));
+            switch (data.Substring(4, 1))
             {
-                Age a = new Age();
-                a.Number = int.Parse(data.Substring(1, 3));
-                switch (data.Substring(4, 1))
-                {
-                    case "D": a.Units = Age.Unit.DAYS; break;
-                    case "W": a.Units = Age.Unit.WEEKS; break;
-                    case "M": a.Units = Age.Unit.MONTHS; break;
-                    case "Y": a.Units = Age.Unit.YEARS; break;
-                }
-                return a;
+                case "D":
+                    a.Units = Age.Unit.DAYS;
+                    break;
+                case "W":
+                    a.Units = Age.Unit.WEEKS;
+                    break;
+                case "M":
+                    a.Units = Age.Unit.MONTHS;
+                    break;
+                case "Y":
+                    a.Units = Age.Unit.YEARS;
+                    break;
             }
+            return a;
         }
 
-        public static System.DateTime? ParseDate(string data)
+        public static DateTime? ParseDate(string data)
         {
             if (string.IsNullOrEmpty(data))
             {
                 return null;
             }
-            else
+            try
             {
-                try
+                return DateTime.ParseExact(data, "yyyyMMdd", null);
+            }
+            catch (Exception e)
+            {
+                return null;
+            }
+        }
+
+        public static DateTime? ParseDateTime(string data)
+        {
+            if (string.IsNullOrEmpty(data))
+            {
+                return null;
+            }
+            DateTime dateTime;
+
+                string[] formats = 
+                { 
+                    "yyyyMMddHHmmss.ffffff",
+                    "yyyyMMddHHmmss.fffff",
+                    "yyyyMMddHHmmss.ffff",
+                    "yyyyMMddHHmmss.fff",
+                    "yyyyMMddHHmmss.ff",
+                    "yyyyMMddHHmmss.f",
+                    "yyyyMMddHHmmss",
+                };
+                var success = DateTime.TryParseExact(data, formats, CultureInfo.InvariantCulture, DateTimeStyles.None, out dateTime);
+
+                if (!success)
                 {
-                    return System.DateTime.ParseExact(data, "yyyyMMdd", null);
-                }
-                catch (Exception e)
-                {
+                    EvilLogger.Instance.Log("Date {0} does not match any known format", Enums.LogPriority.ERROR, data);
                     return null;
                 }
-            }
-        }
-
-        public static System.DateTime? ParseDateTime(string data)
-        {
-            if (string.IsNullOrEmpty(data))
-            {
-                return null;
-            }
-            else
-            {
-                System.DateTime? dateTime = null;
-                try
-                {
-                    dateTime = System.DateTime.ParseExact(data, "yyyyMMddHHmmss.ffffff", null);
-                }
-                catch (Exception e)
-                {
-                    Console.WriteLine(e);
-                }
-                return dateTime;
-            }
+          
+            return dateTime;
         }
 
 
@@ -80,17 +86,14 @@ namespace EvilDICOM.Core.IO.Data
             {
                 return new double[0];
             }
-            else
+            string[] sNumbers = data.Replace(" ", "") //Remove padding
+                .Split(new[] {'\\'});
+            var numbers = new double[sNumbers.Length];
+            for (int i = 0; i < sNumbers.Length; i++)
             {
-                string[] sNumbers = data.Replace(" ", "") //Remove padding
-                    .Split(new char[] { '\\' });
-                double[] numbers = new double[sNumbers.Length];
-                for (int i = 0; i < sNumbers.Length; i++)
-                {
-                    double.TryParse(sNumbers[i], NumberStyles.Any, CultureInfo.InvariantCulture, out numbers[i]);
-                }
-                return numbers;
+                double.TryParse(sNumbers[i], NumberStyles.Any, CultureInfo.InvariantCulture, out numbers[i]);
             }
+            return numbers;
         }
 
 
@@ -100,34 +103,42 @@ namespace EvilDICOM.Core.IO.Data
             {
                 return new int[0];
             }
-            else
+            string[] sNumbers = data.Replace(" ", "").Split(new[] {'\\'});
+            var numbers = new int[sNumbers.Length];
+            for (int i = 0; i < sNumbers.Length; i++)
             {
-                string[] sNumbers = data.Replace(" ", "").Split(new char[] { '\\' });
-                int[] numbers = new int[sNumbers.Length];
-                for (int i = 0; i < sNumbers.Length; i++)
-                {
-                    int.TryParse(sNumbers[i], out numbers[i]);
-                }
-                return numbers;
+                int.TryParse(sNumbers[i], out numbers[i]);
             }
+            return numbers;
         }
 
-        public static System.DateTime? ParseTime(string data)
+        public static DateTime? ParseTime(string data)
         {
             if (string.IsNullOrEmpty(data))
             {
                 return null;
             }
 
-            System.DateTime time;
-            var success = System.DateTime.TryParseExact(data, dicomTimeFormats, null, DateTimeStyles.None, out time);
+            DateTime time;
+
+            string[] formats = 
+                { 
+                    "HHmmss.ffffff",
+                    "HHmmss.fffff",
+                    "HHmmss.ffff",
+                    "HHmmss.fff",
+                    "HHmmss.ff",
+                    "HHmmss.f",
+                    "HHmmss",
+                };
+
+            var success = DateTime.TryParseExact(data, formats, CultureInfo.InvariantCulture, DateTimeStyles.None, out time);
 
             if (!success)
             {
-                EventLogger.Instance.RaiseToLogEvent("Time parse error. Format expected 'HHmmss.ffffff', actual is {0}", data);
-                return null;
+                EvilLogger.Instance.Log("Time {0} does not match any known format", Enums.LogPriority.ERROR, data);
             }
-            else { return time; }
+            return time;
         }
     }
 }

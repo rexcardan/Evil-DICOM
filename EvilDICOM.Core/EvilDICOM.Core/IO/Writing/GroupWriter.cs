@@ -1,15 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using EvilDICOM.Core.Interfaces;
-using EvilDICOM.Core.Element;
+﻿using System.Collections.Generic;
 using System.IO;
+using System.Linq;
+using EvilDICOM.Core.Element;
+using EvilDICOM.Core.Interfaces;
 
 namespace EvilDICOM.Core.IO.Writing
 {
     public class GroupWriter
-    {    
+    {
         public static bool IsGroupHeader(IDICOMElement el)
         {
             return el.Tag.Element == "0000";
@@ -19,8 +17,8 @@ namespace EvilDICOM.Core.IO.Writing
         {
             byte[] groupBytes = WriteGroupBytes(d, settings, el.Tag.Group);
             int length = groupBytes.Length;
-            UnsignedLong ul = el as UnsignedLong;
-            ul.SetData((uint)length);
+            var ul = el as UnsignedLong;
+            ul.SetData((uint) length);
             DICOMElementWriter.Write(dw, settings, ul);
             dw.Write(groupBytes);
             return d.Elements.Where(elm => elm.Tag.Group == ul.Tag.Group).ToList().Count - 1;
@@ -30,9 +28,9 @@ namespace EvilDICOM.Core.IO.Writing
         {
             List<IDICOMElement> groupElements = d.Elements.Where(el => el.Tag.Group == groupId).ToList();
             byte[] groupBytes;
-            using (MemoryStream stream = new MemoryStream())
+            using (var stream = new MemoryStream())
             {
-                using (DICOMBinaryWriter groupDW = new DICOMBinaryWriter(stream))
+                using (var groupDW = new DICOMBinaryWriter(stream))
                 {
                     foreach (IDICOMElement el in groupElements)
                     {

@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 
 namespace EvilDICOM.Core.Helpers
 {
@@ -48,7 +45,8 @@ namespace EvilDICOM.Core.Helpers
         public static string XRAY_ANGIOGRAPHIC_STORAGE = "1.2.840.10008.5.1.4.1.1.12.1";
         public static string VARIAN_MOTION_MANAGEMENT_PROTOCOL = "1.2.246.352.70.1.40";
         //ALL RADIOTHERAPY STORAGE
-        public static List<string> ALL_RADIOTHERAPY_STORAGE = new List<string>(){
+        public static List<string> ALL_RADIOTHERAPY_STORAGE = new List<string>
+        {
             VERIFICATION,
             CT_IMAGE_STORAGE,
             RT_IMAGE_STORAGE,
@@ -58,7 +56,8 @@ namespace EvilDICOM.Core.Helpers
             RT_PLAN_STORAGE,
             RT_BRACHY_TREATMENT_RECORD_STORAGE,
             RT_BRACHY_TREATMENT_SUMMARY_STORAGE,
-            CR_IMAGE_STORAGE,MR_IMAGE_STORAGE,
+            CR_IMAGE_STORAGE,
+            MR_IMAGE_STORAGE,
             SPATIAL_IMAGE_STORAGE,
             ULTRASOUND_IMAGE_STORAGE,
             XRAY_ANGIOGRAPHIC_STORAGE,

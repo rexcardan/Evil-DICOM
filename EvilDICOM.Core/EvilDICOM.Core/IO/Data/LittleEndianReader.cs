@@ -1,13 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.IO.Reading;
 
 namespace EvilDICOM.Core.IO.Data
 {
-    public class LittleEndianReader :AbstractBinaryDataReader
+    public class LittleEndianReader : AbstractBinaryDataReader
     {
         public static Tag ReadTag(byte[] data)
         {
@@ -46,6 +44,7 @@ namespace EvilDICOM.Core.IO.Data
         }
 
         #region SINGLE READERS
+
         public static Tag ReadTagSingle(byte[] data)
         {
             return TagReader.ReadLittleEndian(data);
@@ -80,6 +79,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             return BitConverter.ToUInt16(data, 0);
         }
+
         #endregion
     }
 }

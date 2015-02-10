@@ -1,11 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using EvilDICOM.Core.Interfaces;
+﻿using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Enums;
-using EvilDICOM.Core.Dictionaries;
-using EvilDICOM.Core.Helpers;
+using EvilDICOM.Core.Interfaces;
 
 namespace EvilDICOM.Core.IO.Writing
 {

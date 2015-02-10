@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Collections.Generic;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
@@ -10,8 +7,8 @@ namespace EvilDICOM.Core.IO.Reading
 {
     public class SequenceItemReader
     {
-        private static byte[] _endOfSequenceItem_LE = new byte[] { 0xFE, 0xFF, 0x0D, 0xE0, 0x00, 0x00, 0x00, 0x00 };
-        private static byte[] _endOfSequenceItem_BE = new byte[] { 0xFF, 0xFE, 0xE0, 0x0D, 0x00, 0x00, 0x00, 0x00 };
+        private static readonly byte[] _endOfSequenceItem_LE = {0xFE, 0xFF, 0x0D, 0xE0, 0x00, 0x00, 0x00, 0x00};
+        private static readonly byte[] _endOfSequenceItem_BE = {0xFF, 0xFE, 0xE0, 0x0D, 0x00, 0x00, 0x00, 0x00};
 
         public static DICOMObject ReadLittleEndian(DICOMBinaryReader dr, TransferSyntax syntax)
         {
@@ -19,27 +16,27 @@ namespace EvilDICOM.Core.IO.Reading
             int length = LengthReader.ReadLittleEndian(VR.Null, dr.Skip(4));
             if (LengthReader.IsIndefinite(length))
             {
-                d = ReadIndefiniteLittleEndian(dr,syntax);             
+                d = ReadIndefiniteLittleEndian(dr, syntax);
             }
             else
             {
-                d = DICOMObjectReader.ReadObject(dr.ReadBytes(length),syntax);
+                d = DICOMObjectReader.ReadObject(dr.ReadBytes(length), syntax);
             }
 
             return d;
         }
 
-        public static DICOMObject ReadBigEndian(DICOMBinaryReader dr,TransferSyntax syntax)
+        public static DICOMObject ReadBigEndian(DICOMBinaryReader dr, TransferSyntax syntax)
         {
             DICOMObject d;
             int length = LengthReader.ReadLittleEndian(VR.Null, dr.Skip(4));
             if (LengthReader.IsIndefinite(length))
             {
-                d = ReadIndefiniteBigEndian(dr,syntax);
+                d = ReadIndefiniteBigEndian(dr, syntax);
             }
             else
             {
-                d = DICOMObjectReader.ReadObject(dr.ReadBytes(length),syntax);
+                d = DICOMObjectReader.ReadObject(dr.ReadBytes(length), syntax);
             }
 
             return d;
@@ -104,7 +101,7 @@ namespace EvilDICOM.Core.IO.Reading
 
         private static DICOMObject ReadIndefiniteBigEndian(DICOMBinaryReader dr, TransferSyntax syntax)
         {
-            List<IDICOMElement> elements = new List<IDICOMElement>();
+            var elements = new List<IDICOMElement>();
             while (!IsEndOfSequenceItemLittleEndian(dr))
             {
                 dr.StreamPosition -= 8;
@@ -115,7 +112,7 @@ namespace EvilDICOM.Core.IO.Reading
 
         private static DICOMObject ReadIndefiniteLittleEndian(DICOMBinaryReader dr, TransferSyntax syntax)
         {
-            List<IDICOMElement> elements = new List<IDICOMElement>();
+            var elements = new List<IDICOMElement>();
             while (!IsEndOfSequenceItemLittleEndian(dr))
             {
                 dr.StreamPosition -= 8;

@@ -1,9 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using EvilDICOM.Core.Interfaces;
+﻿using System.Collections.Generic;
 using EvilDICOM.Core.Enums;
+using EvilDICOM.Core.Interfaces;
 
 namespace EvilDICOM.Core.IO.Reading
 {
@@ -24,7 +21,7 @@ namespace EvilDICOM.Core.IO.Reading
         public static DICOMObject ReadObject(byte[] objectBytes, TransferSyntax syntax, out long bytesRead)
         {
             List<IDICOMElement> elements;
-            using (DICOMBinaryReader dr = new DICOMBinaryReader(objectBytes))
+            using (var dr = new DICOMBinaryReader(objectBytes))
             {
                 elements = DICOMElementReader.ReadAllElements(dr, syntax);
                 bytesRead = dr.StreamPosition;

@@ -1,14 +1,11 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace EvilDICOM.Core.IO.Data
 {
     public class DataPadder
     {
         /// <summary>
-        /// Pads null bytes around the data to make it even
+        ///     Pads null bytes around the data to make it even
         /// </summary>
         /// <param name="toPad"></param>
         /// <returns></returns>
@@ -18,14 +15,11 @@ namespace EvilDICOM.Core.IO.Data
             {
                 return Pad(toPad, 0x00);
             }
-            else
-            {
-                return toPad;
-            }
+            return toPad;
         }
 
         /// <summary>
-        /// Pads a space character around the data to make it even
+        ///     Pads a space character around the data to make it even
         /// </summary>
         /// <param name="toPad"></param>
         /// <returns></returns>
@@ -38,25 +32,22 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (!IsEven(toPad))
             {
-                byte[] padded = new byte[toPad.Length + 1];
+                var padded = new byte[toPad.Length + 1];
                 Array.Copy(toPad, padded, toPad.Length);
                 padded[padded.Length - 1] = padCharacter;
                 return padded;
             }
-            else
-            {
-                return toPad;
-            }
+            return toPad;
         }
 
         /// <summary>
-        /// Checks to see if the data is an even number of bytes
+        ///     Checks to see if the data is an even number of bytes
         /// </summary>
         /// <param name="toPad"></param>
         /// <returns></returns>
         private static bool IsEven(byte[] toPad)
         {
-            return toPad.Length % 2 == 0;
+            return toPad.Length%2 == 0;
         }
     }
 }

@@ -1,36 +1,38 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using EvilDICOM.Core.Interfaces;
-using EvilDICOM.Core.IO.Data;
+﻿using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
+using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
     /// <summary>
-    /// Encapsulates the PersonName VR type
+    ///     Encapsulates the PersonName VR type
     /// </summary>
     public class PersonName : AbstractElement<string>
     {
-        public override string Data
+        public PersonName()
         {
-            get { return base.DataContainer.SingleValue; }
-            set { base.DataContainer = base.DataContainer ?? new DICOMData<string>(); base.DataContainer.SingleValue = DataRestriction.EnforceLengthRestriction(64, value); }
+            VR = VR.PersonName;
         }
 
-        public PersonName() : base() { VR = Enums.VR.PersonName; }
-
         public PersonName(Tag tag, string data)
-            : base()
         {
             Tag = tag;
             Data = data;
-            VR = Enums.VR.PersonName;
+            VR = VR.PersonName;
+        }
+
+        public override string Data
+        {
+            get { return base.DataContainer.SingleValue; }
+            set
+            {
+                base.DataContainer = base.DataContainer ?? new DICOMData<string>();
+                base.DataContainer.SingleValue = DataRestriction.EnforceLengthRestriction(64, value);
+            }
         }
 
         /// <summary>
-        /// A property to help get and set the first name of the person name string.
+        ///     A property to help get and set the first name of the person name string.
         /// </summary>
         public string FirstName
         {
@@ -39,7 +41,7 @@ namespace EvilDICOM.Core.Element
         }
 
         /// <summary>
-        /// A property to help get and set the middle name of the person name string.
+        ///     A property to help get and set the middle name of the person name string.
         /// </summary>
         public string MiddleName
         {
@@ -48,7 +50,7 @@ namespace EvilDICOM.Core.Element
         }
 
         /// <summary>
-        /// A property to help get and set the last name of the person name string.
+        ///     A property to help get and set the last name of the person name string.
         /// </summary>
         public string LastName
         {

@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using EvilDICOM.Core.Helpers;
-using EvilDICOM.Core.Enums;
+﻿using EvilDICOM.Core.Enums;
 
 namespace EvilDICOM.Core.IO.Writing
 {
@@ -26,7 +21,7 @@ namespace EvilDICOM.Core.IO.Writing
             return new DICOMWriteSettings
             {
                 TransferSyntax = TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN,
-                DoWriteIndefiniteSequences = this.DoWriteIndefiniteSequences
+                DoWriteIndefiniteSequences = DoWriteIndefiniteSequences
             };
         }
     }
