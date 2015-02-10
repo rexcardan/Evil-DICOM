@@ -418,26 +418,6 @@
                 Encapsulates the AttributeTag VR type
             </summary>
         </member>
-        <member name="T:EvilDICOM.Core.Element.Tag">
-            <summary>
-                A small helper class help work set and get the tag ids for DICOM elements.
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.Element.Tag.Group">
-            <summary>
-                The group id of the element
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.Element.Tag.Element">
-            <summary>
-                The element id of the element
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.Element.Tag.CompleteID">
-            <summary>
-                The complete id, containing both the group id GGGG and the element id EEEE as GGGGEEEE
-            </summary>
-        </member>
         <member name="T:EvilDICOM.Core.Element.CodeString">
             <summary>
                 Encapsulates the CodeString VR type
@@ -566,6 +546,26 @@
         <member name="T:EvilDICOM.Core.Element.SignedShort">
             <summary>
                 Encapsulates the SignedShort VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.Tag">
+            <summary>
+                A small helper class help work set and get the tag ids for DICOM elements.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.Tag.Group">
+            <summary>
+                The group id of the element
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.Tag.Element">
+            <summary>
+                The element id of the element
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.Tag.CompleteID">
+            <summary>
+                The complete id, containing both the group id GGGG and the element id EEEE as GGGGEEEE
             </summary>
         </member>
         <member name="T:EvilDICOM.Core.Element.Time">
