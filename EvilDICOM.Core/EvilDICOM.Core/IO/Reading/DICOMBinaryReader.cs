@@ -61,7 +61,7 @@ namespace EvilDICOM.Core.IO.Reading
 
         public void Dispose()
         {
-            _binaryReader.Close();
+            _binaryReader.Dispose();
         }
 
         /// <summary>

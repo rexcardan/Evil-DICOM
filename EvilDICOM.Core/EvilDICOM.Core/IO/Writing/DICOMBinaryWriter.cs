@@ -26,7 +26,7 @@ namespace EvilDICOM.Core.IO.Writing
 
         public void Dispose()
         {
-            _writer.Close();
+            _writer.Dispose();
         }
 
         public void Write(byte b)
