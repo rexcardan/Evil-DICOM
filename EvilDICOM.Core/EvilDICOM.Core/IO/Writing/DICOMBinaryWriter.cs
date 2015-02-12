@@ -46,7 +46,7 @@ namespace EvilDICOM.Core.IO.Writing
 
         public void Write(string chars)
         {
-            char[] asCharArray = chars.ToCharArray(0, chars.Length);
+            char[] asCharArray = chars.ToCharArray();
             Write(asCharArray);
         }
 
