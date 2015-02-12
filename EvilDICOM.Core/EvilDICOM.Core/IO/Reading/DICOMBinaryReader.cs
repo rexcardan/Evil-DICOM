@@ -29,7 +29,7 @@ namespace EvilDICOM.Core.IO.Reading
         {
             _binaryReader = new BinaryReader(
                 new FileStream(filePath, FileMode.Open, FileAccess.Read),
-                new ASCIIEncoding());
+                Encoding.UTF8);
         }
 
         /// <summary>
@@ -39,7 +39,7 @@ namespace EvilDICOM.Core.IO.Reading
         public DICOMBinaryReader(byte[] byteStream)
         {
             _binaryReader = new BinaryReader(new MemoryStream(byteStream),
-                new ASCIIEncoding());
+                Encoding.UTF8);
         }
 
         /// <summary>
