@@ -245,9 +245,8 @@ namespace EvilDICOM.Core
         /// <returns>a list of all elements that meet the search criteria</returns>
         public List<IDICOMElement> FindAll(Tag[] descendingTags)
         {
-            var stringList = new List<string>();
-            descendingTags.ToList().ForEach(t => stringList.Add(t.CompleteID));
-            return FindAll(stringList.ToArray());
+            var strings = descendingTags.Select(t => t.CompleteID).ToArray();
+            return FindAll(strings);
         }
 
         /// <summary>
