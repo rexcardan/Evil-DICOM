@@ -6,7 +6,7 @@ namespace EvilDICOM.Core.Helpers
     {
         public static T StringToEnum<T>(string name)
         {
-            return (T) Enum.Parse(typeof (T), name);
+            return (T) Enum.Parse(typeof (T), name, false);
         }
     }
 }
