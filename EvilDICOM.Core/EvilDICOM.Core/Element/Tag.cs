@@ -63,6 +63,11 @@ namespace EvilDICOM.Core.Element
             return false;
         }
 
+        public override int GetHashCode()
+        {
+            return this.CompleteID.GetHashCode();
+        }
+
         public static bool operator ==(Tag t1, Tag t2)
         {
             if ((object)t1 == null) return false;
