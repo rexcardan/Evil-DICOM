@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.IO;
 using System.Linq;
 using EvilDICOM.Core.Element;
@@ -169,7 +170,7 @@ namespace EvilDICOM.Core
         public List<T> FindAll<T>()
         {
             Type t = typeof (T);
-            return AllElements.Where(el => el is T).Select(el => (T) Convert.ChangeType(el, t)).ToList();
+            return AllElements.Where(el => el is T).Select(el => (T) Convert.ChangeType(el, t, CultureInfo.CurrentCulture)).ToList();
         }
 
         /// <summary>
@@ -244,9 +245,8 @@ namespace EvilDICOM.Core
         /// <returns>a list of all elements that meet the search criteria</returns>
         public List<IDICOMElement> FindAll(Tag[] descendingTags)
         {
-            var stringList = new List<string>();
-            descendingTags.ToList().ForEach(t => stringList.Add(t.CompleteID));
-            return FindAll(stringList.ToArray());
+            var strings = descendingTags.Select(t => t.CompleteID).ToArray();
+            return FindAll(strings);
         }
 
         /// <summary>

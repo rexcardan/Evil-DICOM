@@ -16,17 +16,17 @@ namespace EvilDICOM.Core.IO.Writing
         {
             _writer = new BinaryWriter(
                 File.Open(filePath, FileMode.Create),
-                new ASCIIEncoding());
+                Encoding.UTF8);
         }
 
         public DICOMBinaryWriter(Stream stream)
         {
-            _writer = new BinaryWriter(stream, new ASCIIEncoding());
+            _writer = new BinaryWriter(stream, Encoding.UTF8);
         }
 
         public void Dispose()
         {
-            _writer.Close();
+            _writer.Dispose();
         }
 
         public void Write(byte b)
@@ -46,7 +46,7 @@ namespace EvilDICOM.Core.IO.Writing
 
         public void Write(string chars)
         {
-            char[] asCharArray = chars.ToCharArray(0, chars.Length);
+            char[] asCharArray = chars.ToCharArray();
             Write(asCharArray);
         }
 

@@ -1,5 +1,6 @@
 ﻿using System;
 using EvilDICOM.Core.Enums;
+using EvilDICOM.Core.Logging;
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -9,7 +10,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (data.Length > lengthLimit)
             {
-                Console.Write(
+                EvilLogger.Instance.Log(
                     "Not DICOM compliant. Attempted data input of {0} characters. Data size is limited to {1} characters. Read anyway.",
                     data.Length, lengthLimit);
                 return data;
