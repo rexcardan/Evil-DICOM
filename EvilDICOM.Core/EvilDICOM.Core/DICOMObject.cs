@@ -163,6 +163,40 @@ namespace EvilDICOM.Core
         }
 
         /// <summary>
+        /// Returns elements of a certain tag that are of the unknown VR type (because they are not
+        /// in the DICOM dictionary) and reads them as the specified VR type
+        /// </summary>
+        /// <typeparam name="T">the VR type to read as</typeparam>
+        /// <param name="toFind">the tag of this element</param>
+        /// <returns>the unknown elements strongly typed to T</returns>
+        public List<T> GetUnknownTagAs<T>(Tag toFind) where T: IDICOMElement
+        {
+            return FindAll(toFind)
+              .Select(e => e as Unknown)
+              .Where(u=>u!=null)
+              .Select(u =>
+              {
+                  T t;
+                  var success = u.TryReadAs<T>(out t);
+                  return new { success, t };
+              }).
+              Where(u => u.success)
+             .Select(u => u.t).ToList();
+        }
+
+        /// <summary>
+        /// Returns elements of a certain tag that are of the unknown VR type (because they are not
+        /// in the DICOM dictionary) and reads them as the specified VR type
+        /// </summary>
+        /// <typeparam name="T">the VR type to read as</typeparam>
+        /// <param name="toFind">the tag of this element</param>
+        /// <returns>the unknown elements strongly typed to T</returns>
+        public List<T> GetUnknownTagAs<T>(string toFind) where T : IDICOMElement
+        {
+            return GetUnknownTagAs<T>(new Tag(toFind));
+        }
+
+        /// <summary>
         ///     Finds all DICOM elements that match an element type
         /// </summary>
         /// <typeparam name="T">the DICOM element class that is being filtered and returned</typeparam>

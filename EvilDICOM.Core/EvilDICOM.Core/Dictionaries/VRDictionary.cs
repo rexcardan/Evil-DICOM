@@ -160,6 +160,16 @@ namespace EvilDICOM.Core.Dictionaries
         }
 
         /// <summary>
+        ///     Finds the VR enum from a specific DICOM element type.
+        /// </summary>
+        /// <param name="el">the DICOM element</param>
+        /// <returns>the VR type</returns>
+        public static VR GetVRFromType(Type t)
+        {
+            return EnumHelper.StringToEnum<VR>(t.Name);
+        }
+
+        /// <summary>
         ///     Finds the VR enum from a specific DICOM element.
         /// </summary>
         /// <param name="el">the DICOM element</param>
@@ -167,6 +177,17 @@ namespace EvilDICOM.Core.Dictionaries
         public static string GetAbbreviationFromType(IDICOMElement el)
         {
             Type t = el.GetType();
+            var vr = EnumHelper.StringToEnum<VR>(t.Name);
+            return GetAbbreviationFromVR(vr);
+        }
+
+        /// <summary>
+        ///     Finds the VR enum from a specific DICOM element.
+        /// </summary>
+        /// <param name="el">the DICOM element</param>
+        /// <returns>the VR abbreviation</returns>
+        public static string GetAbbreviationFromType(Type t)
+        {
             var vr = EnumHelper.StringToEnum<VR>(t.Name);
             return GetAbbreviationFromVR(vr);
         }

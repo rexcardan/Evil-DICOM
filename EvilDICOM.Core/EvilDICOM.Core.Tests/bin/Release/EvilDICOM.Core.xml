@@ -106,6 +106,24 @@
             <param name="vrToFind">the VR type to find</param>
             <returns>a list of all elements that meet the search criteria</returns>
         </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.GetUnknownTagAs``1(EvilDICOM.Core.Element.Tag)">
+            <summary>
+            Returns elements of a certain tag that are of the unknown VR type (because they are not
+            in the DICOM dictionary) and reads them as the specified VR type
+            </summary>
+            <typeparam name="T">the VR type to read as</typeparam>
+            <param name="toFind">the tag of this element</param>
+            <returns>the unknown elements strongly typed to T</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.GetUnknownTagAs``1(System.String)">
+            <summary>
+            Returns elements of a certain tag that are of the unknown VR type (because they are not
+            in the DICOM dictionary) and reads them as the specified VR type
+            </summary>
+            <typeparam name="T">the VR type to read as</typeparam>
+            <param name="toFind">the tag of this element</param>
+            <returns>the unknown elements strongly typed to T</returns>
+        </member>
         <member name="M:EvilDICOM.Core.DICOMObject.FindAll``1">
             <summary>
                 Finds all DICOM elements that match an element type
@@ -259,6 +277,14 @@
             <param name="tag">the tag containing the id to find in the dictionary</param>
             <returns></returns>
         </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.TagDictionary.AddEntry``1(System.String,System.String)">
+            <summary>
+            Adds an entry to the DICOM Dictionary for reading files
+            </summary>
+            <typeparam name="T">the type of VR to add</typeparam>
+            <param name="id">the tag id of the element</param>
+            <param name="description">the description of the element</param>
+        </member>
         <member name="M:EvilDICOM.Core.Dictionaries.TagDictionary.GetDescription(System.String)">
             <summary>
                 Gets the description of the tag
@@ -301,7 +327,21 @@
             <param name="el">the DICOM element</param>
             <returns>the VR type</returns>
         </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromType(System.Type)">
+            <summary>
+                Finds the VR enum from a specific DICOM element type.
+            </summary>
+            <param name="el">the DICOM element</param>
+            <returns>the VR type</returns>
+        </member>
         <member name="M:EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(EvilDICOM.Core.Interfaces.IDICOMElement)">
+            <summary>
+                Finds the VR enum from a specific DICOM element.
+            </summary>
+            <param name="el">the DICOM element</param>
+            <returns>the VR abbreviation</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(System.Type)">
             <summary>
                 Finds the VR enum from a specific DICOM element.
             </summary>
@@ -586,6 +626,20 @@
         <member name="T:EvilDICOM.Core.Element.Unknown">
             <summary>
                 Encapsulates the Unknown VR type
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.Unknown.TryReadAs``1(``0@)">
+            <summary>
+            Method used to read out unknown VR types (not in the dictionary). 
+            </summary>
+            <typeparam name="T">the type of value to try to read out</typeparam>
+            <param name="outValue">the value read</param>
+            <param name="tx">the transfer syntax to try (default is Implicit little endian)</param>
+            <returns>whether or not the read was successfull</returns>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.Unknown.TransferSyntax">
+            <summary>
+            Used in the try read as method
             </summary>
         </member>
         <member name="T:EvilDICOM.Core.Element.UnlimitedText">

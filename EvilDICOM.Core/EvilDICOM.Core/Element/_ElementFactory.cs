@@ -93,7 +93,9 @@ namespace EvilDICOM.Core.Element
                 case VR.OtherWordString:
                     return new OtherWordString(tag, data as byte[]);
                 default:
-                    return new Unknown(tag, data as byte[]);
+                    var unk = new Unknown(tag, data as byte[]);
+                    unk.TransferSyntax = syntax;
+                    return unk;
             }
         }
 
