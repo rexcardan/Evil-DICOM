@@ -1,7 +1,7 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
-using Microsoft.CSharp.RuntimeBinder;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace EvilDICOM.Core.Tests
@@ -69,13 +69,13 @@ namespace EvilDICOM.Core.Tests
             CollectionAssert.AreEqual(expected, actual);
         }
 
-        [TestMethod, ExpectedException(typeof(RuntimeBinderException))]
+        [TestMethod, ExpectedException(typeof(InvalidCastException))]
         public void DData_Setter_InvalidUnderlyingType_Throws()
         {
             _decimalString.DData = "throw";
         }
 
-        [TestMethod, ExpectedException(typeof(RuntimeBinderException))]
+        [TestMethod, ExpectedException(typeof(InvalidCastException))]
         public void DData__Setter_InvalidUnderlyingType_Throws()
         {
             _decimalString.DData_ = new List<char> { 't' , 'h', 'r', 'o', 'w' };
