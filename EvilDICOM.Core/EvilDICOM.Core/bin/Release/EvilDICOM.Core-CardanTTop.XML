@@ -1,0 +1,1219 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>EvilDICOM.Core</name>
+    </assembly>
+    <members>
+        <member name="T:EvilDICOM.Core.DICOMData`1">
+            <summary>
+                A class to hold DICOM data. DICOM data is unique in that it can be a single value, multiple values and null. This
+                class tries to encapsulate those attributes while maintaining a flexible programming interface.
+            </summary>
+            <typeparam name="T"></typeparam>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMData`1.#ctor">
+            <summary>
+                The constructor which ininitializes the underlying enumerable collection
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMData`1.CreateFromSingle(`0)">
+            <summary>
+                Creates a new DICOM Data object from a single data value
+            </summary>
+            <param name="dataValue">the data value from which to initialize the DICOM Data object</param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMData`1.CreateFromArray(`0[])">
+            <summary>
+                Creates a new DICOM Data object from an array of data
+            </summary>
+            <param name="dataArray">the data array from which to initialize the DICOM Data object</param>
+            <returns></returns>
+        </member>
+        <member name="P:EvilDICOM.Core.DICOMData`1.SingleValue">
+            <summary>
+                Gets and sets a single value for the data of the DICOM element. If the collection contains has more than one data
+                element, only the first is returned. If setting a value, the data is cleared and only a single entry is saved.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.DICOMData`1.MultipicityValue">
+            <summary>
+                A list of the data within the element. This is designed to be accomodate the multiplicity aspect of DICOM data
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.DICOMForge">
+            <summary>
+            Class for creating strongly typed elements on the fly
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.DICOMObject">
+            <summary>
+                The DICOM object is a container for DICOM elements. It contains methods for finding elements easily from within the
+                structure.
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.#ctor">
+            <summary>
+                Constructor no parameters
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.#ctor(System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement})">
+            <summary>
+                Contructor with elements
+            </summary>
+            <param name="elements">a list of elements to be included in the object</param>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.Add(EvilDICOM.Core.Interfaces.IDICOMElement)">
+            <summary>
+                Adds an element to the DICOM object
+            </summary>
+            <param name="el">a DICOM element to be added</param>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.TryGetDataValue``1(EvilDICOM.Core.Element.Tag,System.Object)">
+            <summary>
+                Searches for a specific element. If it is found, it returns the data from the element. Otherwise,
+                it will return a provided default value for the element.
+            </summary>
+            <typeparam name="T">the type of data to return</typeparam>
+            <param name="tagToFind">the tag of the element containing the data</param>
+            <param name="defaultValueIfNull">the default value to return if the element is not found</param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.TrySetDataValue``1(EvilDICOM.Core.Element.Tag,``0)">
+            <summary>
+                Searches for a specific element (first instance). If it is found, it sets the data for this element and returns
+                true, otherwise returns false;
+            </summary>
+            <typeparam name="T">the type of data to return</typeparam>
+            <param name="tagToFind">the tag of the element containing the data</param>
+            <param name="data">the data to set in this element</param>
+            <returns>a boolean indicating whether or not the operation was successful</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.TrySetDataValue``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})">
+            <summary>
+                Searches for a specific element (first instance). If it is found, it sets the data for this element and returns
+                true, otherwise returns false;
+            </summary>
+            <typeparam name="T">the type of data to return</typeparam>
+            <param name="tagToFind">the tag of the element containing the data</param>
+            <param name="data">the data to set in this element</param>
+            <returns>a boolean indicating whether or not the operation was successful</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Enums.VR)">
+            <summary>
+                Finds all DICOM elements that match a VR type
+            </summary>
+            <param name="vrToFind">the VR type to find</param>
+            <returns>a list of all elements that meet the search criteria</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.GetUnknownTagAs``1(EvilDICOM.Core.Element.Tag)">
+            <summary>
+            Returns elements of a certain tag that are of the unknown VR type (because they are not
+            in the DICOM dictionary) and reads them as the specified VR type
+            </summary>
+            <typeparam name="T">the VR type to read as</typeparam>
+            <param name="toFind">the tag of this element</param>
+            <returns>the unknown elements strongly typed to T</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.GetUnknownTagAs``1(System.String)">
+            <summary>
+            Returns elements of a certain tag that are of the unknown VR type (because they are not
+            in the DICOM dictionary) and reads them as the specified VR type
+            </summary>
+            <typeparam name="T">the VR type to read as</typeparam>
+            <param name="toFind">the tag of this element</param>
+            <returns>the unknown elements strongly typed to T</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.FindAll``1">
+            <summary>
+                Finds all DICOM elements that match an element type
+            </summary>
+            <typeparam name="T">the DICOM element class that is being filtered and returned</typeparam>
+            <returns>a list of all elements that are strongly typed</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.FindAll(System.String)">
+            <summary>
+                Finds all DICOM elements that match a certain tag
+            </summary>
+            <param name="tag">the tag to find</param>
+            <returns>a list of all elements that meet the search criteria</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Element.Tag)">
+            <summary>
+                Finds all DICOM elements that match a certain tag
+            </summary>
+            <param name="tag">the tag to find</param>
+            <returns>a list of all elements that meet the search criteria</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.FindAll(System.String[])">
+            <summary>
+                Finds all DICOM elements that are embedded in the DICOM structure in some particular location. This location
+                is defined by descending tags from the outer most elements to the element. It is not necessary to include every
+                tag in the descending "treelike" structure. Branches can be skipped.
+            </summary>
+            <param name="descendingTags">
+                a string array containing in order the tags from the outer most elements to the element
+                being searched for
+            </param>
+            <returns>a list of all elements that meet the search criteria</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Element.Tag[])">
+            <summary>
+                Finds all DICOM elements that are embedded in the DICOM structure in some particular location. This location
+                is defined by descending tags from the outer most elements to the element. It is not necessary to include every
+                tag in the descending "treelike" structure. Branches can be skipped.
+            </summary>
+            <param name="descendingTags">
+                a tag array containing in order the tags from the outer most elements to the element being
+                searched for
+            </param>
+            <returns>a list of all elements that meet the search criteria</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.FindFirst(System.String)">
+            <summary>
+                Finds the first element in the entire DICOM structure that has a certain tag
+            </summary>
+            <param name="toFind">the tag to be searched</param>
+            <returns>one single DICOM element that is first occurence of the tag in the structure</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.FindFirst(EvilDICOM.Core.Element.Tag)">
+            <summary>
+                Finds the first element in the entire DICOM structure that has a certain tag
+            </summary>
+            <param name="toFind">the tag to be searched</param>
+            <returns>one single DICOM element that is first occurence of the tag in the structure</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.Remove(System.String)">
+            <summary>
+                Removes the element with the tag from the DICOM object
+            </summary>
+            <param name="tag">the tag string in the form of GGGGEEEE to be removed</param>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.Remove(EvilDICOM.Core.Element.Tag)">
+            <summary>
+                Removes the element with the tag from the DICOM object
+            </summary>
+            <param name="tag">the tag of the element to be removed</param>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.Replace``1(EvilDICOM.Core.Element.AbstractElement{``0})">
+            <summary>
+                Replaces a current instance of the DICOM element in the DICOM object. If the object does not exist, this method
+                exits. For this scenario, please use ReplaceOrAdd().
+            </summary>
+            <typeparam name="T">the type of the data the element holds (eg. double[], int, DataTime, etc)</typeparam>
+            <param name="element">the instance of the element</param>
+            <returns>bool indicating whether or not the element was replaced</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Interfaces.IDICOMElement)">
+            <summary>
+                Replaces the underlying DICOM element with input DICOM element of the same tag
+            </summary>
+            <param name="el">the new DICOM element</param>
+            <returns>whether or not the operation was successful</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.ReplaceOrAdd``1(EvilDICOM.Core.Element.AbstractElement{``0})">
+            <summary>
+                Replaces a current instance of the DICOM element in the DICOM object. If the object does not exist, this method
+                will add it to the object.
+            </summary>
+            <typeparam name="T">the type of the data the element holds (eg. double[], int, DataTime, etc)</typeparam>
+            <param name="element">the instance of the element</param>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.Read(System.String,EvilDICOM.Core.Enums.TransferSyntax)">
+            <summary>
+                Reads a DICOM file from a path
+            </summary>
+            <param name="filePath">the path to the file</param>
+            <param name="trySyntax">the transfer syntax to use in case there is no metadata explicitly included</param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.Read(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)">
+            <summary>
+                Reads a DICOM file from a byte array
+            </summary>
+            <param name="file">the bytes of the DICOM file</param>
+            <param name="trySyntax">the transfer syntax to use in case there is no metadata explicitly included</param>
+            <returns></returns>
+        </member>
+        <member name="P:EvilDICOM.Core.DICOMObject.Elements">
+            <summary>
+                The list of first level DICOM elements inside this DICOM object
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.DICOMObject.AllElements">
+            <summary>
+                The list of all DICOM elements at every level in the DICOM structure (includes sub-elements of sequences)
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.DICOMObject.PixelStream">
+            <summary>
+                Grabs the pixel data bytes and sends it as a stream. Returns null if no pixel data element is found.
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)">
+            <summary>
+                Wraps a DICOM sequence with a type that inherits from DICOMObjectWrapper
+            </summary>
+            <typeparam name="T">the wrapping class for the DICOM objects within the sequence</typeparam>
+            <param name="tag">the DICOM tag of the sequence which contains the objects to wrap</param>
+            <returns>a list of wrapped DICOM objects</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})">
+            <summary>
+                Extracts the DICOMObjects out of a list of DICOMObjectWrappers and sets these as the new values in the sequence
+            </summary>
+            <param name="tag">the DICOM tag of the sequence where to place the newly extracted objects</param>
+            <param name="value">the list of wrapped DICOMObjects to go in the sequence</param>
+        </member>
+        <member name="T:EvilDICOM.Core.Dictionaries.TagDictionary">
+            <summary>
+                The class is used to look up tags in a dictionary for relevant information such as vr type.
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.TagDictionary.GetVRFromTag(EvilDICOM.Core.Element.Tag)">
+            <summary>
+                Finds the appropriate VR for a given tag by looking up the tag in a DICOM dictionary
+            </summary>
+            <param name="tag">the tag containing the id to find in the dictionary</param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.TagDictionary.AddEntry``1(System.String,System.String)">
+            <summary>
+            Adds an entry to the DICOM Dictionary for reading files
+            </summary>
+            <typeparam name="T">the type of VR to add</typeparam>
+            <param name="id">the tag id of the element</param>
+            <param name="description">the description of the element</param>
+        </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.TagDictionary.GetDescription(System.String)">
+            <summary>
+                Gets the description of the tag
+            </summary>
+            <param name="tag">the tag containing the id</param>
+            <returns>a string description of the tag in camel case</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.TagDictionary.GetDescription(EvilDICOM.Core.Element.Tag)">
+            <summary>
+                Gets the description of the tag
+            </summary>
+            <param name="tag">the tag containing the id</param>
+            <returns>a string description of the tag in camel case</returns>
+        </member>
+        <member name="T:EvilDICOM.Core.Dictionaries.VRDictionary">
+            <summary>
+                General purpose class for working with VRs. It contains methods to convert ASCII string abbreviations into VR type,
+                the reverse,
+                and a few more useful methods when working with VR enums.
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromAbbreviation(System.String)">
+            <summary>
+                Finds the VR type from an DICOM two letter abbreviation.
+            </summary>
+            <param name="vrAbbreviation">an DICOM two letter abbreviation</param>
+            <returns>the VR type</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromVR(EvilDICOM.Core.Enums.VR)">
+            <summary>
+                Creates the DICOM two letter abbreviation from a VR type.
+            </summary>
+            <param name="vr">the VR type</param>
+            <returns>the DICOM two letter abbreviation</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromType(EvilDICOM.Core.Interfaces.IDICOMElement)">
+            <summary>
+                Finds the VR enum from a specific DICOM element.
+            </summary>
+            <param name="el">the DICOM element</param>
+            <returns>the VR type</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromType(System.Type)">
+            <summary>
+                Finds the VR enum from a specific DICOM element type.
+            </summary>
+            <param name="el">the DICOM element</param>
+            <returns>the VR type</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(EvilDICOM.Core.Interfaces.IDICOMElement)">
+            <summary>
+                Finds the VR enum from a specific DICOM element.
+            </summary>
+            <param name="el">the DICOM element</param>
+            <returns>the VR abbreviation</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(System.Type)">
+            <summary>
+                Finds the VR enum from a specific DICOM element.
+            </summary>
+            <param name="el">the DICOM element</param>
+            <returns>the VR abbreviation</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Dictionaries.VRDictionary.GetEncodingFromVR(EvilDICOM.Core.Enums.VR)">
+            <summary>
+                Determines the encoding, meaning how many bytes to write the VR and length parameters, from a VR type.
+                Options are explicit long (8 bytes), explicit short (4 bytes), or implicit (4 bytes). In Evil DICOM, the null
+                VR is used to represent an unknown VR (before dictionary lookup) that is implicitly encoded.
+            </summary>
+            <param name="vr">the VR type</param>
+            <returns>the encoding method for this type</returns>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.AbstractElement`1">
+            <summary>
+                The overarching abstract class from which all DICOM element classes derive. Contains properties that are common to
+                elements.
+            </summary>
+            <typeparam name="T">the data type of the element</typeparam>
+        </member>
+        <member name="P:EvilDICOM.Core.Interfaces.IDICOMElement.DData">
+            <summary>
+                The dynamic single value data in the element of the first datum in the array (in the case of multiple datum)
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Interfaces.IDICOMElement.DData_">
+            <summary>
+                The dynamic data in the element stored in a list of type T
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.ToString">
+            <summary>
+                To string override to visualize tag and vr of element
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)">
+            <summary>
+                Plumbing method wrap the data in a DICOMData container
+            </summary>
+            <param name="value">the typed data</param>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])">
+            <summary>
+                Plumbing method wrap the data in a DICOMData container
+            </summary>
+            <param name="value">the array of typed data</param>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault">
+            <summary>
+                Plumbing method to get data from the underlying DICOMData object
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.AbstractElement`1.VR">
+            <summary>
+                The value representation of the element
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.AbstractElement`1.DataContainer">
+            <summary>
+                The data of type T of the element
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.AbstractElement`1.Data">
+            <summary>
+                The data of the element
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.AbstractElement`1.Data_">
+            <summary>
+                The data of the element as a list (for multiple data)
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.AbstractElement`1.Tag">
+            <summary>
+                The tag of the element
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.AbstractElement`1.DatType">
+            <summary>
+                The clr type of the contained data
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.AbstractElement`1.DData">
+            <summary>
+                The non-typed data that can be accessed in a dynamic context
+            </summary>
+        </member>
+        <!-- Badly formed XML comment ignored for member "P:EvilDICOM.Core.Element.AbstractElement`1.DData_" -->
+        <member name="T:EvilDICOM.Core.Element.AgeString">
+            <summary>
+                Encapsulates the AgeString VR type
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.AgeString.Age">
+            <summary>
+                The age stored in the element. Supplements the data property.
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.Age">
+            <summary>
+                A small class to help manipulate the age in the AgeString class
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.ApplicationEntity">
+            <summary>
+                Encapsulates the ApplicationEntity VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.AttributeTag">
+            <summary>
+                Encapsulates the AttributeTag VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.CodeString">
+            <summary>
+                Encapsulates the CodeString VR type
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.CodeString.Data">
+            <summary>
+                Data is overriden to enforce length restriction
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.Date">
+            <summary>
+                Encapsulates the Date VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.DateTime">
+            <summary>
+                Encapsulates the DateTime VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.DecimalString">
+            <summary>
+                Encapsulates the DecimalString VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.FloatingPointDouble">
+            <summary>
+                Encapsulates the FloatingPointDouble VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.FloatingPointSingle">
+            <summary>
+                Encapsulates the FloatingPointSingle VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.IntegerString">
+            <summary>
+                Encapsulates the IntegerString VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.LongString">
+            <summary>
+                Encapsulates the LongString VR type
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.LongString.Data">
+            <summary>
+                Data overriden for enforcing length restriction
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.LongText">
+            <summary>
+                Encapsulates the LongText VR type
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.LongText.Data">
+            <summary>
+                Data overriden for enforcing length restriction
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.OtherByteString">
+            <summary>
+                Encapsulates the OtherByteString VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.OtherFloatString">
+            <summary>
+                Encapsulates the OtherFloatString VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.OtherWordString">
+            <summary>
+                Encapsulates the OtherWordString VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.PersonName">
+            <summary>
+                Encapsulates the PersonName VR type
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.PersonName.FirstName">
+            <summary>
+                A property to help get and set the first name of the person name string.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.PersonName.MiddleName">
+            <summary>
+                A property to help get and set the middle name of the person name string.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.PersonName.LastName">
+            <summary>
+                A property to help get and set the last name of the person name string.
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.Sequence">
+            <summary>
+                Encapsulates the Sequence VR type
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.Sequence.Items">
+            <summary>
+                Alternate property name for data (with a clearer name)
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.ShortString.Data">
+            <summary>
+                Data is overriden to enforce length restriction
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.ShortText">
+            <summary>
+                Encapsulates the ShortText VR type
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.ShortText.Data">
+            <summary>
+                Data is overriden to enforce length restriction
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.SignedLong">
+            <summary>
+                Encapsulates the SignedLong VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.SignedShort">
+            <summary>
+                Encapsulates the SignedShort VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.Tag">
+            <summary>
+                A small helper class help work set and get the tag ids for DICOM elements.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.Tag.Group">
+            <summary>
+                The group id of the element
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.Tag.Element">
+            <summary>
+                The element id of the element
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.Tag.CompleteID">
+            <summary>
+                The complete id, containing both the group id GGGG and the element id EEEE as GGGGEEEE
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.Time">
+            <summary>
+                Encapsulates the Time VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.UniqueIdentifier">
+            <summary>
+                Encapsulates the UniqueIdentifier VR type
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.UniqueIdentifier.Data">
+            <summary>
+                Data is overriden to enforce length restriction
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.Unknown">
+            <summary>
+                Encapsulates the Unknown VR type
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.Unknown.TryReadAs``1(``0@)">
+            <summary>
+            Method used to read out unknown VR types (not in the dictionary). 
+            </summary>
+            <typeparam name="T">the type of value to try to read out</typeparam>
+            <param name="outValue">the value read</param>
+            <param name="tx">the transfer syntax to try (default is Implicit little endian)</param>
+            <returns>whether or not the read was successfull</returns>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.Unknown.TransferSyntax">
+            <summary>
+            Used in the try read as method
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.UnlimitedText">
+            <summary>
+                Encapsulates the UnlimitedText VR type
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.UnlimitedText.Data">
+            <summary>
+                Data is overriden to enforce length restriction
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.UnsignedLong">
+            <summary>
+                Encapsulates the UnsignedLong VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.UnsignedShort">
+            <summary>
+                Encapsulates the UnsignedShort VR type
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Element.ElementFactory">
+            <summary>
+                Responsible for building concrete elements from element pieces
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.ElementFactory.GenerateElement(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Enums.VR,System.Object,EvilDICOM.Core.Enums.TransferSyntax)">
+            <summary>
+                Generates a concrete element class from the VR, tag, data and syntax. Also directs the appropriate data
+                interpretation.
+            </summary>
+            <param name="tag">the tag of the element to be generated</param>
+            <param name="vr">the VR of the element to be generated</param>
+            <param name="data">the raw data to be procesed (byte array)</param>
+            <param name="syntax">the transfer syntax by which to interepret the data</param>
+            <returns>a concrete DICOM element that uses the interface IDICOMElement</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.ElementFactory.ReadString(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.Element.Tag,System.Object)">
+            <summary>
+                Reads string data and creates the appropriate DICOM element
+            </summary>
+            <param name="data">the string data as an object (fresh from the DICOM reader)</param>
+            <param name="vr">the VR of the element to be generated</param>
+            <returns>a concrete DICOM element that uses the interface IDICOMElement</returns>
+        </member>
+        <member name="T:EvilDICOM.Core.Enums.TransferSyntax">
+            <summary>
+                An enum representing the transfer syntax of a given DICOM file.
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Enums.VR">
+            <summary>
+                An enum that contains all of the possible DICOM VR types.
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Enums.VREncoding">
+            <summary>
+                An enum that contains the different types of VR encoding in DICOM
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Extensions.ByteExtensions">
+            <summary>
+                Adds useful methods to the byte and byte[] data types
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.Extensions.ByteExtensions.GetBit(System.Byte,System.Int32)">
+            <summary>
+                Gets a specific bit in a byte
+            </summary>
+            <param name="b">the byte containing the bit</param>
+            <param name="bitNumber">the index of the bit within the byte (zero index based)</param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Extensions.ByteExtensions.Append(System.Byte[],System.Byte[])">
+            <summary>
+                Appends a byte array to another byte array
+            </summary>
+            <param name="first">the first byte array</param>
+            <param name="toAppend">the second byte array which will be appended to the first</param>
+            <returns>the finished appended byte array</returns>
+        </member>
+        <member name="T:EvilDICOM.Core.Extensions.IDICOMElementExtensions">
+            <summary>
+                Adds useful methods to the IDICOMElement interface
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.Extensions.IDICOMElementExtensions.IsVR(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.VR)">
+            <summary>
+                Checks to see if a certain IDICOMElement is of a given VR type
+            </summary>
+            <param name="elem">the DICOM element in question</param>
+            <param name="vr">the VR type to test the DICOM element</param>
+            <returns>a boolean indicating whether or not the DICOM element is of a given VR type</returns>
+        </member>
+        <member name="T:EvilDICOM.Core.Extensions.IDICOMElementListExtensions">
+            <summary>
+                Adds useful methods to a List of IDICOMElements
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.Extensions.IDICOMElementListExtensions.SortByTagID(System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement})">
+            <summary>
+                Sorts the list of elements such that the lowest Tag CompleteID is first (for DICOM compliance)
+            </summary>
+            <param name="elements"></param>
+        </member>
+        <member name="T:EvilDICOM.Core.Extensions.StringExtensions">
+            <summary>
+                Adds useful methods to the string object
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.Extensions.StringExtensions.ToUpperUnderscore(System.String)">
+            <summary>
+                Changes a camel case string to uppercase with underscore between the words
+            </summary>
+            <param name="camelCase">the camel case string</param>
+            <returns>the uppercase with understore separator string</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.ArrayHelper.AreEqual``1(``0[],``0[])">
+            <summary>
+                A method that compares each object in two arrays to see if the arrays are equal
+            </summary>
+            <typeparam name="T">the class type of the array</typeparam>
+            <param name="array1">the first array to be compared</param>
+            <param name="array2">the second array to be compared</param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.ByteHelper.ByteArrayToHexString(System.Byte[])">
+            <summary>
+                This method converts an array of bytes to a hexadecimal string
+            </summary>
+            <param name="Bytes">the array of bytes to be converted</param>
+            <returns>a hexadecimal string representing the array of bytes passed in</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.ByteHelper.ByteToHexString(System.Byte)">
+            <summary>
+                This method converts an array of bytes to a hexadecimal string
+            </summary>
+            <param name="Bytes">the array of bytes to be converted</param>
+            <returns>a hexadecimal string representing the array of bytes passed in</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.ByteHelper.HexStringToByteArray(System.String)">
+            <summary>
+                This method converts a hexadecimal string to an array of bytes.
+            </summary>
+            <param name="hexString">the hexadecimal string to be converted</param>
+            <returns>an array of bytes representing the hexadecimal string passed in</returns>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.IMPLICIT_VR_LITTLE_ENDIAN">
+            <summary>
+                Unique ID that represents an implicit VR with little endian encoding
+            </summary>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.EXPLICIT_VR_LITTLE_ENDIAN">
+            <summary>
+                Unique ID that represents an explicit VR with little endian encoding
+            </summary>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.EXPLICIT_VR_BIG_ENDIAN">
+            <summary>
+                Unique ID that represents an explicit VR with big endian encoding
+            </summary>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.RLE_LOSSLESS">
+            <summary>
+                Unique ID that represents RLE lossless image encoding
+            </summary>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.JPEG_BASELINE">
+            <summary>
+                Unique ID that represents JPEG baseline image encoding
+            </summary>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.JPEG_EXTENDED">
+            <summary>
+                Unique ID that represents JPEG Extended image encoding
+            </summary>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.JPEG_PROGRESSIVE">
+            <summary>
+                Unique ID that represents JPEG Progressive image encoding
+            </summary>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.JPEG_LOSSLESS_14">
+            <summary>
+                Unique ID that represents JPEG lossless (Process 14) image encoding
+            </summary>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.JPEG_LOSSLESS_15">
+            <summary>
+                Unique ID that represents JPEG lossless (Process 15) image encoding
+            </summary>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.JPEG_LOSSLESS_14_S1">
+            <summary>
+                Unique ID that represents JPEG lossless (Process 14 Selection Value 1) image encoding
+            </summary>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.JPEG_LS_LOSSLESS">
+            <summary>
+                Unique ID that represents JPEG-LS lossless image encoding
+            </summary>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.JPEG_LS_NEAR_LOSSLESS">
+            <summary>
+                Unique ID that represents JPEG-LS near lossless image encoding
+            </summary>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.JPEG_2000_LOSSLESS">
+            <summary>
+                Unique ID that represents JPEG 2000 lossless image encoding
+            </summary>
+        </member>
+        <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.JPEG_2000">
+            <summary>
+                Unique ID that represents JPEG 2000 image encoding
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.TransferSyntaxHelper.GetSyntax(EvilDICOM.Core.Interfaces.IDICOMElement)">
+            <summary>
+                Converts the string in the Transfer syntax element to the transfer syntax enum for reading the file
+            </summary>
+            <param name="el">the transfer syntax element</param>
+            <returns>the transfer syntax in enum format</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.TransferSyntaxHelper.GetSyntax(System.String)">
+            <summary>
+                Converts the string to the transfer syntax enum for reading the file
+            </summary>
+            <param name="el">the transfer syntax element</param>
+            <returns>the transfer syntax in enum format</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.TransferSyntaxHelper.SetSyntax(EvilDICOM.Core.DICOMObject,EvilDICOM.Core.Enums.TransferSyntax)">
+            <summary>
+                Sets the transfer syntax of the DICOM object. The purpose of this is to go from an enum to a string.
+            </summary>
+            <param name="dicom">the DICOM object to set syntax</param>
+            <param name="selector">the transfer syntax to set</param>
+        </member>
+        <member name="T:EvilDICOM.Core.Interfaces.IEncoderDecoder">
+            <summary>
+                Contains inteface methods to decode and encode
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Data.DataPadder.PadNull(System.Byte[])">
+            <summary>
+                Pads null bytes around the data to make it even
+            </summary>
+            <param name="toPad"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Data.DataPadder.PadSpace(System.Byte[])">
+            <summary>
+                Pads a space character around the data to make it even
+            </summary>
+            <param name="toPad"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Data.DataPadder.IsEven(System.Byte[])">
+            <summary>
+                Checks to see if the data is an even number of bytes
+            </summary>
+            <param name="toPad"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EvilDICOM.Core.IO.Data.MultiplicityReader">
+            <summary>
+                Helps read DICOM data with VM > 1
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Data.MultiplicityReader.ReadMultipleBinary``1(System.Byte[],System.Int32,System.Func{System.Byte[],``0})">
+            <summary>
+                Reads binary data that has been concated with no delimiter. Returns an array of each instance of data in the
+                concated bytes.
+            </summary>
+            <typeparam name="T">the type of data in the bytes</typeparam>
+            <param name="data">the concated data (also accepts data with no concation)</param>
+            <param name="singleLength">the length in bytes of each data item</param>
+            <param name="readSingleFunc">the function to use to parse each data element in the concated bytes</param>
+            <returns>an array of each data instance</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Data.MultiplicityComposer.ComposeMultipleBinary``1(EvilDICOM.Core.DICOMData{``0},System.Func{``0,System.Byte[]})">
+            <summary>
+                Writes the multiple binary data objects as one string of bytes
+            </summary>
+            <typeparam name="T">the type of data</typeparam>
+            <param name="data">the data to be converted to binary</param>
+            <param name="writeSingleFunc">the function that can convert a single data item into bytes</param>
+            <returns>the concated array of bytes that contains all data items</returns>
+        </member>
+        <member name="T:EvilDICOM.Core.IO.Reading.DataReader">
+            <summary>
+                Reads the byte data from a DICOM element
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DataReader.ReadLittleEndian(System.Int32,EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)">
+            <summary>
+                Reads the data from an element encoded in little endian byte order
+            </summary>
+            <param name="lengthToRead">the length of the data</param>
+            <param name="dr">the binary reader which is reading the DICOM object</param>
+            <returns>the data from this element</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DataReader.ReadBigEndian(System.Int32,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)">
+            <summary>
+                Reads the data from an element encoded in big endian byte order
+            </summary>
+            <param name="lengthToRead">the length of the data</param>
+            <param name="dr">the binary reader which is reading the DICOM object</param>
+            <returns>the data from this element</returns>
+        </member>
+        <member name="T:EvilDICOM.Core.IO.Reading.DICOMBinaryReader">
+            <summary>
+                A wrapper for the Binary Reader class that is specific to DICOM.
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor(System.String)">
+            <summary>
+                Constructs a new reader from a file path.
+            </summary>
+            <param name="filePath">path to the file to be read</param>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor(System.Byte[])">
+            <summary>
+                Constructs a new reader from a byte array.
+            </summary>
+            <param name="byteStream">the byte array to be read</param>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes(System.Int32)">
+            <summary>
+                Reads the specified number of bytes
+            </summary>
+            <param name="count">the number of bytes to be read</param>
+            <returns>the read bytes</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Take(System.Int32)">
+            <summary>
+                Reads the specified number of bytes (shorthand for ReadBytes method).
+            </summary>
+            <param name="count">the number of bytes to be read</param>
+            <returns>the read bytes</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.GetSubStream(System.Int32)">
+            <summary>
+                Creates a new stream that is trimmed to the specification length.
+            </summary>
+            <param name="substreamLength">the number of bytes to include in the new stream (starting from the current position)</param>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadChars(System.Int32)">
+            <summary>
+                Reads the specified number of chars
+            </summary>
+            <param name="count">the number of chars to be read</param>
+            <returns>the read chars</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadString(System.Int32)">
+            <summary>
+                Reads the specified number of chars and converts to a string
+            </summary>
+            <param name="count">the number of chars to be read</param>
+            <returns>the read chars</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.IndexOf(System.Byte[])">
+            <summary>
+                Will return the index of a given byte pattern in the byte stream
+            </summary>
+            <param name="bytePattern">the pattern to be found</param>
+            <returns>the index of the pattern</returns>
+        </member>
+        <member name="P:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamPosition">
+            <summary>
+                Returns the current position of the byte stream
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamLength">
+            <summary>
+                Returnts the length of the byte stream
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.IO.Reading.DICOMElementReader">
+            <summary>
+                Reads in DICOM elements from a DICOM object
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadElementExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)">
+            <summary>
+                Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
+            </summary>
+            <param name="dr">the binary reader which is reading the DICOM object</param>
+            <returns>the next DICOM element</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadElementImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)">
+            <summary>
+                Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
+            </summary>
+            <param name="dr">the binary reader which is reading the DICOM object</param>
+            <returns>the next DICOM element</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadElementExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)">
+            <summary>
+                Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
+            </summary>
+            <param name="dr">the binary reader which is reading the DICOM object</param>
+            <returns>the next DICOM element</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElementsImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)">
+            <summary>
+                Reads and returns all elements in implicit little endian format
+            </summary>
+            <param name="dr">the binary reader which is reading the DICOM object</param>
+            <returns>DICOM elements read</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElementsExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)">
+            <summary>
+                Reads and returns all elements in explicit big endian format
+            </summary>
+            <param name="dr">the binary reader which is reading the DICOM object</param>
+            <returns>DICOM elements read</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElementsExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)">
+            <summary>
+                Reads and returns all elements in explilcit little endian format
+            </summary>
+            <param name="dr">the binary reader which is reading the DICOM object</param>
+            <returns>DICOM elements read</returns>
+        </member>
+        <member name="T:EvilDICOM.Core.IO.Reading.DICOMFileReader">
+            <summary>
+                Class for reading DICOM files
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMFileReader.Read(System.String,EvilDICOM.Core.Enums.TransferSyntax)">
+            <summary>
+                Reads a DICOM file from a path
+            </summary>
+            <param name="filePath">the path to the DICOM file</param>
+            <returns>a DICOM object containing all elements</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMFileReader.Read(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)">
+            <summary>
+                Reads a DICOM file from a byte array
+            </summary>
+            <param name="fileBytes">the bytes of the DICOM file</param>
+            <returns>a DICOM object containing all elements</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(System.String)">
+            <summary>
+                Read the meta data from the DICOM object
+            </summary>
+            <param name="filePath">the path to the DICOM file</param>
+            <returns>a DICOM object containing the metadata elements</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax@)">
+            <summary>
+                Read explicit VR little endian up to transfer syntax element and determines transfer syntax for rest of elements
+            </summary>
+            <param name="dr">the binary reader which is reading the DICOM object</param>
+            <param name="syntax">the transfer syntax of the DICOM file</param>
+            <returns>elements preceeding and including transfer syntax element</returns>
+        </member>
+        <member name="T:EvilDICOM.Core.IO.Reading.DICOMPreambleReader">
+            <summary>
+                This class can read the DICOM preamble consisting of 128 null bits followed by the ASCII characters DICM.
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMPreambleReader.Read(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)">
+            <summary>
+                Reads the first 132 bits of a file to check if it contains the DICOM preamble.
+            </summary>
+            <param name="dr">a stream containing the bits of the file</param>
+            <returns>a boolean indicating whether or not the DICOM preamble was in the file</returns>
+        </member>
+        <member name="T:EvilDICOM.Core.IO.Reading.LengthReader">
+            <summary>
+                Contains methods for reading the length of DICOM elements
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.LengthReader.Read(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)">
+            <summary>
+                Reads the length from a series of bytes in a stream. The number of bytes is automatically determined from
+                VR.
+            </summary>
+            <param name="vr">the value representation of the element</param>
+            <param name="dr">the binary stream with a current position on the length parameter</param>
+            <param name="syntax">the transfer syntax of this element</param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,System.Int32)">
+            <summary>
+                Reads the length in little endian byte format from a series of bytes in a stream
+            </summary>
+            <param name="dr">the binary stream with a current position on the length parameter</param>
+            <param name="length">the number of bytes containing the length</param>
+            <returns>the length</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)">
+            <summary>
+                Reads the length in little endian byte format from a series of bytes in a stream. The number of bytes is
+                automatically determined from
+                VR.
+            </summary>
+            <param name="vr">the value representation of the element</param>
+            <param name="dr">the binary stream with a current position on the length parameter</param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)">
+            <summary>
+                Reads the length in big endian byte format from a series of bytes in a stream. The number of bytes is automatically
+                determined from
+                VR.
+            </summary>
+            <param name="vr">the value representation of the element</param>
+            <param name="dr">the binary stream with a current position on the length parameter</param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,System.Int32)">
+            <summary>
+                Reads the length in big endian byte format from a series of bytes in a stream
+            </summary>
+            <param name="dr">the binary stream with a current position on the length parameter</param>
+            <param name="length">the number of bytes containing the length</param>
+            <returns>the length</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(System.Byte[])">
+            <summary>
+                Reads the length in big endian byte format from a series of bytes in a stream
+            </summary>
+            <param name="dr">the binary stream with a current position on the length parameter</param>
+            <param name="length">the number of bytes containing the length</param>
+            <returns>the length</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.#ctor(System.String)">
+            <summary>
+                Constructs a new writer from a file path.
+            </summary>
+            <param name="filePath">path to the file to be written</param>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Writing.DICOMFileWriter.Write(System.String,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.DICOMObject)">
+            <summary>
+                Writes DICOM file out as a file of a specified path
+            </summary>
+            <param name="filePath">the path to which to write the file</param>
+            <param name="settings">the write settings</param>
+            <param name="toWrite">the object to write</param>
+        </member>
+        <member name="M:EvilDICOM.Core.IO.Writing.DICOMFileWriter.Write(System.IO.Stream,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.DICOMObject)">
+            <summary>
+                Write DICOM file out (bytes) to a specified stream
+            </summary>
+            <param name="stream">the stream to which to write the file</param>
+            <param name="settings">the write settings</param>
+            <param name="toWrite">the object to write</param>
+        </member>
+        <member name="T:EvilDICOM.Core.Logging.EvilLogger">
+            <summary>
+                The singleton instance of a logging system for the core Evil DICOM operations. Can subscribe, to
+                see this stream
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.Properties.Resources">
+            <summary>
+              A strongly-typed resource class, for looking up localized strings, etc.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Properties.Resources.ResourceManager">
+            <summary>
+              Returns the cached ResourceManager instance used by this class.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Properties.Resources.Culture">
+            <summary>
+              Overrides the current thread's CurrentUICulture property for all
+              resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+    </members>
+</doc>

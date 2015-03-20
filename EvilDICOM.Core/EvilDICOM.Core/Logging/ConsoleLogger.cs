@@ -3,6 +3,9 @@ using EvilDICOM.Core.Enums;
 
 namespace EvilDICOM.Core.Logging
 {
+    /// <summary>
+    /// A simple class for logging to the console. Wraps the Event Logger/EvilLogger class
+    /// </summary>
     public class ConsoleLogger
     {
         private EventLogger eventLogger;
