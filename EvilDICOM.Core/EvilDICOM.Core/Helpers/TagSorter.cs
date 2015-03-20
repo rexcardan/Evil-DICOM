@@ -12,8 +12,8 @@ namespace EvilDICOM.Core.Helpers
             byte[] tagBytes_2 = ConvertToLittleEndian(ByteHelper.HexStringToByteArray(el2.Tag.CompleteID));
 
             //Compare Groups First
-            int groupInt_1 = BitConverter.ToInt16(tagBytes_1, 0);
-            int groupInt_2 = BitConverter.ToInt16(tagBytes_2, 0);
+            int groupInt_1 = BitConverter.ToUInt16(tagBytes_1, 0);
+            int groupInt_2 = BitConverter.ToUInt16(tagBytes_2, 0);
 
             if (groupInt_1 > groupInt_2)
             {
@@ -26,8 +26,8 @@ namespace EvilDICOM.Core.Helpers
                 return -1;
             }
             //Equal groups. Check element id
-            int elemInt_1 = BitConverter.ToInt16(tagBytes_1, 2);
-            int elemInt_2 = BitConverter.ToInt16(tagBytes_2, 2);
+            int elemInt_1 = BitConverter.ToUInt16(tagBytes_1, 2);
+            int elemInt_2 = BitConverter.ToUInt16(tagBytes_2, 2);
 
             if (elemInt_1 > elemInt_2)
             {

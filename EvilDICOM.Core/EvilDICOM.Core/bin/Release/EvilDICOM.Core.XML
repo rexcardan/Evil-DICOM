@@ -788,6 +788,11 @@
             <param name="hexString">the hexadecimal string to be converted</param>
             <returns>an array of bytes representing the hexadecimal string passed in</returns>
         </member>
+        <member name="T:EvilDICOM.Core.Logging.ConsoleLogger">
+            <summary>
+            A simple class for logging to the console. Wraps the Event Logger/EvilLogger class
+            </summary>
+        </member>
         <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.IMPLICIT_VR_LITTLE_ENDIAN">
             <summary>
                 Unique ID that represents an implicit VR with little endian encoding
