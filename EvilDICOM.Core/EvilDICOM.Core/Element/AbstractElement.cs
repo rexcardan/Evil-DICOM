@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Interfaces;
@@ -75,7 +76,7 @@ namespace EvilDICOM.Core.Element
         /// <summary>
         ///     The non-typed data that can be accessed in a dynamic context
         /// </summary>
-        public dynamic DData
+        public object DData
         {
             get { return DataContainer.SingleValue; }
             set { DataContainer.SingleValue = (T) value; }
@@ -84,10 +85,10 @@ namespace EvilDICOM.Core.Element
         /// <summary>
         ///     The non-typed data that can be accessed in a dynamic context. Format is List<T>
         /// </summary>
-        public dynamic DData_
+        public ICollection DData_
         {
             get { return DataContainer.MultipicityValue; }
-            set { DataContainer.MultipicityValue = value; }
+            set { DataContainer.MultipicityValue = (List<T>)value; }
         }
 
         /// <summary>
@@ -96,7 +97,7 @@ namespace EvilDICOM.Core.Element
         /// <returns></returns>
         public override string ToString()
         {
-            return string.Format("{0} ({1}) -> {2}", Tag.ToString(), VR.ToString(), DataContainer!=null?string.Join(" | ", DData_.ToArray()):"null");
+            return string.Format("{0} ({1}) -> {2}", Tag.ToString(), VR.ToString(), DataContainer!=null?string.Join(" | ", Data_):"null");
         }
 
         /// <summary>

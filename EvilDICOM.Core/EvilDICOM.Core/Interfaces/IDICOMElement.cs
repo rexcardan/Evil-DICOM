@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using EvilDICOM.Core.Element;
 
 namespace EvilDICOM.Core.Interfaces
@@ -11,11 +12,11 @@ namespace EvilDICOM.Core.Interfaces
         /// <summary>
         ///     The dynamic single value data in the element of the first datum in the array (in the case of multiple datum)
         /// </summary>
-        dynamic DData { get; set; }
+        object DData { get; set; }
 
         /// <summary>
         ///     The dynamic data in the element stored in a list of type T
         /// </summary>
-        dynamic DData_ { get; set; }
+        ICollection DData_ { get; set; }
     }
 }
