@@ -22,12 +22,12 @@ namespace EvilDICOM.Core.Element
         }
 
         /// <summary>
-        /// Used in the try read as method
+        ///     Used in the try read as method
         /// </summary>
         internal TransferSyntax TransferSyntax { get; set; }
 
         /// <summary>
-        /// Method used to read out unknown VR types (not in the dictionary). 
+        ///     Method used to read out unknown VR types (not in the dictionary).
         /// </summary>
         /// <typeparam name="T">the type of value to try to read out</typeparam>
         /// <param name="outValue">the value read</param>
@@ -35,16 +35,17 @@ namespace EvilDICOM.Core.Element
         /// <returns>whether or not the read was successfull</returns>
         public bool TryReadAs<T>(out T outValue) where T : IDICOMElement
         {
-            var vr = VRDictionary.GetVRFromType(typeof(T));
+            VR vr = VRDictionary.GetVRFromType(typeof (T));
             try
             {
-                var el = ElementFactory.GenerateElement(this.Tag, vr, this.Data_.ToArray(), this.TransferSyntax);
+                IDICOMElement el = ElementFactory.GenerateElement(Tag, vr, Data_.ToArray(), TransferSyntax);
                 outValue = (T) el;
                 return true;
             }
             catch (Exception e)
             {
-                EvilLogger.Instance.Log("Couldn't cast unknown type as type {0} for {1}", LogPriority.ERROR,typeof(T), this.Tag);
+                EvilLogger.Instance.Log("Couldn't cast unknown type as type {0} for {1}", LogPriority.ERROR, typeof (T),
+                    Tag);
                 outValue = default(T);
                 return false;
             }

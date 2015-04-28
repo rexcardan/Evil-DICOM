@@ -1,8 +1,9 @@
 ﻿using System;
 using System.Globalization;
 using EvilDICOM.Core.Element;
-using DateTime = System.DateTime;
+using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Logging;
+using DateTime = System.DateTime;
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -58,24 +59,25 @@ namespace EvilDICOM.Core.IO.Data
             }
             DateTime dateTime;
 
-                string[] formats = 
-                { 
-                    "yyyyMMddHHmmss.ffffff",
-                    "yyyyMMddHHmmss.fffff",
-                    "yyyyMMddHHmmss.ffff",
-                    "yyyyMMddHHmmss.fff",
-                    "yyyyMMddHHmmss.ff",
-                    "yyyyMMddHHmmss.f",
-                    "yyyyMMddHHmmss",
-                };
-                var success = DateTime.TryParseExact(data, formats, CultureInfo.InvariantCulture, DateTimeStyles.None, out dateTime);
+            string[] formats =
+            {
+                "yyyyMMddHHmmss.ffffff",
+                "yyyyMMddHHmmss.fffff",
+                "yyyyMMddHHmmss.ffff",
+                "yyyyMMddHHmmss.fff",
+                "yyyyMMddHHmmss.ff",
+                "yyyyMMddHHmmss.f",
+                "yyyyMMddHHmmss"
+            };
+            bool success = DateTime.TryParseExact(data, formats, CultureInfo.InvariantCulture, DateTimeStyles.None,
+                out dateTime);
 
-                if (!success)
-                {
-                    EvilLogger.Instance.Log("Date {0} does not match any known format", Enums.LogPriority.ERROR, data);
-                    return null;
-                }
-          
+            if (!success)
+            {
+                EvilLogger.Instance.Log("Date {0} does not match any known format", LogPriority.ERROR, data);
+                return null;
+            }
+
             return dateTime;
         }
 
@@ -121,22 +123,23 @@ namespace EvilDICOM.Core.IO.Data
 
             DateTime time;
 
-            string[] formats = 
-                { 
-                    "HHmmss.ffffff",
-                    "HHmmss.fffff",
-                    "HHmmss.ffff",
-                    "HHmmss.fff",
-                    "HHmmss.ff",
-                    "HHmmss.f",
-                    "HHmmss",
-                };
+            string[] formats =
+            {
+                "HHmmss.ffffff",
+                "HHmmss.fffff",
+                "HHmmss.ffff",
+                "HHmmss.fff",
+                "HHmmss.ff",
+                "HHmmss.f",
+                "HHmmss"
+            };
 
-            var success = DateTime.TryParseExact(data, formats, CultureInfo.InvariantCulture, DateTimeStyles.None, out time);
+            bool success = DateTime.TryParseExact(data, formats, CultureInfo.InvariantCulture, DateTimeStyles.None,
+                out time);
 
             if (!success)
             {
-                EvilLogger.Instance.Log("Time {0} does not match any known format", Enums.LogPriority.ERROR, data);
+                EvilLogger.Instance.Log("Time {0} does not match any known format", LogPriority.ERROR, data);
             }
             return time;
         }

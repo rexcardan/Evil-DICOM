@@ -163,30 +163,30 @@ namespace EvilDICOM.Core
         }
 
         /// <summary>
-        /// Returns elements of a certain tag that are of the unknown VR type (because they are not
-        /// in the DICOM dictionary) and reads them as the specified VR type
+        ///     Returns elements of a certain tag that are of the unknown VR type (because they are not
+        ///     in the DICOM dictionary) and reads them as the specified VR type
         /// </summary>
         /// <typeparam name="T">the VR type to read as</typeparam>
         /// <param name="toFind">the tag of this element</param>
         /// <returns>the unknown elements strongly typed to T</returns>
-        public List<T> GetUnknownTagAs<T>(Tag toFind) where T: IDICOMElement
+        public List<T> GetUnknownTagAs<T>(Tag toFind) where T : IDICOMElement
         {
             return FindAll(toFind)
-              .Select(e => e as Unknown)
-              .Where(u=>u!=null)
-              .Select(u =>
-              {
-                  T t;
-                  var success = u.TryReadAs<T>(out t);
-                  return new { success, t };
-              }).
-              Where(u => u.success)
-             .Select(u => u.t).ToList();
+                .Select(e => e as Unknown)
+                .Where(u => u != null)
+                .Select(u =>
+                {
+                    T t;
+                    bool success = u.TryReadAs(out t);
+                    return new {success, t};
+                }).
+                Where(u => u.success)
+                .Select(u => u.t).ToList();
         }
 
         /// <summary>
-        /// Returns elements of a certain tag that are of the unknown VR type (because they are not
-        /// in the DICOM dictionary) and reads them as the specified VR type
+        ///     Returns elements of a certain tag that are of the unknown VR type (because they are not
+        ///     in the DICOM dictionary) and reads them as the specified VR type
         /// </summary>
         /// <typeparam name="T">the VR type to read as</typeparam>
         /// <param name="toFind">the tag of this element</param>
@@ -204,7 +204,10 @@ namespace EvilDICOM.Core
         public List<T> FindAll<T>()
         {
             Type t = typeof (T);
-            return AllElements.Where(el => el is T).Select(el => (T) Convert.ChangeType(el, t, CultureInfo.CurrentCulture)).ToList();
+            return
+                AllElements.Where(el => el is T)
+                    .Select(el => (T) Convert.ChangeType(el, t, CultureInfo.CurrentCulture))
+                    .ToList();
         }
 
         /// <summary>
@@ -279,7 +282,7 @@ namespace EvilDICOM.Core
         /// <returns>a list of all elements that meet the search criteria</returns>
         public List<IDICOMElement> FindAll(Tag[] descendingTags)
         {
-            var strings = descendingTags.Select(t => t.CompleteID).ToArray();
+            string[] strings = descendingTags.Select(t => t.CompleteID).ToArray();
             return FindAll(strings);
         }
 

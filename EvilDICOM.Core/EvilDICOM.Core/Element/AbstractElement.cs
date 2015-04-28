@@ -88,7 +88,7 @@ namespace EvilDICOM.Core.Element
         public ICollection DData_
         {
             get { return DataContainer.MultipicityValue; }
-            set { DataContainer.MultipicityValue = (List<T>)value; }
+            set { DataContainer.MultipicityValue = (List<T>) value; }
         }
 
         /// <summary>
@@ -97,7 +97,7 @@ namespace EvilDICOM.Core.Element
         /// <returns></returns>
         public override string ToString()
         {
-            return string.Format("{0} ({1}) -> {2}", Tag.ToString(), VR.ToString(), DataContainer!=null?string.Join(" | ", Data_):"null");
+            return string.Format("{0} ({1}) -> {2}", Tag, VR, DataContainer != null ? string.Join(" | ", Data_) : "null");
         }
 
         /// <summary>
