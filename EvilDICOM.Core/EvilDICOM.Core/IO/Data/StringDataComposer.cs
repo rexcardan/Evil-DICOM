@@ -36,7 +36,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (data != null)
             {
-                var date = (DateTime)data;
+                var date = (DateTime) data;
                 return date.ToString("yyyyMMdd");
             }
             return string.Empty;
@@ -46,7 +46,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (data != null)
             {
-                var date = (DateTime)data;
+                var date = (DateTime) data;
                 return date.ToString("yyyyMMddHHmmss.ffffff");
             }
             return string.Empty;
@@ -74,7 +74,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (data != null)
             {
-                var date = (DateTime)data;
+                var date = (DateTime) data;
                 return date.ToString("HHmmss.ffffff");
             }
             return string.Empty;

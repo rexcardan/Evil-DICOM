@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
@@ -18,7 +19,8 @@ namespace EvilDICOM.Core.IO.Reading
         /// </summary>
         /// <param name="filePath">the path to the DICOM file</param>
         /// <returns>a DICOM object containing all elements</returns>
-        public static DICOMObject Read(string filePath, TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
+        public static DICOMObject Read(string filePath,
+            TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
         {
             TransferSyntax syntax = trySyntax;
             List<IDICOMElement> elements;
@@ -36,7 +38,8 @@ namespace EvilDICOM.Core.IO.Reading
         /// </summary>
         /// <param name="fileBytes">the bytes of the DICOM file</param>
         /// <returns>a DICOM object containing all elements</returns>
-        public static DICOMObject Read(byte[] fileBytes, TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
+        public static DICOMObject Read(byte[] fileBytes,
+            TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
         {
             TransferSyntax syntax = trySyntax; //Will keep if metadata doesn't exist
             List<IDICOMElement> elements;
@@ -76,7 +79,9 @@ namespace EvilDICOM.Core.IO.Reading
         public static List<IDICOMElement> ReadFileMetadata(DICOMBinaryReader dr, ref TransferSyntax syntax)
         {
             var elements = new List<IDICOMElement>();
-            syntax = syntax != TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN ? syntax : TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN;
+            syntax = syntax != TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN
+                ? syntax
+                : TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN;
 
             while (dr.StreamPosition < dr.StreamLength)
             {
@@ -85,7 +90,7 @@ namespace EvilDICOM.Core.IO.Reading
                 {
                     dr.StreamPosition = position;
                     IDICOMElement el = DICOMElementReader.ReadElementExplicitLittleEndian(dr);
-                    var uid = TagHelper.TRANSFER_SYNTAX_UID;
+                    Tag uid = TagHelper.TRANSFER_SYNTAX_UID;
                     if (el.Tag == uid)
                     {
                         syntax = TransferSyntaxHelper.GetSyntax(el);

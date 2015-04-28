@@ -6,13 +6,13 @@ namespace EvilDICOM.Core.IO.Data
     {
         public static string Read(byte[] data)
         {
-            var enc = Encoding.UTF8;
+            Encoding enc = Encoding.UTF8;
             return enc.GetString(data).TrimEnd(new[] {'\0'}).TrimEnd(new[] {' '});
         }
 
         public static byte[] Write(string data)
         {
-            var ascii = Encoding.UTF8;
+            Encoding ascii = Encoding.UTF8;
 
             if (IsEven(data))
             {

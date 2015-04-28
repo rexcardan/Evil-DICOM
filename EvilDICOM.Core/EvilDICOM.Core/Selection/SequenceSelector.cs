@@ -7,16 +7,16 @@ using EvilDICOM.Core.Helpers;
 
 namespace EvilDICOM.Core.Selection
 {
-    public class SequenceSelector : Sequence
+    public class SequenceSelector : AbstractElement<DICOMSelector>
     {
-        public new List<DICOMSelector> Items { get; set; }
+        public List<DICOMSelector> Items {get { return this.Data_; }}
 
         public SequenceSelector(Sequence s)
         {
-            this.Items = new List<DICOMSelector>();
+            this.Data_ = new List<DICOMSelector>();
             foreach (var item in s.Items)
             {
-                this.Items.Add(new DICOMSelector(item));
+                this.Data_.Add(new DICOMSelector(item));
             }
             this.Tag = s.Tag;
         }
@@ -30,6 +30,12 @@ namespace EvilDICOM.Core.Selection
             }
             return s;
         }
+
+        public override string ToString()
+        {
+            return string.Format("{0}, {1} {2}", Tag, VR, string.Format(" : {0} Items", Items.Count));
+        }
+
         #region SELECTORS
         public UnsignedLong CommandGroupLength { get { return Items.FindFirst<UnsignedLong>("00000000") as UnsignedLong; } }
         public List<UnsignedLong> CommandGroupLength_ { get { return Items.FindAll<UnsignedLong>("00000000").ToList(); } }

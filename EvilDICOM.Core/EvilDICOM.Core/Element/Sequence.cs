@@ -17,7 +17,7 @@ namespace EvilDICOM.Core.Element
         /// <summary>
         ///     Alternate property name for data (with a clearer name)
         /// </summary>
-        public virtual List<DICOMObject> Items
+        public List<DICOMObject> Items
         {
             get { return base.DataContainer != null ? DataContainer.MultipicityValue : null; }
             set

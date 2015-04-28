@@ -25,7 +25,7 @@ namespace EvilDICOM.Core.Helpers
             {
                 return false;
             }
-                //Check all elements are the same
+            //Check all elements are the same
             for (int i = 0; i < array1.Length; i++)
             {
                 if (!array1[i].Equals(array2[i]))

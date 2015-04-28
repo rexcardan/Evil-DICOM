@@ -1,9 +1,5 @@
 ﻿using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.IO.Data;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 
 namespace EvilDICOM.Core.Element
 {
@@ -53,32 +49,34 @@ namespace EvilDICOM.Core.Element
         }
 
         #region OPERATORS
+
         public override bool Equals(object obj)
         {
             var tag = obj as Tag;
-            if ((object)tag != null)
+            if ((object) tag != null)
             {
-                return tag.CompleteID == this.CompleteID;
+                return tag.CompleteID == CompleteID;
             }
             return false;
         }
 
         public override int GetHashCode()
         {
-            return this.CompleteID.GetHashCode();
+            return CompleteID.GetHashCode();
         }
 
         public static bool operator ==(Tag t1, Tag t2)
         {
-            if ((object)t1 == null) return false;
+            if ((object) t1 == null) return false;
             return t1.Equals(t2);
         }
 
         public static bool operator !=(Tag t1, Tag t2)
         {
-            if ((object)t1 == null) return false;
+            if ((object) t1 == null) return false;
             return !t1.Equals(t2);
         }
+
         #endregion
     }
 }

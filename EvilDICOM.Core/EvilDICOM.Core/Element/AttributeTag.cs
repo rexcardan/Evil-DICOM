@@ -1,6 +1,4 @@
-﻿using EvilDICOM.Core.Dictionaries;
-using EvilDICOM.Core.Enums;
-using EvilDICOM.Core.IO.Data;
+﻿using EvilDICOM.Core.Enums;
 
 namespace EvilDICOM.Core.Element
 {
