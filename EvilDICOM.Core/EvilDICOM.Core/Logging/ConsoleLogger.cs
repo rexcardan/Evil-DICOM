@@ -9,11 +9,13 @@ namespace EvilDICOM.Core.Logging
     public class ConsoleLogger
     {
         private EventLogger eventLogger;
+        private ConsoleColor _defaultColor;
 
-        public ConsoleLogger(EventLogger eventLogger)
+        public ConsoleLogger(EventLogger eventLogger, ConsoleColor color = ConsoleColor.White)
         {
             this.eventLogger = eventLogger;
             eventLogger.LogRequested += eventLogger_LogRequested;
+            _defaultColor = color;
         }
 
         private void eventLogger_LogRequested(string toLog, LogPriority priority)
@@ -21,7 +23,7 @@ namespace EvilDICOM.Core.Logging
             switch (priority)
             {
                 case LogPriority.NORMAL:
-                    Console.ForegroundColor = ConsoleColor.White;
+                    Console.ForegroundColor = _defaultColor;
                     Console.WriteLine(toLog);
                     break;
                 case LogPriority.ERROR:

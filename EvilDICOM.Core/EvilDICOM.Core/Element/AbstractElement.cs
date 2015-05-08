@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Interfaces;
+using System.Linq;
 
 namespace EvilDICOM.Core.Element
 {
@@ -97,7 +98,15 @@ namespace EvilDICOM.Core.Element
         /// <returns></returns>
         public override string ToString()
         {
-            return string.Format("{0} ({1}) -> {2}", Tag, VR, DataContainer != null ? string.Join(" | ", Data_) : "null");
+            if (DatType == typeof(byte) && Data_.Count > 10)
+            {
+                return string.Format("{0} ({1}) -> {2}...", Tag, VR, DataContainer != null ? string.Join(" | ", Data_.Take(10)) : "null");
+            }
+            else
+            {
+                return string.Format("{0} ({1}) -> {2}", Tag, VR, DataContainer != null ? string.Join(" | ", Data_) : "null");
+            }
+           
         }
 
         /// <summary>

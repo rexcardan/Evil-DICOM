@@ -26,5 +26,18 @@ namespace EvilDICOM.Core.Tests
             var actual = sel.IonBeamSequence;
             Assert.AreEqual(expected.DData_.Count, actual.Data_.Count);
         }
+
+        [TestMethod]
+        public void AddIonSequence()
+        {
+            var dcm = DICOMObject.Read(Properties.Resources.MultpleFL);
+            var expected = dcm.FindFirst(TagHelper.ION_BEAM_SEQUENCE);
+            var sel = dcm.GetSelector();
+            var actual = sel.IonBeamSequence;
+            var countBefore = sel.IonBeamSequence_.Count;
+            dcm.Add(expected);
+            var countAfter = sel.IonBeamSequence_.Count;
+            Assert.AreNotEqual(countBefore, countAfter);
+        }
     }
 }

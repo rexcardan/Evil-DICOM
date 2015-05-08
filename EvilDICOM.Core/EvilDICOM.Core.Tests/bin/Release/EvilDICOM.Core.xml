@@ -43,7 +43,7 @@
         </member>
         <member name="T:EvilDICOM.Core.DICOMForge">
             <summary>
-            Class for creating strongly typed elements on the fly
+                Class for creating strongly typed elements on the fly
             </summary>
         </member>
         <member name="T:EvilDICOM.Core.DICOMObject">
@@ -108,8 +108,8 @@
         </member>
         <member name="M:EvilDICOM.Core.DICOMObject.GetUnknownTagAs``1(EvilDICOM.Core.Element.Tag)">
             <summary>
-            Returns elements of a certain tag that are of the unknown VR type (because they are not
-            in the DICOM dictionary) and reads them as the specified VR type
+                Returns elements of a certain tag that are of the unknown VR type (because they are not
+                in the DICOM dictionary) and reads them as the specified VR type
             </summary>
             <typeparam name="T">the VR type to read as</typeparam>
             <param name="toFind">the tag of this element</param>
@@ -117,8 +117,8 @@
         </member>
         <member name="M:EvilDICOM.Core.DICOMObject.GetUnknownTagAs``1(System.String)">
             <summary>
-            Returns elements of a certain tag that are of the unknown VR type (because they are not
-            in the DICOM dictionary) and reads them as the specified VR type
+                Returns elements of a certain tag that are of the unknown VR type (because they are not
+                in the DICOM dictionary) and reads them as the specified VR type
             </summary>
             <typeparam name="T">the VR type to read as</typeparam>
             <param name="toFind">the tag of this element</param>
@@ -279,7 +279,7 @@
         </member>
         <member name="M:EvilDICOM.Core.Dictionaries.TagDictionary.AddEntry``1(System.String,System.String)">
             <summary>
-            Adds an entry to the DICOM Dictionary for reading files
+                Adds an entry to the DICOM Dictionary for reading files
             </summary>
             <typeparam name="T">the type of VR to add</typeparam>
             <param name="id">the tag id of the element</param>
@@ -630,7 +630,7 @@
         </member>
         <member name="M:EvilDICOM.Core.Element.Unknown.TryReadAs``1(``0@)">
             <summary>
-            Method used to read out unknown VR types (not in the dictionary). 
+                Method used to read out unknown VR types (not in the dictionary).
             </summary>
             <typeparam name="T">the type of value to try to read out</typeparam>
             <param name="outValue">the value read</param>
@@ -639,7 +639,7 @@
         </member>
         <member name="P:EvilDICOM.Core.Element.Unknown.TransferSyntax">
             <summary>
-            Used in the try read as method
+                Used in the try read as method
             </summary>
         </member>
         <member name="T:EvilDICOM.Core.Element.UnlimitedText">
@@ -790,7 +790,7 @@
         </member>
         <member name="T:EvilDICOM.Core.Logging.ConsoleLogger">
             <summary>
-            A simple class for logging to the console. Wraps the Event Logger/EvilLogger class
+                A simple class for logging to the console. Wraps the Event Logger/EvilLogger class
             </summary>
         </member>
         <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.IMPLICIT_VR_LITTLE_ENDIAN">

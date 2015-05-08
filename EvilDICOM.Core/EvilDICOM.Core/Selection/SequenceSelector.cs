@@ -34,7 +34,7 @@ namespace EvilDICOM.Core.Selection
 
         public override string ToString()
         {
-            return string.Format("{0}, {1} {2}", Tag, VR, string.Format(" : {0} Items", Items.Count));
+            return string.Format("{0}, {1} {2}", Tag, Enums.VR.Sequence, string.Format(" : {0} Items", Items.Count));
         }
 
         #region SELECTORS
