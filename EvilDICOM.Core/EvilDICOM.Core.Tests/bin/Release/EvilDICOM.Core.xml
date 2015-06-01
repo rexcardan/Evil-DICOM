@@ -1274,6 +1274,15 @@
               resource lookups using this strongly typed resource class.
             </summary>
         </member>
+        <member name="M:EvilDICOM.Core.RT.DoseMatrix.GetLineDose(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,System.Double)">
+            <summary>
+            Scrapes a dose matrix along the line from startXYZ in mm to endXYZ in mm
+            </summary>
+            <param name="startXYZmm">the starting position of the line</param>
+            <param name="endXYZmm">the end position of the line</param>
+            <param name="resolution_mm">the resolution to interoplate the line dose (default 2 mm)</param>
+            <returns>a list of dose values at the specified resolution along the line</returns>
+        </member>
         <member name="T:EvilDICOM.Core.RT.DoseValue">
             <summary>
             A simple container for dose values as a function of 3D space

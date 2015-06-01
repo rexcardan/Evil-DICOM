@@ -23,6 +23,7 @@ namespace EvilDICOM.Core.RT
         public DoseMatrix(DICOMObject dcm)
         {
             _doseObject = new DICOMSelector(dcm);
+            ValueSizeInBytes = _doseObject.BitsStored.Data / 8;
             DoseValues = new List<double>();
             var scaling = _doseObject.DoseGridScaling.Data;
             using (var stream = _doseObject.ToDICOMObject().PixelStream)
@@ -30,18 +31,21 @@ namespace EvilDICOM.Core.RT
                 var binReader = new BinaryReader(stream);
                 while (binReader.BaseStream.Position < binReader.BaseStream.Length)
                 {
-                    var val = binReader.ReadInt32();
-                    if (val != 0.0)
-                    {
-                        Console.Write("");
-                    }
+                    var val = ValueSizeInBytes == 4 ? binReader.ReadInt32() : binReader.ReadUInt16();
                     DoseValues.Add(scaling * val);
                 }
             }
         }
 
-        public int ValueSizeInBytes { get { return _doseObject.BitsStored.Data / 8; } }
+        public int ValueSizeInBytes { get; set; }
 
+        /// <summary>
+        /// Scrapes a dose matrix along the line from startXYZ in mm to endXYZ in mm
+        /// </summary>
+        /// <param name="startXYZmm">the starting position of the line</param>
+        /// <param name="endXYZmm">the end position of the line</param>
+        /// <param name="resolution_mm">the resolution to interoplate the line dose (default 2 mm)</param>
+        /// <returns>a list of dose values at the specified resolution along the line</returns>
         public List<DoseValue> GetLineDose(Vector3 startXYZmm, Vector3 endXYZmm, double resolution_mm = 2)
         {
             List<DoseValue> values = new List<DoseValue>();
@@ -56,6 +60,7 @@ namespace EvilDICOM.Core.RT
                     values.Add(GetPointDose(pt));
                 }
             }
+            values.Reverse();
             return values;
         }
 
