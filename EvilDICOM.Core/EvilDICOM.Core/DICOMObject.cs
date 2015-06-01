@@ -103,13 +103,13 @@ namespace EvilDICOM.Core
                 return found.DataContainer;
             }
             var data = new DICOMData<T>();
-            if (typeof (T).IsArray)
+            if (typeof(T).IsArray)
             {
-                data.MultipicityValue = ((T[]) defaultValueIfNull).ToList();
+                data.MultipicityValue = ((T[])defaultValueIfNull).ToList();
             }
             else
             {
-                data.SingleValue = (T) defaultValueIfNull;
+                data.SingleValue = (T)defaultValueIfNull;
             }
             return data;
         }
@@ -178,7 +178,7 @@ namespace EvilDICOM.Core
                 {
                     T t;
                     bool success = u.TryReadAs(out t);
-                    return new {success, t};
+                    return new { success, t };
                 }).
                 Where(u => u.success)
                 .Select(u => u.t).ToList();
@@ -203,10 +203,10 @@ namespace EvilDICOM.Core
         /// <returns>a list of all elements that are strongly typed</returns>
         public List<T> FindAll<T>()
         {
-            Type t = typeof (T);
+            Type t = typeof(T);
             return
                 AllElements.Where(el => el is T)
-                    .Select(el => (T) Convert.ChangeType(el, t, CultureInfo.CurrentCulture))
+                    .Select(el => (T)Convert.ChangeType(el, t, CultureInfo.CurrentCulture))
                     .ToList();
         }
 
@@ -519,6 +519,20 @@ namespace EvilDICOM.Core
             {
                 DICOMFileWriter.Write(stream, settings, this);
                 return stream.ToArray();
+            }
+        }
+
+        public SOPClass SOPClass
+        {
+            get
+            {
+                var sel = GetSelector();
+                if (sel.SOPClassUID != null)
+                {
+                    var sopClassUid = sel.SOPClassUID.Data;
+                    return SOPClassHelper.FromUID(sopClassUid);
+                }
+                return SOPClass.Unknown;
             }
         }
 

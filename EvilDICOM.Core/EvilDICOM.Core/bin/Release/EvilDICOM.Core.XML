@@ -788,6 +788,60 @@
             <param name="hexString">the hexadecimal string to be converted</param>
             <returns>an array of bytes representing the hexadecimal string passed in</returns>
         </member>
+        <member name="T:EvilDICOM.Core.Helpers.Vector3">
+            <summary>
+            This is a temporary class until .NET 4.6 is released with Vector3 support. Borrowed from my Cardan.Math library
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.Vector3.Copy">
+            <summary>
+                Creates a copy of this vector
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.Vector3.Norm">
+            <summary>
+                Finds the magnitude of this vector
+            </summary>
+            <returns>a double representing the magnitude of the vector</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.Vector3.CrossMultiply(EvilDICOM.Core.Helpers.Vector3)">
+            <summary>
+                Computes the cross product of this vector and another input vector
+            </summary>
+            <param name="v">the input vector</param>
+            <returns>a new vector that is the cross product of the two vectors</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.Vector3.op_Multiply(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)">
+            <summary>
+                Computes the scalar (dot) product of two vectors
+            </summary>
+            <param name="v1">the first vector</param>
+            <param name="v2">the second vector</param>
+            <returns>The scalar product of two vectors</returns>
+        </member>
+        <member name="P:EvilDICOM.Core.Helpers.Vector3.Item(System.Int64)">
+            <summary>
+                Allows the vector class elements to be accessed by index
+            </summary>
+            <param name="index">the index of the element to return</param>
+            <returns>the element at the specified index</returns>
+        </member>
+        <member name="P:EvilDICOM.Core.Helpers.Vector3.Zeroes">
+            <summary>
+                A static zero value vector creator. Returns a vector3 containing only zero value elements.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Helpers.Vector3.Infinite">
+            <summary>
+                A static infinite value vector creator. Returns a vector3 containing positive infinite value elements.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Helpers.Vector3.NaN">
+            <summary>
+                A static infinite value vector creator. Returns a vector3 containing NaN value elements.
+            </summary>
+        </member>
         <member name="T:EvilDICOM.Core.Logging.ConsoleLogger">
             <summary>
                 A simple class for logging to the console. Wraps the Event Logger/EvilLogger class
@@ -1218,6 +1272,11 @@
             <summary>
               Overrides the current thread's CurrentUICulture property for all
               resource lookups using this strongly typed resource class.
+            </summary>
+        </member>
+        <member name="T:EvilDICOM.Core.RT.DoseValue">
+            <summary>
+            A simple container for dose values as a function of 3D space
             </summary>
         </member>
     </members>

@@ -10,8 +10,9 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EvilDICOM.Core</RootNamespace>
     <AssemblyName>EvilDICOM.Core</AssemblyName>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -22,6 +23,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -32,6 +34,7 @@
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
     <DocumentationFile>bin\Release\EvilDICOM.Core.XML</DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>
@@ -40,6 +43,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Numerics" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -85,6 +89,7 @@
     <Compile Include="Element\_ElementFactory.cs" />
     <Compile Include="Enums\LogPriority.cs" />
     <Compile Include="Enums\Priority.cs" />
+    <Compile Include="Enums\SOPClass.cs" />
     <Compile Include="Enums\TransferSyntax.cs" />
     <Compile Include="Enums\VR.cs" />
     <Compile Include="Enums\VREncoding.cs" />
@@ -98,6 +103,8 @@
     <Compile Include="Helpers\Constants.cs" />
     <Compile Include="Helpers\DoubleHelper.cs" />
     <Compile Include="Helpers\EnumHelper.cs" />
+    <Compile Include="Helpers\SOPClassHelper.cs" />
+    <Compile Include="Helpers\Vector3.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
     <Compile Include="Logging\EventLogger.cs" />
     <Compile Include="Helpers\ExceptionHelper.cs" />
@@ -156,6 +163,8 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <Compile Include="RT\DoseMatrix.cs" />
+    <Compile Include="RT\DoseValue.cs" />
     <Compile Include="Selection\DICOMSelector.cs" />
     <Compile Include="Selection\ListExtensions.cs" />
     <Compile Include="Selection\SequenceSelector.cs" />
