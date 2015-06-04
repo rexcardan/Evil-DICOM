@@ -29,10 +29,19 @@ namespace EvilDICOM.Core.RT
             using (var stream = _doseObject.ToDICOMObject().PixelStream)
             {
                 var binReader = new BinaryReader(stream);
-                while (binReader.BaseStream.Position < binReader.BaseStream.Length)
+                if (ValueSizeInBytes == 4)
                 {
-                    var val = ValueSizeInBytes == 4 ? binReader.ReadInt32() : binReader.ReadUInt16();
-                    DoseValues.Add(scaling * val);
+                    while (binReader.BaseStream.Position < binReader.BaseStream.Length)
+                    {
+                        DoseValues.Add(scaling * binReader.ReadInt32());
+                    }
+                }
+                else
+                {
+                    while (binReader.BaseStream.Position < binReader.BaseStream.Length)
+                    {
+                        DoseValues.Add(scaling * binReader.ReadUInt16());
+                    }
                 }
             }
         }
