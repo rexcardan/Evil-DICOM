@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System.Globalization;
+using System.Threading;
 
 namespace EvilDICOM.Core.Tests
 {
@@ -82,11 +84,51 @@ namespace EvilDICOM.Core.Tests
         }
 
         [TestMethod]
-        public void ToString_VerifyOutput()
+        public void ToString_VerifyOutput_CurrentCultureInsensitive_AreNotEqual()
         {
             const string expected = "(300A,0082) : BeamDoseSpecificationPoint (DecimalString) -> 1 | -3.5 | 2.5";
-            var actual = _decimalString.ToString();
-            Assert.AreEqual(expected, actual);
+            var currentThread = Thread.CurrentThread;
+            var currentCulture = currentThread.CurrentCulture;
+
+            currentThread.CurrentCulture = CreateNonDotSeparatorCulture();
+
+            try
+            {
+                var actual = _decimalString.ToString();
+                Assert.AreNotEqual(expected, actual);
+            }
+            finally
+            {
+                currentThread.CurrentCulture = currentCulture;
+            }
+        }
+
+        [TestMethod]
+        public void ToString_VerifyOutput_CurrentCultureSensitive_AreEqual()
+        {
+            const string expected = "(300A,0082) : BeamDoseSpecificationPoint (DecimalString) -> 1 | -3*5 | 2*5";
+            var currentThread = Thread.CurrentThread;
+            var currentCulture = currentThread.CurrentCulture;
+
+            currentThread.CurrentCulture = CreateNonDotSeparatorCulture();
+
+            try
+            {
+                var actual = _decimalString.ToString();
+                Assert.AreEqual(expected, actual);
+            }
+            finally
+            {
+                currentThread.CurrentCulture = currentCulture;
+            }
+        }
+
+        private static CultureInfo CreateNonDotSeparatorCulture()
+        {
+            var nonDotSeparatorCulture = (CultureInfo)CultureInfo.InvariantCulture.Clone();
+            nonDotSeparatorCulture.NumberFormat.NumberGroupSeparator = "@";
+            nonDotSeparatorCulture.NumberFormat.NumberDecimalSeparator = "*";
+            return nonDotSeparatorCulture;
         }
 
         #endregion
