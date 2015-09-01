@@ -2,6 +2,7 @@
 using System.Linq;
 using EvilDICOM.Core.Element;
 using DateTime = System.DateTime;
+using System.Globalization;
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -11,7 +12,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (data != null)
             {
-                string ageString = String.Format("{0:00#}", data.Number);
+                string ageString = String.Format(CultureInfo.InvariantCulture, "{0:00#}", data.Number);
                 switch (data.Units)
                 {
                     case Age.Unit.DAYS:
@@ -37,7 +38,7 @@ namespace EvilDICOM.Core.IO.Data
             if (data != null)
             {
                 var date = (DateTime) data;
-                return date.ToString("yyyyMMdd");
+                return date.ToString("yyyyMMdd", CultureInfo.InvariantCulture);
             }
             return string.Empty;
         }
@@ -47,7 +48,7 @@ namespace EvilDICOM.Core.IO.Data
             if (data != null)
             {
                 var date = (DateTime) data;
-                return date.ToString("yyyyMMddHHmmss.ffffff");
+                return date.ToString("yyyyMMddHHmmss.ffffff", CultureInfo.InvariantCulture);
             }
             return string.Empty;
         }
@@ -56,7 +57,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (data != null)
             {
-                return String.Join("\\", data.Select(d => d.ToString()).ToArray());
+                return String.Join("\\", data.Select(d => d.ToString(CultureInfo.InvariantCulture)).ToArray());
             }
             return string.Empty;
         }
@@ -65,7 +66,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (data != null)
             {
-                return String.Join("\\", data.Select(d => d.ToString()).ToArray());
+                return String.Join("\\", data.Select(d => d.ToString(CultureInfo.InvariantCulture)).ToArray());
             }
             return string.Empty;
         }
@@ -75,7 +76,7 @@ namespace EvilDICOM.Core.IO.Data
             if (data != null)
             {
                 var date = (DateTime) data;
-                return date.ToString("HHmmss.ffffff");
+                return date.ToString("HHmmss.ffffff", CultureInfo.InvariantCulture);
             }
             return string.Empty;
         }
