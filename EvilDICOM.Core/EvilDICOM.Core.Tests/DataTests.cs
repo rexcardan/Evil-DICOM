@@ -7,6 +7,9 @@ using E=EvilDICOM.Core.Element;
 using System.Linq;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
+using EvilDICOM.Core.IO.Data;
+using System.Globalization;
+using System.Threading;
 
 namespace EvilDICOM.Core.Tests
 {
@@ -52,6 +55,58 @@ namespace EvilDICOM.Core.Tests
             var x = xyz[0];
             var y = xyz[1];
             var z = xyz[2];
+        }
+
+        [TestMethod]
+        public void StringDataComposer_ComposeDateTime_HasCorrectSeparator()
+        {
+            var dateTime = new System.DateTime(621671364610101010, DateTimeKind.Unspecified);
+
+            var currentThread = Thread.CurrentThread;
+            var currentCulture = currentThread.CurrentCulture;
+
+            currentThread.CurrentCulture = CreateNonDotSeparatorCulture();
+
+            try
+            {
+                var actual = StringDataComposer.ComposeDateTime(dateTime);
+                var expected = "19710101010101.010101";
+                Assert.AreEqual(expected, actual);
+            }
+            finally
+            {
+                currentThread.CurrentCulture = currentCulture;
+            }
+        }
+
+        [TestMethod]
+        public void StringDataComposer_ComposeDecimalString_HasCorrectSeparator()
+        {
+            var data = new[] { -2.5, 5, 7.5 };
+
+            var currentThread = Thread.CurrentThread;
+            var currentCulture = currentThread.CurrentCulture;
+
+            currentThread.CurrentCulture = CreateNonDotSeparatorCulture();
+
+            try
+            {
+                var actual = StringDataComposer.ComposeDecimalString(data);
+                var expected = @"-2.5\5\7.5";
+                Assert.AreEqual(expected, actual);
+            }
+            finally
+            {
+                currentThread.CurrentCulture = currentCulture;
+            }
+        }
+
+        private static CultureInfo CreateNonDotSeparatorCulture()
+        {
+            var nonDotSeparatorCulture = (CultureInfo)CultureInfo.InvariantCulture.Clone();
+            nonDotSeparatorCulture.NumberFormat.NumberGroupSeparator = "@";
+            nonDotSeparatorCulture.NumberFormat.NumberDecimalSeparator = "*";
+            return nonDotSeparatorCulture;
         }
     }
 }
