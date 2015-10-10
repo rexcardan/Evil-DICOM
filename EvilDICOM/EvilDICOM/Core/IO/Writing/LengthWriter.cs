@@ -24,11 +24,6 @@ namespace EvilDICOM.Core.IO.Writing
 
         public static void Write(DICOMBinaryWriter dw, VR vr, DICOMWriteSettings settings, int length)
         {
-            if (settings.TransferSyntax == TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
-            {
-                return;
-            }
-
             var lengthBytes = new byte[0];
             switch (VRDictionary.GetEncodingFromVR(vr))
             {
