@@ -42,6 +42,7 @@ namespace EvilDICOM.Core.Helpers
             new KeyValuePair<string,SOPClass>(AbstractSyntax.PATIENT_MOVE, SOPClass.MOVE),
             new KeyValuePair<string,SOPClass>(AbstractSyntax.PET_IMAGE_STORAGE, SOPClass.PET),
             new KeyValuePair<string,SOPClass>(AbstractSyntax.RT_ION_PLAN_STORAGE, SOPClass.Ion_Plan),     
+            new KeyValuePair<string,SOPClass>(AbstractSyntax.ULTRASOUND_IMAGE_STORAGE, SOPClass.Ultrasound_Image),     
             };
 
 

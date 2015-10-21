@@ -12,7 +12,7 @@ namespace EvilDICOM.Core.Enums
         Storage_Commitment_Push_Model,
         CT,
         CR,
-
+        Ultrasound_Image,
         //RT
         RT_Image,
         RT_Dose,

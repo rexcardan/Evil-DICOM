@@ -16,6 +16,10 @@ namespace EvilDICOM.Core.IO.Writing
             };
         }
 
+        /// <summary>
+        /// Write settings when writing the meta header group 0002
+        /// </summary>
+        /// <returns></returns>
         public DICOMWriteSettings GetFileMetaSettings()
         {
             return new DICOMWriteSettings

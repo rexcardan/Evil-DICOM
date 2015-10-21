@@ -9,18 +9,20 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>EvilDICOM</RootNamespace>
     <AssemblyName>EvilDICOM</AssemblyName>
-    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Debug\EvilDICOM.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -29,6 +31,12 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>evilEye.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
@@ -216,7 +224,7 @@
     <Compile Include="Network\Processors\PDataProcessor.cs" />
     <Compile Include="Network\Processors\PDUProcessor.cs" />
     <Compile Include="Network\Querying\ImageResult.cs" />
-    <Compile Include="Network\Querying\QueryBuider.cs" />
+    <Compile Include="Network\Querying\QueryBuilder.cs" />
     <Compile Include="Network\Querying\SeriesResult.cs" />
     <Compile Include="Network\Querying\StudyResult.cs" />
     <Compile Include="Network\Readers\DIMSEReader.cs" />
@@ -230,6 +238,9 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Network\Messengers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="evilEye.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -380,7 +380,7 @@ namespace EvilDICOM.Core
 
         public override string ToString()
         {
-            return string.Format("DICOM Obj : {0} Elements", Elements.Count);
+            return string.Format("DICOM Object [{0}] : {1} Elements", this.SOPClass.ToString(), Elements.Count);
         }
 
         #region REPLACE OR ADD OVERLOADS
@@ -488,7 +488,12 @@ namespace EvilDICOM.Core
         /// </summary>
         /// <param name="filePath">the path to the file</param>
         /// <param name="trySyntax">the transfer syntax to use in case there is no metadata explicitly included</param>
-        /// <returns></returns>
+        /// <returns>the DICOM Object</returns>
+        /// <example> 
+        ///<code>
+        ///var dcm = DICOMObject.Read("mydcm.dcm");
+        ///</code>
+        ///</example>
         public static DICOMObject Read(string filePath,
             TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
         {

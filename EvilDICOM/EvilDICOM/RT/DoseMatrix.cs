@@ -206,19 +206,22 @@ namespace EvilDICOM.RT
                 _doseObject.DoseGridScaling.Data = this.Scaling;
                 using (var stream = _doseObject.ToDICOMObject().PixelStream)
                 {
-                    var binReader = new BinaryReader(stream);
+                    var bw = new BinaryWriter(stream);
+
                     if (ValueSizeInBytes == 4)
                     {
-                        while (binReader.BaseStream.Position < binReader.BaseStream.Length)
+                        foreach (var dv in DoseValues)
                         {
-                            DoseValues.Add(Scaling * binReader.ReadInt32());
+                            var val = (int)(dv/this.Scaling);
+                            bw.Write(BitConverter.GetBytes(val));
                         }
                     }
                     else
                     {
-                        while (binReader.BaseStream.Position < binReader.BaseStream.Length)
+                        foreach (var dv in DoseValues)
                         {
-                            DoseValues.Add(Scaling * binReader.ReadUInt16());
+                            var val = (ushort)(dv / this.Scaling);
+                            bw.Write(BitConverter.GetBytes(val));
                         }
                     }
                 }

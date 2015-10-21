@@ -88,26 +88,28 @@ namespace EvilDICOM.Core.IO.Reading
         /// <returns></returns>
         public static int ReadBigEndian(VR vr, DICOMBinaryReader dr)
         {
-            int length = 0;
+            byte[] bytes = null;
 
             switch (VRDictionary.GetEncodingFromVR(vr))
             {
                 case VREncoding.Implicit:
-                    byte[] byteLength = dr.ReadBytes(4).Reverse().ToArray();
-                    length = BitConverter.ToInt32(byteLength, 0);
+                    bytes = dr.ReadBytes(4);
                     break;
                 case VREncoding.ExplicitLong:
-                    byteLength = dr.Skip(2).ReadBytes(4).Reverse().ToArray();
-                    length = BitConverter.ToInt32(byteLength, 0);
+                    bytes = dr.Skip(2).ReadBytes(4);
                     break;
                 case VREncoding.ExplicitShort:
-                    byteLength = dr.ReadBytes(2).Reverse().ToArray();
-                    length = BitConverter.ToUInt16(byteLength, 0);
+                    bytes = dr.ReadBytes(2);
                     break;
             }
-            return length;
+            return ReadBigEndian(bytes);
         }
 
+        /// <summary>
+        /// Checks to see if length is indefinite type (eg. FFFFFFFF)
+        /// </summary>
+        /// <param name="length">the length of the DICOM element</param>
+        /// <returns></returns>
         public static bool IsIndefinite(int length)
         {
             return length == -1;
@@ -135,17 +137,35 @@ namespace EvilDICOM.Core.IO.Reading
         /// <summary>
         ///     Reads the length in big endian byte format from a series of bytes in a stream
         /// </summary>
-        /// <param name="dr">the binary stream with a current position on the length parameter</param>
-        /// <param name="length">the number of bytes containing the length</param>
+        /// <param name="length">the bytes containing the length</param>
         /// <returns>the length</returns>
         public static int ReadBigEndian(byte[] length)
+        {
+            Array.Reverse(length);
+            switch (length.Length)
+            {
+                case 2:
+                    return BitConverter.ToUInt16(length, 0);
+                case 4:
+                    return BitConverter.ToInt32(length, 0);
+                default:
+                    return 0;
+            }
+        }
+
+        /// <summary>
+        ///     Reads the length in little endian byte format from a series of bytes in a stream
+        /// </summary>
+        /// <param name="length">the bytes containing the length</param>
+        /// <returns>the length</returns>
+        public static int ReadLittleEndian(byte[] length)
         {
             switch (length.Length)
             {
                 case 2:
-                    return BitConverter.ToUInt16(length.Reverse().ToArray(), 0);
+                    return BitConverter.ToUInt16(length, 0);
                 case 4:
-                    return BitConverter.ToInt32(length.Reverse().ToArray(), 0);
+                    return BitConverter.ToInt32(length, 0);
                 default:
                     return 0;
             }

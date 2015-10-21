@@ -1,3 +1,4 @@
+using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 
 namespace EvilDICOM.Core.IO.Writing
@@ -14,7 +15,7 @@ namespace EvilDICOM.Core.IO.Writing
             for (int i = 0; i < d.Elements.Count; i++)
             {
                 IDICOMElement el = d.Elements[i];
-
+                TransferSyntaxHelper.SetSyntax(d,settings.TransferSyntax);
                 DICOMWriteSettings currentSettings = IsFileMetaGroup(el) ? settings.GetFileMetaSettings() : settings;
                 if (GroupWriter.IsGroupHeader(el))
                 {
