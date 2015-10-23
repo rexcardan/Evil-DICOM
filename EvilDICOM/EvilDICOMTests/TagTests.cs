@@ -21,5 +21,17 @@ namespace EvilDICOM.Core.Tests
            var expected = string.Format("({0},{1}) : {2}", tag.Group, tag.Element, "ImplementationClassUID");
            Assert.AreEqual(expected, tag.ToString());
         }
+
+        [TestMethod]
+        public void IsPrivateTest()
+        {
+            var tag = new Tag("00020012");
+            var isPrivate = tag.IsPrivate();
+            Assert.IsFalse(isPrivate);
+
+            var privateTag = new Tag("30091047.");
+            isPrivate = privateTag.IsPrivate();
+            Assert.IsTrue(isPrivate);
+        }
     }
 }

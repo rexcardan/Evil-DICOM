@@ -1,5 +1,7 @@
 ﻿using EvilDICOM.Core.Dictionaries;
+using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.IO.Data;
+using System;
 
 namespace EvilDICOM.Core.Element
 {
@@ -46,6 +48,14 @@ namespace EvilDICOM.Core.Element
         public override string ToString()
         {
             return string.Format("({0},{1}) : {2}", Group, Element, TagDictionary.GetDescription(this));
+        }
+
+        public bool IsPrivate()
+        {
+            var groupBytes = ByteHelper.HexStringToByteArray(Group);
+            Array.Reverse(groupBytes);
+            var val = BitConverter.ToInt16(groupBytes,0);
+            return val % 2 != 0; //Odd group
         }
 
         #region OPERATORS

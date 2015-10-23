@@ -31,6 +31,8 @@
     <DefineConstants>TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>bin\Release\EvilDICOM.XML</DocumentationFile>
   </PropertyGroup>
   <PropertyGroup>
     <ApplicationIcon>evilEye.ico</ApplicationIcon>
@@ -49,6 +51,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Anonymization\AnonymizationQue.cs" />
+    <Compile Include="Anonymization\Anonymizers\DateAnonymizer.cs" />
+    <Compile Include="Anonymization\Anonymizers\NameAnonymize.cs" />
+    <Compile Include="Anonymization\Anonymizers\PatientIdAnonymizer.cs" />
+    <Compile Include="Anonymization\Anonymizers\PrivateTagAnonymizer.cs" />
+    <Compile Include="Anonymization\Anonymizers\ProfileAnonymizer.cs" />
+    <Compile Include="Anonymization\Anonymizers\StudyIdAnonymizer.cs" />
+    <Compile Include="Anonymization\Anonymizers\UIDAnonymizer.cs" />
+    <Compile Include="Anonymization\Helpers\DateHelper.cs" />
+    <Compile Include="Anonymization\Interfaces\IAnonymizer.cs" />
+    <Compile Include="Anonymization\Settings\AnonymizationSettings.cs" />
+    <Compile Include="Anonymization\Settings\DateSettings.cs" />
     <Compile Include="Core\DICOMData.cs" />
     <Compile Include="Core\DICOMForge.cs" />
     <Compile Include="Core\DICOMObject.cs" />
