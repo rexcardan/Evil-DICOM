@@ -71,6 +71,23 @@ namespace EvilDICOM.Core.IO.Reading
         }
 
         /// <summary>
+        ///     Read the meta data from the DICOM object
+        /// </summary>
+        /// <param name="filePath">the bytes of the DICOM file</param>
+        /// <returns>a DICOM object containing the metadata elements</returns>
+        public static DICOMObject ReadFileMetadata(byte[] fileBytes)
+        {
+            var syntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN;
+            List<IDICOMElement> metaElements;
+            using (var dr = new DICOMBinaryReader(fileBytes))
+            {
+                DICOMPreambleReader.Read(dr);
+                metaElements = ReadFileMetadata(dr, ref syntax);
+            }
+            return new DICOMObject(metaElements);
+        }
+
+        /// <summary>
         ///     Read explicit VR little endian up to transfer syntax element and determines transfer syntax for rest of elements
         /// </summary>
         /// <param name="dr">the binary reader which is reading the DICOM object</param>

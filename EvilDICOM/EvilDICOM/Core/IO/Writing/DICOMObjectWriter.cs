@@ -10,12 +10,12 @@ namespace EvilDICOM.Core.IO.Writing
             return el.Tag.Group == "0002";
         }
 
-        public static void Write(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d)
+        public static void Write(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d, bool isSequenceItem = false)
         {
             for (int i = 0; i < d.Elements.Count; i++)
             {
                 IDICOMElement el = d.Elements[i];
-                TransferSyntaxHelper.SetSyntax(d,settings.TransferSyntax);
+                if (!isSequenceItem) TransferSyntaxHelper.SetSyntax(d, settings.TransferSyntax);
                 DICOMWriteSettings currentSettings = IsFileMetaGroup(el) ? settings.GetFileMetaSettings() : settings;
                 if (GroupWriter.IsGroupHeader(el))
                 {

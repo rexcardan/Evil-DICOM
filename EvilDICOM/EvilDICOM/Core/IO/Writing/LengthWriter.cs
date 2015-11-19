@@ -2,6 +2,7 @@
 using System.Linq;
 using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Enums;
+using EvilDICOM.Core.IO.Reading;
 
 namespace EvilDICOM.Core.IO.Writing
 {
@@ -36,6 +37,7 @@ namespace EvilDICOM.Core.IO.Writing
                         break;
                     case VREncoding.ExplicitShort:
                         lengthBytes = BitConverter.GetBytes((ushort) length);
+                        if (length > 65536) { throw new ArgumentOutOfRangeException("Length is greater than allowed for explicit VR syntax. Try using implicit VR"); }
                         break;
                     case VREncoding.Implicit:
                         lengthBytes = BitConverter.GetBytes(length);

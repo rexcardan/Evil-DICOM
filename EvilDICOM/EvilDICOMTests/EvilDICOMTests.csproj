@@ -66,10 +66,12 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="SelectionTests.cs" />
+    <Compile Include="SequenceWritingTests.cs" />
     <Compile Include="TagTests.cs" />
     <Compile Include="LengthTests.cs" />
     <Compile Include="ReadTests.cs" />
     <Compile Include="AnonTests.cs" />
+    <Compile Include="ElementWriterTests.cs" />
     <Compile Include="XmlTests.cs" />
   </ItemGroup>
   <ItemGroup>

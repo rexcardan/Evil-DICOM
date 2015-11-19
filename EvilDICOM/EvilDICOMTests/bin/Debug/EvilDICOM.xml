@@ -1311,6 +1311,13 @@
             <param name="filePath">the path to the DICOM file</param>
             <returns>a DICOM object containing the metadata elements</returns>
         </member>
+        <member name="M:EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(System.Byte[])">
+            <summary>
+                Read the meta data from the DICOM object
+            </summary>
+            <param name="filePath">the bytes of the DICOM file</param>
+            <returns>a DICOM object containing the metadata elements</returns>
+        </member>
         <member name="M:EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax@)">
             <summary>
                 Read explicit VR little endian up to transfer syntax element and determines transfer syntax for rest of elements

@@ -31,7 +31,7 @@ namespace EvilDICOM.Core.Tests
             {
                 using (var dw = new DICOMBinaryWriter(stream))
                 {
-                    DICOMElementWriter.Write(dw, DICOMWriteSettings.Default(), vssd);
+                    DICOMElementWriter.Write(dw, DICOMWriteSettings.DefaultExplicit(), vssd);
                     elBytes = stream.ToArray();
                 }
             }

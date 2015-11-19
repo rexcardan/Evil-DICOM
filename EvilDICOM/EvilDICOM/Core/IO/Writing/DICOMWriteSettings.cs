@@ -11,6 +11,15 @@ namespace EvilDICOM.Core.IO.Writing
         {
             return new DICOMWriteSettings
             {
+                TransferSyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN,
+                DoWriteIndefiniteSequences = false
+            };
+        }
+
+        public static DICOMWriteSettings DefaultExplicit()
+        {
+            return new DICOMWriteSettings
+            {
                 TransferSyntax = TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN,
                 DoWriteIndefiniteSequences = false
             };
