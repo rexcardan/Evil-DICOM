@@ -132,6 +132,17 @@
                 The constructor which ininitializes the underlying enumerable collection
             </summary>
         </member>
+        <member name="P:EvilDICOM.Core.DICOMData`1.SingleValue">
+            <summary>
+                Gets and sets a single value for the data of the DICOM element. If the collection contains has more than one data
+                element, only the first is returned. If setting a value, the data is cleared and only a single entry is saved.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.DICOMData`1.MultipicityValue">
+            <summary>
+                A list of the data within the element. This is designed to be accomodate the multiplicity aspect of DICOM data
+            </summary>
+        </member>
         <member name="M:EvilDICOM.Core.DICOMData`1.CreateFromSingle(`0)">
             <summary>
                 Creates a new DICOM Data object from a single data value
@@ -145,17 +156,6 @@
             </summary>
             <param name="dataArray">the data array from which to initialize the DICOM Data object</param>
             <returns></returns>
-        </member>
-        <member name="P:EvilDICOM.Core.DICOMData`1.SingleValue">
-            <summary>
-                Gets and sets a single value for the data of the DICOM element. If the collection contains has more than one data
-                element, only the first is returned. If setting a value, the data is cleared and only a single entry is saved.
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.DICOMData`1.MultipicityValue">
-            <summary>
-                A list of the data within the element. This is designed to be accomodate the multiplicity aspect of DICOM data
-            </summary>
         </member>
         <member name="T:EvilDICOM.Core.DICOMForge">
             <summary>
@@ -179,6 +179,28 @@
             </summary>
             <param name="elements">a list of elements to be included in the object</param>
         </member>
+        <member name="P:EvilDICOM.Core.DICOMObject.Elements">
+            <summary>
+                The list of first level DICOM elements inside this DICOM object
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.DICOMObject.AllElements">
+            <summary>
+                The list of all DICOM elements at every level in the DICOM structure (includes sub-elements of sequences)
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.DICOMObject.AllPublicElements">
+            <summary>
+                The list of all DICOM elements at every level in the DICOM structure (exclude private sequences and their elements)
+            </summary>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.GetAllElement(System.Boolean)">
+            <summary>
+                The list of all DICOM elements at every level in the DICOM structure (includes sub-elements of sequences)
+            </summary>
+            <param name="bExcludePrivate">if exclude private sequences and their elements</param>
+            <returns></returns>
+        </member>
         <member name="M:EvilDICOM.Core.DICOMObject.Add(EvilDICOM.Core.Interfaces.IDICOMElement)">
             <summary>
                 Adds an element to the DICOM object
@@ -188,6 +210,16 @@
         <member name="M:EvilDICOM.Core.DICOMObject.TryGetDataValue``1(EvilDICOM.Core.Element.Tag,System.Object)">
             <summary>
                 Searches for a specific element. If it is found, it returns the data from the element. Otherwise,
+                it will return a provided default value for the element.
+            </summary>
+            <typeparam name="T">the type of data to return</typeparam>
+            <param name="tagToFind">the tag of the element containing the data</param>
+            <param name="defaultValueIfNull">the default value to return if the element is not found</param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.TryGetPublicDataValue``1(EvilDICOM.Core.Element.Tag,System.Object)">
+            <summary>
+                Searches for a specific public element. If it is found, it returns the data from the element. Otherwise,
                 it will return a provided default value for the element.
             </summary>
             <typeparam name="T">the type of data to return</typeparam>
@@ -292,9 +324,23 @@
             <param name="toFind">the tag to be searched</param>
             <returns>one single DICOM element that is first occurence of the tag in the structure</returns>
         </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.FindPublicFirst(System.String)">
+            <summary>
+                Finds the first public element in the entire DICOM structure that has a certain tag
+            </summary>
+            <param name="toFind">the tag to be searched</param>
+            <returns>one single DICOM element that is first occurence of the tag in the structure</returns>
+        </member>
         <member name="M:EvilDICOM.Core.DICOMObject.FindFirst(EvilDICOM.Core.Element.Tag)">
             <summary>
                 Finds the first element in the entire DICOM structure that has a certain tag
+            </summary>
+            <param name="toFind">the tag to be searched</param>
+            <returns>one single DICOM element that is first occurence of the tag in the structure</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.DICOMObject.FindPublicFirst(EvilDICOM.Core.Element.Tag)">
+            <summary>
+                Finds the first public element in the entire DICOM structure that has a certain tag
             </summary>
             <param name="toFind">the tag to be searched</param>
             <returns>one single DICOM element that is first occurence of the tag in the structure</returns>
@@ -335,6 +381,11 @@
             <typeparam name="T">the type of the data the element holds (eg. double[], int, DataTime, etc)</typeparam>
             <param name="element">the instance of the element</param>
         </member>
+        <member name="P:EvilDICOM.Core.DICOMObject.PixelStream">
+            <summary>
+                Grabs the pixel data bytes and sends it as a stream. Returns null if no pixel data element is found.
+            </summary>
+        </member>
         <member name="M:EvilDICOM.Core.DICOMObject.Read(System.String,EvilDICOM.Core.Enums.TransferSyntax)">
              <summary>
                  Reads a DICOM file from a path
@@ -369,21 +420,6 @@
             Writes the DICOM Object to an XML string for visualization and manipluation. Use FromXML() to get back.
             </summary>
             <returns></returns>
-        </member>
-        <member name="P:EvilDICOM.Core.DICOMObject.Elements">
-            <summary>
-                The list of first level DICOM elements inside this DICOM object
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.DICOMObject.AllElements">
-            <summary>
-                The list of all DICOM elements at every level in the DICOM structure (includes sub-elements of sequences)
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.DICOMObject.PixelStream">
-            <summary>
-                Grabs the pixel data bytes and sends it as a stream. Returns null if no pixel data element is found.
-            </summary>
         </member>
         <member name="M:EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)">
             <summary>
@@ -499,39 +535,6 @@
             </summary>
             <typeparam name="T">the data type of the element</typeparam>
         </member>
-        <member name="P:EvilDICOM.Core.Interfaces.IDICOMElement.DData">
-            <summary>
-                The dynamic single value data in the element of the first datum in the array (in the case of multiple datum)
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.Interfaces.IDICOMElement.DData_">
-            <summary>
-                The dynamic data in the element stored in a list of type T
-            </summary>
-        </member>
-        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.ToString">
-            <summary>
-                To string override to visualize tag and vr of element
-            </summary>
-            <returns></returns>
-        </member>
-        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)">
-            <summary>
-                Plumbing method wrap the data in a DICOMData container
-            </summary>
-            <param name="value">the typed data</param>
-        </member>
-        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])">
-            <summary>
-                Plumbing method wrap the data in a DICOMData container
-            </summary>
-            <param name="value">the array of typed data</param>
-        </member>
-        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault">
-            <summary>
-                Plumbing method to get data from the underlying DICOMData object
-            </summary>
-        </member>
         <member name="P:EvilDICOM.Core.Element.AbstractElement`1.VR">
             <summary>
                 The value representation of the element
@@ -568,6 +571,29 @@
             </summary>
         </member>
         <!-- Badly formed XML comment ignored for member "P:EvilDICOM.Core.Element.AbstractElement`1.DData_" -->
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.ToString">
+            <summary>
+                To string override to visualize tag and vr of element
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)">
+            <summary>
+                Plumbing method wrap the data in a DICOMData container
+            </summary>
+            <param name="value">the typed data</param>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])">
+            <summary>
+                Plumbing method wrap the data in a DICOMData container
+            </summary>
+            <param name="value">the array of typed data</param>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault">
+            <summary>
+                Plumbing method to get data from the underlying DICOMData object
+            </summary>
+        </member>
         <member name="T:EvilDICOM.Core.Element.AgeString">
             <summary>
                 Encapsulates the AgeString VR type
@@ -763,6 +789,11 @@
                 Encapsulates the Unknown VR type
             </summary>
         </member>
+        <member name="P:EvilDICOM.Core.Element.Unknown.TransferSyntax">
+            <summary>
+                Used in the try read as method
+            </summary>
+        </member>
         <member name="M:EvilDICOM.Core.Element.Unknown.TryReadAs``1(``0@)">
             <summary>
                 Method used to read out unknown VR types (not in the dictionary).
@@ -771,11 +802,6 @@
             <param name="outValue">the value read</param>
             <param name="tx">the transfer syntax to try (default is Implicit little endian)</param>
             <returns>whether or not the read was successfull</returns>
-        </member>
-        <member name="P:EvilDICOM.Core.Element.Unknown.TransferSyntax">
-            <summary>
-                Used in the try read as method
-            </summary>
         </member>
         <member name="T:EvilDICOM.Core.Element.UnlimitedText">
             <summary>
@@ -946,6 +972,327 @@
             <param name="hexString">the hexadecimal string to be converted</param>
             <returns>an array of bytes representing the hexadecimal string passed in</returns>
         </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetAccessionNumber(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取AccessionNumber
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetOtherPatientName(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取OtherPatientNames属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetPatientAge(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取PatientAge属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetPatientID(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取PatientID属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetPatientName(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取PatientName属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetPatientSex(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取PatientSex属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetStudyDate(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取StudyDate属性，格式:yyyyMMdd
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetStudyTime(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取StudyTime属性，格式：HHmmss.ffffff
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetSeriesNumber(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取SeriesNumber属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetSeriesDescription(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取SeriesDescription属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetSeriesDate(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取SeriesDate属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetSeriesTime(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取SeriesTime属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetModality(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取检查设备类型
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetAcquisitionTime(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取AcquisitionTime属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetRows(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取Rows
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetColumns(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取Columns
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetBitsStored(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取BitsStored属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetImagePositionPatient(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取ImagePositionPatient属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetImageOrientationPatient(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取ImageOrientationPatient属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetImagerPixelSpacing(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取ImagerPixelSpacing属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetPixelSpacing(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取PixelSpacing属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetPhotometricInterpretation(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取 PhotometricInterpretation属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetRescaleIntercept(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取RescaleIntercept属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetRescaleSlope(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取RescaleSlope属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetSliceLocation(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取SliceLocation属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetSliceThickness(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取SliceThickness属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetStationName(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取StationName属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetWindowCenter(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取WindowCenter属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetWindowWidth(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取WindowWidth属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetNumberOfFrames(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取NumberOfFrames属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetFrameTime(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取各帧之间的时间间隔
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetInstanceNumber(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取InstanceNumber属性
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetInstitutionName(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取 InstitutionName属性值
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetSOPInstanceUID(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取SOPInstanceUID的属性值
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetSeriesInstanceUID(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取SeriesInstanceUID的属性值
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetStudyInstanceUID(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取StudyInstanceUID的属性值
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetPixelRepresentation(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取PixelRepresentation属性值
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetHighBit(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取HighBit属性值
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetBitsAllocated(EvilDICOM.Core.DICOMObject)">
+            <summary>
+            获取BitsAllocated属性值
+            </summary>
+            <param name="dcm"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetDateTypeTag(EvilDICOM.Core.DICOMObject,EvilDICOM.Core.Element.Tag)">
+            <summary>
+            获取日期类型的属性值
+            </summary>
+            <param name="dcm"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetTimeTypeTag(EvilDICOM.Core.DICOMObject,EvilDICOM.Core.Element.Tag)">
+            <summary>
+            获取时间类型的属性值
+            </summary>
+            <param name="dcm"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetInt32TypeTag(EvilDICOM.Core.DICOMObject,EvilDICOM.Core.Element.Tag)">
+            <summary>
+            获取Int32类型的属性值
+            </summary>
+            <param name="dcm"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetUInt16TypeTag(EvilDICOM.Core.DICOMObject,EvilDICOM.Core.Element.Tag)">
+            <summary>
+            获取UInt16类型的属性值
+            </summary>
+            <param name="dcm"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetDoubleTypeTag(EvilDICOM.Core.DICOMObject,EvilDICOM.Core.Element.Tag)">
+            <summary>
+            获取Double类型的属性值
+            </summary>
+            <param name="dcm"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Helpers.DicomInfoHelper.GetStringTypeTag(EvilDICOM.Core.DICOMObject,EvilDICOM.Core.Element.Tag)">
+            <summary>
+            获取String类型的属性值
+            </summary>
+            <param name="dcm"></param>
+            <param name="tag"></param>
+            <returns></returns>
+        </member>
         <member name="F:EvilDICOM.Core.Helpers.TransferSyntaxHelper.IMPLICIT_VR_LITTLE_ENDIAN">
             <summary>
                 Unique ID that represents an implicit VR with little endian encoding
@@ -1042,6 +1389,28 @@
             This is a temporary class until .NET 4.6 is released with Vector3 support. Borrowed from my Cardan.Math library
             </summary>
         </member>
+        <member name="P:EvilDICOM.Core.Helpers.Vector3.Item(System.Int64)">
+            <summary>
+                Allows the vector class elements to be accessed by index
+            </summary>
+            <param name="index">the index of the element to return</param>
+            <returns>the element at the specified index</returns>
+        </member>
+        <member name="P:EvilDICOM.Core.Helpers.Vector3.Zeroes">
+            <summary>
+                A static zero value vector creator. Returns a vector3 containing only zero value elements.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Helpers.Vector3.Infinite">
+            <summary>
+                A static infinite value vector creator. Returns a vector3 containing positive infinite value elements.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Helpers.Vector3.NaN">
+            <summary>
+                A static infinite value vector creator. Returns a vector3 containing NaN value elements.
+            </summary>
+        </member>
         <member name="M:EvilDICOM.Core.Helpers.Vector3.Copy">
             <summary>
                 Creates a copy of this vector
@@ -1069,26 +1438,14 @@
             <param name="v2">the second vector</param>
             <returns>The scalar product of two vectors</returns>
         </member>
-        <member name="P:EvilDICOM.Core.Helpers.Vector3.Item(System.Int64)">
+        <member name="P:EvilDICOM.Core.Interfaces.IDICOMElement.DData">
             <summary>
-                Allows the vector class elements to be accessed by index
-            </summary>
-            <param name="index">the index of the element to return</param>
-            <returns>the element at the specified index</returns>
-        </member>
-        <member name="P:EvilDICOM.Core.Helpers.Vector3.Zeroes">
-            <summary>
-                A static zero value vector creator. Returns a vector3 containing only zero value elements.
+                The dynamic single value data in the element of the first datum in the array (in the case of multiple datum)
             </summary>
         </member>
-        <member name="P:EvilDICOM.Core.Helpers.Vector3.Infinite">
+        <member name="P:EvilDICOM.Core.Interfaces.IDICOMElement.DData_">
             <summary>
-                A static infinite value vector creator. Returns a vector3 containing positive infinite value elements.
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.Helpers.Vector3.NaN">
-            <summary>
-                A static infinite value vector creator. Returns a vector3 containing NaN value elements.
+                The dynamic data in the element stored in a list of type T
             </summary>
         </member>
         <member name="T:EvilDICOM.Core.Interfaces.IEncoderDecoder">
@@ -1187,6 +1544,16 @@
             </summary>
             <param name="byteStream">the byte array to be read</param>
         </member>
+        <member name="P:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamPosition">
+            <summary>
+                Returns the current position of the byte stream
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamLength">
+            <summary>
+                Returnts the length of the byte stream
+            </summary>
+        </member>
         <member name="M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes(System.Int32)">
             <summary>
                 Reads the specified number of bytes
@@ -1227,16 +1594,6 @@
             </summary>
             <param name="bytePattern">the pattern to be found</param>
             <returns>the index of the pattern</returns>
-        </member>
-        <member name="P:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamPosition">
-            <summary>
-                Returns the current position of the byte stream
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamLength">
-            <summary>
-                Returnts the length of the byte stream
-            </summary>
         </member>
         <member name="T:EvilDICOM.Core.IO.Reading.DICOMElementReader">
             <summary>
