@@ -4,15 +4,22 @@ namespace EvilDICOM.Core.IO.Data
 {
     public class DICOMString
     {
+        private static Encoding _encoder = Encoding.UTF8;
+
+        public static void SetReaderEncoder(string encoderString)
+        {
+            _encoder = Encoding.GetEncoding(encoderString);
+        }
+
         public static string Read(byte[] data)
         {
-            Encoding enc = Encoding.UTF8;
+            Encoding enc = _encoder;
             return enc.GetString(data).TrimEnd(new[] {'\0'}).TrimEnd(new[] {' '});
         }
 
         public static byte[] Write(string data)
         {
-            Encoding ascii = Encoding.UTF8;
+            Encoding ascii = _encoder;
 
             if (IsEven(data))
             {
