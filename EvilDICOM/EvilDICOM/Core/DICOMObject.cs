@@ -57,24 +57,50 @@ namespace EvilDICOM.Core
         {
             get
             {
-                var allElements = new List<IDICOMElement>();
-                foreach (IDICOMElement elem in Elements)
+                return GetAllElement();
+            }
+        }
+
+        /// <summary>
+        ///     The list of all DICOM elements at every level in the DICOM structure (exclude private sequences and their elements)
+        /// </summary>
+        public List<IDICOMElement> AllPublicElements
+        {
+            get
+            {
+                return GetAllElement(true);
+            }
+        }
+
+        /// <summary>
+        ///     The list of all DICOM elements at every level in the DICOM structure (includes sub-elements of sequences)
+        /// </summary>
+        /// <param name="bExcludePrivate">if exclude private sequences and their elements</param>
+        /// <returns></returns>
+        private List<IDICOMElement> GetAllElement(bool bExcludePrivate = false)
+        {
+            var allElements = new List<IDICOMElement>();
+            foreach (IDICOMElement elem in Elements)
+            {
+                if (bExcludePrivate && elem.Tag.IsPrivate())
                 {
-                    allElements.Add(elem);
-                    if (elem is Sequence)
+                    continue;
+                }
+
+                allElements.Add(elem);
+                if (elem is Sequence)
+                {
+                    var s = elem as Sequence;
+                    foreach (DICOMObject d in s.Items)
                     {
-                        var s = elem as Sequence;
-                        foreach (DICOMObject d in s.Items)
+                        foreach (IDICOMElement elem2 in d.AllElements)
                         {
-                            foreach (IDICOMElement elem2 in d.AllElements)
-                            {
-                                allElements.Add(elem2);
-                            }
+                            allElements.Add(elem2);
                         }
                     }
                 }
-                return allElements;
             }
+            return allElements;
         }
 
         /// <summary>
@@ -98,6 +124,33 @@ namespace EvilDICOM.Core
         public DICOMData<T> TryGetDataValue<T>(Tag tagToFind, object defaultValueIfNull)
         {
             var found = FindFirst(tagToFind) as AbstractElement<T>;
+            if (found != null)
+            {
+                return found.DataContainer;
+            }
+            var data = new DICOMData<T>();
+            if (typeof(T).IsArray)
+            {
+                data.MultipicityValue = ((T[])defaultValueIfNull).ToList();
+            }
+            else
+            {
+                data.SingleValue = (T)defaultValueIfNull;
+            }
+            return data;
+        }
+
+        /// <summary>
+        ///     Searches for a specific public element. If it is found, it returns the data from the element. Otherwise,
+        ///     it will return a provided default value for the element.
+        /// </summary>
+        /// <typeparam name="T">the type of data to return</typeparam>
+        /// <param name="tagToFind">the tag of the element containing the data</param>
+        /// <param name="defaultValueIfNull">the default value to return if the element is not found</param>
+        /// <returns></returns>
+        public DICOMData<T> TryGetPublicDataValue<T>(Tag tagToFind, object defaultValueIfNull)
+        {
+            var found = FindPublicFirst(tagToFind) as AbstractElement<T>;
             if (found != null)
             {
                 return found.DataContainer;
@@ -298,6 +351,17 @@ namespace EvilDICOM.Core
         }
 
         /// <summary>
+        ///     Finds the first public element in the entire DICOM structure that has a certain tag
+        /// </summary>
+        /// <param name="toFind">the tag to be searched</param>
+        /// <returns>one single DICOM element that is first occurence of the tag in the structure</returns>
+        public IDICOMElement FindPublicFirst(string toFind)
+        {
+            IDICOMElement found =  AllPublicElements.FirstOrDefault(el => el.Tag.CompleteID == toFind);
+            return found;
+        }
+
+        /// <summary>
         ///     Finds the first element in the entire DICOM structure that has a certain tag
         /// </summary>
         /// <param name="toFind">the tag to be searched</param>
@@ -305,6 +369,16 @@ namespace EvilDICOM.Core
         public IDICOMElement FindFirst(Tag toFind)
         {
             return FindFirst(toFind.CompleteID);
+        }
+
+        /// <summary>
+        ///     Finds the first public element in the entire DICOM structure that has a certain tag
+        /// </summary>
+        /// <param name="toFind">the tag to be searched</param>
+        /// <returns>one single DICOM element that is first occurence of the tag in the structure</returns>
+        public IDICOMElement FindPublicFirst(Tag toFind)
+        {
+            return FindPublicFirst(toFind.CompleteID);
         }
 
         /// <summary>

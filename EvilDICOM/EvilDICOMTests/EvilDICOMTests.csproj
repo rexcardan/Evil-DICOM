@@ -54,6 +54,7 @@
     <Compile Include="DecimalStringTests.cs" />
     <Compile Include="DICOMManipulateTests.cs" />
     <Compile Include="DICOMWriteTests.cs" />
+    <Compile Include="ElementReadTests.cs" />
     <Compile Include="IPAddressHelper.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
     <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
@@ -82,6 +83,7 @@
     <None Include="Resources\explicitLittleJPEG.dcm" />
     <None Include="Resources\implicitLittleEndian.dcm" />
     <None Include="Resources\MultpleFL.dcm" />
+    <None Include="Resources\PrivateElements.dcm" />
     <None Include="Resources\RLELossless.dcm" />
   </ItemGroup>
   <ItemGroup>

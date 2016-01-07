@@ -83,5 +83,22 @@ namespace EvilDICOM.Core
             }
             return SingleValue != null ? SingleValue.ToString() : "";
         }
+
+        public string ToString(string split)
+        {
+            if (string.IsNullOrEmpty(split))
+            {
+                split = "\\";
+            }
+
+            if (MultipicityValue.Count > 1)
+            {
+                return string.Join(split, MultipicityValue.ToArray());
+            }
+            else
+            {
+                return SingleValue != null ? SingleValue.ToString() : "";
+            }
+        }
     }
 }
