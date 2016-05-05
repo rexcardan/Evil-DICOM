@@ -1,0 +1,36 @@
+items:
+- uid: EvilDICOM.RT
+  id: EvilDICOM.RT
+  children:
+  - EvilDICOM.RT.DoseMatrix
+  - EvilDICOM.RT.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.RT
+  fullName: EvilDICOM.RT
+  type: Namespace
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.RT.DoseMatrix
+  parent: EvilDICOM.RT
+  isExternal: false
+  name: DoseMatrix
+  fullName: EvilDICOM.RT.DoseMatrix
+- uid: EvilDICOM.RT.DoseValue
+  parent: EvilDICOM.RT
+  isExternal: false
+  name: DoseValue
+  fullName: EvilDICOM.RT.DoseValue
+- uid: EvilDICOM.RT
+  isExternal: false
+  name: EvilDICOM.RT
+  fullName: EvilDICOM.RT

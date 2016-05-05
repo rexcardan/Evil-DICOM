@@ -1,0 +1,435 @@
+items:
+- uid: EvilDICOM.Network.Helpers.FileWriterSCP
+  id: FileWriterSCP
+  parent: EvilDICOM.Network.Helpers
+  children:
+  - EvilDICOM.Network.Helpers.FileWriterSCP.#ctor(EvilDICOM.Network.Entity,System.String)
+  langs:
+  - csharp
+  - vb
+  name: FileWriterSCP
+  fullName: EvilDICOM.Network.Helpers.FileWriterSCP
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Helpers/FileWriterSCP.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Helpers/FileWriterSCP.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Helpers
+  summary: A SCP that writes incoming files to a specified location
+  example: []
+  syntax:
+    content: 'public class FileWriterSCP : DICOMSCP'
+    content.vb: Public Class FileWriterSCP Inherits DICOMSCP
+  inheritance:
+  - System.Object
+  - EvilDICOM.Network.DICOMServiceClass
+  - EvilDICOM.Network.DICOMSCP
+  inheritedMembers:
+  - EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations(System.Boolean)
+  - EvilDICOM.Network.DICOMSCP.Stop
+  - EvilDICOM.Network.DICOMSCP.IsListening
+  - EvilDICOM.Network.DICOMSCP.SCPStopped
+  - EvilDICOM.Network.DICOMSCP.RaisedSCPStopped
+  - EvilDICOM.Network.DICOMServiceClass.AssociationService
+  - EvilDICOM.Network.DICOMServiceClass.DIMSEService
+  - EvilDICOM.Network.DICOMServiceClass.ApplicationEntity
+  - EvilDICOM.Network.DICOMServiceClass.SupportedTransferSyntaxes
+  - EvilDICOM.Network.DICOMServiceClass.SupportedAbstractSyntaxes
+  - EvilDICOM.Network.DICOMServiceClass.Logger
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Network.Helpers.FileWriterSCP.#ctor(EvilDICOM.Network.Entity,System.String)
+  id: '#ctor(EvilDICOM.Network.Entity,System.String)'
+  parent: EvilDICOM.Network.Helpers.FileWriterSCP
+  langs:
+  - csharp
+  - vb
+  name: FileWriterSCP(Entity, String)
+  fullName: EvilDICOM.Network.Helpers.FileWriterSCP.FileWriterSCP(EvilDICOM.Network.Entity, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Helpers/FileWriterSCP.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Helpers/FileWriterSCP.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Helpers
+  syntax:
+    content: public FileWriterSCP(Entity ae, string storageLocation)
+    content.vb: Public Sub New(ae As Entity, storageLocation As String)
+    parameters:
+    - id: ae
+      type: EvilDICOM.Network.Entity
+    - id: storageLocation
+      type: System.String
+references:
+- uid: EvilDICOM.Network.Helpers
+  isExternal: false
+  name: EvilDICOM.Network.Helpers
+  fullName: EvilDICOM.Network.Helpers
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.DICOMServiceClass
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMServiceClass
+  fullName: EvilDICOM.Network.DICOMServiceClass
+- uid: EvilDICOM.Network.DICOMSCP
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMSCP
+  fullName: EvilDICOM.Network.DICOMSCP
+- uid: EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations(System.Boolean)
+  parent: EvilDICOM.Network.DICOMSCP
+  isExternal: true
+  name: ListenForIncomingAssociations(Boolean)
+  fullName: EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations(System.Boolean)
+  spec.csharp:
+  - uid: EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations(System.Boolean)
+    name: ListenForIncomingAssociations
+    fullName: EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations
+  - name: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations(System.Boolean)
+    name: ListenForIncomingAssociations
+    fullName: EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations
+  - name: (
+    fullName: (
+  - uid: System.Boolean
+    name: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Network.DICOMSCP.Stop
+  parent: EvilDICOM.Network.DICOMSCP
+  isExternal: false
+  name: Stop()
+  fullName: EvilDICOM.Network.DICOMSCP.Stop()
+  spec.csharp:
+  - uid: EvilDICOM.Network.DICOMSCP.Stop
+    name: Stop
+    fullName: EvilDICOM.Network.DICOMSCP.Stop
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.DICOMSCP.Stop
+    name: Stop
+    fullName: EvilDICOM.Network.DICOMSCP.Stop
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Network.DICOMSCP.IsListening
+  parent: EvilDICOM.Network.DICOMSCP
+  isExternal: false
+  name: IsListening
+  fullName: EvilDICOM.Network.DICOMSCP.IsListening
+- uid: EvilDICOM.Network.DICOMSCP.SCPStopped
+  parent: EvilDICOM.Network.DICOMSCP
+  isExternal: false
+  name: SCPStopped
+  fullName: EvilDICOM.Network.DICOMSCP.SCPStopped
+- uid: EvilDICOM.Network.DICOMSCP.RaisedSCPStopped
+  parent: EvilDICOM.Network.DICOMSCP
+  isExternal: false
+  name: RaisedSCPStopped()
+  fullName: EvilDICOM.Network.DICOMSCP.RaisedSCPStopped()
+  spec.csharp:
+  - uid: EvilDICOM.Network.DICOMSCP.RaisedSCPStopped
+    name: RaisedSCPStopped
+    fullName: EvilDICOM.Network.DICOMSCP.RaisedSCPStopped
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.DICOMSCP.RaisedSCPStopped
+    name: RaisedSCPStopped
+    fullName: EvilDICOM.Network.DICOMSCP.RaisedSCPStopped
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Network.DICOMServiceClass.AssociationService
+  parent: EvilDICOM.Network.DICOMServiceClass
+  isExternal: false
+  name: AssociationService
+  fullName: EvilDICOM.Network.DICOMServiceClass.AssociationService
+- uid: EvilDICOM.Network.DICOMServiceClass.DIMSEService
+  parent: EvilDICOM.Network.DICOMServiceClass
+  isExternal: false
+  name: DIMSEService
+  fullName: EvilDICOM.Network.DICOMServiceClass.DIMSEService
+- uid: EvilDICOM.Network.DICOMServiceClass.ApplicationEntity
+  parent: EvilDICOM.Network.DICOMServiceClass
+  isExternal: false
+  name: ApplicationEntity
+  fullName: EvilDICOM.Network.DICOMServiceClass.ApplicationEntity
+- uid: EvilDICOM.Network.DICOMServiceClass.SupportedTransferSyntaxes
+  parent: EvilDICOM.Network.DICOMServiceClass
+  isExternal: false
+  name: SupportedTransferSyntaxes
+  fullName: EvilDICOM.Network.DICOMServiceClass.SupportedTransferSyntaxes
+- uid: EvilDICOM.Network.DICOMServiceClass.SupportedAbstractSyntaxes
+  parent: EvilDICOM.Network.DICOMServiceClass
+  isExternal: false
+  name: SupportedAbstractSyntaxes
+  fullName: EvilDICOM.Network.DICOMServiceClass.SupportedAbstractSyntaxes
+- uid: EvilDICOM.Network.DICOMServiceClass.Logger
+  parent: EvilDICOM.Network.DICOMServiceClass
+  isExternal: false
+  name: Logger
+  fullName: EvilDICOM.Network.DICOMServiceClass.Logger
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+- uid: EvilDICOM.Network.Entity
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Entity
+  fullName: EvilDICOM.Network.Entity
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String

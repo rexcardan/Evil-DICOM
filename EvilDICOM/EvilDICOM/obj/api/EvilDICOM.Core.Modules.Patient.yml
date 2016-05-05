@@ -1,0 +1,529 @@
+items:
+- uid: EvilDICOM.Core.Modules.Patient
+  id: Patient
+  parent: EvilDICOM.Core.Modules
+  children:
+  - EvilDICOM.Core.Modules.Patient.BirthDate
+  - EvilDICOM.Core.Modules.Patient.Elements
+  - EvilDICOM.Core.Modules.Patient.ID
+  - EvilDICOM.Core.Modules.Patient.Name
+  - EvilDICOM.Core.Modules.Patient.Sex
+  langs:
+  - csharp
+  - vb
+  name: Patient
+  fullName: EvilDICOM.Core.Modules.Patient
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: 'public class Patient : IIOD'
+    content.vb: Public Class Patient Implements IIOD
+  inheritance:
+  - System.Object
+  implements:
+  - EvilDICOM.Core.Interfaces.IIOD
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Core.Modules.Patient.Name
+  id: Name
+  parent: EvilDICOM.Core.Modules.Patient
+  langs:
+  - csharp
+  - vb
+  name: Name
+  fullName: EvilDICOM.Core.Modules.Patient.Name
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public string Name { get; set; }
+    content.vb: Public Property Name As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Core.Modules.Patient.ID
+  id: ID
+  parent: EvilDICOM.Core.Modules.Patient
+  langs:
+  - csharp
+  - vb
+  name: ID
+  fullName: EvilDICOM.Core.Modules.Patient.ID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public string ID { get; set; }
+    content.vb: Public Property ID As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Core.Modules.Patient.BirthDate
+  id: BirthDate
+  parent: EvilDICOM.Core.Modules.Patient
+  langs:
+  - csharp
+  - vb
+  name: BirthDate
+  fullName: EvilDICOM.Core.Modules.Patient.BirthDate
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public DateTime? BirthDate { get; set; }
+    content.vb: Public Property BirthDate As Date?
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+- uid: EvilDICOM.Core.Modules.Patient.Sex
+  id: Sex
+  parent: EvilDICOM.Core.Modules.Patient
+  langs:
+  - csharp
+  - vb
+  name: Sex
+  fullName: EvilDICOM.Core.Modules.Patient.Sex
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+    startLine: 33
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public string Sex { get; set; }
+    content.vb: Public Property Sex As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Core.Modules.Patient.Elements
+  id: Elements
+  parent: EvilDICOM.Core.Modules.Patient
+  langs:
+  - csharp
+  - vb
+  name: Elements
+  fullName: EvilDICOM.Core.Modules.Patient.Elements
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+    startLine: 39
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public List<IDICOMElement> Elements { get; }
+    content.vb: Public ReadOnly Property Elements As List(Of IDICOMElement)
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+references:
+- uid: EvilDICOM.Core.Modules
+  isExternal: false
+  name: EvilDICOM.Core.Modules
+  fullName: EvilDICOM.Core.Modules
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Interfaces.IIOD
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IIOD
+  fullName: EvilDICOM.Core.Interfaces.IIOD
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String
+- uid: System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  fullname.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Nullable`1
+  parent: System
+  isExternal: true
+  name: Nullable<T>
+  fullName: System.Nullable<T>
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<IDICOMElement>
+  fullName: System.Collections.Generic.List<EvilDICOM.Core.Interfaces.IDICOMElement>
+  fullname.vb: System.Collections.Generic.List(Of EvilDICOM.Core.Interfaces.IDICOMElement)
+  name.vb: List(Of IDICOMElement)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  parent: System.Collections.Generic
+  isExternal: true
+  name: List<T>
+  fullName: System.Collections.Generic.List<T>
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  fullName: System.Collections.Generic

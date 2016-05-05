@@ -1,0 +1,394 @@
+items:
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSE
+  id: AbstractDIMSE
+  parent: EvilDICOM.Network.DIMSE
+  children:
+  - EvilDICOM.Network.DIMSE.AbstractDIMSE.Data
+  - EvilDICOM.Network.DIMSE.AbstractDIMSE.HasData
+  langs:
+  - csharp
+  - vb
+  name: AbstractDIMSE
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSE
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSE.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSE.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: 'public abstract class AbstractDIMSE : AbstractDIMSEBase, IIOD'
+    content.vb: Public MustInherit Class AbstractDIMSE Inherits AbstractDIMSEBase Implements IIOD
+  inheritance:
+  - System.Object
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  implements:
+  - EvilDICOM.Core.Interfaces.IIOD
+  inheritedMembers:
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase._commandField
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase._dataSetType
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase._groupLength
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase._affectedSOPClassUID
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.Elements
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSE.HasData
+  id: HasData
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSE
+  langs:
+  - csharp
+  - vb
+  name: HasData
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSE.HasData
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSE.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSE.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: public bool HasData { get; }
+    content.vb: Public ReadOnly Property HasData As Boolean
+    parameters: []
+    return:
+      type: System.Boolean
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSE.Data
+  id: Data
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSE
+  langs:
+  - csharp
+  - vb
+  name: Data
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSE.Data
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSE.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSE.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: public DICOMObject Data { get; set; }
+    content.vb: Public Property Data As DICOMObject
+    parameters: []
+    return:
+      type: EvilDICOM.Core.DICOMObject
+references:
+- uid: EvilDICOM.Network.DIMSE
+  isExternal: false
+  name: EvilDICOM.Network.DIMSE
+  fullName: EvilDICOM.Network.DIMSE
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  parent: EvilDICOM.Network.DIMSE
+  isExternal: false
+  name: AbstractDIMSEBase
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+- uid: EvilDICOM.Core.Interfaces.IIOD
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IIOD
+  fullName: EvilDICOM.Core.Interfaces.IIOD
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._commandField
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  isExternal: false
+  name: _commandField
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._commandField
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._dataSetType
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  isExternal: false
+  name: _dataSetType
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._dataSetType
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._groupLength
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  isExternal: false
+  name: _groupLength
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._groupLength
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._affectedSOPClassUID
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  isExternal: false
+  name: _affectedSOPClassUID
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._affectedSOPClassUID
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  isExternal: false
+  name: AffectedSOPClassUID
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  isExternal: false
+  name: GroupLength
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  isExternal: false
+  name: CommandField
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  isExternal: false
+  name: DataSetType
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.Elements
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  isExternal: false
+  name: Elements
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.Elements
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  fullName: System.Boolean
+- uid: EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  fullName: EvilDICOM.Core

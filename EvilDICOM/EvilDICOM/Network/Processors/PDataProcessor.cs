@@ -101,13 +101,13 @@ namespace EvilDICOM.Network.Processors
             return ctx != null ? TransferSyntaxHelper.GetSyntax(ctx.TransferSyntaxes.First()) : TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN;
         }
 
-        private static DICOMObject GetCommandObject(List<PDataTF> pDatas)
+        public static DICOMObject GetCommandObject(List<PDataTF> pDatas)
         {
             byte[] commandBytes = DIMSEReader.MergePDataTFData(pDatas);
             return DIMSEReader.CreateDICOMObject(commandBytes);
         }
 
-        private static DICOMObject GetDataObject(List<PDataTF> pDatas, TransferSyntax syntax)
+        public static DICOMObject GetDataObject(List<PDataTF> pDatas, TransferSyntax syntax)
         {
             byte[] dicomBytes = DIMSEReader.MergePDataTFData(pDatas);
             return DIMSEReader.CreateDICOMObject(dicomBytes, syntax);

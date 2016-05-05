@@ -1,0 +1,2797 @@
+items:
+- uid: EvilDICOM.Core.DICOMObject
+  id: DICOMObject
+  parent: EvilDICOM.Core
+  children:
+  - EvilDICOM.Core.DICOMObject.#ctor
+  - EvilDICOM.Core.DICOMObject.#ctor(System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement})
+  - EvilDICOM.Core.DICOMObject.Add(EvilDICOM.Core.Interfaces.IDICOMElement)
+  - EvilDICOM.Core.DICOMObject.AllElements
+  - EvilDICOM.Core.DICOMObject.Elements
+  - EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Element.Tag)
+  - EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Element.Tag[])
+  - EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Enums.VR)
+  - EvilDICOM.Core.DICOMObject.FindAll(System.String)
+  - EvilDICOM.Core.DICOMObject.FindAll(System.String[])
+  - EvilDICOM.Core.DICOMObject.FindAll``1
+  - EvilDICOM.Core.DICOMObject.FindFirst(EvilDICOM.Core.Element.Tag)
+  - EvilDICOM.Core.DICOMObject.FindFirst(System.String)
+  - EvilDICOM.Core.DICOMObject.FromXML(System.String)
+  - EvilDICOM.Core.DICOMObject.GetBytes(EvilDICOM.Core.IO.Writing.DICOMWriteSettings)
+  - EvilDICOM.Core.DICOMObject.GetSelector
+  - EvilDICOM.Core.DICOMObject.GetUnknownTagAs``1(EvilDICOM.Core.Element.Tag)
+  - EvilDICOM.Core.DICOMObject.GetUnknownTagAs``1(System.String)
+  - EvilDICOM.Core.DICOMObject.PixelStream
+  - EvilDICOM.Core.DICOMObject.Read(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  - EvilDICOM.Core.DICOMObject.Read(System.String,EvilDICOM.Core.Enums.TransferSyntax)
+  - EvilDICOM.Core.DICOMObject.Remove(EvilDICOM.Core.Element.Tag)
+  - EvilDICOM.Core.DICOMObject.Remove(System.String)
+  - EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject})
+  - EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.Element.Tag})
+  - EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Byte})
+  - EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Double})
+  - EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Int16})
+  - EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Int32})
+  - EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}})
+  - EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Single})
+  - EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.String})
+  - EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.UInt16})
+  - EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.UInt32})
+  - EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Interfaces.IDICOMElement)
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject})
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.Element.Tag})
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Byte})
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Double})
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Int16})
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Int32})
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}})
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.Double}})
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.Single}})
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Single})
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.String})
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.UInt16})
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.UInt32})
+  - EvilDICOM.Core.DICOMObject.ReplaceOrAdd``1(EvilDICOM.Core.Element.AbstractElement{``0})
+  - EvilDICOM.Core.DICOMObject.SOPClass
+  - EvilDICOM.Core.DICOMObject.ToString
+  - EvilDICOM.Core.DICOMObject.ToXML
+  - EvilDICOM.Core.DICOMObject.TryGetDataValue``1(EvilDICOM.Core.Element.Tag,System.Object)
+  - EvilDICOM.Core.DICOMObject.TrySetDataValue``1(EvilDICOM.Core.Element.Tag,``0)
+  - EvilDICOM.Core.DICOMObject.TrySetDataValue``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
+  - EvilDICOM.Core.DICOMObject.Write(System.String,EvilDICOM.Core.IO.Writing.DICOMWriteSettings)
+  langs:
+  - csharp
+  - vb
+  name: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: >-
+    The DICOM object is a container for DICOM elements. It contains methods for finding elements easily from within the
+
+    structure.
+  example: []
+  syntax:
+    content: public class DICOMObject
+    content.vb: Public Class DICOMObject
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Core.DICOMObject.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: DICOMObject()
+  fullName: EvilDICOM.Core.DICOMObject.DICOMObject()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Constructor no parameters
+  example: []
+  syntax:
+    content: public DICOMObject()
+    content.vb: Public Sub New
+- uid: EvilDICOM.Core.DICOMObject.#ctor(System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement})
+  id: '#ctor(System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement})'
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: DICOMObject(List<IDICOMElement>)
+  name.vb: DICOMObject(List(Of IDICOMElement))
+  fullName: EvilDICOM.Core.DICOMObject.DICOMObject(System.Collections.Generic.List<EvilDICOM.Core.Interfaces.IDICOMElement>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.DICOMObject(System.Collections.Generic.List(Of EvilDICOM.Core.Interfaces.IDICOMElement))
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 37
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Contructor with elements
+  example: []
+  syntax:
+    content: public DICOMObject(List<IDICOMElement> elements)
+    content.vb: Public Sub New(elements As List(Of IDICOMElement))
+    parameters:
+    - id: elements
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+      description: a list of elements to be included in the object
+- uid: EvilDICOM.Core.DICOMObject.Elements
+  id: Elements
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Elements
+  fullName: EvilDICOM.Core.DICOMObject.Elements
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 46
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: The list of first level DICOM elements inside this DICOM object
+  example: []
+  syntax:
+    content: public List<IDICOMElement> Elements { get; set; }
+    content.vb: Public Property Elements As List(Of IDICOMElement)
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+- uid: EvilDICOM.Core.DICOMObject.AllElements
+  id: AllElements
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: AllElements
+  fullName: EvilDICOM.Core.DICOMObject.AllElements
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 55
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: The list of all DICOM elements at every level in the DICOM structure (includes sub-elements of sequences)
+  example: []
+  syntax:
+    content: public List<IDICOMElement> AllElements { get; }
+    content.vb: Public ReadOnly Property AllElements As List(Of IDICOMElement)
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+- uid: EvilDICOM.Core.DICOMObject.Add(EvilDICOM.Core.Interfaces.IDICOMElement)
+  id: Add(EvilDICOM.Core.Interfaces.IDICOMElement)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Add(IDICOMElement)
+  fullName: EvilDICOM.Core.DICOMObject.Add(EvilDICOM.Core.Interfaces.IDICOMElement)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 83
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Adds an element to the DICOM object
+  example: []
+  syntax:
+    content: public void Add(IDICOMElement el)
+    content.vb: Public Sub Add(el As IDICOMElement)
+    parameters:
+    - id: el
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: a DICOM element to be added
+- uid: EvilDICOM.Core.DICOMObject.TryGetDataValue``1(EvilDICOM.Core.Element.Tag,System.Object)
+  id: TryGetDataValue``1(EvilDICOM.Core.Element.Tag,System.Object)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: TryGetDataValue<T>(Tag, Object)
+  name.vb: TryGetDataValue(Of T)(Tag, Object)
+  fullName: EvilDICOM.Core.DICOMObject.TryGetDataValue<T>(EvilDICOM.Core.Element.Tag, System.Object)
+  fullName.vb: EvilDICOM.Core.DICOMObject.TryGetDataValue(Of T)(EvilDICOM.Core.Element.Tag, System.Object)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 97
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: >-
+    Searches for a specific element. If it is found, it returns the data from the element. Otherwise,
+
+    it will return a provided default value for the element.
+  example: []
+  syntax:
+    content: public DICOMData<T> TryGetDataValue<T>(Tag tagToFind, object defaultValueIfNull)
+    content.vb: Public Function TryGetDataValue(Of T)(tagToFind As Tag, defaultValueIfNull As Object) As DICOMData(Of T)
+    parameters:
+    - id: tagToFind
+      type: EvilDICOM.Core.Element.Tag
+      description: the tag of the element containing the data
+    - id: defaultValueIfNull
+      type: System.Object
+      description: the default value to return if the element is not found
+    typeParameters:
+    - id: T
+      description: the type of data to return
+    return:
+      type: EvilDICOM.Core.DICOMData{{T}}
+      description: 
+- uid: EvilDICOM.Core.DICOMObject.TrySetDataValue``1(EvilDICOM.Core.Element.Tag,``0)
+  id: TrySetDataValue``1(EvilDICOM.Core.Element.Tag,``0)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: TrySetDataValue<T>(Tag, T)
+  name.vb: TrySetDataValue(Of T)(Tag, T)
+  fullName: EvilDICOM.Core.DICOMObject.TrySetDataValue<T>(EvilDICOM.Core.Element.Tag, T)
+  fullName.vb: EvilDICOM.Core.DICOMObject.TrySetDataValue(Of T)(EvilDICOM.Core.Element.Tag, T)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 124
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: >-
+    Searches for a specific element (first instance). If it is found, it sets the data for this element and returns
+
+    true, otherwise returns false;
+  example: []
+  syntax:
+    content: public bool TrySetDataValue<T>(Tag tagToFind, T data)
+    content.vb: Public Function TrySetDataValue(Of T)(tagToFind As Tag, data As T) As Boolean
+    parameters:
+    - id: tagToFind
+      type: EvilDICOM.Core.Element.Tag
+      description: the tag of the element containing the data
+    - id: data
+      type: '{T}'
+      description: the data to set in this element
+    typeParameters:
+    - id: T
+      description: the type of data to return
+    return:
+      type: System.Boolean
+      description: a boolean indicating whether or not the operation was successful
+- uid: EvilDICOM.Core.DICOMObject.TrySetDataValue``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
+  id: TrySetDataValue``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: TrySetDataValue<T>(Tag, List<T>)
+  name.vb: TrySetDataValue(Of T)(Tag, List(Of T))
+  fullName: EvilDICOM.Core.DICOMObject.TrySetDataValue<T>(EvilDICOM.Core.Element.Tag, System.Collections.Generic.List<T>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.TrySetDataValue(Of T)(EvilDICOM.Core.Element.Tag, System.Collections.Generic.List(Of T))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 143
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: >-
+    Searches for a specific element (first instance). If it is found, it sets the data for this element and returns
+
+    true, otherwise returns false;
+  example: []
+  syntax:
+    content: public bool TrySetDataValue<T>(Tag tagToFind, List<T> data)
+    content.vb: Public Function TrySetDataValue(Of T)(tagToFind As Tag, data As List(Of T)) As Boolean
+    parameters:
+    - id: tagToFind
+      type: EvilDICOM.Core.Element.Tag
+      description: the tag of the element containing the data
+    - id: data
+      type: System.Collections.Generic.List{{T}}
+      description: the data to set in this element
+    typeParameters:
+    - id: T
+      description: the type of data to return
+    return:
+      type: System.Boolean
+      description: a boolean indicating whether or not the operation was successful
+- uid: EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Enums.VR)
+  id: FindAll(EvilDICOM.Core.Enums.VR)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: FindAll(VR)
+  fullName: EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Enums.VR)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 159
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Finds all DICOM elements that match a VR type
+  example: []
+  syntax:
+    content: public List<IDICOMElement> FindAll(VR vrToFind)
+    content.vb: Public Function FindAll(vrToFind As VR) As List(Of IDICOMElement)
+    parameters:
+    - id: vrToFind
+      type: EvilDICOM.Core.Enums.VR
+      description: the VR type to find
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+      description: a list of all elements that meet the search criteria
+- uid: EvilDICOM.Core.DICOMObject.GetUnknownTagAs``1(EvilDICOM.Core.Element.Tag)
+  id: GetUnknownTagAs``1(EvilDICOM.Core.Element.Tag)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: GetUnknownTagAs<T>(Tag)
+  name.vb: GetUnknownTagAs(Of T)(Tag)
+  fullName: EvilDICOM.Core.DICOMObject.GetUnknownTagAs<T>(EvilDICOM.Core.Element.Tag)
+  fullName.vb: EvilDICOM.Core.DICOMObject.GetUnknownTagAs(Of T)(EvilDICOM.Core.Element.Tag)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 171
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: >-
+    Returns elements of a certain tag that are of the unknown VR type (because they are not
+
+    in the DICOM dictionary) and reads them as the specified VR type
+  example: []
+  syntax:
+    content: 'public List<T> GetUnknownTagAs<T>(Tag toFind)where T : IDICOMElement'
+    content.vb: Public Function GetUnknownTagAs(Of T As IDICOMElement)(toFind As Tag) As List(Of T)
+    parameters:
+    - id: toFind
+      type: EvilDICOM.Core.Element.Tag
+      description: the tag of this element
+    typeParameters:
+    - id: T
+      description: the VR type to read as
+    return:
+      type: System.Collections.Generic.List{{T}}
+      description: the unknown elements strongly typed to T
+- uid: EvilDICOM.Core.DICOMObject.GetUnknownTagAs``1(System.String)
+  id: GetUnknownTagAs``1(System.String)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: GetUnknownTagAs<T>(String)
+  name.vb: GetUnknownTagAs(Of T)(String)
+  fullName: EvilDICOM.Core.DICOMObject.GetUnknownTagAs<T>(System.String)
+  fullName.vb: EvilDICOM.Core.DICOMObject.GetUnknownTagAs(Of T)(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 193
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: >-
+    Returns elements of a certain tag that are of the unknown VR type (because they are not
+
+    in the DICOM dictionary) and reads them as the specified VR type
+  example: []
+  syntax:
+    content: 'public List<T> GetUnknownTagAs<T>(string toFind)where T : IDICOMElement'
+    content.vb: Public Function GetUnknownTagAs(Of T As IDICOMElement)(toFind As String) As List(Of T)
+    parameters:
+    - id: toFind
+      type: System.String
+      description: the tag of this element
+    typeParameters:
+    - id: T
+      description: the VR type to read as
+    return:
+      type: System.Collections.Generic.List{{T}}
+      description: the unknown elements strongly typed to T
+- uid: EvilDICOM.Core.DICOMObject.FindAll``1
+  id: FindAll``1
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: FindAll<T>()
+  name.vb: FindAll(Of T)()
+  fullName: EvilDICOM.Core.DICOMObject.FindAll<T>()
+  fullName.vb: EvilDICOM.Core.DICOMObject.FindAll(Of T)()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 203
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Finds all DICOM elements that match an element type
+  example: []
+  syntax:
+    content: public List<T> FindAll<T>()
+    content.vb: Public Function FindAll(Of T) As List(Of T)
+    typeParameters:
+    - id: T
+      description: the DICOM element class that is being filtered and returned
+    return:
+      type: System.Collections.Generic.List{{T}}
+      description: a list of all elements that are strongly typed
+- uid: EvilDICOM.Core.DICOMObject.FindAll(System.String)
+  id: FindAll(System.String)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: FindAll(String)
+  fullName: EvilDICOM.Core.DICOMObject.FindAll(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 217
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Finds all DICOM elements that match a certain tag
+  example: []
+  syntax:
+    content: public List<IDICOMElement> FindAll(string tag)
+    content.vb: Public Function FindAll(tag As String) As List(Of IDICOMElement)
+    parameters:
+    - id: tag
+      type: System.String
+      description: the tag to find
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+      description: a list of all elements that meet the search criteria
+- uid: EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Element.Tag)
+  id: FindAll(EvilDICOM.Core.Element.Tag)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: FindAll(Tag)
+  fullName: EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Element.Tag)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 227
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Finds all DICOM elements that match a certain tag
+  example: []
+  syntax:
+    content: public List<IDICOMElement> FindAll(Tag tag)
+    content.vb: Public Function FindAll(tag As Tag) As List(Of IDICOMElement)
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+      description: the tag to find
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+      description: a list of all elements that meet the search criteria
+- uid: EvilDICOM.Core.DICOMObject.FindAll(System.String[])
+  id: FindAll(System.String[])
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: FindAll(String[])
+  name.vb: FindAll(String())
+  fullName: EvilDICOM.Core.DICOMObject.FindAll(System.String[])
+  fullName.vb: EvilDICOM.Core.DICOMObject.FindAll(System.String())
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 242
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: >-
+    Finds all DICOM elements that are embedded in the DICOM structure in some particular location. This location
+
+    is defined by descending tags from the outer most elements to the element. It is not necessary to include every
+
+    tag in the descending "treelike" structure. Branches can be skipped.
+  example: []
+  syntax:
+    content: public List<IDICOMElement> FindAll(string[] descendingTags)
+    content.vb: Public Function FindAll(descendingTags As String()) As List(Of IDICOMElement)
+    parameters:
+    - id: descendingTags
+      type: System.String[]
+      description: >-
+        a string array containing in order the tags from the outer most elements to the element
+
+        being searched for
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+      description: a list of all elements that meet the search criteria
+- uid: EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Element.Tag[])
+  id: FindAll(EvilDICOM.Core.Element.Tag[])
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: FindAll(Tag[])
+  name.vb: FindAll(Tag())
+  fullName: EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Element.Tag[])
+  fullName.vb: EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Element.Tag())
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 282
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: >-
+    Finds all DICOM elements that are embedded in the DICOM structure in some particular location. This location
+
+    is defined by descending tags from the outer most elements to the element. It is not necessary to include every
+
+    tag in the descending "treelike" structure. Branches can be skipped.
+  example: []
+  syntax:
+    content: public List<IDICOMElement> FindAll(Tag[] descendingTags)
+    content.vb: Public Function FindAll(descendingTags As Tag()) As List(Of IDICOMElement)
+    parameters:
+    - id: descendingTags
+      type: EvilDICOM.Core.Element.Tag[]
+      description: >-
+        a tag array containing in order the tags from the outer most elements to the element being
+
+        searched for
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+      description: a list of all elements that meet the search criteria
+- uid: EvilDICOM.Core.DICOMObject.FindFirst(System.String)
+  id: FindFirst(System.String)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: FindFirst(String)
+  fullName: EvilDICOM.Core.DICOMObject.FindFirst(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 293
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Finds the first element in the entire DICOM structure that has a certain tag
+  example: []
+  syntax:
+    content: public IDICOMElement FindFirst(string toFind)
+    content.vb: Public Function FindFirst(toFind As String) As IDICOMElement
+    parameters:
+    - id: toFind
+      type: System.String
+      description: the tag to be searched
+    return:
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: one single DICOM element that is first occurence of the tag in the structure
+- uid: EvilDICOM.Core.DICOMObject.FindFirst(EvilDICOM.Core.Element.Tag)
+  id: FindFirst(EvilDICOM.Core.Element.Tag)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: FindFirst(Tag)
+  fullName: EvilDICOM.Core.DICOMObject.FindFirst(EvilDICOM.Core.Element.Tag)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 304
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Finds the first element in the entire DICOM structure that has a certain tag
+  example: []
+  syntax:
+    content: public IDICOMElement FindFirst(Tag toFind)
+    content.vb: Public Function FindFirst(toFind As Tag) As IDICOMElement
+    parameters:
+    - id: toFind
+      type: EvilDICOM.Core.Element.Tag
+      description: the tag to be searched
+    return:
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: one single DICOM element that is first occurence of the tag in the structure
+- uid: EvilDICOM.Core.DICOMObject.Remove(System.String)
+  id: Remove(System.String)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Remove(String)
+  fullName: EvilDICOM.Core.DICOMObject.Remove(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 313
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Removes the element with the tag from the DICOM object
+  example: []
+  syntax:
+    content: public void Remove(string tag)
+    content.vb: Public Sub Remove(tag As String)
+    parameters:
+    - id: tag
+      type: System.String
+      description: the tag string in the form of GGGGEEEE to be removed
+- uid: EvilDICOM.Core.DICOMObject.Remove(EvilDICOM.Core.Element.Tag)
+  id: Remove(EvilDICOM.Core.Element.Tag)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Remove(Tag)
+  fullName: EvilDICOM.Core.DICOMObject.Remove(EvilDICOM.Core.Element.Tag)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 333
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Removes the element with the tag from the DICOM object
+  example: []
+  syntax:
+    content: public void Remove(Tag tag)
+    content.vb: Public Sub Remove(tag As Tag)
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+      description: the tag of the element to be removed
+- uid: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Interfaces.IDICOMElement)
+  id: Replace(EvilDICOM.Core.Interfaces.IDICOMElement)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Replace(IDICOMElement)
+  fullName: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Interfaces.IDICOMElement)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 358
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Replaces the underlying DICOM element with input DICOM element of the same tag
+  example: []
+  syntax:
+    content: public bool Replace(IDICOMElement el)
+    content.vb: Public Function Replace(el As IDICOMElement) As Boolean
+    parameters:
+    - id: el
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: the new DICOM element
+    return:
+      type: System.Boolean
+      description: whether or not the operation was successful
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd``1(EvilDICOM.Core.Element.AbstractElement{``0})
+  id: ReplaceOrAdd``1(EvilDICOM.Core.Element.AbstractElement{``0})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd<T>(AbstractElement<T>)
+  name.vb: ReplaceOrAdd(Of T)(AbstractElement(Of T))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd<T>(EvilDICOM.Core.Element.AbstractElement<T>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(Of T)(EvilDICOM.Core.Element.AbstractElement(Of T))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 372
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: >-
+    Replaces a current instance of the DICOM element in the DICOM object. If the object does not exist, this method
+
+    will add it to the object.
+  example: []
+  syntax:
+    content: public void ReplaceOrAdd<T>(AbstractElement<T> element)
+    content.vb: Public Sub ReplaceOrAdd(Of T)(element As AbstractElement(Of T))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{{T}}
+      description: the instance of the element
+    typeParameters:
+    - id: T
+      description: the type of the data the element holds (eg. double[], int, DataTime, etc)
+- uid: EvilDICOM.Core.DICOMObject.ToString
+  id: ToString
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  fullName: EvilDICOM.Core.DICOMObject.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 380
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
+    return:
+      type: System.String
+  overridden: System.Object.ToString
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Single})
+  id: ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Single})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd(AbstractElement<Single>)
+  name.vb: ReplaceOrAdd(AbstractElement(Of Single))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement<System.Single>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement(Of System.Single))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 387
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void ReplaceOrAdd(AbstractElement<float> element)
+    content.vb: Public Sub ReplaceOrAdd(element As AbstractElement(Of Single))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Single}
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Double})
+  id: ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Double})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd(AbstractElement<Double>)
+  name.vb: ReplaceOrAdd(AbstractElement(Of Double))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement<System.Double>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement(Of System.Double))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 392
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void ReplaceOrAdd(AbstractElement<double> element)
+    content.vb: Public Sub ReplaceOrAdd(element As AbstractElement(Of Double))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Double}
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.String})
+  id: ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.String})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd(AbstractElement<String>)
+  name.vb: ReplaceOrAdd(AbstractElement(Of String))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement<System.String>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement(Of System.String))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 397
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void ReplaceOrAdd(AbstractElement<string> element)
+    content.vb: Public Sub ReplaceOrAdd(element As AbstractElement(Of String))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.String}
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject})
+  id: ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd(AbstractElement<DICOMObject>)
+  name.vb: ReplaceOrAdd(AbstractElement(Of DICOMObject))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 402
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void ReplaceOrAdd(AbstractElement<DICOMObject> element)
+    content.vb: Public Sub ReplaceOrAdd(element As AbstractElement(Of DICOMObject))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.Element.Tag})
+  id: ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.Element.Tag})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd(AbstractElement<Tag>)
+  name.vb: ReplaceOrAdd(AbstractElement(Of Tag))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.Element.Tag>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.Element.Tag))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 407
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void ReplaceOrAdd(AbstractElement<Tag> element)
+    content.vb: Public Sub ReplaceOrAdd(element As AbstractElement(Of Tag))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.Element.Tag}
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.UInt32})
+  id: ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.UInt32})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd(AbstractElement<UInt32>)
+  name.vb: ReplaceOrAdd(AbstractElement(Of UInt32))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement<System.UInt32>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement(Of System.UInt32))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 412
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void ReplaceOrAdd(AbstractElement<uint> element)
+    content.vb: Public Sub ReplaceOrAdd(element As AbstractElement(Of UInteger))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.UInt32}
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Int32})
+  id: ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Int32})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd(AbstractElement<Int32>)
+  name.vb: ReplaceOrAdd(AbstractElement(Of Int32))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement<System.Int32>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement(Of System.Int32))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 417
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void ReplaceOrAdd(AbstractElement<int> element)
+    content.vb: Public Sub ReplaceOrAdd(element As AbstractElement(Of Integer))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Int32}
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.UInt16})
+  id: ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.UInt16})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd(AbstractElement<UInt16>)
+  name.vb: ReplaceOrAdd(AbstractElement(Of UInt16))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement<System.UInt16>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement(Of System.UInt16))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 422
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void ReplaceOrAdd(AbstractElement<ushort> element)
+    content.vb: Public Sub ReplaceOrAdd(element As AbstractElement(Of UShort))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.UInt16}
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Int16})
+  id: ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Int16})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd(AbstractElement<Int16>)
+  name.vb: ReplaceOrAdd(AbstractElement(Of Int16))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement<System.Int16>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement(Of System.Int16))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 427
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void ReplaceOrAdd(AbstractElement<short> element)
+    content.vb: Public Sub ReplaceOrAdd(element As AbstractElement(Of Short))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Int16}
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.Double}})
+  id: ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.Double}})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd(AbstractElement<Nullable<Double>>)
+  name.vb: ReplaceOrAdd(AbstractElement(Of Nullable(Of Double)))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.Double>>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.Double)))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 432
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void ReplaceOrAdd(AbstractElement<double ? > element)
+    content.vb: Public Sub ReplaceOrAdd(element As AbstractElement(Of Double?))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.Double}}
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.Single}})
+  id: ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.Single}})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd(AbstractElement<Nullable<Single>>)
+  name.vb: ReplaceOrAdd(AbstractElement(Of Nullable(Of Single)))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.Single>>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.Single)))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 437
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void ReplaceOrAdd(AbstractElement<float ? > element)
+    content.vb: Public Sub ReplaceOrAdd(element As AbstractElement(Of Single?))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.Single}}
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Byte})
+  id: ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Byte})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd(AbstractElement<Byte>)
+  name.vb: ReplaceOrAdd(AbstractElement(Of Byte))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement<System.Byte>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement(Of System.Byte))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 442
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void ReplaceOrAdd(AbstractElement<byte> element)
+    content.vb: Public Sub ReplaceOrAdd(element As AbstractElement(Of Byte))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+- uid: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}})
+  id: ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ReplaceOrAdd(AbstractElement<Nullable<DateTime>>)
+  name.vb: ReplaceOrAdd(AbstractElement(Of Nullable(Of DateTime)))
+  fullName: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 447
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void ReplaceOrAdd(AbstractElement<DateTime? > element)
+    content.vb: Public Sub ReplaceOrAdd(element As AbstractElement(Of Date?))
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+- uid: EvilDICOM.Core.DICOMObject.PixelStream
+  id: PixelStream
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: PixelStream
+  fullName: EvilDICOM.Core.DICOMObject.PixelStream
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 459
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Grabs the pixel data bytes and sends it as a stream. Returns null if no pixel data element is found.
+  example: []
+  syntax:
+    content: public Stream PixelStream { get; }
+    content.vb: Public ReadOnly Property PixelStream As Stream
+    parameters: []
+    return:
+      type: System.IO.Stream
+- uid: EvilDICOM.Core.DICOMObject.GetSelector
+  id: GetSelector
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: GetSelector()
+  fullName: EvilDICOM.Core.DICOMObject.GetSelector()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 476
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public DICOMSelector GetSelector()
+    content.vb: Public Function GetSelector As DICOMSelector
+    return:
+      type: EvilDICOM.Core.Selection.DICOMSelector
+- uid: EvilDICOM.Core.DICOMObject.Read(System.String,EvilDICOM.Core.Enums.TransferSyntax)
+  id: Read(System.String,EvilDICOM.Core.Enums.TransferSyntax)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Read(String, TransferSyntax)
+  fullName: EvilDICOM.Core.DICOMObject.Read(System.String, EvilDICOM.Core.Enums.TransferSyntax)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 496
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Reads a DICOM file from a path
+  example:
+  - >-
+    <code>
+
+    var dcm = DICOMObject.Read("mydcm.dcm");
+
+    </code>
+  syntax:
+    content: public static DICOMObject Read(string filePath, TransferSyntax trySyntax = 0)
+    content.vb: Public Shared Function Read(filePath As String, trySyntax As TransferSyntax = 0) As DICOMObject
+    parameters:
+    - id: filePath
+      type: System.String
+      description: the path to the file
+    - id: trySyntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+      description: the transfer syntax to use in case there is no metadata explicitly included
+    return:
+      type: EvilDICOM.Core.DICOMObject
+      description: the DICOM Object
+- uid: EvilDICOM.Core.DICOMObject.Read(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  id: Read(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Read(Byte[], TransferSyntax)
+  name.vb: Read(Byte(), TransferSyntax)
+  fullName: EvilDICOM.Core.DICOMObject.Read(System.Byte[], EvilDICOM.Core.Enums.TransferSyntax)
+  fullName.vb: EvilDICOM.Core.DICOMObject.Read(System.Byte(), EvilDICOM.Core.Enums.TransferSyntax)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 508
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Reads a DICOM file from a byte array
+  example: []
+  syntax:
+    content: public static DICOMObject Read(byte[] file, TransferSyntax trySyntax = 0)
+    content.vb: Public Shared Function Read(file As Byte(), trySyntax As TransferSyntax = 0) As DICOMObject
+    parameters:
+    - id: file
+      type: System.Byte[]
+      description: the bytes of the DICOM file
+    - id: trySyntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+      description: the transfer syntax to use in case there is no metadata explicitly included
+    return:
+      type: EvilDICOM.Core.DICOMObject
+      description: 
+- uid: EvilDICOM.Core.DICOMObject.FromXML(System.String)
+  id: FromXML(System.String)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: FromXML(String)
+  fullName: EvilDICOM.Core.DICOMObject.FromXML(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 518
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public static DICOMObject FromXML(string xml)
+    content.vb: Public Shared Function FromXML(xml As String) As DICOMObject
+    parameters:
+    - id: xml
+      type: System.String
+    return:
+      type: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core.DICOMObject.Write(System.String,EvilDICOM.Core.IO.Writing.DICOMWriteSettings)
+  id: Write(System.String,EvilDICOM.Core.IO.Writing.DICOMWriteSettings)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Write(String, DICOMWriteSettings)
+  fullName: EvilDICOM.Core.DICOMObject.Write(System.String, EvilDICOM.Core.IO.Writing.DICOMWriteSettings)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 530
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Writes DICOM object to a file
+  example: []
+  syntax:
+    content: public void Write(string file, DICOMWriteSettings settings = null)
+    content.vb: Public Sub Write(file As String, settings As DICOMWriteSettings = Nothing)
+    parameters:
+    - id: file
+      type: System.String
+      description: the path to write
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+      description: the DICOM settings to write (endianness, and indefinite sequences)
+- uid: EvilDICOM.Core.DICOMObject.ToXML
+  id: ToXML
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: ToXML()
+  fullName: EvilDICOM.Core.DICOMObject.ToXML()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 540
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Writes the DICOM Object to an XML string for visualization and manipluation. Use FromXML() to get back.
+  example: []
+  syntax:
+    content: public string ToXML()
+    content.vb: Public Function ToXML As String
+    return:
+      type: System.String
+      description: 
+- uid: EvilDICOM.Core.DICOMObject.GetBytes(EvilDICOM.Core.IO.Writing.DICOMWriteSettings)
+  id: GetBytes(EvilDICOM.Core.IO.Writing.DICOMWriteSettings)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: GetBytes(DICOMWriteSettings)
+  fullName: EvilDICOM.Core.DICOMObject.GetBytes(EvilDICOM.Core.IO.Writing.DICOMWriteSettings)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 545
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public byte[] GetBytes(DICOMWriteSettings settings = null)
+    content.vb: Public Function GetBytes(settings As DICOMWriteSettings = Nothing) As Byte()
+    parameters:
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    return:
+      type: System.Byte[]
+- uid: EvilDICOM.Core.DICOMObject.SOPClass
+  id: SOPClass
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: SOPClass
+  fullName: EvilDICOM.Core.DICOMObject.SOPClass
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 555
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public SOPClass SOPClass { get; }
+    content.vb: Public ReadOnly Property SOPClass As SOPClass
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+- uid: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Single})
+  id: Replace(EvilDICOM.Core.Element.AbstractElement{System.Single})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Replace(AbstractElement<Single>)
+  name.vb: Replace(AbstractElement(Of Single))
+  fullName: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement<System.Single>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement(Of System.Single))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 573
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public bool Replace(AbstractElement<float> element)
+    content.vb: Public Function Replace(element As AbstractElement(Of Single)) As Boolean
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Single}
+    return:
+      type: System.Boolean
+- uid: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Double})
+  id: Replace(EvilDICOM.Core.Element.AbstractElement{System.Double})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Replace(AbstractElement<Double>)
+  name.vb: Replace(AbstractElement(Of Double))
+  fullName: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement<System.Double>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement(Of System.Double))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 578
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public bool Replace(AbstractElement<double> element)
+    content.vb: Public Function Replace(element As AbstractElement(Of Double)) As Boolean
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Double}
+    return:
+      type: System.Boolean
+- uid: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.String})
+  id: Replace(EvilDICOM.Core.Element.AbstractElement{System.String})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Replace(AbstractElement<String>)
+  name.vb: Replace(AbstractElement(Of String))
+  fullName: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement<System.String>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement(Of System.String))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 583
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public bool Replace(AbstractElement<string> element)
+    content.vb: Public Function Replace(element As AbstractElement(Of String)) As Boolean
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.String}
+    return:
+      type: System.Boolean
+- uid: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject})
+  id: Replace(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Replace(AbstractElement<DICOMObject>)
+  name.vb: Replace(AbstractElement(Of DICOMObject))
+  fullName: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 588
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public bool Replace(AbstractElement<DICOMObject> element)
+    content.vb: Public Function Replace(element As AbstractElement(Of DICOMObject)) As Boolean
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+    return:
+      type: System.Boolean
+- uid: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.Element.Tag})
+  id: Replace(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.Element.Tag})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Replace(AbstractElement<Tag>)
+  name.vb: Replace(AbstractElement(Of Tag))
+  fullName: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.Element.Tag>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.Element.Tag))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 593
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public bool Replace(AbstractElement<Tag> element)
+    content.vb: Public Function Replace(element As AbstractElement(Of Tag)) As Boolean
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.Element.Tag}
+    return:
+      type: System.Boolean
+- uid: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.UInt32})
+  id: Replace(EvilDICOM.Core.Element.AbstractElement{System.UInt32})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Replace(AbstractElement<UInt32>)
+  name.vb: Replace(AbstractElement(Of UInt32))
+  fullName: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement<System.UInt32>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement(Of System.UInt32))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 598
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public bool Replace(AbstractElement<uint> element)
+    content.vb: Public Function Replace(element As AbstractElement(Of UInteger)) As Boolean
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.UInt32}
+    return:
+      type: System.Boolean
+- uid: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Int32})
+  id: Replace(EvilDICOM.Core.Element.AbstractElement{System.Int32})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Replace(AbstractElement<Int32>)
+  name.vb: Replace(AbstractElement(Of Int32))
+  fullName: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement<System.Int32>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement(Of System.Int32))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 603
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public bool Replace(AbstractElement<int> element)
+    content.vb: Public Function Replace(element As AbstractElement(Of Integer)) As Boolean
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Int32}
+    return:
+      type: System.Boolean
+- uid: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.UInt16})
+  id: Replace(EvilDICOM.Core.Element.AbstractElement{System.UInt16})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Replace(AbstractElement<UInt16>)
+  name.vb: Replace(AbstractElement(Of UInt16))
+  fullName: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement<System.UInt16>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement(Of System.UInt16))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 608
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public bool Replace(AbstractElement<ushort> element)
+    content.vb: Public Function Replace(element As AbstractElement(Of UShort)) As Boolean
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.UInt16}
+    return:
+      type: System.Boolean
+- uid: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Int16})
+  id: Replace(EvilDICOM.Core.Element.AbstractElement{System.Int16})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Replace(AbstractElement<Int16>)
+  name.vb: Replace(AbstractElement(Of Int16))
+  fullName: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement<System.Int16>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement(Of System.Int16))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 613
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public bool Replace(AbstractElement<short> element)
+    content.vb: Public Function Replace(element As AbstractElement(Of Short)) As Boolean
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Int16}
+    return:
+      type: System.Boolean
+- uid: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Byte})
+  id: Replace(EvilDICOM.Core.Element.AbstractElement{System.Byte})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Replace(AbstractElement<Byte>)
+  name.vb: Replace(AbstractElement(Of Byte))
+  fullName: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement<System.Byte>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement(Of System.Byte))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 618
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public bool Replace(AbstractElement<byte> element)
+    content.vb: Public Function Replace(element As AbstractElement(Of Byte)) As Boolean
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+    return:
+      type: System.Boolean
+- uid: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}})
+  id: Replace(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}})
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: Replace(AbstractElement<Nullable<DateTime>>)
+  name.vb: Replace(AbstractElement(Of Nullable(Of DateTime)))
+  fullName: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>)
+  fullName.vb: EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+    startLine: 623
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public bool Replace(AbstractElement<DateTime? > element)
+    content.vb: Public Function Replace(element As AbstractElement(Of Date?)) As Boolean
+    parameters:
+    - id: element
+      type: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+    return:
+      type: System.Boolean
+references:
+- uid: EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<IDICOMElement>
+  fullName: System.Collections.Generic.List<EvilDICOM.Core.Interfaces.IDICOMElement>
+  fullname.vb: System.Collections.Generic.List(Of EvilDICOM.Core.Interfaces.IDICOMElement)
+  name.vb: List(Of IDICOMElement)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  parent: System.Collections.Generic
+  isExternal: true
+  name: List<T>
+  fullName: System.Collections.Generic.List<T>
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Core.Element.Tag
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: Tag
+  fullName: EvilDICOM.Core.Element.Tag
+- uid: EvilDICOM.Core.DICOMData{{T}}
+  parent: EvilDICOM.Core
+  definition: EvilDICOM.Core.DICOMData`1
+  name: DICOMData<T>
+  fullName: EvilDICOM.Core.DICOMData<T>
+  fullname.vb: EvilDICOM.Core.DICOMData(Of T)
+  name.vb: DICOMData(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element
+  isExternal: false
+  name: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: EvilDICOM.Core.DICOMData`1
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMData<T>
+  fullName: EvilDICOM.Core.DICOMData<T>
+  fullname.vb: EvilDICOM.Core.DICOMData(Of T)
+  name.vb: DICOMData(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: '{T}'
+  isExternal: false
+  name: T
+  fullName: T
+- uid: System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.Collections.Generic.List{{T}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<T>
+  fullName: System.Collections.Generic.List<T>
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Enums.VR
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: VR
+  fullName: EvilDICOM.Core.Enums.VR
+- uid: EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  fullName: System.String[]
+  fullname.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    fullName: ()
+- uid: EvilDICOM.Core.Element.Tag[]
+  isExternal: false
+  name: Tag[]
+  fullName: EvilDICOM.Core.Element.Tag[]
+  fullname.vb: EvilDICOM.Core.Element.Tag()
+  name.vb: Tag()
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.Tag
+    name: Tag
+    fullName: EvilDICOM.Core.Element.Tag
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.Tag
+    name: Tag
+    fullName: EvilDICOM.Core.Element.Tag
+  - name: ()
+    fullName: ()
+- uid: EvilDICOM.Core.Element.AbstractElement{{T}}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<T>
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of T)
+  name.vb: AbstractElement(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement`1
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: AbstractElement<T>
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of T)
+  name.vb: AbstractElement(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Single}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<Single>
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Single>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Single)
+  name.vb: AbstractElement(Of Single)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Double}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<Double>
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Double>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Double)
+  name.vb: AbstractElement(Of Double)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.String}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<String>
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.String>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of System.String)
+  name.vb: AbstractElement(Of String)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<DICOMObject>
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject)
+  name.vb: AbstractElement(Of DICOMObject)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.Element.Tag}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<Tag>
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.Element.Tag>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.Element.Tag)
+  name.vb: AbstractElement(Of Tag)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Core.Element.Tag
+    name: Tag
+    fullName: EvilDICOM.Core.Element.Tag
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.Element.Tag
+    name: Tag
+    fullName: EvilDICOM.Core.Element.Tag
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.UInt32}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<UInt32>
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.UInt32>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of System.UInt32)
+  name.vb: AbstractElement(Of UInt32)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - uid: System.UInt32
+    name: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt32
+    name: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Int32}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<Int32>
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Int32>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Int32)
+  name.vb: AbstractElement(Of Int32)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.UInt16}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<UInt16>
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.UInt16>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of System.UInt16)
+  name.vb: AbstractElement(Of UInt16)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - uid: System.UInt16
+    name: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt16
+    name: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Int16}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<Int16>
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Int16>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Int16)
+  name.vb: AbstractElement(Of Int16)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - uid: System.Int16
+    name: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Int16
+    name: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.Double}}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<Nullable<Double>>
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.Double>>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.Double))
+  name.vb: AbstractElement(Of Nullable(Of Double))
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    fullName: )
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.Single}}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<Nullable<Single>>
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.Single>>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.Single))
+  name.vb: AbstractElement(Of Nullable(Of Single))
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    fullName: )
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<Byte>
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Byte)
+  name.vb: AbstractElement(Of Byte)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<Nullable<DateTime>>
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>
+  fullname.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime))
+  name.vb: AbstractElement(Of Nullable(Of DateTime))
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    fullName: <
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    fullName: )
+  - name: )
+    fullName: )
+- uid: System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  isExternal: false
+  name: System.IO
+  fullName: System.IO
+- uid: EvilDICOM.Core.Selection.DICOMSelector
+  parent: EvilDICOM.Core.Selection
+  isExternal: false
+  name: DICOMSelector
+  fullName: EvilDICOM.Core.Selection.DICOMSelector
+- uid: EvilDICOM.Core.Selection
+  isExternal: false
+  name: EvilDICOM.Core.Selection
+  fullName: EvilDICOM.Core.Selection
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax
+- uid: EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  fullName: System.Byte[]
+  fullname.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  parent: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: DICOMWriteSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+- uid: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: EvilDICOM.Core.IO.Writing
+  fullName: EvilDICOM.Core.IO.Writing
+- uid: EvilDICOM.Core.Enums.SOPClass
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: SOPClass
+  fullName: EvilDICOM.Core.Enums.SOPClass

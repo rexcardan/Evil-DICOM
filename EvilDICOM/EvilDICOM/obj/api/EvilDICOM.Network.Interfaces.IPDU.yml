@@ -1,0 +1,109 @@
+items:
+- uid: EvilDICOM.Network.Interfaces.IPDU
+  id: IPDU
+  parent: EvilDICOM.Network.Interfaces
+  children:
+  - EvilDICOM.Network.Interfaces.IPDU.Type
+  - EvilDICOM.Network.Interfaces.IPDU.Write
+  langs:
+  - csharp
+  - vb
+  name: IPDU
+  fullName: EvilDICOM.Network.Interfaces.IPDU
+  type: Interface
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Interfaces/IPDU.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Interfaces/IPDU.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Interfaces
+  syntax:
+    content: public interface IPDU
+    content.vb: Public Interface IPDU
+- uid: EvilDICOM.Network.Interfaces.IPDU.Type
+  id: Type
+  parent: EvilDICOM.Network.Interfaces.IPDU
+  langs:
+  - csharp
+  - vb
+  name: Type
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Type
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Interfaces/IPDU.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Interfaces/IPDU.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Interfaces
+  syntax:
+    content: PDUType Type { get; }
+    content.vb: ReadOnly Property Type As PDUType
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+- uid: EvilDICOM.Network.Interfaces.IPDU.Write
+  id: Write
+  parent: EvilDICOM.Network.Interfaces.IPDU
+  langs:
+  - csharp
+  - vb
+  name: Write()
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Write()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Interfaces/IPDU.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Interfaces/IPDU.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Interfaces
+  syntax:
+    content: byte[] Write()
+    content.vb: Function Write As Byte()
+    return:
+      type: System.Byte[]
+references:
+- uid: EvilDICOM.Network.Interfaces
+  isExternal: false
+  name: EvilDICOM.Network.Interfaces
+  fullName: EvilDICOM.Network.Interfaces
+- uid: EvilDICOM.Network.Enums.PDUType
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: PDUType
+  fullName: EvilDICOM.Network.Enums.PDUType
+- uid: EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  fullName: System.Byte[]
+  fullname.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    fullName: ()

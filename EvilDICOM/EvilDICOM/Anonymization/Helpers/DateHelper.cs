@@ -1,7 +1,9 @@
 ﻿using EvilDICOM.Core;
 using EvilDICOM.Core.Element;
+using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.IO.Reading;
+using EvilDICOM.Core.Selection;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,13 +24,65 @@ namespace EvilDICOM.Anonymization.Helpers
             //Check patient age - if 89 or older set anonymization options to 
             //Not conserve patient age
             DICOMObject ageTest = DICOMFileReader.Read(file);
-            Date dob = ageTest.FindFirst(TagHelper.PATIENT_BIRTH_DATE.CompleteID) as Date;
-            if (dob != null)
-            {
-                int age = CalculateAge(dob);
-                return age < 89;
-            }
-            return true;
+            return YoungerThan89(ageTest);
+        }
+
+        /// <summary>
+        /// Checks to see if the patient age is less than 89 years old
+        /// </summary>
+        /// <param name="file">Path to DICOM file containing patient information</param>
+        /// <returns>boolean indication test</returns>
+        public static bool YoungerThan89(DICOMObject d)
+        {
+            //Check patient age - if 89 or older set anonymization options to 
+            //Not conserve patient age
+            var sel = new DICOMSelector(d);
+            Date dob = sel.PatientBirthDate;
+            if (dob == null || !dob.Data.HasValue) { return false; }
+
+            var latestDate = GetLatestDate(d);
+            int age = CalculateAge(dob, latestDate);
+            return age <= 89;
+        }
+
+        /// <summary>
+        /// Calculates the latest (most recent) date in a DICOM file
+        /// </summary>
+        /// <param name="d"></param>
+        /// <returns></returns>
+        public static System.DateTime GetLatestDate(DICOMObject d)
+        {
+            var dates = GetAllDates(d);
+            //If there are no actual dates just return today
+            if (!dates.Any(da => da.Data.HasValue)) { return System.DateTime.Now; }
+            var latest = (System.DateTime)(dates
+                .Where(da => da.Data.HasValue)
+                .OrderBy(da => da.Data)
+                .Last().Data);
+            return latest;
+        }
+
+        /// <summary>
+        /// Calculates the oldest date in a DICOM file
+        /// </summary>
+        /// <param name="d"></param>
+        /// <returns></returns>
+        public static System.DateTime GetOldestDate(DICOMObject d)
+        {
+            var dates = GetAllDates(d);
+            //If there are no actual dates just return today
+            if (!dates.Any(da => da.Data.HasValue)) { return System.DateTime.Now; }
+            var oldest = (System.DateTime)(dates
+                .Where(da => da.Data.HasValue)
+                .OrderBy(da => da.Data)
+                .First().Data);
+            return oldest;
+        }
+
+        public static IEnumerable<AbstractElement<System.DateTime?>> GetAllDates(DICOMObject d)
+        {
+            var dates = d.FindAll(VR.Date).Concat(d.FindAll(VR.DateTime)).Select(da => da as AbstractElement<System.DateTime?>);
+            return dates;
         }
 
         /// <summary>
@@ -36,14 +90,12 @@ namespace EvilDICOM.Anonymization.Helpers
         /// </summary>
         /// <param name="dob">the IDICOM element containing the DateTime of patient birth</param>
         /// <returns>the patient's age in years</returns>
-        private static int CalculateAge(Date dob)
+        private static int CalculateAge(Date dob, System.DateTime latestDate)
         {
-            System.DateTime now = System.DateTime.Today;
-
             if (dob != null && dob.Data != null)
             {
                 System.DateTime dt = (System.DateTime)dob.Data;
-                return now.Year - dt.Year;
+                return latestDate.Year - dt.Year;
             }
             else
             {
@@ -73,8 +125,14 @@ namespace EvilDICOM.Anonymization.Helpers
             }
         }
 
-
-        public static System.DateTime? DateRelativeBaseDate(System.DateTime? original, System.DateTime? reference)
+        /// <summary>
+        /// Adds the time difference between the original date and reference date to the base date 01/01/1901. 
+        /// This allows all dates to maintain a relative relationship to each other, but birthdate is obfuscated
+        /// </summary>
+        /// <param name="original"></param>
+        /// <param name="reference"></param>
+        /// <returns></returns>
+        public static System.DateTime DateRelativeBaseDate(System.DateTime? original, System.DateTime? reference)
         {
             if (original != null && reference != null)
             {
@@ -84,7 +142,7 @@ namespace EvilDICOM.Anonymization.Helpers
                 System.DateTime newDate = BaseDate.Add(deltaDate);
                 return newDate;
             }
-            else { return null; }
+            else { return BaseDate; }
         }
     }
 }

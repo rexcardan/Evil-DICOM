@@ -1,0 +1,1095 @@
+items:
+- uid: EvilDICOM.Network.Services.AssociationService
+  id: AssociationService
+  parent: EvilDICOM.Network.Services
+  children:
+  - EvilDICOM.Network.Services.AssociationService.#ctor
+  - EvilDICOM.Network.Services.AssociationService.AbortReceivedAction
+  - EvilDICOM.Network.Services.AssociationService.AbortRequestReceived
+  - EvilDICOM.Network.Services.AssociationService.AssociationAcceptanceReceived
+  - EvilDICOM.Network.Services.AssociationService.AssociationAcceptanceReceivedAction
+  - EvilDICOM.Network.Services.AssociationService.AssociationRejectAction
+  - EvilDICOM.Network.Services.AssociationService.AssociationRejectionReceived
+  - EvilDICOM.Network.Services.AssociationService.AssociationRequestReceived
+  - EvilDICOM.Network.Services.AssociationService.AssociationRequestReceivedAction
+  - EvilDICOM.Network.Services.AssociationService.RaiseAbortRequestReceived(EvilDICOM.Network.Associations.PDUs.Abort,EvilDICOM.Network.Association)
+  - EvilDICOM.Network.Services.AssociationService.RaiseAssociationAcceptanceReceived(EvilDICOM.Network.PDUs.Accept,EvilDICOM.Network.Association)
+  - EvilDICOM.Network.Services.AssociationService.RaiseAssociationRejectionReceived(EvilDICOM.Network.PDUs.Reject,EvilDICOM.Network.Association)
+  - EvilDICOM.Network.Services.AssociationService.RaiseAssociationRequestReceived(EvilDICOM.Network.PDUs.Request,EvilDICOM.Network.Association)
+  - EvilDICOM.Network.Services.AssociationService.RaiseReleaseRequestReceived(EvilDICOM.Network.PDUs.ReleaseRequest,EvilDICOM.Network.Association)
+  - EvilDICOM.Network.Services.AssociationService.RaiseReleaseResponseReceived(EvilDICOM.Network.PDUs.ReleaseResponse,EvilDICOM.Network.Association)
+  - EvilDICOM.Network.Services.AssociationService.ReleaseRequestReceived
+  - EvilDICOM.Network.Services.AssociationService.ReleaseRequestReceivedAction
+  - EvilDICOM.Network.Services.AssociationService.ReleaseResponseAction
+  - EvilDICOM.Network.Services.AssociationService.ReleaseResponseReceived
+  - EvilDICOM.Network.Services.AssociationService.SetDefaultActions
+  langs:
+  - csharp
+  - vb
+  name: AssociationService
+  fullName: EvilDICOM.Network.Services.AssociationService
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public class AssociationService
+    content.vb: Public Class AssociationService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Network.Services.AssociationService.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: AssociationService()
+  fullName: EvilDICOM.Network.Services.AssociationService.AssociationService()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public AssociationService()
+    content.vb: Public Sub New
+- uid: EvilDICOM.Network.Services.AssociationService.AbortReceivedAction
+  id: AbortReceivedAction
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: AbortReceivedAction
+  fullName: EvilDICOM.Network.Services.AssociationService.AbortReceivedAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<Abort, Association> AbortReceivedAction { get; set; }
+    content.vb: Public Property AbortReceivedAction As Action(Of Abort, Association)
+    parameters: []
+    return:
+      type: System.Action{EvilDICOM.Network.Associations.PDUs.Abort,EvilDICOM.Network.Association}
+- uid: EvilDICOM.Network.Services.AssociationService.AssociationRequestReceivedAction
+  id: AssociationRequestReceivedAction
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: AssociationRequestReceivedAction
+  fullName: EvilDICOM.Network.Services.AssociationService.AssociationRequestReceivedAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<Request, Association> AssociationRequestReceivedAction { get; set; }
+    content.vb: Public Property AssociationRequestReceivedAction As Action(Of Request, Association)
+    parameters: []
+    return:
+      type: System.Action{EvilDICOM.Network.PDUs.Request,EvilDICOM.Network.Association}
+- uid: EvilDICOM.Network.Services.AssociationService.AssociationAcceptanceReceivedAction
+  id: AssociationAcceptanceReceivedAction
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: AssociationAcceptanceReceivedAction
+  fullName: EvilDICOM.Network.Services.AssociationService.AssociationAcceptanceReceivedAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<Accept, Association> AssociationAcceptanceReceivedAction { get; set; }
+    content.vb: Public Property AssociationAcceptanceReceivedAction As Action(Of Accept, Association)
+    parameters: []
+    return:
+      type: System.Action{EvilDICOM.Network.PDUs.Accept,EvilDICOM.Network.Association}
+- uid: EvilDICOM.Network.Services.AssociationService.ReleaseRequestReceivedAction
+  id: ReleaseRequestReceivedAction
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: ReleaseRequestReceivedAction
+  fullName: EvilDICOM.Network.Services.AssociationService.ReleaseRequestReceivedAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<ReleaseRequest, Association> ReleaseRequestReceivedAction { get; set; }
+    content.vb: Public Property ReleaseRequestReceivedAction As Action(Of ReleaseRequest, Association)
+    parameters: []
+    return:
+      type: System.Action{EvilDICOM.Network.PDUs.ReleaseRequest,EvilDICOM.Network.Association}
+- uid: EvilDICOM.Network.Services.AssociationService.ReleaseResponseAction
+  id: ReleaseResponseAction
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: ReleaseResponseAction
+  fullName: EvilDICOM.Network.Services.AssociationService.ReleaseResponseAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<ReleaseResponse, Association> ReleaseResponseAction { get; set; }
+    content.vb: Public Property ReleaseResponseAction As Action(Of ReleaseResponse, Association)
+    parameters: []
+    return:
+      type: System.Action{EvilDICOM.Network.PDUs.ReleaseResponse,EvilDICOM.Network.Association}
+- uid: EvilDICOM.Network.Services.AssociationService.AssociationRejectAction
+  id: AssociationRejectAction
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: AssociationRejectAction
+  fullName: EvilDICOM.Network.Services.AssociationService.AssociationRejectAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<Reject, Association> AssociationRejectAction { get; set; }
+    content.vb: Public Property AssociationRejectAction As Action(Of Reject, Association)
+    parameters: []
+    return:
+      type: System.Action{EvilDICOM.Network.PDUs.Reject,EvilDICOM.Network.Association}
+- uid: EvilDICOM.Network.Services.AssociationService.SetDefaultActions
+  id: SetDefaultActions
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: SetDefaultActions()
+  fullName: EvilDICOM.Network.Services.AssociationService.SetDefaultActions()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public void SetDefaultActions()
+    content.vb: Public Sub SetDefaultActions
+- uid: EvilDICOM.Network.Services.AssociationService.AssociationRequestReceived
+  id: AssociationRequestReceived
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: AssociationRequestReceived
+  fullName: EvilDICOM.Network.Services.AssociationService.AssociationRequestReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 123
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event AssociationService.AssociationRequestHandler AssociationRequestReceived
+    content.vb: Public Event AssociationRequestReceived As AssociationService.AssociationRequestHandler
+- uid: EvilDICOM.Network.Services.AssociationService.RaiseAssociationRequestReceived(EvilDICOM.Network.PDUs.Request,EvilDICOM.Network.Association)
+  id: RaiseAssociationRequestReceived(EvilDICOM.Network.PDUs.Request,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: RaiseAssociationRequestReceived(Request, Association)
+  fullName: EvilDICOM.Network.Services.AssociationService.RaiseAssociationRequestReceived(EvilDICOM.Network.PDUs.Request, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 125
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public void RaiseAssociationRequestReceived(Request req, Association asc)
+    content.vb: Public Sub RaiseAssociationRequestReceived(req As Request, asc As Association)
+    parameters:
+    - id: req
+      type: EvilDICOM.Network.PDUs.Request
+    - id: asc
+      type: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.Services.AssociationService.AssociationAcceptanceReceived
+  id: AssociationAcceptanceReceived
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: AssociationAcceptanceReceived
+  fullName: EvilDICOM.Network.Services.AssociationService.AssociationAcceptanceReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 135
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event AssociationService.AssociationAcceptedHandler AssociationAcceptanceReceived
+    content.vb: Public Event AssociationAcceptanceReceived As AssociationService.AssociationAcceptedHandler
+- uid: EvilDICOM.Network.Services.AssociationService.RaiseAssociationAcceptanceReceived(EvilDICOM.Network.PDUs.Accept,EvilDICOM.Network.Association)
+  id: RaiseAssociationAcceptanceReceived(EvilDICOM.Network.PDUs.Accept,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: RaiseAssociationAcceptanceReceived(Accept, Association)
+  fullName: EvilDICOM.Network.Services.AssociationService.RaiseAssociationAcceptanceReceived(EvilDICOM.Network.PDUs.Accept, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 137
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public void RaiseAssociationAcceptanceReceived(Accept acc, Association asc)
+    content.vb: Public Sub RaiseAssociationAcceptanceReceived(acc As Accept, asc As Association)
+    parameters:
+    - id: acc
+      type: EvilDICOM.Network.PDUs.Accept
+    - id: asc
+      type: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.Services.AssociationService.AssociationRejectionReceived
+  id: AssociationRejectionReceived
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: AssociationRejectionReceived
+  fullName: EvilDICOM.Network.Services.AssociationService.AssociationRejectionReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 147
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event AssociationService.AssociationRejectedHandler AssociationRejectionReceived
+    content.vb: Public Event AssociationRejectionReceived As AssociationService.AssociationRejectedHandler
+- uid: EvilDICOM.Network.Services.AssociationService.RaiseAssociationRejectionReceived(EvilDICOM.Network.PDUs.Reject,EvilDICOM.Network.Association)
+  id: RaiseAssociationRejectionReceived(EvilDICOM.Network.PDUs.Reject,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: RaiseAssociationRejectionReceived(Reject, Association)
+  fullName: EvilDICOM.Network.Services.AssociationService.RaiseAssociationRejectionReceived(EvilDICOM.Network.PDUs.Reject, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 149
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public void RaiseAssociationRejectionReceived(Reject rej, Association asc)
+    content.vb: Public Sub RaiseAssociationRejectionReceived(rej As Reject, asc As Association)
+    parameters:
+    - id: rej
+      type: EvilDICOM.Network.PDUs.Reject
+    - id: asc
+      type: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.Services.AssociationService.ReleaseRequestReceived
+  id: ReleaseRequestReceived
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: ReleaseRequestReceived
+  fullName: EvilDICOM.Network.Services.AssociationService.ReleaseRequestReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 159
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event AssociationService.ReleaseRequestHandler ReleaseRequestReceived
+    content.vb: Public Event ReleaseRequestReceived As AssociationService.ReleaseRequestHandler
+- uid: EvilDICOM.Network.Services.AssociationService.RaiseReleaseRequestReceived(EvilDICOM.Network.PDUs.ReleaseRequest,EvilDICOM.Network.Association)
+  id: RaiseReleaseRequestReceived(EvilDICOM.Network.PDUs.ReleaseRequest,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: RaiseReleaseRequestReceived(ReleaseRequest, Association)
+  fullName: EvilDICOM.Network.Services.AssociationService.RaiseReleaseRequestReceived(EvilDICOM.Network.PDUs.ReleaseRequest, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 161
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public void RaiseReleaseRequestReceived(ReleaseRequest relReq, Association asc)
+    content.vb: Public Sub RaiseReleaseRequestReceived(relReq As ReleaseRequest, asc As Association)
+    parameters:
+    - id: relReq
+      type: EvilDICOM.Network.PDUs.ReleaseRequest
+    - id: asc
+      type: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.Services.AssociationService.ReleaseResponseReceived
+  id: ReleaseResponseReceived
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: ReleaseResponseReceived
+  fullName: EvilDICOM.Network.Services.AssociationService.ReleaseResponseReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 171
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event AssociationService.ReleaseResponseHandler ReleaseResponseReceived
+    content.vb: Public Event ReleaseResponseReceived As AssociationService.ReleaseResponseHandler
+- uid: EvilDICOM.Network.Services.AssociationService.RaiseReleaseResponseReceived(EvilDICOM.Network.PDUs.ReleaseResponse,EvilDICOM.Network.Association)
+  id: RaiseReleaseResponseReceived(EvilDICOM.Network.PDUs.ReleaseResponse,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: RaiseReleaseResponseReceived(ReleaseResponse, Association)
+  fullName: EvilDICOM.Network.Services.AssociationService.RaiseReleaseResponseReceived(EvilDICOM.Network.PDUs.ReleaseResponse, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 173
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public void RaiseReleaseResponseReceived(ReleaseResponse relRs, Association asc)
+    content.vb: Public Sub RaiseReleaseResponseReceived(relRs As ReleaseResponse, asc As Association)
+    parameters:
+    - id: relRs
+      type: EvilDICOM.Network.PDUs.ReleaseResponse
+    - id: asc
+      type: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.Services.AssociationService.AbortRequestReceived
+  id: AbortRequestReceived
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: AbortRequestReceived
+  fullName: EvilDICOM.Network.Services.AssociationService.AbortRequestReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 183
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event AssociationService.AbortRequestHandler AbortRequestReceived
+    content.vb: Public Event AbortRequestReceived As AssociationService.AbortRequestHandler
+- uid: EvilDICOM.Network.Services.AssociationService.RaiseAbortRequestReceived(EvilDICOM.Network.Associations.PDUs.Abort,EvilDICOM.Network.Association)
+  id: RaiseAbortRequestReceived(EvilDICOM.Network.Associations.PDUs.Abort,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Services.AssociationService
+  langs:
+  - csharp
+  - vb
+  name: RaiseAbortRequestReceived(Abort, Association)
+  fullName: EvilDICOM.Network.Services.AssociationService.RaiseAbortRequestReceived(EvilDICOM.Network.Associations.PDUs.Abort, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 185
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public void RaiseAbortRequestReceived(Abort abort, Association asc)
+    content.vb: Public Sub RaiseAbortRequestReceived(abort As Abort, asc As Association)
+    parameters:
+    - id: abort
+      type: EvilDICOM.Network.Associations.PDUs.Abort
+    - id: asc
+      type: EvilDICOM.Network.Association
+references:
+- uid: EvilDICOM.Network.Services
+  isExternal: false
+  name: EvilDICOM.Network.Services
+  fullName: EvilDICOM.Network.Services
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Action{EvilDICOM.Network.Associations.PDUs.Abort,EvilDICOM.Network.Association}
+  parent: System
+  definition: System.Action`2
+  name: Action<Abort, Association>
+  fullName: System.Action<EvilDICOM.Network.Associations.PDUs.Abort, EvilDICOM.Network.Association>
+  fullname.vb: System.Action(Of EvilDICOM.Network.Associations.PDUs.Abort, EvilDICOM.Network.Association)
+  name.vb: Action(Of Abort, Association)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Network.Associations.PDUs.Abort
+    name: Abort
+    fullName: EvilDICOM.Network.Associations.PDUs.Abort
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.Associations.PDUs.Abort
+    name: Abort
+    fullName: EvilDICOM.Network.Associations.PDUs.Abort
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    fullName: )
+- uid: System.Action`2
+  parent: System
+  isExternal: true
+  name: Action<T1, T2>
+  fullName: System.Action<T1, T2>
+  fullname.vb: System.Action(Of T1, T2)
+  name.vb: Action(Of T1, T2)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    fullName: <
+  - name: T1
+    fullName: T1
+  - name: ', '
+    fullName: ', '
+  - name: T2
+    fullName: T2
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T1
+    fullName: T1
+  - name: ', '
+    fullName: ', '
+  - name: T2
+    fullName: T2
+  - name: )
+    fullName: )
+- uid: System.Action{EvilDICOM.Network.PDUs.Request,EvilDICOM.Network.Association}
+  parent: System
+  definition: System.Action`2
+  name: Action<Request, Association>
+  fullName: System.Action<EvilDICOM.Network.PDUs.Request, EvilDICOM.Network.Association>
+  fullname.vb: System.Action(Of EvilDICOM.Network.PDUs.Request, EvilDICOM.Network.Association)
+  name.vb: Action(Of Request, Association)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.Request
+    name: Request
+    fullName: EvilDICOM.Network.PDUs.Request
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.Request
+    name: Request
+    fullName: EvilDICOM.Network.PDUs.Request
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    fullName: )
+- uid: System.Action{EvilDICOM.Network.PDUs.Accept,EvilDICOM.Network.Association}
+  parent: System
+  definition: System.Action`2
+  name: Action<Accept, Association>
+  fullName: System.Action<EvilDICOM.Network.PDUs.Accept, EvilDICOM.Network.Association>
+  fullname.vb: System.Action(Of EvilDICOM.Network.PDUs.Accept, EvilDICOM.Network.Association)
+  name.vb: Action(Of Accept, Association)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.Accept
+    name: Accept
+    fullName: EvilDICOM.Network.PDUs.Accept
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.Accept
+    name: Accept
+    fullName: EvilDICOM.Network.PDUs.Accept
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    fullName: )
+- uid: System.Action{EvilDICOM.Network.PDUs.ReleaseRequest,EvilDICOM.Network.Association}
+  parent: System
+  definition: System.Action`2
+  name: Action<ReleaseRequest, Association>
+  fullName: System.Action<EvilDICOM.Network.PDUs.ReleaseRequest, EvilDICOM.Network.Association>
+  fullname.vb: System.Action(Of EvilDICOM.Network.PDUs.ReleaseRequest, EvilDICOM.Network.Association)
+  name.vb: Action(Of ReleaseRequest, Association)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.ReleaseRequest
+    name: ReleaseRequest
+    fullName: EvilDICOM.Network.PDUs.ReleaseRequest
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.ReleaseRequest
+    name: ReleaseRequest
+    fullName: EvilDICOM.Network.PDUs.ReleaseRequest
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    fullName: )
+- uid: System.Action{EvilDICOM.Network.PDUs.ReleaseResponse,EvilDICOM.Network.Association}
+  parent: System
+  definition: System.Action`2
+  name: Action<ReleaseResponse, Association>
+  fullName: System.Action<EvilDICOM.Network.PDUs.ReleaseResponse, EvilDICOM.Network.Association>
+  fullname.vb: System.Action(Of EvilDICOM.Network.PDUs.ReleaseResponse, EvilDICOM.Network.Association)
+  name.vb: Action(Of ReleaseResponse, Association)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.ReleaseResponse
+    name: ReleaseResponse
+    fullName: EvilDICOM.Network.PDUs.ReleaseResponse
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.ReleaseResponse
+    name: ReleaseResponse
+    fullName: EvilDICOM.Network.PDUs.ReleaseResponse
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    fullName: )
+- uid: System.Action{EvilDICOM.Network.PDUs.Reject,EvilDICOM.Network.Association}
+  parent: System
+  definition: System.Action`2
+  name: Action<Reject, Association>
+  fullName: System.Action<EvilDICOM.Network.PDUs.Reject, EvilDICOM.Network.Association>
+  fullname.vb: System.Action(Of EvilDICOM.Network.PDUs.Reject, EvilDICOM.Network.Association)
+  name.vb: Action(Of Reject, Association)
+  spec.csharp:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.Reject
+    name: Reject
+    fullName: EvilDICOM.Network.PDUs.Reject
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Action`2
+    name: Action
+    fullName: System.Action
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.Reject
+    name: Reject
+    fullName: EvilDICOM.Network.PDUs.Reject
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Network.PDUs.Request
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: Request
+  fullName: EvilDICOM.Network.PDUs.Request
+- uid: EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: EvilDICOM.Network.PDUs
+  fullName: EvilDICOM.Network.PDUs
+- uid: EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+- uid: EvilDICOM.Network.PDUs.Accept
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: Accept
+  fullName: EvilDICOM.Network.PDUs.Accept
+- uid: EvilDICOM.Network.PDUs.Reject
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: Reject
+  fullName: EvilDICOM.Network.PDUs.Reject
+- uid: EvilDICOM.Network.PDUs.ReleaseRequest
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: ReleaseRequest
+  fullName: EvilDICOM.Network.PDUs.ReleaseRequest
+- uid: EvilDICOM.Network.PDUs.ReleaseResponse
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: ReleaseResponse
+  fullName: EvilDICOM.Network.PDUs.ReleaseResponse
+- uid: EvilDICOM.Network.Associations.PDUs.Abort
+  parent: EvilDICOM.Network.Associations.PDUs
+  isExternal: false
+  name: Abort
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort
+- uid: EvilDICOM.Network.Associations.PDUs
+  isExternal: false
+  name: EvilDICOM.Network.Associations.PDUs
+  fullName: EvilDICOM.Network.Associations.PDUs

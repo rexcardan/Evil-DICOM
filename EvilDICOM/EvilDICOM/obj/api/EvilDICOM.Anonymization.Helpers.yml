@@ -1,0 +1,25 @@
+items:
+- uid: EvilDICOM.Anonymization.Helpers
+  id: EvilDICOM.Anonymization.Helpers
+  children:
+  - EvilDICOM.Anonymization.Helpers.DateHelper
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Anonymization.Helpers
+  fullName: EvilDICOM.Anonymization.Helpers
+  type: Namespace
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Helpers/DateHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Helpers/DateHelper.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Anonymization.Helpers.DateHelper
+  isExternal: false
+  name: DateHelper
+  fullName: EvilDICOM.Anonymization.Helpers.DateHelper

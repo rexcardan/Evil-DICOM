@@ -1,0 +1,407 @@
+items:
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMStudy
+  id: DICOMStudy
+  parent: EvilDICOM.Anonymization.Anonymizers
+  children:
+  - EvilDICOM.Anonymization.Anonymizers.DICOMStudy.Date
+  - EvilDICOM.Anonymization.Anonymizers.DICOMStudy.ID
+  - EvilDICOM.Anonymization.Anonymizers.DICOMStudy.Type
+  langs:
+  - csharp
+  - vb
+  name: DICOMStudy
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMStudy
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 140
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: public class DICOMStudy
+    content.vb: Public Class DICOMStudy
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMStudy.ID
+  id: ID
+  parent: EvilDICOM.Anonymization.Anonymizers.DICOMStudy
+  langs:
+  - csharp
+  - vb
+  name: ID
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMStudy.ID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 142
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: public string ID { get; set; }
+    content.vb: Public Property ID As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMStudy.Date
+  id: Date
+  parent: EvilDICOM.Anonymization.Anonymizers.DICOMStudy
+  langs:
+  - csharp
+  - vb
+  name: Date
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMStudy.Date
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 143
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: public DateTime? Date { get; set; }
+    content.vb: Public Property Date As Date?
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMStudy.Type
+  id: Type
+  parent: EvilDICOM.Anonymization.Anonymizers.DICOMStudy
+  langs:
+  - csharp
+  - vb
+  name: Type
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMStudy.Type
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 144
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: public DICOMFileType Type { get; set; }
+    content.vb: Public Property Type As DICOMFileType
+    parameters: []
+    return:
+      type: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+references:
+- uid: EvilDICOM.Anonymization.Anonymizers
+  isExternal: false
+  name: EvilDICOM.Anonymization.Anonymizers
+  fullName: EvilDICOM.Anonymization.Anonymizers
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String
+- uid: System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  fullname.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Nullable`1
+  parent: System
+  isExternal: true
+  name: Nullable<T>
+  fullName: System.Nullable<T>
+  fullname.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  parent: EvilDICOM.Anonymization.Anonymizers
+  isExternal: false
+  name: DICOMFileType
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType

@@ -1,0 +1,95 @@
+items:
+- uid: EvilDICOM.Network.Enums.RejectSource
+  id: RejectSource
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.RejectSource.DICOM_UL_SERVICE_PROVIDER_ACSE
+  - EvilDICOM.Network.Enums.RejectSource.DICOM_UL_SERVICE_PROVIDER_PRESENTATION
+  - EvilDICOM.Network.Enums.RejectSource.DICOM_UL_SERVICE_USER
+  langs:
+  - csharp
+  - vb
+  name: RejectSource
+  fullName: EvilDICOM.Network.Enums.RejectSource
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectSource.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/RejectSource.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: 'public enum RejectSource : byte'
+    content.vb: Public Enum RejectSource As Byte
+- uid: EvilDICOM.Network.Enums.RejectSource.DICOM_UL_SERVICE_USER
+  id: DICOM_UL_SERVICE_USER
+  parent: EvilDICOM.Network.Enums.RejectSource
+  langs:
+  - csharp
+  - vb
+  name: DICOM_UL_SERVICE_USER
+  fullName: EvilDICOM.Network.Enums.RejectSource.DICOM_UL_SERVICE_USER
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectSource.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/RejectSource.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: DICOM_UL_SERVICE_USER = 1
+- uid: EvilDICOM.Network.Enums.RejectSource.DICOM_UL_SERVICE_PROVIDER_ACSE
+  id: DICOM_UL_SERVICE_PROVIDER_ACSE
+  parent: EvilDICOM.Network.Enums.RejectSource
+  langs:
+  - csharp
+  - vb
+  name: DICOM_UL_SERVICE_PROVIDER_ACSE
+  fullName: EvilDICOM.Network.Enums.RejectSource.DICOM_UL_SERVICE_PROVIDER_ACSE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectSource.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/RejectSource.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: DICOM_UL_SERVICE_PROVIDER_ACSE = 2
+- uid: EvilDICOM.Network.Enums.RejectSource.DICOM_UL_SERVICE_PROVIDER_PRESENTATION
+  id: DICOM_UL_SERVICE_PROVIDER_PRESENTATION
+  parent: EvilDICOM.Network.Enums.RejectSource
+  langs:
+  - csharp
+  - vb
+  name: DICOM_UL_SERVICE_PROVIDER_PRESENTATION
+  fullName: EvilDICOM.Network.Enums.RejectSource.DICOM_UL_SERVICE_PROVIDER_PRESENTATION
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectSource.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/RejectSource.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: DICOM_UL_SERVICE_PROVIDER_PRESENTATION = 3
+references:
+- uid: EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums

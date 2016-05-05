@@ -1,0 +1,333 @@
+items:
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  id: DICOMObjectExtensions
+  parent: EvilDICOM.Core.Extensions
+  children:
+  - EvilDICOM.Core.Extensions.DICOMObjectExtensions.LoadFromXML(EvilDICOM.Core.DICOMObject,System.String)
+  - EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString(EvilDICOM.Core.DICOMObject)
+  langs:
+  - csharp
+  - vb
+  name: DICOMObjectExtensions
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  syntax:
+    content: public class DICOMObjectExtensions
+    content.vb: Public Class DICOMObjectExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString(EvilDICOM.Core.DICOMObject)
+  id: ToXMLString(EvilDICOM.Core.DICOMObject)
+  parent: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToXMLString(DICOMObject)
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString(EvilDICOM.Core.DICOMObject)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: Converts a DICOM object to XML format
+  example: []
+  syntax:
+    content: public static string ToXMLString(DICOMObject dcm)
+    content.vb: Public Shared Function ToXMLString(dcm As DICOMObject) As String
+    parameters:
+    - id: dcm
+      type: EvilDICOM.Core.DICOMObject
+      description: 
+    return:
+      type: System.String
+      description: 
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.LoadFromXML(EvilDICOM.Core.DICOMObject,System.String)
+  id: LoadFromXML(EvilDICOM.Core.DICOMObject,System.String)
+  parent: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: LoadFromXML(DICOMObject, String)
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.LoadFromXML(EvilDICOM.Core.DICOMObject, System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+    startLine: 37
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: Converts a XML string to a DICOM object
+  example: []
+  syntax:
+    content: public static void LoadFromXML(DICOMObject dcm, string xml)
+    content.vb: Public Shared Sub LoadFromXML(dcm As DICOMObject, xml As String)
+    parameters:
+    - id: dcm
+      type: EvilDICOM.Core.DICOMObject
+    - id: xml
+      type: System.String
+references:
+- uid: EvilDICOM.Core.Extensions
+  isExternal: false
+  name: EvilDICOM.Core.Extensions
+  fullName: EvilDICOM.Core.Extensions
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String
+- uid: EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  fullName: EvilDICOM.Core

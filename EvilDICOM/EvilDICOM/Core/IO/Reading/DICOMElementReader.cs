@@ -19,7 +19,7 @@ namespace EvilDICOM.Core.IO.Reading
         public static IDICOMElement ReadElementExplicitLittleEndian(DICOMBinaryReader dr)
         {
             Tag tag = TagReader.ReadLittleEndian(dr);
-            VR vr = VRReader.Read(dr);
+            var vr = VRReader.Read(tag, dr);
             int length = LengthReader.ReadLittleEndian(vr, dr);
             byte[] data = DataReader.ReadLittleEndian(length, dr, TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN);
             return ElementFactory.GenerateElement(tag, vr, data, TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN);
@@ -48,7 +48,7 @@ namespace EvilDICOM.Core.IO.Reading
         public static IDICOMElement ReadElementExplicitBigEndian(DICOMBinaryReader dr)
         {
             Tag tag = TagReader.ReadBigEndian(dr);
-            VR vr = VRReader.Read(dr);
+            VR vr = VRReader.Read(tag,dr);
             int length = LengthReader.ReadBigEndian(vr, dr);
             byte[] data = DataReader.ReadBigEndian(length, dr);
             return ElementFactory.GenerateElement(tag, vr, data, TransferSyntax.EXPLICIT_VR_BIG_ENDIAN);
@@ -59,7 +59,7 @@ namespace EvilDICOM.Core.IO.Reading
         public static void SkipElementExplicitLittleEndian(DICOMBinaryReader dr)
         {
             Tag tag = TagReader.ReadLittleEndian(dr);
-            VR vr = VRReader.Read(dr);
+            VR vr = VRReader.Read(tag,dr);
             int length = LengthReader.ReadLittleEndian(vr, dr);
             if (length != -1)
             {
@@ -90,7 +90,7 @@ namespace EvilDICOM.Core.IO.Reading
         public static void SkipElementExplicitBigEndian(DICOMBinaryReader dr)
         {
             Tag tag = TagReader.ReadBigEndian(dr);
-            VR vr = VRReader.Read(dr);
+            VR vr = VRReader.Read(tag,dr);
             int length = LengthReader.ReadBigEndian(vr, dr);
             if (length != -1)
             {

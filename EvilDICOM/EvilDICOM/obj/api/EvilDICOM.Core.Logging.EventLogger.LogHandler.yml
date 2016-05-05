@@ -1,0 +1,52 @@
+items:
+- uid: EvilDICOM.Core.Logging.EventLogger.LogHandler
+  id: EventLogger.LogHandler
+  parent: EvilDICOM.Core.Logging
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: EventLogger.LogHandler
+  fullName: EvilDICOM.Core.Logging.EventLogger.LogHandler
+  type: Delegate
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Logging/EventLogger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Logging/EventLogger.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Logging
+  syntax:
+    content: public delegate void LogHandler(string toLog, LogPriority priority);
+    content.vb: Public Delegate Sub LogHandler(toLog As String, priority As LogPriority)
+    parameters:
+    - id: toLog
+      type: System.String
+    - id: priority
+      type: EvilDICOM.Core.Enums.LogPriority
+references:
+- uid: EvilDICOM.Core.Logging
+  isExternal: false
+  name: EvilDICOM.Core.Logging
+  fullName: EvilDICOM.Core.Logging
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String
+- uid: EvilDICOM.Core.Enums.LogPriority
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: LogPriority
+  fullName: EvilDICOM.Core.Enums.LogPriority
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums

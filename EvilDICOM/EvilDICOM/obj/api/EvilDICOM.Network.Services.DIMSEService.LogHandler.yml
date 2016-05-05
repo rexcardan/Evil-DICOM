@@ -1,0 +1,41 @@
+items:
+- uid: EvilDICOM.Network.Services.DIMSEService.LogHandler
+  id: DIMSEService.LogHandler
+  parent: EvilDICOM.Network.Services
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: DIMSEService.LogHandler
+  fullName: EvilDICOM.Network.Services.DIMSEService.LogHandler
+  type: Delegate
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 147
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public delegate void LogHandler(string toLog);
+    content.vb: Public Delegate Sub LogHandler(toLog As String)
+    parameters:
+    - id: toLog
+      type: System.String
+references:
+- uid: EvilDICOM.Network.Services
+  isExternal: false
+  name: EvilDICOM.Network.Services
+  fullName: EvilDICOM.Network.Services
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System

@@ -1,0 +1,111 @@
+items:
+- uid: EvilDICOM.Core.Interfaces.IEncoderDecoder
+  id: IEncoderDecoder
+  parent: EvilDICOM.Core.Interfaces
+  children:
+  - EvilDICOM.Core.Interfaces.IEncoderDecoder.DecodeToBMP(System.Byte[])
+  - EvilDICOM.Core.Interfaces.IEncoderDecoder.Encode(System.Byte[])
+  langs:
+  - csharp
+  - vb
+  name: IEncoderDecoder
+  fullName: EvilDICOM.Core.Interfaces.IEncoderDecoder
+  type: Interface
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Interfaces/IImageDecoder.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Interfaces/IImageDecoder.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Interfaces
+  summary: Contains inteface methods to decode and encode
+  example: []
+  syntax:
+    content: public interface IEncoderDecoder
+    content.vb: Public Interface IEncoderDecoder
+- uid: EvilDICOM.Core.Interfaces.IEncoderDecoder.DecodeToBMP(System.Byte[])
+  id: DecodeToBMP(System.Byte[])
+  parent: EvilDICOM.Core.Interfaces.IEncoderDecoder
+  langs:
+  - csharp
+  - vb
+  name: DecodeToBMP(Byte[])
+  name.vb: DecodeToBMP(Byte())
+  fullName: EvilDICOM.Core.Interfaces.IEncoderDecoder.DecodeToBMP(System.Byte[])
+  fullName.vb: EvilDICOM.Core.Interfaces.IEncoderDecoder.DecodeToBMP(System.Byte())
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Interfaces/IImageDecoder.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Interfaces/IImageDecoder.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Interfaces
+  syntax:
+    content: byte[] DecodeToBMP(byte[] pixelData)
+    content.vb: Function DecodeToBMP(pixelData As Byte()) As Byte()
+    parameters:
+    - id: pixelData
+      type: System.Byte[]
+    return:
+      type: System.Byte[]
+- uid: EvilDICOM.Core.Interfaces.IEncoderDecoder.Encode(System.Byte[])
+  id: Encode(System.Byte[])
+  parent: EvilDICOM.Core.Interfaces.IEncoderDecoder
+  langs:
+  - csharp
+  - vb
+  name: Encode(Byte[])
+  name.vb: Encode(Byte())
+  fullName: EvilDICOM.Core.Interfaces.IEncoderDecoder.Encode(System.Byte[])
+  fullName.vb: EvilDICOM.Core.Interfaces.IEncoderDecoder.Encode(System.Byte())
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Interfaces/IImageDecoder.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Interfaces/IImageDecoder.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Interfaces
+  syntax:
+    content: byte[] Encode(byte[] bmp)
+    content.vb: Function Encode(bmp As Byte()) As Byte()
+    parameters:
+    - id: bmp
+      type: System.Byte[]
+    return:
+      type: System.Byte[]
+references:
+- uid: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  fullName: System.Byte[]
+  fullname.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    fullName: ()

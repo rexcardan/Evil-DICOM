@@ -1,0 +1,1084 @@
+items:
+- uid: EvilDICOM.Core.Helpers.Vector3
+  id: Vector3
+  parent: EvilDICOM.Core.Helpers
+  children:
+  - EvilDICOM.Core.Helpers.Vector3.#ctor(System.Double,System.Double,System.Double)
+  - EvilDICOM.Core.Helpers.Vector3.#ctor(System.Double[])
+  - EvilDICOM.Core.Helpers.Vector3.Copy
+  - EvilDICOM.Core.Helpers.Vector3.CrossMultiply(EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.Core.Helpers.Vector3.DistanceTo(EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.Core.Helpers.Vector3.Equals(System.Object)
+  - EvilDICOM.Core.Helpers.Vector3.GetHashCode
+  - EvilDICOM.Core.Helpers.Vector3.Infinite
+  - EvilDICOM.Core.Helpers.Vector3.Item(System.Int64)
+  - EvilDICOM.Core.Helpers.Vector3.Length
+  - EvilDICOM.Core.Helpers.Vector3.NaN
+  - EvilDICOM.Core.Helpers.Vector3.Norm
+  - EvilDICOM.Core.Helpers.Vector3.op_Addition(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.Core.Helpers.Vector3.op_Division(EvilDICOM.Core.Helpers.Vector3,System.Double)
+  - EvilDICOM.Core.Helpers.Vector3.op_Equality(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.Core.Helpers.Vector3.op_Inequality(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.Core.Helpers.Vector3.op_Multiply(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.Core.Helpers.Vector3.op_Multiply(EvilDICOM.Core.Helpers.Vector3,System.Double)
+  - EvilDICOM.Core.Helpers.Vector3.op_Multiply(System.Double,EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.Core.Helpers.Vector3.op_Subtraction(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.Core.Helpers.Vector3.ToArray
+  - EvilDICOM.Core.Helpers.Vector3.ToString
+  - EvilDICOM.Core.Helpers.Vector3.Values
+  - EvilDICOM.Core.Helpers.Vector3.X
+  - EvilDICOM.Core.Helpers.Vector3.Y
+  - EvilDICOM.Core.Helpers.Vector3.Z
+  - EvilDICOM.Core.Helpers.Vector3.Zeroes
+  langs:
+  - csharp
+  - vb
+  name: Vector3
+  fullName: EvilDICOM.Core.Helpers.Vector3
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  summary: This is a temporary class until .NET 4.6 is released with Vector3 support. Borrowed from my Cardan.Math library
+  example: []
+  syntax:
+    content: public class Vector3
+    content.vb: Public Class Vector3
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Core.Helpers.Vector3.#ctor(System.Double,System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double,System.Double)'
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Vector3(Double, Double, Double)
+  fullName: EvilDICOM.Core.Helpers.Vector3.Vector3(System.Double, System.Double, System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public Vector3(double x = 0, double y = 0, double z = 0)
+    content.vb: Public Sub New(x As Double = 0, y As Double = 0, z As Double = 0)
+    parameters:
+    - id: x
+      type: System.Double
+    - id: y
+      type: System.Double
+    - id: z
+      type: System.Double
+- uid: EvilDICOM.Core.Helpers.Vector3.#ctor(System.Double[])
+  id: '#ctor(System.Double[])'
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Vector3(Double[])
+  name.vb: Vector3(Double())
+  fullName: EvilDICOM.Core.Helpers.Vector3.Vector3(System.Double[])
+  fullName.vb: EvilDICOM.Core.Helpers.Vector3.Vector3(System.Double())
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public Vector3(double[] values)
+    content.vb: Public Sub New(values As Double())
+    parameters:
+    - id: values
+      type: System.Double[]
+- uid: EvilDICOM.Core.Helpers.Vector3.Item(System.Int64)
+  id: Item(System.Int64)
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Item[Int64]
+  name.vb: Item(Int64)
+  fullName: EvilDICOM.Core.Helpers.Vector3.Item[System.Int64]
+  fullName.vb: EvilDICOM.Core.Helpers.Vector3.Item(System.Int64)
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 40
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  summary: Allows the vector class elements to be accessed by index
+  example: []
+  syntax:
+    content: public double this[long index] { get; set; }
+    content.vb: Public Property Item(index As Long) As Double
+    parameters:
+    - id: index
+      type: System.Int64
+      description: the index of the element to return
+    return:
+      type: System.Double
+      description: the element at the specified index
+- uid: EvilDICOM.Core.Helpers.Vector3.Zeroes
+  id: Zeroes
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Zeroes
+  fullName: EvilDICOM.Core.Helpers.Vector3.Zeroes
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 66
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  summary: A static zero value vector creator. Returns a vector3 containing only zero value elements.
+  example: []
+  syntax:
+    content: public static Vector3 Zeroes { get; }
+    content.vb: Public Shared ReadOnly Property Zeroes As Vector3
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+- uid: EvilDICOM.Core.Helpers.Vector3.Infinite
+  id: Infinite
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Infinite
+  fullName: EvilDICOM.Core.Helpers.Vector3.Infinite
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 74
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  summary: A static infinite value vector creator. Returns a vector3 containing positive infinite value elements.
+  example: []
+  syntax:
+    content: public static Vector3 Infinite { get; }
+    content.vb: Public Shared ReadOnly Property Infinite As Vector3
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+- uid: EvilDICOM.Core.Helpers.Vector3.NaN
+  id: NaN
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: NaN
+  fullName: EvilDICOM.Core.Helpers.Vector3.NaN
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 82
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  summary: A static infinite value vector creator. Returns a vector3 containing NaN value elements.
+  example: []
+  syntax:
+    content: public static Vector3 NaN { get; }
+    content.vb: Public Shared ReadOnly Property NaN As Vector3
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+- uid: EvilDICOM.Core.Helpers.Vector3.X
+  id: X
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: X
+  fullName: EvilDICOM.Core.Helpers.Vector3.X
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 87
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public double X { get; set; }
+    content.vb: Public Property X As Double
+    parameters: []
+    return:
+      type: System.Double
+- uid: EvilDICOM.Core.Helpers.Vector3.Y
+  id: Y
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Y
+  fullName: EvilDICOM.Core.Helpers.Vector3.Y
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 93
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public double Y { get; set; }
+    content.vb: Public Property Y As Double
+    parameters: []
+    return:
+      type: System.Double
+- uid: EvilDICOM.Core.Helpers.Vector3.Z
+  id: Z
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Z
+  fullName: EvilDICOM.Core.Helpers.Vector3.Z
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 99
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public double Z { get; set; }
+    content.vb: Public Property Z As Double
+    parameters: []
+    return:
+      type: System.Double
+- uid: EvilDICOM.Core.Helpers.Vector3.Length
+  id: Length
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Length
+  fullName: EvilDICOM.Core.Helpers.Vector3.Length
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 105
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public int Length { get; }
+    content.vb: Public ReadOnly Property Length As Integer
+    parameters: []
+    return:
+      type: System.Int32
+- uid: EvilDICOM.Core.Helpers.Vector3.Values
+  id: Values
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Values
+  fullName: EvilDICOM.Core.Helpers.Vector3.Values
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 110
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public double[] Values { get; set; }
+    content.vb: Public Property Values As Double()
+    parameters: []
+    return:
+      type: System.Double[]
+- uid: EvilDICOM.Core.Helpers.Vector3.Copy
+  id: Copy
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Copy()
+  fullName: EvilDICOM.Core.Helpers.Vector3.Copy()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 131
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  summary: Creates a copy of this vector
+  example: []
+  syntax:
+    content: public Vector3 Copy()
+    content.vb: Public Function Copy As Vector3
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+      description: 
+- uid: EvilDICOM.Core.Helpers.Vector3.Norm
+  id: Norm
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Norm()
+  fullName: EvilDICOM.Core.Helpers.Vector3.Norm()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 140
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  summary: Finds the magnitude of this vector
+  example: []
+  syntax:
+    content: public double Norm()
+    content.vb: Public Function Norm As Double
+    return:
+      type: System.Double
+      description: a double representing the magnitude of the vector
+- uid: EvilDICOM.Core.Helpers.Vector3.DistanceTo(EvilDICOM.Core.Helpers.Vector3)
+  id: DistanceTo(EvilDICOM.Core.Helpers.Vector3)
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: DistanceTo(Vector3)
+  fullName: EvilDICOM.Core.Helpers.Vector3.DistanceTo(EvilDICOM.Core.Helpers.Vector3)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 145
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public float DistanceTo(Vector3 v)
+    content.vb: Public Function DistanceTo(v As Vector3) As Single
+    parameters:
+    - id: v
+      type: EvilDICOM.Core.Helpers.Vector3
+    return:
+      type: System.Single
+- uid: EvilDICOM.Core.Helpers.Vector3.ToArray
+  id: ToArray
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: ToArray()
+  fullName: EvilDICOM.Core.Helpers.Vector3.ToArray()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 153
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public double[] ToArray()
+    content.vb: Public Function ToArray As Double()
+    return:
+      type: System.Double[]
+- uid: EvilDICOM.Core.Helpers.Vector3.ToString
+  id: ToString
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  fullName: EvilDICOM.Core.Helpers.Vector3.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 158
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
+    return:
+      type: System.String
+  overridden: System.Object.ToString
+- uid: EvilDICOM.Core.Helpers.Vector3.CrossMultiply(EvilDICOM.Core.Helpers.Vector3)
+  id: CrossMultiply(EvilDICOM.Core.Helpers.Vector3)
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: CrossMultiply(Vector3)
+  fullName: EvilDICOM.Core.Helpers.Vector3.CrossMultiply(EvilDICOM.Core.Helpers.Vector3)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 168
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  summary: Computes the cross product of this vector and another input vector
+  example: []
+  syntax:
+    content: public Vector3 CrossMultiply(Vector3 v)
+    content.vb: Public Function CrossMultiply(v As Vector3) As Vector3
+    parameters:
+    - id: v
+      type: EvilDICOM.Core.Helpers.Vector3
+      description: the input vector
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+      description: a new vector that is the cross product of the two vectors
+- uid: EvilDICOM.Core.Helpers.Vector3.op_Addition(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  id: op_Addition(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Addition(Vector3, Vector3)
+  fullName: EvilDICOM.Core.Helpers.Vector3.Addition(EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3)
+  type: Operator
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 177
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static Vector3 operator +(Vector3 v1, Vector3 v2)
+    content.vb: Public Shared Operator +(v1 As Vector3, v2 As Vector3) As Vector3
+    parameters:
+    - id: v1
+      type: EvilDICOM.Core.Helpers.Vector3
+    - id: v2
+      type: EvilDICOM.Core.Helpers.Vector3
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+- uid: EvilDICOM.Core.Helpers.Vector3.op_Subtraction(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  id: op_Subtraction(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Subtraction(Vector3, Vector3)
+  fullName: EvilDICOM.Core.Helpers.Vector3.Subtraction(EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3)
+  type: Operator
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 182
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static Vector3 operator -(Vector3 v1, Vector3 v2)
+    content.vb: Public Shared Operator -(v1 As Vector3, v2 As Vector3) As Vector3
+    parameters:
+    - id: v1
+      type: EvilDICOM.Core.Helpers.Vector3
+    - id: v2
+      type: EvilDICOM.Core.Helpers.Vector3
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+- uid: EvilDICOM.Core.Helpers.Vector3.op_Multiply(EvilDICOM.Core.Helpers.Vector3,System.Double)
+  id: op_Multiply(EvilDICOM.Core.Helpers.Vector3,System.Double)
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Multiply(Vector3, Double)
+  fullName: EvilDICOM.Core.Helpers.Vector3.Multiply(EvilDICOM.Core.Helpers.Vector3, System.Double)
+  type: Operator
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 187
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static Vector3 operator *(Vector3 v1, double s)
+    content.vb: Public Shared Operator *(v1 As Vector3, s As Double) As Vector3
+    parameters:
+    - id: v1
+      type: EvilDICOM.Core.Helpers.Vector3
+    - id: s
+      type: System.Double
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+- uid: EvilDICOM.Core.Helpers.Vector3.op_Multiply(System.Double,EvilDICOM.Core.Helpers.Vector3)
+  id: op_Multiply(System.Double,EvilDICOM.Core.Helpers.Vector3)
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Multiply(Double, Vector3)
+  fullName: EvilDICOM.Core.Helpers.Vector3.Multiply(System.Double, EvilDICOM.Core.Helpers.Vector3)
+  type: Operator
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 192
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static Vector3 operator *(double s, Vector3 v1)
+    content.vb: Public Shared Operator *(s As Double, v1 As Vector3) As Vector3
+    parameters:
+    - id: s
+      type: System.Double
+    - id: v1
+      type: EvilDICOM.Core.Helpers.Vector3
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+- uid: EvilDICOM.Core.Helpers.Vector3.op_Multiply(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  id: op_Multiply(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Multiply(Vector3, Vector3)
+  fullName: EvilDICOM.Core.Helpers.Vector3.Multiply(EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3)
+  type: Operator
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 203
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  summary: Computes the scalar (dot) product of two vectors
+  example: []
+  syntax:
+    content: public static double operator *(Vector3 v1, Vector3 v2)
+    content.vb: Public Shared Operator *(v1 As Vector3, v2 As Vector3) As Double
+    parameters:
+    - id: v1
+      type: EvilDICOM.Core.Helpers.Vector3
+      description: the first vector
+    - id: v2
+      type: EvilDICOM.Core.Helpers.Vector3
+      description: the second vector
+    return:
+      type: System.Double
+      description: The scalar product of two vectors
+- uid: EvilDICOM.Core.Helpers.Vector3.op_Division(EvilDICOM.Core.Helpers.Vector3,System.Double)
+  id: op_Division(EvilDICOM.Core.Helpers.Vector3,System.Double)
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Division(Vector3, Double)
+  fullName: EvilDICOM.Core.Helpers.Vector3.Division(EvilDICOM.Core.Helpers.Vector3, System.Double)
+  type: Operator
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 208
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static Vector3 operator /(Vector3 v1, double s)
+    content.vb: Public Shared Operator /(v1 As Vector3, s As Double) As Vector3
+    parameters:
+    - id: v1
+      type: EvilDICOM.Core.Helpers.Vector3
+    - id: s
+      type: System.Double
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+- uid: EvilDICOM.Core.Helpers.Vector3.op_Equality(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  id: op_Equality(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Equality(Vector3, Vector3)
+  fullName: EvilDICOM.Core.Helpers.Vector3.Equality(EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3)
+  type: Operator
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 213
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static bool operator ==(Vector3 v1, Vector3 v2)
+    content.vb: Public Shared Operator =(v1 As Vector3, v2 As Vector3) As Boolean
+    parameters:
+    - id: v1
+      type: EvilDICOM.Core.Helpers.Vector3
+    - id: v2
+      type: EvilDICOM.Core.Helpers.Vector3
+    return:
+      type: System.Boolean
+- uid: EvilDICOM.Core.Helpers.Vector3.op_Inequality(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  id: op_Inequality(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3)
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Inequality(Vector3, Vector3)
+  fullName: EvilDICOM.Core.Helpers.Vector3.Inequality(EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3)
+  type: Operator
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 218
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static bool operator !=(Vector3 v1, Vector3 v2)
+    content.vb: Public Shared Operator <>(v1 As Vector3, v2 As Vector3) As Boolean
+    parameters:
+    - id: v1
+      type: EvilDICOM.Core.Helpers.Vector3
+    - id: v2
+      type: EvilDICOM.Core.Helpers.Vector3
+    return:
+      type: System.Boolean
+- uid: EvilDICOM.Core.Helpers.Vector3.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  fullName: EvilDICOM.Core.Helpers.Vector3.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 227
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public override bool Equals(object obj)
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+  overridden: System.Object.Equals(System.Object)
+- uid: EvilDICOM.Core.Helpers.Vector3.GetHashCode
+  id: GetHashCode
+  parent: EvilDICOM.Core.Helpers.Vector3
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  fullName: EvilDICOM.Core.Helpers.Vector3.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Helpers/Vector3.cs
+    startLine: 237
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public override int GetHashCode()
+    content.vb: Public Overrides Function GetHashCode As Integer
+    return:
+      type: System.Int32
+  overridden: System.Object.GetHashCode
+references:
+- uid: EvilDICOM.Core.Helpers
+  isExternal: false
+  name: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  fullName: System.Double
+- uid: System.Double[]
+  isExternal: true
+  name: Double[]
+  fullName: System.Double[]
+  fullname.vb: System.Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ()
+    fullName: ()
+- uid: System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  fullName: System.Int64
+- uid: EvilDICOM.Core.Helpers.Vector3
+  parent: EvilDICOM.Core.Helpers
+  isExternal: false
+  name: Vector3
+  fullName: EvilDICOM.Core.Helpers.Vector3
+- uid: System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  fullName: System.Int32
+- uid: System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  fullName: System.Single
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String
+- uid: System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  fullName: System.Boolean
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )

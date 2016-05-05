@@ -1,0 +1,456 @@
+items:
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  id: CMoveIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  children:
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD.PatientId
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD.QueryLevel
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SeriesInstanceUID
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SOPInstanceUID
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SpecificCharacterSeet
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD.StudyInstanceUID
+  langs:
+  - csharp
+  - vb
+  name: CMoveIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: 'public class CMoveIOD : AbstractDIMSEIOD, IIOD'
+    content.vb: Public Class CMoveIOD Inherits AbstractDIMSEIOD Implements IIOD
+  inheritance:
+  - System.Object
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  implements:
+  - EvilDICOM.Core.Interfaces.IIOD
+  inheritedMembers:
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.QueryLevel
+  id: QueryLevel
+  parent: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: QueryLevel
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.QueryLevel
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public QueryLevel QueryLevel { get; set; }
+    content.vb: Public Property QueryLevel As QueryLevel
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.QueryLevel
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SpecificCharacterSeet
+  id: SpecificCharacterSeet
+  parent: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: SpecificCharacterSeet
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SpecificCharacterSeet
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string SpecificCharacterSeet { get; set; }
+    content.vb: Public Property SpecificCharacterSeet As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.PatientId
+  id: PatientId
+  parent: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: PatientId
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.PatientId
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string PatientId { get; set; }
+    content.vb: Public Property PatientId As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.StudyInstanceUID
+  id: StudyInstanceUID
+  parent: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: StudyInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.StudyInstanceUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 33
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string StudyInstanceUID { get; set; }
+    content.vb: Public Property StudyInstanceUID As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SOPInstanceUID
+  id: SOPInstanceUID
+  parent: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: SOPInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SOPInstanceUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 39
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string SOPInstanceUID { get; set; }
+    content.vb: Public Property SOPInstanceUID As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SeriesInstanceUID
+  id: SeriesInstanceUID
+  parent: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: SeriesInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SeriesInstanceUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 45
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string SeriesInstanceUID { get; set; }
+    content.vb: Public Property SeriesInstanceUID As String
+    parameters: []
+    return:
+      type: System.String
+references:
+- uid: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: EvilDICOM.Network.DIMSE.IOD
+  fullName: EvilDICOM.Network.DIMSE.IOD
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: AbstractDIMSEIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+- uid: EvilDICOM.Core.Interfaces.IIOD
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IIOD
+  fullName: EvilDICOM.Core.Interfaces.IIOD
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+  parent: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  isExternal: false
+  name: _sel
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+  parent: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  isExternal: false
+  name: Elements
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Network.Enums.QueryLevel
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: QueryLevel
+  fullName: EvilDICOM.Network.Enums.QueryLevel
+- uid: EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String

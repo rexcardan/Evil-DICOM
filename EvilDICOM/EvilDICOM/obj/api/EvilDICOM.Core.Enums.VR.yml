@@ -1,0 +1,647 @@
+items:
+- uid: EvilDICOM.Core.Enums.VR
+  id: VR
+  parent: EvilDICOM.Core.Enums
+  children:
+  - EvilDICOM.Core.Enums.VR.AgeString
+  - EvilDICOM.Core.Enums.VR.ApplicationEntity
+  - EvilDICOM.Core.Enums.VR.AttributeTag
+  - EvilDICOM.Core.Enums.VR.CodeString
+  - EvilDICOM.Core.Enums.VR.Date
+  - EvilDICOM.Core.Enums.VR.DateTime
+  - EvilDICOM.Core.Enums.VR.DecimalString
+  - EvilDICOM.Core.Enums.VR.FloatingPointDouble
+  - EvilDICOM.Core.Enums.VR.FloatingPointSingle
+  - EvilDICOM.Core.Enums.VR.IntegerString
+  - EvilDICOM.Core.Enums.VR.LongString
+  - EvilDICOM.Core.Enums.VR.LongText
+  - EvilDICOM.Core.Enums.VR.Null
+  - EvilDICOM.Core.Enums.VR.OtherByteString
+  - EvilDICOM.Core.Enums.VR.OtherFloatString
+  - EvilDICOM.Core.Enums.VR.OtherWordString
+  - EvilDICOM.Core.Enums.VR.PersonName
+  - EvilDICOM.Core.Enums.VR.Sequence
+  - EvilDICOM.Core.Enums.VR.ShortString
+  - EvilDICOM.Core.Enums.VR.ShortText
+  - EvilDICOM.Core.Enums.VR.SignedLong
+  - EvilDICOM.Core.Enums.VR.SignedShort
+  - EvilDICOM.Core.Enums.VR.Time
+  - EvilDICOM.Core.Enums.VR.UniqueIdentifier
+  - EvilDICOM.Core.Enums.VR.Unknown
+  - EvilDICOM.Core.Enums.VR.UnlimitedText
+  - EvilDICOM.Core.Enums.VR.UnsignedLong
+  - EvilDICOM.Core.Enums.VR.UnsignedShort
+  langs:
+  - csharp
+  - vb
+  name: VR
+  fullName: EvilDICOM.Core.Enums.VR
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  summary: An enum that contains all of the possible DICOM VR types.
+  example: []
+  syntax:
+    content: public enum VR
+    content.vb: Public Enum VR
+- uid: EvilDICOM.Core.Enums.VR.CodeString
+  id: CodeString
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: CodeString
+  fullName: EvilDICOM.Core.Enums.VR.CodeString
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: CodeString = 0
+- uid: EvilDICOM.Core.Enums.VR.ShortString
+  id: ShortString
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: ShortString
+  fullName: EvilDICOM.Core.Enums.VR.ShortString
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ShortString = 1
+- uid: EvilDICOM.Core.Enums.VR.LongString
+  id: LongString
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: LongString
+  fullName: EvilDICOM.Core.Enums.VR.LongString
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: LongString = 2
+- uid: EvilDICOM.Core.Enums.VR.ShortText
+  id: ShortText
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: ShortText
+  fullName: EvilDICOM.Core.Enums.VR.ShortText
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ShortText = 3
+- uid: EvilDICOM.Core.Enums.VR.LongText
+  id: LongText
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: LongText
+  fullName: EvilDICOM.Core.Enums.VR.LongText
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: LongText = 4
+- uid: EvilDICOM.Core.Enums.VR.UnlimitedText
+  id: UnlimitedText
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: UnlimitedText
+  fullName: EvilDICOM.Core.Enums.VR.UnlimitedText
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: UnlimitedText = 5
+- uid: EvilDICOM.Core.Enums.VR.ApplicationEntity
+  id: ApplicationEntity
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: ApplicationEntity
+  fullName: EvilDICOM.Core.Enums.VR.ApplicationEntity
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ApplicationEntity = 6
+- uid: EvilDICOM.Core.Enums.VR.PersonName
+  id: PersonName
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: PersonName
+  fullName: EvilDICOM.Core.Enums.VR.PersonName
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: PersonName = 7
+- uid: EvilDICOM.Core.Enums.VR.UniqueIdentifier
+  id: UniqueIdentifier
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: UniqueIdentifier
+  fullName: EvilDICOM.Core.Enums.VR.UniqueIdentifier
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: UniqueIdentifier = 8
+- uid: EvilDICOM.Core.Enums.VR.Date
+  id: Date
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: Date
+  fullName: EvilDICOM.Core.Enums.VR.Date
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: Date = 9
+- uid: EvilDICOM.Core.Enums.VR.Time
+  id: Time
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: Time
+  fullName: EvilDICOM.Core.Enums.VR.Time
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: Time = 10
+- uid: EvilDICOM.Core.Enums.VR.DateTime
+  id: DateTime
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: DateTime
+  fullName: EvilDICOM.Core.Enums.VR.DateTime
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: DateTime = 11
+- uid: EvilDICOM.Core.Enums.VR.AgeString
+  id: AgeString
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: AgeString
+  fullName: EvilDICOM.Core.Enums.VR.AgeString
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: AgeString = 12
+- uid: EvilDICOM.Core.Enums.VR.IntegerString
+  id: IntegerString
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: IntegerString
+  fullName: EvilDICOM.Core.Enums.VR.IntegerString
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: IntegerString = 13
+- uid: EvilDICOM.Core.Enums.VR.DecimalString
+  id: DecimalString
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: DecimalString
+  fullName: EvilDICOM.Core.Enums.VR.DecimalString
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: DecimalString = 14
+- uid: EvilDICOM.Core.Enums.VR.SignedShort
+  id: SignedShort
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: SignedShort
+  fullName: EvilDICOM.Core.Enums.VR.SignedShort
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: SignedShort = 15
+- uid: EvilDICOM.Core.Enums.VR.UnsignedShort
+  id: UnsignedShort
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: UnsignedShort
+  fullName: EvilDICOM.Core.Enums.VR.UnsignedShort
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: UnsignedShort = 16
+- uid: EvilDICOM.Core.Enums.VR.SignedLong
+  id: SignedLong
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: SignedLong
+  fullName: EvilDICOM.Core.Enums.VR.SignedLong
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: SignedLong = 17
+- uid: EvilDICOM.Core.Enums.VR.UnsignedLong
+  id: UnsignedLong
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: UnsignedLong
+  fullName: EvilDICOM.Core.Enums.VR.UnsignedLong
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: UnsignedLong = 18
+- uid: EvilDICOM.Core.Enums.VR.AttributeTag
+  id: AttributeTag
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: AttributeTag
+  fullName: EvilDICOM.Core.Enums.VR.AttributeTag
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: AttributeTag = 19
+- uid: EvilDICOM.Core.Enums.VR.FloatingPointSingle
+  id: FloatingPointSingle
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: FloatingPointSingle
+  fullName: EvilDICOM.Core.Enums.VR.FloatingPointSingle
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: FloatingPointSingle = 20
+- uid: EvilDICOM.Core.Enums.VR.FloatingPointDouble
+  id: FloatingPointDouble
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: FloatingPointDouble
+  fullName: EvilDICOM.Core.Enums.VR.FloatingPointDouble
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: FloatingPointDouble = 21
+- uid: EvilDICOM.Core.Enums.VR.OtherByteString
+  id: OtherByteString
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: OtherByteString
+  fullName: EvilDICOM.Core.Enums.VR.OtherByteString
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 29
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: OtherByteString = 22
+- uid: EvilDICOM.Core.Enums.VR.OtherWordString
+  id: OtherWordString
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: OtherWordString
+  fullName: EvilDICOM.Core.Enums.VR.OtherWordString
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 30
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: OtherWordString = 23
+- uid: EvilDICOM.Core.Enums.VR.OtherFloatString
+  id: OtherFloatString
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: OtherFloatString
+  fullName: EvilDICOM.Core.Enums.VR.OtherFloatString
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 31
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: OtherFloatString = 24
+- uid: EvilDICOM.Core.Enums.VR.Sequence
+  id: Sequence
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: Sequence
+  fullName: EvilDICOM.Core.Enums.VR.Sequence
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 32
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: Sequence = 25
+- uid: EvilDICOM.Core.Enums.VR.Unknown
+  id: Unknown
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: Unknown
+  fullName: EvilDICOM.Core.Enums.VR.Unknown
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 33
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: Unknown = 26
+- uid: EvilDICOM.Core.Enums.VR.Null
+  id: Null
+  parent: EvilDICOM.Core.Enums.VR
+  langs:
+  - csharp
+  - vb
+  name: Null
+  fullName: EvilDICOM.Core.Enums.VR.Null
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Enums/VR.cs
+    startLine: 34
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: Null = 27
+references:
+- uid: EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums

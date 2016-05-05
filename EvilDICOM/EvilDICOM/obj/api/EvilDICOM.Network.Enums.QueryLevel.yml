@@ -1,0 +1,117 @@
+items:
+- uid: EvilDICOM.Network.Enums.QueryLevel
+  id: QueryLevel
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.QueryLevel.IMAGE
+  - EvilDICOM.Network.Enums.QueryLevel.PATIENT
+  - EvilDICOM.Network.Enums.QueryLevel.SERIES
+  - EvilDICOM.Network.Enums.QueryLevel.STUDY
+  langs:
+  - csharp
+  - vb
+  name: QueryLevel
+  fullName: EvilDICOM.Network.Enums.QueryLevel
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/QueryLevel.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/QueryLevel.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: public enum QueryLevel
+    content.vb: Public Enum QueryLevel
+- uid: EvilDICOM.Network.Enums.QueryLevel.PATIENT
+  id: PATIENT
+  parent: EvilDICOM.Network.Enums.QueryLevel
+  langs:
+  - csharp
+  - vb
+  name: PATIENT
+  fullName: EvilDICOM.Network.Enums.QueryLevel.PATIENT
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/QueryLevel.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/QueryLevel.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: PATIENT = 0
+- uid: EvilDICOM.Network.Enums.QueryLevel.STUDY
+  id: STUDY
+  parent: EvilDICOM.Network.Enums.QueryLevel
+  langs:
+  - csharp
+  - vb
+  name: STUDY
+  fullName: EvilDICOM.Network.Enums.QueryLevel.STUDY
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/QueryLevel.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/QueryLevel.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: STUDY = 1
+- uid: EvilDICOM.Network.Enums.QueryLevel.SERIES
+  id: SERIES
+  parent: EvilDICOM.Network.Enums.QueryLevel
+  langs:
+  - csharp
+  - vb
+  name: SERIES
+  fullName: EvilDICOM.Network.Enums.QueryLevel.SERIES
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/QueryLevel.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/QueryLevel.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: SERIES = 2
+- uid: EvilDICOM.Network.Enums.QueryLevel.IMAGE
+  id: IMAGE
+  parent: EvilDICOM.Network.Enums.QueryLevel
+  langs:
+  - csharp
+  - vb
+  name: IMAGE
+  fullName: EvilDICOM.Network.Enums.QueryLevel.IMAGE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/QueryLevel.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/QueryLevel.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: IMAGE = 3
+references:
+- uid: EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums

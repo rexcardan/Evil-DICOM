@@ -1,0 +1,35 @@
+items:
+- uid: EvilDICOM.Network.Extensions
+  id: EvilDICOM.Network.Extensions
+  children:
+  - EvilDICOM.Network.Extensions.AssociationExtensions
+  - EvilDICOM.Network.Extensions.DIMSEExtensions
+  - EvilDICOM.Network.Extensions.IIODExtensions
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Network.Extensions
+  fullName: EvilDICOM.Network.Extensions
+  type: Namespace
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Extensions/IIODExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Extensions/IIODExtensions.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Network.Extensions.AssociationExtensions
+  isExternal: false
+  name: AssociationExtensions
+  fullName: EvilDICOM.Network.Extensions.AssociationExtensions
+- uid: EvilDICOM.Network.Extensions.DIMSEExtensions
+  isExternal: false
+  name: DIMSEExtensions
+  fullName: EvilDICOM.Network.Extensions.DIMSEExtensions
+- uid: EvilDICOM.Network.Extensions.IIODExtensions
+  isExternal: false
+  name: IIODExtensions
+  fullName: EvilDICOM.Network.Extensions.IIODExtensions

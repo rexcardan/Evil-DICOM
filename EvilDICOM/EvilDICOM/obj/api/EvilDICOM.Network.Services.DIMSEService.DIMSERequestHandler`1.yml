@@ -1,0 +1,51 @@
+items:
+- uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+  id: DIMSEService.DIMSERequestHandler`1
+  parent: EvilDICOM.Network.Services
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: DIMSEService.DIMSERequestHandler<T>
+  name.vb: DIMSEService.DIMSERequestHandler(Of T)
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler<T>
+  fullName.vb: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler(Of T)
+  type: Delegate
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 143
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: 'public delegate void DIMSERequestHandler<T>(T req, Association asc)where T : AbstractDIMSERequest;'
+    content.vb: Public Delegate Sub DIMSERequestHandler(Of T As AbstractDIMSERequest)(req As T, asc As Association)
+    parameters:
+    - id: req
+      type: '{T}'
+    - id: asc
+      type: EvilDICOM.Network.Association
+    typeParameters:
+    - id: T
+references:
+- uid: EvilDICOM.Network.Services
+  isExternal: false
+  name: EvilDICOM.Network.Services
+  fullName: EvilDICOM.Network.Services
+- uid: '{T}'
+  isExternal: false
+  name: T
+  fullName: T
+- uid: EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  fullName: EvilDICOM.Network

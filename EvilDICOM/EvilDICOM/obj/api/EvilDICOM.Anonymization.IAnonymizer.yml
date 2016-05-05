@@ -1,0 +1,64 @@
+items:
+- uid: EvilDICOM.Anonymization.IAnonymizer
+  id: IAnonymizer
+  parent: EvilDICOM.Anonymization
+  children:
+  - EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  langs:
+  - csharp
+  - vb
+  name: IAnonymizer
+  fullName: EvilDICOM.Anonymization.IAnonymizer
+  type: Interface
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Interfaces/IAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Interfaces/IAnonymizer.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization
+  syntax:
+    content: public interface IAnonymizer
+    content.vb: Public Interface IAnonymizer
+- uid: EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  id: Anonymize(EvilDICOM.Core.DICOMObject)
+  parent: EvilDICOM.Anonymization.IAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: Anonymize(DICOMObject)
+  fullName: EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Interfaces/IAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Interfaces/IAnonymizer.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization
+  syntax:
+    content: void Anonymize(DICOMObject d)
+    content.vb: Sub Anonymize(d As DICOMObject)
+    parameters:
+    - id: d
+      type: EvilDICOM.Core.DICOMObject
+references:
+- uid: EvilDICOM.Anonymization
+  isExternal: false
+  name: EvilDICOM.Anonymization
+  fullName: EvilDICOM.Anonymization
+- uid: EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  fullName: EvilDICOM.Core

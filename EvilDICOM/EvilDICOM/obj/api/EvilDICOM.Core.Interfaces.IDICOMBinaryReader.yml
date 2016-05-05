@@ -1,0 +1,29 @@
+items:
+- uid: EvilDICOM.Core.Interfaces.IDICOMBinaryReader
+  id: IDICOMBinaryReader
+  parent: EvilDICOM.Core.Interfaces
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IDICOMBinaryReader
+  fullName: EvilDICOM.Core.Interfaces.IDICOMBinaryReader
+  type: Interface
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Interfaces/IDICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Interfaces/IDICOMBinaryReader.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Interfaces
+  syntax:
+    content: public interface IDICOMBinaryReader
+    content.vb: Public Interface IDICOMBinaryReader
+references:
+- uid: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces

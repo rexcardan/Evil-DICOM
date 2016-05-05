@@ -1,0 +1,59 @@
+items:
+- uid: EvilDICOM.Network.PDUs
+  id: EvilDICOM.Network.PDUs
+  children:
+  - EvilDICOM.Network.PDUs.Accept
+  - EvilDICOM.Network.PDUs.PDataTF
+  - EvilDICOM.Network.PDUs.Reject
+  - EvilDICOM.Network.PDUs.ReleaseRequest
+  - EvilDICOM.Network.PDUs.ReleaseResponse
+  - EvilDICOM.Network.PDUs.Request
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Network.PDUs
+  fullName: EvilDICOM.Network.PDUs
+  type: Namespace
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Request.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Request.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Network.PDUs.Accept
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: Accept
+  fullName: EvilDICOM.Network.PDUs.Accept
+- uid: EvilDICOM.Network.PDUs.PDataTF
+  isExternal: false
+  name: PDataTF
+  fullName: EvilDICOM.Network.PDUs.PDataTF
+- uid: EvilDICOM.Network.PDUs.Reject
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: Reject
+  fullName: EvilDICOM.Network.PDUs.Reject
+- uid: EvilDICOM.Network.PDUs.ReleaseRequest
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: ReleaseRequest
+  fullName: EvilDICOM.Network.PDUs.ReleaseRequest
+- uid: EvilDICOM.Network.PDUs.ReleaseResponse
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: ReleaseResponse
+  fullName: EvilDICOM.Network.PDUs.ReleaseResponse
+- uid: EvilDICOM.Network.PDUs.Request
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: Request
+  fullName: EvilDICOM.Network.PDUs.Request
+- uid: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: EvilDICOM.Network.PDUs
+  fullName: EvilDICOM.Network.PDUs

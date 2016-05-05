@@ -1,0 +1,271 @@
+items:
+- uid: EvilDICOM.Network.Enums.CommandField
+  id: CommandField
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.CommandField.C_CANCEL
+  - EvilDICOM.Network.Enums.CommandField.C_ECHO_RP
+  - EvilDICOM.Network.Enums.CommandField.C_ECHO_RQ
+  - EvilDICOM.Network.Enums.CommandField.C_FIND_RP
+  - EvilDICOM.Network.Enums.CommandField.C_FIND_RQ
+  - EvilDICOM.Network.Enums.CommandField.C_GET_RP
+  - EvilDICOM.Network.Enums.CommandField.C_GET_RQ
+  - EvilDICOM.Network.Enums.CommandField.C_MOVE_RP
+  - EvilDICOM.Network.Enums.CommandField.C_MOVE_RQ
+  - EvilDICOM.Network.Enums.CommandField.C_STORE_RP
+  - EvilDICOM.Network.Enums.CommandField.C_STORE_RQ
+  langs:
+  - csharp
+  - vb
+  name: CommandField
+  fullName: EvilDICOM.Network.Enums.CommandField
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: 'public enum CommandField : ushort'
+    content.vb: Public Enum CommandField As UShort
+- uid: EvilDICOM.Network.Enums.CommandField.C_STORE_RQ
+  id: C_STORE_RQ
+  parent: EvilDICOM.Network.Enums.CommandField
+  langs:
+  - csharp
+  - vb
+  name: C_STORE_RQ
+  fullName: EvilDICOM.Network.Enums.CommandField.C_STORE_RQ
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: C_STORE_RQ = 1
+- uid: EvilDICOM.Network.Enums.CommandField.C_ECHO_RQ
+  id: C_ECHO_RQ
+  parent: EvilDICOM.Network.Enums.CommandField
+  langs:
+  - csharp
+  - vb
+  name: C_ECHO_RQ
+  fullName: EvilDICOM.Network.Enums.CommandField.C_ECHO_RQ
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: C_ECHO_RQ = 48
+- uid: EvilDICOM.Network.Enums.CommandField.C_FIND_RQ
+  id: C_FIND_RQ
+  parent: EvilDICOM.Network.Enums.CommandField
+  langs:
+  - csharp
+  - vb
+  name: C_FIND_RQ
+  fullName: EvilDICOM.Network.Enums.CommandField.C_FIND_RQ
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: C_FIND_RQ = 32
+- uid: EvilDICOM.Network.Enums.CommandField.C_MOVE_RQ
+  id: C_MOVE_RQ
+  parent: EvilDICOM.Network.Enums.CommandField
+  langs:
+  - csharp
+  - vb
+  name: C_MOVE_RQ
+  fullName: EvilDICOM.Network.Enums.CommandField.C_MOVE_RQ
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: C_MOVE_RQ = 33
+- uid: EvilDICOM.Network.Enums.CommandField.C_GET_RQ
+  id: C_GET_RQ
+  parent: EvilDICOM.Network.Enums.CommandField
+  langs:
+  - csharp
+  - vb
+  name: C_GET_RQ
+  fullName: EvilDICOM.Network.Enums.CommandField.C_GET_RQ
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: C_GET_RQ = 16
+- uid: EvilDICOM.Network.Enums.CommandField.C_GET_RP
+  id: C_GET_RP
+  parent: EvilDICOM.Network.Enums.CommandField
+  langs:
+  - csharp
+  - vb
+  name: C_GET_RP
+  fullName: EvilDICOM.Network.Enums.CommandField.C_GET_RP
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: C_GET_RP = 32784
+- uid: EvilDICOM.Network.Enums.CommandField.C_FIND_RP
+  id: C_FIND_RP
+  parent: EvilDICOM.Network.Enums.CommandField
+  langs:
+  - csharp
+  - vb
+  name: C_FIND_RP
+  fullName: EvilDICOM.Network.Enums.CommandField.C_FIND_RP
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: C_FIND_RP = 32800
+- uid: EvilDICOM.Network.Enums.CommandField.C_MOVE_RP
+  id: C_MOVE_RP
+  parent: EvilDICOM.Network.Enums.CommandField
+  langs:
+  - csharp
+  - vb
+  name: C_MOVE_RP
+  fullName: EvilDICOM.Network.Enums.CommandField.C_MOVE_RP
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: C_MOVE_RP = 32801
+- uid: EvilDICOM.Network.Enums.CommandField.C_ECHO_RP
+  id: C_ECHO_RP
+  parent: EvilDICOM.Network.Enums.CommandField
+  langs:
+  - csharp
+  - vb
+  name: C_ECHO_RP
+  fullName: EvilDICOM.Network.Enums.CommandField.C_ECHO_RP
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: C_ECHO_RP = 32816
+- uid: EvilDICOM.Network.Enums.CommandField.C_STORE_RP
+  id: C_STORE_RP
+  parent: EvilDICOM.Network.Enums.CommandField
+  langs:
+  - csharp
+  - vb
+  name: C_STORE_RP
+  fullName: EvilDICOM.Network.Enums.CommandField.C_STORE_RP
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: C_STORE_RP = 32769
+- uid: EvilDICOM.Network.Enums.CommandField.C_CANCEL
+  id: C_CANCEL
+  parent: EvilDICOM.Network.Enums.CommandField
+  langs:
+  - csharp
+  - vb
+  name: C_CANCEL
+  fullName: EvilDICOM.Network.Enums.CommandField.C_CANCEL
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/CommandField.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: C_CANCEL = 4095
+references:
+- uid: EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums

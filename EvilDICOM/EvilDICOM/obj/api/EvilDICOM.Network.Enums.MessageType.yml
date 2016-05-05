@@ -1,0 +1,95 @@
+items:
+- uid: EvilDICOM.Network.Enums.MessageType
+  id: MessageType
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.MessageType.ERROR
+  - EvilDICOM.Network.Enums.MessageType.PDATA_TF
+  - EvilDICOM.Network.Enums.MessageType.PDU
+  langs:
+  - csharp
+  - vb
+  name: MessageType
+  fullName: EvilDICOM.Network.Enums.MessageType
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/MessageType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/MessageType.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: public enum MessageType
+    content.vb: Public Enum MessageType
+- uid: EvilDICOM.Network.Enums.MessageType.PDU
+  id: PDU
+  parent: EvilDICOM.Network.Enums.MessageType
+  langs:
+  - csharp
+  - vb
+  name: PDU
+  fullName: EvilDICOM.Network.Enums.MessageType.PDU
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/MessageType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/MessageType.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: PDU = 0
+- uid: EvilDICOM.Network.Enums.MessageType.PDATA_TF
+  id: PDATA_TF
+  parent: EvilDICOM.Network.Enums.MessageType
+  langs:
+  - csharp
+  - vb
+  name: PDATA_TF
+  fullName: EvilDICOM.Network.Enums.MessageType.PDATA_TF
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/MessageType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/MessageType.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: PDATA_TF = 1
+- uid: EvilDICOM.Network.Enums.MessageType.ERROR
+  id: ERROR
+  parent: EvilDICOM.Network.Enums.MessageType
+  langs:
+  - csharp
+  - vb
+  name: ERROR
+  fullName: EvilDICOM.Network.Enums.MessageType.ERROR
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/MessageType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/MessageType.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: ERROR = 2
+references:
+- uid: EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums

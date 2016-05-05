@@ -1,0 +1,648 @@
+items:
+- uid: EvilDICOM.Core.Modules.FileMetadata
+  id: FileMetadata
+  parent: EvilDICOM.Core.Modules
+  children:
+  - EvilDICOM.Core.Modules.FileMetadata.Elements
+  - EvilDICOM.Core.Modules.FileMetadata.GroupLength
+  - EvilDICOM.Core.Modules.FileMetadata.ImplementationClassUID
+  - EvilDICOM.Core.Modules.FileMetadata.ImplementationVersionName
+  - EvilDICOM.Core.Modules.FileMetadata.InfoVersion
+  - EvilDICOM.Core.Modules.FileMetadata.MediaStorageSOPClassUID
+  - EvilDICOM.Core.Modules.FileMetadata.MediaStorageSOPInstanceUID
+  - EvilDICOM.Core.Modules.FileMetadata.PrivateInfo
+  - EvilDICOM.Core.Modules.FileMetadata.PrivateInfoCreatorUID
+  - EvilDICOM.Core.Modules.FileMetadata.SourceApplicationEntityTitle
+  - EvilDICOM.Core.Modules.FileMetadata.TransferSyntaxUID
+  langs:
+  - csharp
+  - vb
+  name: FileMetadata
+  fullName: EvilDICOM.Core.Modules.FileMetadata
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: 'public class FileMetadata : IIOD'
+    content.vb: Public Class FileMetadata Implements IIOD
+  inheritance:
+  - System.Object
+  implements:
+  - EvilDICOM.Core.Interfaces.IIOD
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Core.Modules.FileMetadata.GroupLength
+  id: GroupLength
+  parent: EvilDICOM.Core.Modules.FileMetadata
+  langs:
+  - csharp
+  - vb
+  name: GroupLength
+  fullName: EvilDICOM.Core.Modules.FileMetadata.GroupLength
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+    startLine: 61
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public uint GroupLength { get; set; }
+    content.vb: Public Property GroupLength As UInteger
+    parameters: []
+    return:
+      type: System.UInt32
+- uid: EvilDICOM.Core.Modules.FileMetadata.InfoVersion
+  id: InfoVersion
+  parent: EvilDICOM.Core.Modules.FileMetadata
+  langs:
+  - csharp
+  - vb
+  name: InfoVersion
+  fullName: EvilDICOM.Core.Modules.FileMetadata.InfoVersion
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+    startLine: 67
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public byte[] InfoVersion { get; set; }
+    content.vb: Public Property InfoVersion As Byte()
+    parameters: []
+    return:
+      type: System.Byte[]
+- uid: EvilDICOM.Core.Modules.FileMetadata.MediaStorageSOPClassUID
+  id: MediaStorageSOPClassUID
+  parent: EvilDICOM.Core.Modules.FileMetadata
+  langs:
+  - csharp
+  - vb
+  name: MediaStorageSOPClassUID
+  fullName: EvilDICOM.Core.Modules.FileMetadata.MediaStorageSOPClassUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+    startLine: 73
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public string MediaStorageSOPClassUID { get; set; }
+    content.vb: Public Property MediaStorageSOPClassUID As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Core.Modules.FileMetadata.MediaStorageSOPInstanceUID
+  id: MediaStorageSOPInstanceUID
+  parent: EvilDICOM.Core.Modules.FileMetadata
+  langs:
+  - csharp
+  - vb
+  name: MediaStorageSOPInstanceUID
+  fullName: EvilDICOM.Core.Modules.FileMetadata.MediaStorageSOPInstanceUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+    startLine: 79
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public string MediaStorageSOPInstanceUID { get; set; }
+    content.vb: Public Property MediaStorageSOPInstanceUID As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Core.Modules.FileMetadata.TransferSyntaxUID
+  id: TransferSyntaxUID
+  parent: EvilDICOM.Core.Modules.FileMetadata
+  langs:
+  - csharp
+  - vb
+  name: TransferSyntaxUID
+  fullName: EvilDICOM.Core.Modules.FileMetadata.TransferSyntaxUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+    startLine: 85
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public string TransferSyntaxUID { get; set; }
+    content.vb: Public Property TransferSyntaxUID As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Core.Modules.FileMetadata.ImplementationClassUID
+  id: ImplementationClassUID
+  parent: EvilDICOM.Core.Modules.FileMetadata
+  langs:
+  - csharp
+  - vb
+  name: ImplementationClassUID
+  fullName: EvilDICOM.Core.Modules.FileMetadata.ImplementationClassUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+    startLine: 91
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public string ImplementationClassUID { get; set; }
+    content.vb: Public Property ImplementationClassUID As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Core.Modules.FileMetadata.ImplementationVersionName
+  id: ImplementationVersionName
+  parent: EvilDICOM.Core.Modules.FileMetadata
+  langs:
+  - csharp
+  - vb
+  name: ImplementationVersionName
+  fullName: EvilDICOM.Core.Modules.FileMetadata.ImplementationVersionName
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+    startLine: 97
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public string ImplementationVersionName { get; set; }
+    content.vb: Public Property ImplementationVersionName As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Core.Modules.FileMetadata.SourceApplicationEntityTitle
+  id: SourceApplicationEntityTitle
+  parent: EvilDICOM.Core.Modules.FileMetadata
+  langs:
+  - csharp
+  - vb
+  name: SourceApplicationEntityTitle
+  fullName: EvilDICOM.Core.Modules.FileMetadata.SourceApplicationEntityTitle
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+    startLine: 103
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public string SourceApplicationEntityTitle { get; set; }
+    content.vb: Public Property SourceApplicationEntityTitle As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Core.Modules.FileMetadata.PrivateInfoCreatorUID
+  id: PrivateInfoCreatorUID
+  parent: EvilDICOM.Core.Modules.FileMetadata
+  langs:
+  - csharp
+  - vb
+  name: PrivateInfoCreatorUID
+  fullName: EvilDICOM.Core.Modules.FileMetadata.PrivateInfoCreatorUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+    startLine: 109
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public string PrivateInfoCreatorUID { get; set; }
+    content.vb: Public Property PrivateInfoCreatorUID As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Core.Modules.FileMetadata.PrivateInfo
+  id: PrivateInfo
+  parent: EvilDICOM.Core.Modules.FileMetadata
+  langs:
+  - csharp
+  - vb
+  name: PrivateInfo
+  fullName: EvilDICOM.Core.Modules.FileMetadata.PrivateInfo
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+    startLine: 115
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public byte[] PrivateInfo { get; set; }
+    content.vb: Public Property PrivateInfo As Byte()
+    parameters: []
+    return:
+      type: System.Byte[]
+- uid: EvilDICOM.Core.Modules.FileMetadata.Elements
+  id: Elements
+  parent: EvilDICOM.Core.Modules.FileMetadata
+  langs:
+  - csharp
+  - vb
+  name: Elements
+  fullName: EvilDICOM.Core.Modules.FileMetadata.Elements
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Modules/FileMetadata.cs
+    startLine: 122
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public List<IDICOMElement> Elements { get; }
+    content.vb: Public ReadOnly Property Elements As List(Of IDICOMElement)
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+references:
+- uid: EvilDICOM.Core.Modules
+  isExternal: false
+  name: EvilDICOM.Core.Modules
+  fullName: EvilDICOM.Core.Modules
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Interfaces.IIOD
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IIOD
+  fullName: EvilDICOM.Core.Interfaces.IIOD
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  fullName: System.UInt32
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  fullName: System.Byte[]
+  fullname.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    fullName: ()
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String
+- uid: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<IDICOMElement>
+  fullName: System.Collections.Generic.List<EvilDICOM.Core.Interfaces.IDICOMElement>
+  fullname.vb: System.Collections.Generic.List(Of EvilDICOM.Core.Interfaces.IDICOMElement)
+  name.vb: List(Of IDICOMElement)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  parent: System.Collections.Generic
+  isExternal: true
+  name: List<T>
+  fullName: System.Collections.Generic.List<T>
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  fullName: System.Collections.Generic

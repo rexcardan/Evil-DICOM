@@ -1,0 +1,646 @@
+items:
+- uid: EvilDICOM.Core.IO.Reading.DICOMElementReader
+  id: DICOMElementReader
+  parent: EvilDICOM.Core.IO.Reading
+  children:
+  - EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElements(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  - EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElementsExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElementsExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElementsImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadElementExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadElementExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadElementImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.DICOMElementReader.SkipElementExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.DICOMElementReader.SkipElementExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.DICOMElementReader.SkipElementImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  langs:
+  - csharp
+  - vb
+  name: DICOMElementReader
+  fullName: EvilDICOM.Core.IO.Reading.DICOMElementReader
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: Reads in DICOM elements from a DICOM object
+  example: []
+  syntax:
+    content: public class DICOMElementReader
+    content.vb: Public Class DICOMElementReader
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadElementExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: ReadElementExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.DICOMElementReader
+  langs:
+  - csharp
+  - vb
+  name: ReadElementExplicitLittleEndian(DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadElementExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
+  example: []
+  syntax:
+    content: public static IDICOMElement ReadElementExplicitLittleEndian(DICOMBinaryReader dr)
+    content.vb: Public Shared Function ReadElementExplicitLittleEndian(dr As DICOMBinaryReader) As IDICOMElement
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary reader which is reading the DICOM object
+    return:
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: the next DICOM element
+- uid: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadElementImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: ReadElementImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.DICOMElementReader
+  langs:
+  - csharp
+  - vb
+  name: ReadElementImplicitLittleEndian(DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadElementImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+    startLine: 32
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
+  example: []
+  syntax:
+    content: public static IDICOMElement ReadElementImplicitLittleEndian(DICOMBinaryReader dr)
+    content.vb: Public Shared Function ReadElementImplicitLittleEndian(dr As DICOMBinaryReader) As IDICOMElement
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary reader which is reading the DICOM object
+    return:
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: the next DICOM element
+- uid: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadElementExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: ReadElementExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.DICOMElementReader
+  langs:
+  - csharp
+  - vb
+  name: ReadElementExplicitBigEndian(DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadElementExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+    startLine: 47
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
+  example: []
+  syntax:
+    content: public static IDICOMElement ReadElementExplicitBigEndian(DICOMBinaryReader dr)
+    content.vb: Public Shared Function ReadElementExplicitBigEndian(dr As DICOMBinaryReader) As IDICOMElement
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary reader which is reading the DICOM object
+    return:
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: the next DICOM element
+- uid: EvilDICOM.Core.IO.Reading.DICOMElementReader.SkipElementExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: SkipElementExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.DICOMElementReader
+  langs:
+  - csharp
+  - vb
+  name: SkipElementExplicitLittleEndian(DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMElementReader.SkipElementExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+    startLine: 58
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public static void SkipElementExplicitLittleEndian(DICOMBinaryReader dr)
+    content.vb: Public Shared Sub SkipElementExplicitLittleEndian(dr As DICOMBinaryReader)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+- uid: EvilDICOM.Core.IO.Reading.DICOMElementReader.SkipElementImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: SkipElementImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.DICOMElementReader
+  langs:
+  - csharp
+  - vb
+  name: SkipElementImplicitLittleEndian(DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMElementReader.SkipElementImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+    startLine: 74
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public static void SkipElementImplicitLittleEndian(DICOMBinaryReader dr)
+    content.vb: Public Shared Sub SkipElementImplicitLittleEndian(dr As DICOMBinaryReader)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+- uid: EvilDICOM.Core.IO.Reading.DICOMElementReader.SkipElementExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: SkipElementExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.DICOMElementReader
+  langs:
+  - csharp
+  - vb
+  name: SkipElementExplicitBigEndian(DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMElementReader.SkipElementExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+    startLine: 89
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public static void SkipElementExplicitBigEndian(DICOMBinaryReader dr)
+    content.vb: Public Shared Sub SkipElementExplicitBigEndian(dr As DICOMBinaryReader)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+- uid: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElements(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  id: ReadAllElements(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  parent: EvilDICOM.Core.IO.Reading.DICOMElementReader
+  langs:
+  - csharp
+  - vb
+  name: ReadAllElements(DICOMBinaryReader, TransferSyntax)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElements(EvilDICOM.Core.IO.Reading.DICOMBinaryReader, EvilDICOM.Core.Enums.TransferSyntax)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+    startLine: 109
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public static List<IDICOMElement> ReadAllElements(DICOMBinaryReader dr, TransferSyntax syntax)
+    content.vb: Public Shared Function ReadAllElements(dr As DICOMBinaryReader, syntax As TransferSyntax) As List(Of IDICOMElement)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+    - id: syntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+- uid: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElementsImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: ReadAllElementsImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.DICOMElementReader
+  langs:
+  - csharp
+  - vb
+  name: ReadAllElementsImplicitLittleEndian(DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElementsImplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+    startLine: 132
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: Reads and returns all elements in implicit little endian format
+  example: []
+  syntax:
+    content: public static List<IDICOMElement> ReadAllElementsImplicitLittleEndian(DICOMBinaryReader dr)
+    content.vb: Public Shared Function ReadAllElementsImplicitLittleEndian(dr As DICOMBinaryReader) As List(Of IDICOMElement)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary reader which is reading the DICOM object
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+      description: DICOM elements read
+- uid: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElementsExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: ReadAllElementsExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.DICOMElementReader
+  langs:
+  - csharp
+  - vb
+  name: ReadAllElementsExplicitBigEndian(DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElementsExplicitBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+    startLine: 147
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: Reads and returns all elements in explicit big endian format
+  example: []
+  syntax:
+    content: public static List<IDICOMElement> ReadAllElementsExplicitBigEndian(DICOMBinaryReader dr)
+    content.vb: Public Shared Function ReadAllElementsExplicitBigEndian(dr As DICOMBinaryReader) As List(Of IDICOMElement)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary reader which is reading the DICOM object
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+      description: DICOM elements read
+- uid: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElementsExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: ReadAllElementsExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.DICOMElementReader
+  langs:
+  - csharp
+  - vb
+  name: ReadAllElementsExplicitLittleEndian(DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMElementReader.ReadAllElementsExplicitLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMElementReader.cs
+    startLine: 162
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: Reads and returns all elements in explilcit little endian format
+  example: []
+  syntax:
+    content: public static List<IDICOMElement> ReadAllElementsExplicitLittleEndian(DICOMBinaryReader dr)
+    content.vb: Public Shared Function ReadAllElementsExplicitLittleEndian(dr As DICOMBinaryReader) As List(Of IDICOMElement)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary reader which is reading the DICOM object
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+      description: DICOM elements read
+references:
+- uid: EvilDICOM.Core.IO.Reading
+  isExternal: false
+  name: EvilDICOM.Core.IO.Reading
+  fullName: EvilDICOM.Core.IO.Reading
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  parent: EvilDICOM.Core.IO.Reading
+  isExternal: false
+  name: DICOMBinaryReader
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax
+- uid: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<IDICOMElement>
+  fullName: System.Collections.Generic.List<EvilDICOM.Core.Interfaces.IDICOMElement>
+  fullname.vb: System.Collections.Generic.List(Of EvilDICOM.Core.Interfaces.IDICOMElement)
+  name.vb: List(Of IDICOMElement)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: System.Collections.Generic.List`1
+  parent: System.Collections.Generic
+  isExternal: true
+  name: List<T>
+  fullName: System.Collections.Generic.List<T>
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  fullName: System.Collections.Generic

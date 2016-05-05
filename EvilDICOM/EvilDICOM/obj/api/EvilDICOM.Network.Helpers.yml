@@ -1,0 +1,30 @@
+items:
+- uid: EvilDICOM.Network.Helpers
+  id: EvilDICOM.Network.Helpers
+  children:
+  - EvilDICOM.Network.Helpers.FileWriterSCP
+  - EvilDICOM.Network.Helpers.IpHelper
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Network.Helpers
+  fullName: EvilDICOM.Network.Helpers
+  type: Namespace
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Helpers/IpHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Helpers/IpHelper.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Network.Helpers.FileWriterSCP
+  isExternal: false
+  name: FileWriterSCP
+  fullName: EvilDICOM.Network.Helpers.FileWriterSCP
+- uid: EvilDICOM.Network.Helpers.IpHelper
+  isExternal: false
+  name: IpHelper
+  fullName: EvilDICOM.Network.Helpers.IpHelper

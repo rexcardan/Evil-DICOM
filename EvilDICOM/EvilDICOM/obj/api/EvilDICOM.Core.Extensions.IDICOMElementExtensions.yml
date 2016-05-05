@@ -1,0 +1,354 @@
+items:
+- uid: EvilDICOM.Core.Extensions.IDICOMElementExtensions
+  id: IDICOMElementExtensions
+  parent: EvilDICOM.Core.Extensions
+  children:
+  - EvilDICOM.Core.Extensions.IDICOMElementExtensions.IsVR(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.VR)
+  - EvilDICOM.Core.Extensions.IDICOMElementExtensions.ToXElement(EvilDICOM.Core.Interfaces.IDICOMElement)
+  langs:
+  - csharp
+  - vb
+  name: IDICOMElementExtensions
+  fullName: EvilDICOM.Core.Extensions.IDICOMElementExtensions
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/IDICOMElementExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Extensions/IDICOMElementExtensions.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: Adds useful methods to the IDICOMElement interface
+  example: []
+  syntax:
+    content: public class IDICOMElementExtensions
+    content.vb: Public Class IDICOMElementExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Core.Extensions.IDICOMElementExtensions.IsVR(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.VR)
+  id: IsVR(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.VR)
+  parent: EvilDICOM.Core.Extensions.IDICOMElementExtensions
+  langs:
+  - csharp
+  - vb
+  name: IsVR(IDICOMElement, VR)
+  fullName: EvilDICOM.Core.Extensions.IDICOMElementExtensions.IsVR(EvilDICOM.Core.Interfaces.IDICOMElement, EvilDICOM.Core.Enums.VR)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/IDICOMElementExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Extensions/IDICOMElementExtensions.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: Checks to see if a certain IDICOMElement is of a given VR type
+  example: []
+  syntax:
+    content: public static bool IsVR(IDICOMElement elem, VR vr)
+    content.vb: Public Shared Function IsVR(elem As IDICOMElement, vr As VR) As Boolean
+    parameters:
+    - id: elem
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: the DICOM element in question
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+      description: the VR type to test the DICOM element
+    return:
+      type: System.Boolean
+      description: a boolean indicating whether or not the DICOM element is of a given VR type
+- uid: EvilDICOM.Core.Extensions.IDICOMElementExtensions.ToXElement(EvilDICOM.Core.Interfaces.IDICOMElement)
+  id: ToXElement(EvilDICOM.Core.Interfaces.IDICOMElement)
+  parent: EvilDICOM.Core.Extensions.IDICOMElementExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToXElement(IDICOMElement)
+  fullName: EvilDICOM.Core.Extensions.IDICOMElementExtensions.ToXElement(EvilDICOM.Core.Interfaces.IDICOMElement)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/IDICOMElementExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Extensions/IDICOMElementExtensions.cs
+    startLine: 84
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  syntax:
+    content: public static XElement ToXElement(IDICOMElement el)
+    content.vb: Public Shared Function ToXElement(el As IDICOMElement) As XElement
+    parameters:
+    - id: el
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+    return:
+      type: System.Xml.Linq.XElement
+references:
+- uid: EvilDICOM.Core.Extensions
+  isExternal: false
+  name: EvilDICOM.Core.Extensions
+  fullName: EvilDICOM.Core.Extensions
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: EvilDICOM.Core.Enums.VR
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: VR
+  fullName: EvilDICOM.Core.Enums.VR
+- uid: System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  fullName: System.Boolean
+- uid: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: System.Xml.Linq.XElement
+  parent: System.Xml.Linq
+  isExternal: true
+  name: XElement
+  fullName: System.Xml.Linq.XElement
+- uid: System.Xml.Linq
+  isExternal: false
+  name: System.Xml.Linq
+  fullName: System.Xml.Linq

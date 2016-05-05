@@ -1,0 +1,227 @@
+items:
+- uid: EvilDICOM.Network.Enums.NetworkState
+  id: NetworkState
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.NetworkState.ASSOCIATION_ESTABLISHED_WAITING_ON_DATA
+  - EvilDICOM.Network.Enums.NetworkState.AWAITING_ACCEPT_OR_REJECT
+  - EvilDICOM.Network.Enums.NetworkState.AWAITING_LOCAL_ASSOCIATE_RESPONSE
+  - EvilDICOM.Network.Enums.NetworkState.AWAITING_RELEASE
+  - EvilDICOM.Network.Enums.NetworkState.AWAITING_RELEASE_RESPONSE
+  - EvilDICOM.Network.Enums.NetworkState.AWAITING_TRANSPORT_CONNECTION_OPENING
+  - EvilDICOM.Network.Enums.NetworkState.CLOSING_ASSOCIATION
+  - EvilDICOM.Network.Enums.NetworkState.IDLE
+  - EvilDICOM.Network.Enums.NetworkState.TRANSPORT_CONNECTION_OPEN
+  langs:
+  - csharp
+  - vb
+  name: NetworkState
+  fullName: EvilDICOM.Network.Enums.NetworkState
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: public enum NetworkState
+    content.vb: Public Enum NetworkState
+- uid: EvilDICOM.Network.Enums.NetworkState.IDLE
+  id: IDLE
+  parent: EvilDICOM.Network.Enums.NetworkState
+  langs:
+  - csharp
+  - vb
+  name: IDLE
+  fullName: EvilDICOM.Network.Enums.NetworkState.IDLE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: IDLE = 1
+- uid: EvilDICOM.Network.Enums.NetworkState.TRANSPORT_CONNECTION_OPEN
+  id: TRANSPORT_CONNECTION_OPEN
+  parent: EvilDICOM.Network.Enums.NetworkState
+  langs:
+  - csharp
+  - vb
+  name: TRANSPORT_CONNECTION_OPEN
+  fullName: EvilDICOM.Network.Enums.NetworkState.TRANSPORT_CONNECTION_OPEN
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: TRANSPORT_CONNECTION_OPEN = 2
+- uid: EvilDICOM.Network.Enums.NetworkState.AWAITING_LOCAL_ASSOCIATE_RESPONSE
+  id: AWAITING_LOCAL_ASSOCIATE_RESPONSE
+  parent: EvilDICOM.Network.Enums.NetworkState
+  langs:
+  - csharp
+  - vb
+  name: AWAITING_LOCAL_ASSOCIATE_RESPONSE
+  fullName: EvilDICOM.Network.Enums.NetworkState.AWAITING_LOCAL_ASSOCIATE_RESPONSE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: AWAITING_LOCAL_ASSOCIATE_RESPONSE = 3
+- uid: EvilDICOM.Network.Enums.NetworkState.AWAITING_TRANSPORT_CONNECTION_OPENING
+  id: AWAITING_TRANSPORT_CONNECTION_OPENING
+  parent: EvilDICOM.Network.Enums.NetworkState
+  langs:
+  - csharp
+  - vb
+  name: AWAITING_TRANSPORT_CONNECTION_OPENING
+  fullName: EvilDICOM.Network.Enums.NetworkState.AWAITING_TRANSPORT_CONNECTION_OPENING
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: AWAITING_TRANSPORT_CONNECTION_OPENING = 4
+- uid: EvilDICOM.Network.Enums.NetworkState.AWAITING_ACCEPT_OR_REJECT
+  id: AWAITING_ACCEPT_OR_REJECT
+  parent: EvilDICOM.Network.Enums.NetworkState
+  langs:
+  - csharp
+  - vb
+  name: AWAITING_ACCEPT_OR_REJECT
+  fullName: EvilDICOM.Network.Enums.NetworkState.AWAITING_ACCEPT_OR_REJECT
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: AWAITING_ACCEPT_OR_REJECT = 5
+- uid: EvilDICOM.Network.Enums.NetworkState.ASSOCIATION_ESTABLISHED_WAITING_ON_DATA
+  id: ASSOCIATION_ESTABLISHED_WAITING_ON_DATA
+  parent: EvilDICOM.Network.Enums.NetworkState
+  langs:
+  - csharp
+  - vb
+  name: ASSOCIATION_ESTABLISHED_WAITING_ON_DATA
+  fullName: EvilDICOM.Network.Enums.NetworkState.ASSOCIATION_ESTABLISHED_WAITING_ON_DATA
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: ASSOCIATION_ESTABLISHED_WAITING_ON_DATA = 6
+- uid: EvilDICOM.Network.Enums.NetworkState.AWAITING_RELEASE_RESPONSE
+  id: AWAITING_RELEASE_RESPONSE
+  parent: EvilDICOM.Network.Enums.NetworkState
+  langs:
+  - csharp
+  - vb
+  name: AWAITING_RELEASE_RESPONSE
+  fullName: EvilDICOM.Network.Enums.NetworkState.AWAITING_RELEASE_RESPONSE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: AWAITING_RELEASE_RESPONSE = 7
+- uid: EvilDICOM.Network.Enums.NetworkState.AWAITING_RELEASE
+  id: AWAITING_RELEASE
+  parent: EvilDICOM.Network.Enums.NetworkState
+  langs:
+  - csharp
+  - vb
+  name: AWAITING_RELEASE
+  fullName: EvilDICOM.Network.Enums.NetworkState.AWAITING_RELEASE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: AWAITING_RELEASE = 8
+- uid: EvilDICOM.Network.Enums.NetworkState.CLOSING_ASSOCIATION
+  id: CLOSING_ASSOCIATION
+  parent: EvilDICOM.Network.Enums.NetworkState
+  langs:
+  - csharp
+  - vb
+  name: CLOSING_ASSOCIATION
+  fullName: EvilDICOM.Network.Enums.NetworkState.CLOSING_ASSOCIATION
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/NetworkState.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: CLOSING_ASSOCIATION = 9
+references:
+- uid: EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums

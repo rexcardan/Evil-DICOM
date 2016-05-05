@@ -1,0 +1,42 @@
+items:
+- uid: EvilDICOM.Anonymization
+  id: EvilDICOM.Anonymization
+  children:
+  - EvilDICOM.Anonymization.AnonymizationQueue
+  - EvilDICOM.Anonymization.AnonymizationQueue.ProgressUpdatedHandler
+  - EvilDICOM.Anonymization.IAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Anonymization
+  fullName: EvilDICOM.Anonymization
+  type: Namespace
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Anonymization.AnonymizationQueue
+  parent: EvilDICOM.Anonymization
+  isExternal: false
+  name: AnonymizationQueue
+  fullName: EvilDICOM.Anonymization.AnonymizationQueue
+- uid: EvilDICOM.Anonymization.AnonymizationQueue.ProgressUpdatedHandler
+  parent: EvilDICOM.Anonymization
+  isExternal: false
+  name: AnonymizationQueue.ProgressUpdatedHandler
+  fullName: EvilDICOM.Anonymization.AnonymizationQueue.ProgressUpdatedHandler
+- uid: EvilDICOM.Anonymization.IAnonymizer
+  parent: EvilDICOM.Anonymization
+  isExternal: false
+  name: IAnonymizer
+  fullName: EvilDICOM.Anonymization.IAnonymizer
+- uid: EvilDICOM.Anonymization
+  isExternal: false
+  name: EvilDICOM.Anonymization
+  fullName: EvilDICOM.Anonymization

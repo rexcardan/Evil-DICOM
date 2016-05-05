@@ -1,0 +1,424 @@
+items:
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo
+  id: UserInfo
+  parent: EvilDICOM.Network.PDUs.Items
+  children:
+  - EvilDICOM.Network.PDUs.Items.UserInfo.#ctor
+  - EvilDICOM.Network.PDUs.Items.UserInfo.AsynchronousOperations
+  - EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationUID
+  - EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationVersion
+  - EvilDICOM.Network.PDUs.Items.UserInfo.MaxPDULength
+  - EvilDICOM.Network.PDUs.Items.UserInfo.ToString
+  langs:
+  - csharp
+  - vb
+  name: UserInfo
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public class UserInfo
+    content.vb: Public Class UserInfo
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Network.PDUs.Items.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: UserInfo()
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.UserInfo()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public UserInfo()
+    content.vb: Public Sub New
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.MaxPDULength
+  id: MaxPDULength
+  parent: EvilDICOM.Network.PDUs.Items.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: MaxPDULength
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.MaxPDULength
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public int MaxPDULength { get; set; }
+    content.vb: Public Property MaxPDULength As Integer
+    parameters: []
+    return:
+      type: System.Int32
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationUID
+  id: ImplementationUID
+  parent: EvilDICOM.Network.PDUs.Items.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: ImplementationUID
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public string ImplementationUID { get; set; }
+    content.vb: Public Property ImplementationUID As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.AsynchronousOperations
+  id: AsynchronousOperations
+  parent: EvilDICOM.Network.PDUs.Items.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: AsynchronousOperations
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.AsynchronousOperations
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public AsyncOperations AsynchronousOperations { get; set; }
+    content.vb: Public Property AsynchronousOperations As AsyncOperations
+    parameters: []
+    return:
+      type: EvilDICOM.Network.PDUs.Items.AsyncOperations
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationVersion
+  id: ImplementationVersion
+  parent: EvilDICOM.Network.PDUs.Items.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: ImplementationVersion
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationVersion
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public string ImplementationVersion { get; set; }
+    content.vb: Public Property ImplementationVersion As String
+    parameters: []
+    return:
+      type: System.String
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.ToString
+  id: ToString
+  parent: EvilDICOM.Network.PDUs.Items.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
+    return:
+      type: System.String
+  overridden: System.Object.ToString
+references:
+- uid: EvilDICOM.Network.PDUs.Items
+  isExternal: false
+  name: EvilDICOM.Network.PDUs.Items
+  fullName: EvilDICOM.Network.PDUs.Items
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  fullName: System.Int32
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String
+- uid: EvilDICOM.Network.PDUs.Items.AsyncOperations
+  parent: EvilDICOM.Network.PDUs.Items
+  isExternal: false
+  name: AsyncOperations
+  fullName: EvilDICOM.Network.PDUs.Items.AsyncOperations
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )

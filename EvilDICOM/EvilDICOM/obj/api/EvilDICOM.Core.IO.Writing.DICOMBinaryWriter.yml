@@ -1,0 +1,540 @@
+items:
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  id: DICOMBinaryWriter
+  parent: EvilDICOM.Core.IO.Writing
+  children:
+  - EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.#ctor(System.IO.Stream)
+  - EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.#ctor(System.String)
+  - EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Dispose
+  - EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.Byte)
+  - EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.Byte[])
+  - EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.Char[])
+  - EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.String)
+  - EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.WriteNullBytes(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: DICOMBinaryWriter
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: 'public class DICOMBinaryWriter : IDisposable'
+    content.vb: Public Class DICOMBinaryWriter Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  langs:
+  - csharp
+  - vb
+  name: DICOMBinaryWriter(String)
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.DICOMBinaryWriter(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  summary: Constructs a new writer from a file path.
+  example: []
+  syntax:
+    content: public DICOMBinaryWriter(string filePath)
+    content.vb: Public Sub New(filePath As String)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: path to the file to be written
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.#ctor(System.IO.Stream)
+  id: '#ctor(System.IO.Stream)'
+  parent: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  langs:
+  - csharp
+  - vb
+  name: DICOMBinaryWriter(Stream)
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.DICOMBinaryWriter(System.IO.Stream)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public DICOMBinaryWriter(Stream stream)
+    content.vb: Public Sub New(stream As Stream)
+    parameters:
+    - id: stream
+      type: System.IO.Stream
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Dispose
+  id: Dispose
+  parent: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Dispose()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.Byte)
+  id: Write(System.Byte)
+  parent: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  langs:
+  - csharp
+  - vb
+  name: Write(Byte)
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.Byte)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+    startLine: 31
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public void Write(byte b)
+    content.vb: Public Sub Write(b As Byte)
+    parameters:
+    - id: b
+      type: System.Byte
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.Byte[])
+  id: Write(System.Byte[])
+  parent: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  langs:
+  - csharp
+  - vb
+  name: Write(Byte[])
+  name.vb: Write(Byte())
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.Byte[])
+  fullName.vb: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.Byte())
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+    startLine: 36
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public void Write(byte[] bytes)
+    content.vb: Public Sub Write(bytes As Byte())
+    parameters:
+    - id: bytes
+      type: System.Byte[]
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.Char[])
+  id: Write(System.Char[])
+  parent: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  langs:
+  - csharp
+  - vb
+  name: Write(Char[])
+  name.vb: Write(Char())
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.Char[])
+  fullName.vb: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.Char())
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+    startLine: 41
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public void Write(char[] chars)
+    content.vb: Public Sub Write(chars As Char())
+    parameters:
+    - id: chars
+      type: System.Char[]
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.String)
+  id: Write(System.String)
+  parent: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  langs:
+  - csharp
+  - vb
+  name: Write(String)
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.Write(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+    startLine: 46
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public void Write(string chars)
+    content.vb: Public Sub Write(chars As String)
+    parameters:
+    - id: chars
+      type: System.String
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.WriteNullBytes(System.Int32)
+  id: WriteNullBytes(System.Int32)
+  parent: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteNullBytes(Int32)
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.WriteNullBytes(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMBinaryWriter.cs
+    startLine: 52
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public void WriteNullBytes(int numberToWrite)
+    content.vb: Public Sub WriteNullBytes(numberToWrite As Integer)
+    parameters:
+    - id: numberToWrite
+      type: System.Int32
+references:
+- uid: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: EvilDICOM.Core.IO.Writing
+  fullName: EvilDICOM.Core.IO.Writing
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String
+- uid: System.IO.Stream
+  parent: System.IO
+  isExternal: true
+  name: Stream
+  fullName: System.IO.Stream
+- uid: System.IO
+  isExternal: false
+  name: System.IO
+  fullName: System.IO
+- uid: System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  fullName: System.Byte
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  fullName: System.Byte[]
+  fullname.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    fullName: ()
+- uid: System.Char[]
+  isExternal: true
+  name: Char[]
+  fullName: System.Char[]
+  fullname.vb: System.Char()
+  name.vb: Char()
+  spec.csharp:
+  - uid: System.Char
+    name: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Char
+    name: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ()
+    fullName: ()
+- uid: System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  fullName: System.Int32

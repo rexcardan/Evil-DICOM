@@ -1,0 +1,139 @@
+items:
+- uid: EvilDICOM.Anonymization.Settings.DateSettings
+  id: DateSettings
+  parent: EvilDICOM.Anonymization.Settings
+  children:
+  - EvilDICOM.Anonymization.Settings.DateSettings.KEEP_ALL_DATES
+  - EvilDICOM.Anonymization.Settings.DateSettings.MAKE_89
+  - EvilDICOM.Anonymization.Settings.DateSettings.NULL_AGE
+  - EvilDICOM.Anonymization.Settings.DateSettings.PRESERVE_AGE
+  - EvilDICOM.Anonymization.Settings.DateSettings.RANDOMIZE
+  langs:
+  - csharp
+  - vb
+  name: DateSettings
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  syntax:
+    content: public enum DateSettings
+    content.vb: Public Enum DateSettings
+- uid: EvilDICOM.Anonymization.Settings.DateSettings.PRESERVE_AGE
+  id: PRESERVE_AGE
+  parent: EvilDICOM.Anonymization.Settings.DateSettings
+  langs:
+  - csharp
+  - vb
+  name: PRESERVE_AGE
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings.PRESERVE_AGE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  syntax:
+    content: PRESERVE_AGE = 0
+- uid: EvilDICOM.Anonymization.Settings.DateSettings.NULL_AGE
+  id: NULL_AGE
+  parent: EvilDICOM.Anonymization.Settings.DateSettings
+  langs:
+  - csharp
+  - vb
+  name: NULL_AGE
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings.NULL_AGE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  syntax:
+    content: NULL_AGE = 1
+- uid: EvilDICOM.Anonymization.Settings.DateSettings.MAKE_89
+  id: MAKE_89
+  parent: EvilDICOM.Anonymization.Settings.DateSettings
+  langs:
+  - csharp
+  - vb
+  name: MAKE_89
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings.MAKE_89
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  syntax:
+    content: MAKE_89 = 2
+- uid: EvilDICOM.Anonymization.Settings.DateSettings.RANDOMIZE
+  id: RANDOMIZE
+  parent: EvilDICOM.Anonymization.Settings.DateSettings
+  langs:
+  - csharp
+  - vb
+  name: RANDOMIZE
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings.RANDOMIZE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  syntax:
+    content: RANDOMIZE = 3
+- uid: EvilDICOM.Anonymization.Settings.DateSettings.KEEP_ALL_DATES
+  id: KEEP_ALL_DATES
+  parent: EvilDICOM.Anonymization.Settings.DateSettings
+  langs:
+  - csharp
+  - vb
+  name: KEEP_ALL_DATES
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings.KEEP_ALL_DATES
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  syntax:
+    content: KEEP_ALL_DATES = 4
+references:
+- uid: EvilDICOM.Anonymization.Settings
+  isExternal: false
+  name: EvilDICOM.Anonymization.Settings
+  fullName: EvilDICOM.Anonymization.Settings

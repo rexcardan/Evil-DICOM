@@ -4,6 +4,20 @@
         <name>EvilDICOM</name>
     </assembly>
     <members>
+        <member name="M:EvilDICOM.Anonymization.AnonymizationQueue.GetDefault(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Builds a standard anonymization que with defaul parameters
+            </summary>
+            <param name="dcmFiles">a collection of file paths to anonymize</param>
+            <returns>the default queue</returns>
+        </member>
+        <member name="M:EvilDICOM.Anonymization.AnonymizationQueue.GetDefaultAsync(System.Collections.Generic.IEnumerable{System.String})">
+            <summary>
+            Builds a standard anonymization que with defaul parameters
+            </summary>
+            <param name="dcmFiles">a collection of file paths to anonymize</param>
+            <returns>the default queue</returns>
+        </member>
         <member name="T:EvilDICOM.Anonymization.Anonymizers.NameAnonymizer">
             <summary>
             Removes all names from the DICOM File. If using PatientIdAnonymizer, call this first so new id is not removed

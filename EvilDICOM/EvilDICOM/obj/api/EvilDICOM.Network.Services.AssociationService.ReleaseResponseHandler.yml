@@ -1,0 +1,52 @@
+items:
+- uid: EvilDICOM.Network.Services.AssociationService.ReleaseResponseHandler
+  id: AssociationService.ReleaseResponseHandler
+  parent: EvilDICOM.Network.Services
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: AssociationService.ReleaseResponseHandler
+  fullName: EvilDICOM.Network.Services.AssociationService.ReleaseResponseHandler
+  type: Delegate
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 119
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public delegate void ReleaseResponseHandler(ReleaseResponse relRs, Association asc);
+    content.vb: Public Delegate Sub ReleaseResponseHandler(relRs As ReleaseResponse, asc As Association)
+    parameters:
+    - id: relRs
+      type: EvilDICOM.Network.PDUs.ReleaseResponse
+    - id: asc
+      type: EvilDICOM.Network.Association
+references:
+- uid: EvilDICOM.Network.Services
+  isExternal: false
+  name: EvilDICOM.Network.Services
+  fullName: EvilDICOM.Network.Services
+- uid: EvilDICOM.Network.PDUs.ReleaseResponse
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: ReleaseResponse
+  fullName: EvilDICOM.Network.PDUs.ReleaseResponse
+- uid: EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: EvilDICOM.Network.PDUs
+  fullName: EvilDICOM.Network.PDUs
+- uid: EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  fullName: EvilDICOM.Network

@@ -8,6 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using EvilDICOM.Core.IO.Reading;
 using System.Diagnostics;
+using EvilDICOM.Core.Interfaces;
+using EvilDICOM.Network.PDUs;
+using EvilDICOM.Network.DIMSE;
 
 namespace EvilDICOM.Network.Readers
 {
@@ -15,6 +18,7 @@ namespace EvilDICOM.Network.Readers
     {
         #region PRIVATE
         protected BinaryReader _binaryReader;
+        private IByteLogger _logger;
         #endregion
 
         /// <summary>
@@ -25,6 +29,22 @@ namespace EvilDICOM.Network.Readers
             : base()
         {
             _binaryReader = new BinaryReader(stream, new ASCIIEncoding());
+        }
+
+        /// <summary>
+        /// Constructs a DICOM binary reader from a network stream
+        /// </summary>
+        /// <param name="stream"></param>
+        public NetworkBinaryReader(BufferedStream stream, IByteLogger logger)
+            : base()
+        {
+            _binaryReader = new BinaryReader(stream, new ASCIIEncoding());
+            _logger = logger;
+        }
+
+        public void SetLogger(IByteLogger logger)
+        {
+            _logger = logger;
         }
 
         /// <summary>
@@ -41,7 +61,9 @@ namespace EvilDICOM.Network.Readers
                 var numRead = _binaryReader.Read(buffer, 0, count - read.Count);
                 read.AddRange(buffer.Take(numRead));
             }
-            return read.ToArray();
+            var bytes = read.ToArray();
+            if (_logger != null) { _logger.Log(bytes); }
+            return bytes;
 
         }
 
@@ -92,6 +114,12 @@ namespace EvilDICOM.Network.Readers
         {
             ReadBytes(count);
             return this;
+        }
+
+        public void DumpLog<T>()
+        {
+            var name = typeof(T).Name;
+            if (_logger!= null) { _logger.Dump(name); }
         }
     }
 }

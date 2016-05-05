@@ -1,0 +1,561 @@
+items:
+- uid: EvilDICOM.Core.DICOMData`1
+  id: DICOMData`1
+  parent: EvilDICOM.Core
+  children:
+  - EvilDICOM.Core.DICOMData`1.#ctor
+  - EvilDICOM.Core.DICOMData`1.CreateFromArray(`0[])
+  - EvilDICOM.Core.DICOMData`1.CreateFromSingle(`0)
+  - EvilDICOM.Core.DICOMData`1.MultipicityValue
+  - EvilDICOM.Core.DICOMData`1.SingleValue
+  - EvilDICOM.Core.DICOMData`1.ToString
+  langs:
+  - csharp
+  - vb
+  name: DICOMData<T>
+  name.vb: DICOMData(Of T)
+  fullName: EvilDICOM.Core.DICOMData<T>
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T)
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: >-
+    A class to hold DICOM data. DICOM data is unique in that it can be a single value, multiple values and null. This
+
+    class tries to encapsulate those attributes while maintaining a flexible programming interface.
+  example: []
+  syntax:
+    content: public class DICOMData<T>
+    content.vb: Public Class DICOMData(Of T)
+    typeParameters:
+    - id: T
+      description: 
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Core.DICOMData`1.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Core.DICOMData`1
+  langs:
+  - csharp
+  - vb
+  name: DICOMData()
+  fullName: EvilDICOM.Core.DICOMData<T>.DICOMData()
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).DICOMData()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: The constructor which ininitializes the underlying enumerable collection
+  example: []
+  syntax:
+    content: public DICOMData()
+    content.vb: Public Sub New
+- uid: EvilDICOM.Core.DICOMData`1.SingleValue
+  id: SingleValue
+  parent: EvilDICOM.Core.DICOMData`1
+  langs:
+  - csharp
+  - vb
+  name: SingleValue
+  fullName: EvilDICOM.Core.DICOMData<T>.SingleValue
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).SingleValue
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: >-
+    Gets and sets a single value for the data of the DICOM element. If the collection contains has more than one data
+
+    element, only the first is returned. If setting a value, the data is cleared and only a single entry is saved.
+  example: []
+  syntax:
+    content: public T SingleValue { get; set; }
+    content.vb: Public Property SingleValue As T
+    parameters: []
+    return:
+      type: '{T}'
+- uid: EvilDICOM.Core.DICOMData`1.MultipicityValue
+  id: MultipicityValue
+  parent: EvilDICOM.Core.DICOMData`1
+  langs:
+  - csharp
+  - vb
+  name: MultipicityValue
+  fullName: EvilDICOM.Core.DICOMData<T>.MultipicityValue
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).MultipicityValue
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 39
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: A list of the data within the element. This is designed to be accomodate the multiplicity aspect of DICOM data
+  example: []
+  syntax:
+    content: public List<T> MultipicityValue { get; set; }
+    content.vb: Public Property MultipicityValue As List(Of T)
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{{T}}
+- uid: EvilDICOM.Core.DICOMData`1.CreateFromSingle(`0)
+  id: CreateFromSingle(`0)
+  parent: EvilDICOM.Core.DICOMData`1
+  langs:
+  - csharp
+  - vb
+  name: CreateFromSingle(T)
+  fullName: EvilDICOM.Core.DICOMData<T>.CreateFromSingle(T)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).CreateFromSingle(T)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 50
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Creates a new DICOM Data object from a single data value
+  example: []
+  syntax:
+    content: public static DICOMData<T> CreateFromSingle(T dataValue)
+    content.vb: Public Shared Function CreateFromSingle(dataValue As T) As DICOMData(Of T)
+    parameters:
+    - id: dataValue
+      type: '{T}'
+      description: the data value from which to initialize the DICOM Data object
+    return:
+      type: EvilDICOM.Core.DICOMData`1
+      description: 
+- uid: EvilDICOM.Core.DICOMData`1.CreateFromArray(`0[])
+  id: CreateFromArray(`0[])
+  parent: EvilDICOM.Core.DICOMData`1
+  langs:
+  - csharp
+  - vb
+  name: CreateFromArray(T[])
+  name.vb: CreateFromArray(T())
+  fullName: EvilDICOM.Core.DICOMData<T>.CreateFromArray(T[])
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).CreateFromArray(T())
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 66
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: Creates a new DICOM Data object from an array of data
+  example: []
+  syntax:
+    content: public static DICOMData<T> CreateFromArray(T[] dataArray)
+    content.vb: Public Shared Function CreateFromArray(dataArray As T()) As DICOMData(Of T)
+    parameters:
+    - id: dataArray
+      type: '{T}[]'
+      description: the data array from which to initialize the DICOM Data object
+    return:
+      type: EvilDICOM.Core.DICOMData`1
+      description: 
+- uid: EvilDICOM.Core.DICOMData`1.ToString
+  id: ToString
+  parent: EvilDICOM.Core.DICOMData`1
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  fullName: EvilDICOM.Core.DICOMData<T>.ToString()
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 77
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
+    return:
+      type: System.String
+  overridden: System.Object.ToString
+references:
+- uid: EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: '{T}'
+  isExternal: false
+  name: T
+  fullName: T
+- uid: System.Collections.Generic.List{{T}}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<T>
+  fullName: System.Collections.Generic.List<T>
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  parent: System.Collections.Generic
+  isExternal: true
+  name: List<T>
+  fullName: System.Collections.Generic.List<T>
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: EvilDICOM.Core.DICOMData`1
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMData<T>
+  fullName: EvilDICOM.Core.DICOMData<T>
+  fullname.vb: EvilDICOM.Core.DICOMData(Of T)
+  name.vb: DICOMData(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: '{T}[]'
+  isExternal: false
+  name: T[]
+  fullName: T[]
+  fullname.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+    fullName: T
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - name: T
+    fullName: T
+  - name: ()
+    fullName: ()
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String

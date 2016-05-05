@@ -1,0 +1,73 @@
+items:
+- uid: EvilDICOM.Network.Enums.RejectResult
+  id: RejectResult
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.RejectResult.REJECTED_PERMANENT
+  - EvilDICOM.Network.Enums.RejectResult.REJECTED_TRANSIENT
+  langs:
+  - csharp
+  - vb
+  name: RejectResult
+  fullName: EvilDICOM.Network.Enums.RejectResult
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectResult.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/RejectResult.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: 'public enum RejectResult : byte'
+    content.vb: Public Enum RejectResult As Byte
+- uid: EvilDICOM.Network.Enums.RejectResult.REJECTED_PERMANENT
+  id: REJECTED_PERMANENT
+  parent: EvilDICOM.Network.Enums.RejectResult
+  langs:
+  - csharp
+  - vb
+  name: REJECTED_PERMANENT
+  fullName: EvilDICOM.Network.Enums.RejectResult.REJECTED_PERMANENT
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectResult.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/RejectResult.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: REJECTED_PERMANENT = 1
+- uid: EvilDICOM.Network.Enums.RejectResult.REJECTED_TRANSIENT
+  id: REJECTED_TRANSIENT
+  parent: EvilDICOM.Network.Enums.RejectResult
+  langs:
+  - csharp
+  - vb
+  name: REJECTED_TRANSIENT
+  fullName: EvilDICOM.Network.Enums.RejectResult.REJECTED_TRANSIENT
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectResult.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/RejectResult.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: REJECTED_TRANSIENT = 2
+references:
+- uid: EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums

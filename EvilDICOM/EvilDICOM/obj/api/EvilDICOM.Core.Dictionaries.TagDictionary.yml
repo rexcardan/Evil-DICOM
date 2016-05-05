@@ -1,0 +1,437 @@
+items:
+- uid: EvilDICOM.Core.Dictionaries.TagDictionary
+  id: TagDictionary
+  parent: EvilDICOM.Core.Dictionaries
+  children:
+  - EvilDICOM.Core.Dictionaries.TagDictionary.AddEntry``1(System.String,System.String)
+  - EvilDICOM.Core.Dictionaries.TagDictionary.GetDescription(EvilDICOM.Core.Element.Tag)
+  - EvilDICOM.Core.Dictionaries.TagDictionary.GetDescription(System.String)
+  - EvilDICOM.Core.Dictionaries.TagDictionary.GetVRFromTag(EvilDICOM.Core.Element.Tag)
+  - EvilDICOM.Core.Dictionaries.TagDictionary.Tags
+  langs:
+  - csharp
+  - vb
+  name: TagDictionary
+  fullName: EvilDICOM.Core.Dictionaries.TagDictionary
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/TagDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/TagDictionary.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  summary: The class is used to look up tags in a dictionary for relevant information such as vr type.
+  example: []
+  syntax:
+    content: public class TagDictionary
+    content.vb: Public Class TagDictionary
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Core.Dictionaries.TagDictionary.Tags
+  id: Tags
+  parent: EvilDICOM.Core.Dictionaries.TagDictionary
+  langs:
+  - csharp
+  - vb
+  name: Tags
+  fullName: EvilDICOM.Core.Dictionaries.TagDictionary.Tags
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/TagDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/TagDictionary.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  syntax:
+    content: public static Dictionary<string, TagDictionary.TagInfo> Tags
+    content.vb: Public Shared Tags As Dictionary(Of String, TagDictionary.TagInfo)
+- uid: EvilDICOM.Core.Dictionaries.TagDictionary.GetVRFromTag(EvilDICOM.Core.Element.Tag)
+  id: GetVRFromTag(EvilDICOM.Core.Element.Tag)
+  parent: EvilDICOM.Core.Dictionaries.TagDictionary
+  langs:
+  - csharp
+  - vb
+  name: GetVRFromTag(Tag)
+  fullName: EvilDICOM.Core.Dictionaries.TagDictionary.GetVRFromTag(EvilDICOM.Core.Element.Tag)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/TagDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/TagDictionary.cs
+    startLine: 3722
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  summary: Finds the appropriate VR for a given tag by looking up the tag in a DICOM dictionary
+  example: []
+  syntax:
+    content: public static VR GetVRFromTag(Tag tag)
+    content.vb: Public Shared Function GetVRFromTag(tag As Tag) As VR
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+      description: the tag containing the id to find in the dictionary
+    return:
+      type: EvilDICOM.Core.Enums.VR
+      description: 
+- uid: EvilDICOM.Core.Dictionaries.TagDictionary.AddEntry``1(System.String,System.String)
+  id: AddEntry``1(System.String,System.String)
+  parent: EvilDICOM.Core.Dictionaries.TagDictionary
+  langs:
+  - csharp
+  - vb
+  name: AddEntry<T>(String, String)
+  name.vb: AddEntry(Of T)(String, String)
+  fullName: EvilDICOM.Core.Dictionaries.TagDictionary.AddEntry<T>(System.String, System.String)
+  fullName.vb: EvilDICOM.Core.Dictionaries.TagDictionary.AddEntry(Of T)(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/TagDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/TagDictionary.cs
+    startLine: 3740
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  summary: Adds an entry to the DICOM Dictionary for reading files
+  example: []
+  syntax:
+    content: 'public static void AddEntry<T>(string id, string description)where T : IDICOMElement'
+    content.vb: Public Shared Sub AddEntry(Of T As IDICOMElement)(id As String, description As String)
+    parameters:
+    - id: id
+      type: System.String
+      description: the tag id of the element
+    - id: description
+      type: System.String
+      description: the description of the element
+    typeParameters:
+    - id: T
+      description: the type of VR to add
+- uid: EvilDICOM.Core.Dictionaries.TagDictionary.GetDescription(System.String)
+  id: GetDescription(System.String)
+  parent: EvilDICOM.Core.Dictionaries.TagDictionary
+  langs:
+  - csharp
+  - vb
+  name: GetDescription(String)
+  fullName: EvilDICOM.Core.Dictionaries.TagDictionary.GetDescription(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/TagDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/TagDictionary.cs
+    startLine: 3750
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  summary: Gets the description of the tag
+  example: []
+  syntax:
+    content: public static string GetDescription(string completeId)
+    content.vb: Public Shared Function GetDescription(completeId As String) As String
+    parameters:
+    - id: completeId
+      type: System.String
+    return:
+      type: System.String
+      description: a string description of the tag in camel case
+- uid: EvilDICOM.Core.Dictionaries.TagDictionary.GetDescription(EvilDICOM.Core.Element.Tag)
+  id: GetDescription(EvilDICOM.Core.Element.Tag)
+  parent: EvilDICOM.Core.Dictionaries.TagDictionary
+  langs:
+  - csharp
+  - vb
+  name: GetDescription(Tag)
+  fullName: EvilDICOM.Core.Dictionaries.TagDictionary.GetDescription(EvilDICOM.Core.Element.Tag)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/TagDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/TagDictionary.cs
+    startLine: 3765
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  summary: Gets the description of the tag
+  example: []
+  syntax:
+    content: public static string GetDescription(Tag tag)
+    content.vb: Public Shared Function GetDescription(tag As Tag) As String
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+      description: the tag containing the id
+    return:
+      type: System.String
+      description: a string description of the tag in camel case
+references:
+- uid: EvilDICOM.Core.Dictionaries
+  isExternal: false
+  name: EvilDICOM.Core.Dictionaries
+  fullName: EvilDICOM.Core.Dictionaries
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Core.Element.Tag
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: Tag
+  fullName: EvilDICOM.Core.Element.Tag
+- uid: EvilDICOM.Core.Enums.VR
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: VR
+  fullName: EvilDICOM.Core.Enums.VR
+- uid: EvilDICOM.Core.Element
+  isExternal: false
+  name: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String

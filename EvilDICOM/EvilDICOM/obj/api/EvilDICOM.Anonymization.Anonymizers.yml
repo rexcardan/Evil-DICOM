@@ -1,0 +1,70 @@
+items:
+- uid: EvilDICOM.Anonymization.Anonymizers
+  id: EvilDICOM.Anonymization.Anonymizers
+  children:
+  - EvilDICOM.Anonymization.Anonymizers.DateAnonymizer
+  - EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  - EvilDICOM.Anonymization.Anonymizers.DICOMStudy
+  - EvilDICOM.Anonymization.Anonymizers.NameAnonymizer
+  - EvilDICOM.Anonymization.Anonymizers.PatientIdAnonymizer
+  - EvilDICOM.Anonymization.Anonymizers.PrivateTagAnonymizer
+  - EvilDICOM.Anonymization.Anonymizers.ProfileAnonymizer
+  - EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  - EvilDICOM.Anonymization.Anonymizers.UIDAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Anonymization.Anonymizers
+  fullName: EvilDICOM.Anonymization.Anonymizers
+  type: Namespace
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/UIDAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/UIDAnonymizer.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Anonymization.Anonymizers.DateAnonymizer
+  isExternal: false
+  name: DateAnonymizer
+  fullName: EvilDICOM.Anonymization.Anonymizers.DateAnonymizer
+- uid: EvilDICOM.Anonymization.Anonymizers.NameAnonymizer
+  isExternal: false
+  name: NameAnonymizer
+  fullName: EvilDICOM.Anonymization.Anonymizers.NameAnonymizer
+- uid: EvilDICOM.Anonymization.Anonymizers.PatientIdAnonymizer
+  isExternal: false
+  name: PatientIdAnonymizer
+  fullName: EvilDICOM.Anonymization.Anonymizers.PatientIdAnonymizer
+- uid: EvilDICOM.Anonymization.Anonymizers.PrivateTagAnonymizer
+  isExternal: false
+  name: PrivateTagAnonymizer
+  fullName: EvilDICOM.Anonymization.Anonymizers.PrivateTagAnonymizer
+- uid: EvilDICOM.Anonymization.Anonymizers.ProfileAnonymizer
+  isExternal: false
+  name: ProfileAnonymizer
+  fullName: EvilDICOM.Anonymization.Anonymizers.ProfileAnonymizer
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  isExternal: false
+  name: StudyIdAnonymizer
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMStudy
+  isExternal: false
+  name: DICOMStudy
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMStudy
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  parent: EvilDICOM.Anonymization.Anonymizers
+  isExternal: false
+  name: DICOMFileType
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+- uid: EvilDICOM.Anonymization.Anonymizers.UIDAnonymizer
+  isExternal: false
+  name: UIDAnonymizer
+  fullName: EvilDICOM.Anonymization.Anonymizers.UIDAnonymizer
+- uid: EvilDICOM.Anonymization.Anonymizers
+  isExternal: false
+  name: EvilDICOM.Anonymization.Anonymizers
+  fullName: EvilDICOM.Anonymization.Anonymizers

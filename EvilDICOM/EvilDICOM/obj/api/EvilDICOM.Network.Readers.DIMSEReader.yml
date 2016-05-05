@@ -1,0 +1,471 @@
+items:
+- uid: EvilDICOM.Network.Readers.DIMSEReader
+  id: DIMSEReader
+  parent: EvilDICOM.Network.Readers
+  children:
+  - EvilDICOM.Network.Readers.DIMSEReader.CreateDICOMObject(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  - EvilDICOM.Network.Readers.DIMSEReader.MergePDataTFData(System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF})
+  - EvilDICOM.Network.Readers.DIMSEReader.TryReadDIMSE(EvilDICOM.Core.DICOMObject,EvilDICOM.Network.DIMSE.AbstractDIMSE@)
+  langs:
+  - csharp
+  - vb
+  name: DIMSEReader
+  fullName: EvilDICOM.Network.Readers.DIMSEReader
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/DIMSEReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Readers/DIMSEReader.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: public class DIMSEReader
+    content.vb: Public Class DIMSEReader
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Network.Readers.DIMSEReader.CreateDICOMObject(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  id: CreateDICOMObject(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  parent: EvilDICOM.Network.Readers.DIMSEReader
+  langs:
+  - csharp
+  - vb
+  name: CreateDICOMObject(Byte[], TransferSyntax)
+  name.vb: CreateDICOMObject(Byte(), TransferSyntax)
+  fullName: EvilDICOM.Network.Readers.DIMSEReader.CreateDICOMObject(System.Byte[], EvilDICOM.Core.Enums.TransferSyntax)
+  fullName.vb: EvilDICOM.Network.Readers.DIMSEReader.CreateDICOMObject(System.Byte(), EvilDICOM.Core.Enums.TransferSyntax)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/DIMSEReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Readers/DIMSEReader.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: public static DICOMObject CreateDICOMObject(byte[] dimse, TransferSyntax syntax = 0)
+    content.vb: Public Shared Function CreateDICOMObject(dimse As Byte(), syntax As TransferSyntax = 0) As DICOMObject
+    parameters:
+    - id: dimse
+      type: System.Byte[]
+    - id: syntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+    return:
+      type: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Network.Readers.DIMSEReader.MergePDataTFData(System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF})
+  id: MergePDataTFData(System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF})
+  parent: EvilDICOM.Network.Readers.DIMSEReader
+  langs:
+  - csharp
+  - vb
+  name: MergePDataTFData(List<PDataTF>)
+  name.vb: MergePDataTFData(List(Of PDataTF))
+  fullName: EvilDICOM.Network.Readers.DIMSEReader.MergePDataTFData(System.Collections.Generic.List<EvilDICOM.Network.PDUs.PDataTF>)
+  fullName.vb: EvilDICOM.Network.Readers.DIMSEReader.MergePDataTFData(System.Collections.Generic.List(Of EvilDICOM.Network.PDUs.PDataTF))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/DIMSEReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Readers/DIMSEReader.cs
+    startLine: 31
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  summary: Takes a list of PData transfer objects and writes them to a byte array for outgoing messaging
+  example: []
+  syntax:
+    content: public static byte[] MergePDataTFData(List<PDataTF> data)
+    content.vb: Public Shared Function MergePDataTFData(data As List(Of PDataTF)) As Byte()
+    parameters:
+    - id: data
+      type: System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF}
+      description: the PData transfer objects to be sent
+    return:
+      type: System.Byte[]
+      description: a byte array containing the PData objects
+- uid: EvilDICOM.Network.Readers.DIMSEReader.TryReadDIMSE(EvilDICOM.Core.DICOMObject,EvilDICOM.Network.DIMSE.AbstractDIMSE@)
+  id: TryReadDIMSE(EvilDICOM.Core.DICOMObject,EvilDICOM.Network.DIMSE.AbstractDIMSE@)
+  parent: EvilDICOM.Network.Readers.DIMSEReader
+  langs:
+  - csharp
+  - vb
+  name: TryReadDIMSE(DICOMObject, out AbstractDIMSE)
+  name.vb: TryReadDIMSE(DICOMObject, ByRef AbstractDIMSE)
+  fullName: EvilDICOM.Network.Readers.DIMSEReader.TryReadDIMSE(EvilDICOM.Core.DICOMObject, out EvilDICOM.Network.DIMSE.AbstractDIMSE)
+  fullName.vb: EvilDICOM.Network.Readers.DIMSEReader.TryReadDIMSE(EvilDICOM.Core.DICOMObject, ByRef EvilDICOM.Network.DIMSE.AbstractDIMSE)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/DIMSEReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Readers/DIMSEReader.cs
+    startLine: 48
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: public static bool TryReadDIMSE(DICOMObject dcm, out AbstractDIMSE dimse)
+    content.vb: Public Shared Function TryReadDIMSE(dcm As DICOMObject, ByRef dimse As AbstractDIMSE) As Boolean
+    parameters:
+    - id: dcm
+      type: EvilDICOM.Core.DICOMObject
+    - id: dimse
+      type: EvilDICOM.Network.DIMSE.AbstractDIMSE
+    return:
+      type: System.Boolean
+references:
+- uid: EvilDICOM.Network.Readers
+  isExternal: false
+  name: EvilDICOM.Network.Readers
+  fullName: EvilDICOM.Network.Readers
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  fullName: System.Byte[]
+  fullname.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    fullName: ()
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax
+- uid: EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<PDataTF>
+  fullName: System.Collections.Generic.List<EvilDICOM.Network.PDUs.PDataTF>
+  fullname.vb: System.Collections.Generic.List(Of EvilDICOM.Network.PDUs.PDataTF)
+  name.vb: List(Of PDataTF)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.PDataTF
+    name: PDataTF
+    fullName: EvilDICOM.Network.PDUs.PDataTF
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.PDataTF
+    name: PDataTF
+    fullName: EvilDICOM.Network.PDUs.PDataTF
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  parent: System.Collections.Generic
+  isExternal: true
+  name: List<T>
+  fullName: System.Collections.Generic.List<T>
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSE
+  parent: EvilDICOM.Network.DIMSE
+  isExternal: false
+  name: AbstractDIMSE
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSE
+- uid: System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  fullName: System.Boolean
+- uid: EvilDICOM.Network.DIMSE
+  isExternal: false
+  name: EvilDICOM.Network.DIMSE
+  fullName: EvilDICOM.Network.DIMSE

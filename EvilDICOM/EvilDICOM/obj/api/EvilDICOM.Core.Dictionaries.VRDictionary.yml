@@ -1,0 +1,524 @@
+items:
+- uid: EvilDICOM.Core.Dictionaries.VRDictionary
+  id: VRDictionary
+  parent: EvilDICOM.Core.Dictionaries
+  children:
+  - EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(EvilDICOM.Core.Interfaces.IDICOMElement)
+  - EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(System.Type)
+  - EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromVR(EvilDICOM.Core.Enums.VR)
+  - EvilDICOM.Core.Dictionaries.VRDictionary.GetEncodingFromVR(EvilDICOM.Core.Enums.VR)
+  - EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromAbbreviation(System.String)
+  - EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromType(EvilDICOM.Core.Interfaces.IDICOMElement)
+  - EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromType(System.Type)
+  langs:
+  - csharp
+  - vb
+  name: VRDictionary
+  fullName: EvilDICOM.Core.Dictionaries.VRDictionary
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  summary: >-
+    General purpose class for working with VRs. It contains methods to convert ASCII string abbreviations into VR type,
+
+    the reverse,
+
+    and a few more useful methods when working with VR enums.
+  example: []
+  syntax:
+    content: public class VRDictionary
+    content.vb: Public Class VRDictionary
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromAbbreviation(System.String)
+  id: GetVRFromAbbreviation(System.String)
+  parent: EvilDICOM.Core.Dictionaries.VRDictionary
+  langs:
+  - csharp
+  - vb
+  name: GetVRFromAbbreviation(String)
+  fullName: EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromAbbreviation(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  summary: Finds the VR type from an DICOM two letter abbreviation.
+  example: []
+  syntax:
+    content: public static VR GetVRFromAbbreviation(string vrAbbreviation)
+    content.vb: Public Shared Function GetVRFromAbbreviation(vrAbbreviation As String) As VR
+    parameters:
+    - id: vrAbbreviation
+      type: System.String
+      description: an DICOM two letter abbreviation
+    return:
+      type: EvilDICOM.Core.Enums.VR
+      description: the VR type
+- uid: EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromVR(EvilDICOM.Core.Enums.VR)
+  id: GetAbbreviationFromVR(EvilDICOM.Core.Enums.VR)
+  parent: EvilDICOM.Core.Dictionaries.VRDictionary
+  langs:
+  - csharp
+  - vb
+  name: GetAbbreviationFromVR(VR)
+  fullName: EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromVR(EvilDICOM.Core.Enums.VR)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+    startLine: 87
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  summary: Creates the DICOM two letter abbreviation from a VR type.
+  example: []
+  syntax:
+    content: public static string GetAbbreviationFromVR(VR vr)
+    content.vb: Public Shared Function GetAbbreviationFromVR(vr As VR) As String
+    parameters:
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+      description: the VR type
+    return:
+      type: System.String
+      description: the DICOM two letter abbreviation
+- uid: EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromType(EvilDICOM.Core.Interfaces.IDICOMElement)
+  id: GetVRFromType(EvilDICOM.Core.Interfaces.IDICOMElement)
+  parent: EvilDICOM.Core.Dictionaries.VRDictionary
+  langs:
+  - csharp
+  - vb
+  name: GetVRFromType(IDICOMElement)
+  fullName: EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromType(EvilDICOM.Core.Interfaces.IDICOMElement)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+    startLine: 155
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  summary: Finds the VR enum from a specific DICOM element.
+  example: []
+  syntax:
+    content: public static VR GetVRFromType(IDICOMElement el)
+    content.vb: Public Shared Function GetVRFromType(el As IDICOMElement) As VR
+    parameters:
+    - id: el
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: the DICOM element
+    return:
+      type: EvilDICOM.Core.Enums.VR
+      description: the VR type
+- uid: EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromType(System.Type)
+  id: GetVRFromType(System.Type)
+  parent: EvilDICOM.Core.Dictionaries.VRDictionary
+  langs:
+  - csharp
+  - vb
+  name: GetVRFromType(Type)
+  fullName: EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromType(System.Type)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+    startLine: 166
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  summary: Finds the VR enum from a specific DICOM element type.
+  example: []
+  syntax:
+    content: public static VR GetVRFromType(Type t)
+    content.vb: Public Shared Function GetVRFromType(t As Type) As VR
+    parameters:
+    - id: t
+      type: System.Type
+    return:
+      type: EvilDICOM.Core.Enums.VR
+      description: the VR type
+- uid: EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(EvilDICOM.Core.Interfaces.IDICOMElement)
+  id: GetAbbreviationFromType(EvilDICOM.Core.Interfaces.IDICOMElement)
+  parent: EvilDICOM.Core.Dictionaries.VRDictionary
+  langs:
+  - csharp
+  - vb
+  name: GetAbbreviationFromType(IDICOMElement)
+  fullName: EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(EvilDICOM.Core.Interfaces.IDICOMElement)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+    startLine: 176
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  summary: Finds the VR enum from a specific DICOM element.
+  example: []
+  syntax:
+    content: public static string GetAbbreviationFromType(IDICOMElement el)
+    content.vb: Public Shared Function GetAbbreviationFromType(el As IDICOMElement) As String
+    parameters:
+    - id: el
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: the DICOM element
+    return:
+      type: System.String
+      description: the VR abbreviation
+- uid: EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(System.Type)
+  id: GetAbbreviationFromType(System.Type)
+  parent: EvilDICOM.Core.Dictionaries.VRDictionary
+  langs:
+  - csharp
+  - vb
+  name: GetAbbreviationFromType(Type)
+  fullName: EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(System.Type)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+    startLine: 188
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  summary: Finds the VR enum from a specific DICOM element.
+  example: []
+  syntax:
+    content: public static string GetAbbreviationFromType(Type t)
+    content.vb: Public Shared Function GetAbbreviationFromType(t As Type) As String
+    parameters:
+    - id: t
+      type: System.Type
+    return:
+      type: System.String
+      description: the VR abbreviation
+- uid: EvilDICOM.Core.Dictionaries.VRDictionary.GetEncodingFromVR(EvilDICOM.Core.Enums.VR)
+  id: GetEncodingFromVR(EvilDICOM.Core.Enums.VR)
+  parent: EvilDICOM.Core.Dictionaries.VRDictionary
+  langs:
+  - csharp
+  - vb
+  name: GetEncodingFromVR(VR)
+  fullName: EvilDICOM.Core.Dictionaries.VRDictionary.GetEncodingFromVR(EvilDICOM.Core.Enums.VR)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+    startLine: 201
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  summary: >-
+    Determines the encoding, meaning how many bytes to write the VR and length parameters, from a VR type.
+
+    Options are explicit long (8 bytes), explicit short (4 bytes), or implicit (4 bytes). In Evil DICOM, the null
+
+    VR is used to represent an unknown VR (before dictionary lookup) that is implicitly encoded.
+  example: []
+  syntax:
+    content: public static VREncoding GetEncodingFromVR(VR vr)
+    content.vb: Public Shared Function GetEncodingFromVR(vr As VR) As VREncoding
+    parameters:
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+      description: the VR type
+    return:
+      type: EvilDICOM.Core.Enums.VREncoding
+      description: the encoding method for this type
+references:
+- uid: EvilDICOM.Core.Dictionaries
+  isExternal: false
+  name: EvilDICOM.Core.Dictionaries
+  fullName: EvilDICOM.Core.Dictionaries
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String
+- uid: EvilDICOM.Core.Enums.VR
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: VR
+  fullName: EvilDICOM.Core.Enums.VR
+- uid: EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: System.Type
+  parent: System
+  isExternal: true
+  name: Type
+  fullName: System.Type
+- uid: EvilDICOM.Core.Enums.VREncoding
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: VREncoding
+  fullName: EvilDICOM.Core.Enums.VREncoding

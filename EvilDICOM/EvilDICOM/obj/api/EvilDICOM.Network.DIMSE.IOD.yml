@@ -1,0 +1,42 @@
+items:
+- uid: EvilDICOM.Network.DIMSE.IOD
+  id: EvilDICOM.Network.DIMSE.IOD
+  children:
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  - EvilDICOM.Network.DIMSE.IOD.CFindIOD
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Network.DIMSE.IOD
+  fullName: EvilDICOM.Network.DIMSE.IOD
+  type: Namespace
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: AbstractDIMSEIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: CFindIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindIOD
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: CMoveIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+- uid: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: EvilDICOM.Network.DIMSE.IOD
+  fullName: EvilDICOM.Network.DIMSE.IOD

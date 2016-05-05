@@ -1,0 +1,60 @@
+items:
+- uid: EvilDICOM.Network
+  id: EvilDICOM.Network
+  children:
+  - EvilDICOM.Network.Association
+  - EvilDICOM.Network.DICOMSCP
+  - EvilDICOM.Network.DICOMSCP.StopHandler
+  - EvilDICOM.Network.DICOMSCU
+  - EvilDICOM.Network.DICOMServiceClass
+  - EvilDICOM.Network.Entity
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+  type: Namespace
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Network.Entity
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Entity
+  fullName: EvilDICOM.Network.Entity
+- uid: EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.DICOMSCP
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMSCP
+  fullName: EvilDICOM.Network.DICOMSCP
+- uid: EvilDICOM.Network.DICOMSCP.StopHandler
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMSCP.StopHandler
+  fullName: EvilDICOM.Network.DICOMSCP.StopHandler
+- uid: EvilDICOM.Network.DICOMSCU
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMSCU
+  fullName: EvilDICOM.Network.DICOMSCU
+- uid: EvilDICOM.Network.DICOMServiceClass
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMServiceClass
+  fullName: EvilDICOM.Network.DICOMServiceClass
+- uid: EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  fullName: EvilDICOM.Network

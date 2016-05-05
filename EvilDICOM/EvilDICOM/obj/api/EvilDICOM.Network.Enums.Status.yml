@@ -1,0 +1,205 @@
+items:
+- uid: EvilDICOM.Network.Enums.Status
+  id: Status
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.Status.CANCEL
+  - EvilDICOM.Network.Enums.Status.FAILURE
+  - EvilDICOM.Network.Enums.Status.FAILURE_ID_SOP
+  - EvilDICOM.Network.Enums.Status.FAILURE_REFUSED
+  - EvilDICOM.Network.Enums.Status.FAILURE_UNABLE_TO_PROCESS
+  - EvilDICOM.Network.Enums.Status.PENDING
+  - EvilDICOM.Network.Enums.Status.SUCCESS
+  - EvilDICOM.Network.Enums.Status.WARNING
+  langs:
+  - csharp
+  - vb
+  name: Status
+  fullName: EvilDICOM.Network.Enums.Status
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+    startLine: 3
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: 'public enum Status : ushort'
+    content.vb: Public Enum Status As UShort
+- uid: EvilDICOM.Network.Enums.Status.SUCCESS
+  id: SUCCESS
+  parent: EvilDICOM.Network.Enums.Status
+  langs:
+  - csharp
+  - vb
+  name: SUCCESS
+  fullName: EvilDICOM.Network.Enums.Status.SUCCESS
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: SUCCESS = 0
+- uid: EvilDICOM.Network.Enums.Status.WARNING
+  id: WARNING
+  parent: EvilDICOM.Network.Enums.Status
+  langs:
+  - csharp
+  - vb
+  name: WARNING
+  fullName: EvilDICOM.Network.Enums.Status.WARNING
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: WARNING = 1
+- uid: EvilDICOM.Network.Enums.Status.FAILURE
+  id: FAILURE
+  parent: EvilDICOM.Network.Enums.Status
+  langs:
+  - csharp
+  - vb
+  name: FAILURE
+  fullName: EvilDICOM.Network.Enums.Status.FAILURE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: FAILURE = 10
+- uid: EvilDICOM.Network.Enums.Status.FAILURE_UNABLE_TO_PROCESS
+  id: FAILURE_UNABLE_TO_PROCESS
+  parent: EvilDICOM.Network.Enums.Status
+  langs:
+  - csharp
+  - vb
+  name: FAILURE_UNABLE_TO_PROCESS
+  fullName: EvilDICOM.Network.Enums.Status.FAILURE_UNABLE_TO_PROCESS
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: FAILURE_UNABLE_TO_PROCESS = 49152
+- uid: EvilDICOM.Network.Enums.Status.FAILURE_REFUSED
+  id: FAILURE_REFUSED
+  parent: EvilDICOM.Network.Enums.Status
+  langs:
+  - csharp
+  - vb
+  name: FAILURE_REFUSED
+  fullName: EvilDICOM.Network.Enums.Status.FAILURE_REFUSED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: FAILURE_REFUSED = 42752
+- uid: EvilDICOM.Network.Enums.Status.FAILURE_ID_SOP
+  id: FAILURE_ID_SOP
+  parent: EvilDICOM.Network.Enums.Status
+  langs:
+  - csharp
+  - vb
+  name: FAILURE_ID_SOP
+  fullName: EvilDICOM.Network.Enums.Status.FAILURE_ID_SOP
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: FAILURE_ID_SOP = 43264
+- uid: EvilDICOM.Network.Enums.Status.CANCEL
+  id: CANCEL
+  parent: EvilDICOM.Network.Enums.Status
+  langs:
+  - csharp
+  - vb
+  name: CANCEL
+  fullName: EvilDICOM.Network.Enums.Status.CANCEL
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: CANCEL = 65024
+- uid: EvilDICOM.Network.Enums.Status.PENDING
+  id: PENDING
+  parent: EvilDICOM.Network.Enums.Status
+  langs:
+  - csharp
+  - vb
+  name: PENDING
+  fullName: EvilDICOM.Network.Enums.Status.PENDING
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/Status.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: PENDING = 65280
+references:
+- uid: EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums

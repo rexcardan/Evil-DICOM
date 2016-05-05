@@ -25,6 +25,10 @@ namespace EvilDICOM.Core.IO.Writing
 
         public static void Write(DICOMBinaryWriter dw, VR vr, DICOMWriteSettings settings, int length)
         {
+            if (length % 2 != 0 || length ==1198421)
+            {
+                Console.WriteLine("Length is odd!");
+            }
             var lengthBytes = BitConverter.GetBytes(length);
             if (settings.TransferSyntax != TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
             {

@@ -1,0 +1,558 @@
+items:
+- uid: EvilDICOM.Network.Querying.QueryBuilder
+  id: QueryBuilder
+  parent: EvilDICOM.Network.Querying
+  children:
+  - EvilDICOM.Network.Querying.QueryBuilder.#ctor(EvilDICOM.Network.DICOMSCU,EvilDICOM.Network.Entity)
+  - EvilDICOM.Network.Querying.QueryBuilder.GetImageUids(System.Collections.Generic.List{EvilDICOM.Network.Querying.SeriesResult})
+  - EvilDICOM.Network.Querying.QueryBuilder.GetSeriesUids(System.Collections.Generic.List{EvilDICOM.Network.Querying.StudyResult})
+  - EvilDICOM.Network.Querying.QueryBuilder.GetStudyUids(System.String)
+  - EvilDICOM.Network.Querying.QueryBuilder.SendImage(EvilDICOM.Network.Querying.ImageResult,EvilDICOM.Network.DICOMSCP)
+  langs:
+  - csharp
+  - vb
+  name: QueryBuilder
+  fullName: EvilDICOM.Network.Querying.QueryBuilder
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Querying/QueryBuilder.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Querying/QueryBuilder.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Querying
+  summary: A class to help with CFind operations
+  example: []
+  syntax:
+    content: public class QueryBuilder
+    content.vb: Public Class QueryBuilder
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Network.Querying.QueryBuilder.#ctor(EvilDICOM.Network.DICOMSCU,EvilDICOM.Network.Entity)
+  id: '#ctor(EvilDICOM.Network.DICOMSCU,EvilDICOM.Network.Entity)'
+  parent: EvilDICOM.Network.Querying.QueryBuilder
+  langs:
+  - csharp
+  - vb
+  name: QueryBuilder(DICOMSCU, Entity)
+  fullName: EvilDICOM.Network.Querying.QueryBuilder.QueryBuilder(EvilDICOM.Network.DICOMSCU, EvilDICOM.Network.Entity)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Querying/QueryBuilder.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Querying/QueryBuilder.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Querying
+  syntax:
+    content: public QueryBuilder(DICOMSCU scu, Entity scp)
+    content.vb: Public Sub New(scu As DICOMSCU, scp As Entity)
+    parameters:
+    - id: scu
+      type: EvilDICOM.Network.DICOMSCU
+    - id: scp
+      type: EvilDICOM.Network.Entity
+- uid: EvilDICOM.Network.Querying.QueryBuilder.GetStudyUids(System.String)
+  id: GetStudyUids(System.String)
+  parent: EvilDICOM.Network.Querying.QueryBuilder
+  langs:
+  - csharp
+  - vb
+  name: GetStudyUids(String)
+  fullName: EvilDICOM.Network.Querying.QueryBuilder.GetStudyUids(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Querying/QueryBuilder.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Querying/QueryBuilder.cs
+    startLine: 29
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Querying
+  syntax:
+    content: public List<StudyResult> GetStudyUids(string patientId)
+    content.vb: Public Function GetStudyUids(patientId As String) As List(Of StudyResult)
+    parameters:
+    - id: patientId
+      type: System.String
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Network.Querying.StudyResult}
+- uid: EvilDICOM.Network.Querying.QueryBuilder.GetSeriesUids(System.Collections.Generic.List{EvilDICOM.Network.Querying.StudyResult})
+  id: GetSeriesUids(System.Collections.Generic.List{EvilDICOM.Network.Querying.StudyResult})
+  parent: EvilDICOM.Network.Querying.QueryBuilder
+  langs:
+  - csharp
+  - vb
+  name: GetSeriesUids(List<StudyResult>)
+  name.vb: GetSeriesUids(List(Of StudyResult))
+  fullName: EvilDICOM.Network.Querying.QueryBuilder.GetSeriesUids(System.Collections.Generic.List<EvilDICOM.Network.Querying.StudyResult>)
+  fullName.vb: EvilDICOM.Network.Querying.QueryBuilder.GetSeriesUids(System.Collections.Generic.List(Of EvilDICOM.Network.Querying.StudyResult))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Querying/QueryBuilder.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Querying/QueryBuilder.cs
+    startLine: 49
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Querying
+  syntax:
+    content: public List<SeriesResult> GetSeriesUids(List<StudyResult> studies)
+    content.vb: Public Function GetSeriesUids(studies As List(Of StudyResult)) As List(Of SeriesResult)
+    parameters:
+    - id: studies
+      type: System.Collections.Generic.List{EvilDICOM.Network.Querying.StudyResult}
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Network.Querying.SeriesResult}
+- uid: EvilDICOM.Network.Querying.QueryBuilder.GetImageUids(System.Collections.Generic.List{EvilDICOM.Network.Querying.SeriesResult})
+  id: GetImageUids(System.Collections.Generic.List{EvilDICOM.Network.Querying.SeriesResult})
+  parent: EvilDICOM.Network.Querying.QueryBuilder
+  langs:
+  - csharp
+  - vb
+  name: GetImageUids(List<SeriesResult>)
+  name.vb: GetImageUids(List(Of SeriesResult))
+  fullName: EvilDICOM.Network.Querying.QueryBuilder.GetImageUids(System.Collections.Generic.List<EvilDICOM.Network.Querying.SeriesResult>)
+  fullName.vb: EvilDICOM.Network.Querying.QueryBuilder.GetImageUids(System.Collections.Generic.List(Of EvilDICOM.Network.Querying.SeriesResult))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Querying/QueryBuilder.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Querying/QueryBuilder.cs
+    startLine: 79
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Querying
+  syntax:
+    content: public List<ImageResult> GetImageUids(List<SeriesResult> series)
+    content.vb: Public Function GetImageUids(series As List(Of SeriesResult)) As List(Of ImageResult)
+    parameters:
+    - id: series
+      type: System.Collections.Generic.List{EvilDICOM.Network.Querying.SeriesResult}
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Network.Querying.ImageResult}
+- uid: EvilDICOM.Network.Querying.QueryBuilder.SendImage(EvilDICOM.Network.Querying.ImageResult,EvilDICOM.Network.DICOMSCP)
+  id: SendImage(EvilDICOM.Network.Querying.ImageResult,EvilDICOM.Network.DICOMSCP)
+  parent: EvilDICOM.Network.Querying.QueryBuilder
+  langs:
+  - csharp
+  - vb
+  name: SendImage(ImageResult, DICOMSCP)
+  fullName: EvilDICOM.Network.Querying.QueryBuilder.SendImage(EvilDICOM.Network.Querying.ImageResult, EvilDICOM.Network.DICOMSCP)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Querying/QueryBuilder.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Querying/QueryBuilder.cs
+    startLine: 113
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Querying
+  syntax:
+    content: public void SendImage(ImageResult ir, DICOMSCP reciever)
+    content.vb: Public Sub SendImage(ir As ImageResult, reciever As DICOMSCP)
+    parameters:
+    - id: ir
+      type: EvilDICOM.Network.Querying.ImageResult
+    - id: reciever
+      type: EvilDICOM.Network.DICOMSCP
+references:
+- uid: EvilDICOM.Network.Querying
+  isExternal: false
+  name: EvilDICOM.Network.Querying
+  fullName: EvilDICOM.Network.Querying
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Network.DICOMSCU
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMSCU
+  fullName: EvilDICOM.Network.DICOMSCU
+- uid: EvilDICOM.Network.Entity
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Entity
+  fullName: EvilDICOM.Network.Entity
+- uid: EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String
+- uid: System.Collections.Generic.List{EvilDICOM.Network.Querying.StudyResult}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<StudyResult>
+  fullName: System.Collections.Generic.List<EvilDICOM.Network.Querying.StudyResult>
+  fullname.vb: System.Collections.Generic.List(Of EvilDICOM.Network.Querying.StudyResult)
+  name.vb: List(Of StudyResult)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Network.Querying.StudyResult
+    name: StudyResult
+    fullName: EvilDICOM.Network.Querying.StudyResult
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.Querying.StudyResult
+    name: StudyResult
+    fullName: EvilDICOM.Network.Querying.StudyResult
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  parent: System.Collections.Generic
+  isExternal: true
+  name: List<T>
+  fullName: System.Collections.Generic.List<T>
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.List{EvilDICOM.Network.Querying.SeriesResult}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<SeriesResult>
+  fullName: System.Collections.Generic.List<EvilDICOM.Network.Querying.SeriesResult>
+  fullname.vb: System.Collections.Generic.List(Of EvilDICOM.Network.Querying.SeriesResult)
+  name.vb: List(Of SeriesResult)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Network.Querying.SeriesResult
+    name: SeriesResult
+    fullName: EvilDICOM.Network.Querying.SeriesResult
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.Querying.SeriesResult
+    name: SeriesResult
+    fullName: EvilDICOM.Network.Querying.SeriesResult
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic.List{EvilDICOM.Network.Querying.ImageResult}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<ImageResult>
+  fullName: System.Collections.Generic.List<EvilDICOM.Network.Querying.ImageResult>
+  fullname.vb: System.Collections.Generic.List(Of EvilDICOM.Network.Querying.ImageResult)
+  name.vb: List(Of ImageResult)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Network.Querying.ImageResult
+    name: ImageResult
+    fullName: EvilDICOM.Network.Querying.ImageResult
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.Querying.ImageResult
+    name: ImageResult
+    fullName: EvilDICOM.Network.Querying.ImageResult
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Network.Querying.ImageResult
+  parent: EvilDICOM.Network.Querying
+  isExternal: false
+  name: ImageResult
+  fullName: EvilDICOM.Network.Querying.ImageResult
+- uid: EvilDICOM.Network.DICOMSCP
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMSCP
+  fullName: EvilDICOM.Network.DICOMSCP

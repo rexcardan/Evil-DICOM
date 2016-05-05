@@ -1,0 +1,475 @@
+items:
+- uid: EvilDICOM.Network.Messaging.AssociationMessenger
+  id: AssociationMessenger
+  parent: EvilDICOM.Network.Messaging
+  children:
+  - EvilDICOM.Network.Messaging.AssociationMessenger.SendAbort(EvilDICOM.Network.Association,EvilDICOM.Network.Enums.AbortSource,EvilDICOM.Network.Enums.AbortReason)
+  - EvilDICOM.Network.Messaging.AssociationMessenger.SendAccept(EvilDICOM.Network.PDUs.Accept,EvilDICOM.Network.Association)
+  - EvilDICOM.Network.Messaging.AssociationMessenger.SendReject(EvilDICOM.Network.Association)
+  - EvilDICOM.Network.Messaging.AssociationMessenger.SendReleaseRequest(EvilDICOM.Network.Association)
+  - EvilDICOM.Network.Messaging.AssociationMessenger.SendReleaseResponse(EvilDICOM.Network.Association)
+  - EvilDICOM.Network.Messaging.AssociationMessenger.SendRequest(EvilDICOM.Network.Association,System.String[])
+  langs:
+  - csharp
+  - vb
+  name: AssociationMessenger
+  fullName: EvilDICOM.Network.Messaging.AssociationMessenger
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: public class AssociationMessenger
+    content.vb: Public Class AssociationMessenger
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Network.Messaging.AssociationMessenger.SendAccept(EvilDICOM.Network.PDUs.Accept,EvilDICOM.Network.Association)
+  id: SendAccept(EvilDICOM.Network.PDUs.Accept,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Messaging.AssociationMessenger
+  langs:
+  - csharp
+  - vb
+  name: SendAccept(Accept, Association)
+  fullName: EvilDICOM.Network.Messaging.AssociationMessenger.SendAccept(EvilDICOM.Network.PDUs.Accept, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: public static void SendAccept(Accept accept, Association asc)
+    content.vb: Public Shared Sub SendAccept(accept As Accept, asc As Association)
+    parameters:
+    - id: accept
+      type: EvilDICOM.Network.PDUs.Accept
+    - id: asc
+      type: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.Messaging.AssociationMessenger.SendReject(EvilDICOM.Network.Association)
+  id: SendReject(EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Messaging.AssociationMessenger
+  langs:
+  - csharp
+  - vb
+  name: SendReject(Association)
+  fullName: EvilDICOM.Network.Messaging.AssociationMessenger.SendReject(EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: public static void SendReject(Association asc)
+    content.vb: Public Shared Sub SendReject(asc As Association)
+    parameters:
+    - id: asc
+      type: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.Messaging.AssociationMessenger.SendRequest(EvilDICOM.Network.Association,System.String[])
+  id: SendRequest(EvilDICOM.Network.Association,System.String[])
+  parent: EvilDICOM.Network.Messaging.AssociationMessenger
+  langs:
+  - csharp
+  - vb
+  name: SendRequest(Association, String[])
+  name.vb: SendRequest(Association, String())
+  fullName: EvilDICOM.Network.Messaging.AssociationMessenger.SendRequest(EvilDICOM.Network.Association, System.String[])
+  fullName.vb: EvilDICOM.Network.Messaging.AssociationMessenger.SendRequest(EvilDICOM.Network.Association, System.String())
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+    startLine: 40
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: public static void SendRequest(Association asc, params string[] abstractSyntaxes)
+    content.vb: Public Shared Sub SendRequest(asc As Association, ParamArray abstractSyntaxes As String())
+    parameters:
+    - id: asc
+      type: EvilDICOM.Network.Association
+    - id: abstractSyntaxes
+      type: System.String[]
+- uid: EvilDICOM.Network.Messaging.AssociationMessenger.SendReleaseRequest(EvilDICOM.Network.Association)
+  id: SendReleaseRequest(EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Messaging.AssociationMessenger
+  langs:
+  - csharp
+  - vb
+  name: SendReleaseRequest(Association)
+  fullName: EvilDICOM.Network.Messaging.AssociationMessenger.SendReleaseRequest(EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+    startLine: 62
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: public static void SendReleaseRequest(Association asc)
+    content.vb: Public Shared Sub SendReleaseRequest(asc As Association)
+    parameters:
+    - id: asc
+      type: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.Messaging.AssociationMessenger.SendReleaseResponse(EvilDICOM.Network.Association)
+  id: SendReleaseResponse(EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Messaging.AssociationMessenger
+  langs:
+  - csharp
+  - vb
+  name: SendReleaseResponse(Association)
+  fullName: EvilDICOM.Network.Messaging.AssociationMessenger.SendReleaseResponse(EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+    startLine: 75
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: public static void SendReleaseResponse(Association asc)
+    content.vb: Public Shared Sub SendReleaseResponse(asc As Association)
+    parameters:
+    - id: asc
+      type: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.Messaging.AssociationMessenger.SendAbort(EvilDICOM.Network.Association,EvilDICOM.Network.Enums.AbortSource,EvilDICOM.Network.Enums.AbortReason)
+  id: SendAbort(EvilDICOM.Network.Association,EvilDICOM.Network.Enums.AbortSource,EvilDICOM.Network.Enums.AbortReason)
+  parent: EvilDICOM.Network.Messaging.AssociationMessenger
+  langs:
+  - csharp
+  - vb
+  name: SendAbort(Association, AbortSource, AbortReason)
+  fullName: EvilDICOM.Network.Messaging.AssociationMessenger.SendAbort(EvilDICOM.Network.Association, EvilDICOM.Network.Enums.AbortSource, EvilDICOM.Network.Enums.AbortReason)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Messaging/AssociationMessenger.cs
+    startLine: 86
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: public static void SendAbort(Association asc, AbortSource abortSource = 2, AbortReason reason = 0)
+    content.vb: Public Shared Sub SendAbort(asc As Association, abortSource As AbortSource = 2, reason As AbortReason = 0)
+    parameters:
+    - id: asc
+      type: EvilDICOM.Network.Association
+    - id: abortSource
+      type: EvilDICOM.Network.Enums.AbortSource
+    - id: reason
+      type: EvilDICOM.Network.Enums.AbortReason
+references:
+- uid: EvilDICOM.Network.Messaging
+  isExternal: false
+  name: EvilDICOM.Network.Messaging
+  fullName: EvilDICOM.Network.Messaging
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Network.PDUs.Accept
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: Accept
+  fullName: EvilDICOM.Network.PDUs.Accept
+- uid: EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: EvilDICOM.Network.PDUs
+  fullName: EvilDICOM.Network.PDUs
+- uid: EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+- uid: System.String[]
+  isExternal: true
+  name: String[]
+  fullName: System.String[]
+  fullname.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    fullName: ()
+- uid: EvilDICOM.Network.Enums.AbortSource
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: AbortSource
+  fullName: EvilDICOM.Network.Enums.AbortSource
+- uid: EvilDICOM.Network.Enums.AbortReason
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: AbortReason
+  fullName: EvilDICOM.Network.Enums.AbortReason
+- uid: EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums

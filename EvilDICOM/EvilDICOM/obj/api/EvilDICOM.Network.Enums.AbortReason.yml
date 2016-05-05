@@ -1,0 +1,183 @@
+items:
+- uid: EvilDICOM.Network.Enums.AbortReason
+  id: AbortReason
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.AbortReason.INVALID_PDU_PARAMETER
+  - EvilDICOM.Network.Enums.AbortReason.REASON_NOT_SPECIFIED
+  - EvilDICOM.Network.Enums.AbortReason.RESERVED
+  - EvilDICOM.Network.Enums.AbortReason.UNEXPECTED_PDU
+  - EvilDICOM.Network.Enums.AbortReason.UNEXPECTED_PDU_PARAMETER
+  - EvilDICOM.Network.Enums.AbortReason.UNRECOGNIZED_PDU
+  - EvilDICOM.Network.Enums.AbortReason.UNRECOGNIZED_PDU_PARAMETER
+  langs:
+  - csharp
+  - vb
+  name: AbortReason
+  fullName: EvilDICOM.Network.Enums.AbortReason
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: 'public enum AbortReason : byte'
+    content.vb: Public Enum AbortReason As Byte
+- uid: EvilDICOM.Network.Enums.AbortReason.REASON_NOT_SPECIFIED
+  id: REASON_NOT_SPECIFIED
+  parent: EvilDICOM.Network.Enums.AbortReason
+  langs:
+  - csharp
+  - vb
+  name: REASON_NOT_SPECIFIED
+  fullName: EvilDICOM.Network.Enums.AbortReason.REASON_NOT_SPECIFIED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: REASON_NOT_SPECIFIED = 0
+- uid: EvilDICOM.Network.Enums.AbortReason.UNRECOGNIZED_PDU
+  id: UNRECOGNIZED_PDU
+  parent: EvilDICOM.Network.Enums.AbortReason
+  langs:
+  - csharp
+  - vb
+  name: UNRECOGNIZED_PDU
+  fullName: EvilDICOM.Network.Enums.AbortReason.UNRECOGNIZED_PDU
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: UNRECOGNIZED_PDU = 1
+- uid: EvilDICOM.Network.Enums.AbortReason.UNEXPECTED_PDU
+  id: UNEXPECTED_PDU
+  parent: EvilDICOM.Network.Enums.AbortReason
+  langs:
+  - csharp
+  - vb
+  name: UNEXPECTED_PDU
+  fullName: EvilDICOM.Network.Enums.AbortReason.UNEXPECTED_PDU
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: UNEXPECTED_PDU = 2
+- uid: EvilDICOM.Network.Enums.AbortReason.RESERVED
+  id: RESERVED
+  parent: EvilDICOM.Network.Enums.AbortReason
+  langs:
+  - csharp
+  - vb
+  name: RESERVED
+  fullName: EvilDICOM.Network.Enums.AbortReason.RESERVED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED = 3
+- uid: EvilDICOM.Network.Enums.AbortReason.UNRECOGNIZED_PDU_PARAMETER
+  id: UNRECOGNIZED_PDU_PARAMETER
+  parent: EvilDICOM.Network.Enums.AbortReason
+  langs:
+  - csharp
+  - vb
+  name: UNRECOGNIZED_PDU_PARAMETER
+  fullName: EvilDICOM.Network.Enums.AbortReason.UNRECOGNIZED_PDU_PARAMETER
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: UNRECOGNIZED_PDU_PARAMETER = 4
+- uid: EvilDICOM.Network.Enums.AbortReason.UNEXPECTED_PDU_PARAMETER
+  id: UNEXPECTED_PDU_PARAMETER
+  parent: EvilDICOM.Network.Enums.AbortReason
+  langs:
+  - csharp
+  - vb
+  name: UNEXPECTED_PDU_PARAMETER
+  fullName: EvilDICOM.Network.Enums.AbortReason.UNEXPECTED_PDU_PARAMETER
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: UNEXPECTED_PDU_PARAMETER = 5
+- uid: EvilDICOM.Network.Enums.AbortReason.INVALID_PDU_PARAMETER
+  id: INVALID_PDU_PARAMETER
+  parent: EvilDICOM.Network.Enums.AbortReason
+  langs:
+  - csharp
+  - vb
+  name: INVALID_PDU_PARAMETER
+  fullName: EvilDICOM.Network.Enums.AbortReason.INVALID_PDU_PARAMETER
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/Enums/AbortReason.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: INVALID_PDU_PARAMETER = 6
+references:
+- uid: EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums

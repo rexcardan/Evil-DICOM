@@ -1,0 +1,454 @@
+items:
+- uid: EvilDICOM.Core.IO.Writing.SequenceItemWriter
+  id: SequenceItemWriter
+  parent: EvilDICOM.Core.IO.Writing
+  children:
+  - EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,System.Collections.Generic.List{EvilDICOM.Core.DICOMObject})
+  - EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMWriteSettings,System.Collections.Generic.List{EvilDICOM.Core.DICOMObject})
+  langs:
+  - csharp
+  - vb
+  name: SequenceItemWriter
+  fullName: EvilDICOM.Core.IO.Writing.SequenceItemWriter
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public class SequenceItemWriter
+    content.vb: Public Class SequenceItemWriter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,System.Collections.Generic.List{EvilDICOM.Core.DICOMObject})
+  id: WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,System.Collections.Generic.List{EvilDICOM.Core.DICOMObject})
+  parent: EvilDICOM.Core.IO.Writing.SequenceItemWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteItemsLittleEndian(DICOMBinaryWriter, DICOMWriteSettings, List<DICOMObject>)
+  name.vb: WriteItemsLittleEndian(DICOMBinaryWriter, DICOMWriteSettings, List(Of DICOMObject))
+  fullName: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter, EvilDICOM.Core.IO.Writing.DICOMWriteSettings, System.Collections.Generic.List<EvilDICOM.Core.DICOMObject>)
+  fullName.vb: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter, EvilDICOM.Core.IO.Writing.DICOMWriteSettings, System.Collections.Generic.List(Of EvilDICOM.Core.DICOMObject))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static void WriteItemsLittleEndian(DICOMBinaryWriter dw, DICOMWriteSettings settings, List<DICOMObject> items)
+    content.vb: Public Shared Sub WriteItemsLittleEndian(dw As DICOMBinaryWriter, settings As DICOMWriteSettings, items As List(Of DICOMObject))
+    parameters:
+    - id: dw
+      type: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    - id: items
+      type: System.Collections.Generic.List{EvilDICOM.Core.DICOMObject}
+- uid: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMWriteSettings,System.Collections.Generic.List{EvilDICOM.Core.DICOMObject})
+  id: WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMWriteSettings,System.Collections.Generic.List{EvilDICOM.Core.DICOMObject})
+  parent: EvilDICOM.Core.IO.Writing.SequenceItemWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteItemsLittleEndian(DICOMWriteSettings, List<DICOMObject>)
+  name.vb: WriteItemsLittleEndian(DICOMWriteSettings, List(Of DICOMObject))
+  fullName: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMWriteSettings, System.Collections.Generic.List<EvilDICOM.Core.DICOMObject>)
+  fullName.vb: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMWriteSettings, System.Collections.Generic.List(Of EvilDICOM.Core.DICOMObject))
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static byte[] WriteItemsLittleEndian(DICOMWriteSettings settings, List<DICOMObject> items)
+    content.vb: Public Shared Function WriteItemsLittleEndian(settings As DICOMWriteSettings, items As List(Of DICOMObject)) As Byte()
+    parameters:
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    - id: items
+      type: System.Collections.Generic.List{EvilDICOM.Core.DICOMObject}
+    return:
+      type: System.Byte[]
+- uid: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.DICOMObject)
+  id: WriteItemLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.DICOMObject)
+  parent: EvilDICOM.Core.IO.Writing.SequenceItemWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteItemLittleEndian(DICOMBinaryWriter, DICOMWriteSettings, DICOMObject)
+  fullName: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter, EvilDICOM.Core.IO.Writing.DICOMWriteSettings, EvilDICOM.Core.DICOMObject)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+    startLine: 36
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static void WriteItemLittleEndian(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d)
+    content.vb: Public Shared Sub WriteItemLittleEndian(dw As DICOMBinaryWriter, settings As DICOMWriteSettings, d As DICOMObject)
+    parameters:
+    - id: dw
+      type: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    - id: d
+      type: EvilDICOM.Core.DICOMObject
+references:
+- uid: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: EvilDICOM.Core.IO.Writing
+  fullName: EvilDICOM.Core.IO.Writing
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  parent: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: DICOMBinaryWriter
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  parent: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: DICOMWriteSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+- uid: System.Collections.Generic.List{EvilDICOM.Core.DICOMObject}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<DICOMObject>
+  fullName: System.Collections.Generic.List<EvilDICOM.Core.DICOMObject>
+  fullname.vb: System.Collections.Generic.List(Of EvilDICOM.Core.DICOMObject)
+  name.vb: List(Of DICOMObject)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  parent: System.Collections.Generic
+  isExternal: true
+  name: List<T>
+  fullName: System.Collections.Generic.List<T>
+  fullname.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    fullName: <
+  - name: T
+    fullName: T
+  - name: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    fullName: '(Of '
+  - name: T
+    fullName: T
+  - name: )
+    fullName: )
+- uid: System.Collections.Generic
+  isExternal: false
+  name: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  fullName: System.Byte[]
+  fullname.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    fullName: ()
+- uid: EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  fullName: EvilDICOM.Core

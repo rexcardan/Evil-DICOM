@@ -1,0 +1,471 @@
+items:
+- uid: EvilDICOM.Network.PDUs.Reject
+  id: Reject
+  parent: EvilDICOM.Network.PDUs
+  children:
+  - EvilDICOM.Network.PDUs.Reject.Reason
+  - EvilDICOM.Network.PDUs.Reject.Result
+  - EvilDICOM.Network.PDUs.Reject.Source
+  - EvilDICOM.Network.PDUs.Reject.ToString
+  - EvilDICOM.Network.PDUs.Reject.Type
+  - EvilDICOM.Network.PDUs.Reject.Write
+  langs:
+  - csharp
+  - vb
+  name: Reject
+  fullName: EvilDICOM.Network.PDUs.Reject
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: 'public class Reject : IPDU'
+    content.vb: Public Class Reject Implements IPDU
+  inheritance:
+  - System.Object
+  implements:
+  - EvilDICOM.Network.Interfaces.IPDU
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Network.PDUs.Reject.Reason
+  id: Reason
+  parent: EvilDICOM.Network.PDUs.Reject
+  langs:
+  - csharp
+  - vb
+  name: Reason
+  fullName: EvilDICOM.Network.PDUs.Reject.Reason
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public byte Reason { get; set; }
+    content.vb: Public Property Reason As Byte
+    parameters: []
+    return:
+      type: System.Byte
+- uid: EvilDICOM.Network.PDUs.Reject.Source
+  id: Source
+  parent: EvilDICOM.Network.PDUs.Reject
+  langs:
+  - csharp
+  - vb
+  name: Source
+  fullName: EvilDICOM.Network.PDUs.Reject.Source
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public RejectSource Source { get; set; }
+    content.vb: Public Property Source As RejectSource
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.RejectSource
+- uid: EvilDICOM.Network.PDUs.Reject.Result
+  id: Result
+  parent: EvilDICOM.Network.PDUs.Reject
+  langs:
+  - csharp
+  - vb
+  name: Result
+  fullName: EvilDICOM.Network.PDUs.Reject.Result
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public RejectResult Result { get; set; }
+    content.vb: Public Property Result As RejectResult
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.RejectResult
+- uid: EvilDICOM.Network.PDUs.Reject.Write
+  id: Write
+  parent: EvilDICOM.Network.PDUs.Reject
+  langs:
+  - csharp
+  - vb
+  name: Write()
+  fullName: EvilDICOM.Network.PDUs.Reject.Write()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public byte[] Write()
+    content.vb: Public Function Write As Byte()
+    return:
+      type: System.Byte[]
+- uid: EvilDICOM.Network.PDUs.Reject.Type
+  id: Type
+  parent: EvilDICOM.Network.PDUs.Reject
+  langs:
+  - csharp
+  - vb
+  name: Type
+  fullName: EvilDICOM.Network.PDUs.Reject.Type
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+    startLine: 33
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public PDUType Type { get; }
+    content.vb: Public ReadOnly Property Type As PDUType
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+- uid: EvilDICOM.Network.PDUs.Reject.ToString
+  id: ToString
+  parent: EvilDICOM.Network.PDUs.Reject
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  fullName: EvilDICOM.Network.PDUs.Reject.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Network/PDUs/Reject.cs
+    startLine: 38
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public override string ToString()
+    content.vb: Public Overrides Function ToString As String
+    return:
+      type: System.String
+  overridden: System.Object.ToString
+references:
+- uid: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: EvilDICOM.Network.PDUs
+  fullName: EvilDICOM.Network.PDUs
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.Interfaces.IPDU
+  parent: EvilDICOM.Network.Interfaces
+  isExternal: false
+  name: IPDU
+  fullName: EvilDICOM.Network.Interfaces.IPDU
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Network.Interfaces
+  isExternal: false
+  name: EvilDICOM.Network.Interfaces
+  fullName: EvilDICOM.Network.Interfaces
+- uid: System.Byte
+  parent: System
+  isExternal: true
+  name: Byte
+  fullName: System.Byte
+- uid: EvilDICOM.Network.Enums.RejectSource
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: RejectSource
+  fullName: EvilDICOM.Network.Enums.RejectSource
+- uid: EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.Enums.RejectResult
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: RejectResult
+  fullName: EvilDICOM.Network.Enums.RejectResult
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  fullName: System.Byte[]
+  fullname.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    fullName: ()
+- uid: EvilDICOM.Network.Enums.PDUType
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: PDUType
+  fullName: EvilDICOM.Network.Enums.PDUType
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.String
+  parent: System
+  isExternal: true
+  name: String
+  fullName: System.String

@@ -28,7 +28,8 @@ namespace EvilDICOM.Network.Messaging
                 asc.Logger.Log("--> DIMSE" + dimse.GetLogString());
                 dimse.LogData(asc);
                 var stream = asc.Stream;
-                List<PDataTF> pds = GetPDataTFs(dimse, asc, pContext);
+                pContext = pContext ?? asc.PresentationContexts.First(a => a.AbstractSyntax == dimse.AffectedSOPClassUID);
+                List<PDataTF> pds = GetPDataTFs(dimse, pContext, asc.UserInfo.MaxPDULength);
                 if (pds.Count > 0 && stream.CanWrite)
                 {
                     foreach (PDataTF pd in pds)
@@ -40,9 +41,8 @@ namespace EvilDICOM.Network.Messaging
             }
         }
 
-        public static List<PDataTF> GetPDataTFs(AbstractDIMSEBase dimse, Association asc, PresentationContext pContext = null)
+        public static List<PDataTF> GetPDataTFs(AbstractDIMSEBase dimse, PresentationContext pContext, int maxPDULength = 16384)
         {
-            pContext = pContext ?? asc.PresentationContexts.First(a => a.AbstractSyntax == dimse.AffectedSOPClassUID);
             var list = new List<PDataTF>();
             var commandEls = dimse.Elements;
             list.Add(new PDataTF(new DICOMObject(dimse.Elements), true, true, pContext));
@@ -50,12 +50,9 @@ namespace EvilDICOM.Network.Messaging
             var dataDIMSE = dimse as AbstractDIMSE;
             if (dataDIMSE != null && dataDIMSE.Data != null)
             {
-                List<byte[]> chunks = GetChunks(dataDIMSE.Data, asc.UserInfo.MaxPDULength, asc);
+                List<byte[]> chunks = GetChunks(dataDIMSE.Data, maxPDULength, pContext);
                 chunks
-                    .Select(
-                        (c, i) =>
-                            new PDataTF(c, i == chunks.Count - 1, false,
-                                asc.PresentationContexts.First(a => a.AbstractSyntax == dimse.AffectedSOPClassUID)))
+                    .Select( (c, i) => new PDataTF(c, i == chunks.Count - 1, false, pContext))
                     .ToList()
                     .ForEach(list.Add);
             }
@@ -70,18 +67,18 @@ namespace EvilDICOM.Network.Messaging
         /// <param name="maxPduSize">the max length (in bytes) for a PDU</param>
         /// <param name="asc">the association that the file will be sent</param>
         /// <returns></returns>
-        private static List<byte[]> GetChunks(DICOMObject dicomObject, int maxPduSize, Association asc)
+        private static List<byte[]> GetChunks(DICOMObject dicomObject, int maxPduSize, PresentationContext pc)
         {
             byte[] dicomBytes;
             using (var stream = new MemoryStream())
             {
                 using (var dw = new DICOMBinaryWriter(stream))
                 {
+                    var tx = TransferSyntaxHelper.GetSyntax(pc.TransferSyntaxes.First());
                     DICOMObjectWriter.Write(dw,
                         new DICOMWriteSettings
                         {
-                            TransferSyntax =
-                                TransferSyntaxHelper.GetSyntax(asc.PresentationContexts.First().TransferSyntaxes.First()),
+                            TransferSyntax =tx,
                             DoWriteIndefiniteSequences = false
                         }, dicomObject);
                     dicomBytes = stream.ToArray();

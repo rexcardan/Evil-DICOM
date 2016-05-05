@@ -1,0 +1,441 @@
+items:
+- uid: EvilDICOM.Core.Logging.EvilLogger
+  id: EvilLogger
+  parent: EvilDICOM.Core.Logging
+  children:
+  - EvilDICOM.Core.Logging.EvilLogger.Instance
+  langs:
+  - csharp
+  - vb
+  name: EvilLogger
+  fullName: EvilDICOM.Core.Logging.EvilLogger
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Logging/EvilLogger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Logging/EvilLogger.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Logging
+  summary: >-
+    The singleton instance of a logging system for the core Evil DICOM operations. Can subscribe, to
+
+    see this stream
+  example: []
+  syntax:
+    content: 'public sealed class EvilLogger : EventLogger'
+    content.vb: Public NotInheritable Class EvilLogger Inherits EventLogger
+  inheritance:
+  - System.Object
+  - EvilDICOM.Core.Logging.EventLogger
+  inheritedMembers:
+  - EvilDICOM.Core.Logging.EventLogger.LogRequested
+  - EvilDICOM.Core.Logging.EventLogger.Log(System.String,System.Object[])
+  - EvilDICOM.Core.Logging.EventLogger.Log(System.Object)
+  - EvilDICOM.Core.Logging.EventLogger.Log(System.String,EvilDICOM.Core.Enums.LogPriority,System.Object[])
+  - System.Object.ToString
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+- uid: EvilDICOM.Core.Logging.EvilLogger.Instance
+  id: Instance
+  parent: EvilDICOM.Core.Logging.EvilLogger
+  langs:
+  - csharp
+  - vb
+  name: Instance
+  fullName: EvilDICOM.Core.Logging.EvilLogger.Instance
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Logging/EvilLogger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    path: EvilDICOM/EvilDICOM/Core/Logging/EvilLogger.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Logging
+  syntax:
+    content: public static EvilLogger Instance { get; }
+    content.vb: Public Shared ReadOnly Property Instance As EvilLogger
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Logging.EvilLogger
+references:
+- uid: EvilDICOM.Core.Logging
+  isExternal: false
+  name: EvilDICOM.Core.Logging
+  fullName: EvilDICOM.Core.Logging
+- uid: System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Logging.EventLogger
+  parent: EvilDICOM.Core.Logging
+  isExternal: false
+  name: EventLogger
+  fullName: EvilDICOM.Core.Logging.EventLogger
+- uid: EvilDICOM.Core.Logging.EventLogger.LogRequested
+  parent: EvilDICOM.Core.Logging.EventLogger
+  isExternal: false
+  name: LogRequested
+  fullName: EvilDICOM.Core.Logging.EventLogger.LogRequested
+- uid: EvilDICOM.Core.Logging.EventLogger.Log(System.String,System.Object[])
+  parent: EvilDICOM.Core.Logging.EventLogger
+  isExternal: true
+  name: Log(String, Object[])
+  fullName: EvilDICOM.Core.Logging.EventLogger.Log(System.String, System.Object[])
+  fullname.vb: EvilDICOM.Core.Logging.EventLogger.Log(System.String, System.Object())
+  name.vb: Log(String, Object())
+  spec.csharp:
+  - uid: EvilDICOM.Core.Logging.EventLogger.Log(System.String,System.Object[])
+    name: Log
+    fullName: EvilDICOM.Core.Logging.EventLogger.Log
+  - name: (
+    fullName: (
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Logging.EventLogger.Log(System.String,System.Object[])
+    name: Log
+    fullName: EvilDICOM.Core.Logging.EventLogger.Log
+  - name: (
+    fullName: (
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    fullName: ()
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Logging.EventLogger.Log(System.Object)
+  parent: EvilDICOM.Core.Logging.EventLogger
+  isExternal: true
+  name: Log(Object)
+  fullName: EvilDICOM.Core.Logging.EventLogger.Log(System.Object)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Logging.EventLogger.Log(System.Object)
+    name: Log
+    fullName: EvilDICOM.Core.Logging.EventLogger.Log
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Logging.EventLogger.Log(System.Object)
+    name: Log
+    fullName: EvilDICOM.Core.Logging.EventLogger.Log
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: EvilDICOM.Core.Logging.EventLogger.Log(System.String,EvilDICOM.Core.Enums.LogPriority,System.Object[])
+  parent: EvilDICOM.Core.Logging.EventLogger
+  isExternal: true
+  name: Log(String, LogPriority, Object[])
+  fullName: EvilDICOM.Core.Logging.EventLogger.Log(System.String, EvilDICOM.Core.Enums.LogPriority, System.Object[])
+  fullname.vb: EvilDICOM.Core.Logging.EventLogger.Log(System.String, EvilDICOM.Core.Enums.LogPriority, System.Object())
+  name.vb: Log(String, LogPriority, Object())
+  spec.csharp:
+  - uid: EvilDICOM.Core.Logging.EventLogger.Log(System.String,EvilDICOM.Core.Enums.LogPriority,System.Object[])
+    name: Log
+    fullName: EvilDICOM.Core.Logging.EventLogger.Log
+  - name: (
+    fullName: (
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Core.Enums.LogPriority
+    name: LogPriority
+    fullName: EvilDICOM.Core.Enums.LogPriority
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: '[]'
+    fullName: '[]'
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Logging.EventLogger.Log(System.String,EvilDICOM.Core.Enums.LogPriority,System.Object[])
+    name: Log
+    fullName: EvilDICOM.Core.Logging.EventLogger.Log
+  - name: (
+    fullName: (
+  - uid: System.String
+    name: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Core.Enums.LogPriority
+    name: LogPriority
+    fullName: EvilDICOM.Core.Enums.LogPriority
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ()
+    fullName: ()
+  - name: )
+    fullName: )
+- uid: System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    fullName: (
+  - name: )
+    fullName: )
+- uid: System
+  isExternal: false
+  name: System
+  fullName: System
+- uid: EvilDICOM.Core.Logging.EvilLogger
+  parent: EvilDICOM.Core.Logging
+  isExternal: false
+  name: EvilLogger
+  fullName: EvilDICOM.Core.Logging.EvilLogger
