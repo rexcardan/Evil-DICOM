@@ -7,11 +7,19 @@ namespace EvilDICOM.Core
     /// </summary>
     public class DICOMForge
     {
+        /// <summary>
+        /// Gets the command length to end retired.
+        /// </summary>
+        /// <value>The command length to end retired.</value>
         public static UnsignedLong CommandLengthToEndRetired
         {
             get { return new UnsignedLong {Tag = new Tag("00000001")}; }
         }
 
+        /// <summary>
+        /// Gets the affected sop class uid.
+        /// </summary>
+        /// <value>The affected sop class uid.</value>
         public static UniqueIdentifier AffectedSOPClassUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00000002")}; }
