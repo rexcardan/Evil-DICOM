@@ -2221,1246 +2221,2242 @@ namespace EvilDICOM.Core
             get { return new Sequence {Tag = new Tag("00100101")}; }
         }
 
+        /// <summary>
+        /// Gets the patient primary language modifier code sequence.
+        /// </summary>
+        /// <value>The patient primary language modifier code sequence.</value>
         public static Sequence PatientPrimaryLanguageModifierCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00100102")}; }
         }
 
+        /// <summary>
+        /// Gets the other patient i ds.
+        /// </summary>
+        /// <value>The other patient i ds.</value>
         public static LongString OtherPatientIDs
         {
             get { return new LongString {Tag = new Tag("00101000")}; }
         }
 
+        /// <summary>
+        /// Gets the other patient names.
+        /// </summary>
+        /// <value>The other patient names.</value>
         public static PersonName OtherPatientNames
         {
             get { return new PersonName {Tag = new Tag("00101001")}; }
         }
 
+        /// <summary>
+        /// Gets the other patient i ds sequence.
+        /// </summary>
+        /// <value>The other patient i ds sequence.</value>
         public static Sequence OtherPatientIDsSequence
         {
             get { return new Sequence {Tag = new Tag("00101002")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the patient birth.
+        /// </summary>
+        /// <value>The name of the patient birth.</value>
         public static PersonName PatientBirthName
         {
             get { return new PersonName {Tag = new Tag("00101005")}; }
         }
 
+        /// <summary>
+        /// Gets the patient age.
+        /// </summary>
+        /// <value>The patient age.</value>
         public static AgeString PatientAge
         {
             get { return new AgeString {Tag = new Tag("00101010")}; }
         }
 
+        /// <summary>
+        /// Gets the size of the patient.
+        /// </summary>
+        /// <value>The size of the patient.</value>
         public static DecimalString PatientSize
         {
             get { return new DecimalString {Tag = new Tag("00101020")}; }
         }
 
+        /// <summary>
+        /// Gets the patient size code sequence.
+        /// </summary>
+        /// <value>The patient size code sequence.</value>
         public static Sequence PatientSizeCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00101021")}; }
         }
 
+        /// <summary>
+        /// Gets the patient weight.
+        /// </summary>
+        /// <value>The patient weight.</value>
         public static DecimalString PatientWeight
         {
             get { return new DecimalString {Tag = new Tag("00101030")}; }
         }
 
+        /// <summary>
+        /// Gets the patient address.
+        /// </summary>
+        /// <value>The patient address.</value>
         public static LongString PatientAddress
         {
             get { return new LongString {Tag = new Tag("00101040")}; }
         }
 
+        /// <summary>
+        /// Gets the insurance plan identification retired.
+        /// </summary>
+        /// <value>The insurance plan identification retired.</value>
         public static LongString InsurancePlanIdentificationRetired
         {
             get { return new LongString {Tag = new Tag("00101050")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the patient mother birth.
+        /// </summary>
+        /// <value>The name of the patient mother birth.</value>
         public static PersonName PatientMotherBirthName
         {
             get { return new PersonName {Tag = new Tag("00101060")}; }
         }
 
+        /// <summary>
+        /// Gets the military rank.
+        /// </summary>
+        /// <value>The military rank.</value>
         public static LongString MilitaryRank
         {
             get { return new LongString {Tag = new Tag("00101080")}; }
         }
 
+        /// <summary>
+        /// Gets the branch of service.
+        /// </summary>
+        /// <value>The branch of service.</value>
         public static LongString BranchOfService
         {
             get { return new LongString {Tag = new Tag("00101081")}; }
         }
 
+        /// <summary>
+        /// Gets the medical record locator.
+        /// </summary>
+        /// <value>The medical record locator.</value>
         public static LongString MedicalRecordLocator
         {
             get { return new LongString {Tag = new Tag("00101090")}; }
         }
 
+        /// <summary>
+        /// Gets the medical alerts.
+        /// </summary>
+        /// <value>The medical alerts.</value>
         public static LongString MedicalAlerts
         {
             get { return new LongString {Tag = new Tag("00102000")}; }
         }
 
+        /// <summary>
+        /// Gets the allergies.
+        /// </summary>
+        /// <value>The allergies.</value>
         public static LongString Allergies
         {
             get { return new LongString {Tag = new Tag("00102110")}; }
         }
 
+        /// <summary>
+        /// Gets the country of residence.
+        /// </summary>
+        /// <value>The country of residence.</value>
         public static LongString CountryOfResidence
         {
             get { return new LongString {Tag = new Tag("00102150")}; }
         }
 
+        /// <summary>
+        /// Gets the region of residence.
+        /// </summary>
+        /// <value>The region of residence.</value>
         public static LongString RegionOfResidence
         {
             get { return new LongString {Tag = new Tag("00102152")}; }
         }
 
+        /// <summary>
+        /// Gets the patient telephone numbers.
+        /// </summary>
+        /// <value>The patient telephone numbers.</value>
         public static ShortString PatientTelephoneNumbers
         {
             get { return new ShortString {Tag = new Tag("00102154")}; }
         }
 
+        /// <summary>
+        /// Gets the ethnic group.
+        /// </summary>
+        /// <value>The ethnic group.</value>
         public static ShortString EthnicGroup
         {
             get { return new ShortString {Tag = new Tag("00102160")}; }
         }
 
+        /// <summary>
+        /// Gets the occupation.
+        /// </summary>
+        /// <value>The occupation.</value>
         public static ShortString Occupation
         {
             get { return new ShortString {Tag = new Tag("00102180")}; }
         }
 
+        /// <summary>
+        /// Gets the smoking status.
+        /// </summary>
+        /// <value>The smoking status.</value>
         public static CodeString SmokingStatus
         {
             get { return new CodeString {Tag = new Tag("001021A0")}; }
         }
 
+        /// <summary>
+        /// Gets the additional patient history.
+        /// </summary>
+        /// <value>The additional patient history.</value>
         public static LongText AdditionalPatientHistory
         {
             get { return new LongText {Tag = new Tag("001021B0")}; }
         }
 
+        /// <summary>
+        /// Gets the pregnancy status.
+        /// </summary>
+        /// <value>The pregnancy status.</value>
         public static UnsignedShort PregnancyStatus
         {
             get { return new UnsignedShort {Tag = new Tag("001021C0")}; }
         }
 
+        /// <summary>
+        /// Gets the last menstrual date.
+        /// </summary>
+        /// <value>The last menstrual date.</value>
         public static Date LastMenstrualDate
         {
             get { return new Date {Tag = new Tag("001021D0")}; }
         }
 
+        /// <summary>
+        /// Gets the patient religious preference.
+        /// </summary>
+        /// <value>The patient religious preference.</value>
         public static LongString PatientReligiousPreference
         {
             get { return new LongString {Tag = new Tag("001021F0")}; }
         }
 
+        /// <summary>
+        /// Gets the patient species description.
+        /// </summary>
+        /// <value>The patient species description.</value>
         public static LongString PatientSpeciesDescription
         {
             get { return new LongString {Tag = new Tag("00102201")}; }
         }
 
+        /// <summary>
+        /// Gets the patient species code sequence.
+        /// </summary>
+        /// <value>The patient species code sequence.</value>
         public static Sequence PatientSpeciesCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00102202")}; }
         }
 
+        /// <summary>
+        /// Gets the patient sex neutered.
+        /// </summary>
+        /// <value>The patient sex neutered.</value>
         public static CodeString PatientSexNeutered
         {
             get { return new CodeString {Tag = new Tag("00102203")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the anatomical orientation.
+        /// </summary>
+        /// <value>The type of the anatomical orientation.</value>
         public static CodeString AnatomicalOrientationType
         {
             get { return new CodeString {Tag = new Tag("00102210")}; }
         }
 
+        /// <summary>
+        /// Gets the patient breed description.
+        /// </summary>
+        /// <value>The patient breed description.</value>
         public static LongString PatientBreedDescription
         {
             get { return new LongString {Tag = new Tag("00102292")}; }
         }
 
+        /// <summary>
+        /// Gets the patient breed code sequence.
+        /// </summary>
+        /// <value>The patient breed code sequence.</value>
         public static Sequence PatientBreedCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00102293")}; }
         }
 
+        /// <summary>
+        /// Gets the breed registration sequence.
+        /// </summary>
+        /// <value>The breed registration sequence.</value>
         public static Sequence BreedRegistrationSequence
         {
             get { return new Sequence {Tag = new Tag("00102294")}; }
         }
 
+        /// <summary>
+        /// Gets the breed registration number.
+        /// </summary>
+        /// <value>The breed registration number.</value>
         public static LongString BreedRegistrationNumber
         {
             get { return new LongString {Tag = new Tag("00102295")}; }
         }
 
+        /// <summary>
+        /// Gets the breed registry code sequence.
+        /// </summary>
+        /// <value>The breed registry code sequence.</value>
         public static Sequence BreedRegistryCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00102296")}; }
         }
 
+        /// <summary>
+        /// Gets the responsible person.
+        /// </summary>
+        /// <value>The responsible person.</value>
         public static PersonName ResponsiblePerson
         {
             get { return new PersonName {Tag = new Tag("00102297")}; }
         }
 
+        /// <summary>
+        /// Gets the responsible person role.
+        /// </summary>
+        /// <value>The responsible person role.</value>
         public static CodeString ResponsiblePersonRole
         {
             get { return new CodeString {Tag = new Tag("00102298")}; }
         }
 
+        /// <summary>
+        /// Gets the responsible organization.
+        /// </summary>
+        /// <value>The responsible organization.</value>
         public static LongString ResponsibleOrganization
         {
             get { return new LongString {Tag = new Tag("00102299")}; }
         }
 
+        /// <summary>
+        /// Gets the patient comments.
+        /// </summary>
+        /// <value>The patient comments.</value>
         public static LongText PatientComments
         {
             get { return new LongText {Tag = new Tag("00104000")}; }
         }
 
+        /// <summary>
+        /// Gets the examined body thickness.
+        /// </summary>
+        /// <value>The examined body thickness.</value>
         public static FloatingPointSingle ExaminedBodyThickness
         {
             get { return new FloatingPointSingle {Tag = new Tag("00109431")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the clinical trial sponsor.
+        /// </summary>
+        /// <value>The name of the clinical trial sponsor.</value>
         public static LongString ClinicalTrialSponsorName
         {
             get { return new LongString {Tag = new Tag("00120010")}; }
         }
 
+        /// <summary>
+        /// Gets the clinical trial protocol identifier.
+        /// </summary>
+        /// <value>The clinical trial protocol identifier.</value>
         public static LongString ClinicalTrialProtocolID
         {
             get { return new LongString {Tag = new Tag("00120020")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the clinical trial protocol.
+        /// </summary>
+        /// <value>The name of the clinical trial protocol.</value>
         public static LongString ClinicalTrialProtocolName
         {
             get { return new LongString {Tag = new Tag("00120021")}; }
         }
 
+        /// <summary>
+        /// Gets the clinical trial site identifier.
+        /// </summary>
+        /// <value>The clinical trial site identifier.</value>
         public static LongString ClinicalTrialSiteID
         {
             get { return new LongString {Tag = new Tag("00120030")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the clinical trial site.
+        /// </summary>
+        /// <value>The name of the clinical trial site.</value>
         public static LongString ClinicalTrialSiteName
         {
             get { return new LongString {Tag = new Tag("00120031")}; }
         }
 
+        /// <summary>
+        /// Gets the clinical trial subject identifier.
+        /// </summary>
+        /// <value>The clinical trial subject identifier.</value>
         public static LongString ClinicalTrialSubjectID
         {
             get { return new LongString {Tag = new Tag("00120040")}; }
         }
 
+        /// <summary>
+        /// Gets the clinical trial subject reading identifier.
+        /// </summary>
+        /// <value>The clinical trial subject reading identifier.</value>
         public static LongString ClinicalTrialSubjectReadingID
         {
             get { return new LongString {Tag = new Tag("00120042")}; }
         }
 
+        /// <summary>
+        /// Gets the clinical trial time point identifier.
+        /// </summary>
+        /// <value>The clinical trial time point identifier.</value>
         public static LongString ClinicalTrialTimePointID
         {
             get { return new LongString {Tag = new Tag("00120050")}; }
         }
 
+        /// <summary>
+        /// Gets the clinical trial time point description.
+        /// </summary>
+        /// <value>The clinical trial time point description.</value>
         public static ShortText ClinicalTrialTimePointDescription
         {
             get { return new ShortText {Tag = new Tag("00120051")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the clinical trial coordinating center.
+        /// </summary>
+        /// <value>The name of the clinical trial coordinating center.</value>
         public static LongString ClinicalTrialCoordinatingCenterName
         {
             get { return new LongString {Tag = new Tag("00120060")}; }
         }
 
+        /// <summary>
+        /// Gets the patient identity removed.
+        /// </summary>
+        /// <value>The patient identity removed.</value>
         public static CodeString PatientIdentityRemoved
         {
             get { return new CodeString {Tag = new Tag("00120062")}; }
         }
 
+        /// <summary>
+        /// Gets the deidentification method.
+        /// </summary>
+        /// <value>The deidentification method.</value>
         public static LongString DeidentificationMethod
         {
             get { return new LongString {Tag = new Tag("00120063")}; }
         }
 
+        /// <summary>
+        /// Gets the deidentification method code sequence.
+        /// </summary>
+        /// <value>The deidentification method code sequence.</value>
         public static Sequence DeidentificationMethodCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00120064")}; }
         }
 
+        /// <summary>
+        /// Gets the clinical trial series identifier.
+        /// </summary>
+        /// <value>The clinical trial series identifier.</value>
         public static LongString ClinicalTrialSeriesID
         {
             get { return new LongString {Tag = new Tag("00120071")}; }
         }
 
+        /// <summary>
+        /// Gets the clinical trial series description.
+        /// </summary>
+        /// <value>The clinical trial series description.</value>
         public static LongString ClinicalTrialSeriesDescription
         {
             get { return new LongString {Tag = new Tag("00120072")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the clinical trial protocol ethics committee.
+        /// </summary>
+        /// <value>The name of the clinical trial protocol ethics committee.</value>
         public static LongString ClinicalTrialProtocolEthicsCommitteeName
         {
             get { return new LongString {Tag = new Tag("00120081")}; }
         }
 
+        /// <summary>
+        /// Gets the clinical trial protocol ethics committee approval number.
+        /// </summary>
+        /// <value>The clinical trial protocol ethics committee approval number.</value>
         public static LongString ClinicalTrialProtocolEthicsCommitteeApprovalNumber
         {
             get { return new LongString {Tag = new Tag("00120082")}; }
         }
 
+        /// <summary>
+        /// Gets the consent for clinical trial use sequence.
+        /// </summary>
+        /// <value>The consent for clinical trial use sequence.</value>
         public static Sequence ConsentForClinicalTrialUseSequence
         {
             get { return new Sequence {Tag = new Tag("00120083")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the distribution.
+        /// </summary>
+        /// <value>The type of the distribution.</value>
         public static CodeString DistributionType
         {
             get { return new CodeString {Tag = new Tag("00120084")}; }
         }
 
+        /// <summary>
+        /// Gets the consent for distribution flag.
+        /// </summary>
+        /// <value>The consent for distribution flag.</value>
         public static CodeString ConsentForDistributionFlag
         {
             get { return new CodeString {Tag = new Tag("00120085")}; }
         }
 
+        /// <summary>
+        /// Gets the cad file format.
+        /// </summary>
+        /// <value>The cad file format.</value>
         public static ShortText CADFileFormat
         {
             get { return new ShortText {Tag = new Tag("00140023")}; }
         }
 
+        /// <summary>
+        /// Gets the component reference system.
+        /// </summary>
+        /// <value>The component reference system.</value>
         public static ShortText ComponentReferenceSystem
         {
             get { return new ShortText {Tag = new Tag("00140024")}; }
         }
 
+        /// <summary>
+        /// Gets the component manufacturing procedure.
+        /// </summary>
+        /// <value>The component manufacturing procedure.</value>
         public static ShortText ComponentManufacturingProcedure
         {
             get { return new ShortText {Tag = new Tag("00140025")}; }
         }
 
+        /// <summary>
+        /// Gets the component manufacturer.
+        /// </summary>
+        /// <value>The component manufacturer.</value>
         public static ShortText ComponentManufacturer
         {
             get { return new ShortText {Tag = new Tag("00140028")}; }
         }
 
+        /// <summary>
+        /// Gets the material thickness.
+        /// </summary>
+        /// <value>The material thickness.</value>
         public static DecimalString MaterialThickness
         {
             get { return new DecimalString {Tag = new Tag("00140030")}; }
         }
 
+        /// <summary>
+        /// Gets the material pipe diameter.
+        /// </summary>
+        /// <value>The material pipe diameter.</value>
         public static DecimalString MaterialPipeDiameter
         {
             get { return new DecimalString {Tag = new Tag("00140032")}; }
         }
 
+        /// <summary>
+        /// Gets the material isolation diameter.
+        /// </summary>
+        /// <value>The material isolation diameter.</value>
         public static DecimalString MaterialIsolationDiameter
         {
             get { return new DecimalString {Tag = new Tag("00140034")}; }
         }
 
+        /// <summary>
+        /// Gets the material grade.
+        /// </summary>
+        /// <value>The material grade.</value>
         public static ShortText MaterialGrade
         {
             get { return new ShortText {Tag = new Tag("00140042")}; }
         }
 
+        /// <summary>
+        /// Gets the material properties file identifier.
+        /// </summary>
+        /// <value>The material properties file identifier.</value>
         public static ShortText MaterialPropertiesFileID
         {
             get { return new ShortText {Tag = new Tag("00140044")}; }
         }
 
+        /// <summary>
+        /// Gets the material properties file format.
+        /// </summary>
+        /// <value>The material properties file format.</value>
         public static ShortText MaterialPropertiesFileFormat
         {
             get { return new ShortText {Tag = new Tag("00140045")}; }
         }
 
+        /// <summary>
+        /// Gets the material notes.
+        /// </summary>
+        /// <value>The material notes.</value>
         public static LongText MaterialNotes
         {
             get { return new LongText {Tag = new Tag("00140046")}; }
         }
 
+        /// <summary>
+        /// Gets the component shape.
+        /// </summary>
+        /// <value>The component shape.</value>
         public static CodeString ComponentShape
         {
             get { return new CodeString {Tag = new Tag("00140050")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the curvature.
+        /// </summary>
+        /// <value>The type of the curvature.</value>
         public static CodeString CurvatureType
         {
             get { return new CodeString {Tag = new Tag("00140052")}; }
         }
 
+        /// <summary>
+        /// Gets the outer diameter.
+        /// </summary>
+        /// <value>The outer diameter.</value>
         public static DecimalString OuterDiameter
         {
             get { return new DecimalString {Tag = new Tag("00140054")}; }
         }
 
+        /// <summary>
+        /// Gets the inner diameter.
+        /// </summary>
+        /// <value>The inner diameter.</value>
         public static DecimalString InnerDiameter
         {
             get { return new DecimalString {Tag = new Tag("00140056")}; }
         }
 
+        /// <summary>
+        /// Gets the actual environmental conditions.
+        /// </summary>
+        /// <value>The actual environmental conditions.</value>
         public static ShortText ActualEnvironmentalConditions
         {
             get { return new ShortText {Tag = new Tag("00141010")}; }
         }
 
+        /// <summary>
+        /// Gets the expiry date.
+        /// </summary>
+        /// <value>The expiry date.</value>
         public static Date ExpiryDate
         {
             get { return new Date {Tag = new Tag("00141020")}; }
         }
 
+        /// <summary>
+        /// Gets the environmental conditions.
+        /// </summary>
+        /// <value>The environmental conditions.</value>
         public static ShortText EnvironmentalConditions
         {
             get { return new ShortText {Tag = new Tag("00141040")}; }
         }
 
+        /// <summary>
+        /// Gets the evaluator sequence.
+        /// </summary>
+        /// <value>The evaluator sequence.</value>
         public static Sequence EvaluatorSequence
         {
             get { return new Sequence {Tag = new Tag("00142002")}; }
         }
 
+        /// <summary>
+        /// Gets the evaluator number.
+        /// </summary>
+        /// <value>The evaluator number.</value>
         public static IntegerString EvaluatorNumber
         {
             get { return new IntegerString {Tag = new Tag("00142004")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the evaluator.
+        /// </summary>
+        /// <value>The name of the evaluator.</value>
         public static PersonName EvaluatorName
         {
             get { return new PersonName {Tag = new Tag("00142006")}; }
         }
 
+        /// <summary>
+        /// Gets the evaluation attempt.
+        /// </summary>
+        /// <value>The evaluation attempt.</value>
         public static IntegerString EvaluationAttempt
         {
             get { return new IntegerString {Tag = new Tag("00142008")}; }
         }
 
+        /// <summary>
+        /// Gets the indication sequence.
+        /// </summary>
+        /// <value>The indication sequence.</value>
         public static Sequence IndicationSequence
         {
             get { return new Sequence {Tag = new Tag("00142012")}; }
         }
 
+        /// <summary>
+        /// Gets the indication number.
+        /// </summary>
+        /// <value>The indication number.</value>
         public static IntegerString IndicationNumber
         {
             get { return new IntegerString {Tag = new Tag("00142014")}; }
         }
 
+        /// <summary>
+        /// Gets the indication label.
+        /// </summary>
+        /// <value>The indication label.</value>
         public static ShortString IndicationLabel
         {
             get { return new ShortString {Tag = new Tag("00142016")}; }
         }
 
+        /// <summary>
+        /// Gets the indication description.
+        /// </summary>
+        /// <value>The indication description.</value>
         public static ShortText IndicationDescription
         {
             get { return new ShortText {Tag = new Tag("00142018")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the indication.
+        /// </summary>
+        /// <value>The type of the indication.</value>
         public static CodeString IndicationType
         {
             get { return new CodeString {Tag = new Tag("0014201A")}; }
         }
 
+        /// <summary>
+        /// Gets the indication disposition.
+        /// </summary>
+        /// <value>The indication disposition.</value>
         public static CodeString IndicationDisposition
         {
             get { return new CodeString {Tag = new Tag("0014201C")}; }
         }
 
+        /// <summary>
+        /// Gets the indication roi sequence.
+        /// </summary>
+        /// <value>The indication roi sequence.</value>
         public static Sequence IndicationROISequence
         {
             get { return new Sequence {Tag = new Tag("0014201E")}; }
         }
 
+        /// <summary>
+        /// Gets the indication physical property sequence.
+        /// </summary>
+        /// <value>The indication physical property sequence.</value>
         public static Sequence IndicationPhysicalPropertySequence
         {
             get { return new Sequence {Tag = new Tag("00142030")}; }
         }
 
+        /// <summary>
+        /// Gets the property label.
+        /// </summary>
+        /// <value>The property label.</value>
         public static ShortString PropertyLabel
         {
             get { return new ShortString {Tag = new Tag("00142032")}; }
         }
 
+        /// <summary>
+        /// Gets the coordinate system number of axes.
+        /// </summary>
+        /// <value>The coordinate system number of axes.</value>
         public static IntegerString CoordinateSystemNumberOfAxes
         {
             get { return new IntegerString {Tag = new Tag("00142202")}; }
         }
 
+        /// <summary>
+        /// Gets the coordinate system axes sequence.
+        /// </summary>
+        /// <value>The coordinate system axes sequence.</value>
         public static Sequence CoordinateSystemAxesSequence
         {
             get { return new Sequence {Tag = new Tag("00142204")}; }
         }
 
+        /// <summary>
+        /// Gets the coordinate system axis description.
+        /// </summary>
+        /// <value>The coordinate system axis description.</value>
         public static ShortText CoordinateSystemAxisDescription
         {
             get { return new ShortText {Tag = new Tag("00142206")}; }
         }
 
+        /// <summary>
+        /// Gets the coordinate system data set mapping.
+        /// </summary>
+        /// <value>The coordinate system data set mapping.</value>
         public static CodeString CoordinateSystemDataSetMapping
         {
             get { return new CodeString {Tag = new Tag("00142208")}; }
         }
 
+        /// <summary>
+        /// Gets the coordinate system axis number.
+        /// </summary>
+        /// <value>The coordinate system axis number.</value>
         public static IntegerString CoordinateSystemAxisNumber
         {
             get { return new IntegerString {Tag = new Tag("0014220A")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the coordinate system axis.
+        /// </summary>
+        /// <value>The type of the coordinate system axis.</value>
         public static CodeString CoordinateSystemAxisType
         {
             get { return new CodeString {Tag = new Tag("0014220C")}; }
         }
 
+        /// <summary>
+        /// Gets the coordinate system axis units.
+        /// </summary>
+        /// <value>The coordinate system axis units.</value>
         public static CodeString CoordinateSystemAxisUnits
         {
             get { return new CodeString {Tag = new Tag("0014220E")}; }
         }
 
+        /// <summary>
+        /// Gets the coordinate system axis values.
+        /// </summary>
+        /// <value>The coordinate system axis values.</value>
         public static OtherByteString CoordinateSystemAxisValues
         {
             get { return new OtherByteString {Tag = new Tag("00142210")}; }
         }
 
+        /// <summary>
+        /// Gets the coordinate system transform sequence.
+        /// </summary>
+        /// <value>The coordinate system transform sequence.</value>
         public static Sequence CoordinateSystemTransformSequence
         {
             get { return new Sequence {Tag = new Tag("00142220")}; }
         }
 
+        /// <summary>
+        /// Gets the transform description.
+        /// </summary>
+        /// <value>The transform description.</value>
         public static ShortText TransformDescription
         {
             get { return new ShortText {Tag = new Tag("00142222")}; }
         }
 
+        /// <summary>
+        /// Gets the transform number of axes.
+        /// </summary>
+        /// <value>The transform number of axes.</value>
         public static IntegerString TransformNumberOfAxes
         {
             get { return new IntegerString {Tag = new Tag("00142224")}; }
         }
 
+        /// <summary>
+        /// Gets the transform order of axes.
+        /// </summary>
+        /// <value>The transform order of axes.</value>
         public static IntegerString TransformOrderOfAxes
         {
             get { return new IntegerString {Tag = new Tag("00142226")}; }
         }
 
+        /// <summary>
+        /// Gets the transformed axis units.
+        /// </summary>
+        /// <value>The transformed axis units.</value>
         public static CodeString TransformedAxisUnits
         {
             get { return new CodeString {Tag = new Tag("00142228")}; }
         }
 
+        /// <summary>
+        /// Gets the coordinate system transform rotation and scale matrix.
+        /// </summary>
+        /// <value>The coordinate system transform rotation and scale matrix.</value>
         public static DecimalString CoordinateSystemTransformRotationAndScaleMatrix
         {
             get { return new DecimalString {Tag = new Tag("0014222A")}; }
         }
 
+        /// <summary>
+        /// Gets the coordinate system transform translation matrix.
+        /// </summary>
+        /// <value>The coordinate system transform translation matrix.</value>
         public static DecimalString CoordinateSystemTransformTranslationMatrix
         {
             get { return new DecimalString {Tag = new Tag("0014222C")}; }
         }
 
+        /// <summary>
+        /// Gets the internal detector frame time.
+        /// </summary>
+        /// <value>The internal detector frame time.</value>
         public static DecimalString InternalDetectorFrameTime
         {
             get { return new DecimalString {Tag = new Tag("00143011")}; }
         }
 
+        /// <summary>
+        /// Gets the number of frames integrated.
+        /// </summary>
+        /// <value>The number of frames integrated.</value>
         public static DecimalString NumberOfFramesIntegrated
         {
             get { return new DecimalString {Tag = new Tag("00143012")}; }
         }
 
+        /// <summary>
+        /// Gets the detector temperature sequence.
+        /// </summary>
+        /// <value>The detector temperature sequence.</value>
         public static Sequence DetectorTemperatureSequence
         {
             get { return new Sequence {Tag = new Tag("00143020")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the sensor.
+        /// </summary>
+        /// <value>The name of the sensor.</value>
         public static DecimalString SensorName
         {
             get { return new DecimalString {Tag = new Tag("00143022")}; }
         }
 
+        /// <summary>
+        /// Gets the horizontal offset of sensor.
+        /// </summary>
+        /// <value>The horizontal offset of sensor.</value>
         public static DecimalString HorizontalOffsetOfSensor
         {
             get { return new DecimalString {Tag = new Tag("00143024")}; }
         }
 
+        /// <summary>
+        /// Gets the vertical offset of sensor.
+        /// </summary>
+        /// <value>The vertical offset of sensor.</value>
         public static DecimalString VerticalOffsetOfSensor
         {
             get { return new DecimalString {Tag = new Tag("00143026")}; }
         }
 
+        /// <summary>
+        /// Gets the sensor temperature.
+        /// </summary>
+        /// <value>The sensor temperature.</value>
         public static DecimalString SensorTemperature
         {
             get { return new DecimalString {Tag = new Tag("00143028")}; }
         }
 
+        /// <summary>
+        /// Gets the dark current sequence.
+        /// </summary>
+        /// <value>The dark current sequence.</value>
         public static Sequence DarkCurrentSequence
         {
             get { return new Sequence {Tag = new Tag("00143040")}; }
         }
 
+        /// <summary>
+        /// Gets the dark current counts.
+        /// </summary>
+        /// <value>The dark current counts.</value>
         public static OtherByteString DarkCurrentCounts
         {
             get { return new OtherByteString {Tag = new Tag("00143050")}; }
         }
 
+        /// <summary>
+        /// Gets the gain correction reference sequence.
+        /// </summary>
+        /// <value>The gain correction reference sequence.</value>
         public static Sequence GainCorrectionReferenceSequence
         {
             get { return new Sequence {Tag = new Tag("00143060")}; }
         }
 
+        /// <summary>
+        /// Gets the air counts.
+        /// </summary>
+        /// <value>The air counts.</value>
         public static OtherByteString AirCounts
         {
             get { return new OtherByteString {Tag = new Tag("00143070")}; }
         }
 
+        /// <summary>
+        /// Gets the kv used in gain calibration.
+        /// </summary>
+        /// <value>The kv used in gain calibration.</value>
         public static DecimalString KVUsedInGainCalibration
         {
             get { return new DecimalString {Tag = new Tag("00143071")}; }
         }
 
+        /// <summary>
+        /// Gets the ma used in gain calibration.
+        /// </summary>
+        /// <value>The ma used in gain calibration.</value>
         public static DecimalString MAUsedInGainCalibration
         {
             get { return new DecimalString {Tag = new Tag("00143072")}; }
         }
 
+        /// <summary>
+        /// Gets the number of frames used for integration.
+        /// </summary>
+        /// <value>The number of frames used for integration.</value>
         public static DecimalString NumberOfFramesUsedForIntegration
         {
             get { return new DecimalString {Tag = new Tag("00143073")}; }
         }
 
+        /// <summary>
+        /// Gets the filter material used in gain calibration.
+        /// </summary>
+        /// <value>The filter material used in gain calibration.</value>
         public static LongString FilterMaterialUsedInGainCalibration
         {
             get { return new LongString {Tag = new Tag("00143074")}; }
         }
 
+        /// <summary>
+        /// Gets the filter thickness used in gain calibration.
+        /// </summary>
+        /// <value>The filter thickness used in gain calibration.</value>
         public static DecimalString FilterThicknessUsedInGainCalibration
         {
             get { return new DecimalString {Tag = new Tag("00143075")}; }
         }
 
+        /// <summary>
+        /// Gets the date of gain calibration.
+        /// </summary>
+        /// <value>The date of gain calibration.</value>
         public static Date DateOfGainCalibration
         {
             get { return new Date {Tag = new Tag("00143076")}; }
         }
 
+        /// <summary>
+        /// Gets the time of gain calibration.
+        /// </summary>
+        /// <value>The time of gain calibration.</value>
         public static Time TimeOfGainCalibration
         {
             get { return new Time {Tag = new Tag("00143077")}; }
         }
 
+        /// <summary>
+        /// Gets the bad pixel image.
+        /// </summary>
+        /// <value>The bad pixel image.</value>
         public static OtherByteString BadPixelImage
         {
             get { return new OtherByteString {Tag = new Tag("00143080")}; }
         }
 
+        /// <summary>
+        /// Gets the calibration notes.
+        /// </summary>
+        /// <value>The calibration notes.</value>
         public static LongText CalibrationNotes
         {
             get { return new LongText {Tag = new Tag("00143099")}; }
         }
 
+        /// <summary>
+        /// Gets the pulser equipment sequence.
+        /// </summary>
+        /// <value>The pulser equipment sequence.</value>
         public static Sequence PulserEquipmentSequence
         {
             get { return new Sequence {Tag = new Tag("00144002")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the pulser.
+        /// </summary>
+        /// <value>The type of the pulser.</value>
         public static CodeString PulserType
         {
             get { return new CodeString {Tag = new Tag("00144004")}; }
         }
 
+        /// <summary>
+        /// Gets the pulser notes.
+        /// </summary>
+        /// <value>The pulser notes.</value>
         public static LongText PulserNotes
         {
             get { return new LongText {Tag = new Tag("00144006")}; }
         }
 
+        /// <summary>
+        /// Gets the receiver equipment sequence.
+        /// </summary>
+        /// <value>The receiver equipment sequence.</value>
         public static Sequence ReceiverEquipmentSequence
         {
             get { return new Sequence {Tag = new Tag("00144008")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the amplifier.
+        /// </summary>
+        /// <value>The type of the amplifier.</value>
         public static CodeString AmplifierType
         {
             get { return new CodeString {Tag = new Tag("0014400A")}; }
         }
 
+        /// <summary>
+        /// Gets the receiver notes.
+        /// </summary>
+        /// <value>The receiver notes.</value>
         public static LongText ReceiverNotes
         {
             get { return new LongText {Tag = new Tag("0014400C")}; }
         }
 
+        /// <summary>
+        /// Gets the pre amplifier equipment sequence.
+        /// </summary>
+        /// <value>The pre amplifier equipment sequence.</value>
         public static Sequence PreAmplifierEquipmentSequence
         {
             get { return new Sequence {Tag = new Tag("0014400E")}; }
         }
 
+        /// <summary>
+        /// Gets the pre amplifier notes.
+        /// </summary>
+        /// <value>The pre amplifier notes.</value>
         public static LongText PreAmplifierNotes
         {
             get { return new LongText {Tag = new Tag("0014400F")}; }
         }
 
+        /// <summary>
+        /// Gets the transmit transducer sequence.
+        /// </summary>
+        /// <value>The transmit transducer sequence.</value>
         public static Sequence TransmitTransducerSequence
         {
             get { return new Sequence {Tag = new Tag("00144010")}; }
         }
 
+        /// <summary>
+        /// Gets the receive transducer sequence.
+        /// </summary>
+        /// <value>The receive transducer sequence.</value>
         public static Sequence ReceiveTransducerSequence
         {
             get { return new Sequence {Tag = new Tag("00144011")}; }
         }
 
+        /// <summary>
+        /// Gets the number of elements.
+        /// </summary>
+        /// <value>The number of elements.</value>
         public static UnsignedShort NumberOfElements
         {
             get { return new UnsignedShort {Tag = new Tag("00144012")}; }
         }
 
+        /// <summary>
+        /// Gets the element shape.
+        /// </summary>
+        /// <value>The element shape.</value>
         public static CodeString ElementShape
         {
             get { return new CodeString {Tag = new Tag("00144013")}; }
         }
 
+        /// <summary>
+        /// Gets the element dimension a.
+        /// </summary>
+        /// <value>The element dimension a.</value>
         public static DecimalString ElementDimensionA
         {
             get { return new DecimalString {Tag = new Tag("00144014")}; }
         }
 
+        /// <summary>
+        /// Gets the element dimension b.
+        /// </summary>
+        /// <value>The element dimension b.</value>
         public static DecimalString ElementDimensionB
         {
             get { return new DecimalString {Tag = new Tag("00144015")}; }
         }
 
+        /// <summary>
+        /// Gets the element pitch.
+        /// </summary>
+        /// <value>The element pitch.</value>
         public static DecimalString ElementPitch
         {
             get { return new DecimalString {Tag = new Tag("00144016")}; }
         }
 
+        /// <summary>
+        /// Gets the measured beam dimension a.
+        /// </summary>
+        /// <value>The measured beam dimension a.</value>
         public static DecimalString MeasuredBeamDimensionA
         {
             get { return new DecimalString {Tag = new Tag("00144017")}; }
         }
 
+        /// <summary>
+        /// Gets the measured beam dimension b.
+        /// </summary>
+        /// <value>The measured beam dimension b.</value>
         public static DecimalString MeasuredBeamDimensionB
         {
             get { return new DecimalString {Tag = new Tag("00144018")}; }
         }
 
+        /// <summary>
+        /// Gets the location of measured beam diameter.
+        /// </summary>
+        /// <value>The location of measured beam diameter.</value>
         public static DecimalString LocationOfMeasuredBeamDiameter
         {
             get { return new DecimalString {Tag = new Tag("00144019")}; }
         }
 
+        /// <summary>
+        /// Gets the nominal frequency.
+        /// </summary>
+        /// <value>The nominal frequency.</value>
         public static DecimalString NominalFrequency
         {
             get { return new DecimalString {Tag = new Tag("0014401A")}; }
         }
 
+        /// <summary>
+        /// Gets the measured center frequency.
+        /// </summary>
+        /// <value>The measured center frequency.</value>
         public static DecimalString MeasuredCenterFrequency
         {
             get { return new DecimalString {Tag = new Tag("0014401B")}; }
         }
 
+        /// <summary>
+        /// Gets the measured bandwidth.
+        /// </summary>
+        /// <value>The measured bandwidth.</value>
         public static DecimalString MeasuredBandwidth
         {
             get { return new DecimalString {Tag = new Tag("0014401C")}; }
         }
 
+        /// <summary>
+        /// Gets the pulser settings sequence.
+        /// </summary>
+        /// <value>The pulser settings sequence.</value>
         public static Sequence PulserSettingsSequence
         {
             get { return new Sequence {Tag = new Tag("00144020")}; }
         }
 
+        /// <summary>
+        /// Gets the width of the pulse.
+        /// </summary>
+        /// <value>The width of the pulse.</value>
         public static DecimalString PulseWidth
         {
             get { return new DecimalString {Tag = new Tag("00144022")}; }
         }
 
+        /// <summary>
+        /// Gets the excitation frequency.
+        /// </summary>
+        /// <value>The excitation frequency.</value>
         public static DecimalString ExcitationFrequency
         {
             get { return new DecimalString {Tag = new Tag("00144024")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the modulation.
+        /// </summary>
+        /// <value>The type of the modulation.</value>
         public static CodeString ModulationType
         {
             get { return new CodeString {Tag = new Tag("00144026")}; }
         }
 
+        /// <summary>
+        /// Gets the damping.
+        /// </summary>
+        /// <value>The damping.</value>
         public static DecimalString Damping
         {
             get { return new DecimalString {Tag = new Tag("00144028")}; }
         }
 
+        /// <summary>
+        /// Gets the receiver settings sequence.
+        /// </summary>
+        /// <value>The receiver settings sequence.</value>
         public static Sequence ReceiverSettingsSequence
         {
             get { return new Sequence {Tag = new Tag("00144030")}; }
         }
 
+        /// <summary>
+        /// Gets the length of the acquired soundpath.
+        /// </summary>
+        /// <value>The length of the acquired soundpath.</value>
         public static DecimalString AcquiredSoundpathLength
         {
             get { return new DecimalString {Tag = new Tag("00144031")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the acquisition compression.
+        /// </summary>
+        /// <value>The type of the acquisition compression.</value>
         public static CodeString AcquisitionCompressionType
         {
             get { return new CodeString {Tag = new Tag("00144032")}; }
         }
 
+        /// <summary>
+        /// Gets the size of the acquisition sample.
+        /// </summary>
+        /// <value>The size of the acquisition sample.</value>
         public static IntegerString AcquisitionSampleSize
         {
             get { return new IntegerString {Tag = new Tag("00144033")}; }
         }
 
+        /// <summary>
+        /// Gets the rectifier smoothing.
+        /// </summary>
+        /// <value>The rectifier smoothing.</value>
         public static DecimalString RectifierSmoothing
         {
             get { return new DecimalString {Tag = new Tag("00144034")}; }
         }
 
+        /// <summary>
+        /// Gets the dac sequence.
+        /// </summary>
+        /// <value>The dac sequence.</value>
         public static Sequence DACSequence
         {
             get { return new Sequence {Tag = new Tag("00144035")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the dac.
+        /// </summary>
+        /// <value>The type of the dac.</value>
         public static CodeString DACType
         {
             get { return new CodeString {Tag = new Tag("00144036")}; }
         }
 
+        /// <summary>
+        /// Gets the dac gain points.
+        /// </summary>
+        /// <value>The dac gain points.</value>
         public static DecimalString DACGainPoints
         {
             get { return new DecimalString {Tag = new Tag("00144038")}; }
         }
 
+        /// <summary>
+        /// Gets the dac time points.
+        /// </summary>
+        /// <value>The dac time points.</value>
         public static DecimalString DACTimePoints
         {
             get { return new DecimalString {Tag = new Tag("0014403A")}; }
         }
 
+        /// <summary>
+        /// Gets the dac amplitude.
+        /// </summary>
+        /// <value>The dac amplitude.</value>
         public static DecimalString DACAmplitude
         {
             get { return new DecimalString {Tag = new Tag("0014403C")}; }
         }
 
+        /// <summary>
+        /// Gets the pre amplifier settings sequence.
+        /// </summary>
+        /// <value>The pre amplifier settings sequence.</value>
         public static Sequence PreAmplifierSettingsSequence
         {
             get { return new Sequence {Tag = new Tag("00144040")}; }
         }
 
+        /// <summary>
+        /// Gets the transmit transducer settings sequence.
+        /// </summary>
+        /// <value>The transmit transducer settings sequence.</value>
         public static Sequence TransmitTransducerSettingsSequence
         {
             get { return new Sequence {Tag = new Tag("00144050")}; }
         }
 
+        /// <summary>
+        /// Gets the receive transducer settings sequence.
+        /// </summary>
+        /// <value>The receive transducer settings sequence.</value>
         public static Sequence ReceiveTransducerSettingsSequence
         {
             get { return new Sequence {Tag = new Tag("00144051")}; }
         }
 
+        /// <summary>
+        /// Gets the incident angle.
+        /// </summary>
+        /// <value>The incident angle.</value>
         public static DecimalString IncidentAngle
         {
             get { return new DecimalString {Tag = new Tag("00144052")}; }
         }
 
+        /// <summary>
+        /// Gets the coupling technique.
+        /// </summary>
+        /// <value>The coupling technique.</value>
         public static ShortText CouplingTechnique
         {
             get { return new ShortText {Tag = new Tag("00144054")}; }
         }
 
+        /// <summary>
+        /// Gets the coupling medium.
+        /// </summary>
+        /// <value>The coupling medium.</value>
         public static ShortText CouplingMedium
         {
             get { return new ShortText {Tag = new Tag("00144056")}; }
         }
 
+        /// <summary>
+        /// Gets the coupling velocity.
+        /// </summary>
+        /// <value>The coupling velocity.</value>
         public static DecimalString CouplingVelocity
         {
             get { return new DecimalString {Tag = new Tag("00144057")}; }
         }
 
+        /// <summary>
+        /// Gets the crystal center location x.
+        /// </summary>
+        /// <value>The crystal center location x.</value>
         public static DecimalString CrystalCenterLocationX
         {
             get { return new DecimalString {Tag = new Tag("00144058")}; }
         }
 
+        /// <summary>
+        /// Gets the crystal center location z.
+        /// </summary>
+        /// <value>The crystal center location z.</value>
         public static DecimalString CrystalCenterLocationZ
         {
             get { return new DecimalString {Tag = new Tag("00144059")}; }
         }
 
+        /// <summary>
+        /// Gets the length of the sound path.
+        /// </summary>
+        /// <value>The length of the sound path.</value>
         public static DecimalString SoundPathLength
         {
             get { return new DecimalString {Tag = new Tag("0014405A")}; }
         }
 
+        /// <summary>
+        /// Gets the delay law identifier.
+        /// </summary>
+        /// <value>The delay law identifier.</value>
         public static ShortText DelayLawIdentifier
         {
             get { return new ShortText {Tag = new Tag("0014405C")}; }
         }
 
+        /// <summary>
+        /// Gets the gate settings sequence.
+        /// </summary>
+        /// <value>The gate settings sequence.</value>
         public static Sequence GateSettingsSequence
         {
             get { return new Sequence {Tag = new Tag("00144060")}; }
         }
 
+        /// <summary>
+        /// Gets the gate threshold.
+        /// </summary>
+        /// <value>The gate threshold.</value>
         public static DecimalString GateThreshold
         {
             get { return new DecimalString {Tag = new Tag("00144062")}; }
         }
 
+        /// <summary>
+        /// Gets the velocity of sound.
+        /// </summary>
+        /// <value>The velocity of sound.</value>
         public static DecimalString VelocityOfSound
         {
             get { return new DecimalString {Tag = new Tag("00144064")}; }
         }
 
+        /// <summary>
+        /// Gets the calibration settings sequence.
+        /// </summary>
+        /// <value>The calibration settings sequence.</value>
         public static Sequence CalibrationSettingsSequence
         {
             get { return new Sequence {Tag = new Tag("00144070")}; }
         }
 
+        /// <summary>
+        /// Gets the calibration procedure.
+        /// </summary>
+        /// <value>The calibration procedure.</value>
         public static ShortText CalibrationProcedure
         {
             get { return new ShortText {Tag = new Tag("00144072")}; }
         }
 
+        /// <summary>
+        /// Gets the procedure version.
+        /// </summary>
+        /// <value>The procedure version.</value>
         public static ShortString ProcedureVersion
         {
             get { return new ShortString {Tag = new Tag("00144074")}; }
         }
 
+        /// <summary>
+        /// Gets the procedure creation date.
+        /// </summary>
+        /// <value>The procedure creation date.</value>
         public static Date ProcedureCreationDate
         {
             get { return new Date {Tag = new Tag("00144076")}; }
         }
 
+        /// <summary>
+        /// Gets the procedure expiration date.
+        /// </summary>
+        /// <value>The procedure expiration date.</value>
         public static Date ProcedureExpirationDate
         {
             get { return new Date {Tag = new Tag("00144078")}; }
         }
 
+        /// <summary>
+        /// Gets the procedure last modified date.
+        /// </summary>
+        /// <value>The procedure last modified date.</value>
         public static Date ProcedureLastModifiedDate
         {
             get { return new Date {Tag = new Tag("0014407A")}; }
         }
 
+        /// <summary>
+        /// Gets the calibration time.
+        /// </summary>
+        /// <value>The calibration time.</value>
         public static Time CalibrationTime
         {
             get { return new Time {Tag = new Tag("0014407C")}; }
         }
 
+        /// <summary>
+        /// Gets the calibration date.
+        /// </summary>
+        /// <value>The calibration date.</value>
         public static Date CalibrationDate
         {
             get { return new Date {Tag = new Tag("0014407E")}; }
         }
 
+        /// <summary>
+        /// Gets the linac energy.
+        /// </summary>
+        /// <value>The linac energy.</value>
         public static IntegerString LINACEnergy
         {
             get { return new IntegerString {Tag = new Tag("00145002")}; }
         }
 
+        /// <summary>
+        /// Gets the linac output.
+        /// </summary>
+        /// <value>The linac output.</value>
         public static IntegerString LINACOutput
         {
             get { return new IntegerString {Tag = new Tag("00145004")}; }
         }
 
+        /// <summary>
+        /// Gets the contrast bolus agent.
+        /// </summary>
+        /// <value>The contrast bolus agent.</value>
         public static LongString ContrastBolusAgent
         {
             get { return new LongString {Tag = new Tag("00180010")}; }
         }
 
+        /// <summary>
+        /// Gets the contrast bolus agent sequence.
+        /// </summary>
+        /// <value>The contrast bolus agent sequence.</value>
         public static Sequence ContrastBolusAgentSequence
         {
             get { return new Sequence {Tag = new Tag("00180012")}; }
         }
 
+        /// <summary>
+        /// Gets the contrast bolus administration route sequence.
+        /// </summary>
+        /// <value>The contrast bolus administration route sequence.</value>
         public static Sequence ContrastBolusAdministrationRouteSequence
         {
             get { return new Sequence {Tag = new Tag("00180014")}; }
         }
 
+        /// <summary>
+        /// Gets the body part examined.
+        /// </summary>
+        /// <value>The body part examined.</value>
         public static CodeString BodyPartExamined
         {
             get { return new CodeString {Tag = new Tag("00180015")}; }
         }
 
+        /// <summary>
+        /// Gets the scanning sequence.
+        /// </summary>
+        /// <value>The scanning sequence.</value>
         public static CodeString ScanningSequence
         {
             get { return new CodeString {Tag = new Tag("00180020")}; }
         }
 
+        /// <summary>
+        /// Gets the sequence variant.
+        /// </summary>
+        /// <value>The sequence variant.</value>
         public static CodeString SequenceVariant
         {
             get { return new CodeString {Tag = new Tag("00180021")}; }
         }
 
+        /// <summary>
+        /// Gets the scan options.
+        /// </summary>
+        /// <value>The scan options.</value>
         public static CodeString ScanOptions
         {
             get { return new CodeString {Tag = new Tag("00180022")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the mr acquisition.
+        /// </summary>
+        /// <value>The type of the mr acquisition.</value>
         public static CodeString MRAcquisitionType
         {
             get { return new CodeString {Tag = new Tag("00180023")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the sequence.
+        /// </summary>
+        /// <value>The name of the sequence.</value>
         public static ShortString SequenceName
         {
             get { return new ShortString {Tag = new Tag("00180024")}; }
         }
 
+        /// <summary>
+        /// Gets the angio flag.
+        /// </summary>
+        /// <value>The angio flag.</value>
         public static CodeString AngioFlag
         {
             get { return new CodeString {Tag = new Tag("00180025")}; }
         }
 
+        /// <summary>
+        /// Gets the intervention drug information sequence.
+        /// </summary>
+        /// <value>The intervention drug information sequence.</value>
         public static Sequence InterventionDrugInformationSequence
         {
             get { return new Sequence {Tag = new Tag("00180026")}; }
         }
 
+        /// <summary>
+        /// Gets the intervention drug stop time.
+        /// </summary>
+        /// <value>The intervention drug stop time.</value>
         public static Time InterventionDrugStopTime
         {
             get { return new Time {Tag = new Tag("00180027")}; }
         }
 
+        /// <summary>
+        /// Gets the intervention drug dose.
+        /// </summary>
+        /// <value>The intervention drug dose.</value>
         public static DecimalString InterventionDrugDose
         {
             get { return new DecimalString {Tag = new Tag("00180028")}; }
         }
 
+        /// <summary>
+        /// Gets the intervention drug code sequence.
+        /// </summary>
+        /// <value>The intervention drug code sequence.</value>
         public static Sequence InterventionDrugCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00180029")}; }
         }
 
+        /// <summary>
+        /// Gets the additional drug sequence.
+        /// </summary>
+        /// <value>The additional drug sequence.</value>
         public static Sequence AdditionalDrugSequence
         {
             get { return new Sequence {Tag = new Tag("0018002A")}; }
         }
 
+        /// <summary>
+        /// Gets the radionuclide retired.
+        /// </summary>
+        /// <value>The radionuclide retired.</value>
         public static LongString RadionuclideRetired
         {
             get { return new LongString {Tag = new Tag("00180030")}; }
         }
 
+        /// <summary>
+        /// Gets the radiopharmaceutical.
+        /// </summary>
+        /// <value>The radiopharmaceutical.</value>
         public static LongString Radiopharmaceutical
         {
             get { return new LongString {Tag = new Tag("00180031")}; }
         }
 
+        /// <summary>
+        /// Gets the energy window centerline retired.
+        /// </summary>
+        /// <value>The energy window centerline retired.</value>
         public static DecimalString EnergyWindowCenterlineRetired
         {
             get { return new DecimalString {Tag = new Tag("00180032")}; }
         }
 
+        /// <summary>
+        /// Gets the energy window total width retired.
+        /// </summary>
+        /// <value>The energy window total width retired.</value>
         public static DecimalString EnergyWindowTotalWidthRetired
         {
             get { return new DecimalString {Tag = new Tag("00180033")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the intervention drug.
+        /// </summary>
+        /// <value>The name of the intervention drug.</value>
         public static LongString InterventionDrugName
         {
             get { return new LongString {Tag = new Tag("00180034")}; }
         }
 
+        /// <summary>
+        /// Gets the intervention drug start time.
+        /// </summary>
+        /// <value>The intervention drug start time.</value>
         public static Time InterventionDrugStartTime
         {
             get { return new Time {Tag = new Tag("00180035")}; }
         }
 
+        /// <summary>
+        /// Gets the intervention sequence.
+        /// </summary>
+        /// <value>The intervention sequence.</value>
         public static Sequence InterventionSequence
         {
             get { return new Sequence {Tag = new Tag("00180036")}; }
         }
 
+        /// <summary>
+        /// Gets the therapy type retired.
+        /// </summary>
+        /// <value>The therapy type retired.</value>
         public static CodeString TherapyTypeRetired
         {
             get { return new CodeString {Tag = new Tag("00180037")}; }
         }
 
+        /// <summary>
+        /// Gets the intervention status.
+        /// </summary>
+        /// <value>The intervention status.</value>
         public static CodeString InterventionStatus
         {
             get { return new CodeString {Tag = new Tag("00180038")}; }
         }
 
+        /// <summary>
+        /// Gets the therapy description retired.
+        /// </summary>
+        /// <value>The therapy description retired.</value>
         public static CodeString TherapyDescriptionRetired
         {
             get { return new CodeString {Tag = new Tag("00180039")}; }
         }
 
+        /// <summary>
+        /// Gets the intervention description.
+        /// </summary>
+        /// <value>The intervention description.</value>
         public static ShortText InterventionDescription
         {
             get { return new ShortText {Tag = new Tag("0018003A")}; }
         }
 
+        /// <summary>
+        /// Gets the cine rate.
+        /// </summary>
+        /// <value>The cine rate.</value>
         public static IntegerString CineRate
         {
             get { return new IntegerString {Tag = new Tag("00180040")}; }
         }
 
+        /// <summary>
+        /// Gets the initial state of the cine run.
+        /// </summary>
+        /// <value>The initial state of the cine run.</value>
         public static CodeString InitialCineRunState
         {
             get { return new CodeString {Tag = new Tag("00180042")}; }
         }
 
+        /// <summary>
+        /// Gets the slice thickness.
+        /// </summary>
+        /// <value>The slice thickness.</value>
         public static DecimalString SliceThickness
         {
             get { return new DecimalString {Tag = new Tag("00180050")}; }
         }
 
+        /// <summary>
+        /// Gets the KVP.
+        /// </summary>
+        /// <value>The KVP.</value>
         public static DecimalString KVP
         {
             get { return new DecimalString {Tag = new Tag("00180060")}; }
         }
 
+        /// <summary>
+        /// Gets the counts accumulated.
+        /// </summary>
+        /// <value>The counts accumulated.</value>
         public static IntegerString CountsAccumulated
         {
             get { return new IntegerString {Tag = new Tag("00180070")}; }
         }
 
+        /// <summary>
+        /// Gets the acquisition termination condition.
+        /// </summary>
+        /// <value>The acquisition termination condition.</value>
         public static CodeString AcquisitionTerminationCondition
         {
             get { return new CodeString {Tag = new Tag("00180071")}; }
         }
 
+        /// <summary>
+        /// Gets the duration of the effective.
+        /// </summary>
+        /// <value>The duration of the effective.</value>
         public static DecimalString EffectiveDuration
         {
             get { return new DecimalString {Tag = new Tag("00180072")}; }
         }
 
+        /// <summary>
+        /// Gets the acquisition start condition.
+        /// </summary>
+        /// <value>The acquisition start condition.</value>
         public static CodeString AcquisitionStartCondition
         {
             get { return new CodeString {Tag = new Tag("00180073")}; }
         }
 
+        /// <summary>
+        /// Gets the acquisition start condition data.
+        /// </summary>
+        /// <value>The acquisition start condition data.</value>
         public static IntegerString AcquisitionStartConditionData
         {
             get { return new IntegerString {Tag = new Tag("00180074")}; }
         }
 
+        /// <summary>
+        /// Gets the acquisition termination condition data.
+        /// </summary>
+        /// <value>The acquisition termination condition data.</value>
         public static IntegerString AcquisitionTerminationConditionData
         {
             get { return new IntegerString {Tag = new Tag("00180075")}; }
         }
 
+        /// <summary>
+        /// Gets the repetition time.
+        /// </summary>
+        /// <value>The repetition time.</value>
         public static DecimalString RepetitionTime
         {
             get { return new DecimalString {Tag = new Tag("00180080")}; }
         }
 
+        /// <summary>
+        /// Gets the echo time.
+        /// </summary>
+        /// <value>The echo time.</value>
         public static DecimalString EchoTime
         {
             get { return new DecimalString {Tag = new Tag("00180081")}; }
         }
 
+        /// <summary>
+        /// Gets the inversion time.
+        /// </summary>
+        /// <value>The inversion time.</value>
         public static DecimalString InversionTime
         {
             get { return new DecimalString {Tag = new Tag("00180082")}; }
         }
 
+        /// <summary>
+        /// Gets the number of averages.
+        /// </summary>
+        /// <value>The number of averages.</value>
         public static DecimalString NumberOfAverages
         {
             get { return new DecimalString {Tag = new Tag("00180083")}; }
         }
 
+        /// <summary>
+        /// Gets the imaging frequency.
+        /// </summary>
+        /// <value>The imaging frequency.</value>
         public static DecimalString ImagingFrequency
         {
             get { return new DecimalString {Tag = new Tag("00180084")}; }
         }
 
+        /// <summary>
+        /// Gets the imaged nucleus.
+        /// </summary>
+        /// <value>The imaged nucleus.</value>
         public static ShortString ImagedNucleus
         {
             get { return new ShortString {Tag = new Tag("00180085")}; }
         }
 
+        /// <summary>
+        /// Gets the echo numbers.
+        /// </summary>
+        /// <value>The echo numbers.</value>
         public static IntegerString EchoNumbers
         {
             get { return new IntegerString {Tag = new Tag("00180086")}; }
         }
 
+        /// <summary>
+        /// Gets the magnetic field strength.
+        /// </summary>
+        /// <value>The magnetic field strength.</value>
         public static DecimalString MagneticFieldStrength
         {
             get { return new DecimalString {Tag = new Tag("00180087")}; }
         }
 
+        /// <summary>
+        /// Gets the spacing between slices.
+        /// </summary>
+        /// <value>The spacing between slices.</value>
         public static DecimalString SpacingBetweenSlices
         {
             get { return new DecimalString {Tag = new Tag("00180088")}; }
         }
 
+        /// <summary>
+        /// Gets the number of phase encoding steps.
+        /// </summary>
+        /// <value>The number of phase encoding steps.</value>
         public static IntegerString NumberOfPhaseEncodingSteps
         {
             get { return new IntegerString {Tag = new Tag("00180089")}; }
         }
 
+        /// <summary>
+        /// Gets the data collection diameter.
+        /// </summary>
+        /// <value>The data collection diameter.</value>
         public static DecimalString DataCollectionDiameter
         {
             get { return new DecimalString {Tag = new Tag("00180090")}; }
         }
 
+        /// <summary>
+        /// Gets the length of the echo train.
+        /// </summary>
+        /// <value>The length of the echo train.</value>
         public static IntegerString EchoTrainLength
         {
             get { return new IntegerString {Tag = new Tag("00180091")}; }
         }
 
+        /// <summary>
+        /// Gets the percent sampling.
+        /// </summary>
+        /// <value>The percent sampling.</value>
         public static DecimalString PercentSampling
         {
             get { return new DecimalString {Tag = new Tag("00180093")}; }
         }
 
+        /// <summary>
+        /// Gets the percent phase field of view.
+        /// </summary>
+        /// <value>The percent phase field of view.</value>
         public static DecimalString PercentPhaseFieldOfView
         {
             get { return new DecimalString {Tag = new Tag("00180094")}; }
         }
 
+        /// <summary>
+        /// Gets the pixel bandwidth.
+        /// </summary>
+        /// <value>The pixel bandwidth.</value>
         public static DecimalString PixelBandwidth
         {
             get { return new DecimalString {Tag = new Tag("00180095")}; }
         }
 
+        /// <summary>
+        /// Gets the device serial number.
+        /// </summary>
+        /// <value>The device serial number.</value>
         public static LongString DeviceSerialNumber
         {
             get { return new LongString {Tag = new Tag("00181000")}; }
         }
 
+        /// <summary>
+        /// Gets the device uid.
+        /// </summary>
+        /// <value>The device uid.</value>
         public static UniqueIdentifier DeviceUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00181002")}; }
         }
 
+        /// <summary>
+        /// Gets the device identifier.
+        /// </summary>
+        /// <value>The device identifier.</value>
         public static LongString DeviceID
         {
             get { return new LongString {Tag = new Tag("00181003")}; }
         }
 
+        /// <summary>
+        /// Gets the plate identifier.
+        /// </summary>
+        /// <value>The plate identifier.</value>
         public static LongString PlateID
         {
             get { return new LongString {Tag = new Tag("00181004")}; }
         }
 
+        /// <summary>
+        /// Gets the generator identifier.
+        /// </summary>
+        /// <value>The generator identifier.</value>
         public static LongString GeneratorID
         {
             get { return new LongString {Tag = new Tag("00181005")}; }
         }
 
+        /// <summary>
+        /// Gets the grid identifier.
+        /// </summary>
+        /// <value>The grid identifier.</value>
         public static LongString GridID
         {
             get { return new LongString {Tag = new Tag("00181006")}; }
         }
 
+        /// <summary>
+        /// Gets the cassette identifier.
+        /// </summary>
+        /// <value>The cassette identifier.</value>
         public static LongString CassetteID
         {
             get { return new LongString {Tag = new Tag("00181007")}; }
         }
 
+        /// <summary>
+        /// Gets the gantry identifier.
+        /// </summary>
+        /// <value>The gantry identifier.</value>
         public static LongString GantryID
         {
             get { return new LongString {Tag = new Tag("00181008")}; }
         }
 
+        /// <summary>
+        /// Gets the secondary capture device identifier.
+        /// </summary>
+        /// <value>The secondary capture device identifier.</value>
         public static LongString SecondaryCaptureDeviceID
         {
             get { return new LongString {Tag = new Tag("00181010")}; }
         }
 
+        /// <summary>
+        /// Gets the hardcopy creation device identifier retired.
+        /// </summary>
+        /// <value>The hardcopy creation device identifier retired.</value>
         public static LongString HardcopyCreationDeviceIDRetired
         {
             get { return new LongString {Tag = new Tag("00181011")}; }
         }
 
+        /// <summary>
+        /// Gets the date of secondary capture.
+        /// </summary>
+        /// <value>The date of secondary capture.</value>
         public static Date DateOfSecondaryCapture
         {
             get { return new Date {Tag = new Tag("00181012")}; }
@@ -11356,351 +12352,631 @@ namespace EvilDICOM.Core
             get { return new Sequence {Tag = new Tag("00460121")}; }
         }
 
+        /// <summary>
+        /// Gets the visual acuity right eye sequence.
+        /// </summary>
+        /// <value>The visual acuity right eye sequence.</value>
         public static Sequence VisualAcuityRightEyeSequence
         {
             get { return new Sequence {Tag = new Tag("00460122")}; }
         }
 
+        /// <summary>
+        /// Gets the visual acuity left eye sequence.
+        /// </summary>
+        /// <value>The visual acuity left eye sequence.</value>
         public static Sequence VisualAcuityLeftEyeSequence
         {
             get { return new Sequence {Tag = new Tag("00460123")}; }
         }
 
+        /// <summary>
+        /// Gets the visual acuity both eyes open sequence.
+        /// </summary>
+        /// <value>The visual acuity both eyes open sequence.</value>
         public static Sequence VisualAcuityBothEyesOpenSequence
         {
             get { return new Sequence {Tag = new Tag("00460124")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the viewing distance.
+        /// </summary>
+        /// <value>The type of the viewing distance.</value>
         public static CodeString ViewingDistanceType
         {
             get { return new CodeString {Tag = new Tag("00460125")}; }
         }
 
+        /// <summary>
+        /// Gets the visual acuity modifiers.
+        /// </summary>
+        /// <value>The visual acuity modifiers.</value>
         public static SignedShort VisualAcuityModifiers
         {
             get { return new SignedShort {Tag = new Tag("00460135")}; }
         }
 
+        /// <summary>
+        /// Gets the decimal visual acuity.
+        /// </summary>
+        /// <value>The decimal visual acuity.</value>
         public static FloatingPointDouble DecimalVisualAcuity
         {
             get { return new FloatingPointDouble {Tag = new Tag("00460137")}; }
         }
 
+        /// <summary>
+        /// Gets the optotype detailed definition.
+        /// </summary>
+        /// <value>The optotype detailed definition.</value>
         public static LongString OptotypeDetailedDefinition
         {
             get { return new LongString {Tag = new Tag("00460139")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced refractive measurements sequence.
+        /// </summary>
+        /// <value>The referenced refractive measurements sequence.</value>
         public static Sequence ReferencedRefractiveMeasurementsSequence
         {
             get { return new Sequence {Tag = new Tag("00460145")}; }
         }
 
+        /// <summary>
+        /// Gets the sphere power.
+        /// </summary>
+        /// <value>The sphere power.</value>
         public static FloatingPointDouble SpherePower
         {
             get { return new FloatingPointDouble {Tag = new Tag("00460146")}; }
         }
 
+        /// <summary>
+        /// Gets the cylinder power.
+        /// </summary>
+        /// <value>The cylinder power.</value>
         public static FloatingPointDouble CylinderPower
         {
             get { return new FloatingPointDouble {Tag = new Tag("00460147")}; }
         }
 
+        /// <summary>
+        /// Gets the width of the imaged volume.
+        /// </summary>
+        /// <value>The width of the imaged volume.</value>
         public static FloatingPointSingle ImagedVolumeWidth
         {
             get { return new FloatingPointSingle {Tag = new Tag("00480001")}; }
         }
 
+        /// <summary>
+        /// Gets the height of the imaged volume.
+        /// </summary>
+        /// <value>The height of the imaged volume.</value>
         public static FloatingPointSingle ImagedVolumeHeight
         {
             get { return new FloatingPointSingle {Tag = new Tag("00480002")}; }
         }
 
+        /// <summary>
+        /// Gets the imaged volume depth.
+        /// </summary>
+        /// <value>The imaged volume depth.</value>
         public static FloatingPointSingle ImagedVolumeDepth
         {
             get { return new FloatingPointSingle {Tag = new Tag("00480003")}; }
         }
 
+        /// <summary>
+        /// Gets the total pixel matrix columns.
+        /// </summary>
+        /// <value>The total pixel matrix columns.</value>
         public static UnsignedLong TotalPixelMatrixColumns
         {
             get { return new UnsignedLong {Tag = new Tag("00480006")}; }
         }
 
+        /// <summary>
+        /// Gets the total pixel matrix rows.
+        /// </summary>
+        /// <value>The total pixel matrix rows.</value>
         public static UnsignedLong TotalPixelMatrixRows
         {
             get { return new UnsignedLong {Tag = new Tag("00480007")}; }
         }
 
+        /// <summary>
+        /// Gets the total pixel matrix origin sequence.
+        /// </summary>
+        /// <value>The total pixel matrix origin sequence.</value>
         public static Sequence TotalPixelMatrixOriginSequence
         {
             get { return new Sequence {Tag = new Tag("00480008")}; }
         }
 
+        /// <summary>
+        /// Gets the specimen label in image.
+        /// </summary>
+        /// <value>The specimen label in image.</value>
         public static CodeString SpecimenLabelInImage
         {
             get { return new CodeString {Tag = new Tag("00480010")}; }
         }
 
+        /// <summary>
+        /// Gets the focus method.
+        /// </summary>
+        /// <value>The focus method.</value>
         public static CodeString FocusMethod
         {
             get { return new CodeString {Tag = new Tag("00480011")}; }
         }
 
+        /// <summary>
+        /// Gets the extended depth of field.
+        /// </summary>
+        /// <value>The extended depth of field.</value>
         public static CodeString ExtendedDepthOfField
         {
             get { return new CodeString {Tag = new Tag("00480012")}; }
         }
 
+        /// <summary>
+        /// Gets the number of focal planes.
+        /// </summary>
+        /// <value>The number of focal planes.</value>
         public static UnsignedShort NumberOfFocalPlanes
         {
             get { return new UnsignedShort {Tag = new Tag("00480013")}; }
         }
 
+        /// <summary>
+        /// Gets the distance between focal planes.
+        /// </summary>
+        /// <value>The distance between focal planes.</value>
         public static FloatingPointSingle DistanceBetweenFocalPlanes
         {
             get { return new FloatingPointSingle {Tag = new Tag("00480014")}; }
         }
 
+        /// <summary>
+        /// Gets the recommended absent pixel cie lab value.
+        /// </summary>
+        /// <value>The recommended absent pixel cie lab value.</value>
         public static UnsignedShort RecommendedAbsentPixelCIELabValue
         {
             get { return new UnsignedShort {Tag = new Tag("00480015")}; }
         }
 
+        /// <summary>
+        /// Gets the illuminator type code sequence.
+        /// </summary>
+        /// <value>The illuminator type code sequence.</value>
         public static Sequence IlluminatorTypeCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00480100")}; }
         }
 
+        /// <summary>
+        /// Gets the image orientation slide.
+        /// </summary>
+        /// <value>The image orientation slide.</value>
         public static DecimalString ImageOrientationSlide
         {
             get { return new DecimalString {Tag = new Tag("00480102")}; }
         }
 
+        /// <summary>
+        /// Gets the optical path sequence.
+        /// </summary>
+        /// <value>The optical path sequence.</value>
         public static Sequence OpticalPathSequence
         {
             get { return new Sequence {Tag = new Tag("00480105")}; }
         }
 
+        /// <summary>
+        /// Gets the optical path identifier.
+        /// </summary>
+        /// <value>The optical path identifier.</value>
         public static ShortString OpticalPathIdentifier
         {
             get { return new ShortString {Tag = new Tag("00480106")}; }
         }
 
+        /// <summary>
+        /// Gets the optical path description.
+        /// </summary>
+        /// <value>The optical path description.</value>
         public static ShortText OpticalPathDescription
         {
             get { return new ShortText {Tag = new Tag("00480107")}; }
         }
 
+        /// <summary>
+        /// Gets the illumination color code sequence.
+        /// </summary>
+        /// <value>The illumination color code sequence.</value>
         public static Sequence IlluminationColorCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00480108")}; }
         }
 
+        /// <summary>
+        /// Gets the specimen reference sequence.
+        /// </summary>
+        /// <value>The specimen reference sequence.</value>
         public static Sequence SpecimenReferenceSequence
         {
             get { return new Sequence {Tag = new Tag("00480110")}; }
         }
 
+        /// <summary>
+        /// Gets the condenser lens power.
+        /// </summary>
+        /// <value>The condenser lens power.</value>
         public static DecimalString CondenserLensPower
         {
             get { return new DecimalString {Tag = new Tag("00480111")}; }
         }
 
+        /// <summary>
+        /// Gets the objective lens power.
+        /// </summary>
+        /// <value>The objective lens power.</value>
         public static DecimalString ObjectiveLensPower
         {
             get { return new DecimalString {Tag = new Tag("00480112")}; }
         }
 
+        /// <summary>
+        /// Gets the objective lens numerical aperture.
+        /// </summary>
+        /// <value>The objective lens numerical aperture.</value>
         public static DecimalString ObjectiveLensNumericalAperture
         {
             get { return new DecimalString {Tag = new Tag("00480113")}; }
         }
 
+        /// <summary>
+        /// Gets the palette color lookup table sequence.
+        /// </summary>
+        /// <value>The palette color lookup table sequence.</value>
         public static Sequence PaletteColorLookupTableSequence
         {
             get { return new Sequence {Tag = new Tag("00480120")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced image navigation sequence.
+        /// </summary>
+        /// <value>The referenced image navigation sequence.</value>
         public static Sequence ReferencedImageNavigationSequence
         {
             get { return new Sequence {Tag = new Tag("00480200")}; }
         }
 
+        /// <summary>
+        /// Gets the top left hand corner of localizer area.
+        /// </summary>
+        /// <value>The top left hand corner of localizer area.</value>
         public static UnsignedShort TopLeftHandCornerOfLocalizerArea
         {
             get { return new UnsignedShort {Tag = new Tag("00480201")}; }
         }
 
+        /// <summary>
+        /// Gets the bottom right hand corner of localizer area.
+        /// </summary>
+        /// <value>The bottom right hand corner of localizer area.</value>
         public static UnsignedShort BottomRightHandCornerOfLocalizerArea
         {
             get { return new UnsignedShort {Tag = new Tag("00480202")}; }
         }
 
+        /// <summary>
+        /// Gets the optical path identification sequence.
+        /// </summary>
+        /// <value>The optical path identification sequence.</value>
         public static Sequence OpticalPathIdentificationSequence
         {
             get { return new Sequence {Tag = new Tag("00480207")}; }
         }
 
+        /// <summary>
+        /// Gets the plane position slide sequence.
+        /// </summary>
+        /// <value>The plane position slide sequence.</value>
         public static Sequence PlanePositionSlideSequence
         {
             get { return new Sequence {Tag = new Tag("0048021A")}; }
         }
 
+        /// <summary>
+        /// Gets the row position in total image pixel matrix.
+        /// </summary>
+        /// <value>The row position in total image pixel matrix.</value>
         public static SignedLong RowPositionInTotalImagePixelMatrix
         {
             get { return new SignedLong {Tag = new Tag("0048021E")}; }
         }
 
+        /// <summary>
+        /// Gets the column position in total image pixel matrix.
+        /// </summary>
+        /// <value>The column position in total image pixel matrix.</value>
         public static SignedLong ColumnPositionInTotalImagePixelMatrix
         {
             get { return new SignedLong {Tag = new Tag("0048021F")}; }
         }
 
+        /// <summary>
+        /// Gets the pixel origin interpretation.
+        /// </summary>
+        /// <value>The pixel origin interpretation.</value>
         public static CodeString PixelOriginInterpretation
         {
             get { return new CodeString {Tag = new Tag("00480301")}; }
         }
 
+        /// <summary>
+        /// Gets the calibration image.
+        /// </summary>
+        /// <value>The calibration image.</value>
         public static CodeString CalibrationImage
         {
             get { return new CodeString {Tag = new Tag("00500004")}; }
         }
 
+        /// <summary>
+        /// Gets the device sequence.
+        /// </summary>
+        /// <value>The device sequence.</value>
         public static Sequence DeviceSequence
         {
             get { return new Sequence {Tag = new Tag("00500010")}; }
         }
 
+        /// <summary>
+        /// Gets the container component type code sequence.
+        /// </summary>
+        /// <value>The container component type code sequence.</value>
         public static Sequence ContainerComponentTypeCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00500012")}; }
         }
 
+        /// <summary>
+        /// Gets the container component thickness.
+        /// </summary>
+        /// <value>The container component thickness.</value>
         public static FloatingPointDouble ContainerComponentThickness
         {
             get { return new FloatingPointDouble {Tag = new Tag("00500013")}; }
         }
 
+        /// <summary>
+        /// Gets the length of the device.
+        /// </summary>
+        /// <value>The length of the device.</value>
         public static DecimalString DeviceLength
         {
             get { return new DecimalString {Tag = new Tag("00500014")}; }
         }
 
+        /// <summary>
+        /// Gets the width of the container component.
+        /// </summary>
+        /// <value>The width of the container component.</value>
         public static FloatingPointDouble ContainerComponentWidth
         {
             get { return new FloatingPointDouble {Tag = new Tag("00500015")}; }
         }
 
+        /// <summary>
+        /// Gets the device diameter.
+        /// </summary>
+        /// <value>The device diameter.</value>
         public static DecimalString DeviceDiameter
         {
             get { return new DecimalString {Tag = new Tag("00500016")}; }
         }
 
+        /// <summary>
+        /// Gets the device diameter units.
+        /// </summary>
+        /// <value>The device diameter units.</value>
         public static CodeString DeviceDiameterUnits
         {
             get { return new CodeString {Tag = new Tag("00500017")}; }
         }
 
+        /// <summary>
+        /// Gets the device volume.
+        /// </summary>
+        /// <value>The device volume.</value>
         public static DecimalString DeviceVolume
         {
             get { return new DecimalString {Tag = new Tag("00500018")}; }
         }
 
+        /// <summary>
+        /// Gets the inter marker distance.
+        /// </summary>
+        /// <value>The inter marker distance.</value>
         public static DecimalString InterMarkerDistance
         {
             get { return new DecimalString {Tag = new Tag("00500019")}; }
         }
 
+        /// <summary>
+        /// Gets the container component material.
+        /// </summary>
+        /// <value>The container component material.</value>
         public static CodeString ContainerComponentMaterial
         {
             get { return new CodeString {Tag = new Tag("0050001A")}; }
         }
 
+        /// <summary>
+        /// Gets the container component identifier.
+        /// </summary>
+        /// <value>The container component identifier.</value>
         public static LongString ContainerComponentID
         {
             get { return new LongString {Tag = new Tag("0050001B")}; }
         }
 
+        /// <summary>
+        /// Gets the length of the container component.
+        /// </summary>
+        /// <value>The length of the container component.</value>
         public static FloatingPointDouble ContainerComponentLength
         {
             get { return new FloatingPointDouble {Tag = new Tag("0050001C")}; }
         }
 
+        /// <summary>
+        /// Gets the container component diameter.
+        /// </summary>
+        /// <value>The container component diameter.</value>
         public static FloatingPointDouble ContainerComponentDiameter
         {
             get { return new FloatingPointDouble {Tag = new Tag("0050001D")}; }
         }
 
+        /// <summary>
+        /// Gets the container component description.
+        /// </summary>
+        /// <value>The container component description.</value>
         public static LongString ContainerComponentDescription
         {
             get { return new LongString {Tag = new Tag("0050001E")}; }
         }
 
+        /// <summary>
+        /// Gets the device description.
+        /// </summary>
+        /// <value>The device description.</value>
         public static LongString DeviceDescription
         {
             get { return new LongString {Tag = new Tag("00500020")}; }
         }
 
+        /// <summary>
+        /// Gets the contrast bolus ingredient percent by volume.
+        /// </summary>
+        /// <value>The contrast bolus ingredient percent by volume.</value>
         public static FloatingPointSingle ContrastBolusIngredientPercentByVolume
         {
             get { return new FloatingPointSingle {Tag = new Tag("00520001")}; }
         }
 
+        /// <summary>
+        /// Gets the oct focal distance.
+        /// </summary>
+        /// <value>The oct focal distance.</value>
         public static FloatingPointDouble OCTFocalDistance
         {
             get { return new FloatingPointDouble {Tag = new Tag("00520002")}; }
         }
 
+        /// <summary>
+        /// Gets the size of the beam spot.
+        /// </summary>
+        /// <value>The size of the beam spot.</value>
         public static FloatingPointDouble BeamSpotSize
         {
             get { return new FloatingPointDouble {Tag = new Tag("00520003")}; }
         }
 
+        /// <summary>
+        /// Gets the index of the effective refractive.
+        /// </summary>
+        /// <value>The index of the effective refractive.</value>
         public static FloatingPointDouble EffectiveRefractiveIndex
         {
             get { return new FloatingPointDouble {Tag = new Tag("00520004")}; }
         }
 
+        /// <summary>
+        /// Gets the oct acquisition domain.
+        /// </summary>
+        /// <value>The oct acquisition domain.</value>
         public static CodeString OCTAcquisitionDomain
         {
             get { return new CodeString {Tag = new Tag("00520006")}; }
         }
 
+        /// <summary>
+        /// Gets the oct optical center wavelength.
+        /// </summary>
+        /// <value>The oct optical center wavelength.</value>
         public static FloatingPointDouble OCTOpticalCenterWavelength
         {
             get { return new FloatingPointDouble {Tag = new Tag("00520007")}; }
         }
 
+        /// <summary>
+        /// Gets the axial resolution.
+        /// </summary>
+        /// <value>The axial resolution.</value>
         public static FloatingPointDouble AxialResolution
         {
             get { return new FloatingPointDouble {Tag = new Tag("00520008")}; }
         }
 
+        /// <summary>
+        /// Gets the ranging depth.
+        /// </summary>
+        /// <value>The ranging depth.</value>
         public static FloatingPointDouble RangingDepth
         {
             get { return new FloatingPointDouble {Tag = new Tag("00520009")}; }
         }
 
+        /// <summary>
+        /// Gets a line rate.
+        /// </summary>
+        /// <value>a line rate.</value>
         public static FloatingPointDouble ALineRate
         {
             get { return new FloatingPointDouble {Tag = new Tag("00520011")}; }
         }
 
+        /// <summary>
+        /// Gets a lines per frame.
+        /// </summary>
+        /// <value>a lines per frame.</value>
         public static UnsignedShort ALinesPerFrame
         {
             get { return new UnsignedShort {Tag = new Tag("00520012")}; }
         }
 
+        /// <summary>
+        /// Gets the catheter rotational rate.
+        /// </summary>
+        /// <value>The catheter rotational rate.</value>
         public static FloatingPointDouble CatheterRotationalRate
         {
             get { return new FloatingPointDouble {Tag = new Tag("00520013")}; }
         }
 
+        /// <summary>
+        /// Gets a line pixel spacing.
+        /// </summary>
+        /// <value>a line pixel spacing.</value>
         public static FloatingPointDouble ALinePixelSpacing
         {
             get { return new FloatingPointDouble {Tag = new Tag("00520014")}; }
         }
 
+        /// <summary>
+        /// Gets the mode of percutaneous access sequence.
+        /// </summary>
+        /// <value>The mode of percutaneous access sequence.</value>
         public static Sequence ModeOfPercutaneousAccessSequence
         {
             get { return new Sequence {Tag = new Tag("00520016")}; }
@@ -18866,106 +20142,190 @@ namespace EvilDICOM.Core
             get { return new UnsignedShort {Tag = new Tag("60xx1103")}; }
         }
 
+        /// <summary>
+        /// Gets the overlays gray retired.
+        /// </summary>
+        /// <value>The overlays gray retired.</value>
         public static UnsignedShort OverlaysGrayRetired
         {
             get { return new UnsignedShort {Tag = new Tag("60xx1200")}; }
         }
 
+        /// <summary>
+        /// Gets the overlays red retired.
+        /// </summary>
+        /// <value>The overlays red retired.</value>
         public static UnsignedShort OverlaysRedRetired
         {
             get { return new UnsignedShort {Tag = new Tag("60xx1201")}; }
         }
 
+        /// <summary>
+        /// Gets the overlays green retired.
+        /// </summary>
+        /// <value>The overlays green retired.</value>
         public static UnsignedShort OverlaysGreenRetired
         {
             get { return new UnsignedShort {Tag = new Tag("60xx1202")}; }
         }
 
+        /// <summary>
+        /// Gets the overlays blue retired.
+        /// </summary>
+        /// <value>The overlays blue retired.</value>
         public static UnsignedShort OverlaysBlueRetired
         {
             get { return new UnsignedShort {Tag = new Tag("60xx1203")}; }
         }
 
+        /// <summary>
+        /// Gets the roi area.
+        /// </summary>
+        /// <value>The roi area.</value>
         public static IntegerString ROIArea
         {
             get { return new IntegerString {Tag = new Tag("60xx1301")}; }
         }
 
+        /// <summary>
+        /// Gets the roi mean.
+        /// </summary>
+        /// <value>The roi mean.</value>
         public static DecimalString ROIMean
         {
             get { return new DecimalString {Tag = new Tag("60xx1302")}; }
         }
 
+        /// <summary>
+        /// Gets the roi standard deviation.
+        /// </summary>
+        /// <value>The roi standard deviation.</value>
         public static DecimalString ROIStandardDeviation
         {
             get { return new DecimalString {Tag = new Tag("60xx1303")}; }
         }
 
+        /// <summary>
+        /// Gets the overlay label.
+        /// </summary>
+        /// <value>The overlay label.</value>
         public static LongString OverlayLabel
         {
             get { return new LongString {Tag = new Tag("60xx1500")}; }
         }
 
+        /// <summary>
+        /// Gets the overlay data.
+        /// </summary>
+        /// <value>The overlay data.</value>
         public static OtherByteString OverlayData
         {
             get { return new OtherByteString {Tag = new Tag("60xx3000")}; }
         }
 
+        /// <summary>
+        /// Gets the overlay comments retired.
+        /// </summary>
+        /// <value>The overlay comments retired.</value>
         public static LongText OverlayCommentsRetired
         {
             get { return new LongText {Tag = new Tag("60xx4000")}; }
         }
 
+        /// <summary>
+        /// Gets the pixel data.
+        /// </summary>
+        /// <value>The pixel data.</value>
         public static OtherWordString PixelData
         {
             get { return new OtherWordString {Tag = new Tag("7FE00010")}; }
         }
 
+        /// <summary>
+        /// Gets the coefficients SDVN retired.
+        /// </summary>
+        /// <value>The coefficients SDVN retired.</value>
         public static OtherWordString CoefficientsSDVNRetired
         {
             get { return new OtherWordString {Tag = new Tag("7FE00020")}; }
         }
 
+        /// <summary>
+        /// Gets the coefficients SDHN retired.
+        /// </summary>
+        /// <value>The coefficients SDHN retired.</value>
         public static OtherWordString CoefficientsSDHNRetired
         {
             get { return new OtherWordString {Tag = new Tag("7FE00030")}; }
         }
 
+        /// <summary>
+        /// Gets the coefficients SDDN retired.
+        /// </summary>
+        /// <value>The coefficients SDDN retired.</value>
         public static OtherWordString CoefficientsSDDNRetired
         {
             get { return new OtherWordString {Tag = new Tag("7FE00040")}; }
         }
 
+        /// <summary>
+        /// Gets the variable pixel data retired.
+        /// </summary>
+        /// <value>The variable pixel data retired.</value>
         public static OtherWordString VariablePixelDataRetired
         {
             get { return new OtherWordString {Tag = new Tag("7Fxx0010")}; }
         }
 
+        /// <summary>
+        /// Gets the variable next data group retired.
+        /// </summary>
+        /// <value>The variable next data group retired.</value>
         public static UnsignedShort VariableNextDataGroupRetired
         {
             get { return new UnsignedShort {Tag = new Tag("7Fxx0011")}; }
         }
 
+        /// <summary>
+        /// Gets the variable coefficients SDVN retired.
+        /// </summary>
+        /// <value>The variable coefficients SDVN retired.</value>
         public static OtherWordString VariableCoefficientsSDVNRetired
         {
             get { return new OtherWordString {Tag = new Tag("7Fxx0020")}; }
         }
 
+        /// <summary>
+        /// Gets the variable coefficients SDHN retired.
+        /// </summary>
+        /// <value>The variable coefficients SDHN retired.</value>
         public static OtherWordString VariableCoefficientsSDHNRetired
         {
             get { return new OtherWordString {Tag = new Tag("7Fxx0030")}; }
         }
 
+        /// <summary>
+        /// Gets the variable coefficients SDDN retired.
+        /// </summary>
+        /// <value>The variable coefficients SDDN retired.</value>
         public static OtherWordString VariableCoefficientsSDDNRetired
         {
             get { return new OtherWordString {Tag = new Tag("7Fxx0040")}; }
         }
 
+        /// <summary>
+        /// Gets the digital signatures sequence.
+        /// </summary>
+        /// <value>The digital signatures sequence.</value>
         public static Sequence DigitalSignaturesSequence
         {
             get { return new Sequence {Tag = new Tag("FFFAFFFA")}; }
         }
 
+        /// <summary>
+        /// Gets the data set trailing padding.
+        /// </summary>
+        /// <value>The data set trailing padding.</value>
         public static OtherByteString DataSetTrailingPadding
         {
             get { return new OtherByteString {Tag = new Tag("FFFCFFFC")}; }
