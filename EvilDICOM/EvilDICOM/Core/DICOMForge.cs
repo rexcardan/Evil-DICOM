@@ -25,1196 +25,2152 @@ namespace EvilDICOM.Core
             get { return new UniqueIdentifier {Tag = new Tag("00000002")}; }
         }
 
+        /// <summary>
+        /// Gets the requested sop class uid.
+        /// </summary>
+        /// <value>The requested sop class uid.</value>
         public static UniqueIdentifier RequestedSOPClassUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00000003")}; }
         }
 
+        /// <summary>
+        /// Gets the command recognition code retired.
+        /// </summary>
+        /// <value>The command recognition code retired.</value>
         public static ShortString CommandRecognitionCodeRetired
         {
             get { return new ShortString {Tag = new Tag("00000010")}; }
         }
 
+        /// <summary>
+        /// Gets the command field.
+        /// </summary>
+        /// <value>The command field.</value>
         public static UnsignedShort CommandField
         {
             get { return new UnsignedShort {Tag = new Tag("00000100")}; }
         }
 
+        /// <summary>
+        /// Gets the message identifier.
+        /// </summary>
+        /// <value>The message identifier.</value>
         public static UnsignedShort MessageID
         {
             get { return new UnsignedShort {Tag = new Tag("00000110")}; }
         }
 
+        /// <summary>
+        /// Gets the message identifier being responded to.
+        /// </summary>
+        /// <value>The message identifier being responded to.</value>
         public static UnsignedShort MessageIDBeingRespondedTo
         {
             get { return new UnsignedShort {Tag = new Tag("00000120")}; }
         }
 
+        /// <summary>
+        /// Gets the initiator retired.
+        /// </summary>
+        /// <value>The initiator retired.</value>
         public static ApplicationEntity InitiatorRetired
         {
             get { return new ApplicationEntity {Tag = new Tag("00000200")}; }
         }
 
+        /// <summary>
+        /// Gets the receiver retired.
+        /// </summary>
+        /// <value>The receiver retired.</value>
         public static ApplicationEntity ReceiverRetired
         {
             get { return new ApplicationEntity {Tag = new Tag("00000300")}; }
         }
 
+        /// <summary>
+        /// Gets the find location retired.
+        /// </summary>
+        /// <value>The find location retired.</value>
         public static ApplicationEntity FindLocationRetired
         {
             get { return new ApplicationEntity {Tag = new Tag("00000400")}; }
         }
 
+        /// <summary>
+        /// Gets the move destination.
+        /// </summary>
+        /// <value>The move destination.</value>
         public static ApplicationEntity MoveDestination
         {
             get { return new ApplicationEntity {Tag = new Tag("00000600")}; }
         }
 
+        /// <summary>
+        /// Gets the priority.
+        /// </summary>
+        /// <value>The priority.</value>
         public static UnsignedShort Priority
         {
             get { return new UnsignedShort {Tag = new Tag("00000700")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the command data set.
+        /// </summary>
+        /// <value>The type of the command data set.</value>
         public static UnsignedShort CommandDataSetType
         {
             get { return new UnsignedShort {Tag = new Tag("00000800")}; }
         }
 
+        /// <summary>
+        /// Gets the number of matches retired.
+        /// </summary>
+        /// <value>The number of matches retired.</value>
         public static UnsignedShort NumberOfMatchesRetired
         {
             get { return new UnsignedShort {Tag = new Tag("00000850")}; }
         }
 
+        /// <summary>
+        /// Gets the response sequence number retired.
+        /// </summary>
+        /// <value>The response sequence number retired.</value>
         public static UnsignedShort ResponseSequenceNumberRetired
         {
             get { return new UnsignedShort {Tag = new Tag("00000860")}; }
         }
 
+        /// <summary>
+        /// Gets the status.
+        /// </summary>
+        /// <value>The status.</value>
         public static UnsignedShort Status
         {
             get { return new UnsignedShort {Tag = new Tag("00000900")}; }
         }
 
+        /// <summary>
+        /// Gets the offending element.
+        /// </summary>
+        /// <value>The offending element.</value>
         public static AttributeTag OffendingElement
         {
             get { return new AttributeTag {Tag = new Tag("00000901")}; }
         }
 
+        /// <summary>
+        /// Gets the error comment.
+        /// </summary>
+        /// <value>The error comment.</value>
         public static LongString ErrorComment
         {
             get { return new LongString {Tag = new Tag("00000902")}; }
         }
 
+        /// <summary>
+        /// Gets the error identifier.
+        /// </summary>
+        /// <value>The error identifier.</value>
         public static UnsignedShort ErrorID
         {
             get { return new UnsignedShort {Tag = new Tag("00000903")}; }
         }
 
+        /// <summary>
+        /// Gets the affected sop instance uid.
+        /// </summary>
+        /// <value>The affected sop instance uid.</value>
         public static UniqueIdentifier AffectedSOPInstanceUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00001000")}; }
         }
 
+        /// <summary>
+        /// Gets the requested sop instance uid.
+        /// </summary>
+        /// <value>The requested sop instance uid.</value>
         public static UniqueIdentifier RequestedSOPInstanceUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00001001")}; }
         }
 
+        /// <summary>
+        /// Gets the event type identifier.
+        /// </summary>
+        /// <value>The event type identifier.</value>
         public static UnsignedShort EventTypeID
         {
             get { return new UnsignedShort {Tag = new Tag("00001002")}; }
         }
 
+        /// <summary>
+        /// Gets the attribute identifier list.
+        /// </summary>
+        /// <value>The attribute identifier list.</value>
         public static AttributeTag AttributeIdentifierList
         {
             get { return new AttributeTag {Tag = new Tag("00001005")}; }
         }
 
+        /// <summary>
+        /// Gets the action type identifier.
+        /// </summary>
+        /// <value>The action type identifier.</value>
         public static UnsignedShort ActionTypeID
         {
             get { return new UnsignedShort {Tag = new Tag("00001008")}; }
         }
 
+        /// <summary>
+        /// Gets the number of remaining suboperations.
+        /// </summary>
+        /// <value>The number of remaining suboperations.</value>
         public static UnsignedShort NumberOfRemainingSuboperations
         {
             get { return new UnsignedShort {Tag = new Tag("00001020")}; }
         }
 
+        /// <summary>
+        /// Gets the number of completed suboperations.
+        /// </summary>
+        /// <value>The number of completed suboperations.</value>
         public static UnsignedShort NumberOfCompletedSuboperations
         {
             get { return new UnsignedShort {Tag = new Tag("00001021")}; }
         }
 
+        /// <summary>
+        /// Gets the number of failed suboperations.
+        /// </summary>
+        /// <value>The number of failed suboperations.</value>
         public static UnsignedShort NumberOfFailedSuboperations
         {
             get { return new UnsignedShort {Tag = new Tag("00001022")}; }
         }
 
+        /// <summary>
+        /// Gets the number of warning suboperations.
+        /// </summary>
+        /// <value>The number of warning suboperations.</value>
         public static UnsignedShort NumberOfWarningSuboperations
         {
             get { return new UnsignedShort {Tag = new Tag("00001023")}; }
         }
 
+        /// <summary>
+        /// Gets the move originator application entity title.
+        /// </summary>
+        /// <value>The move originator application entity title.</value>
         public static ApplicationEntity MoveOriginatorApplicationEntityTitle
         {
             get { return new ApplicationEntity {Tag = new Tag("00001030")}; }
         }
 
+        /// <summary>
+        /// Gets the move originator message identifier.
+        /// </summary>
+        /// <value>The move originator message identifier.</value>
         public static UnsignedShort MoveOriginatorMessageID
         {
             get { return new UnsignedShort {Tag = new Tag("00001031")}; }
         }
 
+        /// <summary>
+        /// Gets the dialog receiver retired.
+        /// </summary>
+        /// <value>The dialog receiver retired.</value>
         public static LongText DialogReceiverRetired
         {
             get { return new LongText {Tag = new Tag("00004000")}; }
         }
 
+        /// <summary>
+        /// Gets the terminal type retired.
+        /// </summary>
+        /// <value>The terminal type retired.</value>
         public static LongText TerminalTypeRetired
         {
             get { return new LongText {Tag = new Tag("00004010")}; }
         }
 
+        /// <summary>
+        /// Gets the message set identifier retired.
+        /// </summary>
+        /// <value>The message set identifier retired.</value>
         public static ShortString MessageSetIDRetired
         {
             get { return new ShortString {Tag = new Tag("00005010")}; }
         }
 
+        /// <summary>
+        /// Gets the end message identifier retired.
+        /// </summary>
+        /// <value>The end message identifier retired.</value>
         public static ShortString EndMessageIDRetired
         {
             get { return new ShortString {Tag = new Tag("00005020")}; }
         }
 
+        /// <summary>
+        /// Gets the display format retired.
+        /// </summary>
+        /// <value>The display format retired.</value>
         public static LongText DisplayFormatRetired
         {
             get { return new LongText {Tag = new Tag("00005110")}; }
         }
 
+        /// <summary>
+        /// Gets the page position identifier retired.
+        /// </summary>
+        /// <value>The page position identifier retired.</value>
         public static LongText PagePositionIDRetired
         {
             get { return new LongText {Tag = new Tag("00005120")}; }
         }
 
+        /// <summary>
+        /// Gets the text format identifier retired.
+        /// </summary>
+        /// <value>The text format identifier retired.</value>
         public static CodeString TextFormatIDRetired
         {
             get { return new CodeString {Tag = new Tag("00005130")}; }
         }
 
+        /// <summary>
+        /// Gets the normal reverse retired.
+        /// </summary>
+        /// <value>The normal reverse retired.</value>
         public static CodeString NormalReverseRetired
         {
             get { return new CodeString {Tag = new Tag("00005140")}; }
         }
 
+        /// <summary>
+        /// Gets the add gray scale retired.
+        /// </summary>
+        /// <value>The add gray scale retired.</value>
         public static CodeString AddGrayScaleRetired
         {
             get { return new CodeString {Tag = new Tag("00005150")}; }
         }
 
+        /// <summary>
+        /// Gets the borders retired.
+        /// </summary>
+        /// <value>The borders retired.</value>
         public static CodeString BordersRetired
         {
             get { return new CodeString {Tag = new Tag("00005160")}; }
         }
 
+        /// <summary>
+        /// Gets the copies retired.
+        /// </summary>
+        /// <value>The copies retired.</value>
         public static IntegerString CopiesRetired
         {
             get { return new IntegerString {Tag = new Tag("00005170")}; }
         }
 
+        /// <summary>
+        /// Gets the command magnification type retired.
+        /// </summary>
+        /// <value>The command magnification type retired.</value>
         public static CodeString CommandMagnificationTypeRetired
         {
             get { return new CodeString {Tag = new Tag("00005180")}; }
         }
 
+        /// <summary>
+        /// Gets the erase retired.
+        /// </summary>
+        /// <value>The erase retired.</value>
         public static CodeString EraseRetired
         {
             get { return new CodeString {Tag = new Tag("00005190")}; }
         }
 
+        /// <summary>
+        /// Gets the print retired.
+        /// </summary>
+        /// <value>The print retired.</value>
         public static CodeString PrintRetired
         {
             get { return new CodeString {Tag = new Tag("000051A0")}; }
         }
 
+        /// <summary>
+        /// Gets the overlays retired.
+        /// </summary>
+        /// <value>The overlays retired.</value>
         public static UnsignedShort OverlaysRetired
         {
             get { return new UnsignedShort {Tag = new Tag("000051B0")}; }
         }
 
+        /// <summary>
+        /// Gets the file meta information version.
+        /// </summary>
+        /// <value>The file meta information version.</value>
         public static OtherByteString FileMetaInformationVersion
         {
             get { return new OtherByteString {Tag = new Tag("00020001")}; }
         }
 
+        /// <summary>
+        /// Gets the media storage sop class uid.
+        /// </summary>
+        /// <value>The media storage sop class uid.</value>
         public static UniqueIdentifier MediaStorageSOPClassUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00020002")}; }
         }
 
+        /// <summary>
+        /// Gets the media storage sop instance uid.
+        /// </summary>
+        /// <value>The media storage sop instance uid.</value>
         public static UniqueIdentifier MediaStorageSOPInstanceUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00020003")}; }
         }
 
+        /// <summary>
+        /// Gets the transfer syntax uid.
+        /// </summary>
+        /// <value>The transfer syntax uid.</value>
         public static UniqueIdentifier TransferSyntaxUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00020010")}; }
         }
 
+        /// <summary>
+        /// Gets the implementation class uid.
+        /// </summary>
+        /// <value>The implementation class uid.</value>
         public static UniqueIdentifier ImplementationClassUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00020012")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the implementation version.
+        /// </summary>
+        /// <value>The name of the implementation version.</value>
         public static ShortString ImplementationVersionName
         {
             get { return new ShortString {Tag = new Tag("00020013")}; }
         }
 
+        /// <summary>
+        /// Gets the source application entity title.
+        /// </summary>
+        /// <value>The source application entity title.</value>
         public static ApplicationEntity SourceApplicationEntityTitle
         {
             get { return new ApplicationEntity {Tag = new Tag("00020016")}; }
         }
 
+        /// <summary>
+        /// Gets the private information creator uid.
+        /// </summary>
+        /// <value>The private information creator uid.</value>
         public static UniqueIdentifier PrivateInformationCreatorUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00020100")}; }
         }
 
+        /// <summary>
+        /// Gets the private information.
+        /// </summary>
+        /// <value>The private information.</value>
         public static OtherByteString PrivateInformation
         {
             get { return new OtherByteString {Tag = new Tag("00020102")}; }
         }
 
+        /// <summary>
+        /// Gets the file set identifier.
+        /// </summary>
+        /// <value>The file set identifier.</value>
         public static CodeString FileSetID
         {
             get { return new CodeString {Tag = new Tag("00041130")}; }
         }
 
+        /// <summary>
+        /// Gets the file set descriptor file identifier.
+        /// </summary>
+        /// <value>The file set descriptor file identifier.</value>
         public static CodeString FileSetDescriptorFileID
         {
             get { return new CodeString {Tag = new Tag("00041141")}; }
         }
 
+        /// <summary>
+        /// Gets the specific character set of file set descriptor file.
+        /// </summary>
+        /// <value>The specific character set of file set descriptor file.</value>
         public static CodeString SpecificCharacterSetOfFileSetDescriptorFile
         {
             get { return new CodeString {Tag = new Tag("00041142")}; }
         }
 
+        /// <summary>
+        /// Gets the offset of the first directory record of the root directory entity.
+        /// </summary>
+        /// <value>The offset of the first directory record of the root directory entity.</value>
         public static UnsignedLong OffsetOfTheFirstDirectoryRecordOfTheRootDirectoryEntity
         {
             get { return new UnsignedLong {Tag = new Tag("00041200")}; }
         }
 
+        /// <summary>
+        /// Gets the offset of the last directory record of the root directory entity.
+        /// </summary>
+        /// <value>The offset of the last directory record of the root directory entity.</value>
         public static UnsignedLong OffsetOfTheLastDirectoryRecordOfTheRootDirectoryEntity
         {
             get { return new UnsignedLong {Tag = new Tag("00041202")}; }
         }
 
+        /// <summary>
+        /// Gets the file set consistency flag.
+        /// </summary>
+        /// <value>The file set consistency flag.</value>
         public static UnsignedShort FileSetConsistencyFlag
         {
             get { return new UnsignedShort {Tag = new Tag("00041212")}; }
         }
 
+        /// <summary>
+        /// Gets the directory record sequence.
+        /// </summary>
+        /// <value>The directory record sequence.</value>
         public static Sequence DirectoryRecordSequence
         {
             get { return new Sequence {Tag = new Tag("00041220")}; }
         }
 
+        /// <summary>
+        /// Gets the offset of the next directory record.
+        /// </summary>
+        /// <value>The offset of the next directory record.</value>
         public static UnsignedLong OffsetOfTheNextDirectoryRecord
         {
             get { return new UnsignedLong {Tag = new Tag("00041400")}; }
         }
 
+        /// <summary>
+        /// Gets the record in use flag.
+        /// </summary>
+        /// <value>The record in use flag.</value>
         public static UnsignedShort RecordInUseFlag
         {
             get { return new UnsignedShort {Tag = new Tag("00041410")}; }
         }
 
+        /// <summary>
+        /// Gets the offset of referenced lower level directory entity.
+        /// </summary>
+        /// <value>The offset of referenced lower level directory entity.</value>
         public static UnsignedLong OffsetOfReferencedLowerLevelDirectoryEntity
         {
             get { return new UnsignedLong {Tag = new Tag("00041420")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the directory record.
+        /// </summary>
+        /// <value>The type of the directory record.</value>
         public static CodeString DirectoryRecordType
         {
             get { return new CodeString {Tag = new Tag("00041430")}; }
         }
 
+        /// <summary>
+        /// Gets the private record uid.
+        /// </summary>
+        /// <value>The private record uid.</value>
         public static UniqueIdentifier PrivateRecordUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00041432")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced file identifier.
+        /// </summary>
+        /// <value>The referenced file identifier.</value>
         public static CodeString ReferencedFileID
         {
             get { return new CodeString {Tag = new Tag("00041500")}; }
         }
 
+        /// <summary>
+        /// Gets the MRDR directory record offset retired.
+        /// </summary>
+        /// <value>The MRDR directory record offset retired.</value>
         public static UnsignedLong MRDRDirectoryRecordOffsetRetired
         {
             get { return new UnsignedLong {Tag = new Tag("00041504")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced sop class uid in file.
+        /// </summary>
+        /// <value>The referenced sop class uid in file.</value>
         public static UniqueIdentifier ReferencedSOPClassUIDInFile
         {
             get { return new UniqueIdentifier {Tag = new Tag("00041510")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced sop instance uid in file.
+        /// </summary>
+        /// <value>The referenced sop instance uid in file.</value>
         public static UniqueIdentifier ReferencedSOPInstanceUIDInFile
         {
             get { return new UniqueIdentifier {Tag = new Tag("00041511")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced transfer syntax uid in file.
+        /// </summary>
+        /// <value>The referenced transfer syntax uid in file.</value>
         public static UniqueIdentifier ReferencedTransferSyntaxUIDInFile
         {
             get { return new UniqueIdentifier {Tag = new Tag("00041512")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced related general sop class uid in file.
+        /// </summary>
+        /// <value>The referenced related general sop class uid in file.</value>
         public static UniqueIdentifier ReferencedRelatedGeneralSOPClassUIDInFile
         {
             get { return new UniqueIdentifier {Tag = new Tag("0004151A")}; }
         }
 
+        /// <summary>
+        /// Gets the number of references retired.
+        /// </summary>
+        /// <value>The number of references retired.</value>
         public static UnsignedLong NumberOfReferencesRetired
         {
             get { return new UnsignedLong {Tag = new Tag("00041600")}; }
         }
 
+        /// <summary>
+        /// Gets the length to end retired.
+        /// </summary>
+        /// <value>The length to end retired.</value>
         public static UnsignedLong LengthToEndRetired
         {
             get { return new UnsignedLong {Tag = new Tag("00080001")}; }
         }
 
+        /// <summary>
+        /// Gets the specific character set.
+        /// </summary>
+        /// <value>The specific character set.</value>
         public static CodeString SpecificCharacterSet
         {
             get { return new CodeString {Tag = new Tag("00080005")}; }
         }
 
+        /// <summary>
+        /// Gets the language code sequence.
+        /// </summary>
+        /// <value>The language code sequence.</value>
         public static Sequence LanguageCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00080006")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the image.
+        /// </summary>
+        /// <value>The type of the image.</value>
         public static CodeString ImageType
         {
             get { return new CodeString {Tag = new Tag("00080008")}; }
         }
 
+        /// <summary>
+        /// Gets the recognition code retired.
+        /// </summary>
+        /// <value>The recognition code retired.</value>
         public static ShortString RecognitionCodeRetired
         {
             get { return new ShortString {Tag = new Tag("00080010")}; }
         }
 
+        /// <summary>
+        /// Gets the instance creation date.
+        /// </summary>
+        /// <value>The instance creation date.</value>
         public static Date InstanceCreationDate
         {
             get { return new Date {Tag = new Tag("00080012")}; }
         }
 
+        /// <summary>
+        /// Gets the instance creation time.
+        /// </summary>
+        /// <value>The instance creation time.</value>
         public static Time InstanceCreationTime
         {
             get { return new Time {Tag = new Tag("00080013")}; }
         }
 
+        /// <summary>
+        /// Gets the instance creator uid.
+        /// </summary>
+        /// <value>The instance creator uid.</value>
         public static UniqueIdentifier InstanceCreatorUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00080014")}; }
         }
 
+        /// <summary>
+        /// Gets the sop class uid.
+        /// </summary>
+        /// <value>The sop class uid.</value>
         public static UniqueIdentifier SOPClassUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00080016")}; }
         }
 
+        /// <summary>
+        /// Gets the sop instance uid.
+        /// </summary>
+        /// <value>The sop instance uid.</value>
         public static UniqueIdentifier SOPInstanceUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00080018")}; }
         }
 
+        /// <summary>
+        /// Gets the related general sop class uid.
+        /// </summary>
+        /// <value>The related general sop class uid.</value>
         public static UniqueIdentifier RelatedGeneralSOPClassUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("0008001A")}; }
         }
 
+        /// <summary>
+        /// Gets the original specialized sop class uid.
+        /// </summary>
+        /// <value>The original specialized sop class uid.</value>
         public static UniqueIdentifier OriginalSpecializedSOPClassUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("0008001B")}; }
         }
 
+        /// <summary>
+        /// Gets the study date.
+        /// </summary>
+        /// <value>The study date.</value>
         public static Date StudyDate
         {
             get { return new Date {Tag = new Tag("00080020")}; }
         }
 
+        /// <summary>
+        /// Gets the series date.
+        /// </summary>
+        /// <value>The series date.</value>
         public static Date SeriesDate
         {
             get { return new Date {Tag = new Tag("00080021")}; }
         }
 
+        /// <summary>
+        /// Gets the acquisition date.
+        /// </summary>
+        /// <value>The acquisition date.</value>
         public static Date AcquisitionDate
         {
             get { return new Date {Tag = new Tag("00080022")}; }
         }
 
+        /// <summary>
+        /// Gets the content date.
+        /// </summary>
+        /// <value>The content date.</value>
         public static Date ContentDate
         {
             get { return new Date {Tag = new Tag("00080023")}; }
         }
 
+        /// <summary>
+        /// Gets the overlay date retired.
+        /// </summary>
+        /// <value>The overlay date retired.</value>
         public static Date OverlayDateRetired
         {
             get { return new Date {Tag = new Tag("00080024")}; }
         }
 
+        /// <summary>
+        /// Gets the curve date retired.
+        /// </summary>
+        /// <value>The curve date retired.</value>
         public static Date CurveDateRetired
         {
             get { return new Date {Tag = new Tag("00080025")}; }
         }
 
+        /// <summary>
+        /// Gets the study time.
+        /// </summary>
+        /// <value>The study time.</value>
         public static Time StudyTime
         {
             get { return new Time {Tag = new Tag("00080030")}; }
         }
 
+        /// <summary>
+        /// Gets the series time.
+        /// </summary>
+        /// <value>The series time.</value>
         public static Time SeriesTime
         {
             get { return new Time {Tag = new Tag("00080031")}; }
         }
 
+        /// <summary>
+        /// Gets the acquisition time.
+        /// </summary>
+        /// <value>The acquisition time.</value>
         public static Time AcquisitionTime
         {
             get { return new Time {Tag = new Tag("00080032")}; }
         }
 
+        /// <summary>
+        /// Gets the content time.
+        /// </summary>
+        /// <value>The content time.</value>
         public static Time ContentTime
         {
             get { return new Time {Tag = new Tag("00080033")}; }
         }
 
+        /// <summary>
+        /// Gets the overlay time retired.
+        /// </summary>
+        /// <value>The overlay time retired.</value>
         public static Time OverlayTimeRetired
         {
             get { return new Time {Tag = new Tag("00080034")}; }
         }
 
+        /// <summary>
+        /// Gets the curve time retired.
+        /// </summary>
+        /// <value>The curve time retired.</value>
         public static Time CurveTimeRetired
         {
             get { return new Time {Tag = new Tag("00080035")}; }
         }
 
+        /// <summary>
+        /// Gets the data set type retired.
+        /// </summary>
+        /// <value>The data set type retired.</value>
         public static UnsignedShort DataSetTypeRetired
         {
             get { return new UnsignedShort {Tag = new Tag("00080040")}; }
         }
 
+        /// <summary>
+        /// Gets the data set subtype retired.
+        /// </summary>
+        /// <value>The data set subtype retired.</value>
         public static LongString DataSetSubtypeRetired
         {
             get { return new LongString {Tag = new Tag("00080041")}; }
         }
 
+        /// <summary>
+        /// Gets the nuclear medicine series type retired.
+        /// </summary>
+        /// <value>The nuclear medicine series type retired.</value>
         public static CodeString NuclearMedicineSeriesTypeRetired
         {
             get { return new CodeString {Tag = new Tag("00080042")}; }
         }
 
+        /// <summary>
+        /// Gets the accession number.
+        /// </summary>
+        /// <value>The accession number.</value>
         public static ShortString AccessionNumber
         {
             get { return new ShortString {Tag = new Tag("00080050")}; }
         }
 
+        /// <summary>
+        /// Gets the issuer of accession number sequence.
+        /// </summary>
+        /// <value>The issuer of accession number sequence.</value>
         public static Sequence IssuerOfAccessionNumberSequence
         {
             get { return new Sequence {Tag = new Tag("00080051")}; }
         }
 
+        /// <summary>
+        /// Gets the query retrieve level.
+        /// </summary>
+        /// <value>The query retrieve level.</value>
         public static CodeString QueryRetrieveLevel
         {
             get { return new CodeString {Tag = new Tag("00080052")}; }
         }
 
+        /// <summary>
+        /// Gets the retrieve ae title.
+        /// </summary>
+        /// <value>The retrieve ae title.</value>
         public static ApplicationEntity RetrieveAETitle
         {
             get { return new ApplicationEntity {Tag = new Tag("00080054")}; }
         }
 
+        /// <summary>
+        /// Gets the instance availability.
+        /// </summary>
+        /// <value>The instance availability.</value>
         public static CodeString InstanceAvailability
         {
             get { return new CodeString {Tag = new Tag("00080056")}; }
         }
 
+        /// <summary>
+        /// Gets the failed sop instance uid list.
+        /// </summary>
+        /// <value>The failed sop instance uid list.</value>
         public static UniqueIdentifier FailedSOPInstanceUIDList
         {
             get { return new UniqueIdentifier {Tag = new Tag("00080058")}; }
         }
 
+        /// <summary>
+        /// Gets the modality.
+        /// </summary>
+        /// <value>The modality.</value>
         public static CodeString Modality
         {
             get { return new CodeString {Tag = new Tag("00080060")}; }
         }
 
+        /// <summary>
+        /// Gets the modalities in study.
+        /// </summary>
+        /// <value>The modalities in study.</value>
         public static CodeString ModalitiesInStudy
         {
             get { return new CodeString {Tag = new Tag("00080061")}; }
         }
 
+        /// <summary>
+        /// Gets the sop classes in study.
+        /// </summary>
+        /// <value>The sop classes in study.</value>
         public static UniqueIdentifier SOPClassesInStudy
         {
             get { return new UniqueIdentifier {Tag = new Tag("00080062")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the conversion.
+        /// </summary>
+        /// <value>The type of the conversion.</value>
         public static CodeString ConversionType
         {
             get { return new CodeString {Tag = new Tag("00080064")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the presentation intent.
+        /// </summary>
+        /// <value>The type of the presentation intent.</value>
         public static CodeString PresentationIntentType
         {
             get { return new CodeString {Tag = new Tag("00080068")}; }
         }
 
+        /// <summary>
+        /// Gets the manufacturer.
+        /// </summary>
+        /// <value>The manufacturer.</value>
         public static LongString Manufacturer
         {
             get { return new LongString {Tag = new Tag("00080070")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the institution.
+        /// </summary>
+        /// <value>The name of the institution.</value>
         public static LongString InstitutionName
         {
             get { return new LongString {Tag = new Tag("00080080")}; }
         }
 
+        /// <summary>
+        /// Gets the institution address.
+        /// </summary>
+        /// <value>The institution address.</value>
         public static ShortText InstitutionAddress
         {
             get { return new ShortText {Tag = new Tag("00080081")}; }
         }
 
+        /// <summary>
+        /// Gets the institution code sequence.
+        /// </summary>
+        /// <value>The institution code sequence.</value>
         public static Sequence InstitutionCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00080082")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the referring physician.
+        /// </summary>
+        /// <value>The name of the referring physician.</value>
         public static PersonName ReferringPhysicianName
         {
             get { return new PersonName {Tag = new Tag("00080090")}; }
         }
 
+        /// <summary>
+        /// Gets the referring physician address.
+        /// </summary>
+        /// <value>The referring physician address.</value>
         public static ShortText ReferringPhysicianAddress
         {
             get { return new ShortText {Tag = new Tag("00080092")}; }
         }
 
+        /// <summary>
+        /// Gets the referring physician telephone numbers.
+        /// </summary>
+        /// <value>The referring physician telephone numbers.</value>
         public static ShortString ReferringPhysicianTelephoneNumbers
         {
             get { return new ShortString {Tag = new Tag("00080094")}; }
         }
 
+        /// <summary>
+        /// Gets the referring physician identification sequence.
+        /// </summary>
+        /// <value>The referring physician identification sequence.</value>
         public static Sequence ReferringPhysicianIdentificationSequence
         {
             get { return new Sequence {Tag = new Tag("00080096")}; }
         }
 
+        /// <summary>
+        /// Gets the code value.
+        /// </summary>
+        /// <value>The code value.</value>
         public static ShortString CodeValue
         {
             get { return new ShortString {Tag = new Tag("00080100")}; }
         }
 
+        /// <summary>
+        /// Gets the coding scheme designator.
+        /// </summary>
+        /// <value>The coding scheme designator.</value>
         public static ShortString CodingSchemeDesignator
         {
             get { return new ShortString {Tag = new Tag("00080102")}; }
         }
 
+        /// <summary>
+        /// Gets the coding scheme version.
+        /// </summary>
+        /// <value>The coding scheme version.</value>
         public static ShortString CodingSchemeVersion
         {
             get { return new ShortString {Tag = new Tag("00080103")}; }
         }
 
+        /// <summary>
+        /// Gets the code meaning.
+        /// </summary>
+        /// <value>The code meaning.</value>
         public static LongString CodeMeaning
         {
             get { return new LongString {Tag = new Tag("00080104")}; }
         }
 
+        /// <summary>
+        /// Gets the mapping resource.
+        /// </summary>
+        /// <value>The mapping resource.</value>
         public static CodeString MappingResource
         {
             get { return new CodeString {Tag = new Tag("00080105")}; }
         }
 
+        /// <summary>
+        /// Gets the context group extension flag.
+        /// </summary>
+        /// <value>The context group extension flag.</value>
         public static CodeString ContextGroupExtensionFlag
         {
             get { return new CodeString {Tag = new Tag("0008010B")}; }
         }
 
+        /// <summary>
+        /// Gets the coding scheme uid.
+        /// </summary>
+        /// <value>The coding scheme uid.</value>
         public static UniqueIdentifier CodingSchemeUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("0008010C")}; }
         }
 
+        /// <summary>
+        /// Gets the context group extension creator uid.
+        /// </summary>
+        /// <value>The context group extension creator uid.</value>
         public static UniqueIdentifier ContextGroupExtensionCreatorUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("0008010D")}; }
         }
 
+        /// <summary>
+        /// Gets the context identifier.
+        /// </summary>
+        /// <value>The context identifier.</value>
         public static CodeString ContextIdentifier
         {
             get { return new CodeString {Tag = new Tag("0008010F")}; }
         }
 
+        /// <summary>
+        /// Gets the coding scheme identification sequence.
+        /// </summary>
+        /// <value>The coding scheme identification sequence.</value>
         public static Sequence CodingSchemeIdentificationSequence
         {
             get { return new Sequence {Tag = new Tag("00080110")}; }
         }
 
+        /// <summary>
+        /// Gets the coding scheme registry.
+        /// </summary>
+        /// <value>The coding scheme registry.</value>
         public static LongString CodingSchemeRegistry
         {
             get { return new LongString {Tag = new Tag("00080112")}; }
         }
 
+        /// <summary>
+        /// Gets the coding scheme external identifier.
+        /// </summary>
+        /// <value>The coding scheme external identifier.</value>
         public static ShortText CodingSchemeExternalID
         {
             get { return new ShortText {Tag = new Tag("00080114")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the coding scheme.
+        /// </summary>
+        /// <value>The name of the coding scheme.</value>
         public static ShortText CodingSchemeName
         {
             get { return new ShortText {Tag = new Tag("00080115")}; }
         }
 
+        /// <summary>
+        /// Gets the coding scheme responsible organization.
+        /// </summary>
+        /// <value>The coding scheme responsible organization.</value>
         public static ShortText CodingSchemeResponsibleOrganization
         {
             get { return new ShortText {Tag = new Tag("00080116")}; }
         }
 
+        /// <summary>
+        /// Gets the context uid.
+        /// </summary>
+        /// <value>The context uid.</value>
         public static UniqueIdentifier ContextUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00080117")}; }
         }
 
+        /// <summary>
+        /// Gets the timezone offset from UTC.
+        /// </summary>
+        /// <value>The timezone offset from UTC.</value>
         public static ShortString TimezoneOffsetFromUTC
         {
             get { return new ShortString {Tag = new Tag("00080201")}; }
         }
 
+        /// <summary>
+        /// Gets the network identifier retired.
+        /// </summary>
+        /// <value>The network identifier retired.</value>
         public static ApplicationEntity NetworkIDRetired
         {
             get { return new ApplicationEntity {Tag = new Tag("00081000")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the station.
+        /// </summary>
+        /// <value>The name of the station.</value>
         public static ShortString StationName
         {
             get { return new ShortString {Tag = new Tag("00081010")}; }
         }
 
+        /// <summary>
+        /// Gets the study description.
+        /// </summary>
+        /// <value>The study description.</value>
         public static LongString StudyDescription
         {
             get { return new LongString {Tag = new Tag("00081030")}; }
         }
 
+        /// <summary>
+        /// Gets the procedure code sequence.
+        /// </summary>
+        /// <value>The procedure code sequence.</value>
         public static Sequence ProcedureCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00081032")}; }
         }
 
+        /// <summary>
+        /// Gets the series description.
+        /// </summary>
+        /// <value>The series description.</value>
         public static LongString SeriesDescription
         {
             get { return new LongString {Tag = new Tag("0008103E")}; }
         }
 
+        /// <summary>
+        /// Gets the series description code sequence.
+        /// </summary>
+        /// <value>The series description code sequence.</value>
         public static Sequence SeriesDescriptionCodeSequence
         {
             get { return new Sequence {Tag = new Tag("0008103F")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the institutional department.
+        /// </summary>
+        /// <value>The name of the institutional department.</value>
         public static LongString InstitutionalDepartmentName
         {
             get { return new LongString {Tag = new Tag("00081040")}; }
         }
 
+        /// <summary>
+        /// Gets the physicians of record.
+        /// </summary>
+        /// <value>The physicians of record.</value>
         public static PersonName PhysiciansOfRecord
         {
             get { return new PersonName {Tag = new Tag("00081048")}; }
         }
 
+        /// <summary>
+        /// Gets the physicians of record identification sequence.
+        /// </summary>
+        /// <value>The physicians of record identification sequence.</value>
         public static Sequence PhysiciansOfRecordIdentificationSequence
         {
             get { return new Sequence {Tag = new Tag("00081049")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the performing physician.
+        /// </summary>
+        /// <value>The name of the performing physician.</value>
         public static PersonName PerformingPhysicianName
         {
             get { return new PersonName {Tag = new Tag("00081050")}; }
         }
 
+        /// <summary>
+        /// Gets the performing physician identification sequence.
+        /// </summary>
+        /// <value>The performing physician identification sequence.</value>
         public static Sequence PerformingPhysicianIdentificationSequence
         {
             get { return new Sequence {Tag = new Tag("00081052")}; }
         }
 
+        /// <summary>
+        /// Gets the name of physicians reading study.
+        /// </summary>
+        /// <value>The name of physicians reading study.</value>
         public static PersonName NameOfPhysiciansReadingStudy
         {
             get { return new PersonName {Tag = new Tag("00081060")}; }
         }
 
+        /// <summary>
+        /// Gets the physicians reading study identification sequence.
+        /// </summary>
+        /// <value>The physicians reading study identification sequence.</value>
         public static Sequence PhysiciansReadingStudyIdentificationSequence
         {
             get { return new Sequence {Tag = new Tag("00081062")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the operators.
+        /// </summary>
+        /// <value>The name of the operators.</value>
         public static PersonName OperatorsName
         {
             get { return new PersonName {Tag = new Tag("00081070")}; }
         }
 
+        /// <summary>
+        /// Gets the operator identification sequence.
+        /// </summary>
+        /// <value>The operator identification sequence.</value>
         public static Sequence OperatorIdentificationSequence
         {
             get { return new Sequence {Tag = new Tag("00081072")}; }
         }
 
+        /// <summary>
+        /// Gets the admitting diagnoses description.
+        /// </summary>
+        /// <value>The admitting diagnoses description.</value>
         public static LongString AdmittingDiagnosesDescription
         {
             get { return new LongString {Tag = new Tag("00081080")}; }
         }
 
+        /// <summary>
+        /// Gets the admitting diagnoses code sequence.
+        /// </summary>
+        /// <value>The admitting diagnoses code sequence.</value>
         public static Sequence AdmittingDiagnosesCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00081084")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the manufacturer model.
+        /// </summary>
+        /// <value>The name of the manufacturer model.</value>
         public static LongString ManufacturerModelName
         {
             get { return new LongString {Tag = new Tag("00081090")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced results sequence retired.
+        /// </summary>
+        /// <value>The referenced results sequence retired.</value>
         public static Sequence ReferencedResultsSequenceRetired
         {
             get { return new Sequence {Tag = new Tag("00081100")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced study sequence.
+        /// </summary>
+        /// <value>The referenced study sequence.</value>
         public static Sequence ReferencedStudySequence
         {
             get { return new Sequence {Tag = new Tag("00081110")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced performed procedure step sequence.
+        /// </summary>
+        /// <value>The referenced performed procedure step sequence.</value>
         public static Sequence ReferencedPerformedProcedureStepSequence
         {
             get { return new Sequence {Tag = new Tag("00081111")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced series sequence.
+        /// </summary>
+        /// <value>The referenced series sequence.</value>
         public static Sequence ReferencedSeriesSequence
         {
             get { return new Sequence {Tag = new Tag("00081115")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced patient sequence.
+        /// </summary>
+        /// <value>The referenced patient sequence.</value>
         public static Sequence ReferencedPatientSequence
         {
             get { return new Sequence {Tag = new Tag("00081120")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced visit sequence.
+        /// </summary>
+        /// <value>The referenced visit sequence.</value>
         public static Sequence ReferencedVisitSequence
         {
             get { return new Sequence {Tag = new Tag("00081125")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced overlay sequence retired.
+        /// </summary>
+        /// <value>The referenced overlay sequence retired.</value>
         public static Sequence ReferencedOverlaySequenceRetired
         {
             get { return new Sequence {Tag = new Tag("00081130")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced stereometric instance sequence.
+        /// </summary>
+        /// <value>The referenced stereometric instance sequence.</value>
         public static Sequence ReferencedStereometricInstanceSequence
         {
             get { return new Sequence {Tag = new Tag("00081134")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced waveform sequence.
+        /// </summary>
+        /// <value>The referenced waveform sequence.</value>
         public static Sequence ReferencedWaveformSequence
         {
             get { return new Sequence {Tag = new Tag("0008113A")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced image sequence.
+        /// </summary>
+        /// <value>The referenced image sequence.</value>
         public static Sequence ReferencedImageSequence
         {
             get { return new Sequence {Tag = new Tag("00081140")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced curve sequence retired.
+        /// </summary>
+        /// <value>The referenced curve sequence retired.</value>
         public static Sequence ReferencedCurveSequenceRetired
         {
             get { return new Sequence {Tag = new Tag("00081145")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced instance sequence.
+        /// </summary>
+        /// <value>The referenced instance sequence.</value>
         public static Sequence ReferencedInstanceSequence
         {
             get { return new Sequence {Tag = new Tag("0008114A")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced real world value mapping instance sequence.
+        /// </summary>
+        /// <value>The referenced real world value mapping instance sequence.</value>
         public static Sequence ReferencedRealWorldValueMappingInstanceSequence
         {
             get { return new Sequence {Tag = new Tag("0008114B")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced sop class uid.
+        /// </summary>
+        /// <value>The referenced sop class uid.</value>
         public static UniqueIdentifier ReferencedSOPClassUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00081150")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced sop instance uid.
+        /// </summary>
+        /// <value>The referenced sop instance uid.</value>
         public static UniqueIdentifier ReferencedSOPInstanceUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00081155")}; }
         }
 
+        /// <summary>
+        /// Gets the sop classes supported.
+        /// </summary>
+        /// <value>The sop classes supported.</value>
         public static UniqueIdentifier SOPClassesSupported
         {
             get { return new UniqueIdentifier {Tag = new Tag("0008115A")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced frame number.
+        /// </summary>
+        /// <value>The referenced frame number.</value>
         public static IntegerString ReferencedFrameNumber
         {
             get { return new IntegerString {Tag = new Tag("00081160")}; }
         }
 
+        /// <summary>
+        /// Gets the simple frame list.
+        /// </summary>
+        /// <value>The simple frame list.</value>
         public static UnsignedLong SimpleFrameList
         {
             get { return new UnsignedLong {Tag = new Tag("00081161")}; }
         }
 
+        /// <summary>
+        /// Gets the calculated frame list.
+        /// </summary>
+        /// <value>The calculated frame list.</value>
         public static UnsignedLong CalculatedFrameList
         {
             get { return new UnsignedLong {Tag = new Tag("00081162")}; }
         }
 
+        /// <summary>
+        /// Gets the time range.
+        /// </summary>
+        /// <value>The time range.</value>
         public static FloatingPointDouble TimeRange
         {
             get { return new FloatingPointDouble {Tag = new Tag("00081163")}; }
         }
 
+        /// <summary>
+        /// Gets the frame extraction sequence.
+        /// </summary>
+        /// <value>The frame extraction sequence.</value>
         public static Sequence FrameExtractionSequence
         {
             get { return new Sequence {Tag = new Tag("00081164")}; }
         }
 
+        /// <summary>
+        /// Gets the multi frame source sop instance uid.
+        /// </summary>
+        /// <value>The multi frame source sop instance uid.</value>
         public static UniqueIdentifier MultiFrameSourceSOPInstanceUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00081167")}; }
         }
 
+        /// <summary>
+        /// Gets the transaction uid.
+        /// </summary>
+        /// <value>The transaction uid.</value>
         public static UniqueIdentifier TransactionUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00081195")}; }
         }
 
+        /// <summary>
+        /// Gets the failure reason.
+        /// </summary>
+        /// <value>The failure reason.</value>
         public static UnsignedShort FailureReason
         {
             get { return new UnsignedShort {Tag = new Tag("00081197")}; }
         }
 
+        /// <summary>
+        /// Gets the failed sop sequence.
+        /// </summary>
+        /// <value>The failed sop sequence.</value>
         public static Sequence FailedSOPSequence
         {
             get { return new Sequence {Tag = new Tag("00081198")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced sop sequence.
+        /// </summary>
+        /// <value>The referenced sop sequence.</value>
         public static Sequence ReferencedSOPSequence
         {
             get { return new Sequence {Tag = new Tag("00081199")}; }
         }
 
+        /// <summary>
+        /// Gets the studies containing other referenced instances sequence.
+        /// </summary>
+        /// <value>The studies containing other referenced instances sequence.</value>
         public static Sequence StudiesContainingOtherReferencedInstancesSequence
         {
             get { return new Sequence {Tag = new Tag("00081200")}; }
         }
 
+        /// <summary>
+        /// Gets the related series sequence.
+        /// </summary>
+        /// <value>The related series sequence.</value>
         public static Sequence RelatedSeriesSequence
         {
             get { return new Sequence {Tag = new Tag("00081250")}; }
         }
 
+        /// <summary>
+        /// Gets the lossy image compression retired.
+        /// </summary>
+        /// <value>The lossy image compression retired.</value>
         public static CodeString LossyImageCompressionRetired
         {
             get { return new CodeString {Tag = new Tag("00082110")}; }
         }
 
+        /// <summary>
+        /// Gets the derivation description.
+        /// </summary>
+        /// <value>The derivation description.</value>
         public static ShortText DerivationDescription
         {
             get { return new ShortText {Tag = new Tag("00082111")}; }
         }
 
+        /// <summary>
+        /// Gets the source image sequence.
+        /// </summary>
+        /// <value>The source image sequence.</value>
         public static Sequence SourceImageSequence
         {
             get { return new Sequence {Tag = new Tag("00082112")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the stage.
+        /// </summary>
+        /// <value>The name of the stage.</value>
         public static ShortString StageName
         {
             get { return new ShortString {Tag = new Tag("00082120")}; }
         }
 
+        /// <summary>
+        /// Gets the stage number.
+        /// </summary>
+        /// <value>The stage number.</value>
         public static IntegerString StageNumber
         {
             get { return new IntegerString {Tag = new Tag("00082122")}; }
         }
 
+        /// <summary>
+        /// Gets the number of stages.
+        /// </summary>
+        /// <value>The number of stages.</value>
         public static IntegerString NumberOfStages
         {
             get { return new IntegerString {Tag = new Tag("00082124")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the view.
+        /// </summary>
+        /// <value>The name of the view.</value>
         public static ShortString ViewName
         {
             get { return new ShortString {Tag = new Tag("00082127")}; }
         }
 
+        /// <summary>
+        /// Gets the view number.
+        /// </summary>
+        /// <value>The view number.</value>
         public static IntegerString ViewNumber
         {
             get { return new IntegerString {Tag = new Tag("00082128")}; }
         }
 
+        /// <summary>
+        /// Gets the number of event timers.
+        /// </summary>
+        /// <value>The number of event timers.</value>
         public static IntegerString NumberOfEventTimers
         {
             get { return new IntegerString {Tag = new Tag("00082129")}; }
         }
 
+        /// <summary>
+        /// Gets the number of views in stage.
+        /// </summary>
+        /// <value>The number of views in stage.</value>
         public static IntegerString NumberOfViewsInStage
         {
             get { return new IntegerString {Tag = new Tag("0008212A")}; }
         }
 
+        /// <summary>
+        /// Gets the event elapsed times.
+        /// </summary>
+        /// <value>The event elapsed times.</value>
         public static DecimalString EventElapsedTimes
         {
             get { return new DecimalString {Tag = new Tag("00082130")}; }
         }
 
+        /// <summary>
+        /// Gets the event timer names.
+        /// </summary>
+        /// <value>The event timer names.</value>
         public static LongString EventTimerNames
         {
             get { return new LongString {Tag = new Tag("00082132")}; }
         }
 
+        /// <summary>
+        /// Gets the event timer sequence.
+        /// </summary>
+        /// <value>The event timer sequence.</value>
         public static Sequence EventTimerSequence
         {
             get { return new Sequence {Tag = new Tag("00082133")}; }
         }
 
+        /// <summary>
+        /// Gets the event time offset.
+        /// </summary>
+        /// <value>The event time offset.</value>
         public static FloatingPointDouble EventTimeOffset
         {
             get { return new FloatingPointDouble {Tag = new Tag("00082134")}; }
         }
 
+        /// <summary>
+        /// Gets the event code sequence.
+        /// </summary>
+        /// <value>The event code sequence.</value>
         public static Sequence EventCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00082135")}; }
         }
 
+        /// <summary>
+        /// Gets the start trim.
+        /// </summary>
+        /// <value>The start trim.</value>
         public static IntegerString StartTrim
         {
             get { return new IntegerString {Tag = new Tag("00082142")}; }
         }
 
+        /// <summary>
+        /// Gets the stop trim.
+        /// </summary>
+        /// <value>The stop trim.</value>
         public static IntegerString StopTrim
         {
             get { return new IntegerString {Tag = new Tag("00082143")}; }
         }
 
+        /// <summary>
+        /// Gets the recommended display frame rate.
+        /// </summary>
+        /// <value>The recommended display frame rate.</value>
         public static IntegerString RecommendedDisplayFrameRate
         {
             get { return new IntegerString {Tag = new Tag("00082144")}; }
         }
 
+        /// <summary>
+        /// Gets the transducer position retired.
+        /// </summary>
+        /// <value>The transducer position retired.</value>
         public static CodeString TransducerPositionRetired
         {
             get { return new CodeString {Tag = new Tag("00082200")}; }
         }
 
+        /// <summary>
+        /// Gets the transducer orientation retired.
+        /// </summary>
+        /// <value>The transducer orientation retired.</value>
         public static CodeString TransducerOrientationRetired
         {
             get { return new CodeString {Tag = new Tag("00082204")}; }
         }
 
+        /// <summary>
+        /// Gets the anatomic structure retired.
+        /// </summary>
+        /// <value>The anatomic structure retired.</value>
         public static CodeString AnatomicStructureRetired
         {
             get { return new CodeString {Tag = new Tag("00082208")}; }
         }
 
+        /// <summary>
+        /// Gets the anatomic region sequence.
+        /// </summary>
+        /// <value>The anatomic region sequence.</value>
         public static Sequence AnatomicRegionSequence
         {
             get { return new Sequence {Tag = new Tag("00082218")}; }
         }
 
+        /// <summary>
+        /// Gets the anatomic region modifier sequence.
+        /// </summary>
+        /// <value>The anatomic region modifier sequence.</value>
         public static Sequence AnatomicRegionModifierSequence
         {
             get { return new Sequence {Tag = new Tag("00082220")}; }
         }
 
+        /// <summary>
+        /// Gets the primary anatomic structure sequence.
+        /// </summary>
+        /// <value>The primary anatomic structure sequence.</value>
         public static Sequence PrimaryAnatomicStructureSequence
         {
             get { return new Sequence {Tag = new Tag("00082228")}; }
         }
 
+        /// <summary>
+        /// Gets the anatomic structure space or region sequence.
+        /// </summary>
+        /// <value>The anatomic structure space or region sequence.</value>
         public static Sequence AnatomicStructureSpaceOrRegionSequence
         {
             get { return new Sequence {Tag = new Tag("00082229")}; }
         }
 
+        /// <summary>
+        /// Gets the primary anatomic structure modifier sequence.
+        /// </summary>
+        /// <value>The primary anatomic structure modifier sequence.</value>
         public static Sequence PrimaryAnatomicStructureModifierSequence
         {
             get { return new Sequence {Tag = new Tag("00082230")}; }
         }
 
+        /// <summary>
+        /// Gets the transducer position sequence retired.
+        /// </summary>
+        /// <value>The transducer position sequence retired.</value>
         public static Sequence TransducerPositionSequenceRetired
         {
             get { return new Sequence {Tag = new Tag("00082240")}; }
         }
 
+        /// <summary>
+        /// Gets the transducer position modifier sequence retired.
+        /// </summary>
+        /// <value>The transducer position modifier sequence retired.</value>
         public static Sequence TransducerPositionModifierSequenceRetired
         {
             get { return new Sequence {Tag = new Tag("00082242")}; }
         }
 
+        /// <summary>
+        /// Gets the transducer orientation sequence retired.
+        /// </summary>
+        /// <value>The transducer orientation sequence retired.</value>
         public static Sequence TransducerOrientationSequenceRetired
         {
             get { return new Sequence {Tag = new Tag("00082244")}; }
         }
 
+        /// <summary>
+        /// Gets the transducer orientation modifier sequence retired.
+        /// </summary>
+        /// <value>The transducer orientation modifier sequence retired.</value>
         public static Sequence TransducerOrientationModifierSequenceRetired
         {
             get { return new Sequence {Tag = new Tag("00082246")}; }
         }
 
+        /// <summary>
+        /// Gets the anatomic structure space or region code sequence trial retired.
+        /// </summary>
+        /// <value>The anatomic structure space or region code sequence trial retired.</value>
         public static Sequence AnatomicStructureSpaceOrRegionCodeSequenceTrialRetired
         {
             get { return new Sequence {Tag = new Tag("00082251")}; }
         }
 
+        /// <summary>
+        /// Gets the anatomic portal of entrance code sequence trial retired.
+        /// </summary>
+        /// <value>The anatomic portal of entrance code sequence trial retired.</value>
         public static Sequence AnatomicPortalOfEntranceCodeSequenceTrialRetired
         {
             get { return new Sequence {Tag = new Tag("00082253")}; }
         }
 
+        /// <summary>
+        /// Gets the anatomic approach direction code sequence trial retired.
+        /// </summary>
+        /// <value>The anatomic approach direction code sequence trial retired.</value>
         public static Sequence AnatomicApproachDirectionCodeSequenceTrialRetired
         {
             get { return new Sequence {Tag = new Tag("00082255")}; }
         }
 
+        /// <summary>
+        /// Gets the anatomic perspective description trial retired.
+        /// </summary>
+        /// <value>The anatomic perspective description trial retired.</value>
         public static ShortText AnatomicPerspectiveDescriptionTrialRetired
         {
             get { return new ShortText {Tag = new Tag("00082256")}; }
         }
 
+        /// <summary>
+        /// Gets the anatomic perspective code sequence trial retired.
+        /// </summary>
+        /// <value>The anatomic perspective code sequence trial retired.</value>
         public static Sequence AnatomicPerspectiveCodeSequenceTrialRetired
         {
             get { return new Sequence {Tag = new Tag("00082257")}; }
         }
 
+        /// <summary>
+        /// Gets the anatomic location of examining instrument description trial retired.
+        /// </summary>
+        /// <value>The anatomic location of examining instrument description trial retired.</value>
         public static ShortText AnatomicLocationOfExaminingInstrumentDescriptionTrialRetired
         {
             get { return new ShortText {Tag = new Tag("00082258")}; }
         }
 
+        /// <summary>
+        /// Gets the anatomic location of examining instrument code sequence trial retired.
+        /// </summary>
+        /// <value>The anatomic location of examining instrument code sequence trial retired.</value>
         public static Sequence AnatomicLocationOfExaminingInstrumentCodeSequenceTrialRetired
         {
             get { return new Sequence {Tag = new Tag("00082259")}; }
         }
 
+        /// <summary>
+        /// Gets the anatomic structure space or region modifier code sequence trial retired.
+        /// </summary>
+        /// <value>The anatomic structure space or region modifier code sequence trial retired.</value>
         public static Sequence AnatomicStructureSpaceOrRegionModifierCodeSequenceTrialRetired
         {
             get { return new Sequence {Tag = new Tag("0008225A")}; }
         }
 
+        /// <summary>
+        /// Gets the on axis background anatomic structure code sequence trial retired.
+        /// </summary>
+        /// <value>The on axis background anatomic structure code sequence trial retired.</value>
         public static Sequence OnAxisBackgroundAnatomicStructureCodeSequenceTrialRetired
         {
             get { return new Sequence {Tag = new Tag("0008225C")}; }
         }
 
+        /// <summary>
+        /// Gets the alternate representation sequence.
+        /// </summary>
+        /// <value>The alternate representation sequence.</value>
         public static Sequence AlternateRepresentationSequence
         {
             get { return new Sequence {Tag = new Tag("00083001")}; }
         }
 
+        /// <summary>
+        /// Gets the irradiation event uid.
+        /// </summary>
+        /// <value>The irradiation event uid.</value>
         public static UniqueIdentifier IrradiationEventUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00083010")}; }
         }
 
+        /// <summary>
+        /// Gets the identifying comments retired.
+        /// </summary>
+        /// <value>The identifying comments retired.</value>
         public static LongText IdentifyingCommentsRetired
         {
             get { return new LongText {Tag = new Tag("00084000")}; }
         }
 
+        /// <summary>
+        /// Gets the type of the frame.
+        /// </summary>
+        /// <value>The type of the frame.</value>
         public static CodeString FrameType
         {
             get { return new CodeString {Tag = new Tag("00089007")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced image evidence sequence.
+        /// </summary>
+        /// <value>The referenced image evidence sequence.</value>
         public static Sequence ReferencedImageEvidenceSequence
         {
             get { return new Sequence {Tag = new Tag("00089092")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced raw data sequence.
+        /// </summary>
+        /// <value>The referenced raw data sequence.</value>
         public static Sequence ReferencedRawDataSequence
         {
             get { return new Sequence {Tag = new Tag("00089121")}; }
         }
 
+        /// <summary>
+        /// Gets the creator version uid.
+        /// </summary>
+        /// <value>The creator version uid.</value>
         public static UniqueIdentifier CreatorVersionUID
         {
             get { return new UniqueIdentifier {Tag = new Tag("00089123")}; }
         }
 
+        /// <summary>
+        /// Gets the derivation image sequence.
+        /// </summary>
+        /// <value>The derivation image sequence.</value>
         public static Sequence DerivationImageSequence
         {
             get { return new Sequence {Tag = new Tag("00089124")}; }
         }
 
+        /// <summary>
+        /// Gets the source image evidence sequence.
+        /// </summary>
+        /// <value>The source image evidence sequence.</value>
         public static Sequence SourceImageEvidenceSequence
         {
             get { return new Sequence {Tag = new Tag("00089154")}; }
         }
 
+        /// <summary>
+        /// Gets the pixel presentation.
+        /// </summary>
+        /// <value>The pixel presentation.</value>
         public static CodeString PixelPresentation
         {
             get { return new CodeString {Tag = new Tag("00089205")}; }
         }
 
+        /// <summary>
+        /// Gets the volumetric properties.
+        /// </summary>
+        /// <value>The volumetric properties.</value>
         public static CodeString VolumetricProperties
         {
             get { return new CodeString {Tag = new Tag("00089206")}; }
         }
 
+        /// <summary>
+        /// Gets the volume based calculation technique.
+        /// </summary>
+        /// <value>The volume based calculation technique.</value>
         public static CodeString VolumeBasedCalculationTechnique
         {
             get { return new CodeString {Tag = new Tag("00089207")}; }
         }
 
+        /// <summary>
+        /// Gets the complex image component.
+        /// </summary>
+        /// <value>The complex image component.</value>
         public static CodeString ComplexImageComponent
         {
             get { return new CodeString {Tag = new Tag("00089208")}; }
         }
 
+        /// <summary>
+        /// Gets the acquisition contrast.
+        /// </summary>
+        /// <value>The acquisition contrast.</value>
         public static CodeString AcquisitionContrast
         {
             get { return new CodeString {Tag = new Tag("00089209")}; }
         }
 
+        /// <summary>
+        /// Gets the derivation code sequence.
+        /// </summary>
+        /// <value>The derivation code sequence.</value>
         public static Sequence DerivationCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00089215")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced presentation state sequence.
+        /// </summary>
+        /// <value>The referenced presentation state sequence.</value>
         public static Sequence ReferencedPresentationStateSequence
         {
             get { return new Sequence {Tag = new Tag("00089237")}; }
         }
 
+        /// <summary>
+        /// Gets the referenced other plane sequence.
+        /// </summary>
+        /// <value>The referenced other plane sequence.</value>
         public static Sequence ReferencedOtherPlaneSequence
         {
             get { return new Sequence {Tag = new Tag("00089410")}; }
         }
 
+        /// <summary>
+        /// Gets the frame display sequence.
+        /// </summary>
+        /// <value>The frame display sequence.</value>
         public static Sequence FrameDisplaySequence
         {
             get { return new Sequence {Tag = new Tag("00089458")}; }
         }
 
+        /// <summary>
+        /// Gets the recommended display frame rate in float.
+        /// </summary>
+        /// <value>The recommended display frame rate in float.</value>
         public static FloatingPointSingle RecommendedDisplayFrameRateInFloat
         {
             get { return new FloatingPointSingle {Tag = new Tag("00089459")}; }
         }
 
+        /// <summary>
+        /// Gets the skip frame range flag.
+        /// </summary>
+        /// <value>The skip frame range flag.</value>
         public static CodeString SkipFrameRangeFlag
         {
             get { return new CodeString {Tag = new Tag("00089460")}; }
         }
 
+        /// <summary>
+        /// Gets the name of the patient.
+        /// </summary>
+        /// <value>The name of the patient.</value>
         public static PersonName PatientName
         {
             get { return new PersonName {Tag = new Tag("00100010")}; }
