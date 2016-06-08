@@ -4,15 +4,24 @@ using EvilDICOM.Core.IO.Data;
 namespace EvilDICOM.Core.Element
 {
     /// <summary>
-    ///     Encapsulates the AgeString VR type
+    /// Encapsulates the AgeString VR type
     /// </summary>
+    /// <seealso cref="EvilDICOM.Core.Element.AbstractElement{System.String}" />
     public class AgeString : AbstractElement<string>
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AgeString"/> class.
+        /// </summary>
         public AgeString()
         {
             VR = VR.AgeString;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AgeString"/> class.
+        /// </summary>
+        /// <param name="tag">The tag.</param>
+        /// <param name="data">The data.</param>
         public AgeString(Tag tag, string data)
             : base(tag, data)
         {
@@ -20,8 +29,9 @@ namespace EvilDICOM.Core.Element
         }
 
         /// <summary>
-        ///     The age stored in the element. Supplements the data property.
+        /// The age stored in the element. Supplements the data property.
         /// </summary>
+        /// <value>The age.</value>
         public Age Age
         {
             get { return StringDataParser.ParseAgeString(DataContainer.SingleValue); }

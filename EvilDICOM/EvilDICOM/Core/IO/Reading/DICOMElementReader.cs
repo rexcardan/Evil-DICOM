@@ -7,12 +7,12 @@ using EvilDICOM.Core.Interfaces;
 namespace EvilDICOM.Core.IO.Reading
 {
     /// <summary>
-    ///     Reads in DICOM elements from a DICOM object
+    /// Reads in DICOM elements from a DICOM object
     /// </summary>
     public class DICOMElementReader
     {
         /// <summary>
-        ///     Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
+        /// Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
         /// </summary>
         /// <param name="dr">the binary reader which is reading the DICOM object</param>
         /// <returns>the next DICOM element</returns>
@@ -26,7 +26,7 @@ namespace EvilDICOM.Core.IO.Reading
         }
 
         /// <summary>
-        ///     Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
+        /// Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
         /// </summary>
         /// <param name="dr">the binary reader which is reading the DICOM object</param>
         /// <returns>the next DICOM element</returns>
@@ -41,7 +41,7 @@ namespace EvilDICOM.Core.IO.Reading
         }
 
         /// <summary>
-        ///     Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
+        /// Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
         /// </summary>
         /// <param name="dr">the binary reader which is reading the DICOM object</param>
         /// <returns>the next DICOM element</returns>
@@ -56,6 +56,10 @@ namespace EvilDICOM.Core.IO.Reading
 
         #region SKIPPERS
 
+        /// <summary>
+        /// Skips the element explicit little endian.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
         public static void SkipElementExplicitLittleEndian(DICOMBinaryReader dr)
         {
             Tag tag = TagReader.ReadLittleEndian(dr);
@@ -72,6 +76,10 @@ namespace EvilDICOM.Core.IO.Reading
             }
         }
 
+        /// <summary>
+        /// Skips the element implicit little endian.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
         public static void SkipElementImplicitLittleEndian(DICOMBinaryReader dr)
         {
             Tag tag = TagReader.ReadLittleEndian(dr);
@@ -87,6 +95,10 @@ namespace EvilDICOM.Core.IO.Reading
             }
         }
 
+        /// <summary>
+        /// Skips the element explicit big endian.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
         public static void SkipElementExplicitBigEndian(DICOMBinaryReader dr)
         {
             Tag tag = TagReader.ReadBigEndian(dr);
@@ -107,6 +119,12 @@ namespace EvilDICOM.Core.IO.Reading
 
         #region READ ALL ELEMENT METHODS
 
+        /// <summary>
+        /// Reads all elements.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <param name="syntax">The syntax.</param>
+        /// <returns>List&lt;IDICOMElement&gt;.</returns>
         public static List<IDICOMElement> ReadAllElements(DICOMBinaryReader dr, TransferSyntax syntax)
         {
             List<IDICOMElement> elements;
@@ -126,7 +144,7 @@ namespace EvilDICOM.Core.IO.Reading
         }
 
         /// <summary>
-        ///     Reads and returns all elements in implicit little endian format
+        /// Reads and returns all elements in implicit little endian format
         /// </summary>
         /// <param name="dr">the binary reader which is reading the DICOM object</param>
         /// <returns>DICOM elements read</returns>
@@ -141,7 +159,7 @@ namespace EvilDICOM.Core.IO.Reading
         }
 
         /// <summary>
-        ///     Reads and returns all elements in explicit big endian format
+        /// Reads and returns all elements in explicit big endian format
         /// </summary>
         /// <param name="dr">the binary reader which is reading the DICOM object</param>
         /// <returns>DICOM elements read</returns>
@@ -156,7 +174,7 @@ namespace EvilDICOM.Core.IO.Reading
         }
 
         /// <summary>
-        ///     Reads and returns all elements in explilcit little endian format
+        /// Reads and returns all elements in explilcit little endian format
         /// </summary>
         /// <param name="dr">the binary reader which is reading the DICOM object</param>
         /// <returns>DICOM elements read</returns>

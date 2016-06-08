@@ -2,7 +2,7 @@
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Interfaces;
-
+#pragma warning disable 1591
 namespace EvilDICOM.Core.Dictionaries
 {
     /// <summary>
@@ -3746,7 +3746,7 @@ namespace EvilDICOM.Core.Dictionaries
         /// <summary>
         ///     Gets the description of the tag
         /// </summary>
-        /// <param name="tag">the tag containing the id</param>
+        /// <param name="completeId">the completeId</param>
         /// <returns>a string description of the tag in camel case</returns>
         public static string GetDescription(string completeId)
         {

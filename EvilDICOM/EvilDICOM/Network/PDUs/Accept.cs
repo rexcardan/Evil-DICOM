@@ -9,15 +9,47 @@ using EvilDICOM.Core.Helpers;
 
 namespace EvilDICOM.Network.PDUs
 {
+    /// <summary>
+    /// Class Accept.
+    /// </summary>
+    /// <seealso cref="EvilDICOM.Network.Interfaces.IPDU" />
     public class Accept : IPDU
     {
+        /// <summary>
+        /// Gets or sets the protocol version.
+        /// </summary>
+        /// <value>The protocol version.</value>
         public int ProtocolVersion { get; set; }
+        /// <summary>
+        /// Gets or sets the called entity title.
+        /// </summary>
+        /// <value>The called entity title.</value>
         public string CalledEntityTitle { get; set; }
+        /// <summary>
+        /// Gets or sets the calling entity title.
+        /// </summary>
+        /// <value>The calling entity title.</value>
         public string CallingEntityTitle { get; set; }
+        /// <summary>
+        /// Gets or sets the application context.
+        /// </summary>
+        /// <value>The application context.</value>
         public string ApplicationContext { get; set; }
+        /// <summary>
+        /// Gets or sets the presentation contexts.
+        /// </summary>
+        /// <value>The presentation contexts.</value>
         public List<PresentationContext> PresentationContexts { get; set; }
+        /// <summary>
+        /// Gets or sets the user information.
+        /// </summary>
+        /// <value>The user information.</value>
         public UserInfo UserInfo { get; set; }
 
+        /// <summary>
+        /// Writes this instance.
+        /// </summary>
+        /// <returns>System.Byte[].</returns>
         public byte[] Write()
         {
             var written = new byte[0];
@@ -36,11 +68,19 @@ namespace EvilDICOM.Network.PDUs
             return written;
         }
 
+        /// <summary>
+        /// Gets the type.
+        /// </summary>
+        /// <value>The type.</value>
         public PDUType Type
         {
             get { return PDUType.A_ASSOC_ACCEPT; }
         }
 
+        /// <summary>
+        /// Writes the body.
+        /// </summary>
+        /// <returns>System.Byte[].</returns>
         private byte[] WriteBody()
         {
             var body = new byte[0];
@@ -65,6 +105,10 @@ namespace EvilDICOM.Network.PDUs
             return body;
         }
 
+        /// <summary>
+        /// Returns a <see cref="System.String" /> that represents this instance.
+        /// </summary>
+        /// <returns>A <see cref="System.String" /> that represents this instance.</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
@@ -84,6 +128,12 @@ namespace EvilDICOM.Network.PDUs
             return sb.ToString();
         }
 
+        /// <summary>
+        /// Generates the specified request.
+        /// </summary>
+        /// <param name="request">The request.</param>
+        /// <param name="contexts">The contexts.</param>
+        /// <returns>Accept.</returns>
         public static Accept Generate(Request request, List<PresentationContext> contexts)
         {
             var accept = new Accept

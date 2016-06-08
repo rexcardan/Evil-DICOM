@@ -162,7 +162,7 @@ namespace EvilDICOM.Core.Dictionaries
         /// <summary>
         ///     Finds the VR enum from a specific DICOM element type.
         /// </summary>
-        /// <param name="el">the DICOM element</param>
+        /// <param name="t">the type of DICOM element</param>
         /// <returns>the VR type</returns>
         public static VR GetVRFromType(Type t)
         {
