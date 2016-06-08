@@ -12,6 +12,10 @@ using System.Threading.Tasks;
 
 namespace EvilDICOM.Anonymization.Helpers
 {
+
+    /// <summary>
+    /// Class DateHelper.
+    /// </summary>
     public class DateHelper
     {
         /// <summary>
@@ -30,7 +34,7 @@ namespace EvilDICOM.Anonymization.Helpers
         /// <summary>
         /// Checks to see if the patient age is less than 89 years old
         /// </summary>
-        /// <param name="file">Path to DICOM file containing patient information</param>
+        /// <param name="d">DICOM object</param>
         /// <returns>boolean indication test</returns>
         public static bool YoungerThan89(DICOMObject d)
         {
@@ -79,6 +83,11 @@ namespace EvilDICOM.Anonymization.Helpers
             return oldest;
         }
 
+        /// <summary>
+        /// Gets all dates.
+        /// </summary>
+        /// <param name="d">The d.</param>
+        /// <returns>IEnumerable&lt;AbstractElement&lt;System.Nullable&lt;System.DateTime&gt;&gt;&gt;.</returns>
         public static IEnumerable<AbstractElement<System.DateTime?>> GetAllDates(DICOMObject d)
         {
             var dates = d.FindAll(VR.Date).Concat(d.FindAll(VR.DateTime)).Select(da => da as AbstractElement<System.DateTime?>);
@@ -104,6 +113,10 @@ namespace EvilDICOM.Anonymization.Helpers
         }
 
 
+        /// <summary>
+        /// Gets the base date.
+        /// </summary>
+        /// <value>The base date.</value>
         public static System.DateTime BaseDate
         {
             get
@@ -113,6 +126,10 @@ namespace EvilDICOM.Anonymization.Helpers
         }
 
 
+        /// <summary>
+        /// Gets the random date.
+        /// </summary>
+        /// <value>The random date.</value>
         public static System.DateTime RandomDate
         {
             get

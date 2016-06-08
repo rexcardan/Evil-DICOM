@@ -6,8 +6,17 @@ using EvilDICOM.Network.Enums;
 
 namespace EvilDICOM.Network.PDUs.Items
 {
+    /// <summary>
+    /// Class ItemWriter.
+    /// </summary>
     public class ItemWriter
     {
+        /// <summary>
+        /// Writes the uid item.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="iType">Type of the i.</param>
+        /// <param name="uid">The uid.</param>
         private static void WriteUIDItem(DICOMBinaryWriter dw, ItemType iType, string uid)
         {
             if (!string.IsNullOrEmpty(uid))
@@ -19,16 +28,31 @@ namespace EvilDICOM.Network.PDUs.Items
             }
         }
 
+        /// <summary>
+        /// Writes the abstract syntax.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="uid">The uid.</param>
         public static void WriteAbstractSyntax(DICOMBinaryWriter dw, string uid)
         {
             WriteUIDItem(dw, ItemType.ABSTRACT_SYNTAX, uid);
         }
 
+        /// <summary>
+        /// Writes the application context.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="uid">The uid.</param>
         public static void WriteApplicationContext(DICOMBinaryWriter dw, string uid)
         {
             WriteUIDItem(dw, ItemType.APPLICATION_CONTEXT, uid);
         }
 
+        /// <summary>
+        /// Writes the asynchronous operations.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="ao">The ao.</param>
         public static void WriteAsyncOperations(DICOMBinaryWriter dw, AsyncOperations ao)
         {
             if (ao != null)
@@ -41,16 +65,31 @@ namespace EvilDICOM.Network.PDUs.Items
             }
         }
 
+        /// <summary>
+        /// Writes the implementation class uid.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="uid">The uid.</param>
         public static void WriteImplementationClassUID(DICOMBinaryWriter dw, string uid)
         {
             WriteUIDItem(dw, ItemType.IMPLEMENTATION_CLASS_UID, uid);
         }
 
+        /// <summary>
+        /// Writes the implementation version.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="uid">The uid.</param>
         public static void WriteImplementationVersion(DICOMBinaryWriter dw, string uid)
         {
             WriteUIDItem(dw, ItemType.IMPLEMENTATION_VERSION_NAME, uid);
         }
 
+        /// <summary>
+        /// Writes the maximum length.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="length">The length.</param>
         public static void WriteMaxLength(DICOMBinaryWriter dw, int length)
         {
             dw.Write((byte) ItemType.MAXIMUM_LENGTH);
@@ -59,6 +98,11 @@ namespace EvilDICOM.Network.PDUs.Items
             LengthWriter.WriteBigEndian(dw, length, 4);
         }
 
+        /// <summary>
+        /// Writes the PDV item.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="pdv">The PDV.</param>
         public static void WritePDVItem(DICOMBinaryWriter dw, PDVItem pdv)
         {
             //Write fragment first so we have length
@@ -76,12 +120,22 @@ namespace EvilDICOM.Network.PDUs.Items
             dw.Write(fragment);
         }
 
+        /// <summary>
+        /// Writes the PDV fragment.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="frag">The frag.</param>
         public static void WritePDVFragment(DICOMBinaryWriter dw, PDVItemFragment frag)
         {
             WritePDVFragmentMessageHeader(dw, frag);
             dw.Write(frag.Data);
         }
 
+        /// <summary>
+        /// Writes the PDV fragment message header.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="frag">The frag.</param>
         private static void WritePDVFragmentMessageHeader(DICOMBinaryWriter dw, PDVItemFragment frag)
         {
             var bits = new BitArray(8);
@@ -92,6 +146,11 @@ namespace EvilDICOM.Network.PDUs.Items
             dw.Write(bytes[0]);
         }
 
+        /// <summary>
+        /// Writes the type of the presentation CTX accept.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="pc">The pc.</param>
         public static void WritePresentationCtxAcceptType(DICOMBinaryWriter dw, PresentationContext pc)
         {
             dw.Write((byte) ItemType.PRESENTATION_CONTEXT_ACCEPT);
@@ -113,6 +172,11 @@ namespace EvilDICOM.Network.PDUs.Items
             dw.Write(internBytes);
         }
 
+        /// <summary>
+        /// Writes the type of the presentation CTX request.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="pc">The pc.</param>
         public static void WritePresentationCtxRequestType(DICOMBinaryWriter dw, PresentationContext pc)
         {
             dw.Write((byte) ItemType.PRESENTATION_CONTEXT_REQUEST);
@@ -138,11 +202,21 @@ namespace EvilDICOM.Network.PDUs.Items
             dw.Write(internBytes);
         }
 
+        /// <summary>
+        /// Writes the transfer syntax.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="uid">The uid.</param>
         public static void WriteTransferSyntax(DICOMBinaryWriter dw, string uid)
         {
             WriteUIDItem(dw, ItemType.TRANSFER_SYNTAX, uid);
         }
 
+        /// <summary>
+        /// Writes the user information.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="info">The information.</param>
         public static void WriteUserInfo(DICOMBinaryWriter dw, UserInfo info)
         {
             dw.Write((byte) ItemType.USER_INFO);

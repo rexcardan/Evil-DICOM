@@ -12,6 +12,11 @@ namespace EvilDICOM.Anonymization.Anonymizers
     /// </summary>
     public class PrivateTagAnonymizer :IAnonymizer
     {
+
+        /// <summary>
+        /// Anonymizes the specified dcom object.
+        /// </summary>
+        /// <param name="d">The dicom object.</param>
         public void Anonymize(DICOMObject d)
         {
             EvilLogger.Instance.Log("Removing private tags...", 0);

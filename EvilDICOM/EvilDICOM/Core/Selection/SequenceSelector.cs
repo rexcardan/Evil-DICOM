@@ -2,6 +2,8 @@
 using System.Linq;
 using EvilDICOM.Core.Element;
 
+#pragma warning disable 1591
+
 namespace EvilDICOM.Core.Selection
 {
     public class SequenceSelector : AbstractElement<DICOMSelector>

@@ -21,12 +21,22 @@ namespace EvilDICOM.Network.Querying
         private DICOMSCU _scu;
         private Entity _scp;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="QueryBuilder"/> class.
+        /// </summary>
+        /// <param name="scu">The scu.</param>
+        /// <param name="scp">The SCP.</param>
         public QueryBuilder(DICOMSCU scu, Entity scp)
         {
             _scu = scu;
             _scp = scp;
         }
 
+        /// <summary>
+        /// Gets the study uids.
+        /// </summary>
+        /// <param name="patientId">The patient identifier.</param>
+        /// <returns>List&lt;StudyResult&gt;.</returns>
         public List<StudyResult> GetStudyUids(string patientId)
         {
             var query = new CFindIOD(QueryLevel.STUDY)
@@ -47,6 +57,11 @@ namespace EvilDICOM.Network.Querying
                 .ToList();
         }
 
+        /// <summary>
+        /// Gets the series uids.
+        /// </summary>
+        /// <param name="studies">The studies.</param>
+        /// <returns>List&lt;SeriesResult&gt;.</returns>
         public List<SeriesResult> GetSeriesUids(List<StudyResult> studies)
         {
             List<SeriesResult> results = new List<SeriesResult>();
@@ -77,6 +92,11 @@ namespace EvilDICOM.Network.Querying
             return results;
         }
 
+        /// <summary>
+        /// Gets the image uids.
+        /// </summary>
+        /// <param name="series">The series.</param>
+        /// <returns>List&lt;ImageResult&gt;.</returns>
         public List<ImageResult> GetImageUids(List<SeriesResult> series)
         {
             List<ImageResult> results = new List<ImageResult>();
@@ -111,6 +131,11 @@ namespace EvilDICOM.Network.Querying
         }
 
 
+        /// <summary>
+        /// Sends the image.
+        /// </summary>
+        /// <param name="ir">The ir.</param>
+        /// <param name="reciever">The reciever.</param>
         public void SendImage(ImageResult ir, DICOMSCP reciever)
         {
             AutoResetEvent ar = new AutoResetEvent(false);
@@ -139,6 +164,12 @@ namespace EvilDICOM.Network.Querying
             _scu.DIMSEService.CMoveResponseReceived -= cr;
         }
 
+        /// <summary>
+        /// Dimses the service_ c move response received.
+        /// </summary>
+        /// <param name="req">The req.</param>
+        /// <param name="asc">The asc.</param>
+        /// <exception cref="System.NotImplementedException"></exception>
         void DIMSEService_CMoveResponseReceived(CMoveResponse req, Association asc)
         {
             throw new NotImplementedException();

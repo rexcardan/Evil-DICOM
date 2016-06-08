@@ -12,16 +12,35 @@ using System.Text;
 
 namespace EvilDICOM.RT
 {
+    /// <summary>
+    /// Class DoseMatrix.
+    /// </summary>
     public class DoseMatrix
     {
+        /// <summary>
+        /// The _dose object
+        /// </summary>
         private DICOMSelector _doseObject;
+        /// <summary>
+        /// Gets or sets the dose values.
+        /// </summary>
+        /// <value>The dose values.</value>
         public List<double> DoseValues { get; set; }
 
+        /// <summary>
+        /// Loads the specified DCM file.
+        /// </summary>
+        /// <param name="dcmFile">The DCM file.</param>
+        /// <returns>DoseMatrix.</returns>
         public static DoseMatrix Load(string dcmFile)
         {
             return new DoseMatrix(DICOMFileReader.Read(dcmFile));
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DoseMatrix"/> class.
+        /// </summary>
+        /// <param name="dcm">The DCM.</param>
         public DoseMatrix(DICOMObject dcm)
         {
             _doseObject = new DICOMSelector(dcm);
@@ -48,6 +67,10 @@ namespace EvilDICOM.RT
             }
         }
 
+        /// <summary>
+        /// Gets or sets the value size in bytes.
+        /// </summary>
+        /// <value>The value size in bytes.</value>
         public int ValueSizeInBytes { get; set; }
 
         /// <summary>
@@ -75,27 +98,87 @@ namespace EvilDICOM.RT
             return values;
         }
 
+        /// <summary>
+        /// Determines whether [is in bounds] [the specified pt].
+        /// </summary>
+        /// <param name="pt">The pt.</param>
+        /// <returns><c>true</c> if [is in bounds] [the specified pt]; otherwise, <c>false</c>.</returns>
         private bool IsInBounds(Vector3 pt)
         {
             return (pt.X >= X0 && pt.X <= XMax) && (pt.Y >= Y0 && pt.Y <= YMax) && (pt.Z >= X0 && pt.Z < ZMax);
         }
 
+        /// <summary>
+        /// Gets or sets the x resource.
+        /// </summary>
+        /// <value>The x resource.</value>
         public double XRes { get { return _doseObject.PixelSpacing.Data_[0]; } set { _doseObject.PixelSpacing.Data_[0] = value; } }
+        /// <summary>
+        /// Gets or sets the y resource.
+        /// </summary>
+        /// <value>The y resource.</value>
         public double YRes { get { return _doseObject.PixelSpacing.Data_[1]; } set { _doseObject.PixelSpacing.Data_[1] = value; } }
+        /// <summary>
+        /// Gets the z resource.
+        /// </summary>
+        /// <value>The z resource.</value>
         public double ZRes { get { return _doseObject.GridFrameOffsetVector.Data_[1] - _doseObject.GridFrameOffsetVector.Data_[0]; } }
 
+        /// <summary>
+        /// Gets or sets the x0.
+        /// </summary>
+        /// <value>The x0.</value>
         public double X0 { get { return _doseObject.ImagePositionPatient.Data_[0]; } set { _doseObject.ImagePositionPatient.Data_[0] = value; } }
+        /// <summary>
+        /// Gets or sets the y0.
+        /// </summary>
+        /// <value>The y0.</value>
         public double Y0 { get { return _doseObject.ImagePositionPatient.Data_[1]; } set { _doseObject.ImagePositionPatient.Data_[1] = value; } }
+        /// <summary>
+        /// Gets or sets the z0.
+        /// </summary>
+        /// <value>The z0.</value>
         public double Z0 { get { return _doseObject.ImagePositionPatient.Data_[2]; } set { _doseObject.ImagePositionPatient.Data_[2] = value; } }
 
+        /// <summary>
+        /// Gets the x maximum.
+        /// </summary>
+        /// <value>The x maximum.</value>
         public double XMax { get { return X0 + XRes * (DimensionX - 1); } }
+        /// <summary>
+        /// Gets the y maximum.
+        /// </summary>
+        /// <value>The y maximum.</value>
         public double YMax { get { return Y0 + YRes * (DimensionY - 1); } }
+        /// <summary>
+        /// Gets the z maximum.
+        /// </summary>
+        /// <value>The z maximum.</value>
         public double ZMax { get { return Z0 + ZRes * (DimensionZ - 1); } }
 
+        /// <summary>
+        /// Gets or sets the dimension x.
+        /// </summary>
+        /// <value>The dimension x.</value>
         public int DimensionX { get { return _doseObject.Columns.Data; } set { _doseObject.Columns.Data = (ushort)value; } }
+        /// <summary>
+        /// Gets or sets the dimension y.
+        /// </summary>
+        /// <value>The dimension y.</value>
         public int DimensionY { get { return _doseObject.Rows.Data; } set { _doseObject.Rows.Data = (ushort)value; } }
+        /// <summary>
+        /// Gets or sets the dimension z.
+        /// </summary>
+        /// <value>The dimension z.</value>
         public int DimensionZ { get { return _doseObject.NumberOfFrames.Data; } set { _doseObject.NumberOfFrames.Data = value; } }
 
+        /// <summary>
+        /// Gets the point dose.
+        /// </summary>
+        /// <param name="x">The x.</param>
+        /// <param name="y">The y.</param>
+        /// <param name="z">The z.</param>
+        /// <returns>DoseValue.</returns>
         public DoseValue GetPointDose(double x, double y, double z)
         {
             //From method at http://en.wikipedia.org/wiki/Trilinear_interpolation
@@ -128,11 +211,23 @@ namespace EvilDICOM.RT
             return new DoseValue(x, y, z, c);
 
         }
+        /// <summary>
+        /// Gets the point dose.
+        /// </summary>
+        /// <param name="pt">The pt.</param>
+        /// <returns>DoseValue.</returns>
         public DoseValue GetPointDose(Vector3 pt)
         {
             return GetPointDose(pt.X, pt.Y, pt.Z);
         }
 
+        /// <summary>
+        /// Gets the discrete point dose.
+        /// </summary>
+        /// <param name="xSteps">The x steps.</param>
+        /// <param name="ySteps">The y steps.</param>
+        /// <param name="zSteps">The z steps.</param>
+        /// <returns>System.Double.</returns>
         private double GetDiscretePointDose(int xSteps, int ySteps, int zSteps)
         {
             int index;
@@ -141,6 +236,10 @@ namespace EvilDICOM.RT
             return value;
         }
 
+        /// <summary>
+        /// Gets the maximum point dose.
+        /// </summary>
+        /// <value>The maximum point dose.</value>
         public DoseValue MaxPointDose
         {
             get
@@ -153,6 +252,13 @@ namespace EvilDICOM.RT
             }
         }
 
+        /// <summary>
+        /// Indexes to lattice xyz.
+        /// </summary>
+        /// <param name="index">The index.</param>
+        /// <param name="x">The x.</param>
+        /// <param name="y">The y.</param>
+        /// <param name="z">The z.</param>
         public void IndexToLatticeXYZ(int index, out int x, out int y, out int z)
         {
             z = index / (DimensionX * DimensionY);
@@ -160,21 +266,45 @@ namespace EvilDICOM.RT
             x = (index % (DimensionX * DimensionY)) % (DimensionX);
         }
 
+        /// <summary>
+        /// Lattices the index of the xyz to.
+        /// </summary>
+        /// <param name="x">The x.</param>
+        /// <param name="y">The y.</param>
+        /// <param name="z">The z.</param>
+        /// <param name="latticeWidth">Width of the lattice.</param>
+        /// <param name="latticeHeight">Height of the lattice.</param>
+        /// <param name="index">The index.</param>
         public static void LatticeXYZToIndex(int x, int y, int z, int latticeWidth, int latticeHeight, out int index)
         {
             index = x + (y * latticeWidth) + (z * (latticeWidth * latticeHeight));
         }
 
+        /// <summary>
+        /// Lattices the index of the xyz to.
+        /// </summary>
+        /// <param name="x">The x.</param>
+        /// <param name="y">The y.</param>
+        /// <param name="z">The z.</param>
+        /// <param name="index">The index.</param>
         public void LatticeXYZToIndex(int x, int y, int z, out int index)
         {
             LatticeXYZToIndex(x, y, z, DimensionX, DimensionY, out index);
         }
 
+        /// <summary>
+        /// Gets the directional cosines.
+        /// </summary>
+        /// <value>The directional cosines.</value>
         public double[] DirectionalCosines
         {
             get { return _doseObject.ImageOrientationPatient.Data_.ToArray(); }
         }
 
+        /// <summary>
+        /// Converts the relative to abs.
+        /// </summary>
+        /// <param name="totalDose">The total dose.</param>
         public void ConvertRelToAbs(double totalDose)
         {
             DoseValues = DoseValues.Select(d => d * totalDose).ToList();
@@ -198,6 +328,10 @@ namespace EvilDICOM.RT
         }
 
 
+        /// <summary>
+        /// To the dicom.
+        /// </summary>
+        /// <returns>DICOMObject.</returns>
         public DICOMObject ToDICOM()
         {
             if (DataRestriction.EnforceRealNonZero(Scaling, "Scaling") && DataRestriction.EnforceRealNonZero(ValueSizeInBytes, "ValueSizeInBytes"))
@@ -230,11 +364,19 @@ namespace EvilDICOM.RT
             return _doseObject.ToDICOMObject();
         }
 
+        /// <summary>
+        /// Saves the specified path.
+        /// </summary>
+        /// <param name="path">The path.</param>
         public void Save(string path)
         {
             _doseObject.ToDICOMObject().Write(path);
         }
 
+        /// <summary>
+        /// Gets or sets the scaling.
+        /// </summary>
+        /// <value>The scaling.</value>
         public double Scaling { get; set; }
     }
 }

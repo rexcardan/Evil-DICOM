@@ -11,13 +11,27 @@ using EvilDICOM.Network.PDUs.Items;
 
 namespace EvilDICOM.Network.PDUs
 {
+    /// <summary>
+    /// Class PDataTF.
+    /// </summary>
+    /// <seealso cref="EvilDICOM.Network.Interfaces.IPDU" />
     public class PDataTF : IPDU
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PDataTF"/> class.
+        /// </summary>
         public PDataTF()
         {
             Items = new List<PDVItem>();
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PDataTF"/> class.
+        /// </summary>
+        /// <param name="dicom">The dicom.</param>
+        /// <param name="isLastItem">if set to <c>true</c> [is last item].</param>
+        /// <param name="isCommandObject">if set to <c>true</c> [is command object].</param>
+        /// <param name="context">The context.</param>
         public PDataTF(DICOMObject dicom, bool isLastItem, bool isCommandObject, PresentationContext context)
             : this()
         {
@@ -44,6 +58,13 @@ namespace EvilDICOM.Network.PDUs
             Items.Add(item);
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PDataTF"/> class.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <param name="isLastItem">if set to <c>true</c> [is last item].</param>
+        /// <param name="isCommandObject">if set to <c>true</c> [is command object].</param>
+        /// <param name="context">The context.</param>
         public PDataTF(byte[] data, bool isLastItem, bool isCommandObject, PresentationContext context)
             : this()
         {
@@ -57,8 +78,16 @@ namespace EvilDICOM.Network.PDUs
             Items.Add(item);
         }
 
+        /// <summary>
+        /// Gets or sets the items.
+        /// </summary>
+        /// <value>The items.</value>
         public List<PDVItem> Items { get; set; }
 
+        /// <summary>
+        /// Writes this instance.
+        /// </summary>
+        /// <returns>System.Byte[].</returns>
         public byte[] Write()
         {
             var written = new byte[0];
@@ -77,11 +106,19 @@ namespace EvilDICOM.Network.PDUs
             return written;
         }
 
+        /// <summary>
+        /// Gets the type.
+        /// </summary>
+        /// <value>The type.</value>
         public PDUType Type
         {
             get { return PDUType.P_DATA_TRANSFER; }
         }
 
+        /// <summary>
+        /// Gets the merged item data.
+        /// </summary>
+        /// <returns>System.Byte[].</returns>
         public byte[] GetMergedItemData()
         {
             var data = new List<byte>();
@@ -92,6 +129,10 @@ namespace EvilDICOM.Network.PDUs
             return data.ToArray();
         }
 
+        /// <summary>
+        /// Writes the items.
+        /// </summary>
+        /// <returns>System.Byte[].</returns>
         private byte[] WriteItems()
         {
             var written = new byte[0];

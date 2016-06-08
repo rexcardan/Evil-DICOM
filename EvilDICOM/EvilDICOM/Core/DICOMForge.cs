@@ -2176,46 +2176,82 @@ namespace EvilDICOM.Core
             get { return new PersonName {Tag = new Tag("00100010")}; }
         }
 
+        /// <summary>
+        /// Gets the patient identifier.
+        /// </summary>
+        /// <value>The patient identifier.</value>
         public static LongString PatientID
         {
             get { return new LongString {Tag = new Tag("00100020")}; }
         }
 
+        /// <summary>
+        /// Gets the issuer of patient identifier.
+        /// </summary>
+        /// <value>The issuer of patient identifier.</value>
         public static LongString IssuerOfPatientID
         {
             get { return new LongString {Tag = new Tag("00100021")}; }
         }
 
+        /// <summary>
+        /// Gets the type of patient identifier.
+        /// </summary>
+        /// <value>The type of patient identifier.</value>
         public static CodeString TypeOfPatientID
         {
             get { return new CodeString {Tag = new Tag("00100022")}; }
         }
 
+        /// <summary>
+        /// Gets the issuer of patient identifier qualifiers sequence.
+        /// </summary>
+        /// <value>The issuer of patient identifier qualifiers sequence.</value>
         public static Sequence IssuerOfPatientIDQualifiersSequence
         {
             get { return new Sequence {Tag = new Tag("00100024")}; }
         }
 
+        /// <summary>
+        /// Gets the patient birth date.
+        /// </summary>
+        /// <value>The patient birth date.</value>
         public static Date PatientBirthDate
         {
             get { return new Date {Tag = new Tag("00100030")}; }
         }
 
+        /// <summary>
+        /// Gets the patient birth time.
+        /// </summary>
+        /// <value>The patient birth time.</value>
         public static Time PatientBirthTime
         {
             get { return new Time {Tag = new Tag("00100032")}; }
         }
 
+        /// <summary>
+        /// Gets the patient sex.
+        /// </summary>
+        /// <value>The patient sex.</value>
         public static CodeString PatientSex
         {
             get { return new CodeString {Tag = new Tag("00100040")}; }
         }
 
+        /// <summary>
+        /// Gets the patient insurance plan code sequence.
+        /// </summary>
+        /// <value>The patient insurance plan code sequence.</value>
         public static Sequence PatientInsurancePlanCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00100050")}; }
         }
 
+        /// <summary>
+        /// Gets the patient primary language code sequence.
+        /// </summary>
+        /// <value>The patient primary language code sequence.</value>
         public static Sequence PatientPrimaryLanguageCodeSequence
         {
             get { return new Sequence {Tag = new Tag("00100101")}; }

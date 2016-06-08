@@ -9,13 +9,25 @@ using EvilDICOM.Anonymization.Anonymizers;
 
 namespace EvilDICOM.Anonymization
 {
+    /// <summary>
+    /// Class AnonymizationQueue.
+    /// </summary>
     public class AnonymizationQueue
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AnonymizationQueue"/> class.
+        /// </summary>
         public AnonymizationQueue()
         {
             Queue = new List<IAnonymizer>();
         }
 
+        /// <summary>
+        /// Builds the queue.
+        /// </summary>
+        /// <param name="settings">The settings.</param>
+        /// <param name="dcmFiles">The DCM files.</param>
+        /// <returns>AnonymizationQueue.</returns>
         public static AnonymizationQueue BuildQueue(AnonymizationSettings settings, IEnumerable<string> dcmFiles)
         {
             var anonQue = new AnonymizationQueue();
@@ -41,6 +53,12 @@ namespace EvilDICOM.Anonymization
             return anonQue;
         }
 
+        /// <summary>
+        /// build queue as an asynchronous operation.
+        /// </summary>
+        /// <param name="settings">The settings.</param>
+        /// <param name="dcmFiles">The DCM files.</param>
+        /// <returns>Task&lt;AnonymizationQueue&gt;.</returns>
         public async static Task<AnonymizationQueue> BuildQueueAsync(AnonymizationSettings settings, IEnumerable<string> dcmFiles)
         {
             return await Task.Run(() => BuildQueue(settings, dcmFiles));
@@ -66,6 +84,10 @@ namespace EvilDICOM.Anonymization
             return await BuildQueueAsync(AnonymizationSettings.Default, dcmFiles);
         }
 
+        /// <summary>
+        /// Anonymizes the specified DCM.
+        /// </summary>
+        /// <param name="dcm">The DCM.</param>
         public void Anonymize(DICOMObject dcm)
         {
             int i = 1;
@@ -77,18 +99,39 @@ namespace EvilDICOM.Anonymization
             }
         }
 
+        /// <summary>
+        /// Gets or sets the queue.
+        /// </summary>
+        /// <value>The queue.</value>
         public List<IAnonymizer> Queue { get; set; }
 
+        /// <summary>
+        /// Calculates the progress.
+        /// </summary>
+        /// <param name="i">The i.</param>
+        /// <param name="totalOperations">The total operations.</param>
+        /// <returns>System.Double.</returns>
         private double CalculateProgress(int i, int totalOperations)
         {
             return (int)((double)i / (double)(totalOperations) * 100);
         }
 
         //PROGRESS REPORTING (for UI)
+        /// <summary>
+        /// Delegate ProgressUpdatedHandler
+        /// </summary>
+        /// <param name="progress">The progress.</param>
         public delegate void ProgressUpdatedHandler(double progress);
 
+        /// <summary>
+        /// Occurs when [progress updated].
+        /// </summary>
         public event ProgressUpdatedHandler ProgressUpdated;
 
+        /// <summary>
+        /// Raises the progress updated.
+        /// </summary>
+        /// <param name="progress">The progress.</param>
         public void RaiseProgressUpdated(double progress)
         {
             if (ProgressUpdated != null)

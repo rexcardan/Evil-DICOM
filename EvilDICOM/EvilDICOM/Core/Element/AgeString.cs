@@ -30,19 +30,42 @@ namespace EvilDICOM.Core.Element
     }
 
     /// <summary>
-    ///     A small class to help manipulate the age in the AgeString class
+    /// A small class to help manipulate the age in the AgeString class
     /// </summary>
     public class Age
     {
+        /// <summary>
+        /// Enum Unit
+        /// </summary>
         public enum Unit
         {
+            /// <summary>
+            /// The days
+            /// </summary>
             DAYS,
+            /// <summary>
+            /// The weeks
+            /// </summary>
             WEEKS,
+            /// <summary>
+            /// The months
+            /// </summary>
             MONTHS,
+            /// <summary>
+            /// The years
+            /// </summary>
             YEARS
         }
 
+        /// <summary>
+        /// Gets or sets the number.
+        /// </summary>
+        /// <value>The number.</value>
         public int Number { get; set; }
+        /// <summary>
+        /// Gets or sets the units.
+        /// </summary>
+        /// <value>The units.</value>
         public Unit Units { get; set; }
     }
 }

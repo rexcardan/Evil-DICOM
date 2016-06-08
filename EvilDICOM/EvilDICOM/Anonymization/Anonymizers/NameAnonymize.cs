@@ -13,6 +13,11 @@ namespace EvilDICOM.Anonymization.Anonymizers
     /// </summary>
     public class NameAnonymizer : IAnonymizer
     {
+
+        /// <summary>
+        /// Anonymizes the specified dicom object.
+        /// </summary>
+        /// <param name="d">The dicom object</param>
         public void Anonymize(DICOMObject d)
         {
             EvilLogger.Instance.Log("Anonymizing names...", 0);

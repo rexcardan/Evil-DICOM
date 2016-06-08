@@ -7,11 +7,27 @@ using EvilDICOM.Network.Interfaces;
 
 namespace EvilDICOM.Network.Associations.PDUs
 {
+    /// <summary>
+    /// Class Abort.
+    /// </summary>
+    /// <seealso cref="EvilDICOM.Network.Interfaces.IPDU" />
     public class Abort : IPDU
     {
+        /// <summary>
+        /// Gets or sets the reason.
+        /// </summary>
+        /// <value>The reason.</value>
         public AbortReason Reason { get; set; }
+        /// <summary>
+        /// Gets or sets the source.
+        /// </summary>
+        /// <value>The source.</value>
         public AbortSource Source { get; set; }
 
+        /// <summary>
+        /// Writes this instance.
+        /// </summary>
+        /// <returns>System.Byte[].</returns>
         public byte[] Write()
         {
             var written = new byte[0];
@@ -29,11 +45,19 @@ namespace EvilDICOM.Network.Associations.PDUs
             return written;
         }
 
+        /// <summary>
+        /// Gets the type.
+        /// </summary>
+        /// <value>The type.</value>
         public PDUType Type
         {
             get { return PDUType.A_ABORT; }
         }
 
+        /// <summary>
+        /// Returns a <see cref="System.String" /> that represents this instance.
+        /// </summary>
+        /// <returns>A <see cref="System.String" /> that represents this instance.</returns>
         public override string ToString()
         {
             var sb = new StringBuilder();
