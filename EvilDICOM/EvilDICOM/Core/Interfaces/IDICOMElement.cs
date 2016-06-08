@@ -4,9 +4,20 @@ using EvilDICOM.Core.Element;
 
 namespace EvilDICOM.Core.Interfaces
 {
+    /// <summary>
+    /// Interface IDICOMElement
+    /// </summary>
     public interface IDICOMElement
     {
+        /// <summary>
+        /// Gets or sets the tag.
+        /// </summary>
+        /// <value>The tag.</value>
         Tag Tag { get; set; }
+        /// <summary>
+        /// Gets the type of the dat.
+        /// </summary>
+        /// <value>The type of the dat.</value>
         Type DatType { get; }
 
         /// <summary>

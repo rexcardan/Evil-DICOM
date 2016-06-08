@@ -1,5 +1,7 @@
 ﻿using System.Collections.Generic;
 
+#pragma warning disable 1591
+
 namespace EvilDICOM.Core.Helpers
 {
     public class AbstractSyntax

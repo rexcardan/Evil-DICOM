@@ -6,8 +6,18 @@ using EvilDICOM.Network.Enums;
 
 namespace EvilDICOM.Network.PDUs.Items
 {
+    /// <summary>
+    /// Class ItemReader.
+    /// </summary>
     public class ItemReader
     {
+        /// <summary>
+        /// Asserts the type of the item.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <param name="itemName">Name of the item.</param>
+        /// <param name="itemType">Type of the item.</param>
+        /// <exception cref="System.Exception"></exception>
         public static void AssertItemType(DICOMBinaryReader dr, string itemName, ItemType itemType)
         {
             byte header = dr.Peek(1)[0];
@@ -15,6 +25,13 @@ namespace EvilDICOM.Network.PDUs.Items
                 throw new Exception();
         }
 
+        /// <summary>
+        /// Reads the uid item.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <param name="itemName">Name of the item.</param>
+        /// <param name="iType">Type of the i.</param>
+        /// <returns>System.String.</returns>
         private static string ReadUIDItem(DICOMBinaryReader dr, string itemName, ItemType iType)
         {
             AssertItemType(dr, itemName, iType);
@@ -23,16 +40,31 @@ namespace EvilDICOM.Network.PDUs.Items
             return dr.ReadString(length).Trim();
         }
 
+        /// <summary>
+        /// Reads the abstract syntax.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>System.String.</returns>
         public static string ReadAbstractSyntax(DICOMBinaryReader dr)
         {
             return ReadUIDItem(dr, "Abstact Syntax", ItemType.ABSTRACT_SYNTAX);
         }
 
+        /// <summary>
+        /// Reads the application context.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>System.String.</returns>
         public static string ReadApplicationContext(DICOMBinaryReader dr)
         {
             return ReadUIDItem(dr, "Application Context", ItemType.APPLICATION_CONTEXT);
         }
 
+        /// <summary>
+        /// Reads the asynchronous operations.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>AsyncOperations.</returns>
         public static AsyncOperations ReadAsyncOperations(DICOMBinaryReader dr)
         {
             AssertItemType(dr, "Async Operations", ItemType.ASYNCHRONOUS_OPERATIONS_WINDOW);
@@ -44,16 +76,31 @@ namespace EvilDICOM.Network.PDUs.Items
             return ao;
         }
 
+        /// <summary>
+        /// Reads the implementation class uid.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>System.String.</returns>
         public static string ReadImplementationClassUID(DICOMBinaryReader dr)
         {
             return ReadUIDItem(dr, "Implementation Class UID", ItemType.IMPLEMENTATION_CLASS_UID);
         }
 
+        /// <summary>
+        /// Reads the implementation version.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>System.String.</returns>
         public static string ReadImplementationVersion(DICOMBinaryReader dr)
         {
             return ReadUIDItem(dr, "Implementation Version", ItemType.IMPLEMENTATION_VERSION_NAME);
         }
 
+        /// <summary>
+        /// Reads the maximum length.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>System.Nullable&lt;System.Int32&gt;.</returns>
         public static int? ReadMaxLength(DICOMBinaryReader dr)
         {
             AssertItemType(dr, "Maximum Length", ItemType.MAXIMUM_LENGTH);
@@ -62,6 +109,11 @@ namespace EvilDICOM.Network.PDUs.Items
             return LengthReader.ReadBigEndian(dr, 4);
         }
 
+        /// <summary>
+        /// Reads the PDV item.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>PDVItem.</returns>
         public static PDVItem ReadPDVItem(DICOMBinaryReader dr)
         {
             var pi = new PDVItem();
@@ -71,6 +123,12 @@ namespace EvilDICOM.Network.PDUs.Items
             return pi;
         }
 
+        /// <summary>
+        /// Reads the PDV fragment.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <param name="length">The length.</param>
+        /// <returns>PDVItemFragment.</returns>
         public static PDVItemFragment ReadPDVFragment(DICOMBinaryReader dr, int length)
         {
             var pif = new PDVItemFragment();
@@ -81,6 +139,11 @@ namespace EvilDICOM.Network.PDUs.Items
             return pif;
         }
 
+        /// <summary>
+        /// Reads the presentation CTX request.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>PresentationContext.</returns>
         public static PresentationContext ReadPresentationCtxRequest(DICOMBinaryReader dr)
         {
             AssertItemType(dr, "Presentation Context Request", ItemType.PRESENTATION_CONTEXT_REQUEST);
@@ -89,6 +152,11 @@ namespace EvilDICOM.Network.PDUs.Items
             return ReadPresentationCtxContents(dr.Take(length), true);
         }
 
+        /// <summary>
+        /// Reads the presentation CTX accept.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>PresentationContext.</returns>
         public static PresentationContext ReadPresentationCtxAccept(DICOMBinaryReader dr)
         {
             AssertItemType(dr, "Presentation Context Accept", ItemType.PRESENTATION_CONTEXT_ACCEPT);
@@ -97,6 +165,12 @@ namespace EvilDICOM.Network.PDUs.Items
             return ReadPresentationCtxContents(dr.Take(length));
         }
 
+        /// <summary>
+        /// Reads the presentation CTX contents.
+        /// </summary>
+        /// <param name="contents">The contents.</param>
+        /// <param name="requestType">if set to <c>true</c> [request type].</param>
+        /// <returns>PresentationContext.</returns>
         private static PresentationContext ReadPresentationCtxContents(byte[] contents, bool requestType = false)
         {
             var pc = new PresentationContext();
@@ -124,11 +198,21 @@ namespace EvilDICOM.Network.PDUs.Items
             return pc;
         }
 
+        /// <summary>
+        /// Reads the transfer syntax.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>System.String.</returns>
         public static string ReadTransferSyntax(DICOMBinaryReader dr)
         {
             return ReadUIDItem(dr, "Transfer Syntax", ItemType.TRANSFER_SYNTAX);
         }
 
+        /// <summary>
+        /// Reads the user information.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>UserInfo.</returns>
         public static UserInfo ReadUserInfo(DICOMBinaryReader dr)
         {
             AssertItemType(dr, "User Info", ItemType.USER_INFO);

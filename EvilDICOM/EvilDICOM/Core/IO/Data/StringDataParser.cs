@@ -7,8 +7,16 @@ using DateTime = System.DateTime;
 
 namespace EvilDICOM.Core.IO.Data
 {
+    /// <summary>
+    /// Class StringDataParser.
+    /// </summary>
     public class StringDataParser
     {
+        /// <summary>
+        /// Parses the age string.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns>Age.</returns>
         public static Age ParseAgeString(string data)
         {
             if (string.IsNullOrEmpty(data))
@@ -35,6 +43,11 @@ namespace EvilDICOM.Core.IO.Data
             return a;
         }
 
+        /// <summary>
+        /// Parses the date.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns>System.Nullable&lt;DateTime&gt;.</returns>
         public static DateTime? ParseDate(string data)
         {
             if (string.IsNullOrEmpty(data))
@@ -51,6 +64,11 @@ namespace EvilDICOM.Core.IO.Data
             }
         }
 
+        /// <summary>
+        /// Parses the date time.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns>System.Nullable&lt;DateTime&gt;.</returns>
         public static DateTime? ParseDateTime(string data)
         {
             if (string.IsNullOrEmpty(data))
@@ -82,6 +100,11 @@ namespace EvilDICOM.Core.IO.Data
         }
 
 
+        /// <summary>
+        /// Parses the decimal string.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns>System.Double[].</returns>
         public static double[] ParseDecimalString(string data)
         {
             if (string.IsNullOrEmpty(data))
@@ -99,6 +122,11 @@ namespace EvilDICOM.Core.IO.Data
         }
 
 
+        /// <summary>
+        /// Parses the integer string.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns>System.Int32[].</returns>
         public static int[] ParseIntegerString(string data)
         {
             if (string.IsNullOrEmpty(data))
@@ -114,6 +142,11 @@ namespace EvilDICOM.Core.IO.Data
             return numbers;
         }
 
+        /// <summary>
+        /// Parses the time.
+        /// </summary>
+        /// <param name="data">The data.</param>
+        /// <returns>System.Nullable&lt;DateTime&gt;.</returns>
         public static DateTime? ParseTime(string data)
         {
             if (string.IsNullOrEmpty(data))
@@ -147,8 +180,8 @@ namespace EvilDICOM.Core.IO.Data
         /// <summary>
         /// Used in XML parsing
         /// </summary>
-        /// <param name="data"></param>
-        /// <returns></returns>
+        /// <param name="data">The data.</param>
+        /// <returns>System.Nullable&lt;System.DateTime&gt;.</returns>
         public static System.DateTime? GetNullableDate(string data)
         {
             System.DateTime? dt = string.IsNullOrEmpty(data) ? null : (System.DateTime?)System.DateTime.Parse(data);

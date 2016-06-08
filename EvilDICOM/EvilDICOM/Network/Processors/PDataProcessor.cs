@@ -13,8 +13,17 @@ using EvilDICOM.Network.Readers;
 
 namespace EvilDICOM.Network.Processors
 {
+    /// <summary>
+    /// Class PDataProcessor.
+    /// </summary>
     public class PDataProcessor
     {
+        /// <summary>
+        /// Processes the specified message.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <param name="asc">The asc.</param>
+        /// <returns>AbstractDIMSE.</returns>
         public static AbstractDIMSE Process(IMessage message, Association asc)
         {
             var pdata = message.DynPayload as PDataTF;
@@ -52,6 +61,12 @@ namespace EvilDICOM.Network.Processors
             }
         }
 
+        /// <summary>
+        /// Reads the p data t fs.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>List&lt;PDataTF&gt;.</returns>
+        /// <exception cref="System.Exception">Problem reading PDataTF chain.\n + e.Message</exception>
         public static List<PDataTF> ReadPDataTFs(NetworkBinaryReader dr)
         {
             var pDatas = new List<PDataTF>();
@@ -71,6 +86,12 @@ namespace EvilDICOM.Network.Processors
             return pDatas;
         }
 
+        /// <summary>
+        /// Processes the command.
+        /// </summary>
+        /// <param name="pDatas">The p datas.</param>
+        /// <param name="asc">The asc.</param>
+        /// <returns>AbstractDIMSE.</returns>
         private static AbstractDIMSE ProcessCommand(List<PDataTF> pDatas, Association asc)
         {
             DICOMObject dcm = GetCommandObject(pDatas);
@@ -93,6 +114,13 @@ namespace EvilDICOM.Network.Processors
             return dimse;
         }
 
+        /// <summary>
+        /// Gets the transfer syntax.
+        /// </summary>
+        /// <param name="asc">The asc.</param>
+        /// <param name="dataPds">The data PDS.</param>
+        /// <param name="presCtxId">The pres CTX identifier.</param>
+        /// <returns>TransferSyntax.</returns>
         private static TransferSyntax GetTransferSyntax(Association asc, List<PDataTF> dataPds, out int presCtxId)
         {
             var ctx =
@@ -101,12 +129,23 @@ namespace EvilDICOM.Network.Processors
             return ctx != null ? TransferSyntaxHelper.GetSyntax(ctx.TransferSyntaxes.First()) : TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN;
         }
 
+        /// <summary>
+        /// Gets the command object.
+        /// </summary>
+        /// <param name="pDatas">The p datas.</param>
+        /// <returns>DICOMObject.</returns>
         public static DICOMObject GetCommandObject(List<PDataTF> pDatas)
         {
             byte[] commandBytes = DIMSEReader.MergePDataTFData(pDatas);
             return DIMSEReader.CreateDICOMObject(commandBytes);
         }
 
+        /// <summary>
+        /// Gets the data object.
+        /// </summary>
+        /// <param name="pDatas">The p datas.</param>
+        /// <param name="syntax">The syntax.</param>
+        /// <returns>DICOMObject.</returns>
         public static DICOMObject GetDataObject(List<PDataTF> pDatas, TransferSyntax syntax)
         {
             byte[] dicomBytes = DIMSEReader.MergePDataTFData(pDatas);

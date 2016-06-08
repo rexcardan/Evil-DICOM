@@ -12,8 +12,17 @@ using System.IO;
 
 namespace EvilDICOM.Network.Readers
 {
+    /// <summary>
+    /// Class PDUReader.
+    /// </summary>
     public class PDUReader
     {
+        /// <summary>
+        /// Reads the specified dr.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>IMessage.</returns>
+        /// <exception cref="System.Exception">Unknown PDU</exception>
         public static IMessage Read(NetworkBinaryReader dr)
         {
             byte key = dr.Take(1)[0];
@@ -57,6 +66,11 @@ namespace EvilDICOM.Network.Readers
             return pdu;
         }
 
+        /// <summary>
+        /// Reads the abort.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>Message&lt;Abort&gt;.</returns>
         public static Message<Abort> ReadAbort(NetworkBinaryReader dr)
         {
             var abort = new Abort();
@@ -68,6 +82,12 @@ namespace EvilDICOM.Network.Readers
             return new Message<Abort> { Payload = abort, Type = MessageType.PDU };
         }
 
+        /// <summary>
+        /// Reads the release request.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>Message&lt;ReleaseRequest&gt;.</returns>
+        /// <exception cref="System.Exception">Release request was invalid. Did not match signature.</exception>
         public static Message<ReleaseRequest> ReadReleaseRequest(NetworkBinaryReader dr)
         {
             var relReq = new ReleaseRequest();
@@ -79,6 +99,12 @@ namespace EvilDICOM.Network.Readers
             throw new Exception("Release request was invalid. Did not match signature.");
         }
 
+        /// <summary>
+        /// Reads the release response.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>Message&lt;ReleaseResponse&gt;.</returns>
+        /// <exception cref="System.Exception">Release response was invalid. Did not match signature.</exception>
         public static Message<ReleaseResponse> ReadReleaseResponse(NetworkBinaryReader dr)
         {
             var relRes = new ReleaseResponse();
@@ -90,6 +116,11 @@ namespace EvilDICOM.Network.Readers
             throw new Exception("Release response was invalid. Did not match signature.");
         }
 
+        /// <summary>
+        /// Reads the association accept.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>Message&lt;Accept&gt;.</returns>
         public static Message<Accept> ReadAssociationAccept(NetworkBinaryReader dr)
         {
             var acc = new Accept();
@@ -119,6 +150,11 @@ namespace EvilDICOM.Network.Readers
             return new Message<Accept> { Payload = acc, Type = MessageType.PDU };
         }
 
+        /// <summary>
+        /// Reads the association reject.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>Message&lt;Reject&gt;.</returns>
         public static Message<Reject> ReadAssociationReject(NetworkBinaryReader dr)
         {
             var reject = new Reject();
@@ -131,6 +167,11 @@ namespace EvilDICOM.Network.Readers
             return new Message<Reject> { Payload = reject, Type = MessageType.PDU };
         }
 
+        /// <summary>
+        /// Reads the association request.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <returns>Message&lt;Request&gt;.</returns>
         public static Message<Request> ReadAssociationRequest(NetworkBinaryReader dr)
         {
             var rq = new Request();
@@ -155,6 +196,13 @@ namespace EvilDICOM.Network.Readers
             return new Message<Request> { Payload = rq, Type = MessageType.PDU };
         }
 
+        /// <summary>
+        /// Reads the PDF data.
+        /// </summary>
+        /// <param name="dr">The dr.</param>
+        /// <param name="firstByteRead">if set to <c>true</c> [first byte read].</param>
+        /// <param name="i">The i.</param>
+        /// <returns>Message&lt;PDataTF&gt;.</returns>
         public static Message<PDataTF> ReadPDFData(NetworkBinaryReader dr, bool firstByteRead = false, int i = 0)
         {
             PDataTF pdata = null;

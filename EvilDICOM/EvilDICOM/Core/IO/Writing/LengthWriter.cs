@@ -6,8 +6,17 @@ using EvilDICOM.Core.IO.Reading;
 
 namespace EvilDICOM.Core.IO.Writing
 {
+    /// <summary>
+    /// Class LengthWriter.
+    /// </summary>
     public class LengthWriter
     {
+        /// <summary>
+        /// Writes the little endian.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="length">The length.</param>
+        /// <param name="numberOfBytes">The number of bytes.</param>
         public static void WriteLittleEndian(DICOMBinaryWriter dw, int length, int numberOfBytes)
         {
             var lengthBytes = new byte[0];
@@ -23,6 +32,14 @@ namespace EvilDICOM.Core.IO.Writing
             dw.Write(lengthBytes);
         }
 
+        /// <summary>
+        /// Writes the specified dw.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="vr">The vr.</param>
+        /// <param name="settings">The settings.</param>
+        /// <param name="length">The length.</param>
+        /// <exception cref="System.ArgumentOutOfRangeException">Length is greater than allowed for explicit VR syntax. Try using implicit VR</exception>
         public static void Write(DICOMBinaryWriter dw, VR vr, DICOMWriteSettings settings, int length)
         {
             if (length % 2 != 0 || length ==1198421)
@@ -55,6 +72,12 @@ namespace EvilDICOM.Core.IO.Writing
             dw.Write(lengthBytes);
         }
 
+        /// <summary>
+        /// Writes the big endian.
+        /// </summary>
+        /// <param name="dw">The dw.</param>
+        /// <param name="length">The length.</param>
+        /// <param name="numberOfBytes">The number of bytes.</param>
         public static void WriteBigEndian(DICOMBinaryWriter dw, int length, int numberOfBytes)
         {
             byte[] lengthBytes=null;

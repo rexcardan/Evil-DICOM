@@ -11,11 +11,26 @@ using System.Threading.Tasks;
 
 namespace EvilDICOM.Anonymization.Anonymizers
 {
+    /// <summary>
+    /// Class StudyIdAnonymizer.
+    /// </summary>
+    /// <seealso cref="EvilDICOM.Anonymization.IAnonymizer" />
     public class StudyIdAnonymizer : IAnonymizer
     {
+        /// <summary>
+        /// Gets or sets the studies.
+        /// </summary>
+        /// <value>The studies.</value>
         List<DICOMStudy> Studies { get; set; }
+        /// <summary>
+        /// Gets or sets the study dictionary.
+        /// </summary>
+        /// <value>The study dictionary.</value>
         public Dictionary<string, string> StudyDictionary { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="StudyIdAnonymizer"/> class.
+        /// </summary>
         public StudyIdAnonymizer()
         {
             Studies = new List<DICOMStudy>();
@@ -30,6 +45,9 @@ namespace EvilDICOM.Anonymization.Anonymizers
             GenerateNamesByType();
         }
 
+        /// <summary>
+        /// Generates the names.
+        /// </summary>
         public void GenerateNames()
         {
             Studies = Studies.OrderBy(s => s.ID).ToList();
@@ -41,6 +59,9 @@ namespace EvilDICOM.Anonymization.Anonymizers
             }
         }
 
+        /// <summary>
+        /// Generates the type of the names by.
+        /// </summary>
         public void GenerateNamesByType()
         {
             var types = Enum.GetValues(typeof(DICOMFileType)).Cast<DICOMFileType>();
@@ -62,6 +83,11 @@ namespace EvilDICOM.Anonymization.Anonymizers
             }
         }
 
+        /// <summary>
+        /// Gets the type abbreviation.
+        /// </summary>
+        /// <param name="type">The type.</param>
+        /// <returns>System.String.</returns>
         private string GetTypeAbbreviation(DICOMFileType type)
         {
             switch (type)
@@ -77,6 +103,10 @@ namespace EvilDICOM.Anonymization.Anonymizers
             }
         }
 
+        /// <summary>
+        /// Adds the dicom object.
+        /// </summary>
+        /// <param name="d">The d.</param>
         public void AddDICOMObject(DICOMObject d)
         {
             IDICOMElement id = d.FindFirst(TagHelper.STUDY_ID.CompleteID);
@@ -96,6 +126,10 @@ namespace EvilDICOM.Anonymization.Anonymizers
             }
         }
 
+        /// <summary>
+        /// Anonymizes the specified d.
+        /// </summary>
+        /// <param name="d">The d.</param>
         public void Anonymize(DICOMObject d)
         {
             EvilLogger.Instance.Log("Removing study IDs and descriptions...");
@@ -111,6 +145,11 @@ namespace EvilDICOM.Anonymization.Anonymizers
             }
         }
 
+        /// <summary>
+        /// Gets the type of the file.
+        /// </summary>
+        /// <param name="d">The d.</param>
+        /// <returns>DICOMFileType.</returns>
         public static DICOMFileType GetFileType(DICOMObject d)
         {
             IDICOMElement el = d.FindFirst(TagHelper.SOPCLASS_UID.CompleteID);
@@ -132,29 +171,78 @@ namespace EvilDICOM.Anonymization.Anonymizers
             return DICOMFileType.OTHER;
         }
 
+        /// <summary>
+        /// Gets the name.
+        /// </summary>
+        /// <value>The name.</value>
         public string Name
         {
             get { return "Study Id Anonymizer"; }
         }
     }
 
+    /// <summary>
+    /// Class DICOMStudy.
+    /// </summary>
     public class DICOMStudy
     {
+        /// <summary>
+        /// Gets or sets the identifier.
+        /// </summary>
+        /// <value>The identifier.</value>
         public string ID { get; set; }
+        /// <summary>
+        /// Gets or sets the date.
+        /// </summary>
+        /// <value>The date.</value>
         public System.DateTime? Date { get; set; }
+        /// <summary>
+        /// Gets or sets the type.
+        /// </summary>
+        /// <value>The type.</value>
         public DICOMFileType Type { get; set; }
     }
 
+    /// <summary>
+    /// Enum DICOMFileType
+    /// </summary>
     public enum DICOMFileType
     {
+        /// <summary>
+        /// The rt_ image
+        /// </summary>
         RT_IMAGE,
+        /// <summary>
+        /// The ct_ image
+        /// </summary>
         CT_IMAGE,
+        /// <summary>
+        /// The mri_ image
+        /// </summary>
         MRI_IMAGE,
+        /// <summary>
+        /// The pet_ image
+        /// </summary>
         PET_IMAGE,
+        /// <summary>
+        /// The rt_ dose
+        /// </summary>
         RT_DOSE,
+        /// <summary>
+        /// The rt_ plan
+        /// </summary>
         RT_PLAN,
+        /// <summary>
+        /// The rt_ structure
+        /// </summary>
         RT_STRUCT,
+        /// <summary>
+        /// The registration
+        /// </summary>
         REGISTRATION,
+        /// <summary>
+        /// The other
+        /// </summary>
         OTHER
     }
 }

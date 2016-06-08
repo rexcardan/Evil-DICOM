@@ -3,6 +3,8 @@ using System.Linq;
 
 //using System.Numerics;
 
+#pragma warning disable 1591
+
 namespace EvilDICOM.Core.Helpers
 {
     public class UIDHelper

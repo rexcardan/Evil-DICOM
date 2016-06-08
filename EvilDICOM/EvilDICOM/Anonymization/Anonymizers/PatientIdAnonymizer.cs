@@ -27,6 +27,12 @@ namespace EvilDICOM.Anonymization.Anonymizers
         /// </summary>
         public string Id { get; set; }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="PatientIdAnonymizer"/> class.
+        /// </summary>
+        /// <param name="firstName">The first name.</param>
+        /// <param name="lastName">The last name.</param>
+        /// <param name="id">The identifier.</param>
         public PatientIdAnonymizer(string firstName, string lastName, string id)
         {
             FirstName = firstName;
@@ -34,6 +40,10 @@ namespace EvilDICOM.Anonymization.Anonymizers
             Id = id;
         }
 
+        /// <summary>
+        /// Anonymizes the specified dicom object.
+        /// </summary>
+        /// <param name="d">The dicom object.</param>
         public void Anonymize(DICOMObject d)
         {
             EvilLogger.Instance.Log("Anonymizing patient identity...", 0);

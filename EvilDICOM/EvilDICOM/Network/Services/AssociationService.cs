@@ -10,20 +10,53 @@ using EvilDICOM.Network.Extensions;
 
 namespace EvilDICOM.Network.Services
 {
+    /// <summary>
+    /// Class AssociationService.
+    /// </summary>
     public class AssociationService
     {
+        /// <summary>
+        /// Initializes a new instance of the <see cref="AssociationService"/> class.
+        /// </summary>
         public AssociationService()
         {
             SetDefaultActions();
         }
 
+        /// <summary>
+        /// Gets or sets the abort received action.
+        /// </summary>
+        /// <value>The abort received action.</value>
         public Action<Abort, Association> AbortReceivedAction { get; set; }
+        /// <summary>
+        /// Gets or sets the association request received action.
+        /// </summary>
+        /// <value>The association request received action.</value>
         public Action<Request, Association> AssociationRequestReceivedAction { get; set; }
+        /// <summary>
+        /// Gets or sets the association acceptance received action.
+        /// </summary>
+        /// <value>The association acceptance received action.</value>
         public Action<Accept, Association> AssociationAcceptanceReceivedAction { get; set; }
+        /// <summary>
+        /// Gets or sets the release request received action.
+        /// </summary>
+        /// <value>The release request received action.</value>
         public Action<ReleaseRequest, Association> ReleaseRequestReceivedAction { get; set; }
+        /// <summary>
+        /// Gets or sets the release response action.
+        /// </summary>
+        /// <value>The release response action.</value>
         public Action<ReleaseResponse, Association> ReleaseResponseAction { get; set; }
+        /// <summary>
+        /// Gets or sets the association reject action.
+        /// </summary>
+        /// <value>The association reject action.</value>
         public Action<Reject, Association> AssociationRejectAction { get; set; }
 
+        /// <summary>
+        /// Sets the default actions.
+        /// </summary>
         public void SetDefaultActions()
         {
             AbortReceivedAction = (abort, asc) =>
@@ -107,22 +140,60 @@ namespace EvilDICOM.Network.Services
         }
 
         #region EVENTS AND HANDLERS
+        /// <summary>
+        /// Delegate AbortRequestHandler
+        /// </summary>
+        /// <param name="abort">The abort.</param>
+        /// <param name="asc">The asc.</param>
         public delegate void AbortRequestHandler(Abort abort, Association asc);
 
+        /// <summary>
+        /// Delegate AssociationAcceptedHandler
+        /// </summary>
+        /// <param name="acc">The acc.</param>
+        /// <param name="asc">The asc.</param>
         public delegate void AssociationAcceptedHandler(Accept acc, Association asc);
 
+        /// <summary>
+        /// Delegate AssociationRejectedHandler
+        /// </summary>
+        /// <param name="rej">The rej.</param>
+        /// <param name="asc">The asc.</param>
         public delegate void AssociationRejectedHandler(Reject rej, Association asc);
 
+        /// <summary>
+        /// Delegate AssociationRequestHandler
+        /// </summary>
+        /// <param name="req">The req.</param>
+        /// <param name="asc">The asc.</param>
         public delegate void AssociationRequestHandler(Request req, Association asc);
 
+        /// <summary>
+        /// Delegate ReleaseRequestHandler
+        /// </summary>
+        /// <param name="relRq">The relative rq.</param>
+        /// <param name="asc">The asc.</param>
         public delegate void ReleaseRequestHandler(ReleaseRequest relRq, Association asc);
 
+        /// <summary>
+        /// Delegate ReleaseResponseHandler
+        /// </summary>
+        /// <param name="relRs">The relative rs.</param>
+        /// <param name="asc">The asc.</param>
         public delegate void ReleaseResponseHandler(ReleaseResponse relRs, Association asc);
 
         //ASSOCIATE REQUESTED
 
+        /// <summary>
+        /// Occurs when [association request received].
+        /// </summary>
         public event AssociationRequestHandler AssociationRequestReceived;
 
+        /// <summary>
+        /// Raises the association request received.
+        /// </summary>
+        /// <param name="req">The req.</param>
+        /// <param name="asc">The asc.</param>
         public void RaiseAssociationRequestReceived(Request req, Association asc)
         {
             if (AssociationRequestReceived != null)
@@ -133,8 +204,16 @@ namespace EvilDICOM.Network.Services
 
         //ASSOCIATION ACCEPTED
 
+        /// <summary>
+        /// Occurs when [association acceptance received].
+        /// </summary>
         public event AssociationAcceptedHandler AssociationAcceptanceReceived;
 
+        /// <summary>
+        /// Raises the association acceptance received.
+        /// </summary>
+        /// <param name="acc">The acc.</param>
+        /// <param name="asc">The asc.</param>
         public void RaiseAssociationAcceptanceReceived(Accept acc, Association asc)
         {
             if (AssociationAcceptanceReceived != null)
@@ -145,8 +224,16 @@ namespace EvilDICOM.Network.Services
 
         //ASSOCIATION REJECTED
 
+        /// <summary>
+        /// Occurs when [association rejection received].
+        /// </summary>
         public event AssociationRejectedHandler AssociationRejectionReceived;
 
+        /// <summary>
+        /// Raises the association rejection received.
+        /// </summary>
+        /// <param name="rej">The rej.</param>
+        /// <param name="asc">The asc.</param>
         public void RaiseAssociationRejectionReceived(Reject rej, Association asc)
         {
             if (AssociationRejectionReceived != null)
@@ -157,8 +244,16 @@ namespace EvilDICOM.Network.Services
 
         //RELEASE REQUEST
 
+        /// <summary>
+        /// Occurs when [release request received].
+        /// </summary>
         public event ReleaseRequestHandler ReleaseRequestReceived;
 
+        /// <summary>
+        /// Raises the release request received.
+        /// </summary>
+        /// <param name="relReq">The relative req.</param>
+        /// <param name="asc">The asc.</param>
         public void RaiseReleaseRequestReceived(ReleaseRequest relReq, Association asc)
         {
             if (ReleaseRequestReceived != null)
@@ -169,8 +264,16 @@ namespace EvilDICOM.Network.Services
 
         //RELEASE RESPONSE
 
+        /// <summary>
+        /// Occurs when [release response received].
+        /// </summary>
         public event ReleaseResponseHandler ReleaseResponseReceived;
 
+        /// <summary>
+        /// Raises the release response received.
+        /// </summary>
+        /// <param name="relRs">The relative rs.</param>
+        /// <param name="asc">The asc.</param>
         public void RaiseReleaseResponseReceived(ReleaseResponse relRs, Association asc)
         {
             if (ReleaseResponseReceived != null)
@@ -181,8 +284,16 @@ namespace EvilDICOM.Network.Services
 
         //ABORT REQUEST
 
+        /// <summary>
+        /// Occurs when [abort request received].
+        /// </summary>
         public event AbortRequestHandler AbortRequestReceived;
 
+        /// <summary>
+        /// Raises the abort request received.
+        /// </summary>
+        /// <param name="abort">The abort.</param>
+        /// <param name="asc">The asc.</param>
         public void RaiseAbortRequestReceived(Abort abort, Association asc)
         {
             if (AbortRequestReceived != null)

@@ -14,15 +14,30 @@ using EvilDICOM.Core.Selection;
 
 namespace EvilDICOM.Anonymization.Anonymizers
 {
+    /// <summary>
+    /// Class DateAnonymizer.
+    /// </summary>
+    /// <seealso cref="EvilDICOM.Anonymization.IAnonymizer" />
     public class DateAnonymizer : IAnonymizer
     {
+        /// <summary>
+        /// The date settings
+        /// </summary>
         private DateSettings dateSettings;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="DateAnonymizer"/> class.
+        /// </summary>
+        /// <param name="dateSettings">The date settings.</param>
         public DateAnonymizer(DateSettings dateSettings)
         {
             this.dateSettings = dateSettings;
         }
 
+        /// <summary>
+        /// Anonymizes the specified d.
+        /// </summary>
+        /// <param name="d">The d.</param>
         public void Anonymize(DICOMObject d)
         {
             EvilLogger.Instance.Log("Anonymizing dates...");
@@ -59,7 +74,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
         /// <summary>
         /// Preserves the oldest date (most likely patient DOB) and anonymizes all other dates relative to that
         /// </summary>
-        /// <param name="d"></param>
+        /// <param name="d">The d.</param>
         public void PreserveAndAnonymize(DICOMObject d)
         {
             List<IDICOMElement> dates = d.FindAll(VR.Date);
@@ -83,6 +98,10 @@ namespace EvilDICOM.Anonymization.Anonymizers
         }
 
         //Null patient age, and anonymize all other dates relative to 01/01/1901
+        /// <summary>
+        /// Nulls the age and anonymize.
+        /// </summary>
+        /// <param name="d">The d.</param>
         public void NullAgeAndAnonymize(DICOMObject d)
         {
             Date dob = d.FindFirst(TagHelper.PATIENT_BIRTH_DATE) as Date;
@@ -105,7 +124,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
         /// <summary>
         /// Null the patient age, but preserve all other dates
         /// </summary>
-        /// <param name="d"></param>
+        /// <param name="d">The d.</param>
         public void NullAgeAndPreserve(DICOMObject d)
         {
             Date dob = d.FindFirst(TagHelper.PATIENT_BIRTH_DATE) as Date;
@@ -115,7 +134,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
         /// <summary>
         /// This method is designed to make patients older than age 89 look 88 in a DICOM file to remain HIPAA compliant
         /// </summary>
-        /// <param name="d"></param>
+        /// <param name="d">The d.</param>
         public void Make89AndAnonymize(DICOMObject d)
         {
             Date dob = d.FindFirst(TagHelper.PATIENT_BIRTH_DATE) as Date;
@@ -128,6 +147,10 @@ namespace EvilDICOM.Anonymization.Anonymizers
         }
 
 
+        /// <summary>
+        /// Randomizes the specified d.
+        /// </summary>
+        /// <param name="d">The d.</param>
         public void Randomize(DICOMObject d)
         {
             List<IDICOMElement> dates = d.FindAll(VR.Date);

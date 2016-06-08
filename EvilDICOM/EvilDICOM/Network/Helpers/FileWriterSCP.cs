@@ -19,6 +19,11 @@ namespace EvilDICOM.Network.Helpers
         private string _storagePath;
         private CancellationToken _token;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="FileWriterSCP"/> class.
+        /// </summary>
+        /// <param name="ae">The ae.</param>
+        /// <param name="storageLocation">The storage location.</param>
         public FileWriterSCP(Entity ae, string storageLocation)
             : base(ae)
         {

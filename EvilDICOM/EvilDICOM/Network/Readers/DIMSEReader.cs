@@ -13,8 +13,17 @@ using EvilDICOM.Network.PDUs.Items;
 
 namespace EvilDICOM.Network.Readers
 {
+    /// <summary>
+    /// Class DIMSEReader.
+    /// </summary>
     public class DIMSEReader
     {
+        /// <summary>
+        /// Creates the dicom object.
+        /// </summary>
+        /// <param name="dimse">The dimse.</param>
+        /// <param name="syntax">The syntax.</param>
+        /// <returns>DICOMObject.</returns>
         public static DICOMObject CreateDICOMObject(byte[] dimse,
             TransferSyntax syntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
         {
@@ -25,7 +34,7 @@ namespace EvilDICOM.Network.Readers
         }
 
         /// <summary>
-        ///     Takes a list of PData transfer objects and writes them to a byte array for outgoing messaging
+        /// Takes a list of PData transfer objects and writes them to a byte array for outgoing messaging
         /// </summary>
         /// <param name="data">the PData transfer objects to be sent</param>
         /// <returns>a byte array containing the PData objects</returns>
@@ -46,6 +55,12 @@ namespace EvilDICOM.Network.Readers
             return merged;
         }
 
+        /// <summary>
+        /// Tries the read dimse.
+        /// </summary>
+        /// <param name="dcm">The DCM.</param>
+        /// <param name="dimse">The dimse.</param>
+        /// <returns><c>true</c> if XXXX, <c>false</c> otherwise.</returns>
         public static bool TryReadDIMSE(DICOMObject dcm, out AbstractDIMSE dimse)
         {
             dimse = null;
@@ -86,12 +101,24 @@ namespace EvilDICOM.Network.Readers
         }
 
         //TODO Merge these methods
+        /// <summary>
+        /// Reads the dimse request.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dcm">The DCM.</param>
+        /// <returns>T.</returns>
         private static T ReadDIMSERequest<T>(DICOMObject dcm) where T : AbstractDIMSERequest
         {
             var req = (T) Activator.CreateInstance(typeof (T), dcm);
             return req;
         }
 
+        /// <summary>
+        /// Reads the dimse response.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="dcm">The DCM.</param>
+        /// <returns>T.</returns>
         private static T ReadDIMSEResponse<T>(DICOMObject dcm) where T : AbstractDIMSEResponse
         {
             var req = (T) Activator.CreateInstance(typeof (T), dcm);

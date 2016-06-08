@@ -19,12 +19,29 @@ using System.IO;
 
 namespace EvilDICOM.Network
 {
+    /// <summary>
+    /// Class Association.
+    /// </summary>
     public class Association
     {
+        /// <summary>
+        /// The _abort requested
+        /// </summary>
         private bool _abortRequested = false;
+        /// <summary>
+        /// The _cancel requested
+        /// </summary>
         private bool _cancelRequested = false;
+        /// <summary>
+        /// The _memory logger
+        /// </summary>
         private ByteMemoryLogger _memoryLogger;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="Association"/> class.
+        /// </summary>
+        /// <param name="serviceClass">The service class.</param>
+        /// <param name="client">The client.</param>
         public Association(DICOMServiceClass serviceClass, TcpClient client)
         {
             ServiceClass = serviceClass;
@@ -39,12 +56,16 @@ namespace EvilDICOM.Network
             OutboundMessages = new ConcurrentQueue<AbstractDIMSEBase>();
         }
 
+        /// <summary>
+        /// Gets the service class.
+        /// </summary>
+        /// <value>The service class.</value>
         public DICOMServiceClass ServiceClass { get; private set; }
 
         /// <summary>
         /// Sets up a file log of incoming messages
         /// </summary>
-        /// <param name="folderStoragePath"></param>
+        /// <param name="folderStoragePath">The folder storage path.</param>
         public void SetDebugMode(string folderStoragePath)
         {
             _memoryLogger = new ByteMemoryLogger(folderStoragePath);
@@ -52,59 +73,103 @@ namespace EvilDICOM.Network
             this.ServiceClass.DIMSEService.DoLogBytes = true;
         }
 
+        /// <summary>
+        /// Dimses the service_ c store request received.
+        /// </summary>
+        /// <param name="req">The req.</param>
+        /// <param name="asc">The asc.</param>
+        /// <exception cref="System.NotImplementedException"></exception>
         private void DIMSEService_CStoreRequestReceived(CStoreRequest req, Association asc)
         {
             throw new NotImplementedException();
         }
 
         /// <summary>
-        ///     The agreed upon presentation context of the association
+        /// The agreed upon presentation context of the association
         /// </summary>
+        /// <value>The presentation contexts.</value>
         public List<PresentationContext> PresentationContexts { get; set; }
 
         /// <summary>
-        ///     The last time of communication of this association
+        /// The last time of communication of this association
         /// </summary>
+        /// <value>The last active.</value>
         public DateTime LastActive { get; set; }
 
         /// <summary>
-        ///     The user info containing maximum PDataTF packet size
+        /// The user info containing maximum PDataTF packet size
         /// </summary>
+        /// <value>The user information.</value>
         public UserInfo UserInfo { get; set; }
 
 
+        /// <summary>
+        /// Gets or sets the pdu processor.
+        /// </summary>
+        /// <value>The pdu processor.</value>
         public PDUProcessor PDUProcessor { get; set; }
+        /// <summary>
+        /// Gets or sets the p data processor.
+        /// </summary>
+        /// <value>The p data processor.</value>
         public PDataProcessor PDataProcessor { get; set; }
 
+        /// <summary>
+        /// Gets the logger.
+        /// </summary>
+        /// <value>The logger.</value>
         public EventLogger Logger
         {
             get { return ServiceClass.Logger; }
         }
 
+        /// <summary>
+        /// Gets or sets the outbound messages.
+        /// </summary>
+        /// <value>The outbound messages.</value>
         public ConcurrentQueue<AbstractDIMSEBase> OutboundMessages { get; set; }
+        /// <summary>
+        /// Gets the stream.
+        /// </summary>
+        /// <value>The stream.</value>
         public BufferedStream Stream { get; private set; }
+        /// <summary>
+        /// Gets the reader.
+        /// </summary>
+        /// <value>The reader.</value>
         public NetworkBinaryReader Reader { get; private set; }
+        /// <summary>
+        /// Gets or sets the state.
+        /// </summary>
+        /// <value>The state.</value>
         public NetworkState State { get; set; }
 
         #region ASSOCIATION IDENTITY
 
         /// <summary>
-        ///     The foreign AeTitle
+        /// The foreign AeTitle
         /// </summary>
+        /// <value>The ae title.</value>
         public string AeTitle { get; set; }
 
         /// <summary>
-        ///     The ip address of the foreign service class
+        /// The ip address of the foreign service class
         /// </summary>
+        /// <value>The ip address.</value>
         public string IpAddress { get; set; }
 
         /// <summary>
-        ///     The port of the foreign service class
+        /// The port of the foreign service class
         /// </summary>
+        /// <value>The port.</value>
         public int Port { get; set; }
 
         #endregion
 
+        /// <summary>
+        /// Listens the specified maximum wait time.
+        /// </summary>
+        /// <param name="maxWaitTime">The maximum wait time.</param>
         public void Listen(TimeSpan? maxWaitTime = null)
         {
             maxWaitTime = maxWaitTime ?? TimeSpan.FromSeconds(25);
@@ -124,6 +189,9 @@ namespace EvilDICOM.Network
             }
         }
 
+        /// <summary>
+        /// Handles the cancel.
+        /// </summary>
         private void HandleCancel()
         {
             AbstractDIMSEBase cancel;
@@ -136,12 +204,19 @@ namespace EvilDICOM.Network
             }
         }
 
+        /// <summary>
+        /// Handles the abort.
+        /// </summary>
         private void HandleAbort()
         {
             AssociationMessenger.SendAbort(this);
             State = NetworkState.CLOSING_ASSOCIATION;
         }
 
+        /// <summary>
+        /// Reads this instance.
+        /// </summary>
+        /// <returns>IMessage.</returns>
         public IMessage Read()
         {
             try
@@ -157,6 +232,10 @@ namespace EvilDICOM.Network
 
         }
 
+        /// <summary>
+        /// Processes the specified message.
+        /// </summary>
+        /// <param name="message">The message.</param>
         public void Process(IMessage message)
         {
             if (message != null)
@@ -176,17 +255,27 @@ namespace EvilDICOM.Network
             }
         }
 
+        /// <summary>
+        /// Releases this instance.
+        /// </summary>
         public void Release()
         {
             State = NetworkState.CLOSING_ASSOCIATION;
             Stream.Flush();
         }
 
+        /// <summary>
+        /// Requests the abort.
+        /// </summary>
         public void RequestAbort()
         {
             _abortRequested = true;
         }
 
+        /// <summary>
+        /// Returns a <see cref="System.String" /> that represents this instance.
+        /// </summary>
+        /// <returns>A <see cref="System.String" /> that represents this instance.</returns>
         public override string ToString()
         {
             return string.Format("ASSOCIATION\nIP Address : {0}\nPort :{1}\n", IpAddress, Port);
@@ -194,6 +283,10 @@ namespace EvilDICOM.Network
 
         #region MESSAGING
 
+        /// <summary>
+        /// Sends the message.
+        /// </summary>
+        /// <param name="message">The message.</param>
         public void SendMessage(byte[] message)
         {
             if (message != null && Stream.CanWrite)
@@ -202,6 +295,10 @@ namespace EvilDICOM.Network
             }
         }
 
+        /// <summary>
+        /// Sends the message.
+        /// </summary>
+        /// <param name="message">The message.</param>
         public void SendMessage(IPDU message)
         {
             SendMessage(message.Write());
@@ -209,6 +306,10 @@ namespace EvilDICOM.Network
 
         #endregion
 
+        /// <summary>
+        /// Cancels the specified cancel.
+        /// </summary>
+        /// <param name="cancel">The cancel.</param>
         public void Cancel(CCancel cancel)
         {
             _cancelRequested = true;

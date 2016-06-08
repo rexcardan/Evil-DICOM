@@ -14,17 +14,26 @@ using EvilDICOM.Network.DIMSE;
 
 namespace EvilDICOM.Network.Readers
 {
+    /// <summary>
+    /// Class NetworkBinaryReader.
+    /// </summary>
     public class NetworkBinaryReader
     {
         #region PRIVATE
+        /// <summary>
+        /// The _binary reader
+        /// </summary>
         protected BinaryReader _binaryReader;
+        /// <summary>
+        /// The _logger
+        /// </summary>
         private IByteLogger _logger;
         #endregion
 
         /// <summary>
         /// Constructs a DICOM binary reader from a network stream
         /// </summary>
-        /// <param name="stream"></param>
+        /// <param name="stream">The stream.</param>
         public NetworkBinaryReader(BufferedStream stream)
             : base()
         {
@@ -34,7 +43,8 @@ namespace EvilDICOM.Network.Readers
         /// <summary>
         /// Constructs a DICOM binary reader from a network stream
         /// </summary>
-        /// <param name="stream"></param>
+        /// <param name="stream">The stream.</param>
+        /// <param name="logger">The logger.</param>
         public NetworkBinaryReader(BufferedStream stream, IByteLogger logger)
             : base()
         {
@@ -42,6 +52,10 @@ namespace EvilDICOM.Network.Readers
             _logger = logger;
         }
 
+        /// <summary>
+        /// Sets the logger.
+        /// </summary>
+        /// <param name="logger">The logger.</param>
         public void SetLogger(IByteLogger logger)
         {
             _logger = logger;
@@ -82,6 +96,7 @@ namespace EvilDICOM.Network.Readers
         /// Creates a new stream that is trimmed to the specification length.
         /// </summary>
         /// <param name="substreamLength">the number of bytes to include in the new stream (starting from the current position)</param>
+        /// <returns>DICOMBinaryReader.</returns>
         public DICOMBinaryReader GetSubStream(int substreamLength)
         {
             byte[] newStream = Take(substreamLength);
@@ -102,7 +117,7 @@ namespace EvilDICOM.Network.Readers
         /// <summary>
         /// Reads the specified number of chars and converts to a string
         /// </summary>
-        /// <param name="count">the number of chars to be read</param>
+        /// <param name="length">the number of chars to be read</param>
         /// <returns>the read chars</returns>
         public string ReadString(int length)
         {
@@ -110,12 +125,21 @@ namespace EvilDICOM.Network.Readers
             return new string(buffer);
         }
 
+        /// <summary>
+        /// Skips the specified count.
+        /// </summary>
+        /// <param name="count">The count.</param>
+        /// <returns>NetworkBinaryReader.</returns>
         public NetworkBinaryReader Skip(int count)
         {
             ReadBytes(count);
             return this;
         }
 
+        /// <summary>
+        /// Dumps the log.
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
         public void DumpLog<T>()
         {
             var name = typeof(T).Name;

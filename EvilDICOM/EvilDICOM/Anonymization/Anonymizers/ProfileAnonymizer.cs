@@ -11,10 +11,15 @@ using System.Text;
 namespace EvilDICOM.Anonymization.Anonymizers
 {
     /// <summary>
-    /// Replaces standard indentification profile with empty data
+    /// Replaces standard identification profile with empty data
     /// </summary>
     public class ProfileAnonymizer : IAnonymizer
     {
+
+        /// <summary>
+        /// Anonymizes the specified d dicom object.
+        /// </summary>
+        /// <param name="d">The dicom object.</param>
         public void Anonymize(DICOMObject d)
         {
             EvilLogger.Instance.Log("Clearing DICOM profile...");
@@ -111,12 +116,22 @@ namespace EvilDICOM.Anonymization.Anonymizers
             return profile;
         }
 
+        /// <summary>
+        /// Generates the zero decimal string.
+        /// </summary>
+        /// <param name="tag">The tag.</param>
+        /// <returns>IDICOMElement.</returns>
         private IDICOMElement GenerateZeroDecimalString(Tag tag)
         {
             DecimalString ds = new DecimalString(tag, new double[] { 0.0 });
             return ds;
         }
 
+        /// <summary>
+        /// Generates the empty dicom string.
+        /// </summary>
+        /// <param name="tag">The tag.</param>
+        /// <returns>IDICOMElement.</returns>
         private IDICOMElement GenerateEmptyDICOMString(Tag tag)
         {
             var s = new LongString();

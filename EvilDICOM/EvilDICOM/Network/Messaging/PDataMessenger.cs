@@ -14,8 +14,17 @@ using EvilDICOM.Network.PDUs.Items;
 
 namespace EvilDICOM.Network.Messaging
 {
+    /// <summary>
+    /// Class PDataMessenger.
+    /// </summary>
     public class PDataMessenger
     {
+        /// <summary>
+        /// Sends the specified dimse.
+        /// </summary>
+        /// <param name="dimse">The dimse.</param>
+        /// <param name="asc">The asc.</param>
+        /// <param name="pContext">The p context.</param>
         public static void Send(AbstractDIMSEBase dimse, Association asc, PresentationContext pContext = null)
         {
             if (asc.State != NetworkState.TRANSPORT_CONNECTION_OPEN)
@@ -41,6 +50,13 @@ namespace EvilDICOM.Network.Messaging
             }
         }
 
+        /// <summary>
+        /// Gets the p data t fs.
+        /// </summary>
+        /// <param name="dimse">The dimse.</param>
+        /// <param name="pContext">The p context.</param>
+        /// <param name="maxPDULength">Maximum length of the pdu.</param>
+        /// <returns>List&lt;PDataTF&gt;.</returns>
         public static List<PDataTF> GetPDataTFs(AbstractDIMSEBase dimse, PresentationContext pContext, int maxPDULength = 16384)
         {
             var list = new List<PDataTF>();
@@ -61,12 +77,12 @@ namespace EvilDICOM.Network.Messaging
 
 
         /// <summary>
-        ///     Splits the DICOM object into chunks that are within the max PDU size
+        /// Splits the DICOM object into chunks that are within the max PDU size
         /// </summary>
-        /// <param name="dicomObject"> the DICOM objec to be split</param>
+        /// <param name="dicomObject">the DICOM objec to be split</param>
         /// <param name="maxPduSize">the max length (in bytes) for a PDU</param>
-        /// <param name="asc">the association that the file will be sent</param>
-        /// <returns></returns>
+        /// <param name="pc">The pc.</param>
+        /// <returns>List&lt;System.Byte[]&gt;.</returns>
         private static List<byte[]> GetChunks(DICOMObject dicomObject, int maxPduSize, PresentationContext pc)
         {
             byte[] dicomBytes;

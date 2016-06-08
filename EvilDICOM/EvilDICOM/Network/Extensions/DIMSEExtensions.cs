@@ -9,8 +9,16 @@ using EvilDICOM.Core.Helpers;
 
 namespace EvilDICOM.Network.Extensions
 {
+    /// <summary>
+    /// Class DIMSEExtensions.
+    /// </summary>
     public static class DIMSEExtensions
     {
+        /// <summary>
+        /// Logs the data.
+        /// </summary>
+        /// <param name="dimse">The dimse.</param>
+        /// <param name="asc">The asc.</param>
         public static void LogData(this AbstractDIMSEBase dimse, Association asc)
         {
             if (dimse is AbstractDIMSE)
@@ -27,6 +35,12 @@ namespace EvilDICOM.Network.Extensions
             }
         }
 
+        /// <summary>
+        /// Withes the series.
+        /// </summary>
+        /// <param name="cFinds">The c finds.</param>
+        /// <param name="scu">The scu.</param>
+        /// <param name="daemon">The daemon.</param>
         public static void WithSeries(this IEnumerable<CFindResponse> cFinds, DICOMSCU scu, Entity daemon)
         {
             var iods = cFinds.Where(r => r.Status == (ushort)Status.PENDING)

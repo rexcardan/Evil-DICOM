@@ -1,4 +1,6 @@
-﻿namespace EvilDICOM.Network.Enums
+﻿#pragma warning disable 1591
+
+namespace EvilDICOM.Network.Enums
 {
     //ps 3.7 Annex C Status Type Encoding(Normative)
     public enum Status : ushort

@@ -11,25 +11,48 @@ using EvilDICOM.Core.Selection;
 
 namespace EvilDICOM.Network.DIMSE
 {
+    /// <summary>
+    /// Class CStoreResponse.
+    /// </summary>
+    /// <seealso cref="EvilDICOM.Network.DIMSE.AbstractDIMSEResponse" />
+    /// <seealso cref="EvilDICOM.Core.Interfaces.IIOD" />
     public class CStoreResponse : AbstractDIMSEResponse, IIOD
     {
+        /// <summary>
+        /// The _affected sop instance uid
+        /// </summary>
         private readonly UniqueIdentifier _affectedSOPInstanceUID = new UniqueIdentifier
         {
             Tag = TagHelper.AFFECTED_SOPINSTANCE_UID
         };
 
+        /// <summary>
+        /// The _data set
+        /// </summary>
         private ushort _dataSet = 257;
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CStoreResponse"/> class.
+        /// </summary>
         public CStoreResponse()
         {
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CStoreResponse"/> class.
+        /// </summary>
+        /// <param name="d">The d.</param>
         public CStoreResponse(DICOMObject d)
             : base(d)
         {
             CommandField = (ushort)C.C_STORE_RP;
         }
 
+        /// <summary>
+        /// Initializes a new instance of the <see cref="CStoreResponse"/> class.
+        /// </summary>
+        /// <param name="req">The req.</param>
+        /// <param name="status">The status.</param>
         public CStoreResponse(CStoreRequest req, Status status)
         {
             AffectedSOPClassUID = req.AffectedSOPClassUID;
@@ -44,6 +67,10 @@ namespace EvilDICOM.Network.DIMSE
 
         #region PROPERTIES
 
+        /// <summary>
+        /// Gets or sets the affected sop instance uid.
+        /// </summary>
+        /// <value>The affected sop instance uid.</value>
         public string AffectedSOPInstanceUID
         {
             get { return _affectedSOPInstanceUID.Data; }
@@ -53,8 +80,9 @@ namespace EvilDICOM.Network.DIMSE
         #endregion
 
         /// <summary>
-        ///     The order of elements to send in a IIOD packet
+        /// The order of elements to send in a IIOD packet
         /// </summary>
+        /// <value>The elements.</value>
         public override List<IDICOMElement> Elements
         {
             get

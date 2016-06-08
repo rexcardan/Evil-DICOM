@@ -10,9 +10,17 @@ using EvilDICOM.Network.Associations.PDUs;
 
 namespace EvilDICOM.Network.Messaging
 {
+    /// <summary>
+    /// Class AssociationMessenger.
+    /// </summary>
     public class AssociationMessenger
     {
 
+        /// <summary>
+        /// Sends the accept.
+        /// </summary>
+        /// <param name="accept">The accept.</param>
+        /// <param name="asc">The asc.</param>
         public static void SendAccept(Accept accept, Association asc)
         {
             var stream = asc.Stream;
@@ -21,6 +29,10 @@ namespace EvilDICOM.Network.Messaging
             stream.Write(message, 0, message.Length);
         }
 
+        /// <summary>
+        /// Sends the reject.
+        /// </summary>
+        /// <param name="asc">The asc.</param>
         public static void SendReject(Association asc)
         {
             var rej = new Reject
@@ -38,6 +50,11 @@ namespace EvilDICOM.Network.Messaging
         ///// </summary>
         ///// <param name="asc">the underlying association</param>
         ///// <param name="abstractSyntax">the proposed abstract syntaxes (what should the service be able to do)</param>
+        /// <summary>
+        /// Sends the request.
+        /// </summary>
+        /// <param name="asc">The asc.</param>
+        /// <param name="abstractSyntaxes">The abstract syntaxes.</param>
         public static void SendRequest(Association asc, params string[] abstractSyntaxes)
         {
             var request = new Request {CalledEntityTitle = asc.AeTitle, CallingEntityTitle = asc.ServiceClass.ApplicationEntity.AeTitle};
@@ -60,6 +77,10 @@ namespace EvilDICOM.Network.Messaging
             asc.SendMessage(request);
         }
 
+        /// <summary>
+        /// Sends the release request.
+        /// </summary>
+        /// <param name="asc">The asc.</param>
         public static void SendReleaseRequest(Association asc)
         {
             var req = new ReleaseRequest();
@@ -73,6 +94,10 @@ namespace EvilDICOM.Network.Messaging
            
         }
 
+        /// <summary>
+        /// Sends the release response.
+        /// </summary>
+        /// <param name="asc">The asc.</param>
         public static void SendReleaseResponse(Association asc)
         {
             var resp = new ReleaseResponse();
@@ -84,6 +109,12 @@ namespace EvilDICOM.Network.Messaging
             }
         }
 
+        /// <summary>
+        /// Sends the abort.
+        /// </summary>
+        /// <param name="asc">The asc.</param>
+        /// <param name="abortSource">The abort source.</param>
+        /// <param name="reason">The reason.</param>
         public static void SendAbort(Association asc, AbortSource abortSource = AbortSource.DICOM_UL_SERV_PROVIDER, AbortReason reason = AbortReason.REASON_NOT_SPECIFIED)
         {
             if (asc.Stream.CanWrite)

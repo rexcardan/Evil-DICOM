@@ -6,12 +6,32 @@ using System.Text;
 
 namespace EvilDICOM.Network.PDUs
 {
+    /// <summary>
+    /// Class Reject.
+    /// </summary>
+    /// <seealso cref="EvilDICOM.Network.Interfaces.IPDU" />
     public class Reject : IPDU
     {
+        /// <summary>
+        /// Gets or sets the reason.
+        /// </summary>
+        /// <value>The reason.</value>
         public byte Reason { get; set; }
+        /// <summary>
+        /// Gets or sets the source.
+        /// </summary>
+        /// <value>The source.</value>
         public RejectSource Source { get; set; }
+        /// <summary>
+        /// Gets or sets the result.
+        /// </summary>
+        /// <value>The result.</value>
         public RejectResult Result { get; set; }
 
+        /// <summary>
+        /// Writes this instance.
+        /// </summary>
+        /// <returns>System.Byte[].</returns>
         public byte[] Write()
         {
             var written = new byte[0];
@@ -31,11 +51,19 @@ namespace EvilDICOM.Network.PDUs
             return written;
         }
 
+        /// <summary>
+        /// Gets the type.
+        /// </summary>
+        /// <value>The type.</value>
         public PDUType Type
         {
             get { return PDUType.A_ASSOC_REJECT; }
         }
 
+        /// <summary>
+        /// Returns a <see cref="System.String" /> that represents this instance.
+        /// </summary>
+        /// <returns>A <see cref="System.String" /> that represents this instance.</returns>
         public override string ToString()
         {
             StringBuilder sb = new StringBuilder();

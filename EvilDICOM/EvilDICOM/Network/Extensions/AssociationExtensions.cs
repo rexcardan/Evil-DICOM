@@ -8,15 +8,18 @@ using System.Threading.Tasks;
 
 namespace EvilDICOM.Network.Extensions
 {
+    /// <summary>
+    /// Class AssociationExtensions.
+    /// </summary>
     public static class AssociationExtensions
     {
         /// <summary>
-        /// Takes two sets of presentation contexts (typically from a request and a DICOM Service) and creates the 
+        /// Takes two sets of presentation contexts (typically from a request and a DICOM Service) and creates the
         /// agreed presentation context list for the accept response
         /// </summary>
-        /// <param name="source1"></param>
-        /// <param name="source2"></param>
-        /// <returns></returns>
+        /// <param name="asc">The asc.</param>
+        /// <param name="reqContexts">The req contexts.</param>
+        /// <returns>List&lt;PresentationContext&gt;.</returns>
         public static List<PresentationContext> GetResponseContexts(this Association asc, IEnumerable<PresentationContext> reqContexts)
         {
             var serviceContexts = asc.PresentationContexts;
@@ -65,6 +68,11 @@ namespace EvilDICOM.Network.Extensions
             return response;
         }
 
+        /// <summary>
+        /// Sets the final contexts.
+        /// </summary>
+        /// <param name="asc">The asc.</param>
+        /// <param name="accept">The accept.</param>
         public static void SetFinalContexts(this Association asc, Accept accept)
         {
             List<PresentationContext> final = new List<PresentationContext>();
