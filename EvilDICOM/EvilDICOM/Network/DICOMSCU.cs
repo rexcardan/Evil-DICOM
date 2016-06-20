@@ -8,6 +8,8 @@ using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Messaging;
 using System.Net;
+using System.Threading;
+using EvilDICOM.Network.DIMSE.IOD;
 
 namespace EvilDICOM.Network
 {
@@ -80,6 +82,37 @@ namespace EvilDICOM.Network
             cStoreReq.MoveOrigAETitle = this.ApplicationEntity.AeTitle;
             cStoreReq.MoveOrigMessageID = messageId;
             return cStoreReq;
+        }
+
+        /// <summary>
+        /// Emits a CMove operation to an entity which moves an image from the entity to the specified AETitle
+        /// </summary>
+        /// <param name="scp">the provider which will perform the move</param>
+        /// <param name="sopUid">the uid of the image to be moved</param>
+        /// <param name="patientId">the patient id of the image</param>
+        /// <param name="toAETite">the entity title which will receive the image</param>
+        /// <param name="msgId">the message id</param>
+        /// <returns>the move response</returns>
+        public CMoveResponse SendCMoveImage(Entity daemon, string sopUid, string patientId, string toAETite, ref ushort msgId)
+        {
+            ManualResetEvent mr = new ManualResetEvent(false);
+            CMoveResponse resp = null;
+            var cr = new EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler<CMoveResponse>((res, asc) =>
+            {
+                if (!(res.Status == (ushort)Status.PENDING))
+                {
+                    mr.Set();
+                }
+                resp = res;
+            });
+            var result = new CMoveIOD() { QueryLevel = QueryLevel.IMAGE, SOPInstanceUID = sopUid, PatientId = patientId };
+            var request = new CMoveRequest(result, toAETite, Root.STUDY, EvilDICOM.Core.Enums.Priority.MEDIUM, msgId);
+            this.DIMSEService.CMoveResponseReceived += cr;
+            this.SendMessage(request, daemon);
+            mr.WaitOne();
+            this.DIMSEService.CMoveResponseReceived -= cr;
+            msgId += 2;
+            return resp;
         }
     }
 }

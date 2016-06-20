@@ -37,6 +37,7 @@ namespace EvilDICOM.Core.Helpers
             new KeyValuePair<string,SOPClass>(AbstractSyntax.VERIFICATION, SOPClass.Verification),
             new KeyValuePair<string,SOPClass>(AbstractSyntax.MR_IMAGE_STORAGE, SOPClass.MR),
             new KeyValuePair<string,SOPClass>(AbstractSyntax.NMR_IMAGE_STORAGE, SOPClass.NMR),
+            new KeyValuePair<string,SOPClass>(AbstractSyntax.SPATIAL_IMAGE_STORAGE, SOPClass.RT_Reg),
             new KeyValuePair<string,SOPClass>(AbstractSyntax.PATIENT_FIND, SOPClass.FIND),
             new KeyValuePair<string,SOPClass>(AbstractSyntax.PATIENT_GET, SOPClass.GET),
             new KeyValuePair<string,SOPClass>(AbstractSyntax.PATIENT_MOVE, SOPClass.MOVE),

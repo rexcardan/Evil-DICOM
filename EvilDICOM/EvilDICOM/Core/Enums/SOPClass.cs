@@ -16,6 +16,7 @@ namespace EvilDICOM.Core.Enums
         //RT
         RT_Image,
         RT_Dose,
+        RT_Reg,
         RT_Structure,
         RT_Plan,
         RT_Brachy_Record,
