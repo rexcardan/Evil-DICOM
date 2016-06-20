@@ -19,10 +19,6 @@ namespace EvilDICOM.Anonymization.Anonymizers
     {
         private Dictionary<string, string> _uidMap = new Dictionary<string, string>();
 
-        /// <summary>
-        /// Adds a DICOM object to the mapping so UIDs can be remapped during the anonymization
-        /// </summary>
-        /// <param name="d"></param>
         public void AddDICOMObject(DICOMObject d)
         {
             List<IDICOMElement> uids = d.FindAll(VR.UniqueIdentifier).ToList();
@@ -40,11 +36,6 @@ namespace EvilDICOM.Anonymization.Anonymizers
             }
         }
 
-        /// <summary>
-        /// Keeps a few UIDs from getting scrambled
-        /// </summary>
-        /// <param name="tag"></param>
-        /// <returns></returns>
         private bool IsProtectedUID(Tag tag)
         {
             return tag.CompleteID == TagHelper.TRANSFER_SYNTAX_UID.CompleteID ||
@@ -54,20 +45,13 @@ namespace EvilDICOM.Anonymization.Anonymizers
                 tag.CompleteID == TagHelper.REFERENCED_SOPCLASS_UID.CompleteID;
         }
 
-        /// <summary>
-        /// Takes a current UID, generates a new one and adds a mapping to the dictionary
-        /// </summary>
-        /// <param name="uid"></param>
         public void AddToUIDDictionary(string uid)
         {
             string newUID = UIDHelper.GenerateUID();
             _uidMap.Add(uid, newUID);
         }
 
-        /// <summary>
-        /// Clears the original UIDs and adds the newly generated but remapped ones
-        /// </summary>
-        /// <param name="d"></param>
+
         public void Anonymize(DICOMObject d)
         {
             EvilLogger.Instance.Log("Remapping UIDs...");

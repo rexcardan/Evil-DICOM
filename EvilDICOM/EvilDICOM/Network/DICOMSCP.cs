@@ -26,8 +26,7 @@ namespace EvilDICOM.Network
                     _server.Start();
                     _started = true;
                 }
-                Logger.Log("Listening on {0} Port {1}...", this.ApplicationEntity.IpAddress, this.ApplicationEntity.Port);
-                var connection = await _server.AcceptTcpClientAsync();
+                var connection = await _server.AcceptTcpClientAsync(); 
                 SpinUpAssociation(connection);
                 if (!keepListenerRunning)
                 {

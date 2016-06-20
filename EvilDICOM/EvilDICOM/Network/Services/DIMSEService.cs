@@ -30,7 +30,6 @@ namespace EvilDICOM.Network.Services
         public Action<CFindResponse, Association> CFindResponseReceivedAction { get; set; }
         public Action<CMoveRequest, Association> CMoveRequestReceivedAction { get; set; }
         public Action<CMoveResponse, Association> CMoveResponseReceivedAction { get; set; }
-        public bool DoLogBytes { get; set; }
 
         private void SetDefaultActions()
         {
@@ -43,7 +42,7 @@ namespace EvilDICOM.Network.Services
                 var response = new CEchoResponse(cEchoReq, Status.SUCCESS);
                 PDataMessenger.Send(response, asc);
                 RaiseDIMSERequestReceived<CEchoRequest>(cEchoReq, asc);
-
+   
             };
 
             CEchoResponseReceivedAction = (cEchoRp, asc) =>
@@ -60,7 +59,7 @@ namespace EvilDICOM.Network.Services
                 asc.LastActive = DateTime.Now;
                 RaiseDIMSEResponseReceived<CFindResponse>(cFindResp, asc);
                 cFindResp.LogData(asc);
-                if (cFindResp.Status != (ushort)Status.PENDING)
+                if (cFindResp.Status != (ushort) Status.PENDING)
                 {
                     AssociationMessenger.SendReleaseRequest(asc);
                 }
@@ -82,7 +81,7 @@ namespace EvilDICOM.Network.Services
                 cMoveRes.LogData(asc);
                 asc.LastActive = DateTime.Now;
                 RaiseDIMSEResponseReceived<CMoveResponse>(cMoveRes, asc);
-                if (cMoveRes.Status != (ushort)Status.PENDING)
+                if (cMoveRes.Status != (ushort) Status.PENDING)
                 {
                     AssociationMessenger.SendReleaseRequest(asc);
                 }
@@ -111,15 +110,15 @@ namespace EvilDICOM.Network.Services
                         }
                         catch (Exception e)
                         {
-                            resp.Status = (ushort)Status.FAILURE;
+                            resp.Status = (ushort) Status.FAILURE;
                             PDataMessenger.Send(resp, asc);
                         }
                     }
                     else
                     {
                         //Abstract syntax not supported
-                        resp.Status = (ushort)Status.FAILURE;
-                        PDataMessenger.Send(resp, asc);
+                        resp.Status = (ushort) Status.FAILURE;
+                        PDataMessenger.Send(resp, asc);           
                     }
                 }
             };
@@ -156,11 +155,6 @@ namespace EvilDICOM.Network.Services
 
         private void RaiseDIMSERequestReceived<T>(T req, Association asc) where T : AbstractDIMSERequest
         {
-            if (this.DoLogBytes)
-            {
-                asc.Reader.DumpLog<T>();
-            }
-
             if (typeof(T) == typeof(CEchoRequest))
             {
                 if (CEchoRequestReceived != null)

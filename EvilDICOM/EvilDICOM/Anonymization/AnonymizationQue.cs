@@ -9,16 +9,16 @@ using EvilDICOM.Anonymization.Anonymizers;
 
 namespace EvilDICOM.Anonymization
 {
-    public class AnonymizationQueue
+    public class AnonymizationQue
     {
-        public AnonymizationQueue()
+        public AnonymizationQue()
         {
-            Queue = new List<IAnonymizer>();
+            Que = new List<IAnonymizer>();
         }
 
-        public static AnonymizationQueue BuildQueue(AnonymizationSettings settings, IEnumerable<string> dcmFiles)
+        public static AnonymizationQue BuildQue(AnonymizationSettings settings, IEnumerable<string> dcmFiles)
         {
-            var anonQue = new AnonymizationQueue();
+            var anonQue = new AnonymizationQue();
 
             if (settings.DoAnonymizeStudyIDs || settings.DoAnonymizeUIDs)
             {
@@ -30,54 +30,34 @@ namespace EvilDICOM.Anonymization
                     if (uidAnon != null) uidAnon.AddDICOMObject(ob);
                     if (studyAnon != null) studyAnon.AddDICOMObject(ob);
                 }
-                if (studyAnon != null) { studyAnon.FinalizeDictionary(); anonQue.Queue.Add(studyAnon); }
-                if (uidAnon != null) { anonQue.Queue.Add(uidAnon); }
+                if (studyAnon != null) { studyAnon.FinalizeDictionary(); anonQue.Que.Add(studyAnon); }
+                if (uidAnon != null) { anonQue.Que.Add(uidAnon); }
             }
-            if (settings.DoAnonymizeNames) { anonQue.Queue.Add(new NameAnonymizer()); }
-            if (settings.DoRemovePrivateTags) { anonQue.Queue.Add(new PrivateTagAnonymizer()); }
-            if (settings.DoDICOMProfile) { anonQue.Queue.Add(new ProfileAnonymizer()); }
-            anonQue.Queue.Add(new PatientIdAnonymizer(settings.FirstName, settings.LastName, settings.Id));
-            anonQue.Queue.Add(new DateAnonymizer(settings.DateSettings));
+            if (settings.DoAnonymizeNames) { anonQue.Que.Add(new NameAnonymizer()); }
+            if (settings.DoRemovePrivateTags) { anonQue.Que.Add(new PrivateTagAnonymizer()); }
+            if (settings.DoDICOMProfile) { anonQue.Que.Add(new ProfileAnonymizer()); }
+            anonQue.Que.Add(new PatientIdAnonymizer(settings.FirstName, settings.LastName, settings.Id));
+            anonQue.Que.Add(new DateAnonymizer(settings.DateSettings));
             return anonQue;
         }
 
-        public async static Task<AnonymizationQueue> BuildQueueAsync(AnonymizationSettings settings, IEnumerable<string> dcmFiles)
+        public AnonymizationQue Default(IEnumerable<string> dcmFiles)
         {
-            return await Task.Run(() => BuildQueue(settings, dcmFiles));
-        }
-
-        /// <summary>
-        /// Builds a standard anonymization que with defaul parameters
-        /// </summary>
-        /// <param name="dcmFiles">a collection of file paths to anonymize</param>
-        /// <returns>the default queue</returns>
-        public static AnonymizationQueue GetDefault(IEnumerable<string> dcmFiles)
-        {
-            return BuildQueue(AnonymizationSettings.Default, dcmFiles);
-        }
-
-        /// <summary>
-        /// Builds a standard anonymization que with defaul parameters
-        /// </summary>
-        /// <param name="dcmFiles">a collection of file paths to anonymize</param>
-        /// <returns>the default queue</returns>
-        public async static Task<AnonymizationQueue> GetDefaultAsync(IEnumerable<string> dcmFiles)
-        {
-            return await BuildQueueAsync(AnonymizationSettings.Default, dcmFiles);
+            return BuildQue(AnonymizationSettings.Default, dcmFiles);
         }
 
         public void Anonymize(DICOMObject dcm)
         {
             int i = 1;
-            foreach (var anony in Queue)
+            foreach (var anony in Que)
             {
                 anony.Anonymize(dcm);
-                RaiseProgressUpdated(CalculateProgress(i, Queue.Count + 1) / 100);
+                RaiseProgressUpdated(CalculateProgress(i, Que.Count + 1) / 100);
                 i++;
             }
         }
 
-        public List<IAnonymizer> Queue { get; set; }
+        public List<IAnonymizer> Que { get; set; }
 
         private double CalculateProgress(int i, int totalOperations)
         {

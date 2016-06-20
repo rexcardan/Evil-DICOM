@@ -22,32 +22,6 @@ namespace EvilDICOM.Core.Tests
         }
 
         [TestMethod]
-        public void WriteExplicitVRLE()
-        {
-            var dcm = DICOMFileReader.Read(Resources.implicitLittleEndian);
-            byte[] dcmBytes;
-
-            using (var ms = new MemoryStream())
-            {
-                using (var dw = new DICOMBinaryWriter(ms))
-                {
-                    DICOMObjectWriter.Write(dw,
-                        new DICOMWriteSettings
-                        {
-                            TransferSyntax = Enums.TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN,
-                            DoWriteIndefiniteSequences = false
-                        }, dcm);
-
-                    dcmBytes = ms.ToArray();
-                }
-            }
-
-            var read = DICOMFileReader.Read(dcmBytes, Enums.TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN);
-            Assert.AreEqual(dcm.Elements.Count, read.Elements.Count);
-               
-        }
-
-        [TestMethod]
         public void WriteMultipleFl()
         {
             var vssd = DICOMForge.VirtualSourceAxisDistances;

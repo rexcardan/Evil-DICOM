@@ -12,12 +12,11 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <TargetFrameworkProfile />
-    <NuGetPackageImportStamp>e8947be8</NuGetPackageImportStamp>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
-    <Optimize>false</Optimize>
+    <Optimize>true</Optimize>
     <OutputPath>bin\Debug\</OutputPath>
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
@@ -126,7 +125,6 @@
     <Compile Include="Core\Helpers\TransferSyntaxHelper.cs" />
     <Compile Include="Core\Helpers\UIDHelper.cs" />
     <Compile Include="Core\Helpers\Vector3.cs" />
-    <Compile Include="Core\Interfaces\IByteLogger.cs" />
     <Compile Include="Core\Interfaces\IDICOMBinaryReader.cs" />
     <Compile Include="Core\Interfaces\IDICOMElement.cs" />
     <Compile Include="Core\Interfaces\IImageDecoder.cs" />
@@ -168,7 +166,6 @@
     <Compile Include="Core\IO\Writing\SequenceItemWriter.cs" />
     <Compile Include="Core\IO\Writing\SequenceWriter.cs" />
     <Compile Include="Core\IO\Writing\VRWriter.cs" />
-    <Compile Include="Core\Logging\ByteMemoryLogger.cs" />
     <Compile Include="Core\Logging\ConsoleLogger.cs" />
     <Compile Include="Core\Logging\EventLogger.cs" />
     <Compile Include="Core\Logging\EvilLogger.cs" />
@@ -260,12 +257,6 @@
     <Content Include="evilEye.ico" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
- 
-  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
-    <PropertyGroup>
-      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
-    </PropertyGroup>
-  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

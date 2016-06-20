@@ -23,7 +23,6 @@ namespace EvilDICOM.Network
     {
         private bool _abortRequested = false;
         private bool _cancelRequested = false;
-        private ByteMemoryLogger _memoryLogger;
 
         public Association(DICOMServiceClass serviceClass, TcpClient client)
         {
@@ -40,22 +39,6 @@ namespace EvilDICOM.Network
         }
 
         public DICOMServiceClass ServiceClass { get; private set; }
-
-        /// <summary>
-        /// Sets up a file log of incoming messages
-        /// </summary>
-        /// <param name="folderStoragePath"></param>
-        public void SetDebugMode(string folderStoragePath)
-        {
-            _memoryLogger = new ByteMemoryLogger(folderStoragePath);
-            Reader.SetLogger(_memoryLogger);
-            this.ServiceClass.DIMSEService.DoLogBytes = true;
-        }
-
-        private void DIMSEService_CStoreRequestReceived(CStoreRequest req, Association asc)
-        {
-            throw new NotImplementedException();
-        }
 
         /// <summary>
         ///     The agreed upon presentation context of the association

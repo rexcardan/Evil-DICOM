@@ -4,38 +4,6 @@
         <name>EvilDICOM</name>
     </assembly>
     <members>
-        <member name="M:EvilDICOM.Anonymization.AnonymizationQueue.GetDefault(System.Collections.Generic.IEnumerable{System.String})">
-            <summary>
-            Builds a standard anonymization que with defaul parameters
-            </summary>
-            <param name="dcmFiles">a collection of file paths to anonymize</param>
-            <returns>the default queue</returns>
-        </member>
-        <member name="M:EvilDICOM.Anonymization.AnonymizationQueue.GetDefaultAsync(System.Collections.Generic.IEnumerable{System.String})">
-            <summary>
-            Builds a standard anonymization que with defaul parameters
-            </summary>
-            <param name="dcmFiles">a collection of file paths to anonymize</param>
-            <returns>the default queue</returns>
-        </member>
-        <member name="M:EvilDICOM.Anonymization.Anonymizers.DateAnonymizer.PreserveAndAnonymize(EvilDICOM.Core.DICOMObject)">
-            <summary>
-            Preserves the oldest date (most likely patient DOB) and anonymizes all other dates relative to that
-            </summary>
-            <param name="d"></param>
-        </member>
-        <member name="M:EvilDICOM.Anonymization.Anonymizers.DateAnonymizer.NullAgeAndPreserve(EvilDICOM.Core.DICOMObject)">
-            <summary>
-            Null the patient age, but preserve all other dates
-            </summary>
-            <param name="d"></param>
-        </member>
-        <member name="M:EvilDICOM.Anonymization.Anonymizers.DateAnonymizer.Make89AndAnonymize(EvilDICOM.Core.DICOMObject)">
-            <summary>
-            This method is designed to make patients older than age 89 look 88 in a DICOM file to remain HIPAA compliant
-            </summary>
-            <param name="d"></param>
-        </member>
         <member name="T:EvilDICOM.Anonymization.Anonymizers.NameAnonymizer">
             <summary>
             Removes all names from the DICOM File. If using PatientIdAnonymizer, call this first so new id is not removed
@@ -88,31 +56,6 @@
             This class anonymizes UIDs while keeping relative mapping between DICOM relationships
             </summary>
         </member>
-        <member name="M:EvilDICOM.Anonymization.Anonymizers.UIDAnonymizer.AddDICOMObject(EvilDICOM.Core.DICOMObject)">
-            <summary>
-            Adds a DICOM object to the mapping so UIDs can be remapped during the anonymization
-            </summary>
-            <param name="d"></param>
-        </member>
-        <member name="M:EvilDICOM.Anonymization.Anonymizers.UIDAnonymizer.IsProtectedUID(EvilDICOM.Core.Element.Tag)">
-            <summary>
-            Keeps a few UIDs from getting scrambled
-            </summary>
-            <param name="tag"></param>
-            <returns></returns>
-        </member>
-        <member name="M:EvilDICOM.Anonymization.Anonymizers.UIDAnonymizer.AddToUIDDictionary(System.String)">
-            <summary>
-            Takes a current UID, generates a new one and adds a mapping to the dictionary
-            </summary>
-            <param name="uid"></param>
-        </member>
-        <member name="M:EvilDICOM.Anonymization.Anonymizers.UIDAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)">
-            <summary>
-            Clears the original UIDs and adds the newly generated but remapped ones
-            </summary>
-            <param name="d"></param>
-        </member>
         <member name="M:EvilDICOM.Anonymization.Helpers.DateHelper.YoungerThan89(System.String)">
             <summary>
             Checks to see if the patient age is less than 89 years old
@@ -120,42 +63,12 @@
             <param name="file">Path to DICOM file containing patient information</param>
             <returns>boolean indication test</returns>
         </member>
-        <member name="M:EvilDICOM.Anonymization.Helpers.DateHelper.YoungerThan89(EvilDICOM.Core.DICOMObject)">
-            <summary>
-            Checks to see if the patient age is less than 89 years old
-            </summary>
-            <param name="file">Path to DICOM file containing patient information</param>
-            <returns>boolean indication test</returns>
-        </member>
-        <member name="M:EvilDICOM.Anonymization.Helpers.DateHelper.GetLatestDate(EvilDICOM.Core.DICOMObject)">
-            <summary>
-            Calculates the latest (most recent) date in a DICOM file
-            </summary>
-            <param name="d"></param>
-            <returns></returns>
-        </member>
-        <member name="M:EvilDICOM.Anonymization.Helpers.DateHelper.GetOldestDate(EvilDICOM.Core.DICOMObject)">
-            <summary>
-            Calculates the oldest date in a DICOM file
-            </summary>
-            <param name="d"></param>
-            <returns></returns>
-        </member>
-        <member name="M:EvilDICOM.Anonymization.Helpers.DateHelper.CalculateAge(EvilDICOM.Core.Element.Date,System.DateTime)">
+        <member name="M:EvilDICOM.Anonymization.Helpers.DateHelper.CalculateAge(EvilDICOM.Core.Element.Date)">
             <summary>
             Calculates the patient age based on todays date
             </summary>
             <param name="dob">the IDICOM element containing the DateTime of patient birth</param>
             <returns>the patient's age in years</returns>
-        </member>
-        <member name="M:EvilDICOM.Anonymization.Helpers.DateHelper.DateRelativeBaseDate(System.Nullable{System.DateTime},System.Nullable{System.DateTime})">
-            <summary>
-            Adds the time difference between the original date and reference date to the base date 01/01/1901. 
-            This allows all dates to maintain a relative relationship to each other, but birthdate is obfuscated
-            </summary>
-            <param name="original"></param>
-            <param name="reference"></param>
-            <returns></returns>
         </member>
         <member name="P:EvilDICOM.Anonymization.Settings.AnonymizationSettings.FirstName">
             <summary>
@@ -1019,13 +932,6 @@
             <param name="Bytes">the array of bytes to be converted</param>
             <returns>a hexadecimal string representing the array of bytes passed in</returns>
         </member>
-        <member name="M:EvilDICOM.Core.Helpers.ByteHelper.ByteArrayToDebugHexString(System.Byte[])">
-            <summary>
-                This method converts an array of bytes to a hexadecimal string
-            </summary>
-            <param name="Bytes">the array of bytes to be converted</param>
-            <returns>a hexadecimal string representing the array of bytes passed in</returns>
-        </member>
         <member name="M:EvilDICOM.Core.Helpers.ByteHelper.ByteToHexString(System.Byte)">
             <summary>
                 This method converts an array of bytes to a hexadecimal string
@@ -1532,23 +1438,6 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="T:EvilDICOM.Core.Logging.ByteMemoryLogger">
-            <summary>
-            A class to store bytes for a time, and then dump the bytes to a file and reset
-            </summary>
-        </member>
-        <member name="M:EvilDICOM.Core.Logging.ByteMemoryLogger.Log(System.Byte[])">
-            <summary>
-            Adds new bytes to the currently stored bytes
-            </summary>
-            <param name="bytes"></param>
-        </member>
-        <member name="M:EvilDICOM.Core.Logging.ByteMemoryLogger.Dump(System.String)">
-            <summary>
-            Dumps the current stored bytes to a file and resets the stored bytes
-            </summary>
-            <param name="file"></param>
-        </member>
         <member name="T:EvilDICOM.Core.Logging.ConsoleLogger">
             <summary>
                 A simple class for logging to the console. Wraps the Event Logger/EvilLogger class
@@ -1559,12 +1448,6 @@
                 The singleton instance of a logging system for the core Evil DICOM operations. Can subscribe, to
                 see this stream
             </summary>
-        </member>
-        <member name="M:EvilDICOM.Network.Association.SetDebugMode(System.String)">
-            <summary>
-            Sets up a file log of incoming messages
-            </summary>
-            <param name="folderStoragePath"></param>
         </member>
         <member name="P:EvilDICOM.Network.Association.PresentationContexts">
             <summary>
@@ -1667,7 +1550,7 @@
             A SCP that writes incoming files to a specified location
             </summary>
         </member>
-        <member name="M:EvilDICOM.Network.Messaging.PDataMessenger.GetChunks(EvilDICOM.Core.DICOMObject,System.Int32,EvilDICOM.Network.PDUs.Items.PresentationContext)">
+        <member name="M:EvilDICOM.Network.Messaging.PDataMessenger.GetChunks(EvilDICOM.Core.DICOMObject,System.Int32,EvilDICOM.Network.Association)">
             <summary>
                 Splits the DICOM object into chunks that are within the max PDU size
             </summary>
@@ -1689,12 +1572,6 @@
             <returns>a byte array containing the PData objects</returns>
         </member>
         <member name="M:EvilDICOM.Network.Readers.NetworkBinaryReader.#ctor(System.IO.BufferedStream)">
-            <summary>
-            Constructs a DICOM binary reader from a network stream
-            </summary>
-            <param name="stream"></param>
-        </member>
-        <member name="M:EvilDICOM.Network.Readers.NetworkBinaryReader.#ctor(System.IO.BufferedStream,EvilDICOM.Core.Interfaces.IByteLogger)">
             <summary>
             Constructs a DICOM binary reader from a network stream
             </summary>
