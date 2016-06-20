@@ -25,7 +25,7 @@ namespace EvilDICOM.Core.Helpers
         }
 
         private static void Initialize()
-        {
+        {          
             dict = new Dictionary<string, SOPClass>();
             var keys = new List<KeyValuePair<string, SOPClass>>(){
             new KeyValuePair<string,SOPClass>(AbstractSyntax.CR_IMAGE_STORAGE, SOPClass.CR),
