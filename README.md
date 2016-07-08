@@ -3,15 +3,15 @@ Evil DICOM
 =============
 
 A simple to use C# library for reading and manipulating DICOM files. 
-Github is just the distro.
+New documentation added to github via Github pages. See links below:
 
 The following links will help you get started:
 
 Project website at 
-http://rexcardan.com/evildicom
+http://rexcardan.github.io/Evil-DICOM/
 
 Content | Link
 ------------- | -------------
-Introductory Video | https://www.youtube.com/watch?v=rmYpxxqQ90s
-Examples | http://rexcardan.com/evildicom
-Online API | http://www.rexcardan.com/api/evildicom/index.html
++	Introductory Video | https://www.youtube.com/watch?v=rmYpxxqQ90s
++	Examples | http://rexcardan.github.io/Evil-DICOM/articles/operations.html
++	Online API | http://rexcardan.github.io/Evil-DICOM/api/index.html
