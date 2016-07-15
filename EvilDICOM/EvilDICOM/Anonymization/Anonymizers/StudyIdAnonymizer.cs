@@ -11,16 +11,16 @@ using System.Threading.Tasks;
 
 namespace EvilDICOM.Anonymization.Anonymizers
 {
+    /// <summary>
+    /// Removes the study id from the DICOM files and creates a new study id
+    /// </summary>
     public class StudyIdAnonymizer : IAnonymizer
     {
-        List<DICOMStudy> Studies { get; set; }
-        public Dictionary<string, string> StudyDictionary { get; set; }
-
-        public StudyIdAnonymizer()
-        {
-            Studies = new List<DICOMStudy>();
-            StudyDictionary = new Dictionary<string, string>();
-        }
+        List<DICOMStudy> Studies { get; set; } = new List<DICOMStudy>();
+        /// <summary>
+        /// A dictionary which stores the original study id and type of study
+        /// </summary>
+        public Dictionary<string, string> StudyDictionary { get; set; } = new Dictionary<string, string>();
 
         /// <summary>
         /// This method is to be called once all DICOM objects are added. It then remaps study ids in a private dictionary

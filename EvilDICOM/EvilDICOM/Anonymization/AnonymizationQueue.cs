@@ -9,16 +9,19 @@ using EvilDICOM.Anonymization.Anonymizers;
 
 namespace EvilDICOM.Anonymization
 {
-    public class AnonymizationQue
+    /// <summary>
+    /// This class is for building a stack of anonymization options and then executing
+    /// </summary>
+    public class AnonymizationQueue
     {
-        public AnonymizationQue()
+        public AnonymizationQueue()
         {
             Que = new List<IAnonymizer>();
         }
 
-        public static AnonymizationQue BuildQue(AnonymizationSettings settings, IEnumerable<string> dcmFiles)
+        public static AnonymizationQueue BuildQue(AnonymizationSettings settings, IEnumerable<string> dcmFiles)
         {
-            var anonQue = new AnonymizationQue();
+            var anonQue = new AnonymizationQueue();
 
             if (settings.DoAnonymizeStudyIDs || settings.DoAnonymizeUIDs)
             {
@@ -41,11 +44,20 @@ namespace EvilDICOM.Anonymization
             return anonQue;
         }
 
-        public AnonymizationQue Default(IEnumerable<string> dcmFiles)
+        /// <summary>
+        /// Initializes an anonymization queue from a list of DICOM files that need to be anonymized
+        /// </summary>
+        /// <param name="dcmFiles"></param>
+        /// <returns>the anonymization queue with default options</returns>
+        public AnonymizationQueue Default(IEnumerable<string> dcmFiles)
         {
             return BuildQue(AnonymizationSettings.Default, dcmFiles);
         }
 
+        /// <summary>
+        /// This method needs to be called on each DICOM object (file) to be anonymized with the set options
+        /// </summary>
+        /// <param name="dcm">the DICOM object (file) to be anonymized</param>
         public void Anonymize(DICOMObject dcm)
         {
             int i = 1;
@@ -57,8 +69,17 @@ namespace EvilDICOM.Anonymization
             }
         }
 
+        /// <summary>
+        /// The current list of anonymization settings
+        /// </summary>
         public List<IAnonymizer> Que { get; set; }
 
+        /// <summary>
+        /// Calculates a value for a progress update
+        /// </summary>
+        /// <param name="i"></param>
+        /// <param name="totalOperations"></param>
+        /// <returns></returns>
         private double CalculateProgress(int i, int totalOperations)
         {
             return (int)((double)i / (double)(totalOperations) * 100);
@@ -67,6 +88,9 @@ namespace EvilDICOM.Anonymization
         //PROGRESS REPORTING (for UI)
         public delegate void ProgressUpdatedHandler(double progress);
 
+        /// <summary>
+        /// Reports a double value of the current progress from 0 to 100
+        /// </summary>
         public event ProgressUpdatedHandler ProgressUpdated;
 
         public void RaiseProgressUpdated(double progress)

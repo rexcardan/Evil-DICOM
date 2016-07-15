@@ -4,21 +4,20 @@ namespace EvilDICOM.Core.IO.Data
 {
     public class DICOMString
     {
+        private static Encoding _encoder = Encoding.UTF8;
+
         public static string Read(byte[] data)
         {
-            Encoding enc = Encoding.UTF8;
-            return enc.GetString(data).TrimEnd(new[] {'\0'}).TrimEnd(new[] {' '});
+            return _encoder.GetString(data).TrimEnd(new[] {'\0'}).TrimEnd(new[] {' '});
         }
 
         public static byte[] Write(string data)
         {
-            Encoding ascii = Encoding.UTF8;
-
             if (IsEven(data))
             {
-                return ascii.GetBytes(data);
+                return _encoder.GetBytes(data);
             }
-            return PadOddBytes(ascii, data);
+            return PadOddBytes(_encoder, data);
         }
 
         private static bool IsEven(string data)
@@ -30,5 +29,11 @@ namespace EvilDICOM.Core.IO.Data
         {
             return ascii.GetBytes(data + '\0');
         }
+
+        public void SetEncoder(Encoding enc)
+        {
+            _encoder = enc;
+        }
+
     }
 }

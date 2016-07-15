@@ -74,14 +74,26 @@ namespace EvilDICOM.Core
             }
             return null;
         }
-
         public override string ToString()
+        {
+            return ToString();
+        }
+
+        /// <summary>
+        /// Converts the data to a string separated value
+        /// </summary>
+        /// <param name="split">the separation character to use between the data elements (default is \)</param>
+        /// <returns>the data as a string</returns>
+        public string ToString(string split="\\")
         {
             if (MultipicityValue.Count > 1)
             {
-                return string.Join(" | ", MultipicityValue.ToArray());
+                return string.Join(split, MultipicityValue.ToArray());
             }
-            return SingleValue != null ? SingleValue.ToString() : "";
+            else
+            {
+                return SingleValue != null ? SingleValue.ToString() : "";
+            }
         }
     }
 }
