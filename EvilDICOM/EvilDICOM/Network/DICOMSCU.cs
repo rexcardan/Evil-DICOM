@@ -94,7 +94,7 @@ namespace EvilDICOM.Network
         /// <param name="toAETite">the entity title which will receive the image</param>
         /// <param name="msgId">the message id</param>
         /// <returns>the move response</returns>
-        public CMoveResponse SendCMoveImage(Entity daemon, string sopUid, string patientId, string toAETite, ref ushort msgId)
+        public CMoveResponse SendCMoveImage(Entity daemon, CFindImageIOD iod, string toAETite, ref ushort msgId)
         {
             ManualResetEvent mr = new ManualResetEvent(false);
             CMoveResponse resp = null;
@@ -106,7 +106,7 @@ namespace EvilDICOM.Network
                 }
                 resp = res;
             });
-            var result = new CMoveIOD() { QueryLevel = QueryLevel.IMAGE, SOPInstanceUID = sopUid, PatientId = patientId };
+            var result = new CMoveIOD() { QueryLevel = QueryLevel.IMAGE, SOPInstanceUID = iod.SOPInstanceUID, PatientId = iod.PatientId, StudyInstanceUID = iod.StudyInstanceUID };
             var request = new CMoveRequest(result, toAETite, Root.STUDY, EvilDICOM.Core.Enums.Priority.MEDIUM, msgId);
             this.DIMSEService.CMoveResponseReceived += cr;
             this.SendMessage(request, daemon);
