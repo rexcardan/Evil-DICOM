@@ -1,6 +1,8 @@
-﻿using EvilDICOM.Core.Element;
+﻿using EvilDICOM.Core;
+using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
+using EvilDICOM.Core.IO.Writing;
 using EvilDICOM.Network.Enums;
 using System;
 using System.Collections.Generic;
@@ -44,5 +46,11 @@ namespace EvilDICOM.Network.DIMSE
         }
 
         public abstract List<IDICOMElement> Elements { get; }
+
+        public void SetGroupLength()
+        {
+            var bytes = GroupWriter.WriteGroupBytes(new DICOMObject(Elements), DICOMWriteSettings.Default(), "0000");
+            GroupLength = (uint)bytes.Length;
+        }
     }
 }

@@ -99,11 +99,14 @@ namespace EvilDICOM.Network
                 if (_cancelRequested) { HandleCancel(); }
 
                 IMessage message = Read();
-                if (message == null) { break; } //Error
-                clock.Restart();
-                Process(message);
-                Stream.Flush();
-                clock.Restart();
+                if (message != null)
+                {
+                    clock.Restart();
+                    Process(message);
+                    Stream.Flush();
+                    clock.Restart();
+                }
+
             }
         }
 
@@ -115,7 +118,7 @@ namespace EvilDICOM.Network
             {
                 OutboundMessages.TryDequeue(out cancel);
                 this.Stream.Flush();
-                PDataMessenger.Send(cancel,this);
+                PDataMessenger.Send(cancel, this);
             }
         }
 

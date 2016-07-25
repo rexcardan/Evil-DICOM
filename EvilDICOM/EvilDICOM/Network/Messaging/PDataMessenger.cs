@@ -18,6 +18,7 @@ namespace EvilDICOM.Network.Messaging
     {
         public static void Send(AbstractDIMSEBase dimse, Association asc, PresentationContext pContext = null)
         {
+            dimse.SetGroupLength();
             if (asc.State != NetworkState.TRANSPORT_CONNECTION_OPEN)
             {
                 asc.OutboundMessages.Enqueue(dimse);
@@ -45,8 +46,9 @@ namespace EvilDICOM.Network.Messaging
             pContext = pContext ?? asc.PresentationContexts.First(a => a.AbstractSyntax == dimse.AffectedSOPClassUID);
             var list = new List<PDataTF>();
             var commandEls = dimse.Elements;
-            list.Add(new PDataTF(new DICOMObject(dimse.Elements), true, true, pContext));
 
+            list.Add(new PDataTF(new DICOMObject(dimse.Elements), true, true, pContext));
+            
             var dataDIMSE = dimse as AbstractDIMSE;
             if (dataDIMSE != null && dataDIMSE.Data != null)
             {

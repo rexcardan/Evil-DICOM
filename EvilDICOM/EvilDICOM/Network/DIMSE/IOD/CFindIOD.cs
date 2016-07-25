@@ -6,6 +6,7 @@ using DF = EvilDICOM.Core.DICOMForge;
 using EvilDICOM.Core.Interfaces;
 using System.Collections.Generic;
 using EvilDICOM.Core;
+using EvilDICOM.Core.Helpers;
 
 namespace EvilDICOM.Network.DIMSE.IOD
 {
@@ -15,6 +16,18 @@ namespace EvilDICOM.Network.DIMSE.IOD
         {
             QueryLevel = level;
             SOPInstanceUID = string.Empty;
+            PatientId = string.Empty;
+            PatientsName = new PersonName() { Tag = TagHelper.PATIENT_NAME, Data = string.Empty };
+            StudyDate = null;
+            AccessionNumber = string.Empty;
+            StudyId = string.Empty;
+            StudyDescription = string.Empty;
+            ReferringPhysicianName = string.Empty;
+            NameOfPhysiciansReadingStudy = string.Empty;
+            ModalitiesInStudy = string.Empty;
+            PatientBirthDate = null;
+            StudyInstanceUID = string.Empty;
+            SeriesInstanceUID = string.Empty;
         }
 
         public CFindIOD(DICOMObject dcm) : base(dcm) { }

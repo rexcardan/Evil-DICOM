@@ -345,6 +345,7 @@ namespace EvilDICOM.Core
         /// <returns>bool indicating whether or not the element was replaced</returns>
         private bool Replace<T>(AbstractElement<T> element)
         {
+            if (element.Tag == null) { return false; }
             var toReplace = FindFirst(element.Tag) as AbstractElement<T>;
             if (toReplace == null) return false;
             toReplace.DataContainer = element.DataContainer;
