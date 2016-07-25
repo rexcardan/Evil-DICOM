@@ -10,6 +10,7 @@ using EvilDICOM.Network.Messaging;
 using System.Net;
 using System.Threading;
 using EvilDICOM.Network.DIMSE.IOD;
+using EvilDICOM.Network.Interfaces;
 
 namespace EvilDICOM.Network
 {

@@ -27,83 +27,45 @@ namespace EvilDICOM.Network.Querying
             _scp = scp;
         }
 
-        public List<StudyResult> GetStudyUids(string patientId)
+        public List<CFindStudyIOD> GetStudyUids(string patientId)
         {
-            var query = new CFindIOD(QueryLevel.STUDY)
-            {
-                PatientId = patientId
-            };
-            var req = new CFindRequest(query, Root.STUDY);
-            var studyUids = _scu.GetResponse(req, _scp) // Studies
+            var query = CFind.CreateStudyQuery(patientId);
+            var studyUids = _scu.GetResponse(query, _scp) // Studies
                 .Where(r => r.Status == (ushort)Status.PENDING)
                 .Where(r => r.HasData)
                 .ToList();
 
-            return studyUids.Select(r => new StudyResult()
-                {
-                    PatientId = query.PatientId,
-                    StudyUid = r.Data.GetSelector().StudyInstanceUID.Data
-                })
-                .ToList();
+            return studyUids.Select(r => r.GetIOD<CFindStudyIOD>()).ToList();
         }
 
-        public List<SeriesResult> GetSeriesUids(List<StudyResult> studies)
+        public List<CFindSeriesIOD> GetSeriesUids(List<CFindStudyIOD> studies)
         {
-            List<SeriesResult> results = new List<SeriesResult>();
+            List<CFindSeriesIOD> results = new List<CFindSeriesIOD>();
 
             foreach (var study in studies)
             {
-                var query = new CFindIOD(QueryLevel.SERIES)
-                {
-                    PatientId = study.PatientId,
-                    StudyInstanceUID = study.StudyUid
-                };
-                var req = new CFindRequest(query, Root.STUDY);
+                var req = CFind.CreateSeriesQuery(study.StudyInstanceUID);
                 var seriesUids = _scu.GetResponse(req, _scp)
                     .Where(r => r.Status == (ushort)Status.PENDING)
                     .Where(r => r.HasData)
-                    .Select(r =>
-                        new SeriesResult()
-                        {
-                            PatientId = study.PatientId,
-                            StudyUid = study.StudyUid,
-                            SeriesUid = r.Data.GetSelector().SeriesInstanceUID.Data,
-                            Modality = r.Data.GetSelector().Modality.Data
-                        }
-                    )
+                    .Select(r => r.GetIOD<CFindSeriesIOD>())
                     .ToList();
                 results.AddRange(seriesUids);
             }
             return results;
         }
 
-        public List<ImageResult> GetImageUids(List<SeriesResult> series)
+        public List<CFindImageIOD> GetImageUids(List<CFindSeriesIOD> series)
         {
-            List<ImageResult> results = new List<ImageResult>();
+            List<CFindImageIOD> results = new List<CFindImageIOD>();
 
             foreach (var ser in series)
             {
-                var query = new CFindIOD(QueryLevel.IMAGE)
-                {
-                    PatientId = ser.PatientId,
-                    StudyInstanceUID = ser.StudyUid,
-                    SeriesInstanceUID = ser.SeriesUid
-                };
-
-                var req = new CFindRequest(query, Root.STUDY);
+                var req = CFind.CreateImageQuery(ser.SeriesInstanceUID);
                 var seriesUids = _scu.GetResponse(req, _scp)
                     .Where(r => r.Status == (ushort)Status.PENDING)
                     .Where(r => r.HasData)
-                    .Select(r =>
-                        new ImageResult()
-                        {
-                            PatientId = ser.PatientId,
-                            StudyUid = ser.StudyUid,
-                            SeriesUid = ser.SeriesUid,
-                            Modality = ser.Modality,
-                            SopInstanceUid = r.Data.GetSelector().SOPInstanceUID.Data
-                        }
-                    )
+                    .Select(r => r.GetIOD<CFindImageIOD>())
                     .ToList();
                 results.AddRange(seriesUids);
             }

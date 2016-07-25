@@ -193,7 +193,9 @@
     <Compile Include="Network\DIMSE\CStoreRequest.cs" />
     <Compile Include="Network\DIMSE\CStoreResponse.cs" />
     <Compile Include="Network\DIMSE\IOD\AbstractDIMSEIOD.cs" />
-    <Compile Include="Network\DIMSE\IOD\CFindIOD.cs" />
+    <Compile Include="Network\DIMSE\IOD\CFindImageIOD.cs" />
+    <Compile Include="Network\DIMSE\IOD\CFindSeriesIOD.cs" />
+    <Compile Include="Network\DIMSE\IOD\CFindStudyIOD.cs" />
     <Compile Include="Network\DIMSE\IOD\CMoveIOD.cs" />
     <Compile Include="Network\Enums\AbortReason.cs" />
     <Compile Include="Network\Enums\AbortSource.cs" />
@@ -212,6 +214,7 @@
     <Compile Include="Network\Extensions\AssociationExtensions.cs" />
     <Compile Include="Network\Extensions\DIMSEExtensions.cs" />
     <Compile Include="Network\Extensions\IIODExtensions.cs" />
+    <Compile Include="Network\Helpers\CFind.cs" />
     <Compile Include="Network\Helpers\FileWriterSCP.cs" />
     <Compile Include="Network\Helpers\IpHelper.cs" />
     <Compile Include="Network\Interfaces\IMessage.cs" />

@@ -7,6 +7,7 @@ using EvilDICOM.Core.Selection;
 using EvilDICOM.Network.DIMSE.IOD;
 using EvilDICOM.Network.Enums;
 using C = EvilDICOM.Network.Enums.CommandField;
+using EvilDICOM.Network.Interfaces;
 
 namespace EvilDICOM.Network.DIMSE
 {
@@ -14,11 +15,11 @@ namespace EvilDICOM.Network.DIMSE
     {
         #region PRIVATE
 
-        private readonly UnsignedShort _priority = new UnsignedShort {Tag = TagHelper.PRIORITY};
+        private readonly UnsignedShort _priority = new UnsignedShort { Tag = TagHelper.PRIORITY };
 
         #endregion
 
-        public CFindRequest(CFindIOD query, Root root, ushort priority = (ushort) Core.Enums.Priority.MEDIUM, ushort messageId = 1)
+        internal CFindRequest(AbstractDIMSEIOD query, Root root, ushort priority = (ushort) Core.Enums.Priority.MEDIUM, ushort messageId = 1)
         {
             Query = query;
             MessageID = messageId;
@@ -32,7 +33,7 @@ namespace EvilDICOM.Network.DIMSE
                     break;
             }
             Priority = priority;
-            CommandField = (ushort) C.C_FIND_RQ;
+            CommandField = (ushort)C.C_FIND_RQ;
             Data = new DICOMObject(query.Elements);
         }
 
@@ -41,7 +42,7 @@ namespace EvilDICOM.Network.DIMSE
             var sel = new DICOMSelector(d);
             GroupLength = sel.CommandGroupLength.Data;
             AffectedSOPClassUID = sel.AffectedSOPClassUID.Data;
-            CommandField = (ushort) C.C_FIND_RQ;
+            CommandField = (ushort)C.C_FIND_RQ;
             MessageID = sel.MessageID.Data;
             Priority = sel.Priority.Data;
             DataSetType = sel.CommandDataSetType.Data;
@@ -66,6 +67,7 @@ namespace EvilDICOM.Network.DIMSE
             }
         }
 
+
         #region PROPERTIES
 
         public ushort Priority
@@ -74,7 +76,7 @@ namespace EvilDICOM.Network.DIMSE
             set { _priority.Data = value; }
         }
 
-        public CFindIOD Query { get; set; }
+        public AbstractDIMSEIOD Query { get; set; }
 
         #endregion
 

@@ -155,7 +155,7 @@ namespace EvilDICOM.Core.IO.Data
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.Time:
                     var t = el as Time;
-                    data = StringDataComposer.ComposeTime(t.DataContainer.SingleValue);
+                    data = StringDataComposer.ComposeTime(t.Data);
                     unpadded = GetASCIIBytes(data);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.UnlimitedText:
