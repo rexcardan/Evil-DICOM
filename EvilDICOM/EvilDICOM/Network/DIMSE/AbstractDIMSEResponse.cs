@@ -30,12 +30,12 @@ namespace EvilDICOM.Network.DIMSE
             {
                 AffectedSOPClassUID = sel.AffectedSOPClassUID.Data;
             };
-            MessageIDBeingResponsedTo = sel.MessageIDBeingRespondedTo.Data;
+            MessageIDBeingRespondedTo = sel.MessageIDBeingRespondedTo.Data;
             DataSetType = sel.CommandDataSetType.Data;
             Status = sel.Status.Data;
         }
 
-        public ushort MessageIDBeingResponsedTo
+        public ushort MessageIDBeingRespondedTo
         {
             get { return _messageIdBeingRespondedTo.Data; }
             set { _messageIdBeingRespondedTo.Data = value; }

@@ -24,7 +24,7 @@ namespace EvilDICOM.Network.DIMSE
         {
             AffectedSOPClassUID = req.AffectedSOPClassUID;
             CommandField = (ushort)C.C_ECHO_RP;
-            MessageIDBeingResponsedTo = req.MessageID;
+            MessageIDBeingRespondedTo = req.MessageID;
             DataSetType = _dataSet;
             Status = (ushort)status;
             GroupLength = (uint)GroupWriter.WriteGroupBytes(new DICOMObject(Elements.Skip(1).Take(5).ToList()),
@@ -40,7 +40,7 @@ namespace EvilDICOM.Network.DIMSE
                 AffectedSOPClassUID = sel.AffectedSOPClassUID.Data;
             };
             CommandField = (ushort)C.C_ECHO_RP;
-            MessageIDBeingResponsedTo = sel.MessageIDBeingRespondedTo.Data;
+            MessageIDBeingRespondedTo = sel.MessageIDBeingRespondedTo.Data;
             DataSetType = sel.CommandDataSetType.Data;
             Status = sel.Status.Data;
         }

@@ -23118,7 +23118,7 @@
             <param name="connection"></param>
             <returns></returns>
         </member>
-        <member name="M:EvilDICOM.Network.DICOMSCU.SendCMoveImage(EvilDICOM.Network.Entity,System.String,System.String,System.String,System.UInt16@)">
+        <member name="M:EvilDICOM.Network.DICOMSCU.SendCMoveImage(EvilDICOM.Network.Entity,EvilDICOM.Network.DIMSE.IOD.CFindImageIOD,System.String,System.UInt16@)">
             <summary>
             Emits a CMove operation to an entity which moves an image from the entity to the specified AETitle
             </summary>

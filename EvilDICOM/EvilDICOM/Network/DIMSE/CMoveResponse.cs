@@ -43,7 +43,7 @@ namespace EvilDICOM.Network.DIMSE
             GroupLength = sel.CommandGroupLength.Data;
             AffectedSOPClassUID = sel.AffectedSOPClassUID.Data;
             CommandField = (ushort) C.C_MOVE_RP;
-            MessageIDBeingResponsedTo = sel.MessageIDBeingRespondedTo.Data;
+            MessageIDBeingRespondedTo = sel.MessageIDBeingRespondedTo.Data;
             DataSetType = sel.CommandDataSetType.Data;
             NumberOfFailedOps = sel.NumberOfFailedSuboperations != null
                 ? sel.NumberOfFailedSuboperations.Data

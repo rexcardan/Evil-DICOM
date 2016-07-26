@@ -34,7 +34,7 @@ namespace EvilDICOM.Network.DIMSE
         {
             AffectedSOPClassUID = req.AffectedSOPClassUID;
             CommandField = (ushort) C.C_STORE_RP;
-            MessageIDBeingResponsedTo = req.MessageID;
+            MessageIDBeingRespondedTo = req.MessageID;
             DataSetType = _dataSet;
             AffectedSOPInstanceUID = req.AffectedSOPInstanceUID;
             Status = (ushort) status;
