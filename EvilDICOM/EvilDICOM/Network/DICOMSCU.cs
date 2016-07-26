@@ -106,7 +106,7 @@ namespace EvilDICOM.Network
                 }
                 resp = res;
             });
-            var result = new CMoveIOD() { QueryLevel = QueryLevel.IMAGE, SOPInstanceUID = iod.SOPInstanceUID, PatientId = iod.PatientId, StudyInstanceUID = iod.StudyInstanceUID };
+            var result = new CMoveIOD() { QueryLevel = QueryLevel.IMAGE, SOPInstanceUID = iod.SOPInstanceUID, PatientId = iod.PatientId, StudyInstanceUID = iod.StudyInstanceUID, SeriesInstanceUID = iod.SeriesInstanceUID };
             var request = new CMoveRequest(result, toAETite, Root.STUDY, EvilDICOM.Core.Enums.Priority.MEDIUM, msgId);
             this.DIMSEService.CMoveResponseReceived += cr;
             this.SendMessage(request, daemon);
