@@ -22,11 +22,6 @@
             </summary>
             <param name="dcm">the DICOM object (file) to be anonymized</param>
         </member>
-        <member name="P:EvilDICOM.Anonymization.AnonymizationQueue.Que">
-            <summary>
-            The current list of anonymization settings
-            </summary>
-        </member>
         <member name="M:EvilDICOM.Anonymization.AnonymizationQueue.CalculateProgress(System.Int32,System.Int32)">
             <summary>
             Calculates a value for a progress update
@@ -34,6 +29,11 @@
             <param name="i"></param>
             <param name="totalOperations"></param>
             <returns></returns>
+        </member>
+        <member name="P:EvilDICOM.Anonymization.AnonymizationQueue.Que">
+            <summary>
+            The current list of anonymization settings
+            </summary>
         </member>
         <member name="E:EvilDICOM.Anonymization.AnonymizationQueue.ProgressUpdated">
             <summary>
@@ -87,14 +87,14 @@
             Removes the study id from the DICOM files and creates a new study id
             </summary>
         </member>
-        <member name="P:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.StudyDictionary">
-            <summary>
-            A dictionary which stores the original study id and type of study
-            </summary>
-        </member>
         <member name="M:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.FinalizeDictionary">
             <summary>
             This method is to be called once all DICOM objects are added. It then remaps study ids in a private dictionary
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.StudyDictionary">
+            <summary>
+            A dictionary which stores the original study id and type of study
             </summary>
         </member>
         <member name="T:EvilDICOM.Anonymization.Anonymizers.UIDAnonymizer">
@@ -178,17 +178,6 @@
                 The constructor which ininitializes the underlying enumerable collection
             </summary>
         </member>
-        <member name="P:EvilDICOM.Core.DICOMData`1.SingleValue">
-            <summary>
-                Gets and sets a single value for the data of the DICOM element. If the collection contains has more than one data
-                element, only the first is returned. If setting a value, the data is cleared and only a single entry is saved.
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.DICOMData`1.MultipicityValue">
-            <summary>
-                A list of the data within the element. This is designed to be accomodate the multiplicity aspect of DICOM data
-            </summary>
-        </member>
         <member name="M:EvilDICOM.Core.DICOMData`1.CreateFromSingle(`0)">
             <summary>
                 Creates a new DICOM Data object from a single data value
@@ -209,6 +198,17 @@
             </summary>
             <param name="split">the separation character to use between the data elements (default is \)</param>
             <returns>the data as a string</returns>
+        </member>
+        <member name="P:EvilDICOM.Core.DICOMData`1.SingleValue">
+            <summary>
+                Gets and sets a single value for the data of the DICOM element. If the collection contains has more than one data
+                element, only the first is returned. If setting a value, the data is cleared and only a single entry is saved.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.DICOMData`1.MultipicityValue">
+            <summary>
+                A list of the data within the element. This is designed to be accomodate the multiplicity aspect of DICOM data
+            </summary>
         </member>
         <member name="T:EvilDICOM.Core.DICOMForge">
             <summary>
@@ -21778,16 +21778,6 @@
             </summary>
             <param name="elements">a list of elements to be included in the object</param>
         </member>
-        <member name="P:EvilDICOM.Core.DICOMObject.Elements">
-            <summary>
-                The list of first level DICOM elements inside this DICOM object
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.DICOMObject.AllElements">
-            <summary>
-                The list of all DICOM elements at every level in the DICOM structure (includes sub-elements of sequences)
-            </summary>
-        </member>
         <member name="M:EvilDICOM.Core.DICOMObject.Add(EvilDICOM.Core.Interfaces.IDICOMElement)">
             <summary>
                 Adds an element to the DICOM object
@@ -21944,11 +21934,6 @@
             <typeparam name="T">the type of the data the element holds (eg. double[], int, DataTime, etc)</typeparam>
             <param name="element">the instance of the element</param>
         </member>
-        <member name="P:EvilDICOM.Core.DICOMObject.PixelStream">
-            <summary>
-                Grabs the pixel data bytes and sends it as a stream. Returns null if no pixel data element is found.
-            </summary>
-        </member>
         <member name="M:EvilDICOM.Core.DICOMObject.Read(System.String,EvilDICOM.Core.Enums.TransferSyntax)">
              <summary>
                  Reads a DICOM file from a path
@@ -21983,6 +21968,21 @@
             Writes the DICOM Object to an XML string for visualization and manipluation. Use FromXML() to get back.
             </summary>
             <returns></returns>
+        </member>
+        <member name="P:EvilDICOM.Core.DICOMObject.Elements">
+            <summary>
+                The list of first level DICOM elements inside this DICOM object
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.DICOMObject.AllElements">
+            <summary>
+                The list of all DICOM elements at every level in the DICOM structure (includes sub-elements of sequences)
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.DICOMObject.PixelStream">
+            <summary>
+                Grabs the pixel data bytes and sends it as a stream. Returns null if no pixel data element is found.
+            </summary>
         </member>
         <member name="M:EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)">
             <summary>
@@ -22097,7 +22097,17 @@
             elements.
             </summary>
             <typeparam name="T">the data type of the element</typeparam>
-            <seealso cref="T:EvilDICOM.Core.Interfaces.IDICOMElement" />
+            <seealso cref="T:EvilDICOM.Core.Interfaces.IDICOMElement"/>
+        </member>
+        <member name="P:EvilDICOM.Core.Interfaces.IDICOMElement.DData">
+            <summary>
+                The dynamic single value data in the element of the first datum in the array (in the case of multiple datum)
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Interfaces.IDICOMElement.DData_">
+            <summary>
+                The dynamic data in the element stored in a list of type T
+            </summary>
         </member>
         <member name="M:EvilDICOM.Core.Element.AbstractElement`1.#ctor">
             <summary>
@@ -22117,6 +22127,30 @@
             </summary>
             <param name="tag">The tag.</param>
             <param name="data">The data.</param>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.ToString">
+            <summary>
+            To string override to visualize tag and vr of element
+            </summary>
+            <returns>A <see cref="T:System.String"/> that represents this instance.</returns>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)">
+            <summary>
+            Plumbing method wrap the data in a DICOMData container
+            </summary>
+            <param name="value">the typed data</param>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])">
+            <summary>
+            Plumbing method wrap the data in a DICOMData container
+            </summary>
+            <param name="dataArray">The data array.</param>
+        </member>
+        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault">
+            <summary>
+            Plumbing method to get data from the underlying DICOMData object
+            </summary>
+            <returns>T.</returns>
         </member>
         <member name="P:EvilDICOM.Core.Element.AbstractElement`1.VR">
             <summary>
@@ -22165,30 +22199,6 @@
             The dynamic data in the element stored in a list of type T
             </summary>
             <value>The d data_.</value>
-        </member>
-        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.ToString">
-            <summary>
-            To string override to visualize tag and vr of element
-            </summary>
-            <returns>A <see cref="T:System.String" /> that represents this instance.</returns>
-        </member>
-        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)">
-            <summary>
-            Plumbing method wrap the data in a DICOMData container
-            </summary>
-            <param name="value">the typed data</param>
-        </member>
-        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])">
-            <summary>
-            Plumbing method wrap the data in a DICOMData container
-            </summary>
-            <param name="dataArray">The data array.</param>
-        </member>
-        <member name="M:EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault">
-            <summary>
-            Plumbing method to get data from the underlying DICOMData object
-            </summary>
-            <returns>T.</returns>
         </member>
         <member name="T:EvilDICOM.Core.Element.AgeString">
             <summary>
@@ -22385,11 +22395,6 @@
                 Encapsulates the Unknown VR type
             </summary>
         </member>
-        <member name="P:EvilDICOM.Core.Element.Unknown.TransferSyntax">
-            <summary>
-                Used in the try read as method
-            </summary>
-        </member>
         <member name="M:EvilDICOM.Core.Element.Unknown.TryReadAs``1(``0@)">
             <summary>
                 Method used to read out unknown VR types (not in the dictionary).
@@ -22398,6 +22403,11 @@
             <param name="outValue">the value read</param>
             <param name="tx">the transfer syntax to try (default is Implicit little endian)</param>
             <returns>whether or not the read was successfull</returns>
+        </member>
+        <member name="P:EvilDICOM.Core.Element.Unknown.TransferSyntax">
+            <summary>
+                Used in the try read as method
+            </summary>
         </member>
         <member name="T:EvilDICOM.Core.Element.UnlimitedText">
             <summary>
@@ -22664,28 +22674,6 @@
             This is a temporary class until .NET 4.6 is released with Vector3 support. Borrowed from my Cardan.Math library
             </summary>
         </member>
-        <member name="P:EvilDICOM.Core.Helpers.Vector3.Item(System.Int64)">
-            <summary>
-                Allows the vector class elements to be accessed by index
-            </summary>
-            <param name="index">the index of the element to return</param>
-            <returns>the element at the specified index</returns>
-        </member>
-        <member name="P:EvilDICOM.Core.Helpers.Vector3.Zeroes">
-            <summary>
-                A static zero value vector creator. Returns a vector3 containing only zero value elements.
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.Helpers.Vector3.Infinite">
-            <summary>
-                A static infinite value vector creator. Returns a vector3 containing positive infinite value elements.
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.Helpers.Vector3.NaN">
-            <summary>
-                A static infinite value vector creator. Returns a vector3 containing NaN value elements.
-            </summary>
-        </member>
         <member name="M:EvilDICOM.Core.Helpers.Vector3.Copy">
             <summary>
                 Creates a copy of this vector
@@ -22713,14 +22701,26 @@
             <param name="v2">the second vector</param>
             <returns>The scalar product of two vectors</returns>
         </member>
-        <member name="P:EvilDICOM.Core.Interfaces.IDICOMElement.DData">
+        <member name="P:EvilDICOM.Core.Helpers.Vector3.Item(System.Int64)">
             <summary>
-                The dynamic single value data in the element of the first datum in the array (in the case of multiple datum)
+                Allows the vector class elements to be accessed by index
+            </summary>
+            <param name="index">the index of the element to return</param>
+            <returns>the element at the specified index</returns>
+        </member>
+        <member name="P:EvilDICOM.Core.Helpers.Vector3.Zeroes">
+            <summary>
+                A static zero value vector creator. Returns a vector3 containing only zero value elements.
             </summary>
         </member>
-        <member name="P:EvilDICOM.Core.Interfaces.IDICOMElement.DData_">
+        <member name="P:EvilDICOM.Core.Helpers.Vector3.Infinite">
             <summary>
-                The dynamic data in the element stored in a list of type T
+                A static infinite value vector creator. Returns a vector3 containing positive infinite value elements.
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.Helpers.Vector3.NaN">
+            <summary>
+                A static infinite value vector creator. Returns a vector3 containing NaN value elements.
             </summary>
         </member>
         <member name="T:EvilDICOM.Core.Interfaces.IEncoderDecoder">
@@ -22819,16 +22819,6 @@
             </summary>
             <param name="byteStream">the byte array to be read</param>
         </member>
-        <member name="P:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamPosition">
-            <summary>
-                Returns the current position of the byte stream
-            </summary>
-        </member>
-        <member name="P:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamLength">
-            <summary>
-                Returnts the length of the byte stream
-            </summary>
-        </member>
         <member name="M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes(System.Int32)">
             <summary>
                 Reads the specified number of bytes
@@ -22869,6 +22859,16 @@
             </summary>
             <param name="bytePattern">the pattern to be found</param>
             <returns>the index of the pattern</returns>
+        </member>
+        <member name="P:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamPosition">
+            <summary>
+                Returns the current position of the byte stream
+            </summary>
+        </member>
+        <member name="P:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamLength">
+            <summary>
+                Returnts the length of the byte stream
+            </summary>
         </member>
         <member name="T:EvilDICOM.Core.IO.Reading.DICOMElementReader">
             <summary>
@@ -23064,6 +23064,15 @@
             <param name="settings">the write settings</param>
             <param name="toWrite">the object to write</param>
         </member>
+        <member name="M:EvilDICOM.Core.IO.Writing.DICOMObjectWriter.WriteSameSyntax(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.DICOMObject,System.Boolean)">
+            <summary>
+            Ignores the rule of writing metadata in explicit VR little endian and instead writes all elements with the passed in syntax
+            </summary>
+            <param name="dw"></param>
+            <param name="settings"></param>
+            <param name="d"></param>
+            <param name="isSequenceItem"></param>
+        </member>
         <member name="M:EvilDICOM.Core.IO.Writing.DICOMWriteSettings.GetFileMetaSettings">
             <summary>
             Write settings when writing the meta header group 0002
@@ -23193,7 +23202,7 @@
             A SCP that writes incoming files to a specified location
             </summary>
         </member>
-        <member name="M:EvilDICOM.Network.Messaging.PDataMessenger.GetChunks(EvilDICOM.Core.DICOMObject,System.Int32,EvilDICOM.Network.Association)">
+        <member name="M:EvilDICOM.Network.Messaging.PDataMessenger.GetChunks(EvilDICOM.Core.DICOMObject,System.Int32,EvilDICOM.Network.PDUs.Items.PresentationContext)">
             <summary>
                 Splits the DICOM object into chunks that are within the max PDU size
             </summary>
