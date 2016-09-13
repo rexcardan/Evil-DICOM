@@ -13,7 +13,9 @@ namespace EvilDICOM.Core.IO.Reading
         public static DICOMObject ReadLittleEndian(DICOMBinaryReader dr, TransferSyntax syntax)
         {
             DICOMObject d;
-            int length = LengthReader.ReadLittleEndian(VR.Null, dr.Skip(4));
+            //Skip tag
+            dr.Skip(4);
+            int length = LengthReader.ReadLittleEndian(VR.Null, dr);
             if (LengthReader.IsIndefinite(length))
             {
                 d = ReadIndefiniteLittleEndian(dr, syntax);
@@ -29,7 +31,9 @@ namespace EvilDICOM.Core.IO.Reading
         public static DICOMObject ReadBigEndian(DICOMBinaryReader dr, TransferSyntax syntax)
         {
             DICOMObject d;
-            int length = LengthReader.ReadLittleEndian(VR.Null, dr.Skip(4));
+            //Skip tag
+            dr.Skip(4);
+            int length = LengthReader.ReadLittleEndian(VR.Null, dr);
             if (LengthReader.IsIndefinite(length))
             {
                 d = ReadIndefiniteBigEndian(dr, syntax);

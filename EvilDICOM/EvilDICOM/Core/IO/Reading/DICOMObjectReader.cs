@@ -20,7 +20,6 @@ namespace EvilDICOM.Core.IO.Reading
 
         public static DICOMObject ReadObject(byte[] objectBytes, TransferSyntax syntax, out long bytesRead)
         {
-            var dcm = DICOMObject.Read(objectBytes, TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN);
             List<IDICOMElement> elements;
             using (var dr = new DICOMBinaryReader(objectBytes))
             {
