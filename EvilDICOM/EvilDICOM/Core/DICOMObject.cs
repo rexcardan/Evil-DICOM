@@ -12,6 +12,7 @@ using EvilDICOM.Core.IO.Reading;
 using EvilDICOM.Core.IO.Writing;
 using EvilDICOM.Core.Selection;
 using DateTime = System.DateTime;
+using System.Threading.Tasks;
 
 namespace EvilDICOM.Core
 {
@@ -499,6 +500,23 @@ namespace EvilDICOM.Core
             TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
         {
             return DICOMFileReader.Read(filePath, trySyntax);
+        }
+
+        /// <summary>
+        ///     Reads a DICOM file from a path
+        /// </summary>
+        /// <param name="filePath">the path to the file</param>
+        /// <param name="trySyntax">the transfer syntax to use in case there is no metadata explicitly included</param>
+        /// <returns>the DICOM Object</returns>
+        /// <example> 
+        ///<code>
+        ///var dcm = DICOMObject.Read("mydcm.dcm");
+        ///</code>
+        ///</example>
+        public static async Task<DICOMObject> ReadAsync(string filePath,
+            TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
+        {
+            return await DICOMFileReader.ReadAsync(filePath, trySyntax);
         }
 
         /// <summary>

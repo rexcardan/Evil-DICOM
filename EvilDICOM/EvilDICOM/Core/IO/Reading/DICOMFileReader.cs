@@ -4,6 +4,7 @@ using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
+using System.Threading.Tasks;
 
 namespace EvilDICOM.Core.IO.Reading
 {
@@ -31,6 +32,29 @@ namespace EvilDICOM.Core.IO.Reading
                 elements = metaElements.Concat(DICOMElementReader.ReadAllElements(dr, syntax)).ToList();
             }
             return new DICOMObject(elements);
+        }
+
+
+        /// <summary>
+        ///     Asynchronously reads a DICOM file from a path
+        /// </summary>
+        /// <param name="filePath">the path to the DICOM file</param>
+        /// <returns>a DICOM object containing all elements</returns>
+        public static async Task<DICOMObject> ReadAsync(string filePath,
+            TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
+        {
+            return await Task.Run(() =>
+            {
+                TransferSyntax syntax = trySyntax;
+                List<IDICOMElement> elements;
+                using (var dr = new DICOMBinaryReader(filePath))
+                {
+                    DICOMPreambleReader.Read(dr);
+                    List<IDICOMElement> metaElements = ReadFileMetadata(dr, ref syntax);
+                    elements = metaElements.Concat(DICOMElementReader.ReadAllElements(dr, syntax)).ToList();
+                }
+                return new DICOMObject(elements);
+            });
         }
 
         /// <summary>
