@@ -31,6 +31,10 @@ namespace EvilDICOM.Network.DIMSE
                 {
                     return new CFindSeriesIOD(new DICOMObject(this.Data.Elements)) as T;
                 }
+                if (typeof(T) == typeof(CFindPlanIOD))
+                {
+                    return new CFindPlanIOD(new DICOMObject(this.Data.Elements)) as T;
+                }
             }
             return null;
         }

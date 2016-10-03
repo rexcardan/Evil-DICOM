@@ -5,6 +5,10 @@
         PATIENT,
         STUDY,
         SERIES,
-        IMAGE
+        IMAGE,
+        PLAN,
+        DOSE,
+        TREATMENTRECORD,
+        TREATMENTSUMREC
     }
 }

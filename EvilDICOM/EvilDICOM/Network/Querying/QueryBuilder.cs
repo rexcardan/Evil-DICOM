@@ -27,18 +27,16 @@ namespace EvilDICOM.Network.Querying
             _scp = scp;
         }
 
-        public List<CFindStudyIOD> GetStudyUids(string patientId)
+        public IEnumerable<CFindStudyIOD> GetStudyUids(string patientId)
         {
             var query = CFind.CreateStudyQuery(patientId);
             var studyUids = _scu.GetResponse(query, _scp) // Studies
                 .Where(r => r.Status == (ushort)Status.PENDING)
-                .Where(r => r.HasData)
-                .ToList();
-
-            return studyUids.Select(r => r.GetIOD<CFindStudyIOD>()).ToList();
+                .Where(r => r.HasData);
+            return studyUids.Select(r => r.GetIOD<CFindStudyIOD>());
         }
 
-        public List<CFindSeriesIOD> GetSeriesUids(List<CFindStudyIOD> studies)
+        public IEnumerable<CFindSeriesIOD> GetSeriesUids(IEnumerable<CFindStudyIOD> studies)
         {
             List<CFindSeriesIOD> results = new List<CFindSeriesIOD>();
 
@@ -48,62 +46,59 @@ namespace EvilDICOM.Network.Querying
                 var seriesUids = _scu.GetResponse(req, _scp)
                     .Where(r => r.Status == (ushort)Status.PENDING)
                     .Where(r => r.HasData)
-                    .Select(r => r.GetIOD<CFindSeriesIOD>())
-                    .ToList();
+                    .Select(r => r.GetIOD<CFindSeriesIOD>());
                 results.AddRange(seriesUids);
             }
             return results;
         }
 
-        public List<CFindImageIOD> GetImageUids(List<CFindSeriesIOD> series)
+        public IEnumerable<CFindSeriesIOD> GetSeriesUids(CFindStudyIOD study)
+        {
+            return GetSeriesUids(new CFindStudyIOD[] { study });
+        }
+
+        public IEnumerable<CFindImageIOD> GetImageUids(IEnumerable<CFindSeriesIOD> series)
         {
             List<CFindImageIOD> results = new List<CFindImageIOD>();
 
             foreach (var ser in series)
             {
                 var req = CFind.CreateImageQuery(ser.SeriesInstanceUID);
-                var seriesUids = _scu.GetResponse(req, _scp)
+                var imagesUids = _scu.GetResponse(req, _scp)
                     .Where(r => r.Status == (ushort)Status.PENDING)
                     .Where(r => r.HasData)
                     .Select(r => r.GetIOD<CFindImageIOD>())
                     .ToList();
-                results.AddRange(seriesUids);
+                results.AddRange(imagesUids);           
             }
             return results;
         }
 
-
-        public void SendImage(ImageResult ir, DICOMSCP reciever)
+        public IEnumerable<CFindImageIOD> GetImageUids(CFindSeriesIOD series)
         {
-            AutoResetEvent ar = new AutoResetEvent(false);
-            var query = new CMoveIOD()
-            {
-                QueryLevel = QueryLevel.IMAGE,
-                PatientId = ir.PatientId,
-                SOPInstanceUID = ir.SopInstanceUid
-            };
-            if (ir.SeriesUid != null) { query.SeriesInstanceUID = ir.SeriesUid; }
-
-            if (!reciever.IsListening) { reciever.ListenForIncomingAssociations(true); }
-
-            ManualResetEvent mr = new ManualResetEvent(false);
-            var cr = new EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler<CMoveResponse>((res, asc) =>
-            {
-                if (!(res.Status == (ushort)Status.PENDING))
-                {
-                    mr.Set();
-                }
-            });
-
-            _scu.DIMSEService.CMoveResponseReceived += cr;
-            _scu.SendMessage(new CMoveRequest(query, reciever.ApplicationEntity.AeTitle), _scp);
-            mr.WaitOne();
-            _scu.DIMSEService.CMoveResponseReceived -= cr;
+            return GetImageUids(new CFindSeriesIOD[] { series });
         }
 
-        void DIMSEService_CMoveResponseReceived(CMoveResponse req, Association asc)
+        public IEnumerable<T> GetImageUids<T>(IEnumerable<CFindSeriesIOD> series) where T : CFindImageIOD
         {
-            throw new NotImplementedException();
+            List<T> results = new List<T>();
+
+            foreach (var ser in series)
+            {
+                var req = CFind.CreateImageQuery(ser.SeriesInstanceUID);
+                var imagesUids = _scu.GetResponse(req, _scp)
+                    .Where(r => r.Status == (ushort)Status.PENDING)
+                    .Where(r => r.HasData)
+                    .Select(r => r.GetIOD<T>())
+                    .ToList();
+                results.AddRange(imagesUids);
+            }
+            return results;
+        }
+
+        public IEnumerable<T> GetImageUids<T>(CFindSeriesIOD series) where T : CFindImageIOD
+        {
+            return GetImageUids<T>(new CFindSeriesIOD[] { series });
         }
     }
 }
