@@ -16,10 +16,10 @@ namespace EvilDICOM.Anonymization
     {
         public AnonymizationQueue()
         {
-            Que = new List<IAnonymizer>();
+            Queue = new List<IAnonymizer>();
         }
 
-        public static AnonymizationQueue BuildQue(AnonymizationSettings settings, IEnumerable<string> dcmFiles)
+        public static AnonymizationQueue BuildQueue(AnonymizationSettings settings, IEnumerable<string> dcmFiles)
         {
             var anonQue = new AnonymizationQueue();
 
@@ -33,14 +33,14 @@ namespace EvilDICOM.Anonymization
                     if (uidAnon != null) uidAnon.AddDICOMObject(ob);
                     if (studyAnon != null) studyAnon.AddDICOMObject(ob);
                 }
-                if (studyAnon != null) { studyAnon.FinalizeDictionary(); anonQue.Que.Add(studyAnon); }
-                if (uidAnon != null) { anonQue.Que.Add(uidAnon); }
+                if (studyAnon != null) { studyAnon.FinalizeDictionary(); anonQue.Queue.Add(studyAnon); }
+                if (uidAnon != null) { anonQue.Queue.Add(uidAnon); }
             }
-            if (settings.DoAnonymizeNames) { anonQue.Que.Add(new NameAnonymizer()); }
-            if (settings.DoRemovePrivateTags) { anonQue.Que.Add(new PrivateTagAnonymizer()); }
-            if (settings.DoDICOMProfile) { anonQue.Que.Add(new ProfileAnonymizer()); }
-            anonQue.Que.Add(new PatientIdAnonymizer(settings.FirstName, settings.LastName, settings.Id));
-            anonQue.Que.Add(new DateAnonymizer(settings.DateSettings));
+            if (settings.DoAnonymizeNames) { anonQue.Queue.Add(new NameAnonymizer()); }
+            if (settings.DoRemovePrivateTags) { anonQue.Queue.Add(new PrivateTagAnonymizer()); }
+            if (settings.DoDICOMProfile) { anonQue.Queue.Add(new ProfileAnonymizer()); }
+            anonQue.Queue.Add(new PatientIdAnonymizer(settings.FirstName, settings.LastName, settings.Id));
+            anonQue.Queue.Add(new DateAnonymizer(settings.DateSettings));
             return anonQue;
         }
 
@@ -51,7 +51,7 @@ namespace EvilDICOM.Anonymization
         /// <returns>the anonymization queue with default options</returns>
         public AnonymizationQueue Default(IEnumerable<string> dcmFiles)
         {
-            return BuildQue(AnonymizationSettings.Default, dcmFiles);
+            return BuildQueue(AnonymizationSettings.Default, dcmFiles);
         }
 
         /// <summary>
@@ -61,10 +61,10 @@ namespace EvilDICOM.Anonymization
         public void Anonymize(DICOMObject dcm)
         {
             int i = 1;
-            foreach (var anony in Que)
+            foreach (var anony in Queue)
             {
                 anony.Anonymize(dcm);
-                RaiseProgressUpdated(CalculateProgress(i, Que.Count + 1) / 100);
+                RaiseProgressUpdated(CalculateProgress(i, Queue.Count + 1) / 100);
                 i++;
             }
         }
@@ -72,7 +72,7 @@ namespace EvilDICOM.Anonymization
         /// <summary>
         /// The current list of anonymization settings
         /// </summary>
-        public List<IAnonymizer> Que { get; set; }
+        public List<IAnonymizer> Queue { get; set; }
 
         /// <summary>
         /// Calculates a value for a progress update

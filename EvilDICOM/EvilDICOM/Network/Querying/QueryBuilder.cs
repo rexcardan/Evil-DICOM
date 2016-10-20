@@ -14,13 +14,18 @@ using EvilDICOM.Network.Helpers;
 namespace EvilDICOM.Network.Querying
 {
     /// <summary>
-    /// A class to help with CFind operations
+    /// A class to help with CFind and CMove operations
     /// </summary>
     public class QueryBuilder
     {
         private DICOMSCU _scu;
         private Entity _scp;
 
+        /// <summary>
+        /// A Query builder constructor which requires a SCU and SCP entity
+        /// </summary>
+        /// <param name="scu">The SCU client which will perform the operations and queries</param>
+        /// <param name="scp">the SCP which will send the results</param>
         public QueryBuilder(DICOMSCU scu, Entity scp)
         {
             _scu = scu;
@@ -99,6 +104,35 @@ namespace EvilDICOM.Network.Querying
         public IEnumerable<T> GetImageUids<T>(CFindSeriesIOD series) where T : CFindImageIOD
         {
             return GetImageUids<T>(new CFindSeriesIOD[] { series });
+        }
+
+        /// <summary>
+        /// Instructs a C-MOVE operation for an image from the SCP of the QueryBuilder to the input AETitle
+        /// </summary>
+        /// <param name="ir">the C Find iod of the a query (get ImageUids())</param>
+        /// <param name="receivingAETitle">the AE title to send the image to (from the SCP of this query builder)</param>
+        /// <param name="msgId">the message id for this image. It will be incremented for looping operations within this method</param>
+        /// <returns>a C-MOVE response for this operation</returns>
+        public CMoveResponse SendImage(CFindImageIOD ir, string receivingAETitle, ref ushort msgId)
+        {
+            var resp = _scu.SendCMoveImage(_scp, ir, receivingAETitle, ref msgId);
+            return resp;
+        }
+
+        /// <summary>
+        /// Instructs a C-MOVE operation for an image from the SCP of the QueryBuilder to the input AETitle
+        /// </summary>
+        /// <param name="ir">the C Find iod of the a query (get ImageUids())</param>
+        /// <param name="receivingAETitle">the AE title to send the image to (from the SCP of this query builder)</param>
+        /// <param name="msgId">the message id for this image. It will NOT be incremented for looping operations within this method</param>
+        /// <returns>a C-MOVE response for this operation</returns>
+        public async Task<CMoveResponse> SendImageAsync(CFindImageIOD ir, string receivingAETitle, ushort msgId)
+        {
+            return await Task.Run(() =>
+            {
+                var resp = _scu.SendCMoveImage(_scp, ir, receivingAETitle, ref msgId);
+                return resp;
+            });
         }
     }
 }
