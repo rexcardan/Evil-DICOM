@@ -88,7 +88,7 @@ namespace EvilDICOM.Network.PDUs.Items
             bits.Set(0, frag.IsCommandObject);
             bits.Set(1, frag.IsLastItem);
             var bytes = new byte[1];
-            bits.CopyTo(bytes, 0);
+            ((ICollection)bits).CopyTo(bytes, 0);
             dw.Write(bytes[0]);
         }
 

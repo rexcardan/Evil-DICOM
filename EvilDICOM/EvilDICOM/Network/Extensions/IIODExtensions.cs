@@ -18,7 +18,7 @@ namespace EvilDICOM.Network.Extensions
             sb.AppendLine("-----------------------------------");
             Type t = iod.GetType();
             sb.AppendLine(t.Name);
-            foreach (PropertyInfo pi in t.GetProperties())
+            foreach (PropertyInfo pi in t.GetTypeInfo().GetProperties())
             {
                 string name = pi.Name;
                 if (pi.Name != "Elements" && pi.Name != "LogString")

@@ -1,5 +1,4 @@
-﻿using System.Runtime.Serialization;
-using EvilDICOM.Core.Element;
+﻿using EvilDICOM.Core.Element;
 using EvilDICOM.Network.Enums;
 using S = System;
 using DF = EvilDICOM.Core.DICOMForge;
