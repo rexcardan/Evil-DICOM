@@ -36,6 +36,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EvilDICOM">
+      <HintPath>..\EvilDICOM\bin\$(Configuration)\net45\EvilDICOM.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
   </ItemGroup>
   <Choose>
@@ -55,9 +58,6 @@
     <Compile Include="DICOMManipulateTests.cs" />
     <Compile Include="DICOMWriteTests.cs" />
     <Compile Include="IPAddressHelper.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_036C0B5B-1481-4323-8D20-8F5ADCB23D92.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_5937a670-0e60-4077-877b-f7221da3dda1.cs" />
-    <Compile Include="obj\Debug\TemporaryGeneratedFile_E7A71F73-0F8D-4B9B-B56E-8E70B10BC5D3.cs" />
     <Compile Include="PrivateTagTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -75,7 +75,6 @@
     <Compile Include="XmlTests.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="Resources\Abort.bin" />
     <None Include="Resources\explicitBigEndian.dcm" />
     <None Include="Resources\explicitLittleEndian.dcm" />
@@ -84,15 +83,7 @@
     <None Include="Resources\MultpleFL.dcm" />
     <None Include="Resources\RLELossless.dcm" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\EvilDICOM\EvilDICOM.csproj">
-      <Project>{b86eeb40-2971-4ec2-b1b2-a779f7364489}</Project>
-      <Name>EvilDICOM</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <Folder Include="obj\Debug\TempPE\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
