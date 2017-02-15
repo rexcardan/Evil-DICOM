@@ -14,7 +14,7 @@ namespace EvilDICOM.Network.Helpers
         {
             IPHostEntry host;
             string localIP = "";
-            host = Dns.GetHostEntry(Dns.GetHostName());
+            host = Dns.GetHostEntryAsync(Dns.GetHostName()).Result;
             foreach (IPAddress ip in host.AddressList)
             {
                 if (ip.AddressFamily == AddressFamily.InterNetwork)

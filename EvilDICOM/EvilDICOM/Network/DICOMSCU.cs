@@ -21,7 +21,7 @@ namespace EvilDICOM.Network
         public void SendMessage(AbstractDIMSERequest dimse, Entity ae)
         {
             var client = new TcpClient();
-            client.Connect(IPAddress.Parse(ae.IpAddress), ae.Port);
+            client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
             var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
             PDataMessenger.Send(dimse, assoc);
             assoc.Listen();
@@ -30,7 +30,7 @@ namespace EvilDICOM.Network
         public IEnumerable<CFindResponse> GetResponse(CFindRequest cFind, Entity ae)
         {
             var client = new TcpClient();
-            client.Connect(IPAddress.Parse(ae.IpAddress), ae.Port);
+            client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
             var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
             PDataMessenger.Send(cFind, assoc);
             List<CFindResponse> responses = new List<CFindResponse>();
@@ -52,7 +52,7 @@ namespace EvilDICOM.Network
         public IEnumerable<CMoveResponse> GetResponse(CMoveRequest cMove, Entity ae)
         {
             var client = new TcpClient();
-            client.Connect(IPAddress.Parse(ae.IpAddress), ae.Port);
+            client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
             var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
             PDataMessenger.Send(cMove, assoc);
             List<CMoveResponse> responses = new List<CMoveResponse>();

@@ -8,7 +8,7 @@ namespace EvilDICOM.Network.Messaging
         public T Payload { get; set; }
         public MessageType Type { get; set; }
 
-        public dynamic DynPayload
+        public object DynPayload
         {
             get { return Payload; }
         }
