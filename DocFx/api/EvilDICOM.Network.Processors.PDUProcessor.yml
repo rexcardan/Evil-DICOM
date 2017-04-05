@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Processors.PDUProcessor
+  commentId: T:EvilDICOM.Network.Processors.PDUProcessor
+  id: PDUProcessor
+  parent: EvilDICOM.Network.Processors
+  children:
+  - EvilDICOM.Network.Processors.PDUProcessor.Process(EvilDICOM.Network.Interfaces.IMessage,EvilDICOM.Network.Association)
+  langs:
+  - csharp
+  - vb
+  name: PDUProcessor
+  nameWithType: PDUProcessor
+  fullName: EvilDICOM.Network.Processors.PDUProcessor
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Processors/PDUProcessor.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PDUProcessor
+    path: ../EvilDICOM/EvilDICOM/Network/Processors/PDUProcessor.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Processors
+  syntax:
+    content: 'public class PDUProcessor : object'
+    content.vb: >-
+      Public Class PDUProcessor
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Processors.PDUProcessor.Process(EvilDICOM.Network.Interfaces.IMessage,EvilDICOM.Network.Association)
+  commentId: M:EvilDICOM.Network.Processors.PDUProcessor.Process(EvilDICOM.Network.Interfaces.IMessage,EvilDICOM.Network.Association)
+  id: Process(EvilDICOM.Network.Interfaces.IMessage,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Processors.PDUProcessor
+  langs:
+  - csharp
+  - vb
+  name: Process(IMessage, Association)
+  nameWithType: PDUProcessor.Process(IMessage, Association)
+  fullName: EvilDICOM.Network.Processors.PDUProcessor.Process(EvilDICOM.Network.Interfaces.IMessage, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Processors/PDUProcessor.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Process
+    path: ../EvilDICOM/EvilDICOM/Network/Processors/PDUProcessor.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Processors
+  syntax:
+    content: public static void Process(IMessage message, Association asc)
+    parameters:
+    - id: message
+      type: EvilDICOM.Network.Interfaces.IMessage
+    - id: asc
+      type: EvilDICOM.Network.Association
+    content.vb: Public Shared Sub Process(message As IMessage, asc As Association)
+  overload: EvilDICOM.Network.Processors.PDUProcessor.Process*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Network.Processors
+  commentId: N:EvilDICOM.Network.Processors
+  isExternal: false
+  name: EvilDICOM.Network.Processors
+  nameWithType: EvilDICOM.Network.Processors
+  fullName: EvilDICOM.Network.Processors
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.Processors.PDUProcessor.Process*
+  commentId: Overload:EvilDICOM.Network.Processors.PDUProcessor.Process
+  isExternal: false
+  name: Process
+  nameWithType: PDUProcessor.Process
+  fullName: EvilDICOM.Network.Processors.PDUProcessor.Process
+- uid: EvilDICOM.Network.Interfaces.IMessage
+  commentId: T:EvilDICOM.Network.Interfaces.IMessage
+  parent: EvilDICOM.Network.Interfaces
+  isExternal: false
+  name: IMessage
+  nameWithType: IMessage
+  fullName: EvilDICOM.Network.Interfaces.IMessage
+- uid: EvilDICOM.Network.Association
+  commentId: T:EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Association
+  nameWithType: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.Interfaces
+  commentId: N:EvilDICOM.Network.Interfaces
+  isExternal: false
+  name: EvilDICOM.Network.Interfaces
+  nameWithType: EvilDICOM.Network.Interfaces
+  fullName: EvilDICOM.Network.Interfaces
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network

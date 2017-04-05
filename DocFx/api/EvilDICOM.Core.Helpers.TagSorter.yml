@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Helpers.TagSorter
+  commentId: T:EvilDICOM.Core.Helpers.TagSorter
+  id: TagSorter
+  parent: EvilDICOM.Core.Helpers
+  children:
+  - EvilDICOM.Core.Helpers.TagSorter.Compare(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Interfaces.IDICOMElement)
+  langs:
+  - csharp
+  - vb
+  name: TagSorter
+  nameWithType: TagSorter
+  fullName: EvilDICOM.Core.Helpers.TagSorter
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/TagSorter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: TagSorter
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/TagSorter.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: 'public class TagSorter : IComparer<IDICOMElement>'
+    content.vb: >-
+      Public Class TagSorter
+          Inherits IComparer(Of IDICOMElement)
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Helpers.TagSorter.Compare(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Interfaces.IDICOMElement)
+  commentId: M:EvilDICOM.Core.Helpers.TagSorter.Compare(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Interfaces.IDICOMElement)
+  id: Compare(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Interfaces.IDICOMElement)
+  parent: EvilDICOM.Core.Helpers.TagSorter
+  langs:
+  - csharp
+  - vb
+  name: Compare(IDICOMElement, IDICOMElement)
+  nameWithType: TagSorter.Compare(IDICOMElement, IDICOMElement)
+  fullName: EvilDICOM.Core.Helpers.TagSorter.Compare(EvilDICOM.Core.Interfaces.IDICOMElement, EvilDICOM.Core.Interfaces.IDICOMElement)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/TagSorter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Compare
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/TagSorter.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public int Compare(IDICOMElement el1, IDICOMElement el2)
+    parameters:
+    - id: el1
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+    - id: el2
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+    return:
+      type: System.Int32
+    content.vb: Public Function Compare(el1 As IDICOMElement, el2 As IDICOMElement) As Integer
+  overload: EvilDICOM.Core.Helpers.TagSorter.Compare*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  isExternal: false
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Helpers.TagSorter.Compare*
+  commentId: Overload:EvilDICOM.Core.Helpers.TagSorter.Compare
+  isExternal: false
+  name: Compare
+  nameWithType: TagSorter.Compare
+  fullName: EvilDICOM.Core.Helpers.TagSorter.Compare
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  commentId: T:EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IDICOMElement
+  nameWithType: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces

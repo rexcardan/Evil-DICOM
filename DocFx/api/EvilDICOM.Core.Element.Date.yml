@@ -1,0 +1,841 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Element.Date
+  commentId: T:EvilDICOM.Core.Element.Date
+  id: Date
+  parent: EvilDICOM.Core.Element
+  children:
+  - EvilDICOM.Core.Element.Date.#ctor
+  - EvilDICOM.Core.Element.Date.#ctor(EvilDICOM.Core.Element.Tag,System.Nullable{System.DateTime})
+  - EvilDICOM.Core.Element.Date.#ctor(EvilDICOM.Core.Element.Tag,System.String)
+  langs:
+  - csharp
+  - vb
+  name: Date
+  nameWithType: Date
+  fullName: EvilDICOM.Core.Element.Date
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Date.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Date
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Date.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nEncapsulates the Date VR type\n"
+  example: []
+  syntax:
+    content: 'public class Date : AbstractElement<System.DateTime? >, IDICOMElement'
+    content.vb: >-
+      Public Class Date
+          Inherits AbstractElement(Of System.DateTime?)
+          Implements IDICOMElement
+  inheritance:
+  - System.Object
+  - EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  implements:
+  - EvilDICOM.Core.Interfaces.IDICOMElement
+  inheritedMembers:
+  - EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.VR
+  - EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.Data
+  - EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.Data_
+  - EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.Tag
+  - EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.DatType
+  - EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.DData
+  - EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.DData_
+  - EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.ToString
+  - EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.SetData(System.Nullable{System.DateTime})
+  - EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.SetData(System.Nullable{System.DateTime}[])
+  - EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.GetDataOrDefault
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Element.Date.#ctor
+  commentId: M:EvilDICOM.Core.Element.Date.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Core.Element.Date
+  langs:
+  - csharp
+  - vb
+  name: Date()
+  nameWithType: Date.Date()
+  fullName: EvilDICOM.Core.Element.Date.Date()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Date.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Date.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public Date()
+    content.vb: Public Sub New
+  overload: EvilDICOM.Core.Element.Date.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Element.Date.#ctor(EvilDICOM.Core.Element.Tag,System.String)
+  commentId: M:EvilDICOM.Core.Element.Date.#ctor(EvilDICOM.Core.Element.Tag,System.String)
+  id: '#ctor(EvilDICOM.Core.Element.Tag,System.String)'
+  parent: EvilDICOM.Core.Element.Date
+  langs:
+  - csharp
+  - vb
+  name: Date(Tag, String)
+  nameWithType: Date.Date(Tag, String)
+  fullName: EvilDICOM.Core.Element.Date.Date(EvilDICOM.Core.Element.Tag, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Date.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Date.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public Date(Tag tag, string data)
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+    - id: data
+      type: System.String
+    content.vb: Public Sub New(tag As Tag, data As String)
+  overload: EvilDICOM.Core.Element.Date.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Element.Date.#ctor(EvilDICOM.Core.Element.Tag,System.Nullable{System.DateTime})
+  commentId: M:EvilDICOM.Core.Element.Date.#ctor(EvilDICOM.Core.Element.Tag,System.Nullable{System.DateTime})
+  id: '#ctor(EvilDICOM.Core.Element.Tag,System.Nullable{System.DateTime})'
+  parent: EvilDICOM.Core.Element.Date
+  langs:
+  - csharp
+  - vb
+  name: Date(Tag, Nullable<System.DateTime>)
+  nameWithType: Date.Date(Tag, Nullable<System.DateTime>)
+  fullName: EvilDICOM.Core.Element.Date.Date(EvilDICOM.Core.Element.Tag, System.Nullable<System.DateTime>)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Date.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Date.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public Date(Tag tag, System.DateTime? data)
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+    - id: data
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Sub New(tag As Tag, data As System.DateTime?)
+  overload: EvilDICOM.Core.Element.Date.#ctor*
+  nameWithType.vb: Date.Date(Tag, Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Core.Element.Date.Date(EvilDICOM.Core.Element.Tag, System.Nullable(Of System.DateTime))
+  name.vb: Date(Tag, Nullable(Of System.DateTime))
+references:
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  isExternal: false
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  commentId: T:EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<Nullable<System.DateTime>>
+  nameWithType: AbstractElement<Nullable<System.DateTime>>
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>
+  nameWithType.vb: AbstractElement(Of Nullable(Of System.DateTime))
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime))
+  name.vb: AbstractElement(Of Nullable(Of System.DateTime))
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    nameWithType: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    nameWithType: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  commentId: T:EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IDICOMElement
+  nameWithType: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.VR
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.VR
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.VR
+  name: VR
+  nameWithType: AbstractElement<Nullable<System.DateTime>>.VR
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.VR
+  nameWithType.vb: AbstractElement(Of Nullable(Of System.DateTime)).VR
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).VR
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.Data
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.Data
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.Data
+  name: Data
+  nameWithType: AbstractElement<Nullable<System.DateTime>>.Data
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.Data
+  nameWithType.vb: AbstractElement(Of Nullable(Of System.DateTime)).Data
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).Data
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.Data_
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.Data_
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.Data_
+  name: Data_
+  nameWithType: AbstractElement<Nullable<System.DateTime>>.Data_
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.Data_
+  nameWithType.vb: AbstractElement(Of Nullable(Of System.DateTime)).Data_
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).Data_
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.Tag
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.Tag
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.Tag
+  name: Tag
+  nameWithType: AbstractElement<Nullable<System.DateTime>>.Tag
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.Tag
+  nameWithType.vb: AbstractElement(Of Nullable(Of System.DateTime)).Tag
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).Tag
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.DatType
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.DatType
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.DatType
+  name: DatType
+  nameWithType: AbstractElement<Nullable<System.DateTime>>.DatType
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.DatType
+  nameWithType.vb: AbstractElement(Of Nullable(Of System.DateTime)).DatType
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).DatType
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.DData
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.DData
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.DData
+  name: DData
+  nameWithType: AbstractElement<Nullable<System.DateTime>>.DData
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.DData
+  nameWithType.vb: AbstractElement(Of Nullable(Of System.DateTime)).DData
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).DData
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.DData_
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.DData_
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.DData_
+  name: DData_
+  nameWithType: AbstractElement<Nullable<System.DateTime>>.DData_
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.DData_
+  nameWithType.vb: AbstractElement(Of Nullable(Of System.DateTime)).DData_
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).DData_
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.ToString
+  commentId: M:EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.ToString
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.ToString
+  name: ToString()
+  nameWithType: AbstractElement<Nullable<System.DateTime>>.ToString()
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.ToString()
+  nameWithType.vb: AbstractElement(Of Nullable(Of System.DateTime)).ToString()
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).ToString()
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+    name: ToString
+    nameWithType: AbstractElement<Nullable<System.DateTime>>.ToString
+    fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+    name: ToString
+    nameWithType: AbstractElement(Of Nullable(Of System.DateTime)).ToString
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.SetData(System.Nullable{System.DateTime})
+  commentId: M:EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.SetData(System.Nullable{System.DateTime})
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+  name: SetData(Nullable<System.DateTime>)
+  nameWithType: AbstractElement<Nullable<System.DateTime>>.SetData(Nullable<System.DateTime>)
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.SetData(System.Nullable<System.DateTime>)
+  nameWithType.vb: AbstractElement(Of Nullable(Of System.DateTime)).SetData(Nullable(Of System.DateTime))
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).SetData(System.Nullable(Of System.DateTime))
+  name.vb: SetData(Nullable(Of System.DateTime))
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+    name: SetData
+    nameWithType: AbstractElement<Nullable<System.DateTime>>.SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+    name: SetData
+    nameWithType: AbstractElement(Of Nullable(Of System.DateTime)).SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.SetData(System.Nullable{System.DateTime}[])
+  commentId: M:EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.SetData(System.Nullable{System.DateTime}[])
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+  name: SetData(Nullable<System.DateTime>[])
+  nameWithType: AbstractElement<Nullable<System.DateTime>>.SetData(Nullable<System.DateTime>[])
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.SetData(System.Nullable<System.DateTime>[])
+  nameWithType.vb: AbstractElement(Of Nullable(Of System.DateTime)).SetData(Nullable(Of System.DateTime)())
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).SetData(System.Nullable(Of System.DateTime)())
+  name.vb: SetData(Nullable(Of System.DateTime)())
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+    name: SetData
+    nameWithType: AbstractElement<Nullable<System.DateTime>>.SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+    name: SetData
+    nameWithType: AbstractElement(Of Nullable(Of System.DateTime)).SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.GetDataOrDefault
+  commentId: M:EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}.GetDataOrDefault
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+  name: GetDataOrDefault()
+  nameWithType: AbstractElement<Nullable<System.DateTime>>.GetDataOrDefault()
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.GetDataOrDefault()
+  nameWithType.vb: AbstractElement(Of Nullable(Of System.DateTime)).GetDataOrDefault()
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).GetDataOrDefault()
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+    name: GetDataOrDefault
+    nameWithType: AbstractElement<Nullable<System.DateTime>>.GetDataOrDefault
+    fullName: EvilDICOM.Core.Element.AbstractElement<System.Nullable<System.DateTime>>.GetDataOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+    name: GetDataOrDefault
+    nameWithType: AbstractElement(Of Nullable(Of System.DateTime)).GetDataOrDefault
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of System.Nullable(Of System.DateTime)).GetDataOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement`1
+  commentId: T:EvilDICOM.Core.Element.AbstractElement`1
+  isExternal: false
+  name: AbstractElement<T>
+  nameWithType: AbstractElement<T>
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>
+  nameWithType.vb: AbstractElement(Of T)
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T)
+  name.vb: AbstractElement(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    nameWithType: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    nameWithType: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Core.Element.AbstractElement`1.VR
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.VR
+  isExternal: false
+  name: VR
+  nameWithType: AbstractElement<T>.VR
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.VR
+  nameWithType.vb: AbstractElement(Of T).VR
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).VR
+- uid: EvilDICOM.Core.Element.AbstractElement`1.Data
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.Data
+  isExternal: false
+  name: Data
+  nameWithType: AbstractElement<T>.Data
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.Data
+  nameWithType.vb: AbstractElement(Of T).Data
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).Data
+- uid: EvilDICOM.Core.Element.AbstractElement`1.Data_
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.Data_
+  isExternal: false
+  name: Data_
+  nameWithType: AbstractElement<T>.Data_
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.Data_
+  nameWithType.vb: AbstractElement(Of T).Data_
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).Data_
+- uid: EvilDICOM.Core.Element.AbstractElement`1.Tag
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.Tag
+  isExternal: false
+  name: Tag
+  nameWithType: AbstractElement<T>.Tag
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.Tag
+  nameWithType.vb: AbstractElement(Of T).Tag
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).Tag
+- uid: EvilDICOM.Core.Element.AbstractElement`1.DatType
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.DatType
+  isExternal: false
+  name: DatType
+  nameWithType: AbstractElement<T>.DatType
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.DatType
+  nameWithType.vb: AbstractElement(Of T).DatType
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).DatType
+- uid: EvilDICOM.Core.Element.AbstractElement`1.DData
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.DData
+  isExternal: false
+  name: DData
+  nameWithType: AbstractElement<T>.DData
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.DData
+  nameWithType.vb: AbstractElement(Of T).DData
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).DData
+- uid: EvilDICOM.Core.Element.AbstractElement`1.DData_
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.DData_
+  isExternal: false
+  name: DData_
+  nameWithType: AbstractElement<T>.DData_
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.DData_
+  nameWithType.vb: AbstractElement(Of T).DData_
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).DData_
+- uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+  commentId: M:EvilDICOM.Core.Element.AbstractElement`1.ToString
+  isExternal: false
+  name: ToString()
+  nameWithType: AbstractElement<T>.ToString()
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.ToString()
+  nameWithType.vb: AbstractElement(Of T).ToString()
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).ToString()
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+    name: ToString
+    nameWithType: AbstractElement<T>.ToString
+    fullName: EvilDICOM.Core.Element.AbstractElement<T>.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+    name: ToString
+    nameWithType: AbstractElement(Of T).ToString
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of T).ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+  commentId: M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+  isExternal: false
+  name: SetData(T)
+  nameWithType: AbstractElement<T>.SetData(T)
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.SetData(T)
+  nameWithType.vb: AbstractElement(Of T).SetData(T)
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).SetData(T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+    name: SetData
+    nameWithType: AbstractElement<T>.SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement<T>.SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+    name: SetData
+    nameWithType: AbstractElement(Of T).SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of T).SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+  commentId: M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+  isExternal: false
+  name: SetData(T[])
+  nameWithType: AbstractElement<T>.SetData(T[])
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.SetData(T[])
+  nameWithType.vb: AbstractElement(Of T).SetData(T())
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).SetData(T())
+  name.vb: SetData(T())
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+    name: SetData
+    nameWithType: AbstractElement<T>.SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement<T>.SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+    name: SetData
+    nameWithType: AbstractElement(Of T).SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of T).SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+  commentId: M:EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+  isExternal: false
+  name: GetDataOrDefault()
+  nameWithType: AbstractElement<T>.GetDataOrDefault()
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.GetDataOrDefault()
+  nameWithType.vb: AbstractElement(Of T).GetDataOrDefault()
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).GetDataOrDefault()
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+    name: GetDataOrDefault
+    nameWithType: AbstractElement<T>.GetDataOrDefault
+    fullName: EvilDICOM.Core.Element.AbstractElement<T>.GetDataOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+    name: GetDataOrDefault
+    nameWithType: AbstractElement(Of T).GetDataOrDefault
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of T).GetDataOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.Date.#ctor*
+  commentId: Overload:EvilDICOM.Core.Element.Date.#ctor
+  isExternal: false
+  name: Date
+  nameWithType: Date.Date
+  fullName: EvilDICOM.Core.Element.Date.Date
+- uid: EvilDICOM.Core.Element.Tag
+  commentId: T:EvilDICOM.Core.Element.Tag
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: Tag
+  nameWithType: Tag
+  fullName: EvilDICOM.Core.Element.Tag
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

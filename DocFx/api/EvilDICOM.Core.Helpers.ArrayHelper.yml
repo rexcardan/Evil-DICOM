@@ -1,0 +1,182 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Helpers.ArrayHelper
+  commentId: T:EvilDICOM.Core.Helpers.ArrayHelper
+  id: ArrayHelper
+  parent: EvilDICOM.Core.Helpers
+  children:
+  - EvilDICOM.Core.Helpers.ArrayHelper.AreEqual``1(``0[],``0[])
+  - EvilDICOM.Core.Helpers.ArrayHelper.Pop``1(``0[])
+  langs:
+  - csharp
+  - vb
+  name: ArrayHelper
+  nameWithType: ArrayHelper
+  fullName: EvilDICOM.Core.Helpers.ArrayHelper
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/ArrayHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ArrayHelper
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/ArrayHelper.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: 'public class ArrayHelper : object'
+    content.vb: >-
+      Public Class ArrayHelper
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Helpers.ArrayHelper.Pop``1(``0[])
+  commentId: M:EvilDICOM.Core.Helpers.ArrayHelper.Pop``1(``0[])
+  id: Pop``1(``0[])
+  parent: EvilDICOM.Core.Helpers.ArrayHelper
+  langs:
+  - csharp
+  - vb
+  name: Pop<T>(T[])
+  nameWithType: ArrayHelper.Pop<T>(T[])
+  fullName: EvilDICOM.Core.Helpers.ArrayHelper.Pop<T>(T[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/ArrayHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Pop
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/ArrayHelper.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static T[] Pop<T>(T[] toPop)
+    parameters:
+    - id: toPop
+      type: '{T}[]'
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}[]'
+    content.vb: Public Shared Function Pop(Of T)(toPop As T()) As T()
+  overload: EvilDICOM.Core.Helpers.ArrayHelper.Pop*
+  nameWithType.vb: ArrayHelper.Pop(Of T)(T())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.Helpers.ArrayHelper.Pop(Of T)(T())
+  name.vb: Pop(Of T)(T())
+- uid: EvilDICOM.Core.Helpers.ArrayHelper.AreEqual``1(``0[],``0[])
+  commentId: M:EvilDICOM.Core.Helpers.ArrayHelper.AreEqual``1(``0[],``0[])
+  id: AreEqual``1(``0[],``0[])
+  parent: EvilDICOM.Core.Helpers.ArrayHelper
+  langs:
+  - csharp
+  - vb
+  name: AreEqual<T>(T[], T[])
+  nameWithType: ArrayHelper.AreEqual<T>(T[], T[])
+  fullName: EvilDICOM.Core.Helpers.ArrayHelper.AreEqual<T>(T[], T[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/ArrayHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AreEqual
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/ArrayHelper.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  summary: "\nA method that compares each object in two arrays to see if the arrays are equal\n"
+  example: []
+  syntax:
+    content: public static bool AreEqual<T>(T[] array1, T[] array2)
+    parameters:
+    - id: array1
+      type: '{T}[]'
+      description: the first array to be compared
+    - id: array2
+      type: '{T}[]'
+      description: the second array to be compared
+    typeParameters:
+    - id: T
+      description: the class type of the array
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function AreEqual(Of T)(array1 As T(), array2 As T()) As Boolean
+  overload: EvilDICOM.Core.Helpers.ArrayHelper.AreEqual*
+  nameWithType.vb: ArrayHelper.AreEqual(Of T)(T(), T())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.Helpers.ArrayHelper.AreEqual(Of T)(T(), T())
+  name.vb: AreEqual(Of T)(T(), T())
+references:
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  isExternal: false
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Helpers.ArrayHelper.Pop*
+  commentId: Overload:EvilDICOM.Core.Helpers.ArrayHelper.Pop
+  isExternal: false
+  name: Pop
+  nameWithType: ArrayHelper.Pop
+  fullName: EvilDICOM.Core.Helpers.ArrayHelper.Pop
+- uid: '{T}[]'
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.Helpers.ArrayHelper.AreEqual*
+  commentId: Overload:EvilDICOM.Core.Helpers.ArrayHelper.AreEqual
+  isExternal: false
+  name: AreEqual
+  nameWithType: ArrayHelper.AreEqual
+  fullName: EvilDICOM.Core.Helpers.ArrayHelper.AreEqual
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

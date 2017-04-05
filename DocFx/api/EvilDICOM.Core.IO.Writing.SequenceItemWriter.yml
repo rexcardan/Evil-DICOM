@@ -1,0 +1,319 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Writing.SequenceItemWriter
+  commentId: T:EvilDICOM.Core.IO.Writing.SequenceItemWriter
+  id: SequenceItemWriter
+  parent: EvilDICOM.Core.IO.Writing
+  children:
+  - EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,List{EvilDICOM.Core.DICOMObject})
+  - EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMWriteSettings,List{EvilDICOM.Core.DICOMObject})
+  langs:
+  - csharp
+  - vb
+  name: SequenceItemWriter
+  nameWithType: SequenceItemWriter
+  fullName: EvilDICOM.Core.IO.Writing.SequenceItemWriter
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SequenceItemWriter
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: 'public class SequenceItemWriter : object'
+    content.vb: >-
+      Public Class SequenceItemWriter
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,List{EvilDICOM.Core.DICOMObject})
+  commentId: M:EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,List{EvilDICOM.Core.DICOMObject})
+  id: WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,List{EvilDICOM.Core.DICOMObject})
+  parent: EvilDICOM.Core.IO.Writing.SequenceItemWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteItemsLittleEndian(DICOMBinaryWriter, DICOMWriteSettings, List<DICOMObject>)
+  nameWithType: SequenceItemWriter.WriteItemsLittleEndian(DICOMBinaryWriter, DICOMWriteSettings, List<DICOMObject>)
+  fullName: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter, EvilDICOM.Core.IO.Writing.DICOMWriteSettings, List<EvilDICOM.Core.DICOMObject>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteItemsLittleEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static void WriteItemsLittleEndian(DICOMBinaryWriter dw, DICOMWriteSettings settings, List<DICOMObject> items)
+    parameters:
+    - id: dw
+      type: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    - id: items
+      type: List{EvilDICOM.Core.DICOMObject}
+    content.vb: Public Shared Sub WriteItemsLittleEndian(dw As DICOMBinaryWriter, settings As DICOMWriteSettings, items As List(Of DICOMObject))
+  overload: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian*
+  nameWithType.vb: SequenceItemWriter.WriteItemsLittleEndian(DICOMBinaryWriter, DICOMWriteSettings, List(Of DICOMObject))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter, EvilDICOM.Core.IO.Writing.DICOMWriteSettings, List(Of EvilDICOM.Core.DICOMObject))
+  name.vb: WriteItemsLittleEndian(DICOMBinaryWriter, DICOMWriteSettings, List(Of DICOMObject))
+- uid: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMWriteSettings,List{EvilDICOM.Core.DICOMObject})
+  commentId: M:EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMWriteSettings,List{EvilDICOM.Core.DICOMObject})
+  id: WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMWriteSettings,List{EvilDICOM.Core.DICOMObject})
+  parent: EvilDICOM.Core.IO.Writing.SequenceItemWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteItemsLittleEndian(DICOMWriteSettings, List<DICOMObject>)
+  nameWithType: SequenceItemWriter.WriteItemsLittleEndian(DICOMWriteSettings, List<DICOMObject>)
+  fullName: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMWriteSettings, List<EvilDICOM.Core.DICOMObject>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteItemsLittleEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static byte[] WriteItemsLittleEndian(DICOMWriteSettings settings, List<DICOMObject> items)
+    parameters:
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    - id: items
+      type: List{EvilDICOM.Core.DICOMObject}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteItemsLittleEndian(settings As DICOMWriteSettings, items As List(Of DICOMObject)) As Byte()
+  overload: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian*
+  nameWithType.vb: SequenceItemWriter.WriteItemsLittleEndian(DICOMWriteSettings, List(Of DICOMObject))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian(EvilDICOM.Core.IO.Writing.DICOMWriteSettings, List(Of EvilDICOM.Core.DICOMObject))
+  name.vb: WriteItemsLittleEndian(DICOMWriteSettings, List(Of DICOMObject))
+- uid: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.DICOMObject)
+  id: WriteItemLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.DICOMObject)
+  parent: EvilDICOM.Core.IO.Writing.SequenceItemWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteItemLittleEndian(DICOMBinaryWriter, DICOMWriteSettings, DICOMObject)
+  nameWithType: SequenceItemWriter.WriteItemLittleEndian(DICOMBinaryWriter, DICOMWriteSettings, DICOMObject)
+  fullName: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter, EvilDICOM.Core.IO.Writing.DICOMWriteSettings, EvilDICOM.Core.DICOMObject)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteItemLittleEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/SequenceItemWriter.cs
+    startLine: 36
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static void WriteItemLittleEndian(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d)
+    parameters:
+    - id: dw
+      type: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    - id: d
+      type: EvilDICOM.Core.DICOMObject
+    content.vb: Public Shared Sub WriteItemLittleEndian(dw As DICOMBinaryWriter, settings As DICOMWriteSettings, d As DICOMObject)
+  overload: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemLittleEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.IO.Writing
+  commentId: N:EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: EvilDICOM.Core.IO.Writing
+  nameWithType: EvilDICOM.Core.IO.Writing
+  fullName: EvilDICOM.Core.IO.Writing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian
+  isExternal: false
+  name: WriteItemsLittleEndian
+  nameWithType: SequenceItemWriter.WriteItemsLittleEndian
+  fullName: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemsLittleEndian
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  parent: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: DICOMBinaryWriter
+  nameWithType: DICOMBinaryWriter
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  parent: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: DICOMWriteSettings
+  nameWithType: DICOMWriteSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+- uid: List{EvilDICOM.Core.DICOMObject}
+  commentId: '!:List{EvilDICOM.Core.DICOMObject}'
+  definition: List`1
+  name: List<DICOMObject>
+  nameWithType: List<DICOMObject>
+  fullName: List<EvilDICOM.Core.DICOMObject>
+  nameWithType.vb: List(Of DICOMObject)
+  fullName.vb: List(Of EvilDICOM.Core.DICOMObject)
+  name.vb: List(Of DICOMObject)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemLittleEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemLittleEndian
+  isExternal: false
+  name: WriteItemLittleEndian
+  nameWithType: SequenceItemWriter.WriteItemLittleEndian
+  fullName: EvilDICOM.Core.IO.Writing.SequenceItemWriter.WriteItemLittleEndian
+- uid: EvilDICOM.Core.DICOMObject
+  commentId: T:EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMObject
+  nameWithType: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core

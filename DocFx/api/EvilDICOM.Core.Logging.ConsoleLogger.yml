@@ -1,0 +1,107 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Logging.ConsoleLogger
+  commentId: T:EvilDICOM.Core.Logging.ConsoleLogger
+  id: ConsoleLogger
+  parent: EvilDICOM.Core.Logging
+  children:
+  - EvilDICOM.Core.Logging.ConsoleLogger.#ctor(EvilDICOM.Core.Logging.EventLogger,ConsoleColor)
+  langs:
+  - csharp
+  - vb
+  name: ConsoleLogger
+  nameWithType: ConsoleLogger
+  fullName: EvilDICOM.Core.Logging.ConsoleLogger
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Logging/ConsoleLogger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ConsoleLogger
+    path: ../EvilDICOM/EvilDICOM/Core/Logging/ConsoleLogger.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Logging
+  summary: "\nA simple class for logging to the console. Wraps the Event Logger/EvilLogger class\n"
+  example: []
+  syntax:
+    content: 'public class ConsoleLogger : object'
+    content.vb: >-
+      Public Class ConsoleLogger
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Logging.ConsoleLogger.#ctor(EvilDICOM.Core.Logging.EventLogger,ConsoleColor)
+  commentId: M:EvilDICOM.Core.Logging.ConsoleLogger.#ctor(EvilDICOM.Core.Logging.EventLogger,ConsoleColor)
+  id: '#ctor(EvilDICOM.Core.Logging.EventLogger,ConsoleColor)'
+  parent: EvilDICOM.Core.Logging.ConsoleLogger
+  langs:
+  - csharp
+  - vb
+  name: ConsoleLogger(EventLogger, ConsoleColor)
+  nameWithType: ConsoleLogger.ConsoleLogger(EventLogger, ConsoleColor)
+  fullName: EvilDICOM.Core.Logging.ConsoleLogger.ConsoleLogger(EvilDICOM.Core.Logging.EventLogger, ConsoleColor)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Logging/ConsoleLogger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Core/Logging/ConsoleLogger.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Logging
+  syntax:
+    content: public ConsoleLogger(EventLogger eventLogger, ConsoleColor color = null)
+    parameters:
+    - id: eventLogger
+      type: EvilDICOM.Core.Logging.EventLogger
+    - id: color
+      type: ConsoleColor
+    content.vb: Public Sub New(eventLogger As EventLogger, color As ConsoleColor = Nothing)
+  overload: EvilDICOM.Core.Logging.ConsoleLogger.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Core.Logging
+  commentId: N:EvilDICOM.Core.Logging
+  isExternal: false
+  name: EvilDICOM.Core.Logging
+  nameWithType: EvilDICOM.Core.Logging
+  fullName: EvilDICOM.Core.Logging
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Logging.ConsoleLogger.#ctor*
+  commentId: Overload:EvilDICOM.Core.Logging.ConsoleLogger.#ctor
+  isExternal: false
+  name: ConsoleLogger
+  nameWithType: ConsoleLogger.ConsoleLogger
+  fullName: EvilDICOM.Core.Logging.ConsoleLogger.ConsoleLogger
+- uid: EvilDICOM.Core.Logging.EventLogger
+  commentId: T:EvilDICOM.Core.Logging.EventLogger
+  parent: EvilDICOM.Core.Logging
+  isExternal: false
+  name: EventLogger
+  nameWithType: EventLogger
+  fullName: EvilDICOM.Core.Logging.EventLogger
+- uid: ConsoleColor
+  commentId: '!:ConsoleColor'
+  isExternal: true
+  name: ConsoleColor
+  nameWithType: ConsoleColor
+  fullName: ConsoleColor

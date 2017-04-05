@@ -1,0 +1,677 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Element.OtherWordString
+  commentId: T:EvilDICOM.Core.Element.OtherWordString
+  id: OtherWordString
+  parent: EvilDICOM.Core.Element
+  children:
+  - EvilDICOM.Core.Element.OtherWordString.#ctor
+  - EvilDICOM.Core.Element.OtherWordString.#ctor(EvilDICOM.Core.Element.Tag,System.Byte[])
+  langs:
+  - csharp
+  - vb
+  name: OtherWordString
+  nameWithType: OtherWordString
+  fullName: EvilDICOM.Core.Element.OtherWordString
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/OtherWordString.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: OtherWordString
+    path: ../EvilDICOM/EvilDICOM/Core/Element/OtherWordString.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nEncapsulates the OtherWordString VR type\n"
+  example: []
+  syntax:
+    content: 'public class OtherWordString : AbstractElement<byte>, IDICOMElement'
+    content.vb: >-
+      Public Class OtherWordString
+          Inherits AbstractElement(Of Byte)
+          Implements IDICOMElement
+  inheritance:
+  - System.Object
+  - EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  implements:
+  - EvilDICOM.Core.Interfaces.IDICOMElement
+  inheritedMembers:
+  - EvilDICOM.Core.Element.AbstractElement{System.Byte}.VR
+  - EvilDICOM.Core.Element.AbstractElement{System.Byte}.Data
+  - EvilDICOM.Core.Element.AbstractElement{System.Byte}.Data_
+  - EvilDICOM.Core.Element.AbstractElement{System.Byte}.Tag
+  - EvilDICOM.Core.Element.AbstractElement{System.Byte}.DatType
+  - EvilDICOM.Core.Element.AbstractElement{System.Byte}.DData
+  - EvilDICOM.Core.Element.AbstractElement{System.Byte}.DData_
+  - EvilDICOM.Core.Element.AbstractElement{System.Byte}.ToString
+  - EvilDICOM.Core.Element.AbstractElement{System.Byte}.SetData(System.Byte)
+  - EvilDICOM.Core.Element.AbstractElement{System.Byte}.SetData(System.Byte[])
+  - EvilDICOM.Core.Element.AbstractElement{System.Byte}.GetDataOrDefault
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Element.OtherWordString.#ctor
+  commentId: M:EvilDICOM.Core.Element.OtherWordString.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Core.Element.OtherWordString
+  langs:
+  - csharp
+  - vb
+  name: OtherWordString()
+  nameWithType: OtherWordString.OtherWordString()
+  fullName: EvilDICOM.Core.Element.OtherWordString.OtherWordString()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/OtherWordString.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Core/Element/OtherWordString.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public OtherWordString()
+    content.vb: Public Sub New
+  overload: EvilDICOM.Core.Element.OtherWordString.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Element.OtherWordString.#ctor(EvilDICOM.Core.Element.Tag,System.Byte[])
+  commentId: M:EvilDICOM.Core.Element.OtherWordString.#ctor(EvilDICOM.Core.Element.Tag,System.Byte[])
+  id: '#ctor(EvilDICOM.Core.Element.Tag,System.Byte[])'
+  parent: EvilDICOM.Core.Element.OtherWordString
+  langs:
+  - csharp
+  - vb
+  name: OtherWordString(Tag, Byte[])
+  nameWithType: OtherWordString.OtherWordString(Tag, Byte[])
+  fullName: EvilDICOM.Core.Element.OtherWordString.OtherWordString(EvilDICOM.Core.Element.Tag, System.Byte[])
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/OtherWordString.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Core/Element/OtherWordString.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public OtherWordString(Tag tag, byte[] data)
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+    - id: data
+      type: System.Byte[]
+    content.vb: Public Sub New(tag As Tag, data As Byte())
+  overload: EvilDICOM.Core.Element.OtherWordString.#ctor*
+  nameWithType.vb: OtherWordString.OtherWordString(Tag, Byte())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Core.Element.OtherWordString.OtherWordString(EvilDICOM.Core.Element.Tag, System.Byte())
+  name.vb: OtherWordString(Tag, Byte())
+references:
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  isExternal: false
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  commentId: T:EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<Byte>
+  nameWithType: AbstractElement<Byte>
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>
+  nameWithType.vb: AbstractElement(Of Byte)
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Byte)
+  name.vb: AbstractElement(Of Byte)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    nameWithType: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    nameWithType: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  commentId: T:EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IDICOMElement
+  nameWithType: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Byte}.VR
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Byte}.VR
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.VR
+  name: VR
+  nameWithType: AbstractElement<Byte>.VR
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.VR
+  nameWithType.vb: AbstractElement(Of Byte).VR
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).VR
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Byte}.Data
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Byte}.Data
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.Data
+  name: Data
+  nameWithType: AbstractElement<Byte>.Data
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.Data
+  nameWithType.vb: AbstractElement(Of Byte).Data
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).Data
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Byte}.Data_
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Byte}.Data_
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.Data_
+  name: Data_
+  nameWithType: AbstractElement<Byte>.Data_
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.Data_
+  nameWithType.vb: AbstractElement(Of Byte).Data_
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).Data_
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Byte}.Tag
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Byte}.Tag
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.Tag
+  name: Tag
+  nameWithType: AbstractElement<Byte>.Tag
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.Tag
+  nameWithType.vb: AbstractElement(Of Byte).Tag
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).Tag
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Byte}.DatType
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Byte}.DatType
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.DatType
+  name: DatType
+  nameWithType: AbstractElement<Byte>.DatType
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.DatType
+  nameWithType.vb: AbstractElement(Of Byte).DatType
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).DatType
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Byte}.DData
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Byte}.DData
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.DData
+  name: DData
+  nameWithType: AbstractElement<Byte>.DData
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.DData
+  nameWithType.vb: AbstractElement(Of Byte).DData
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).DData
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Byte}.DData_
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{System.Byte}.DData_
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.DData_
+  name: DData_
+  nameWithType: AbstractElement<Byte>.DData_
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.DData_
+  nameWithType.vb: AbstractElement(Of Byte).DData_
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).DData_
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Byte}.ToString
+  commentId: M:EvilDICOM.Core.Element.AbstractElement{System.Byte}.ToString
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.ToString
+  name: ToString()
+  nameWithType: AbstractElement<Byte>.ToString()
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.ToString()
+  nameWithType.vb: AbstractElement(Of Byte).ToString()
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).ToString()
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+    name: ToString
+    nameWithType: AbstractElement<Byte>.ToString
+    fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+    name: ToString
+    nameWithType: AbstractElement(Of Byte).ToString
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Byte}.SetData(System.Byte)
+  commentId: M:EvilDICOM.Core.Element.AbstractElement{System.Byte}.SetData(System.Byte)
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+  name: SetData(Byte)
+  nameWithType: AbstractElement<Byte>.SetData(Byte)
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.SetData(System.Byte)
+  nameWithType.vb: AbstractElement(Of Byte).SetData(Byte)
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).SetData(System.Byte)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+    name: SetData
+    nameWithType: AbstractElement<Byte>.SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+    name: SetData
+    nameWithType: AbstractElement(Of Byte).SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Byte}.SetData(System.Byte[])
+  commentId: M:EvilDICOM.Core.Element.AbstractElement{System.Byte}.SetData(System.Byte[])
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+  name: SetData(Byte[])
+  nameWithType: AbstractElement<Byte>.SetData(Byte[])
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.SetData(System.Byte[])
+  nameWithType.vb: AbstractElement(Of Byte).SetData(Byte())
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).SetData(System.Byte())
+  name.vb: SetData(Byte())
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+    name: SetData
+    nameWithType: AbstractElement<Byte>.SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+    name: SetData
+    nameWithType: AbstractElement(Of Byte).SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{System.Byte}.GetDataOrDefault
+  commentId: M:EvilDICOM.Core.Element.AbstractElement{System.Byte}.GetDataOrDefault
+  parent: EvilDICOM.Core.Element.AbstractElement{System.Byte}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+  name: GetDataOrDefault()
+  nameWithType: AbstractElement<Byte>.GetDataOrDefault()
+  fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.GetDataOrDefault()
+  nameWithType.vb: AbstractElement(Of Byte).GetDataOrDefault()
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).GetDataOrDefault()
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+    name: GetDataOrDefault
+    nameWithType: AbstractElement<Byte>.GetDataOrDefault
+    fullName: EvilDICOM.Core.Element.AbstractElement<System.Byte>.GetDataOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+    name: GetDataOrDefault
+    nameWithType: AbstractElement(Of Byte).GetDataOrDefault
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of System.Byte).GetDataOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement`1
+  commentId: T:EvilDICOM.Core.Element.AbstractElement`1
+  isExternal: false
+  name: AbstractElement<T>
+  nameWithType: AbstractElement<T>
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>
+  nameWithType.vb: AbstractElement(Of T)
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T)
+  name.vb: AbstractElement(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    nameWithType: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    nameWithType: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Core.Element.AbstractElement`1.VR
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.VR
+  isExternal: false
+  name: VR
+  nameWithType: AbstractElement<T>.VR
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.VR
+  nameWithType.vb: AbstractElement(Of T).VR
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).VR
+- uid: EvilDICOM.Core.Element.AbstractElement`1.Data
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.Data
+  isExternal: false
+  name: Data
+  nameWithType: AbstractElement<T>.Data
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.Data
+  nameWithType.vb: AbstractElement(Of T).Data
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).Data
+- uid: EvilDICOM.Core.Element.AbstractElement`1.Data_
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.Data_
+  isExternal: false
+  name: Data_
+  nameWithType: AbstractElement<T>.Data_
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.Data_
+  nameWithType.vb: AbstractElement(Of T).Data_
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).Data_
+- uid: EvilDICOM.Core.Element.AbstractElement`1.Tag
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.Tag
+  isExternal: false
+  name: Tag
+  nameWithType: AbstractElement<T>.Tag
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.Tag
+  nameWithType.vb: AbstractElement(Of T).Tag
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).Tag
+- uid: EvilDICOM.Core.Element.AbstractElement`1.DatType
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.DatType
+  isExternal: false
+  name: DatType
+  nameWithType: AbstractElement<T>.DatType
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.DatType
+  nameWithType.vb: AbstractElement(Of T).DatType
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).DatType
+- uid: EvilDICOM.Core.Element.AbstractElement`1.DData
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.DData
+  isExternal: false
+  name: DData
+  nameWithType: AbstractElement<T>.DData
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.DData
+  nameWithType.vb: AbstractElement(Of T).DData
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).DData
+- uid: EvilDICOM.Core.Element.AbstractElement`1.DData_
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.DData_
+  isExternal: false
+  name: DData_
+  nameWithType: AbstractElement<T>.DData_
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.DData_
+  nameWithType.vb: AbstractElement(Of T).DData_
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).DData_
+- uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+  commentId: M:EvilDICOM.Core.Element.AbstractElement`1.ToString
+  isExternal: false
+  name: ToString()
+  nameWithType: AbstractElement<T>.ToString()
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.ToString()
+  nameWithType.vb: AbstractElement(Of T).ToString()
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).ToString()
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+    name: ToString
+    nameWithType: AbstractElement<T>.ToString
+    fullName: EvilDICOM.Core.Element.AbstractElement<T>.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+    name: ToString
+    nameWithType: AbstractElement(Of T).ToString
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of T).ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+  commentId: M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+  isExternal: false
+  name: SetData(T)
+  nameWithType: AbstractElement<T>.SetData(T)
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.SetData(T)
+  nameWithType.vb: AbstractElement(Of T).SetData(T)
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).SetData(T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+    name: SetData
+    nameWithType: AbstractElement<T>.SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement<T>.SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+    name: SetData
+    nameWithType: AbstractElement(Of T).SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of T).SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+  commentId: M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+  isExternal: false
+  name: SetData(T[])
+  nameWithType: AbstractElement<T>.SetData(T[])
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.SetData(T[])
+  nameWithType.vb: AbstractElement(Of T).SetData(T())
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).SetData(T())
+  name.vb: SetData(T())
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+    name: SetData
+    nameWithType: AbstractElement<T>.SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement<T>.SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+    name: SetData
+    nameWithType: AbstractElement(Of T).SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of T).SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+  commentId: M:EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+  isExternal: false
+  name: GetDataOrDefault()
+  nameWithType: AbstractElement<T>.GetDataOrDefault()
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.GetDataOrDefault()
+  nameWithType.vb: AbstractElement(Of T).GetDataOrDefault()
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).GetDataOrDefault()
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+    name: GetDataOrDefault
+    nameWithType: AbstractElement<T>.GetDataOrDefault
+    fullName: EvilDICOM.Core.Element.AbstractElement<T>.GetDataOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+    name: GetDataOrDefault
+    nameWithType: AbstractElement(Of T).GetDataOrDefault
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of T).GetDataOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.OtherWordString.#ctor*
+  commentId: Overload:EvilDICOM.Core.Element.OtherWordString.#ctor
+  isExternal: false
+  name: OtherWordString
+  nameWithType: OtherWordString.OtherWordString
+  fullName: EvilDICOM.Core.Element.OtherWordString.OtherWordString
+- uid: EvilDICOM.Core.Element.Tag
+  commentId: T:EvilDICOM.Core.Element.Tag
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: Tag
+  nameWithType: Tag
+  fullName: EvilDICOM.Core.Element.Tag
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

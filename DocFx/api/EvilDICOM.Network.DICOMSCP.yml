@@ -1,0 +1,356 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.DICOMSCP
+  commentId: T:EvilDICOM.Network.DICOMSCP
+  id: DICOMSCP
+  parent: EvilDICOM.Network
+  children:
+  - EvilDICOM.Network.DICOMSCP.#ctor(EvilDICOM.Network.Entity)
+  - EvilDICOM.Network.DICOMSCP.IsListening
+  - EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations(System.Boolean)
+  - EvilDICOM.Network.DICOMSCP.RaisedSCPStopped
+  - EvilDICOM.Network.DICOMSCP.SCPStopped
+  - EvilDICOM.Network.DICOMSCP.Stop
+  langs:
+  - csharp
+  - vb
+  name: DICOMSCP
+  nameWithType: DICOMSCP
+  fullName: EvilDICOM.Network.DICOMSCP
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOMSCP
+    path: ../EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: 'public class DICOMSCP : DICOMServiceClass'
+    content.vb: >-
+      Public Class DICOMSCP
+          Inherits DICOMServiceClass
+  inheritance:
+  - System.Object
+  - EvilDICOM.Network.DICOMServiceClass
+  derivedClasses:
+  - EvilDICOM.Network.Helpers.FileWriterSCP
+  inheritedMembers:
+  - EvilDICOM.Network.DICOMServiceClass.AssociationService
+  - EvilDICOM.Network.DICOMServiceClass.DIMSEService
+  - EvilDICOM.Network.DICOMServiceClass.ApplicationEntity
+  - EvilDICOM.Network.DICOMServiceClass.SupportedTransferSyntaxes
+  - EvilDICOM.Network.DICOMServiceClass.SupportedAbstractSyntaxes
+  - EvilDICOM.Network.DICOMServiceClass.Logger
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.DICOMSCP.#ctor(EvilDICOM.Network.Entity)
+  commentId: M:EvilDICOM.Network.DICOMSCP.#ctor(EvilDICOM.Network.Entity)
+  id: '#ctor(EvilDICOM.Network.Entity)'
+  parent: EvilDICOM.Network.DICOMSCP
+  langs:
+  - csharp
+  - vb
+  name: DICOMSCP(Entity)
+  nameWithType: DICOMSCP.DICOMSCP(Entity)
+  fullName: EvilDICOM.Network.DICOMSCP.DICOMSCP(EvilDICOM.Network.Entity)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: public DICOMSCP(Entity ae)
+    parameters:
+    - id: ae
+      type: EvilDICOM.Network.Entity
+    content.vb: Public Sub New(ae As Entity)
+  overload: EvilDICOM.Network.DICOMSCP.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations(System.Boolean)
+  commentId: M:EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations(System.Boolean)
+  id: ListenForIncomingAssociations(System.Boolean)
+  parent: EvilDICOM.Network.DICOMSCP
+  langs:
+  - csharp
+  - vb
+  name: ListenForIncomingAssociations(Boolean)
+  nameWithType: DICOMSCP.ListenForIncomingAssociations(Boolean)
+  fullName: EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations(System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ListenForIncomingAssociations
+    path: ../EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: public void ListenForIncomingAssociations(bool keepListenerRunning)
+    parameters:
+    - id: keepListenerRunning
+      type: System.Boolean
+    content.vb: Public Sub ListenForIncomingAssociations(keepListenerRunning As Boolean)
+  overload: EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DICOMSCP.Stop
+  commentId: M:EvilDICOM.Network.DICOMSCP.Stop
+  id: Stop
+  parent: EvilDICOM.Network.DICOMSCP
+  langs:
+  - csharp
+  - vb
+  name: Stop()
+  nameWithType: DICOMSCP.Stop()
+  fullName: EvilDICOM.Network.DICOMSCP.Stop()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Stop
+    path: ../EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+    startLine: 74
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: public void Stop()
+    content.vb: Public Sub Stop
+  overload: EvilDICOM.Network.DICOMSCP.Stop*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DICOMSCP.IsListening
+  commentId: P:EvilDICOM.Network.DICOMSCP.IsListening
+  id: IsListening
+  parent: EvilDICOM.Network.DICOMSCP
+  langs:
+  - csharp
+  - vb
+  name: IsListening
+  nameWithType: DICOMSCP.IsListening
+  fullName: EvilDICOM.Network.DICOMSCP.IsListening
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IsListening
+    path: ../EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+    startLine: 79
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: public bool IsListening { get; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public ReadOnly Property IsListening As Boolean
+  overload: EvilDICOM.Network.DICOMSCP.IsListening*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.Network.DICOMSCP.SCPStopped
+  commentId: E:EvilDICOM.Network.DICOMSCP.SCPStopped
+  id: SCPStopped
+  parent: EvilDICOM.Network.DICOMSCP
+  langs:
+  - csharp
+  - vb
+  name: SCPStopped
+  nameWithType: DICOMSCP.SCPStopped
+  fullName: EvilDICOM.Network.DICOMSCP.SCPStopped
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SCPStopped
+    path: ../EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+    startLine: 86
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: public event DICOMSCP.StopHandler SCPStopped
+    return:
+      type: EvilDICOM.Network.DICOMSCP.StopHandler
+    content.vb: Public Event SCPStopped As DICOMSCP.StopHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DICOMSCP.RaisedSCPStopped
+  commentId: M:EvilDICOM.Network.DICOMSCP.RaisedSCPStopped
+  id: RaisedSCPStopped
+  parent: EvilDICOM.Network.DICOMSCP
+  langs:
+  - csharp
+  - vb
+  name: RaisedSCPStopped()
+  nameWithType: DICOMSCP.RaisedSCPStopped()
+  fullName: EvilDICOM.Network.DICOMSCP.RaisedSCPStopped()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RaisedSCPStopped
+    path: ../EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+    startLine: 88
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: public void RaisedSCPStopped()
+    content.vb: Public Sub RaisedSCPStopped
+  overload: EvilDICOM.Network.DICOMSCP.RaisedSCPStopped*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.DICOMServiceClass
+  commentId: T:EvilDICOM.Network.DICOMServiceClass
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMServiceClass
+  nameWithType: DICOMServiceClass
+  fullName: EvilDICOM.Network.DICOMServiceClass
+- uid: EvilDICOM.Network.DICOMServiceClass.AssociationService
+  commentId: P:EvilDICOM.Network.DICOMServiceClass.AssociationService
+  parent: EvilDICOM.Network.DICOMServiceClass
+  isExternal: false
+  name: AssociationService
+  nameWithType: DICOMServiceClass.AssociationService
+  fullName: EvilDICOM.Network.DICOMServiceClass.AssociationService
+- uid: EvilDICOM.Network.DICOMServiceClass.DIMSEService
+  commentId: P:EvilDICOM.Network.DICOMServiceClass.DIMSEService
+  parent: EvilDICOM.Network.DICOMServiceClass
+  isExternal: false
+  name: DIMSEService
+  nameWithType: DICOMServiceClass.DIMSEService
+  fullName: EvilDICOM.Network.DICOMServiceClass.DIMSEService
+- uid: EvilDICOM.Network.DICOMServiceClass.ApplicationEntity
+  commentId: P:EvilDICOM.Network.DICOMServiceClass.ApplicationEntity
+  parent: EvilDICOM.Network.DICOMServiceClass
+  isExternal: false
+  name: ApplicationEntity
+  nameWithType: DICOMServiceClass.ApplicationEntity
+  fullName: EvilDICOM.Network.DICOMServiceClass.ApplicationEntity
+- uid: EvilDICOM.Network.DICOMServiceClass.SupportedTransferSyntaxes
+  commentId: P:EvilDICOM.Network.DICOMServiceClass.SupportedTransferSyntaxes
+  parent: EvilDICOM.Network.DICOMServiceClass
+  isExternal: false
+  name: SupportedTransferSyntaxes
+  nameWithType: DICOMServiceClass.SupportedTransferSyntaxes
+  fullName: EvilDICOM.Network.DICOMServiceClass.SupportedTransferSyntaxes
+- uid: EvilDICOM.Network.DICOMServiceClass.SupportedAbstractSyntaxes
+  commentId: P:EvilDICOM.Network.DICOMServiceClass.SupportedAbstractSyntaxes
+  parent: EvilDICOM.Network.DICOMServiceClass
+  isExternal: false
+  name: SupportedAbstractSyntaxes
+  nameWithType: DICOMServiceClass.SupportedAbstractSyntaxes
+  fullName: EvilDICOM.Network.DICOMServiceClass.SupportedAbstractSyntaxes
+- uid: EvilDICOM.Network.DICOMServiceClass.Logger
+  commentId: P:EvilDICOM.Network.DICOMServiceClass.Logger
+  parent: EvilDICOM.Network.DICOMServiceClass
+  isExternal: false
+  name: Logger
+  nameWithType: DICOMServiceClass.Logger
+  fullName: EvilDICOM.Network.DICOMServiceClass.Logger
+- uid: EvilDICOM.Network.DICOMSCP.#ctor*
+  commentId: Overload:EvilDICOM.Network.DICOMSCP.#ctor
+  isExternal: false
+  name: DICOMSCP
+  nameWithType: DICOMSCP.DICOMSCP
+  fullName: EvilDICOM.Network.DICOMSCP.DICOMSCP
+- uid: EvilDICOM.Network.Entity
+  commentId: T:EvilDICOM.Network.Entity
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Entity
+  nameWithType: Entity
+  fullName: EvilDICOM.Network.Entity
+- uid: EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations*
+  commentId: Overload:EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations
+  isExternal: false
+  name: ListenForIncomingAssociations
+  nameWithType: DICOMSCP.ListenForIncomingAssociations
+  fullName: EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: EvilDICOM.Network.DICOMSCP.Stop*
+  commentId: Overload:EvilDICOM.Network.DICOMSCP.Stop
+  isExternal: false
+  name: Stop
+  nameWithType: DICOMSCP.Stop
+  fullName: EvilDICOM.Network.DICOMSCP.Stop
+- uid: EvilDICOM.Network.DICOMSCP.IsListening*
+  commentId: Overload:EvilDICOM.Network.DICOMSCP.IsListening
+  isExternal: false
+  name: IsListening
+  nameWithType: DICOMSCP.IsListening
+  fullName: EvilDICOM.Network.DICOMSCP.IsListening
+- uid: EvilDICOM.Network.DICOMSCP.StopHandler
+  commentId: T:EvilDICOM.Network.DICOMSCP.StopHandler
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMSCP.StopHandler
+  nameWithType: DICOMSCP.StopHandler
+  fullName: EvilDICOM.Network.DICOMSCP.StopHandler
+- uid: EvilDICOM.Network.DICOMSCP.RaisedSCPStopped*
+  commentId: Overload:EvilDICOM.Network.DICOMSCP.RaisedSCPStopped
+  isExternal: false
+  name: RaisedSCPStopped
+  nameWithType: DICOMSCP.RaisedSCPStopped
+  fullName: EvilDICOM.Network.DICOMSCP.RaisedSCPStopped

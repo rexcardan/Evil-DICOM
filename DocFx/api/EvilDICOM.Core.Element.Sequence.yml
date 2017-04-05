@@ -1,0 +1,769 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Element.Sequence
+  commentId: T:EvilDICOM.Core.Element.Sequence
+  id: Sequence
+  parent: EvilDICOM.Core.Element
+  children:
+  - EvilDICOM.Core.Element.Sequence.#ctor
+  - EvilDICOM.Core.Element.Sequence.Items
+  - EvilDICOM.Core.Element.Sequence.ToString
+  langs:
+  - csharp
+  - vb
+  name: Sequence
+  nameWithType: Sequence
+  fullName: EvilDICOM.Core.Element.Sequence
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Sequence.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Sequence
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Sequence.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nEncapsulates the Sequence VR type\n"
+  example: []
+  syntax:
+    content: 'public class Sequence : AbstractElement<DICOMObject>, IDICOMElement'
+    content.vb: >-
+      Public Class Sequence
+          Inherits AbstractElement(Of DICOMObject)
+          Implements IDICOMElement
+  inheritance:
+  - System.Object
+  - EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  implements:
+  - EvilDICOM.Core.Interfaces.IDICOMElement
+  inheritedMembers:
+  - EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.VR
+  - EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.Data
+  - EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.Data_
+  - EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.Tag
+  - EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.DatType
+  - EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.DData
+  - EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.DData_
+  - EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.SetData(EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.SetData(EvilDICOM.Core.DICOMObject[])
+  - EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.GetDataOrDefault
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Element.Sequence.#ctor
+  commentId: M:EvilDICOM.Core.Element.Sequence.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Core.Element.Sequence
+  langs:
+  - csharp
+  - vb
+  name: Sequence()
+  nameWithType: Sequence.Sequence()
+  fullName: EvilDICOM.Core.Element.Sequence.Sequence()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Sequence.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Sequence.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public Sequence()
+    content.vb: Public Sub New
+  overload: EvilDICOM.Core.Element.Sequence.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Element.Sequence.Items
+  commentId: P:EvilDICOM.Core.Element.Sequence.Items
+  id: Items
+  parent: EvilDICOM.Core.Element.Sequence
+  langs:
+  - csharp
+  - vb
+  name: Items
+  nameWithType: Sequence.Items
+  fullName: EvilDICOM.Core.Element.Sequence.Items
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Sequence.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Items
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Sequence.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nAlternate property name for data (with a clearer name)\n"
+  example: []
+  syntax:
+    content: public List<DICOMObject> Items { get; set; }
+    parameters: []
+    return:
+      type: List{EvilDICOM.Core.DICOMObject}
+    content.vb: Public Property Items As List(Of DICOMObject)
+  overload: EvilDICOM.Core.Element.Sequence.Items*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Element.Sequence.ToString
+  commentId: M:EvilDICOM.Core.Element.Sequence.ToString
+  id: ToString
+  parent: EvilDICOM.Core.Element.Sequence
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Sequence.ToString()
+  fullName: EvilDICOM.Core.Element.Sequence.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Sequence.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToString
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Sequence.cs
+    startLine: 29
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.ToString
+  overload: EvilDICOM.Core.Element.Sequence.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  isExternal: false
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  commentId: T:EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  parent: EvilDICOM.Core.Element
+  definition: EvilDICOM.Core.Element.AbstractElement`1
+  name: AbstractElement<DICOMObject>
+  nameWithType: AbstractElement<DICOMObject>
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>
+  nameWithType.vb: AbstractElement(Of DICOMObject)
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject)
+  name.vb: AbstractElement(Of DICOMObject)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    nameWithType: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    nameWithType: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  commentId: T:EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IDICOMElement
+  nameWithType: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.VR
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.VR
+  parent: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.VR
+  name: VR
+  nameWithType: AbstractElement<DICOMObject>.VR
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.VR
+  nameWithType.vb: AbstractElement(Of DICOMObject).VR
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).VR
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.Data
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.Data
+  parent: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.Data
+  name: Data
+  nameWithType: AbstractElement<DICOMObject>.Data
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.Data
+  nameWithType.vb: AbstractElement(Of DICOMObject).Data
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).Data
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.Data_
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.Data_
+  parent: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.Data_
+  name: Data_
+  nameWithType: AbstractElement<DICOMObject>.Data_
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.Data_
+  nameWithType.vb: AbstractElement(Of DICOMObject).Data_
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).Data_
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.Tag
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.Tag
+  parent: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.Tag
+  name: Tag
+  nameWithType: AbstractElement<DICOMObject>.Tag
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.Tag
+  nameWithType.vb: AbstractElement(Of DICOMObject).Tag
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).Tag
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.DatType
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.DatType
+  parent: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.DatType
+  name: DatType
+  nameWithType: AbstractElement<DICOMObject>.DatType
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.DatType
+  nameWithType.vb: AbstractElement(Of DICOMObject).DatType
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).DatType
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.DData
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.DData
+  parent: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.DData
+  name: DData
+  nameWithType: AbstractElement<DICOMObject>.DData
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.DData
+  nameWithType.vb: AbstractElement(Of DICOMObject).DData
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).DData
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.DData_
+  commentId: P:EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.DData_
+  parent: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.DData_
+  name: DData_
+  nameWithType: AbstractElement<DICOMObject>.DData_
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.DData_
+  nameWithType.vb: AbstractElement(Of DICOMObject).DData_
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).DData_
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.SetData(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.SetData(EvilDICOM.Core.DICOMObject)
+  parent: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+  name: SetData(DICOMObject)
+  nameWithType: AbstractElement<DICOMObject>.SetData(DICOMObject)
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.SetData(EvilDICOM.Core.DICOMObject)
+  nameWithType.vb: AbstractElement(Of DICOMObject).SetData(DICOMObject)
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).SetData(EvilDICOM.Core.DICOMObject)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+    name: SetData
+    nameWithType: AbstractElement<DICOMObject>.SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+    name: SetData
+    nameWithType: AbstractElement(Of DICOMObject).SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.SetData(EvilDICOM.Core.DICOMObject[])
+  commentId: M:EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.SetData(EvilDICOM.Core.DICOMObject[])
+  parent: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+  name: SetData(DICOMObject[])
+  nameWithType: AbstractElement<DICOMObject>.SetData(DICOMObject[])
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.SetData(EvilDICOM.Core.DICOMObject[])
+  nameWithType.vb: AbstractElement(Of DICOMObject).SetData(DICOMObject())
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).SetData(EvilDICOM.Core.DICOMObject())
+  name.vb: SetData(DICOMObject())
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+    name: SetData
+    nameWithType: AbstractElement<DICOMObject>.SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+    name: SetData
+    nameWithType: AbstractElement(Of DICOMObject).SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.GetDataOrDefault
+  commentId: M:EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.GetDataOrDefault
+  parent: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+  name: GetDataOrDefault()
+  nameWithType: AbstractElement<DICOMObject>.GetDataOrDefault()
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.GetDataOrDefault()
+  nameWithType.vb: AbstractElement(Of DICOMObject).GetDataOrDefault()
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).GetDataOrDefault()
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+    name: GetDataOrDefault
+    nameWithType: AbstractElement<DICOMObject>.GetDataOrDefault
+    fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.GetDataOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+    name: GetDataOrDefault
+    nameWithType: AbstractElement(Of DICOMObject).GetDataOrDefault
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).GetDataOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement`1
+  commentId: T:EvilDICOM.Core.Element.AbstractElement`1
+  isExternal: false
+  name: AbstractElement<T>
+  nameWithType: AbstractElement<T>
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>
+  nameWithType.vb: AbstractElement(Of T)
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T)
+  name.vb: AbstractElement(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    nameWithType: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1
+    name: AbstractElement
+    nameWithType: AbstractElement
+    fullName: EvilDICOM.Core.Element.AbstractElement
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Core.Element.AbstractElement`1.VR
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.VR
+  isExternal: false
+  name: VR
+  nameWithType: AbstractElement<T>.VR
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.VR
+  nameWithType.vb: AbstractElement(Of T).VR
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).VR
+- uid: EvilDICOM.Core.Element.AbstractElement`1.Data
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.Data
+  isExternal: false
+  name: Data
+  nameWithType: AbstractElement<T>.Data
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.Data
+  nameWithType.vb: AbstractElement(Of T).Data
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).Data
+- uid: EvilDICOM.Core.Element.AbstractElement`1.Data_
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.Data_
+  isExternal: false
+  name: Data_
+  nameWithType: AbstractElement<T>.Data_
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.Data_
+  nameWithType.vb: AbstractElement(Of T).Data_
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).Data_
+- uid: EvilDICOM.Core.Element.AbstractElement`1.Tag
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.Tag
+  isExternal: false
+  name: Tag
+  nameWithType: AbstractElement<T>.Tag
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.Tag
+  nameWithType.vb: AbstractElement(Of T).Tag
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).Tag
+- uid: EvilDICOM.Core.Element.AbstractElement`1.DatType
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.DatType
+  isExternal: false
+  name: DatType
+  nameWithType: AbstractElement<T>.DatType
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.DatType
+  nameWithType.vb: AbstractElement(Of T).DatType
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).DatType
+- uid: EvilDICOM.Core.Element.AbstractElement`1.DData
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.DData
+  isExternal: false
+  name: DData
+  nameWithType: AbstractElement<T>.DData
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.DData
+  nameWithType.vb: AbstractElement(Of T).DData
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).DData
+- uid: EvilDICOM.Core.Element.AbstractElement`1.DData_
+  commentId: P:EvilDICOM.Core.Element.AbstractElement`1.DData_
+  isExternal: false
+  name: DData_
+  nameWithType: AbstractElement<T>.DData_
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.DData_
+  nameWithType.vb: AbstractElement(Of T).DData_
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).DData_
+- uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+  commentId: M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+  isExternal: false
+  name: SetData(T)
+  nameWithType: AbstractElement<T>.SetData(T)
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.SetData(T)
+  nameWithType.vb: AbstractElement(Of T).SetData(T)
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).SetData(T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+    name: SetData
+    nameWithType: AbstractElement<T>.SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement<T>.SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0)
+    name: SetData
+    nameWithType: AbstractElement(Of T).SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of T).SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+  commentId: M:EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+  isExternal: false
+  name: SetData(T[])
+  nameWithType: AbstractElement<T>.SetData(T[])
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.SetData(T[])
+  nameWithType.vb: AbstractElement(Of T).SetData(T())
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).SetData(T())
+  name.vb: SetData(T())
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+    name: SetData
+    nameWithType: AbstractElement<T>.SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement<T>.SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.SetData(`0[])
+    name: SetData
+    nameWithType: AbstractElement(Of T).SetData
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of T).SetData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+  commentId: M:EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+  isExternal: false
+  name: GetDataOrDefault()
+  nameWithType: AbstractElement<T>.GetDataOrDefault()
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.GetDataOrDefault()
+  nameWithType.vb: AbstractElement(Of T).GetDataOrDefault()
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).GetDataOrDefault()
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+    name: GetDataOrDefault
+    nameWithType: AbstractElement<T>.GetDataOrDefault
+    fullName: EvilDICOM.Core.Element.AbstractElement<T>.GetDataOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.GetDataOrDefault
+    name: GetDataOrDefault
+    nameWithType: AbstractElement(Of T).GetDataOrDefault
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of T).GetDataOrDefault
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.Sequence.#ctor*
+  commentId: Overload:EvilDICOM.Core.Element.Sequence.#ctor
+  isExternal: false
+  name: Sequence
+  nameWithType: Sequence.Sequence
+  fullName: EvilDICOM.Core.Element.Sequence.Sequence
+- uid: EvilDICOM.Core.Element.Sequence.Items*
+  commentId: Overload:EvilDICOM.Core.Element.Sequence.Items
+  isExternal: false
+  name: Items
+  nameWithType: Sequence.Items
+  fullName: EvilDICOM.Core.Element.Sequence.Items
+- uid: List{EvilDICOM.Core.DICOMObject}
+  commentId: '!:List{EvilDICOM.Core.DICOMObject}'
+  definition: List`1
+  name: List<DICOMObject>
+  nameWithType: List<DICOMObject>
+  fullName: List<EvilDICOM.Core.DICOMObject>
+  nameWithType.vb: List(Of DICOMObject)
+  fullName.vb: List(Of EvilDICOM.Core.DICOMObject)
+  name.vb: List(Of DICOMObject)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.ToString
+  commentId: M:EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}.ToString
+  parent: EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject}
+  definition: EvilDICOM.Core.Element.AbstractElement`1.ToString
+  name: ToString()
+  nameWithType: AbstractElement<DICOMObject>.ToString()
+  fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.ToString()
+  nameWithType.vb: AbstractElement(Of DICOMObject).ToString()
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).ToString()
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+    name: ToString
+    nameWithType: AbstractElement<DICOMObject>.ToString
+    fullName: EvilDICOM.Core.Element.AbstractElement<EvilDICOM.Core.DICOMObject>.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+    name: ToString
+    nameWithType: AbstractElement(Of DICOMObject).ToString
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of EvilDICOM.Core.DICOMObject).ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element.Sequence.ToString*
+  commentId: Overload:EvilDICOM.Core.Element.Sequence.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: Sequence.ToString
+  fullName: EvilDICOM.Core.Element.Sequence.ToString
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+  commentId: M:EvilDICOM.Core.Element.AbstractElement`1.ToString
+  isExternal: false
+  name: ToString()
+  nameWithType: AbstractElement<T>.ToString()
+  fullName: EvilDICOM.Core.Element.AbstractElement<T>.ToString()
+  nameWithType.vb: AbstractElement(Of T).ToString()
+  fullName.vb: EvilDICOM.Core.Element.AbstractElement(Of T).ToString()
+  spec.csharp:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+    name: ToString
+    nameWithType: AbstractElement<T>.ToString
+    fullName: EvilDICOM.Core.Element.AbstractElement<T>.ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.Element.AbstractElement`1.ToString
+    name: ToString
+    nameWithType: AbstractElement(Of T).ToString
+    fullName: EvilDICOM.Core.Element.AbstractElement(Of T).ToString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

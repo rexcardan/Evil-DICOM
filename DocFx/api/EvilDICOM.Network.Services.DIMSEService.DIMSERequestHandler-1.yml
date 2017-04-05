@@ -1,0 +1,75 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+  commentId: T:EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+  id: DIMSEService.DIMSERequestHandler`1
+  parent: EvilDICOM.Network.Services
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: DIMSEService.DIMSERequestHandler<T>
+  nameWithType: DIMSEService.DIMSERequestHandler<T>
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler<T>
+  type: Delegate
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DIMSERequestHandler
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 142
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: 'public delegate void DIMSERequestHandler<T>(T req, Association asc)where T : AbstractDIMSERequest;'
+    parameters:
+    - id: req
+      type: '{T}'
+    - id: asc
+      type: EvilDICOM.Network.Association
+    typeParameters:
+    - id: T
+    content.vb: Public Delegate Sub DIMSERequestHandler(Of T As AbstractDIMSERequest)(req As T, asc As Association)
+  nameWithType.vb: DIMSEService.DIMSERequestHandler(Of T)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+  fullName.vb: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler(Of T)
+  name.vb: DIMSEService.DIMSERequestHandler(Of T)
+references:
+- uid: EvilDICOM.Network.Services
+  commentId: N:EvilDICOM.Network.Services
+  isExternal: false
+  name: EvilDICOM.Network.Services
+  nameWithType: EvilDICOM.Network.Services
+  fullName: EvilDICOM.Network.Services
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: EvilDICOM.Network.Association
+  commentId: T:EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Association
+  nameWithType: Association
+  fullName: EvilDICOM.Network.Association
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network

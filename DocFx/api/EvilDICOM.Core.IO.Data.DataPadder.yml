@@ -1,0 +1,177 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Data.DataPadder
+  commentId: T:EvilDICOM.Core.IO.Data.DataPadder
+  id: DataPadder
+  parent: EvilDICOM.Core.IO.Data
+  children:
+  - EvilDICOM.Core.IO.Data.DataPadder.PadNull(System.Byte[])
+  - EvilDICOM.Core.IO.Data.DataPadder.PadSpace(System.Byte[])
+  langs:
+  - csharp
+  - vb
+  name: DataPadder
+  nameWithType: DataPadder
+  fullName: EvilDICOM.Core.IO.Data.DataPadder
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataPadder.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DataPadder
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Data/DataPadder.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: 'public class DataPadder : object'
+    content.vb: >-
+      Public Class DataPadder
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Data.DataPadder.PadNull(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.DataPadder.PadNull(System.Byte[])
+  id: PadNull(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.DataPadder
+  langs:
+  - csharp
+  - vb
+  name: PadNull(Byte[])
+  nameWithType: DataPadder.PadNull(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.DataPadder.PadNull(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataPadder.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PadNull
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Data/DataPadder.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  summary: "\nPads null bytes around the data to make it even\n"
+  example: []
+  syntax:
+    content: public static byte[] PadNull(byte[] toPad)
+    parameters:
+    - id: toPad
+      type: System.Byte[]
+      description: ''
+    return:
+      type: System.Byte[]
+      description: ''
+    content.vb: Public Shared Function PadNull(toPad As Byte()) As Byte()
+  overload: EvilDICOM.Core.IO.Data.DataPadder.PadNull*
+  nameWithType.vb: DataPadder.PadNull(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.DataPadder.PadNull(System.Byte())
+  name.vb: PadNull(Byte())
+- uid: EvilDICOM.Core.IO.Data.DataPadder.PadSpace(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.DataPadder.PadSpace(System.Byte[])
+  id: PadSpace(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.DataPadder
+  langs:
+  - csharp
+  - vb
+  name: PadSpace(Byte[])
+  nameWithType: DataPadder.PadSpace(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.DataPadder.PadSpace(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataPadder.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PadSpace
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Data/DataPadder.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  summary: "\nPads a space character around the data to make it even\n"
+  example: []
+  syntax:
+    content: public static byte[] PadSpace(byte[] toPad)
+    parameters:
+    - id: toPad
+      type: System.Byte[]
+      description: ''
+    return:
+      type: System.Byte[]
+      description: ''
+    content.vb: Public Shared Function PadSpace(toPad As Byte()) As Byte()
+  overload: EvilDICOM.Core.IO.Data.DataPadder.PadSpace*
+  nameWithType.vb: DataPadder.PadSpace(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.DataPadder.PadSpace(System.Byte())
+  name.vb: PadSpace(Byte())
+references:
+- uid: EvilDICOM.Core.IO.Data
+  commentId: N:EvilDICOM.Core.IO.Data
+  isExternal: false
+  name: EvilDICOM.Core.IO.Data
+  nameWithType: EvilDICOM.Core.IO.Data
+  fullName: EvilDICOM.Core.IO.Data
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.IO.Data.DataPadder.PadNull*
+  commentId: Overload:EvilDICOM.Core.IO.Data.DataPadder.PadNull
+  isExternal: false
+  name: PadNull
+  nameWithType: DataPadder.PadNull
+  fullName: EvilDICOM.Core.IO.Data.DataPadder.PadNull
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Data.DataPadder.PadSpace*
+  commentId: Overload:EvilDICOM.Core.IO.Data.DataPadder.PadSpace
+  isExternal: false
+  name: PadSpace
+  nameWithType: DataPadder.PadSpace
+  fullName: EvilDICOM.Core.IO.Data.DataPadder.PadSpace

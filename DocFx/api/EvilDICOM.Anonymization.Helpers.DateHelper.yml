@@ -1,0 +1,331 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Anonymization.Helpers.DateHelper
+  commentId: T:EvilDICOM.Anonymization.Helpers.DateHelper
+  id: DateHelper
+  parent: EvilDICOM.Anonymization.Helpers
+  children:
+  - EvilDICOM.Anonymization.Helpers.DateHelper.BaseDate
+  - EvilDICOM.Anonymization.Helpers.DateHelper.DateRelativeBaseDate(System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  - EvilDICOM.Anonymization.Helpers.DateHelper.RandomDate
+  - EvilDICOM.Anonymization.Helpers.DateHelper.YoungerThan89(System.String)
+  langs:
+  - csharp
+  - vb
+  name: DateHelper
+  nameWithType: DateHelper
+  fullName: EvilDICOM.Anonymization.Helpers.DateHelper
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Helpers/DateHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DateHelper
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Helpers/DateHelper.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Helpers
+  syntax:
+    content: 'public class DateHelper : object'
+    content.vb: >-
+      Public Class DateHelper
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Anonymization.Helpers.DateHelper.YoungerThan89(System.String)
+  commentId: M:EvilDICOM.Anonymization.Helpers.DateHelper.YoungerThan89(System.String)
+  id: YoungerThan89(System.String)
+  parent: EvilDICOM.Anonymization.Helpers.DateHelper
+  langs:
+  - csharp
+  - vb
+  name: YoungerThan89(String)
+  nameWithType: DateHelper.YoungerThan89(String)
+  fullName: EvilDICOM.Anonymization.Helpers.DateHelper.YoungerThan89(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Helpers/DateHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: YoungerThan89
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Helpers/DateHelper.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Helpers
+  summary: "\nChecks to see if the patient age is less than 89 years old\n"
+  example: []
+  syntax:
+    content: public static bool YoungerThan89(string file)
+    parameters:
+    - id: file
+      type: System.String
+      description: Path to DICOM file containing patient information
+    return:
+      type: System.Boolean
+      description: boolean indication test
+    content.vb: Public Shared Function YoungerThan89(file As String) As Boolean
+  overload: EvilDICOM.Anonymization.Helpers.DateHelper.YoungerThan89*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Anonymization.Helpers.DateHelper.BaseDate
+  commentId: P:EvilDICOM.Anonymization.Helpers.DateHelper.BaseDate
+  id: BaseDate
+  parent: EvilDICOM.Anonymization.Helpers.DateHelper
+  langs:
+  - csharp
+  - vb
+  name: BaseDate
+  nameWithType: DateHelper.BaseDate
+  fullName: EvilDICOM.Anonymization.Helpers.DateHelper.BaseDate
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Helpers/DateHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: BaseDate
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Helpers/DateHelper.cs
+    startLine: 54
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Helpers
+  syntax:
+    content: public static System.DateTime BaseDate { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Shared ReadOnly Property BaseDate As System.DateTime
+  overload: EvilDICOM.Anonymization.Helpers.DateHelper.BaseDate*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Anonymization.Helpers.DateHelper.RandomDate
+  commentId: P:EvilDICOM.Anonymization.Helpers.DateHelper.RandomDate
+  id: RandomDate
+  parent: EvilDICOM.Anonymization.Helpers.DateHelper
+  langs:
+  - csharp
+  - vb
+  name: RandomDate
+  nameWithType: DateHelper.RandomDate
+  fullName: EvilDICOM.Anonymization.Helpers.DateHelper.RandomDate
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Helpers/DateHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RandomDate
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Helpers/DateHelper.cs
+    startLine: 63
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Helpers
+  syntax:
+    content: public static System.DateTime RandomDate { get; }
+    parameters: []
+    return:
+      type: System.DateTime
+    content.vb: Public Shared ReadOnly Property RandomDate As System.DateTime
+  overload: EvilDICOM.Anonymization.Helpers.DateHelper.RandomDate*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Anonymization.Helpers.DateHelper.DateRelativeBaseDate(System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  commentId: M:EvilDICOM.Anonymization.Helpers.DateHelper.DateRelativeBaseDate(System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  id: DateRelativeBaseDate(System.Nullable{System.DateTime},System.Nullable{System.DateTime})
+  parent: EvilDICOM.Anonymization.Helpers.DateHelper
+  langs:
+  - csharp
+  - vb
+  name: DateRelativeBaseDate(Nullable<System.DateTime>, Nullable<System.DateTime>)
+  nameWithType: DateHelper.DateRelativeBaseDate(Nullable<System.DateTime>, Nullable<System.DateTime>)
+  fullName: EvilDICOM.Anonymization.Helpers.DateHelper.DateRelativeBaseDate(System.Nullable<System.DateTime>, System.Nullable<System.DateTime>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Helpers/DateHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DateRelativeBaseDate
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Helpers/DateHelper.cs
+    startLine: 76
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Helpers
+  syntax:
+    content: public static System.DateTime? DateRelativeBaseDate(System.DateTime? original, System.DateTime? reference)
+    parameters:
+    - id: original
+      type: System.Nullable{System.DateTime}
+    - id: reference
+      type: System.Nullable{System.DateTime}
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Shared Function DateRelativeBaseDate(original As System.DateTime?, reference As System.DateTime?) As System.DateTime?
+  overload: EvilDICOM.Anonymization.Helpers.DateHelper.DateRelativeBaseDate*
+  nameWithType.vb: DateHelper.DateRelativeBaseDate(Nullable(Of System.DateTime), Nullable(Of System.DateTime))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Anonymization.Helpers.DateHelper.DateRelativeBaseDate(System.Nullable(Of System.DateTime), System.Nullable(Of System.DateTime))
+  name.vb: DateRelativeBaseDate(Nullable(Of System.DateTime), Nullable(Of System.DateTime))
+references:
+- uid: EvilDICOM.Anonymization.Helpers
+  commentId: N:EvilDICOM.Anonymization.Helpers
+  isExternal: false
+  name: EvilDICOM.Anonymization.Helpers
+  nameWithType: EvilDICOM.Anonymization.Helpers
+  fullName: EvilDICOM.Anonymization.Helpers
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Anonymization.Helpers.DateHelper.YoungerThan89*
+  commentId: Overload:EvilDICOM.Anonymization.Helpers.DateHelper.YoungerThan89
+  isExternal: false
+  name: YoungerThan89
+  nameWithType: DateHelper.YoungerThan89
+  fullName: EvilDICOM.Anonymization.Helpers.DateHelper.YoungerThan89
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: EvilDICOM.Anonymization.Helpers.DateHelper.BaseDate*
+  commentId: Overload:EvilDICOM.Anonymization.Helpers.DateHelper.BaseDate
+  isExternal: false
+  name: BaseDate
+  nameWithType: DateHelper.BaseDate
+  fullName: EvilDICOM.Anonymization.Helpers.DateHelper.BaseDate
+- uid: System.DateTime
+  isExternal: true
+  name: System.DateTime
+  nameWithType: System.DateTime
+  fullName: System.DateTime
+- uid: EvilDICOM.Anonymization.Helpers.DateHelper.RandomDate*
+  commentId: Overload:EvilDICOM.Anonymization.Helpers.DateHelper.RandomDate
+  isExternal: false
+  name: RandomDate
+  nameWithType: DateHelper.RandomDate
+  fullName: EvilDICOM.Anonymization.Helpers.DateHelper.RandomDate
+- uid: EvilDICOM.Anonymization.Helpers.DateHelper.DateRelativeBaseDate*
+  commentId: Overload:EvilDICOM.Anonymization.Helpers.DateHelper.DateRelativeBaseDate
+  isExternal: false
+  name: DateRelativeBaseDate
+  nameWithType: DateHelper.DateRelativeBaseDate
+  fullName: EvilDICOM.Anonymization.Helpers.DateHelper.DateRelativeBaseDate
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,0 +1,69 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.DIMSE.IOD
+  commentId: N:EvilDICOM.Network.DIMSE.IOD
+  id: EvilDICOM.Network.DIMSE.IOD
+  children:
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  - EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  - EvilDICOM.Network.DIMSE.IOD.CFindPlanIOD
+  - EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Network.DIMSE.IOD
+  nameWithType: EvilDICOM.Network.DIMSE.IOD
+  fullName: EvilDICOM.Network.DIMSE.IOD
+  type: Namespace
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: AbstractDIMSEIOD
+  nameWithType: AbstractDIMSEIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: CFindImageIOD
+  nameWithType: CFindImageIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindPlanIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CFindPlanIOD
+  isExternal: false
+  name: CFindPlanIOD
+  nameWithType: CFindPlanIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindPlanIOD
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: CFindSeriesIOD
+  nameWithType: CFindSeriesIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: CFindStudyIOD
+  nameWithType: CFindStudyIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: CMoveIOD
+  nameWithType: CMoveIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+- uid: EvilDICOM.Network.DIMSE.IOD
+  commentId: N:EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: EvilDICOM.Network.DIMSE.IOD
+  nameWithType: EvilDICOM.Network.DIMSE.IOD
+  fullName: EvilDICOM.Network.DIMSE.IOD

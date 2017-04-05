@@ -1,0 +1,44 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Readers
+  commentId: N:EvilDICOM.Network.Readers
+  id: EvilDICOM.Network.Readers
+  children:
+  - EvilDICOM.Network.Readers.DIMSEReader
+  - EvilDICOM.Network.Readers.NetworkBinaryReader
+  - EvilDICOM.Network.Readers.PDUReader
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Network.Readers
+  nameWithType: EvilDICOM.Network.Readers
+  fullName: EvilDICOM.Network.Readers
+  type: Namespace
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Network.Readers.DIMSEReader
+  commentId: T:EvilDICOM.Network.Readers.DIMSEReader
+  isExternal: false
+  name: DIMSEReader
+  nameWithType: DIMSEReader
+  fullName: EvilDICOM.Network.Readers.DIMSEReader
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader
+  commentId: T:EvilDICOM.Network.Readers.NetworkBinaryReader
+  parent: EvilDICOM.Network.Readers
+  isExternal: false
+  name: NetworkBinaryReader
+  nameWithType: NetworkBinaryReader
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader
+- uid: EvilDICOM.Network.Readers.PDUReader
+  commentId: T:EvilDICOM.Network.Readers.PDUReader
+  isExternal: false
+  name: PDUReader
+  nameWithType: PDUReader
+  fullName: EvilDICOM.Network.Readers.PDUReader
+- uid: EvilDICOM.Network.Readers
+  commentId: N:EvilDICOM.Network.Readers
+  isExternal: false
+  name: EvilDICOM.Network.Readers
+  nameWithType: EvilDICOM.Network.Readers
+  fullName: EvilDICOM.Network.Readers

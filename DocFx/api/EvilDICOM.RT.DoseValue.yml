@@ -1,0 +1,262 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.RT.DoseValue
+  commentId: T:EvilDICOM.RT.DoseValue
+  id: DoseValue
+  parent: EvilDICOM.RT
+  children:
+  - EvilDICOM.RT.DoseValue.#ctor(System.Double,System.Double,System.Double,System.Double)
+  - EvilDICOM.RT.DoseValue.Dose
+  - EvilDICOM.RT.DoseValue.X
+  - EvilDICOM.RT.DoseValue.Y
+  - EvilDICOM.RT.DoseValue.Z
+  langs:
+  - csharp
+  - vb
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: EvilDICOM.RT.DoseValue
+  type: Struct
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DoseValue
+    path: ../EvilDICOM/EvilDICOM/RT/DoseValue.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  summary: "\nA simple container for dose values as a function of 3D space\n"
+  example: []
+  syntax:
+    content: public struct DoseValue
+    content.vb: Public Structure DoseValue
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: EvilDICOM.RT.DoseValue.X
+  commentId: P:EvilDICOM.RT.DoseValue.X
+  id: X
+  parent: EvilDICOM.RT.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: X
+  nameWithType: DoseValue.X
+  fullName: EvilDICOM.RT.DoseValue.X
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: X
+    path: ../EvilDICOM/EvilDICOM/RT/DoseValue.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double X { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property X As Double
+  overload: EvilDICOM.RT.DoseValue.X*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.DoseValue.Y
+  commentId: P:EvilDICOM.RT.DoseValue.Y
+  id: Y
+  parent: EvilDICOM.RT.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: Y
+  nameWithType: DoseValue.Y
+  fullName: EvilDICOM.RT.DoseValue.Y
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Y
+    path: ../EvilDICOM/EvilDICOM/RT/DoseValue.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double Y { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Y As Double
+  overload: EvilDICOM.RT.DoseValue.Y*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.DoseValue.Z
+  commentId: P:EvilDICOM.RT.DoseValue.Z
+  id: Z
+  parent: EvilDICOM.RT.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: Z
+  nameWithType: DoseValue.Z
+  fullName: EvilDICOM.RT.DoseValue.Z
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Z
+    path: ../EvilDICOM/EvilDICOM/RT/DoseValue.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double Z { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Z As Double
+  overload: EvilDICOM.RT.DoseValue.Z*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.DoseValue.Dose
+  commentId: P:EvilDICOM.RT.DoseValue.Dose
+  id: Dose
+  parent: EvilDICOM.RT.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: DoseValue.Dose
+  fullName: EvilDICOM.RT.DoseValue.Dose
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Dose
+    path: ../EvilDICOM/EvilDICOM/RT/DoseValue.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double Dose { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Dose As Double
+  overload: EvilDICOM.RT.DoseValue.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.DoseValue.#ctor(System.Double,System.Double,System.Double,System.Double)
+  commentId: M:EvilDICOM.RT.DoseValue.#ctor(System.Double,System.Double,System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double,System.Double,System.Double)'
+  parent: EvilDICOM.RT.DoseValue
+  langs:
+  - csharp
+  - vb
+  name: DoseValue(Double, Double, Double, Double)
+  nameWithType: DoseValue.DoseValue(Double, Double, Double, Double)
+  fullName: EvilDICOM.RT.DoseValue.DoseValue(System.Double, System.Double, System.Double, System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/RT/DoseValue.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public DoseValue(double x, double y, double z, double dose)
+    parameters:
+    - id: x
+      type: System.Double
+    - id: y
+      type: System.Double
+    - id: z
+      type: System.Double
+    - id: dose
+      type: System.Double
+    content.vb: Public Sub New(x As Double, y As Double, z As Double, dose As Double)
+  overload: EvilDICOM.RT.DoseValue.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.RT
+  commentId: N:EvilDICOM.RT
+  isExternal: false
+  name: EvilDICOM.RT
+  nameWithType: EvilDICOM.RT
+  fullName: EvilDICOM.RT
+- uid: EvilDICOM.RT.DoseValue.X*
+  commentId: Overload:EvilDICOM.RT.DoseValue.X
+  isExternal: false
+  name: X
+  nameWithType: DoseValue.X
+  fullName: EvilDICOM.RT.DoseValue.X
+- uid: System.Double
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: EvilDICOM.RT.DoseValue.Y*
+  commentId: Overload:EvilDICOM.RT.DoseValue.Y
+  isExternal: false
+  name: Y
+  nameWithType: DoseValue.Y
+  fullName: EvilDICOM.RT.DoseValue.Y
+- uid: EvilDICOM.RT.DoseValue.Z*
+  commentId: Overload:EvilDICOM.RT.DoseValue.Z
+  isExternal: false
+  name: Z
+  nameWithType: DoseValue.Z
+  fullName: EvilDICOM.RT.DoseValue.Z
+- uid: EvilDICOM.RT.DoseValue.Dose*
+  commentId: Overload:EvilDICOM.RT.DoseValue.Dose
+  isExternal: false
+  name: Dose
+  nameWithType: DoseValue.Dose
+  fullName: EvilDICOM.RT.DoseValue.Dose
+- uid: EvilDICOM.RT.DoseValue.#ctor*
+  commentId: Overload:EvilDICOM.RT.DoseValue.#ctor
+  isExternal: false
+  name: DoseValue
+  nameWithType: DoseValue.DoseValue
+  fullName: EvilDICOM.RT.DoseValue.DoseValue

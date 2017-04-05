@@ -1,0 +1,759 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Readers.PDUReader
+  commentId: T:EvilDICOM.Network.Readers.PDUReader
+  id: PDUReader
+  parent: EvilDICOM.Network.Readers
+  children:
+  - EvilDICOM.Network.Readers.PDUReader.Read(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  - EvilDICOM.Network.Readers.PDUReader.ReadAbort(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  - EvilDICOM.Network.Readers.PDUReader.ReadAssociationAccept(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  - EvilDICOM.Network.Readers.PDUReader.ReadAssociationReject(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  - EvilDICOM.Network.Readers.PDUReader.ReadAssociationRequest(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  - EvilDICOM.Network.Readers.PDUReader.ReadPDFData(EvilDICOM.Network.Readers.NetworkBinaryReader,System.Boolean,System.Int32)
+  - EvilDICOM.Network.Readers.PDUReader.ReadReleaseRequest(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  - EvilDICOM.Network.Readers.PDUReader.ReadReleaseResponse(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  langs:
+  - csharp
+  - vb
+  name: PDUReader
+  nameWithType: PDUReader
+  fullName: EvilDICOM.Network.Readers.PDUReader
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PDUReader
+    path: ../EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: 'public class PDUReader : object'
+    content.vb: >-
+      Public Class PDUReader
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Readers.PDUReader.Read(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  commentId: M:EvilDICOM.Network.Readers.PDUReader.Read(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  id: Read(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  parent: EvilDICOM.Network.Readers.PDUReader
+  langs:
+  - csharp
+  - vb
+  name: Read(NetworkBinaryReader)
+  nameWithType: PDUReader.Read(NetworkBinaryReader)
+  fullName: EvilDICOM.Network.Readers.PDUReader.Read(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Read
+    path: ../EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: public static IMessage Read(NetworkBinaryReader dr)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Network.Readers.NetworkBinaryReader
+    return:
+      type: EvilDICOM.Network.Interfaces.IMessage
+    content.vb: Public Shared Function Read(dr As NetworkBinaryReader) As IMessage
+  overload: EvilDICOM.Network.Readers.PDUReader.Read*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadAbort(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  commentId: M:EvilDICOM.Network.Readers.PDUReader.ReadAbort(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  id: ReadAbort(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  parent: EvilDICOM.Network.Readers.PDUReader
+  langs:
+  - csharp
+  - vb
+  name: ReadAbort(NetworkBinaryReader)
+  nameWithType: PDUReader.ReadAbort(NetworkBinaryReader)
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadAbort(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadAbort
+    path: ../EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+    startLine: 59
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: public static Message<Abort> ReadAbort(NetworkBinaryReader dr)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Network.Readers.NetworkBinaryReader
+    return:
+      type: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.Associations.PDUs.Abort}
+    content.vb: Public Shared Function ReadAbort(dr As NetworkBinaryReader) As Message(Of Abort)
+  overload: EvilDICOM.Network.Readers.PDUReader.ReadAbort*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadReleaseRequest(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  commentId: M:EvilDICOM.Network.Readers.PDUReader.ReadReleaseRequest(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  id: ReadReleaseRequest(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  parent: EvilDICOM.Network.Readers.PDUReader
+  langs:
+  - csharp
+  - vb
+  name: ReadReleaseRequest(NetworkBinaryReader)
+  nameWithType: PDUReader.ReadReleaseRequest(NetworkBinaryReader)
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadReleaseRequest(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadReleaseRequest
+    path: ../EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+    startLine: 70
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: public static Message<ReleaseRequest> ReadReleaseRequest(NetworkBinaryReader dr)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Network.Readers.NetworkBinaryReader
+    return:
+      type: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.ReleaseRequest}
+    content.vb: Public Shared Function ReadReleaseRequest(dr As NetworkBinaryReader) As Message(Of ReleaseRequest)
+  overload: EvilDICOM.Network.Readers.PDUReader.ReadReleaseRequest*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadReleaseResponse(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  commentId: M:EvilDICOM.Network.Readers.PDUReader.ReadReleaseResponse(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  id: ReadReleaseResponse(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  parent: EvilDICOM.Network.Readers.PDUReader
+  langs:
+  - csharp
+  - vb
+  name: ReadReleaseResponse(NetworkBinaryReader)
+  nameWithType: PDUReader.ReadReleaseResponse(NetworkBinaryReader)
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadReleaseResponse(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadReleaseResponse
+    path: ../EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+    startLine: 81
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: public static Message<ReleaseResponse> ReadReleaseResponse(NetworkBinaryReader dr)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Network.Readers.NetworkBinaryReader
+    return:
+      type: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.ReleaseResponse}
+    content.vb: Public Shared Function ReadReleaseResponse(dr As NetworkBinaryReader) As Message(Of ReleaseResponse)
+  overload: EvilDICOM.Network.Readers.PDUReader.ReadReleaseResponse*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadAssociationAccept(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  commentId: M:EvilDICOM.Network.Readers.PDUReader.ReadAssociationAccept(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  id: ReadAssociationAccept(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  parent: EvilDICOM.Network.Readers.PDUReader
+  langs:
+  - csharp
+  - vb
+  name: ReadAssociationAccept(NetworkBinaryReader)
+  nameWithType: PDUReader.ReadAssociationAccept(NetworkBinaryReader)
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadAssociationAccept(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadAssociationAccept
+    path: ../EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+    startLine: 92
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: public static Message<Accept> ReadAssociationAccept(NetworkBinaryReader dr)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Network.Readers.NetworkBinaryReader
+    return:
+      type: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.Accept}
+    content.vb: Public Shared Function ReadAssociationAccept(dr As NetworkBinaryReader) As Message(Of Accept)
+  overload: EvilDICOM.Network.Readers.PDUReader.ReadAssociationAccept*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadAssociationReject(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  commentId: M:EvilDICOM.Network.Readers.PDUReader.ReadAssociationReject(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  id: ReadAssociationReject(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  parent: EvilDICOM.Network.Readers.PDUReader
+  langs:
+  - csharp
+  - vb
+  name: ReadAssociationReject(NetworkBinaryReader)
+  nameWithType: PDUReader.ReadAssociationReject(NetworkBinaryReader)
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadAssociationReject(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadAssociationReject
+    path: ../EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+    startLine: 121
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: public static Message<Reject> ReadAssociationReject(NetworkBinaryReader dr)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Network.Readers.NetworkBinaryReader
+    return:
+      type: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.Reject}
+    content.vb: Public Shared Function ReadAssociationReject(dr As NetworkBinaryReader) As Message(Of Reject)
+  overload: EvilDICOM.Network.Readers.PDUReader.ReadAssociationReject*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadAssociationRequest(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  commentId: M:EvilDICOM.Network.Readers.PDUReader.ReadAssociationRequest(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  id: ReadAssociationRequest(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  parent: EvilDICOM.Network.Readers.PDUReader
+  langs:
+  - csharp
+  - vb
+  name: ReadAssociationRequest(NetworkBinaryReader)
+  nameWithType: PDUReader.ReadAssociationRequest(NetworkBinaryReader)
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadAssociationRequest(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadAssociationRequest
+    path: ../EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+    startLine: 133
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: public static Message<Request> ReadAssociationRequest(NetworkBinaryReader dr)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Network.Readers.NetworkBinaryReader
+    return:
+      type: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.Request}
+    content.vb: Public Shared Function ReadAssociationRequest(dr As NetworkBinaryReader) As Message(Of Request)
+  overload: EvilDICOM.Network.Readers.PDUReader.ReadAssociationRequest*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadPDFData(EvilDICOM.Network.Readers.NetworkBinaryReader,System.Boolean,System.Int32)
+  commentId: M:EvilDICOM.Network.Readers.PDUReader.ReadPDFData(EvilDICOM.Network.Readers.NetworkBinaryReader,System.Boolean,System.Int32)
+  id: ReadPDFData(EvilDICOM.Network.Readers.NetworkBinaryReader,System.Boolean,System.Int32)
+  parent: EvilDICOM.Network.Readers.PDUReader
+  langs:
+  - csharp
+  - vb
+  name: ReadPDFData(NetworkBinaryReader, Boolean, Int32)
+  nameWithType: PDUReader.ReadPDFData(NetworkBinaryReader, Boolean, Int32)
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadPDFData(EvilDICOM.Network.Readers.NetworkBinaryReader, System.Boolean, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadPDFData
+    path: ../EvilDICOM/EvilDICOM/Network/Readers/PDUReader.cs
+    startLine: 157
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: public static Message<PDataTF> ReadPDFData(NetworkBinaryReader dr, bool firstByteRead = false, int i = 0)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Network.Readers.NetworkBinaryReader
+    - id: firstByteRead
+      type: System.Boolean
+    - id: i
+      type: System.Int32
+    return:
+      type: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.PDataTF}
+    content.vb: Public Shared Function ReadPDFData(dr As NetworkBinaryReader, firstByteRead As Boolean = False, i As Integer = 0) As Message(Of PDataTF)
+  overload: EvilDICOM.Network.Readers.PDUReader.ReadPDFData*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Network.Readers
+  commentId: N:EvilDICOM.Network.Readers
+  isExternal: false
+  name: EvilDICOM.Network.Readers
+  nameWithType: EvilDICOM.Network.Readers
+  fullName: EvilDICOM.Network.Readers
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.Readers.PDUReader.Read*
+  commentId: Overload:EvilDICOM.Network.Readers.PDUReader.Read
+  isExternal: false
+  name: Read
+  nameWithType: PDUReader.Read
+  fullName: EvilDICOM.Network.Readers.PDUReader.Read
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader
+  commentId: T:EvilDICOM.Network.Readers.NetworkBinaryReader
+  parent: EvilDICOM.Network.Readers
+  isExternal: false
+  name: NetworkBinaryReader
+  nameWithType: NetworkBinaryReader
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader
+- uid: EvilDICOM.Network.Interfaces.IMessage
+  commentId: T:EvilDICOM.Network.Interfaces.IMessage
+  parent: EvilDICOM.Network.Interfaces
+  isExternal: false
+  name: IMessage
+  nameWithType: IMessage
+  fullName: EvilDICOM.Network.Interfaces.IMessage
+- uid: EvilDICOM.Network.Interfaces
+  commentId: N:EvilDICOM.Network.Interfaces
+  isExternal: false
+  name: EvilDICOM.Network.Interfaces
+  nameWithType: EvilDICOM.Network.Interfaces
+  fullName: EvilDICOM.Network.Interfaces
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadAbort*
+  commentId: Overload:EvilDICOM.Network.Readers.PDUReader.ReadAbort
+  isExternal: false
+  name: ReadAbort
+  nameWithType: PDUReader.ReadAbort
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadAbort
+- uid: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.Associations.PDUs.Abort}
+  commentId: T:EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.Associations.PDUs.Abort}
+  parent: EvilDICOM.Network.Messaging
+  definition: EvilDICOM.Network.Messaging.Message`1
+  name: Message<Abort>
+  nameWithType: Message<Abort>
+  fullName: EvilDICOM.Network.Messaging.Message<EvilDICOM.Network.Associations.PDUs.Abort>
+  nameWithType.vb: Message(Of Abort)
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of EvilDICOM.Network.Associations.PDUs.Abort)
+  name.vb: Message(Of Abort)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.Associations.PDUs.Abort
+    name: Abort
+    nameWithType: Abort
+    fullName: EvilDICOM.Network.Associations.PDUs.Abort
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.Associations.PDUs.Abort
+    name: Abort
+    nameWithType: Abort
+    fullName: EvilDICOM.Network.Associations.PDUs.Abort
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Messaging.Message`1
+  commentId: T:EvilDICOM.Network.Messaging.Message`1
+  isExternal: false
+  name: Message<T>
+  nameWithType: Message<T>
+  fullName: EvilDICOM.Network.Messaging.Message<T>
+  nameWithType.vb: Message(Of T)
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of T)
+  name.vb: Message(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Messaging
+  commentId: N:EvilDICOM.Network.Messaging
+  isExternal: false
+  name: EvilDICOM.Network.Messaging
+  nameWithType: EvilDICOM.Network.Messaging
+  fullName: EvilDICOM.Network.Messaging
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadReleaseRequest*
+  commentId: Overload:EvilDICOM.Network.Readers.PDUReader.ReadReleaseRequest
+  isExternal: false
+  name: ReadReleaseRequest
+  nameWithType: PDUReader.ReadReleaseRequest
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadReleaseRequest
+- uid: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.ReleaseRequest}
+  commentId: T:EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.ReleaseRequest}
+  parent: EvilDICOM.Network.Messaging
+  definition: EvilDICOM.Network.Messaging.Message`1
+  name: Message<ReleaseRequest>
+  nameWithType: Message<ReleaseRequest>
+  fullName: EvilDICOM.Network.Messaging.Message<EvilDICOM.Network.PDUs.ReleaseRequest>
+  nameWithType.vb: Message(Of ReleaseRequest)
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of EvilDICOM.Network.PDUs.ReleaseRequest)
+  name.vb: Message(Of ReleaseRequest)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.ReleaseRequest
+    name: ReleaseRequest
+    nameWithType: ReleaseRequest
+    fullName: EvilDICOM.Network.PDUs.ReleaseRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.ReleaseRequest
+    name: ReleaseRequest
+    nameWithType: ReleaseRequest
+    fullName: EvilDICOM.Network.PDUs.ReleaseRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadReleaseResponse*
+  commentId: Overload:EvilDICOM.Network.Readers.PDUReader.ReadReleaseResponse
+  isExternal: false
+  name: ReadReleaseResponse
+  nameWithType: PDUReader.ReadReleaseResponse
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadReleaseResponse
+- uid: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.ReleaseResponse}
+  commentId: T:EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.ReleaseResponse}
+  parent: EvilDICOM.Network.Messaging
+  definition: EvilDICOM.Network.Messaging.Message`1
+  name: Message<ReleaseResponse>
+  nameWithType: Message<ReleaseResponse>
+  fullName: EvilDICOM.Network.Messaging.Message<EvilDICOM.Network.PDUs.ReleaseResponse>
+  nameWithType.vb: Message(Of ReleaseResponse)
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of EvilDICOM.Network.PDUs.ReleaseResponse)
+  name.vb: Message(Of ReleaseResponse)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.ReleaseResponse
+    name: ReleaseResponse
+    nameWithType: ReleaseResponse
+    fullName: EvilDICOM.Network.PDUs.ReleaseResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.ReleaseResponse
+    name: ReleaseResponse
+    nameWithType: ReleaseResponse
+    fullName: EvilDICOM.Network.PDUs.ReleaseResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadAssociationAccept*
+  commentId: Overload:EvilDICOM.Network.Readers.PDUReader.ReadAssociationAccept
+  isExternal: false
+  name: ReadAssociationAccept
+  nameWithType: PDUReader.ReadAssociationAccept
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadAssociationAccept
+- uid: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.Accept}
+  commentId: T:EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.Accept}
+  parent: EvilDICOM.Network.Messaging
+  definition: EvilDICOM.Network.Messaging.Message`1
+  name: Message<Accept>
+  nameWithType: Message<Accept>
+  fullName: EvilDICOM.Network.Messaging.Message<EvilDICOM.Network.PDUs.Accept>
+  nameWithType.vb: Message(Of Accept)
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of EvilDICOM.Network.PDUs.Accept)
+  name.vb: Message(Of Accept)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.Accept
+    name: Accept
+    nameWithType: Accept
+    fullName: EvilDICOM.Network.PDUs.Accept
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.Accept
+    name: Accept
+    nameWithType: Accept
+    fullName: EvilDICOM.Network.PDUs.Accept
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadAssociationReject*
+  commentId: Overload:EvilDICOM.Network.Readers.PDUReader.ReadAssociationReject
+  isExternal: false
+  name: ReadAssociationReject
+  nameWithType: PDUReader.ReadAssociationReject
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadAssociationReject
+- uid: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.Reject}
+  commentId: T:EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.Reject}
+  parent: EvilDICOM.Network.Messaging
+  definition: EvilDICOM.Network.Messaging.Message`1
+  name: Message<Reject>
+  nameWithType: Message<Reject>
+  fullName: EvilDICOM.Network.Messaging.Message<EvilDICOM.Network.PDUs.Reject>
+  nameWithType.vb: Message(Of Reject)
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of EvilDICOM.Network.PDUs.Reject)
+  name.vb: Message(Of Reject)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.Reject
+    name: Reject
+    nameWithType: Reject
+    fullName: EvilDICOM.Network.PDUs.Reject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.Reject
+    name: Reject
+    nameWithType: Reject
+    fullName: EvilDICOM.Network.PDUs.Reject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadAssociationRequest*
+  commentId: Overload:EvilDICOM.Network.Readers.PDUReader.ReadAssociationRequest
+  isExternal: false
+  name: ReadAssociationRequest
+  nameWithType: PDUReader.ReadAssociationRequest
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadAssociationRequest
+- uid: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.Request}
+  commentId: T:EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.Request}
+  parent: EvilDICOM.Network.Messaging
+  definition: EvilDICOM.Network.Messaging.Message`1
+  name: Message<Request>
+  nameWithType: Message<Request>
+  fullName: EvilDICOM.Network.Messaging.Message<EvilDICOM.Network.PDUs.Request>
+  nameWithType.vb: Message(Of Request)
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of EvilDICOM.Network.PDUs.Request)
+  name.vb: Message(Of Request)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.Request
+    name: Request
+    nameWithType: Request
+    fullName: EvilDICOM.Network.PDUs.Request
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.Request
+    name: Request
+    nameWithType: Request
+    fullName: EvilDICOM.Network.PDUs.Request
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Readers.PDUReader.ReadPDFData*
+  commentId: Overload:EvilDICOM.Network.Readers.PDUReader.ReadPDFData
+  isExternal: false
+  name: ReadPDFData
+  nameWithType: PDUReader.ReadPDFData
+  fullName: EvilDICOM.Network.Readers.PDUReader.ReadPDFData
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.PDataTF}
+  commentId: T:EvilDICOM.Network.Messaging.Message{EvilDICOM.Network.PDUs.PDataTF}
+  parent: EvilDICOM.Network.Messaging
+  definition: EvilDICOM.Network.Messaging.Message`1
+  name: Message<PDataTF>
+  nameWithType: Message<PDataTF>
+  fullName: EvilDICOM.Network.Messaging.Message<EvilDICOM.Network.PDUs.PDataTF>
+  nameWithType.vb: Message(Of PDataTF)
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of EvilDICOM.Network.PDUs.PDataTF)
+  name.vb: Message(Of PDataTF)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.PDataTF
+    name: PDataTF
+    nameWithType: PDataTF
+    fullName: EvilDICOM.Network.PDUs.PDataTF
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Messaging.Message`1
+    name: Message
+    nameWithType: Message
+    fullName: EvilDICOM.Network.Messaging.Message
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.PDataTF
+    name: PDataTF
+    nameWithType: PDataTF
+    fullName: EvilDICOM.Network.PDUs.PDataTF
+  - name: )
+    nameWithType: )
+    fullName: )

@@ -1,0 +1,206 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Reading.DataReader
+  commentId: T:EvilDICOM.Core.IO.Reading.DataReader
+  id: DataReader
+  parent: EvilDICOM.Core.IO.Reading
+  children:
+  - EvilDICOM.Core.IO.Reading.DataReader.ReadBigEndian(System.Int32,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.DataReader.ReadLittleEndian(System.Int32,EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  langs:
+  - csharp
+  - vb
+  name: DataReader
+  nameWithType: DataReader
+  fullName: EvilDICOM.Core.IO.Reading.DataReader
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DataReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DataReader
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DataReader.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the byte data from a DICOM element\n"
+  example: []
+  syntax:
+    content: 'public class DataReader : object'
+    content.vb: >-
+      Public Class DataReader
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Reading.DataReader.ReadLittleEndian(System.Int32,EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  commentId: M:EvilDICOM.Core.IO.Reading.DataReader.ReadLittleEndian(System.Int32,EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  id: ReadLittleEndian(System.Int32,EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  parent: EvilDICOM.Core.IO.Reading.DataReader
+  langs:
+  - csharp
+  - vb
+  name: ReadLittleEndian(Int32, DICOMBinaryReader, TransferSyntax)
+  nameWithType: DataReader.ReadLittleEndian(Int32, DICOMBinaryReader, TransferSyntax)
+  fullName: EvilDICOM.Core.IO.Reading.DataReader.ReadLittleEndian(System.Int32, EvilDICOM.Core.IO.Reading.DICOMBinaryReader, EvilDICOM.Core.Enums.TransferSyntax)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DataReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadLittleEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DataReader.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the data from an element encoded in little endian byte order\n"
+  example: []
+  syntax:
+    content: public static byte[] ReadLittleEndian(int lengthToRead, DICOMBinaryReader dr, TransferSyntax syntax)
+    parameters:
+    - id: lengthToRead
+      type: System.Int32
+      description: the length of the data
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary reader which is reading the DICOM object
+    - id: syntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+    return:
+      type: System.Byte[]
+      description: the data from this element
+    content.vb: Public Shared Function ReadLittleEndian(lengthToRead As Integer, dr As DICOMBinaryReader, syntax As TransferSyntax) As Byte()
+  overload: EvilDICOM.Core.IO.Reading.DataReader.ReadLittleEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.DataReader.ReadBigEndian(System.Int32,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  commentId: M:EvilDICOM.Core.IO.Reading.DataReader.ReadBigEndian(System.Int32,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: ReadBigEndian(System.Int32,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.DataReader
+  langs:
+  - csharp
+  - vb
+  name: ReadBigEndian(Int32, DICOMBinaryReader)
+  nameWithType: DataReader.ReadBigEndian(Int32, DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.DataReader.ReadBigEndian(System.Int32, EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DataReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadBigEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DataReader.cs
+    startLine: 33
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the data from an element encoded in big endian byte order\n"
+  example: []
+  syntax:
+    content: public static byte[] ReadBigEndian(int lengthToRead, DICOMBinaryReader dr)
+    parameters:
+    - id: lengthToRead
+      type: System.Int32
+      description: the length of the data
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary reader which is reading the DICOM object
+    return:
+      type: System.Byte[]
+      description: the data from this element
+    content.vb: Public Shared Function ReadBigEndian(lengthToRead As Integer, dr As DICOMBinaryReader) As Byte()
+  overload: EvilDICOM.Core.IO.Reading.DataReader.ReadBigEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.IO.Reading
+  commentId: N:EvilDICOM.Core.IO.Reading
+  isExternal: false
+  name: EvilDICOM.Core.IO.Reading
+  nameWithType: EvilDICOM.Core.IO.Reading
+  fullName: EvilDICOM.Core.IO.Reading
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.IO.Reading.DataReader.ReadLittleEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DataReader.ReadLittleEndian
+  isExternal: false
+  name: ReadLittleEndian
+  nameWithType: DataReader.ReadLittleEndian
+  fullName: EvilDICOM.Core.IO.Reading.DataReader.ReadLittleEndian
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  commentId: T:EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  parent: EvilDICOM.Core.IO.Reading
+  isExternal: false
+  name: DICOMBinaryReader
+  nameWithType: DICOMBinaryReader
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  commentId: T:EvilDICOM.Core.Enums.TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: TransferSyntax
+  nameWithType: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.IO.Reading.DataReader.ReadBigEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DataReader.ReadBigEndian
+  isExternal: false
+  name: ReadBigEndian
+  nameWithType: DataReader.ReadBigEndian
+  fullName: EvilDICOM.Core.IO.Reading.DataReader.ReadBigEndian

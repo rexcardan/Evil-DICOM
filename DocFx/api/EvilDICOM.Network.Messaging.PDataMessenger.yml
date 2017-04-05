@@ -1,0 +1,382 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Messaging.PDataMessenger
+  commentId: T:EvilDICOM.Network.Messaging.PDataMessenger
+  id: PDataMessenger
+  parent: EvilDICOM.Network.Messaging
+  children:
+  - EvilDICOM.Network.Messaging.PDataMessenger.GetChunks(EvilDICOM.Core.DICOMObject,System.Int32,EvilDICOM.Network.PDUs.Items.PresentationContext)
+  - EvilDICOM.Network.Messaging.PDataMessenger.GetPDataTFs(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.PDUs.Items.PresentationContext,System.Int32)
+  - EvilDICOM.Network.Messaging.PDataMessenger.Send(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association,EvilDICOM.Network.PDUs.Items.PresentationContext)
+  langs:
+  - csharp
+  - vb
+  name: PDataMessenger
+  nameWithType: PDataMessenger
+  fullName: EvilDICOM.Network.Messaging.PDataMessenger
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/PDataMessenger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PDataMessenger
+    path: ../EvilDICOM/EvilDICOM/Network/Messaging/PDataMessenger.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: 'public class PDataMessenger : object'
+    content.vb: >-
+      Public Class PDataMessenger
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Messaging.PDataMessenger.Send(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association,EvilDICOM.Network.PDUs.Items.PresentationContext)
+  commentId: M:EvilDICOM.Network.Messaging.PDataMessenger.Send(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association,EvilDICOM.Network.PDUs.Items.PresentationContext)
+  id: Send(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association,EvilDICOM.Network.PDUs.Items.PresentationContext)
+  parent: EvilDICOM.Network.Messaging.PDataMessenger
+  langs:
+  - csharp
+  - vb
+  name: Send(AbstractDIMSEBase, Association, PresentationContext)
+  nameWithType: PDataMessenger.Send(AbstractDIMSEBase, Association, PresentationContext)
+  fullName: EvilDICOM.Network.Messaging.PDataMessenger.Send(EvilDICOM.Network.DIMSE.AbstractDIMSEBase, EvilDICOM.Network.Association, EvilDICOM.Network.PDUs.Items.PresentationContext)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/PDataMessenger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Send
+    path: ../EvilDICOM/EvilDICOM/Network/Messaging/PDataMessenger.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: public static void Send(AbstractDIMSEBase dimse, Association asc, PresentationContext pContext = null)
+    parameters:
+    - id: dimse
+      type: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+    - id: asc
+      type: EvilDICOM.Network.Association
+    - id: pContext
+      type: EvilDICOM.Network.PDUs.Items.PresentationContext
+    content.vb: Public Shared Sub Send(dimse As AbstractDIMSEBase, asc As Association, pContext As PresentationContext = Nothing)
+  overload: EvilDICOM.Network.Messaging.PDataMessenger.Send*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Messaging.PDataMessenger.GetPDataTFs(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.PDUs.Items.PresentationContext,System.Int32)
+  commentId: M:EvilDICOM.Network.Messaging.PDataMessenger.GetPDataTFs(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.PDUs.Items.PresentationContext,System.Int32)
+  id: GetPDataTFs(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.PDUs.Items.PresentationContext,System.Int32)
+  parent: EvilDICOM.Network.Messaging.PDataMessenger
+  langs:
+  - csharp
+  - vb
+  name: GetPDataTFs(AbstractDIMSEBase, PresentationContext, Int32)
+  nameWithType: PDataMessenger.GetPDataTFs(AbstractDIMSEBase, PresentationContext, Int32)
+  fullName: EvilDICOM.Network.Messaging.PDataMessenger.GetPDataTFs(EvilDICOM.Network.DIMSE.AbstractDIMSEBase, EvilDICOM.Network.PDUs.Items.PresentationContext, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/PDataMessenger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetPDataTFs
+    path: ../EvilDICOM/EvilDICOM/Network/Messaging/PDataMessenger.cs
+    startLine: 43
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: public static List<PDataTF> GetPDataTFs(AbstractDIMSEBase dimse, PresentationContext pContext, int maxPDULength = 16384)
+    parameters:
+    - id: dimse
+      type: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+    - id: pContext
+      type: EvilDICOM.Network.PDUs.Items.PresentationContext
+    - id: maxPDULength
+      type: System.Int32
+    return:
+      type: List{EvilDICOM.Network.PDUs.PDataTF}
+    content.vb: Public Shared Function GetPDataTFs(dimse As AbstractDIMSEBase, pContext As PresentationContext, maxPDULength As Integer = 16384) As List(Of PDataTF)
+  overload: EvilDICOM.Network.Messaging.PDataMessenger.GetPDataTFs*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Messaging.PDataMessenger.GetChunks(EvilDICOM.Core.DICOMObject,System.Int32,EvilDICOM.Network.PDUs.Items.PresentationContext)
+  commentId: M:EvilDICOM.Network.Messaging.PDataMessenger.GetChunks(EvilDICOM.Core.DICOMObject,System.Int32,EvilDICOM.Network.PDUs.Items.PresentationContext)
+  id: GetChunks(EvilDICOM.Core.DICOMObject,System.Int32,EvilDICOM.Network.PDUs.Items.PresentationContext)
+  parent: EvilDICOM.Network.Messaging.PDataMessenger
+  langs:
+  - csharp
+  - vb
+  name: GetChunks(DICOMObject, Int32, PresentationContext)
+  nameWithType: PDataMessenger.GetChunks(DICOMObject, Int32, PresentationContext)
+  fullName: EvilDICOM.Network.Messaging.PDataMessenger.GetChunks(EvilDICOM.Core.DICOMObject, System.Int32, EvilDICOM.Network.PDUs.Items.PresentationContext)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/PDataMessenger.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetChunks
+    path: ../EvilDICOM/EvilDICOM/Network/Messaging/PDataMessenger.cs
+    startLine: 69
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  summary: "\nSplits the DICOM object into chunks that are within the max PDU size\n"
+  example: []
+  syntax:
+    content: public static List<byte[]> GetChunks(DICOMObject dicomObject, int maxPduSize, PresentationContext pc)
+    parameters:
+    - id: dicomObject
+      type: EvilDICOM.Core.DICOMObject
+      description: the DICOM objec to be split
+    - id: maxPduSize
+      type: System.Int32
+      description: the max length (in bytes) for a PDU
+    - id: pc
+      type: EvilDICOM.Network.PDUs.Items.PresentationContext
+    return:
+      type: List{System.Byte[]}
+      description: ''
+    content.vb: Public Shared Function GetChunks(dicomObject As DICOMObject, maxPduSize As Integer, pc As PresentationContext) As List(Of Byte())
+  overload: EvilDICOM.Network.Messaging.PDataMessenger.GetChunks*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Network.Messaging
+  commentId: N:EvilDICOM.Network.Messaging
+  isExternal: false
+  name: EvilDICOM.Network.Messaging
+  nameWithType: EvilDICOM.Network.Messaging
+  fullName: EvilDICOM.Network.Messaging
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.Messaging.PDataMessenger.Send*
+  commentId: Overload:EvilDICOM.Network.Messaging.PDataMessenger.Send
+  isExternal: false
+  name: Send
+  nameWithType: PDataMessenger.Send
+  fullName: EvilDICOM.Network.Messaging.PDataMessenger.Send
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  commentId: T:EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  parent: EvilDICOM.Network.DIMSE
+  isExternal: false
+  name: AbstractDIMSEBase
+  nameWithType: AbstractDIMSEBase
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+- uid: EvilDICOM.Network.Association
+  commentId: T:EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Association
+  nameWithType: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext
+  commentId: T:EvilDICOM.Network.PDUs.Items.PresentationContext
+  parent: EvilDICOM.Network.PDUs.Items
+  isExternal: false
+  name: PresentationContext
+  nameWithType: PresentationContext
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext
+- uid: EvilDICOM.Network.DIMSE
+  commentId: N:EvilDICOM.Network.DIMSE
+  isExternal: false
+  name: EvilDICOM.Network.DIMSE
+  nameWithType: EvilDICOM.Network.DIMSE
+  fullName: EvilDICOM.Network.DIMSE
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+- uid: EvilDICOM.Network.PDUs.Items
+  commentId: N:EvilDICOM.Network.PDUs.Items
+  isExternal: false
+  name: EvilDICOM.Network.PDUs.Items
+  nameWithType: EvilDICOM.Network.PDUs.Items
+  fullName: EvilDICOM.Network.PDUs.Items
+- uid: EvilDICOM.Network.Messaging.PDataMessenger.GetPDataTFs*
+  commentId: Overload:EvilDICOM.Network.Messaging.PDataMessenger.GetPDataTFs
+  isExternal: false
+  name: GetPDataTFs
+  nameWithType: PDataMessenger.GetPDataTFs
+  fullName: EvilDICOM.Network.Messaging.PDataMessenger.GetPDataTFs
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: List{EvilDICOM.Network.PDUs.PDataTF}
+  commentId: '!:List{EvilDICOM.Network.PDUs.PDataTF}'
+  definition: List`1
+  name: List<PDataTF>
+  nameWithType: List<PDataTF>
+  fullName: List<EvilDICOM.Network.PDUs.PDataTF>
+  nameWithType.vb: List(Of PDataTF)
+  fullName.vb: List(Of EvilDICOM.Network.PDUs.PDataTF)
+  name.vb: List(Of PDataTF)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.PDataTF
+    name: PDataTF
+    nameWithType: PDataTF
+    fullName: EvilDICOM.Network.PDUs.PDataTF
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.PDataTF
+    name: PDataTF
+    nameWithType: PDataTF
+    fullName: EvilDICOM.Network.PDUs.PDataTF
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Messaging.PDataMessenger.GetChunks*
+  commentId: Overload:EvilDICOM.Network.Messaging.PDataMessenger.GetChunks
+  isExternal: false
+  name: GetChunks
+  nameWithType: PDataMessenger.GetChunks
+  fullName: EvilDICOM.Network.Messaging.PDataMessenger.GetChunks
+- uid: EvilDICOM.Core.DICOMObject
+  commentId: T:EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMObject
+  nameWithType: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: List{System.Byte[]}
+  commentId: '!:List{System.Byte[]}'
+  definition: List`1
+  name: List<Byte[]>
+  nameWithType: List<Byte[]>
+  fullName: List<System.Byte[]>
+  nameWithType.vb: List(Of Byte())
+  fullName.vb: List(Of System.Byte())
+  name.vb: List(Of Byte())
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core

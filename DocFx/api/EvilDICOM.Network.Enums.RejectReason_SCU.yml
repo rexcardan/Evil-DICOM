@@ -1,0 +1,388 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Enums.RejectReason_SCU
+  commentId: T:EvilDICOM.Network.Enums.RejectReason_SCU
+  id: RejectReason_SCU
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.RejectReason_SCU.APPLICATION_CONTEXT_NAME_NOT_SUPPORTED
+  - EvilDICOM.Network.Enums.RejectReason_SCU.CALLED_AE_TITLE_NOT_RECOGNIZED
+  - EvilDICOM.Network.Enums.RejectReason_SCU.CALLING_AE_TITLE_NOT_RECOGNIZED
+  - EvilDICOM.Network.Enums.RejectReason_SCU.NO_REASON_GIVEN
+  - EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_10
+  - EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_4
+  - EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_5
+  - EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_6
+  - EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_8
+  - EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_9
+  langs:
+  - csharp
+  - vb
+  name: RejectReason_SCU
+  nameWithType: RejectReason_SCU
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCU
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RejectReason_SCU
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: 'public enum RejectReason_SCU : byte'
+    content.vb: Public Enum RejectReason_SCU As Byte
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Network.Enums.RejectReason_SCU.NO_REASON_GIVEN
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCU.NO_REASON_GIVEN
+  id: NO_REASON_GIVEN
+  parent: EvilDICOM.Network.Enums.RejectReason_SCU
+  langs:
+  - csharp
+  - vb
+  name: NO_REASON_GIVEN
+  nameWithType: RejectReason_SCU.NO_REASON_GIVEN
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCU.NO_REASON_GIVEN
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: NO_REASON_GIVEN
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: NO_REASON_GIVEN = null
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCU
+    content.vb: NO_REASON_GIVEN = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCU.APPLICATION_CONTEXT_NAME_NOT_SUPPORTED
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCU.APPLICATION_CONTEXT_NAME_NOT_SUPPORTED
+  id: APPLICATION_CONTEXT_NAME_NOT_SUPPORTED
+  parent: EvilDICOM.Network.Enums.RejectReason_SCU
+  langs:
+  - csharp
+  - vb
+  name: APPLICATION_CONTEXT_NAME_NOT_SUPPORTED
+  nameWithType: RejectReason_SCU.APPLICATION_CONTEXT_NAME_NOT_SUPPORTED
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCU.APPLICATION_CONTEXT_NAME_NOT_SUPPORTED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: APPLICATION_CONTEXT_NAME_NOT_SUPPORTED
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: APPLICATION_CONTEXT_NAME_NOT_SUPPORTED = null
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCU
+    content.vb: APPLICATION_CONTEXT_NAME_NOT_SUPPORTED = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCU.CALLING_AE_TITLE_NOT_RECOGNIZED
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCU.CALLING_AE_TITLE_NOT_RECOGNIZED
+  id: CALLING_AE_TITLE_NOT_RECOGNIZED
+  parent: EvilDICOM.Network.Enums.RejectReason_SCU
+  langs:
+  - csharp
+  - vb
+  name: CALLING_AE_TITLE_NOT_RECOGNIZED
+  nameWithType: RejectReason_SCU.CALLING_AE_TITLE_NOT_RECOGNIZED
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCU.CALLING_AE_TITLE_NOT_RECOGNIZED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CALLING_AE_TITLE_NOT_RECOGNIZED
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: CALLING_AE_TITLE_NOT_RECOGNIZED = null
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCU
+    content.vb: CALLING_AE_TITLE_NOT_RECOGNIZED = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_4
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_4
+  id: RESERVED_4
+  parent: EvilDICOM.Network.Enums.RejectReason_SCU
+  langs:
+  - csharp
+  - vb
+  name: RESERVED_4
+  nameWithType: RejectReason_SCU.RESERVED_4
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_4
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RESERVED_4
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED_4 = null
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCU
+    content.vb: RESERVED_4 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_5
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_5
+  id: RESERVED_5
+  parent: EvilDICOM.Network.Enums.RejectReason_SCU
+  langs:
+  - csharp
+  - vb
+  name: RESERVED_5
+  nameWithType: RejectReason_SCU.RESERVED_5
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_5
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RESERVED_5
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED_5 = null
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCU
+    content.vb: RESERVED_5 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_6
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_6
+  id: RESERVED_6
+  parent: EvilDICOM.Network.Enums.RejectReason_SCU
+  langs:
+  - csharp
+  - vb
+  name: RESERVED_6
+  nameWithType: RejectReason_SCU.RESERVED_6
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_6
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RESERVED_6
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED_6 = null
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCU
+    content.vb: RESERVED_6 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCU.CALLED_AE_TITLE_NOT_RECOGNIZED
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCU.CALLED_AE_TITLE_NOT_RECOGNIZED
+  id: CALLED_AE_TITLE_NOT_RECOGNIZED
+  parent: EvilDICOM.Network.Enums.RejectReason_SCU
+  langs:
+  - csharp
+  - vb
+  name: CALLED_AE_TITLE_NOT_RECOGNIZED
+  nameWithType: RejectReason_SCU.CALLED_AE_TITLE_NOT_RECOGNIZED
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCU.CALLED_AE_TITLE_NOT_RECOGNIZED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CALLED_AE_TITLE_NOT_RECOGNIZED
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: CALLED_AE_TITLE_NOT_RECOGNIZED = null
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCU
+    content.vb: CALLED_AE_TITLE_NOT_RECOGNIZED = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_8
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_8
+  id: RESERVED_8
+  parent: EvilDICOM.Network.Enums.RejectReason_SCU
+  langs:
+  - csharp
+  - vb
+  name: RESERVED_8
+  nameWithType: RejectReason_SCU.RESERVED_8
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_8
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RESERVED_8
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED_8 = null
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCU
+    content.vb: RESERVED_8 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_9
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_9
+  id: RESERVED_9
+  parent: EvilDICOM.Network.Enums.RejectReason_SCU
+  langs:
+  - csharp
+  - vb
+  name: RESERVED_9
+  nameWithType: RejectReason_SCU.RESERVED_9
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_9
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RESERVED_9
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED_9 = null
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCU
+    content.vb: RESERVED_9 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_10
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_10
+  id: RESERVED_10
+  parent: EvilDICOM.Network.Enums.RejectReason_SCU
+  langs:
+  - csharp
+  - vb
+  name: RESERVED_10
+  nameWithType: RejectReason_SCU.RESERVED_10
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCU.RESERVED_10
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RESERVED_10
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED_10 = null
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCU
+    content.vb: RESERVED_10 = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.Enums.RejectReason_SCU
+  commentId: T:EvilDICOM.Network.Enums.RejectReason_SCU
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: RejectReason_SCU
+  nameWithType: RejectReason_SCU
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCU

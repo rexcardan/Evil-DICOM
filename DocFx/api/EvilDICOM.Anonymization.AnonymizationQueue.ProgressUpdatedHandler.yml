@@ -1,0 +1,49 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Anonymization.AnonymizationQueue.ProgressUpdatedHandler
+  commentId: T:EvilDICOM.Anonymization.AnonymizationQueue.ProgressUpdatedHandler
+  id: AnonymizationQueue.ProgressUpdatedHandler
+  parent: EvilDICOM.Anonymization
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: AnonymizationQueue.ProgressUpdatedHandler
+  nameWithType: AnonymizationQueue.ProgressUpdatedHandler
+  fullName: EvilDICOM.Anonymization.AnonymizationQueue.ProgressUpdatedHandler
+  type: Delegate
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/AnonymizationQueue.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ProgressUpdatedHandler
+    path: ../EvilDICOM/EvilDICOM/Anonymization/AnonymizationQueue.cs
+    startLine: 88
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization
+  syntax:
+    content: public delegate void ProgressUpdatedHandler(double progress);
+    parameters:
+    - id: progress
+      type: System.Double
+    content.vb: Public Delegate Sub ProgressUpdatedHandler(progress As Double)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: EvilDICOM.Anonymization
+  commentId: N:EvilDICOM.Anonymization
+  isExternal: false
+  name: EvilDICOM.Anonymization
+  nameWithType: EvilDICOM.Anonymization
+  fullName: EvilDICOM.Anonymization
+- uid: System.Double
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double

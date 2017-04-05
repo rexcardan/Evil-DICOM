@@ -1,0 +1,89 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Helpers.ExceptionHelper
+  commentId: T:EvilDICOM.Core.Helpers.ExceptionHelper
+  id: ExceptionHelper
+  parent: EvilDICOM.Core.Helpers
+  children:
+  - EvilDICOM.Core.Helpers.ExceptionHelper.VRReadException
+  langs:
+  - csharp
+  - vb
+  name: ExceptionHelper
+  nameWithType: ExceptionHelper
+  fullName: EvilDICOM.Core.Helpers.ExceptionHelper
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/ExceptionHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ExceptionHelper
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/ExceptionHelper.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: 'public class ExceptionHelper : object'
+    content.vb: >-
+      Public Class ExceptionHelper
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Helpers.ExceptionHelper.VRReadException
+  commentId: F:EvilDICOM.Core.Helpers.ExceptionHelper.VRReadException
+  id: VRReadException
+  parent: EvilDICOM.Core.Helpers.ExceptionHelper
+  langs:
+  - csharp
+  - vb
+  name: VRReadException
+  nameWithType: ExceptionHelper.VRReadException
+  fullName: EvilDICOM.Core.Helpers.ExceptionHelper.VRReadException
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/ExceptionHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: VRReadException
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/ExceptionHelper.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string VRReadException
+    return:
+      type: System.String
+    content.vb: Public Shared VRReadException As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  isExternal: false
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

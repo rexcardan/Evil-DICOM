@@ -1,0 +1,171 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  commentId: T:EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  id: DICOMObjectExtensions
+  parent: EvilDICOM.Core.Extensions
+  children:
+  - EvilDICOM.Core.Extensions.DICOMObjectExtensions.LoadFromXML(EvilDICOM.Core.DICOMObject,System.String)
+  - EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString(EvilDICOM.Core.DICOMObject)
+  langs:
+  - csharp
+  - vb
+  name: DICOMObjectExtensions
+  nameWithType: DICOMObjectExtensions
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOMObjectExtensions
+    path: ../EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  syntax:
+    content: 'public static class DICOMObjectExtensions : object'
+    content.vb: >-
+      Public Module DICOMObjectExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString(EvilDICOM.Core.DICOMObject)
+  id: ToXMLString(EvilDICOM.Core.DICOMObject)
+  isExtensionMethod: true
+  parent: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToXMLString(DICOMObject)
+  nameWithType: DICOMObjectExtensions.ToXMLString(DICOMObject)
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString(EvilDICOM.Core.DICOMObject)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToXMLString
+    path: ../EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: "\nConverts a DICOM object to XML format\n"
+  example: []
+  syntax:
+    content: public static string ToXMLString(this DICOMObject dcm)
+    parameters:
+    - id: dcm
+      type: EvilDICOM.Core.DICOMObject
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToXMLString(dcm As DICOMObject) As String
+  overload: EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.LoadFromXML(EvilDICOM.Core.DICOMObject,System.String)
+  commentId: M:EvilDICOM.Core.Extensions.DICOMObjectExtensions.LoadFromXML(EvilDICOM.Core.DICOMObject,System.String)
+  id: LoadFromXML(EvilDICOM.Core.DICOMObject,System.String)
+  isExtensionMethod: true
+  parent: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: LoadFromXML(DICOMObject, String)
+  nameWithType: DICOMObjectExtensions.LoadFromXML(DICOMObject, String)
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.LoadFromXML(EvilDICOM.Core.DICOMObject, System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: LoadFromXML
+    path: ../EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+    startLine: 37
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: "\nConverts a XML string to a DICOM object\n"
+  example: []
+  syntax:
+    content: public static void LoadFromXML(this DICOMObject dcm, string xml)
+    parameters:
+    - id: dcm
+      type: EvilDICOM.Core.DICOMObject
+    - id: xml
+      type: System.String
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub LoadFromXML(dcm As DICOMObject, xml As String)
+  overload: EvilDICOM.Core.Extensions.DICOMObjectExtensions.LoadFromXML*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.Extensions
+  commentId: N:EvilDICOM.Core.Extensions
+  isExternal: false
+  name: EvilDICOM.Core.Extensions
+  nameWithType: EvilDICOM.Core.Extensions
+  fullName: EvilDICOM.Core.Extensions
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString*
+  commentId: Overload:EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString
+  isExternal: false
+  name: ToXMLString
+  nameWithType: DICOMObjectExtensions.ToXMLString
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString
+- uid: EvilDICOM.Core.DICOMObject
+  commentId: T:EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMObject
+  nameWithType: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.LoadFromXML*
+  commentId: Overload:EvilDICOM.Core.Extensions.DICOMObjectExtensions.LoadFromXML
+  isExternal: false
+  name: LoadFromXML
+  nameWithType: DICOMObjectExtensions.LoadFromXML
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.LoadFromXML

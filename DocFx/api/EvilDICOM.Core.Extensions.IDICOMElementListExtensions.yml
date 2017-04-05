@@ -1,0 +1,184 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Extensions.IDICOMElementListExtensions
+  commentId: T:EvilDICOM.Core.Extensions.IDICOMElementListExtensions
+  id: IDICOMElementListExtensions
+  parent: EvilDICOM.Core.Extensions
+  children:
+  - EvilDICOM.Core.Extensions.IDICOMElementListExtensions.SortByTagID(List{EvilDICOM.Core.Interfaces.IDICOMElement})
+  langs:
+  - csharp
+  - vb
+  name: IDICOMElementListExtensions
+  nameWithType: IDICOMElementListExtensions
+  fullName: EvilDICOM.Core.Extensions.IDICOMElementListExtensions
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/IDICOMElementListExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IDICOMElementListExtensions
+    path: ../EvilDICOM/EvilDICOM/Core/Extensions/IDICOMElementListExtensions.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: "\nAdds useful methods to a List of IDICOMElements\n"
+  example: []
+  syntax:
+    content: 'public static class IDICOMElementListExtensions : object'
+    content.vb: >-
+      Public Module IDICOMElementListExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: EvilDICOM.Core.Extensions.IDICOMElementListExtensions.SortByTagID(List{EvilDICOM.Core.Interfaces.IDICOMElement})
+  commentId: M:EvilDICOM.Core.Extensions.IDICOMElementListExtensions.SortByTagID(List{EvilDICOM.Core.Interfaces.IDICOMElement})
+  id: SortByTagID(List{EvilDICOM.Core.Interfaces.IDICOMElement})
+  isExtensionMethod: true
+  parent: EvilDICOM.Core.Extensions.IDICOMElementListExtensions
+  langs:
+  - csharp
+  - vb
+  name: SortByTagID(List<IDICOMElement>)
+  nameWithType: IDICOMElementListExtensions.SortByTagID(List<IDICOMElement>)
+  fullName: EvilDICOM.Core.Extensions.IDICOMElementListExtensions.SortByTagID(List<EvilDICOM.Core.Interfaces.IDICOMElement>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/IDICOMElementListExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SortByTagID
+    path: ../EvilDICOM/EvilDICOM/Core/Extensions/IDICOMElementListExtensions.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: "\nSorts the list of elements such that the lowest Tag CompleteID is first (for DICOM compliance)\n"
+  example: []
+  syntax:
+    content: public static void SortByTagID(this List<IDICOMElement> elements)
+    parameters:
+    - id: elements
+      type: List{EvilDICOM.Core.Interfaces.IDICOMElement}
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SortByTagID(elements As List(Of IDICOMElement))
+  overload: EvilDICOM.Core.Extensions.IDICOMElementListExtensions.SortByTagID*
+  nameWithType.vb: IDICOMElementListExtensions.SortByTagID(List(Of IDICOMElement))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.Extensions.IDICOMElementListExtensions.SortByTagID(List(Of EvilDICOM.Core.Interfaces.IDICOMElement))
+  name.vb: SortByTagID(List(Of IDICOMElement))
+references:
+- uid: EvilDICOM.Core.Extensions
+  commentId: N:EvilDICOM.Core.Extensions
+  isExternal: false
+  name: EvilDICOM.Core.Extensions
+  nameWithType: EvilDICOM.Core.Extensions
+  fullName: EvilDICOM.Core.Extensions
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Extensions.IDICOMElementListExtensions.SortByTagID*
+  commentId: Overload:EvilDICOM.Core.Extensions.IDICOMElementListExtensions.SortByTagID
+  isExternal: false
+  name: SortByTagID
+  nameWithType: IDICOMElementListExtensions.SortByTagID
+  fullName: EvilDICOM.Core.Extensions.IDICOMElementListExtensions.SortByTagID
+- uid: List{EvilDICOM.Core.Interfaces.IDICOMElement}
+  commentId: '!:List{EvilDICOM.Core.Interfaces.IDICOMElement}'
+  definition: List`1
+  name: List<IDICOMElement>
+  nameWithType: List<IDICOMElement>
+  fullName: List<EvilDICOM.Core.Interfaces.IDICOMElement>
+  nameWithType.vb: List(Of IDICOMElement)
+  fullName.vb: List(Of EvilDICOM.Core.Interfaces.IDICOMElement)
+  name.vb: List(Of IDICOMElement)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    nameWithType: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    nameWithType: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

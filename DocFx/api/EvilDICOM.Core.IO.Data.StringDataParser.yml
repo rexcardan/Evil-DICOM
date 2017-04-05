@@ -1,0 +1,511 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Data.StringDataParser
+  commentId: T:EvilDICOM.Core.IO.Data.StringDataParser
+  id: StringDataParser
+  parent: EvilDICOM.Core.IO.Data
+  children:
+  - EvilDICOM.Core.IO.Data.StringDataParser.GetNullableDate(System.String)
+  - EvilDICOM.Core.IO.Data.StringDataParser.ParseAgeString(System.String)
+  - EvilDICOM.Core.IO.Data.StringDataParser.ParseDate(System.String)
+  - EvilDICOM.Core.IO.Data.StringDataParser.ParseDateTime(System.String)
+  - EvilDICOM.Core.IO.Data.StringDataParser.ParseDecimalString(System.String)
+  - EvilDICOM.Core.IO.Data.StringDataParser.ParseIntegerString(System.String)
+  - EvilDICOM.Core.IO.Data.StringDataParser.ParseTime(System.String)
+  langs:
+  - csharp
+  - vb
+  name: StringDataParser
+  nameWithType: StringDataParser
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StringDataParser
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: 'public class StringDataParser : object'
+    content.vb: >-
+      Public Class StringDataParser
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.ParseAgeString(System.String)
+  commentId: M:EvilDICOM.Core.IO.Data.StringDataParser.ParseAgeString(System.String)
+  id: ParseAgeString(System.String)
+  parent: EvilDICOM.Core.IO.Data.StringDataParser
+  langs:
+  - csharp
+  - vb
+  name: ParseAgeString(String)
+  nameWithType: StringDataParser.ParseAgeString(String)
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.ParseAgeString(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ParseAgeString
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static Age ParseAgeString(string data)
+    parameters:
+    - id: data
+      type: System.String
+    return:
+      type: EvilDICOM.Core.Element.Age
+    content.vb: Public Shared Function ParseAgeString(data As String) As Age
+  overload: EvilDICOM.Core.IO.Data.StringDataParser.ParseAgeString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.ParseDate(System.String)
+  commentId: M:EvilDICOM.Core.IO.Data.StringDataParser.ParseDate(System.String)
+  id: ParseDate(System.String)
+  parent: EvilDICOM.Core.IO.Data.StringDataParser
+  langs:
+  - csharp
+  - vb
+  name: ParseDate(String)
+  nameWithType: StringDataParser.ParseDate(String)
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.ParseDate(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ParseDate
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+    startLine: 37
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static System.DateTime? ParseDate(string data)
+    parameters:
+    - id: data
+      type: System.String
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Shared Function ParseDate(data As String) As System.DateTime?
+  overload: EvilDICOM.Core.IO.Data.StringDataParser.ParseDate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.ParseDateTime(System.String)
+  commentId: M:EvilDICOM.Core.IO.Data.StringDataParser.ParseDateTime(System.String)
+  id: ParseDateTime(System.String)
+  parent: EvilDICOM.Core.IO.Data.StringDataParser
+  langs:
+  - csharp
+  - vb
+  name: ParseDateTime(String)
+  nameWithType: StringDataParser.ParseDateTime(String)
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.ParseDateTime(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ParseDateTime
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+    startLine: 53
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static System.DateTime? ParseDateTime(string data)
+    parameters:
+    - id: data
+      type: System.String
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Shared Function ParseDateTime(data As String) As System.DateTime?
+  overload: EvilDICOM.Core.IO.Data.StringDataParser.ParseDateTime*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.ParseDecimalString(System.String)
+  commentId: M:EvilDICOM.Core.IO.Data.StringDataParser.ParseDecimalString(System.String)
+  id: ParseDecimalString(System.String)
+  parent: EvilDICOM.Core.IO.Data.StringDataParser
+  langs:
+  - csharp
+  - vb
+  name: ParseDecimalString(String)
+  nameWithType: StringDataParser.ParseDecimalString(String)
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.ParseDecimalString(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ParseDecimalString
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+    startLine: 84
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static double[] ParseDecimalString(string data)
+    parameters:
+    - id: data
+      type: System.String
+    return:
+      type: System.Double[]
+    content.vb: Public Shared Function ParseDecimalString(data As String) As Double()
+  overload: EvilDICOM.Core.IO.Data.StringDataParser.ParseDecimalString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.ParseIntegerString(System.String)
+  commentId: M:EvilDICOM.Core.IO.Data.StringDataParser.ParseIntegerString(System.String)
+  id: ParseIntegerString(System.String)
+  parent: EvilDICOM.Core.IO.Data.StringDataParser
+  langs:
+  - csharp
+  - vb
+  name: ParseIntegerString(String)
+  nameWithType: StringDataParser.ParseIntegerString(String)
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.ParseIntegerString(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ParseIntegerString
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+    startLine: 101
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static int[] ParseIntegerString(string data)
+    parameters:
+    - id: data
+      type: System.String
+    return:
+      type: System.Int32[]
+    content.vb: Public Shared Function ParseIntegerString(data As String) As Integer()
+  overload: EvilDICOM.Core.IO.Data.StringDataParser.ParseIntegerString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.ParseTime(System.String)
+  commentId: M:EvilDICOM.Core.IO.Data.StringDataParser.ParseTime(System.String)
+  id: ParseTime(System.String)
+  parent: EvilDICOM.Core.IO.Data.StringDataParser
+  langs:
+  - csharp
+  - vb
+  name: ParseTime(String)
+  nameWithType: StringDataParser.ParseTime(String)
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.ParseTime(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ParseTime
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+    startLine: 116
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static System.DateTime? ParseTime(string data)
+    parameters:
+    - id: data
+      type: System.String
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Shared Function ParseTime(data As String) As System.DateTime?
+  overload: EvilDICOM.Core.IO.Data.StringDataParser.ParseTime*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.GetNullableDate(System.String)
+  commentId: M:EvilDICOM.Core.IO.Data.StringDataParser.GetNullableDate(System.String)
+  id: GetNullableDate(System.String)
+  parent: EvilDICOM.Core.IO.Data.StringDataParser
+  langs:
+  - csharp
+  - vb
+  name: GetNullableDate(String)
+  nameWithType: StringDataParser.GetNullableDate(String)
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.GetNullableDate(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetNullableDate
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Data/StringDataParser.cs
+    startLine: 151
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  summary: "\nUsed in XML parsing\n"
+  example: []
+  syntax:
+    content: public static System.DateTime? GetNullableDate(string data)
+    parameters:
+    - id: data
+      type: System.String
+      description: ''
+    return:
+      type: System.Nullable{System.DateTime}
+      description: ''
+    content.vb: Public Shared Function GetNullableDate(data As String) As System.DateTime?
+  overload: EvilDICOM.Core.IO.Data.StringDataParser.GetNullableDate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.IO.Data
+  commentId: N:EvilDICOM.Core.IO.Data
+  isExternal: false
+  name: EvilDICOM.Core.IO.Data
+  nameWithType: EvilDICOM.Core.IO.Data
+  fullName: EvilDICOM.Core.IO.Data
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.ParseAgeString*
+  commentId: Overload:EvilDICOM.Core.IO.Data.StringDataParser.ParseAgeString
+  isExternal: false
+  name: ParseAgeString
+  nameWithType: StringDataParser.ParseAgeString
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.ParseAgeString
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Core.Element.Age
+  commentId: T:EvilDICOM.Core.Element.Age
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: Age
+  nameWithType: Age
+  fullName: EvilDICOM.Core.Element.Age
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  isExternal: false
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.ParseDate*
+  commentId: Overload:EvilDICOM.Core.IO.Data.StringDataParser.ParseDate
+  isExternal: false
+  name: ParseDate
+  nameWithType: StringDataParser.ParseDate
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.ParseDate
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.ParseDateTime*
+  commentId: Overload:EvilDICOM.Core.IO.Data.StringDataParser.ParseDateTime
+  isExternal: false
+  name: ParseDateTime
+  nameWithType: StringDataParser.ParseDateTime
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.ParseDateTime
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.ParseDecimalString*
+  commentId: Overload:EvilDICOM.Core.IO.Data.StringDataParser.ParseDecimalString
+  isExternal: false
+  name: ParseDecimalString
+  nameWithType: StringDataParser.ParseDecimalString
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.ParseDecimalString
+- uid: System.Double[]
+  name: Double[]
+  nameWithType: Double[]
+  fullName: System.Double[]
+  nameWithType.vb: Double()
+  fullName.vb: System.Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.ParseIntegerString*
+  commentId: Overload:EvilDICOM.Core.IO.Data.StringDataParser.ParseIntegerString
+  isExternal: false
+  name: ParseIntegerString
+  nameWithType: StringDataParser.ParseIntegerString
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.ParseIntegerString
+- uid: System.Int32[]
+  name: Int32[]
+  nameWithType: Int32[]
+  fullName: System.Int32[]
+  nameWithType.vb: Int32()
+  fullName.vb: System.Int32()
+  name.vb: Int32()
+  spec.csharp:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.ParseTime*
+  commentId: Overload:EvilDICOM.Core.IO.Data.StringDataParser.ParseTime
+  isExternal: false
+  name: ParseTime
+  nameWithType: StringDataParser.ParseTime
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.ParseTime
+- uid: EvilDICOM.Core.IO.Data.StringDataParser.GetNullableDate*
+  commentId: Overload:EvilDICOM.Core.IO.Data.StringDataParser.GetNullableDate
+  isExternal: false
+  name: GetNullableDate
+  nameWithType: StringDataParser.GetNullableDate
+  fullName: EvilDICOM.Core.IO.Data.StringDataParser.GetNullableDate

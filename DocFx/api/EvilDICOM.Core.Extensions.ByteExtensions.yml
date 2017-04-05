@@ -1,0 +1,206 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Extensions.ByteExtensions
+  commentId: T:EvilDICOM.Core.Extensions.ByteExtensions
+  id: ByteExtensions
+  parent: EvilDICOM.Core.Extensions
+  children:
+  - EvilDICOM.Core.Extensions.ByteExtensions.Append(System.Byte[],System.Byte[])
+  - EvilDICOM.Core.Extensions.ByteExtensions.GetBit(System.Byte,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: ByteExtensions
+  nameWithType: ByteExtensions
+  fullName: EvilDICOM.Core.Extensions.ByteExtensions
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/ByteExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ByteExtensions
+    path: ../EvilDICOM/EvilDICOM/Core/Extensions/ByteExtensions.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: "\nAdds useful methods to the byte and byte[] data types\n"
+  example: []
+  syntax:
+    content: 'public static class ByteExtensions : object'
+    content.vb: >-
+      Public Module ByteExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: EvilDICOM.Core.Extensions.ByteExtensions.GetBit(System.Byte,System.Int32)
+  commentId: M:EvilDICOM.Core.Extensions.ByteExtensions.GetBit(System.Byte,System.Int32)
+  id: GetBit(System.Byte,System.Int32)
+  isExtensionMethod: true
+  parent: EvilDICOM.Core.Extensions.ByteExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetBit(Byte, Int32)
+  nameWithType: ByteExtensions.GetBit(Byte, Int32)
+  fullName: EvilDICOM.Core.Extensions.ByteExtensions.GetBit(System.Byte, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/ByteExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetBit
+    path: ../EvilDICOM/EvilDICOM/Core/Extensions/ByteExtensions.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: "\nGets a specific bit in a byte\n"
+  example: []
+  syntax:
+    content: public static bool GetBit(this byte b, int bitNumber)
+    parameters:
+    - id: b
+      type: System.Byte
+      description: the byte containing the bit
+    - id: bitNumber
+      type: System.Int32
+      description: the index of the bit within the byte (zero index based)
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetBit(b As Byte, bitNumber As Integer) As Boolean
+  overload: EvilDICOM.Core.Extensions.ByteExtensions.GetBit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Extensions.ByteExtensions.Append(System.Byte[],System.Byte[])
+  commentId: M:EvilDICOM.Core.Extensions.ByteExtensions.Append(System.Byte[],System.Byte[])
+  id: Append(System.Byte[],System.Byte[])
+  isExtensionMethod: true
+  parent: EvilDICOM.Core.Extensions.ByteExtensions
+  langs:
+  - csharp
+  - vb
+  name: Append(Byte[], Byte[])
+  nameWithType: ByteExtensions.Append(Byte[], Byte[])
+  fullName: EvilDICOM.Core.Extensions.ByteExtensions.Append(System.Byte[], System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/ByteExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Append
+    path: ../EvilDICOM/EvilDICOM/Core/Extensions/ByteExtensions.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: "\nAppends a byte array to another byte array\n"
+  example: []
+  syntax:
+    content: public static byte[] Append(this byte[] first, byte[] toAppend)
+    parameters:
+    - id: first
+      type: System.Byte[]
+      description: the first byte array
+    - id: toAppend
+      type: System.Byte[]
+      description: the second byte array which will be appended to the first
+    return:
+      type: System.Byte[]
+      description: the finished appended byte array
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function Append(first As Byte(), toAppend As Byte()) As Byte()
+  overload: EvilDICOM.Core.Extensions.ByteExtensions.Append*
+  nameWithType.vb: ByteExtensions.Append(Byte(), Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.Extensions.ByteExtensions.Append(System.Byte(), System.Byte())
+  name.vb: Append(Byte(), Byte())
+references:
+- uid: EvilDICOM.Core.Extensions
+  commentId: N:EvilDICOM.Core.Extensions
+  isExternal: false
+  name: EvilDICOM.Core.Extensions
+  nameWithType: EvilDICOM.Core.Extensions
+  fullName: EvilDICOM.Core.Extensions
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Extensions.ByteExtensions.GetBit*
+  commentId: Overload:EvilDICOM.Core.Extensions.ByteExtensions.GetBit
+  isExternal: false
+  name: GetBit
+  nameWithType: ByteExtensions.GetBit
+  fullName: EvilDICOM.Core.Extensions.ByteExtensions.GetBit
+- uid: System.Byte
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: EvilDICOM.Core.Extensions.ByteExtensions.Append*
+  commentId: Overload:EvilDICOM.Core.Extensions.ByteExtensions.Append
+  isExternal: false
+  name: Append
+  nameWithType: ByteExtensions.Append
+  fullName: EvilDICOM.Core.Extensions.ByteExtensions.Append
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

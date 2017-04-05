@@ -1,0 +1,283 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  id: DICOMWriteSettings
+  parent: EvilDICOM.Core.IO.Writing
+  children:
+  - EvilDICOM.Core.IO.Writing.DICOMWriteSettings.Default
+  - EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DefaultExplicit
+  - EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DoWriteIndefiniteSequences
+  - EvilDICOM.Core.IO.Writing.DICOMWriteSettings.GetFileMetaSettings
+  - EvilDICOM.Core.IO.Writing.DICOMWriteSettings.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: DICOMWriteSettings
+  nameWithType: DICOMWriteSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMWriteSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOMWriteSettings
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMWriteSettings.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: 'public class DICOMWriteSettings : object'
+    content.vb: >-
+      Public Class DICOMWriteSettings
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.TransferSyntax
+  commentId: P:EvilDICOM.Core.IO.Writing.DICOMWriteSettings.TransferSyntax
+  id: TransferSyntax
+  parent: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  langs:
+  - csharp
+  - vb
+  name: TransferSyntax
+  nameWithType: DICOMWriteSettings.TransferSyntax
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.TransferSyntax
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMWriteSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: TransferSyntax
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMWriteSettings.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public TransferSyntax TransferSyntax { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+    content.vb: Public Property TransferSyntax As TransferSyntax
+  overload: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.TransferSyntax*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DoWriteIndefiniteSequences
+  commentId: P:EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DoWriteIndefiniteSequences
+  id: DoWriteIndefiniteSequences
+  parent: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  langs:
+  - csharp
+  - vb
+  name: DoWriteIndefiniteSequences
+  nameWithType: DICOMWriteSettings.DoWriteIndefiniteSequences
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DoWriteIndefiniteSequences
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMWriteSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DoWriteIndefiniteSequences
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMWriteSettings.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public bool DoWriteIndefiniteSequences { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DoWriteIndefiniteSequences As Boolean
+  overload: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DoWriteIndefiniteSequences*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.Default
+  commentId: M:EvilDICOM.Core.IO.Writing.DICOMWriteSettings.Default
+  id: Default
+  parent: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  langs:
+  - csharp
+  - vb
+  name: Default()
+  nameWithType: DICOMWriteSettings.Default()
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.Default()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMWriteSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Default
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMWriteSettings.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static DICOMWriteSettings Default()
+    return:
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    content.vb: Public Shared Function Default As DICOMWriteSettings
+  overload: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.Default*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DefaultExplicit
+  commentId: M:EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DefaultExplicit
+  id: DefaultExplicit
+  parent: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  langs:
+  - csharp
+  - vb
+  name: DefaultExplicit()
+  nameWithType: DICOMWriteSettings.DefaultExplicit()
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DefaultExplicit()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMWriteSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DefaultExplicit
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMWriteSettings.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static DICOMWriteSettings DefaultExplicit()
+    return:
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    content.vb: Public Shared Function DefaultExplicit As DICOMWriteSettings
+  overload: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DefaultExplicit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.GetFileMetaSettings
+  commentId: M:EvilDICOM.Core.IO.Writing.DICOMWriteSettings.GetFileMetaSettings
+  id: GetFileMetaSettings
+  parent: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  langs:
+  - csharp
+  - vb
+  name: GetFileMetaSettings()
+  nameWithType: DICOMWriteSettings.GetFileMetaSettings()
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.GetFileMetaSettings()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMWriteSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetFileMetaSettings
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMWriteSettings.cs
+    startLine: 31
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  summary: "\nWrite settings when writing the meta header group 0002\n"
+  example: []
+  syntax:
+    content: public DICOMWriteSettings GetFileMetaSettings()
+    return:
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+      description: ''
+    content.vb: Public Function GetFileMetaSettings As DICOMWriteSettings
+  overload: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.GetFileMetaSettings*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Core.IO.Writing
+  commentId: N:EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: EvilDICOM.Core.IO.Writing
+  nameWithType: EvilDICOM.Core.IO.Writing
+  fullName: EvilDICOM.Core.IO.Writing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.TransferSyntax*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DICOMWriteSettings.TransferSyntax
+  isExternal: false
+  name: TransferSyntax
+  nameWithType: DICOMWriteSettings.TransferSyntax
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.TransferSyntax
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  commentId: T:EvilDICOM.Core.Enums.TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: TransferSyntax
+  nameWithType: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DoWriteIndefiniteSequences*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DoWriteIndefiniteSequences
+  isExternal: false
+  name: DoWriteIndefiniteSequences
+  nameWithType: DICOMWriteSettings.DoWriteIndefiniteSequences
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DoWriteIndefiniteSequences
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.Default*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DICOMWriteSettings.Default
+  isExternal: false
+  name: Default
+  nameWithType: DICOMWriteSettings.Default
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.Default
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  parent: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: DICOMWriteSettings
+  nameWithType: DICOMWriteSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DefaultExplicit*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DefaultExplicit
+  isExternal: false
+  name: DefaultExplicit
+  nameWithType: DICOMWriteSettings.DefaultExplicit
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.DefaultExplicit
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.GetFileMetaSettings*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DICOMWriteSettings.GetFileMetaSettings
+  isExternal: false
+  name: GetFileMetaSettings
+  nameWithType: DICOMWriteSettings.GetFileMetaSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings.GetFileMetaSettings

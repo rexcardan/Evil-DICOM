@@ -1,0 +1,460 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  id: CFindImageIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  children:
+  - EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.#ctor
+  - EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.#ctor(EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientId
+  - EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientsName
+  - EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.QueryLevel
+  - EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SeriesInstanceUID
+  - EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SOPInstanceUID
+  - EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.StudyInstanceUID
+  langs:
+  - csharp
+  - vb
+  name: CFindImageIOD
+  nameWithType: CFindImageIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CFindImageIOD
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: 'public class CFindImageIOD : AbstractDIMSEIOD, IIOD'
+    content.vb: >-
+      Public Class CFindImageIOD
+          Inherits AbstractDIMSEIOD
+          Implements IIOD
+  inheritance:
+  - System.Object
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  derivedClasses:
+  - EvilDICOM.Network.DIMSE.IOD.CFindPlanIOD
+  implements:
+  - EvilDICOM.Core.Interfaces.IIOD
+  inheritedMembers:
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.#ctor
+  commentId: M:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  langs:
+  - csharp
+  - vb
+  name: CFindImageIOD()
+  nameWithType: CFindImageIOD.CFindImageIOD()
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.CFindImageIOD()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public CFindImageIOD()
+    content.vb: Public Sub New
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.#ctor(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.#ctor(EvilDICOM.Core.DICOMObject)
+  id: '#ctor(EvilDICOM.Core.DICOMObject)'
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  langs:
+  - csharp
+  - vb
+  name: CFindImageIOD(DICOMObject)
+  nameWithType: CFindImageIOD.CFindImageIOD(DICOMObject)
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.CFindImageIOD(EvilDICOM.Core.DICOMObject)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public CFindImageIOD(DICOMObject dcm)
+    parameters:
+    - id: dcm
+      type: EvilDICOM.Core.DICOMObject
+    content.vb: Public Sub New(dcm As DICOMObject)
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.QueryLevel
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.QueryLevel
+  id: QueryLevel
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  langs:
+  - csharp
+  - vb
+  name: QueryLevel
+  nameWithType: CFindImageIOD.QueryLevel
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.QueryLevel
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: QueryLevel
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public QueryLevel QueryLevel { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.QueryLevel
+    content.vb: Public Property QueryLevel As QueryLevel
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.QueryLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientsName
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientsName
+  id: PatientsName
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  langs:
+  - csharp
+  - vb
+  name: PatientsName
+  nameWithType: CFindImageIOD.PatientsName
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientsName
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PatientsName
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+    startLine: 39
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public PersonName PatientsName { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Element.PersonName
+    content.vb: Public Property PatientsName As PersonName
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientsName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientId
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientId
+  id: PatientId
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  langs:
+  - csharp
+  - vb
+  name: PatientId
+  nameWithType: CFindImageIOD.PatientId
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientId
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PatientId
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+    startLine: 45
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string PatientId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PatientId As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.StudyInstanceUID
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.StudyInstanceUID
+  id: StudyInstanceUID
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  langs:
+  - csharp
+  - vb
+  name: StudyInstanceUID
+  nameWithType: CFindImageIOD.StudyInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.StudyInstanceUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StudyInstanceUID
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+    startLine: 51
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string StudyInstanceUID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StudyInstanceUID As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.StudyInstanceUID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SeriesInstanceUID
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SeriesInstanceUID
+  id: SeriesInstanceUID
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  langs:
+  - csharp
+  - vb
+  name: SeriesInstanceUID
+  nameWithType: CFindImageIOD.SeriesInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SeriesInstanceUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SeriesInstanceUID
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+    startLine: 57
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string SeriesInstanceUID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SeriesInstanceUID As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SeriesInstanceUID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SOPInstanceUID
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SOPInstanceUID
+  id: SOPInstanceUID
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  langs:
+  - csharp
+  - vb
+  name: SOPInstanceUID
+  nameWithType: CFindImageIOD.SOPInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SOPInstanceUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SOPInstanceUID
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindImageIOD.cs
+    startLine: 63
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string SOPInstanceUID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SOPInstanceUID As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SOPInstanceUID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Network.DIMSE.IOD
+  commentId: N:EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: EvilDICOM.Network.DIMSE.IOD
+  nameWithType: EvilDICOM.Network.DIMSE.IOD
+  fullName: EvilDICOM.Network.DIMSE.IOD
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: AbstractDIMSEIOD
+  nameWithType: AbstractDIMSEIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+- uid: EvilDICOM.Core.Interfaces.IIOD
+  commentId: T:EvilDICOM.Core.Interfaces.IIOD
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IIOD
+  nameWithType: IIOD
+  fullName: EvilDICOM.Core.Interfaces.IIOD
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+  commentId: F:EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+  parent: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  isExternal: false
+  name: _sel
+  nameWithType: AbstractDIMSEIOD._sel
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+  parent: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  isExternal: false
+  name: Elements
+  nameWithType: AbstractDIMSEIOD.Elements
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.#ctor*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.#ctor
+  isExternal: false
+  name: CFindImageIOD
+  nameWithType: CFindImageIOD.CFindImageIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.CFindImageIOD
+- uid: EvilDICOM.Core.DICOMObject
+  commentId: T:EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMObject
+  nameWithType: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.QueryLevel*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.QueryLevel
+  isExternal: false
+  name: QueryLevel
+  nameWithType: CFindImageIOD.QueryLevel
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.QueryLevel
+- uid: EvilDICOM.Network.Enums.QueryLevel
+  commentId: T:EvilDICOM.Network.Enums.QueryLevel
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: QueryLevel
+  nameWithType: QueryLevel
+  fullName: EvilDICOM.Network.Enums.QueryLevel
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientsName*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientsName
+  isExternal: false
+  name: PatientsName
+  nameWithType: CFindImageIOD.PatientsName
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientsName
+- uid: EvilDICOM.Core.Element.PersonName
+  commentId: T:EvilDICOM.Core.Element.PersonName
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: PersonName
+  nameWithType: PersonName
+  fullName: EvilDICOM.Core.Element.PersonName
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  isExternal: false
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientId*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientId
+  isExternal: false
+  name: PatientId
+  nameWithType: CFindImageIOD.PatientId
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.PatientId
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.StudyInstanceUID*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.StudyInstanceUID
+  isExternal: false
+  name: StudyInstanceUID
+  nameWithType: CFindImageIOD.StudyInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.StudyInstanceUID
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SeriesInstanceUID*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SeriesInstanceUID
+  isExternal: false
+  name: SeriesInstanceUID
+  nameWithType: CFindImageIOD.SeriesInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SeriesInstanceUID
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SOPInstanceUID*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SOPInstanceUID
+  isExternal: false
+  name: SOPInstanceUID
+  nameWithType: CFindImageIOD.SOPInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.SOPInstanceUID

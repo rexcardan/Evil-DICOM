@@ -1,0 +1,72 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Services.AssociationService.AssociationRequestHandler
+  commentId: T:EvilDICOM.Network.Services.AssociationService.AssociationRequestHandler
+  id: AssociationService.AssociationRequestHandler
+  parent: EvilDICOM.Network.Services
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: AssociationService.AssociationRequestHandler
+  nameWithType: AssociationService.AssociationRequestHandler
+  fullName: EvilDICOM.Network.Services.AssociationService.AssociationRequestHandler
+  type: Delegate
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AssociationRequestHandler
+    path: ../EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 115
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public delegate void AssociationRequestHandler(Request req, Association asc);
+    parameters:
+    - id: req
+      type: EvilDICOM.Network.PDUs.Request
+    - id: asc
+      type: EvilDICOM.Network.Association
+    content.vb: Public Delegate Sub AssociationRequestHandler(req As Request, asc As Association)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: EvilDICOM.Network.Services
+  commentId: N:EvilDICOM.Network.Services
+  isExternal: false
+  name: EvilDICOM.Network.Services
+  nameWithType: EvilDICOM.Network.Services
+  fullName: EvilDICOM.Network.Services
+- uid: EvilDICOM.Network.PDUs.Request
+  commentId: T:EvilDICOM.Network.PDUs.Request
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: Request
+  nameWithType: Request
+  fullName: EvilDICOM.Network.PDUs.Request
+- uid: EvilDICOM.Network.Association
+  commentId: T:EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Association
+  nameWithType: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.PDUs
+  commentId: N:EvilDICOM.Network.PDUs
+  isExternal: false
+  name: EvilDICOM.Network.PDUs
+  nameWithType: EvilDICOM.Network.PDUs
+  fullName: EvilDICOM.Network.PDUs
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network

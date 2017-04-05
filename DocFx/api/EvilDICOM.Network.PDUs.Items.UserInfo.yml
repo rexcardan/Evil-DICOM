@@ -1,0 +1,313 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo
+  commentId: T:EvilDICOM.Network.PDUs.Items.UserInfo
+  id: UserInfo
+  parent: EvilDICOM.Network.PDUs.Items
+  children:
+  - EvilDICOM.Network.PDUs.Items.UserInfo.#ctor
+  - EvilDICOM.Network.PDUs.Items.UserInfo.AsynchronousOperations
+  - EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationUID
+  - EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationVersion
+  - EvilDICOM.Network.PDUs.Items.UserInfo.MaxPDULength
+  - EvilDICOM.Network.PDUs.Items.UserInfo.ToString
+  langs:
+  - csharp
+  - vb
+  name: UserInfo
+  nameWithType: UserInfo
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: UserInfo
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: 'public class UserInfo : object'
+    content.vb: >-
+      Public Class UserInfo
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.#ctor
+  commentId: M:EvilDICOM.Network.PDUs.Items.UserInfo.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Network.PDUs.Items.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: UserInfo()
+  nameWithType: UserInfo.UserInfo()
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.UserInfo()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public UserInfo()
+    content.vb: Public Sub New
+  overload: EvilDICOM.Network.PDUs.Items.UserInfo.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.MaxPDULength
+  commentId: P:EvilDICOM.Network.PDUs.Items.UserInfo.MaxPDULength
+  id: MaxPDULength
+  parent: EvilDICOM.Network.PDUs.Items.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: MaxPDULength
+  nameWithType: UserInfo.MaxPDULength
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.MaxPDULength
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MaxPDULength
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public int MaxPDULength { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaxPDULength As Integer
+  overload: EvilDICOM.Network.PDUs.Items.UserInfo.MaxPDULength*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationUID
+  commentId: P:EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationUID
+  id: ImplementationUID
+  parent: EvilDICOM.Network.PDUs.Items.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: ImplementationUID
+  nameWithType: UserInfo.ImplementationUID
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ImplementationUID
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public string ImplementationUID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImplementationUID As String
+  overload: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationUID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.AsynchronousOperations
+  commentId: P:EvilDICOM.Network.PDUs.Items.UserInfo.AsynchronousOperations
+  id: AsynchronousOperations
+  parent: EvilDICOM.Network.PDUs.Items.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: AsynchronousOperations
+  nameWithType: UserInfo.AsynchronousOperations
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.AsynchronousOperations
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AsynchronousOperations
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public AsyncOperations AsynchronousOperations { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.PDUs.Items.AsyncOperations
+    content.vb: Public Property AsynchronousOperations As AsyncOperations
+  overload: EvilDICOM.Network.PDUs.Items.UserInfo.AsynchronousOperations*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationVersion
+  commentId: P:EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationVersion
+  id: ImplementationVersion
+  parent: EvilDICOM.Network.PDUs.Items.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: ImplementationVersion
+  nameWithType: UserInfo.ImplementationVersion
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationVersion
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ImplementationVersion
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public string ImplementationVersion { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ImplementationVersion As String
+  overload: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationVersion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.ToString
+  commentId: M:EvilDICOM.Network.PDUs.Items.UserInfo.ToString
+  id: ToString
+  parent: EvilDICOM.Network.PDUs.Items.UserInfo
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: UserInfo.ToString()
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToString
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Items/UserInfo.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overload: EvilDICOM.Network.PDUs.Items.UserInfo.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: EvilDICOM.Network.PDUs.Items
+  commentId: N:EvilDICOM.Network.PDUs.Items
+  isExternal: false
+  name: EvilDICOM.Network.PDUs.Items
+  nameWithType: EvilDICOM.Network.PDUs.Items
+  fullName: EvilDICOM.Network.PDUs.Items
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.#ctor*
+  commentId: Overload:EvilDICOM.Network.PDUs.Items.UserInfo.#ctor
+  isExternal: false
+  name: UserInfo
+  nameWithType: UserInfo.UserInfo
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.UserInfo
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.MaxPDULength*
+  commentId: Overload:EvilDICOM.Network.PDUs.Items.UserInfo.MaxPDULength
+  isExternal: false
+  name: MaxPDULength
+  nameWithType: UserInfo.MaxPDULength
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.MaxPDULength
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationUID*
+  commentId: Overload:EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationUID
+  isExternal: false
+  name: ImplementationUID
+  nameWithType: UserInfo.ImplementationUID
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationUID
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.AsynchronousOperations*
+  commentId: Overload:EvilDICOM.Network.PDUs.Items.UserInfo.AsynchronousOperations
+  isExternal: false
+  name: AsynchronousOperations
+  nameWithType: UserInfo.AsynchronousOperations
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.AsynchronousOperations
+- uid: EvilDICOM.Network.PDUs.Items.AsyncOperations
+  commentId: T:EvilDICOM.Network.PDUs.Items.AsyncOperations
+  parent: EvilDICOM.Network.PDUs.Items
+  isExternal: false
+  name: AsyncOperations
+  nameWithType: AsyncOperations
+  fullName: EvilDICOM.Network.PDUs.Items.AsyncOperations
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationVersion*
+  commentId: Overload:EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationVersion
+  isExternal: false
+  name: ImplementationVersion
+  nameWithType: UserInfo.ImplementationVersion
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.ImplementationVersion
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo.ToString*
+  commentId: Overload:EvilDICOM.Network.PDUs.Items.UserInfo.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: UserInfo.ToString
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo.ToString

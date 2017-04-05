@@ -1,0 +1,218 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Enums.PresentationContextReason
+  commentId: T:EvilDICOM.Network.Enums.PresentationContextReason
+  id: PresentationContextReason
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.PresentationContextReason.ABSTRACT_SYNAX_NOT_SUPPORTED
+  - EvilDICOM.Network.Enums.PresentationContextReason.ACCEPTANCE
+  - EvilDICOM.Network.Enums.PresentationContextReason.NO_REASON
+  - EvilDICOM.Network.Enums.PresentationContextReason.TRANSFER_SYNAXES_NOT_SUPPORTED
+  - EvilDICOM.Network.Enums.PresentationContextReason.USER_REJECTION
+  langs:
+  - csharp
+  - vb
+  name: PresentationContextReason
+  nameWithType: PresentationContextReason
+  fullName: EvilDICOM.Network.Enums.PresentationContextReason
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PresentationContextReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PresentationContextReason
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/PresentationContextReason.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: 'public enum PresentationContextReason : byte'
+    content.vb: Public Enum PresentationContextReason As Byte
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Network.Enums.PresentationContextReason.ACCEPTANCE
+  commentId: F:EvilDICOM.Network.Enums.PresentationContextReason.ACCEPTANCE
+  id: ACCEPTANCE
+  parent: EvilDICOM.Network.Enums.PresentationContextReason
+  langs:
+  - csharp
+  - vb
+  name: ACCEPTANCE
+  nameWithType: PresentationContextReason.ACCEPTANCE
+  fullName: EvilDICOM.Network.Enums.PresentationContextReason.ACCEPTANCE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PresentationContextReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ACCEPTANCE
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/PresentationContextReason.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: ACCEPTANCE = null
+    return:
+      type: EvilDICOM.Network.Enums.PresentationContextReason
+    content.vb: ACCEPTANCE = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.PresentationContextReason.USER_REJECTION
+  commentId: F:EvilDICOM.Network.Enums.PresentationContextReason.USER_REJECTION
+  id: USER_REJECTION
+  parent: EvilDICOM.Network.Enums.PresentationContextReason
+  langs:
+  - csharp
+  - vb
+  name: USER_REJECTION
+  nameWithType: PresentationContextReason.USER_REJECTION
+  fullName: EvilDICOM.Network.Enums.PresentationContextReason.USER_REJECTION
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PresentationContextReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: USER_REJECTION
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/PresentationContextReason.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: USER_REJECTION = null
+    return:
+      type: EvilDICOM.Network.Enums.PresentationContextReason
+    content.vb: USER_REJECTION = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.PresentationContextReason.NO_REASON
+  commentId: F:EvilDICOM.Network.Enums.PresentationContextReason.NO_REASON
+  id: NO_REASON
+  parent: EvilDICOM.Network.Enums.PresentationContextReason
+  langs:
+  - csharp
+  - vb
+  name: NO_REASON
+  nameWithType: PresentationContextReason.NO_REASON
+  fullName: EvilDICOM.Network.Enums.PresentationContextReason.NO_REASON
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PresentationContextReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: NO_REASON
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/PresentationContextReason.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: NO_REASON = null
+    return:
+      type: EvilDICOM.Network.Enums.PresentationContextReason
+    content.vb: NO_REASON = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.PresentationContextReason.ABSTRACT_SYNAX_NOT_SUPPORTED
+  commentId: F:EvilDICOM.Network.Enums.PresentationContextReason.ABSTRACT_SYNAX_NOT_SUPPORTED
+  id: ABSTRACT_SYNAX_NOT_SUPPORTED
+  parent: EvilDICOM.Network.Enums.PresentationContextReason
+  langs:
+  - csharp
+  - vb
+  name: ABSTRACT_SYNAX_NOT_SUPPORTED
+  nameWithType: PresentationContextReason.ABSTRACT_SYNAX_NOT_SUPPORTED
+  fullName: EvilDICOM.Network.Enums.PresentationContextReason.ABSTRACT_SYNAX_NOT_SUPPORTED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PresentationContextReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ABSTRACT_SYNAX_NOT_SUPPORTED
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/PresentationContextReason.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: ABSTRACT_SYNAX_NOT_SUPPORTED = null
+    return:
+      type: EvilDICOM.Network.Enums.PresentationContextReason
+    content.vb: ABSTRACT_SYNAX_NOT_SUPPORTED = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.PresentationContextReason.TRANSFER_SYNAXES_NOT_SUPPORTED
+  commentId: F:EvilDICOM.Network.Enums.PresentationContextReason.TRANSFER_SYNAXES_NOT_SUPPORTED
+  id: TRANSFER_SYNAXES_NOT_SUPPORTED
+  parent: EvilDICOM.Network.Enums.PresentationContextReason
+  langs:
+  - csharp
+  - vb
+  name: TRANSFER_SYNAXES_NOT_SUPPORTED
+  nameWithType: PresentationContextReason.TRANSFER_SYNAXES_NOT_SUPPORTED
+  fullName: EvilDICOM.Network.Enums.PresentationContextReason.TRANSFER_SYNAXES_NOT_SUPPORTED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PresentationContextReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: TRANSFER_SYNAXES_NOT_SUPPORTED
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/PresentationContextReason.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: TRANSFER_SYNAXES_NOT_SUPPORTED = null
+    return:
+      type: EvilDICOM.Network.Enums.PresentationContextReason
+    content.vb: TRANSFER_SYNAXES_NOT_SUPPORTED = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.Enums.PresentationContextReason
+  commentId: T:EvilDICOM.Network.Enums.PresentationContextReason
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: PresentationContextReason
+  nameWithType: PresentationContextReason
+  fullName: EvilDICOM.Network.Enums.PresentationContextReason

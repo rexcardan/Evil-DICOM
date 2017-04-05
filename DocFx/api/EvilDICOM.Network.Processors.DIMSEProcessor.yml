@@ -1,0 +1,120 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Processors.DIMSEProcessor
+  commentId: T:EvilDICOM.Network.Processors.DIMSEProcessor
+  id: DIMSEProcessor
+  parent: EvilDICOM.Network.Processors
+  children:
+  - EvilDICOM.Network.Processors.DIMSEProcessor.Process(EvilDICOM.Network.DIMSE.AbstractDIMSE,EvilDICOM.Network.Association)
+  langs:
+  - csharp
+  - vb
+  name: DIMSEProcessor
+  nameWithType: DIMSEProcessor
+  fullName: EvilDICOM.Network.Processors.DIMSEProcessor
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Processors/DIMSEProcessor.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DIMSEProcessor
+    path: ../EvilDICOM/EvilDICOM/Network/Processors/DIMSEProcessor.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Processors
+  syntax:
+    content: 'public class DIMSEProcessor : object'
+    content.vb: >-
+      Public Class DIMSEProcessor
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Processors.DIMSEProcessor.Process(EvilDICOM.Network.DIMSE.AbstractDIMSE,EvilDICOM.Network.Association)
+  commentId: M:EvilDICOM.Network.Processors.DIMSEProcessor.Process(EvilDICOM.Network.DIMSE.AbstractDIMSE,EvilDICOM.Network.Association)
+  id: Process(EvilDICOM.Network.DIMSE.AbstractDIMSE,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Processors.DIMSEProcessor
+  langs:
+  - csharp
+  - vb
+  name: Process(AbstractDIMSE, Association)
+  nameWithType: DIMSEProcessor.Process(AbstractDIMSE, Association)
+  fullName: EvilDICOM.Network.Processors.DIMSEProcessor.Process(EvilDICOM.Network.DIMSE.AbstractDIMSE, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Processors/DIMSEProcessor.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Process
+    path: ../EvilDICOM/EvilDICOM/Network/Processors/DIMSEProcessor.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Processors
+  syntax:
+    content: public static void Process(AbstractDIMSE dimse, Association asc)
+    parameters:
+    - id: dimse
+      type: EvilDICOM.Network.DIMSE.AbstractDIMSE
+    - id: asc
+      type: EvilDICOM.Network.Association
+    content.vb: Public Shared Sub Process(dimse As AbstractDIMSE, asc As Association)
+  overload: EvilDICOM.Network.Processors.DIMSEProcessor.Process*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Network.Processors
+  commentId: N:EvilDICOM.Network.Processors
+  isExternal: false
+  name: EvilDICOM.Network.Processors
+  nameWithType: EvilDICOM.Network.Processors
+  fullName: EvilDICOM.Network.Processors
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.Processors.DIMSEProcessor.Process*
+  commentId: Overload:EvilDICOM.Network.Processors.DIMSEProcessor.Process
+  isExternal: false
+  name: Process
+  nameWithType: DIMSEProcessor.Process
+  fullName: EvilDICOM.Network.Processors.DIMSEProcessor.Process
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSE
+  commentId: T:EvilDICOM.Network.DIMSE.AbstractDIMSE
+  parent: EvilDICOM.Network.DIMSE
+  isExternal: false
+  name: AbstractDIMSE
+  nameWithType: AbstractDIMSE
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSE
+- uid: EvilDICOM.Network.Association
+  commentId: T:EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Association
+  nameWithType: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.DIMSE
+  commentId: N:EvilDICOM.Network.DIMSE
+  isExternal: false
+  name: EvilDICOM.Network.DIMSE
+  nameWithType: EvilDICOM.Network.DIMSE
+  fullName: EvilDICOM.Network.DIMSE
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network

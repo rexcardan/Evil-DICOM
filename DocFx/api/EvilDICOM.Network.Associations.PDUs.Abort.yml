@@ -1,0 +1,369 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Associations.PDUs.Abort
+  commentId: T:EvilDICOM.Network.Associations.PDUs.Abort
+  id: Abort
+  parent: EvilDICOM.Network.Associations.PDUs
+  children:
+  - EvilDICOM.Network.Associations.PDUs.Abort.Reason
+  - EvilDICOM.Network.Associations.PDUs.Abort.Source
+  - EvilDICOM.Network.Associations.PDUs.Abort.ToString
+  - EvilDICOM.Network.Associations.PDUs.Abort.Type
+  - EvilDICOM.Network.Associations.PDUs.Abort.Write
+  langs:
+  - csharp
+  - vb
+  name: Abort
+  nameWithType: Abort
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Abort
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Associations.PDUs
+  syntax:
+    content: 'public class Abort : object, IPDU'
+    content.vb: >-
+      Public Class Abort
+          Inherits Object
+          Implements IPDU
+  inheritance:
+  - System.Object
+  implements:
+  - EvilDICOM.Network.Interfaces.IPDU
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Reason
+  commentId: P:EvilDICOM.Network.Associations.PDUs.Abort.Reason
+  id: Reason
+  parent: EvilDICOM.Network.Associations.PDUs.Abort
+  langs:
+  - csharp
+  - vb
+  name: Reason
+  nameWithType: Abort.Reason
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Reason
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Reason
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Associations.PDUs
+  syntax:
+    content: public AbortReason Reason { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.AbortReason
+    content.vb: Public Property Reason As AbortReason
+  overload: EvilDICOM.Network.Associations.PDUs.Abort.Reason*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Source
+  commentId: P:EvilDICOM.Network.Associations.PDUs.Abort.Source
+  id: Source
+  parent: EvilDICOM.Network.Associations.PDUs.Abort
+  langs:
+  - csharp
+  - vb
+  name: Source
+  nameWithType: Abort.Source
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Source
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Source
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Associations.PDUs
+  syntax:
+    content: public AbortSource Source { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.AbortSource
+    content.vb: Public Property Source As AbortSource
+  overload: EvilDICOM.Network.Associations.PDUs.Abort.Source*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Write
+  commentId: M:EvilDICOM.Network.Associations.PDUs.Abort.Write
+  id: Write
+  parent: EvilDICOM.Network.Associations.PDUs.Abort
+  langs:
+  - csharp
+  - vb
+  name: Write()
+  nameWithType: Abort.Write()
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Write()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Write
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Associations.PDUs
+  syntax:
+    content: public byte[] Write()
+    return:
+      type: System.Byte[]
+    content.vb: Public Function Write As Byte()
+  overload: EvilDICOM.Network.Associations.PDUs.Abort.Write*
+  implements:
+  - EvilDICOM.Network.Interfaces.IPDU.Write
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Type
+  commentId: P:EvilDICOM.Network.Associations.PDUs.Abort.Type
+  id: Type
+  parent: EvilDICOM.Network.Associations.PDUs.Abort
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Abort.Type
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Type
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Type
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+    startLine: 31
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Associations.PDUs
+  syntax:
+    content: public PDUType Type { get; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+    content.vb: Public ReadOnly Property Type As PDUType
+  overload: EvilDICOM.Network.Associations.PDUs.Abort.Type*
+  implements:
+  - EvilDICOM.Network.Interfaces.IPDU.Type
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.ToString
+  commentId: M:EvilDICOM.Network.Associations.PDUs.Abort.ToString
+  id: ToString
+  parent: EvilDICOM.Network.Associations.PDUs.Abort
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Abort.ToString()
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToString
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+    startLine: 36
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Associations.PDUs
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overload: EvilDICOM.Network.Associations.PDUs.Abort.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: EvilDICOM.Network.Associations.PDUs
+  commentId: N:EvilDICOM.Network.Associations.PDUs
+  isExternal: false
+  name: EvilDICOM.Network.Associations.PDUs
+  nameWithType: EvilDICOM.Network.Associations.PDUs
+  fullName: EvilDICOM.Network.Associations.PDUs
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.Interfaces.IPDU
+  commentId: T:EvilDICOM.Network.Interfaces.IPDU
+  parent: EvilDICOM.Network.Interfaces
+  isExternal: false
+  name: IPDU
+  nameWithType: IPDU
+  fullName: EvilDICOM.Network.Interfaces.IPDU
+- uid: EvilDICOM.Network.Interfaces
+  commentId: N:EvilDICOM.Network.Interfaces
+  isExternal: false
+  name: EvilDICOM.Network.Interfaces
+  nameWithType: EvilDICOM.Network.Interfaces
+  fullName: EvilDICOM.Network.Interfaces
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Reason*
+  commentId: Overload:EvilDICOM.Network.Associations.PDUs.Abort.Reason
+  isExternal: false
+  name: Reason
+  nameWithType: Abort.Reason
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Reason
+- uid: EvilDICOM.Network.Enums.AbortReason
+  commentId: T:EvilDICOM.Network.Enums.AbortReason
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: AbortReason
+  nameWithType: AbortReason
+  fullName: EvilDICOM.Network.Enums.AbortReason
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Source*
+  commentId: Overload:EvilDICOM.Network.Associations.PDUs.Abort.Source
+  isExternal: false
+  name: Source
+  nameWithType: Abort.Source
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Source
+- uid: EvilDICOM.Network.Enums.AbortSource
+  commentId: T:EvilDICOM.Network.Enums.AbortSource
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: AbortSource
+  nameWithType: AbortSource
+  fullName: EvilDICOM.Network.Enums.AbortSource
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Write*
+  commentId: Overload:EvilDICOM.Network.Associations.PDUs.Abort.Write
+  isExternal: false
+  name: Write
+  nameWithType: Abort.Write
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Write
+- uid: EvilDICOM.Network.Interfaces.IPDU.Write
+  commentId: M:EvilDICOM.Network.Interfaces.IPDU.Write
+  parent: EvilDICOM.Network.Interfaces.IPDU
+  isExternal: false
+  name: Write()
+  nameWithType: IPDU.Write()
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Write()
+  spec.csharp:
+  - uid: EvilDICOM.Network.Interfaces.IPDU.Write
+    name: Write
+    nameWithType: IPDU.Write
+    fullName: EvilDICOM.Network.Interfaces.IPDU.Write
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.Interfaces.IPDU.Write
+    name: Write
+    nameWithType: IPDU.Write
+    fullName: EvilDICOM.Network.Interfaces.IPDU.Write
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Type*
+  commentId: Overload:EvilDICOM.Network.Associations.PDUs.Abort.Type
+  isExternal: false
+  name: Type
+  nameWithType: Abort.Type
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Type
+- uid: EvilDICOM.Network.Interfaces.IPDU.Type
+  commentId: P:EvilDICOM.Network.Interfaces.IPDU.Type
+  parent: EvilDICOM.Network.Interfaces.IPDU
+  isExternal: false
+  name: Type
+  nameWithType: IPDU.Type
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Type
+- uid: EvilDICOM.Network.Enums.PDUType
+  commentId: T:EvilDICOM.Network.Enums.PDUType
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: PDUType
+  nameWithType: PDUType
+  fullName: EvilDICOM.Network.Enums.PDUType
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.ToString*
+  commentId: Overload:EvilDICOM.Network.Associations.PDUs.Abort.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: Abort.ToString
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.ToString
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

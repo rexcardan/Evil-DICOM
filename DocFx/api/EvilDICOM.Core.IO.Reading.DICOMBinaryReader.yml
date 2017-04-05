@@ -1,0 +1,855 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  commentId: T:EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  id: DICOMBinaryReader
+  parent: EvilDICOM.Core.IO.Reading
+  children:
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor(System.Byte[])
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor(System.String)
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader._binaryReader
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Dispose
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.GetSubStream(System.Int32)
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.IndexOf(System.Byte[])
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Peek(System.Int32)
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes(System.Byte[],System.Int32,System.Int32)
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes(System.Int32)
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadChars(System.Int32)
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadString(System.Int32)
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Reset
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Skip(System.Int32)
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamLength
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamPosition
+  - EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Take(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: DICOMBinaryReader
+  nameWithType: DICOMBinaryReader
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOMBinaryReader
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nA wrapper for the Binary Reader class that is specific to DICOM.\n"
+  example: []
+  syntax:
+    content: 'public class DICOMBinaryReader : IDisposable'
+    content.vb: >-
+      Public Class DICOMBinaryReader
+          Inherits IDisposable
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader._binaryReader
+  commentId: F:EvilDICOM.Core.IO.Reading.DICOMBinaryReader._binaryReader
+  id: _binaryReader
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: _binaryReader
+  nameWithType: DICOMBinaryReader._binaryReader
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader._binaryReader
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: _binaryReader
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: protected BinaryReader _binaryReader
+    return:
+      type: BinaryReader
+    content.vb: Protected _binaryReader As BinaryReader
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: DICOMBinaryReader()
+  nameWithType: DICOMBinaryReader.DICOMBinaryReader()
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.DICOMBinaryReader()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: protected DICOMBinaryReader()
+    content.vb: Protected Sub New
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor*
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor(System.String)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: DICOMBinaryReader(String)
+  nameWithType: DICOMBinaryReader.DICOMBinaryReader(String)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.DICOMBinaryReader(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nConstructs a new reader from a file path.\n"
+  example: []
+  syntax:
+    content: public DICOMBinaryReader(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: path to the file to be read
+    content.vb: Public Sub New(filePath As String)
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor(System.Byte[])
+  id: '#ctor(System.Byte[])'
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: DICOMBinaryReader(Byte[])
+  nameWithType: DICOMBinaryReader.DICOMBinaryReader(Byte[])
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.DICOMBinaryReader(System.Byte[])
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 38
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nConstructs a new reader from a byte array.\n"
+  example: []
+  syntax:
+    content: public DICOMBinaryReader(byte[] byteStream)
+    parameters:
+    - id: byteStream
+      type: System.Byte[]
+      description: the byte array to be read
+    content.vb: Public Sub New(byteStream As Byte())
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor*
+  nameWithType.vb: DICOMBinaryReader.DICOMBinaryReader(Byte())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.DICOMBinaryReader(System.Byte())
+  name.vb: DICOMBinaryReader(Byte())
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamPosition
+  commentId: P:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamPosition
+  id: StreamPosition
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: StreamPosition
+  nameWithType: DICOMBinaryReader.StreamPosition
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamPosition
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StreamPosition
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 47
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReturns the current position of the byte stream\n"
+  example: []
+  syntax:
+    content: public long StreamPosition { get; set; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public Property StreamPosition As Long
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamPosition*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamLength
+  commentId: P:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamLength
+  id: StreamLength
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: StreamLength
+  nameWithType: DICOMBinaryReader.StreamLength
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamLength
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StreamLength
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 56
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReturnts the length of the byte stream\n"
+  example: []
+  syntax:
+    content: public long StreamLength { get; }
+    parameters: []
+    return:
+      type: System.Int64
+    content.vb: Public ReadOnly Property StreamLength As Long
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamLength*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Dispose
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Dispose
+  id: Dispose
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: DICOMBinaryReader.Dispose()
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Dispose()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Dispose
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 61
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Dispose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes(System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes(System.Int32)
+  id: ReadBytes(System.Int32)
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: ReadBytes(Int32)
+  nameWithType: DICOMBinaryReader.ReadBytes(Int32)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadBytes
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 71
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the specified number of bytes\n"
+  example: []
+  syntax:
+    content: public virtual byte[] ReadBytes(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: the number of bytes to be read
+    return:
+      type: System.Byte[]
+      description: the read bytes
+    content.vb: Public Overridable Function ReadBytes(count As Integer) As Byte()
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Take(System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Take(System.Int32)
+  id: Take(System.Int32)
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: Take(Int32)
+  nameWithType: DICOMBinaryReader.Take(Int32)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Take(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Take
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 89
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the specified number of bytes (shorthand for ReadBytes method).\n"
+  example: []
+  syntax:
+    content: public virtual byte[] Take(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: the number of bytes to be read
+    return:
+      type: System.Byte[]
+      description: the read bytes
+    content.vb: Public Overridable Function Take(count As Integer) As Byte()
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Take*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Peek(System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Peek(System.Int32)
+  id: Peek(System.Int32)
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: Peek(Int32)
+  nameWithType: DICOMBinaryReader.Peek(Int32)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Peek(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Peek
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 94
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public virtual byte[] Peek(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Overridable Function Peek(count As Integer) As Byte()
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Peek*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.GetSubStream(System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.GetSubStream(System.Int32)
+  id: GetSubStream(System.Int32)
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: GetSubStream(Int32)
+  nameWithType: DICOMBinaryReader.GetSubStream(Int32)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.GetSubStream(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetSubStream
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 109
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nCreates a new stream that is trimmed to the specification length.\n"
+  example: []
+  syntax:
+    content: public virtual DICOMBinaryReader GetSubStream(int substreamLength)
+    parameters:
+    - id: substreamLength
+      type: System.Int32
+      description: the number of bytes to include in the new stream (starting from the current position)
+    return:
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+    content.vb: Public Overridable Function GetSubStream(substreamLength As Integer) As DICOMBinaryReader
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.GetSubStream*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadChars(System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadChars(System.Int32)
+  id: ReadChars(System.Int32)
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: ReadChars(Int32)
+  nameWithType: DICOMBinaryReader.ReadChars(Int32)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadChars(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadChars
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 120
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the specified number of chars\n"
+  example: []
+  syntax:
+    content: public virtual char[] ReadChars(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: the number of chars to be read
+    return:
+      type: System.Char[]
+      description: the read chars
+    content.vb: Public Overridable Function ReadChars(count As Integer) As Char()
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadChars*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadString(System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadString(System.Int32)
+  id: ReadString(System.Int32)
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: ReadString(Int32)
+  nameWithType: DICOMBinaryReader.ReadString(Int32)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadString(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadString
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 138
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the specified number of chars and converts to a string\n"
+  example: []
+  syntax:
+    content: public virtual string ReadString(int length)
+    parameters:
+    - id: length
+      type: System.Int32
+    return:
+      type: System.String
+      description: the read chars
+    content.vb: Public Overridable Function ReadString(length As Integer) As String
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadString*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes(System.Byte[],System.Int32,System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes(System.Byte[],System.Int32,System.Int32)
+  id: ReadBytes(System.Byte[],System.Int32,System.Int32)
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: ReadBytes(Byte[], Int32, Int32)
+  nameWithType: DICOMBinaryReader.ReadBytes(Byte[], Int32, Int32)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes(System.Byte[], System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadBytes
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 143
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public int ReadBytes(byte[] buffer, int index, int count)
+    parameters:
+    - id: buffer
+      type: System.Byte[]
+    - id: index
+      type: System.Int32
+    - id: count
+      type: System.Int32
+    return:
+      type: System.Int32
+    content.vb: Public Function ReadBytes(buffer As Byte(), index As Integer, count As Integer) As Integer
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes*
+  nameWithType.vb: DICOMBinaryReader.ReadBytes(Byte(), Int32, Int32)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes(System.Byte(), System.Int32, System.Int32)
+  name.vb: ReadBytes(Byte(), Int32, Int32)
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Skip(System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Skip(System.Int32)
+  id: Skip(System.Int32)
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: Skip(Int32)
+  nameWithType: DICOMBinaryReader.Skip(Int32)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Skip(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Skip
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 148
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public virtual DICOMBinaryReader Skip(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+    return:
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+    content.vb: Public Overridable Function Skip(count As Integer) As DICOMBinaryReader
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Skip*
+  modifiers.csharp:
+  - public
+  - virtual
+  modifiers.vb:
+  - Public
+  - Overridable
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.IndexOf(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.IndexOf(System.Byte[])
+  id: IndexOf(System.Byte[])
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: IndexOf(Byte[])
+  nameWithType: DICOMBinaryReader.IndexOf(Byte[])
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.IndexOf(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IndexOf
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 166
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nWill return the index of a given byte pattern in the byte stream\n"
+  example: []
+  syntax:
+    content: public long IndexOf(byte[] bytePattern)
+    parameters:
+    - id: bytePattern
+      type: System.Byte[]
+      description: the pattern to be found
+    return:
+      type: System.Int64
+      description: the index of the pattern
+    content.vb: Public Function IndexOf(bytePattern As Byte()) As Long
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.IndexOf*
+  nameWithType.vb: DICOMBinaryReader.IndexOf(Byte())
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.IndexOf(System.Byte())
+  name.vb: IndexOf(Byte())
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Reset
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Reset
+  id: Reset
+  parent: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: Reset()
+  nameWithType: DICOMBinaryReader.Reset()
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Reset()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Reset
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMBinaryReader.cs
+    startLine: 185
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public void Reset()
+    content.vb: Public Sub Reset
+  overload: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Reset*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Core.IO.Reading
+  commentId: N:EvilDICOM.Core.IO.Reading
+  isExternal: false
+  name: EvilDICOM.Core.IO.Reading
+  nameWithType: EvilDICOM.Core.IO.Reading
+  fullName: EvilDICOM.Core.IO.Reading
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: BinaryReader
+  isExternal: true
+  name: BinaryReader
+  nameWithType: BinaryReader
+  fullName: BinaryReader
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.#ctor
+  isExternal: false
+  name: DICOMBinaryReader
+  nameWithType: DICOMBinaryReader.DICOMBinaryReader
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.DICOMBinaryReader
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamPosition*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamPosition
+  isExternal: false
+  name: StreamPosition
+  nameWithType: DICOMBinaryReader.StreamPosition
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamPosition
+- uid: System.Int64
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamLength*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamLength
+  isExternal: false
+  name: StreamLength
+  nameWithType: DICOMBinaryReader.StreamLength
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.StreamLength
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Dispose*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Dispose
+  isExternal: false
+  name: Dispose
+  nameWithType: DICOMBinaryReader.Dispose
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Dispose
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes
+  isExternal: false
+  name: ReadBytes
+  nameWithType: DICOMBinaryReader.ReadBytes
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadBytes
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Take*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Take
+  isExternal: false
+  name: Take
+  nameWithType: DICOMBinaryReader.Take
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Take
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Peek*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Peek
+  isExternal: false
+  name: Peek
+  nameWithType: DICOMBinaryReader.Peek
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Peek
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.GetSubStream*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.GetSubStream
+  isExternal: false
+  name: GetSubStream
+  nameWithType: DICOMBinaryReader.GetSubStream
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.GetSubStream
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  commentId: T:EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  parent: EvilDICOM.Core.IO.Reading
+  isExternal: false
+  name: DICOMBinaryReader
+  nameWithType: DICOMBinaryReader
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadChars*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadChars
+  isExternal: false
+  name: ReadChars
+  nameWithType: DICOMBinaryReader.ReadChars
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadChars
+- uid: System.Char[]
+  name: Char[]
+  nameWithType: Char[]
+  fullName: System.Char[]
+  nameWithType.vb: Char()
+  fullName.vb: System.Char()
+  name.vb: Char()
+  spec.csharp:
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadString*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadString
+  isExternal: false
+  name: ReadString
+  nameWithType: DICOMBinaryReader.ReadString
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.ReadString
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Skip*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Skip
+  isExternal: false
+  name: Skip
+  nameWithType: DICOMBinaryReader.Skip
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Skip
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.IndexOf*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.IndexOf
+  isExternal: false
+  name: IndexOf
+  nameWithType: DICOMBinaryReader.IndexOf
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.IndexOf
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Reset*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Reset
+  isExternal: false
+  name: Reset
+  nameWithType: DICOMBinaryReader.Reset
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader.Reset

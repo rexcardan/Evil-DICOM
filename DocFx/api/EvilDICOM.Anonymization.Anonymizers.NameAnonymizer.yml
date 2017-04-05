@@ -1,0 +1,160 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Anonymization.Anonymizers.NameAnonymizer
+  commentId: T:EvilDICOM.Anonymization.Anonymizers.NameAnonymizer
+  id: NameAnonymizer
+  parent: EvilDICOM.Anonymization.Anonymizers
+  children:
+  - EvilDICOM.Anonymization.Anonymizers.NameAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  langs:
+  - csharp
+  - vb
+  name: NameAnonymizer
+  nameWithType: NameAnonymizer
+  fullName: EvilDICOM.Anonymization.Anonymizers.NameAnonymizer
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/NameAnonymize.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: NameAnonymizer
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Anonymizers/NameAnonymize.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  summary: "\nRemoves all names from the DICOM File. If using PatientIdAnonymizer, call this first so new id is not removed\n"
+  example: []
+  syntax:
+    content: 'public class NameAnonymizer : object, IAnonymizer'
+    content.vb: >-
+      Public Class NameAnonymizer
+          Inherits Object
+          Implements IAnonymizer
+  inheritance:
+  - System.Object
+  implements:
+  - EvilDICOM.Anonymization.IAnonymizer
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Anonymization.Anonymizers.NameAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Anonymization.Anonymizers.NameAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  id: Anonymize(EvilDICOM.Core.DICOMObject)
+  parent: EvilDICOM.Anonymization.Anonymizers.NameAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: Anonymize(DICOMObject)
+  nameWithType: NameAnonymizer.Anonymize(DICOMObject)
+  fullName: EvilDICOM.Anonymization.Anonymizers.NameAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/NameAnonymize.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Anonymize
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Anonymizers/NameAnonymize.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: public void Anonymize(DICOMObject d)
+    parameters:
+    - id: d
+      type: EvilDICOM.Core.DICOMObject
+    content.vb: Public Sub Anonymize(d As DICOMObject)
+  overload: EvilDICOM.Anonymization.Anonymizers.NameAnonymizer.Anonymize*
+  implements:
+  - EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Anonymization.Anonymizers
+  commentId: N:EvilDICOM.Anonymization.Anonymizers
+  isExternal: false
+  name: EvilDICOM.Anonymization.Anonymizers
+  nameWithType: EvilDICOM.Anonymization.Anonymizers
+  fullName: EvilDICOM.Anonymization.Anonymizers
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Anonymization.IAnonymizer
+  commentId: T:EvilDICOM.Anonymization.IAnonymizer
+  parent: EvilDICOM.Anonymization
+  isExternal: false
+  name: IAnonymizer
+  nameWithType: IAnonymizer
+  fullName: EvilDICOM.Anonymization.IAnonymizer
+- uid: EvilDICOM.Anonymization
+  commentId: N:EvilDICOM.Anonymization
+  isExternal: false
+  name: EvilDICOM.Anonymization
+  nameWithType: EvilDICOM.Anonymization
+  fullName: EvilDICOM.Anonymization
+- uid: EvilDICOM.Anonymization.Anonymizers.NameAnonymizer.Anonymize*
+  commentId: Overload:EvilDICOM.Anonymization.Anonymizers.NameAnonymizer.Anonymize
+  isExternal: false
+  name: Anonymize
+  nameWithType: NameAnonymizer.Anonymize
+  fullName: EvilDICOM.Anonymization.Anonymizers.NameAnonymizer.Anonymize
+- uid: EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  parent: EvilDICOM.Anonymization.IAnonymizer
+  isExternal: false
+  name: Anonymize(DICOMObject)
+  nameWithType: IAnonymizer.Anonymize(DICOMObject)
+  fullName: EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  spec.csharp:
+  - uid: EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+    name: Anonymize
+    nameWithType: IAnonymizer.Anonymize
+    fullName: EvilDICOM.Anonymization.IAnonymizer.Anonymize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+    name: Anonymize
+    nameWithType: IAnonymizer.Anonymize
+    fullName: EvilDICOM.Anonymization.IAnonymizer.Anonymize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.DICOMObject
+  commentId: T:EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMObject
+  nameWithType: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core

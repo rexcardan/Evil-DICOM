@@ -1,0 +1,357 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Helpers.ByteHelper
+  commentId: T:EvilDICOM.Core.Helpers.ByteHelper
+  id: ByteHelper
+  parent: EvilDICOM.Core.Helpers
+  children:
+  - EvilDICOM.Core.Helpers.ByteHelper.AreEqual(System.Byte[],System.Byte[])
+  - EvilDICOM.Core.Helpers.ByteHelper.ByteArrayToHexString(System.Byte[])
+  - EvilDICOM.Core.Helpers.ByteHelper.ByteToHexString(System.Byte)
+  - EvilDICOM.Core.Helpers.ByteHelper.GetHexStringArray(System.Byte[])
+  - EvilDICOM.Core.Helpers.ByteHelper.HexStringToByteArray(System.String)
+  langs:
+  - csharp
+  - vb
+  name: ByteHelper
+  nameWithType: ByteHelper
+  fullName: EvilDICOM.Core.Helpers.ByteHelper
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/ByteHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ByteHelper
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/ByteHelper.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: 'public class ByteHelper : object'
+    content.vb: >-
+      Public Class ByteHelper
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Helpers.ByteHelper.ByteArrayToHexString(System.Byte[])
+  commentId: M:EvilDICOM.Core.Helpers.ByteHelper.ByteArrayToHexString(System.Byte[])
+  id: ByteArrayToHexString(System.Byte[])
+  parent: EvilDICOM.Core.Helpers.ByteHelper
+  langs:
+  - csharp
+  - vb
+  name: ByteArrayToHexString(Byte[])
+  nameWithType: ByteHelper.ByteArrayToHexString(Byte[])
+  fullName: EvilDICOM.Core.Helpers.ByteHelper.ByteArrayToHexString(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/ByteHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ByteArrayToHexString
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/ByteHelper.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  summary: "\nThis method converts an array of bytes to a hexadecimal string\n"
+  example: []
+  syntax:
+    content: public static string ByteArrayToHexString(byte[] Bytes)
+    parameters:
+    - id: Bytes
+      type: System.Byte[]
+      description: the array of bytes to be converted
+    return:
+      type: System.String
+      description: a hexadecimal string representing the array of bytes passed in
+    content.vb: Public Shared Function ByteArrayToHexString(Bytes As Byte()) As String
+  overload: EvilDICOM.Core.Helpers.ByteHelper.ByteArrayToHexString*
+  nameWithType.vb: ByteHelper.ByteArrayToHexString(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.Helpers.ByteHelper.ByteArrayToHexString(System.Byte())
+  name.vb: ByteArrayToHexString(Byte())
+- uid: EvilDICOM.Core.Helpers.ByteHelper.ByteToHexString(System.Byte)
+  commentId: M:EvilDICOM.Core.Helpers.ByteHelper.ByteToHexString(System.Byte)
+  id: ByteToHexString(System.Byte)
+  parent: EvilDICOM.Core.Helpers.ByteHelper
+  langs:
+  - csharp
+  - vb
+  name: ByteToHexString(Byte)
+  nameWithType: ByteHelper.ByteToHexString(Byte)
+  fullName: EvilDICOM.Core.Helpers.ByteHelper.ByteToHexString(System.Byte)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/ByteHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ByteToHexString
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/ByteHelper.cs
+    startLine: 31
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  summary: "\nThis method converts an array of bytes to a hexadecimal string\n"
+  example: []
+  syntax:
+    content: public static string ByteToHexString(byte b)
+    parameters:
+    - id: b
+      type: System.Byte
+    return:
+      type: System.String
+      description: a hexadecimal string representing the array of bytes passed in
+    content.vb: Public Shared Function ByteToHexString(b As Byte) As String
+  overload: EvilDICOM.Core.Helpers.ByteHelper.ByteToHexString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.ByteHelper.HexStringToByteArray(System.String)
+  commentId: M:EvilDICOM.Core.Helpers.ByteHelper.HexStringToByteArray(System.String)
+  id: HexStringToByteArray(System.String)
+  parent: EvilDICOM.Core.Helpers.ByteHelper
+  langs:
+  - csharp
+  - vb
+  name: HexStringToByteArray(String)
+  nameWithType: ByteHelper.HexStringToByteArray(String)
+  fullName: EvilDICOM.Core.Helpers.ByteHelper.HexStringToByteArray(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/ByteHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HexStringToByteArray
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/ByteHelper.cs
+    startLine: 45
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  summary: "\nThis method converts a hexadecimal string to an array of bytes.\n"
+  example: []
+  syntax:
+    content: public static byte[] HexStringToByteArray(string hexString)
+    parameters:
+    - id: hexString
+      type: System.String
+      description: the hexadecimal string to be converted
+    return:
+      type: System.Byte[]
+      description: an array of bytes representing the hexadecimal string passed in
+    content.vb: Public Shared Function HexStringToByteArray(hexString As String) As Byte()
+  overload: EvilDICOM.Core.Helpers.ByteHelper.HexStringToByteArray*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.ByteHelper.GetHexStringArray(System.Byte[])
+  commentId: M:EvilDICOM.Core.Helpers.ByteHelper.GetHexStringArray(System.Byte[])
+  id: GetHexStringArray(System.Byte[])
+  parent: EvilDICOM.Core.Helpers.ByteHelper
+  langs:
+  - csharp
+  - vb
+  name: GetHexStringArray(Byte[])
+  nameWithType: ByteHelper.GetHexStringArray(Byte[])
+  fullName: EvilDICOM.Core.Helpers.ByteHelper.GetHexStringArray(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/ByteHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetHexStringArray
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/ByteHelper.cs
+    startLine: 64
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string[] GetHexStringArray(byte[] bytes)
+    parameters:
+    - id: bytes
+      type: System.Byte[]
+    return:
+      type: System.String[]
+    content.vb: Public Shared Function GetHexStringArray(bytes As Byte()) As String()
+  overload: EvilDICOM.Core.Helpers.ByteHelper.GetHexStringArray*
+  nameWithType.vb: ByteHelper.GetHexStringArray(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.Helpers.ByteHelper.GetHexStringArray(System.Byte())
+  name.vb: GetHexStringArray(Byte())
+- uid: EvilDICOM.Core.Helpers.ByteHelper.AreEqual(System.Byte[],System.Byte[])
+  commentId: M:EvilDICOM.Core.Helpers.ByteHelper.AreEqual(System.Byte[],System.Byte[])
+  id: AreEqual(System.Byte[],System.Byte[])
+  parent: EvilDICOM.Core.Helpers.ByteHelper
+  langs:
+  - csharp
+  - vb
+  name: AreEqual(Byte[], Byte[])
+  nameWithType: ByteHelper.AreEqual(Byte[], Byte[])
+  fullName: EvilDICOM.Core.Helpers.ByteHelper.AreEqual(System.Byte[], System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/ByteHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AreEqual
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/ByteHelper.cs
+    startLine: 74
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static bool AreEqual(byte[] bytes, byte[] toCompare)
+    parameters:
+    - id: bytes
+      type: System.Byte[]
+    - id: toCompare
+      type: System.Byte[]
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function AreEqual(bytes As Byte(), toCompare As Byte()) As Boolean
+  overload: EvilDICOM.Core.Helpers.ByteHelper.AreEqual*
+  nameWithType.vb: ByteHelper.AreEqual(Byte(), Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.Helpers.ByteHelper.AreEqual(System.Byte(), System.Byte())
+  name.vb: AreEqual(Byte(), Byte())
+references:
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  isExternal: false
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Helpers.ByteHelper.ByteArrayToHexString*
+  commentId: Overload:EvilDICOM.Core.Helpers.ByteHelper.ByteArrayToHexString
+  isExternal: false
+  name: ByteArrayToHexString
+  nameWithType: ByteHelper.ByteArrayToHexString
+  fullName: EvilDICOM.Core.Helpers.ByteHelper.ByteArrayToHexString
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Core.Helpers.ByteHelper.ByteToHexString*
+  commentId: Overload:EvilDICOM.Core.Helpers.ByteHelper.ByteToHexString
+  isExternal: false
+  name: ByteToHexString
+  nameWithType: ByteHelper.ByteToHexString
+  fullName: EvilDICOM.Core.Helpers.ByteHelper.ByteToHexString
+- uid: System.Byte
+  isExternal: true
+  name: Byte
+  nameWithType: Byte
+  fullName: System.Byte
+- uid: EvilDICOM.Core.Helpers.ByteHelper.HexStringToByteArray*
+  commentId: Overload:EvilDICOM.Core.Helpers.ByteHelper.HexStringToByteArray
+  isExternal: false
+  name: HexStringToByteArray
+  nameWithType: ByteHelper.HexStringToByteArray
+  fullName: EvilDICOM.Core.Helpers.ByteHelper.HexStringToByteArray
+- uid: EvilDICOM.Core.Helpers.ByteHelper.GetHexStringArray*
+  commentId: Overload:EvilDICOM.Core.Helpers.ByteHelper.GetHexStringArray
+  isExternal: false
+  name: GetHexStringArray
+  nameWithType: ByteHelper.GetHexStringArray
+  fullName: EvilDICOM.Core.Helpers.ByteHelper.GetHexStringArray
+- uid: System.String[]
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.Helpers.ByteHelper.AreEqual*
+  commentId: Overload:EvilDICOM.Core.Helpers.ByteHelper.AreEqual
+  isExternal: false
+  name: AreEqual
+  nameWithType: ByteHelper.AreEqual
+  fullName: EvilDICOM.Core.Helpers.ByteHelper.AreEqual
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean

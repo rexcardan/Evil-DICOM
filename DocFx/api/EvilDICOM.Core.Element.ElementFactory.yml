@@ -1,0 +1,231 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Element.ElementFactory
+  commentId: T:EvilDICOM.Core.Element.ElementFactory
+  id: ElementFactory
+  parent: EvilDICOM.Core.Element
+  children:
+  - EvilDICOM.Core.Element.ElementFactory.GenerateElement(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Enums.VR,System.Object,EvilDICOM.Core.Enums.TransferSyntax)
+  - EvilDICOM.Core.Element.ElementFactory.GenerateElementFromStringData(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Enums.VR,System.String[])
+  langs:
+  - csharp
+  - vb
+  name: ElementFactory
+  nameWithType: ElementFactory
+  fullName: EvilDICOM.Core.Element.ElementFactory
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/_ElementFactory.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ElementFactory
+    path: ../EvilDICOM/EvilDICOM/Core/Element/_ElementFactory.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nResponsible for building concrete elements from element pieces\n"
+  example: []
+  syntax:
+    content: 'public class ElementFactory : object'
+    content.vb: >-
+      Public Class ElementFactory
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Element.ElementFactory.GenerateElement(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Enums.VR,System.Object,EvilDICOM.Core.Enums.TransferSyntax)
+  commentId: M:EvilDICOM.Core.Element.ElementFactory.GenerateElement(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Enums.VR,System.Object,EvilDICOM.Core.Enums.TransferSyntax)
+  id: GenerateElement(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Enums.VR,System.Object,EvilDICOM.Core.Enums.TransferSyntax)
+  parent: EvilDICOM.Core.Element.ElementFactory
+  langs:
+  - csharp
+  - vb
+  name: GenerateElement(Tag, VR, Object, TransferSyntax)
+  nameWithType: ElementFactory.GenerateElement(Tag, VR, Object, TransferSyntax)
+  fullName: EvilDICOM.Core.Element.ElementFactory.GenerateElement(EvilDICOM.Core.Element.Tag, EvilDICOM.Core.Enums.VR, System.Object, EvilDICOM.Core.Enums.TransferSyntax)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/_ElementFactory.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GenerateElement
+    path: ../EvilDICOM/EvilDICOM/Core/Element/_ElementFactory.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nGenerates a concrete element class from the VR, tag, data and syntax. Also directs the appropriate data\ninterpretation.\n"
+  example: []
+  syntax:
+    content: public static IDICOMElement GenerateElement(Tag tag, VR vr, object data, TransferSyntax syntax)
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+      description: the tag of the element to be generated
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+      description: the VR of the element to be generated
+    - id: data
+      type: System.Object
+      description: the raw data to be procesed (byte array)
+    - id: syntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+      description: the transfer syntax by which to interepret the data
+    return:
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: a concrete DICOM element that uses the interface IDICOMElement
+    content.vb: Public Shared Function GenerateElement(tag As Tag, vr As VR, data As Object, syntax As TransferSyntax) As IDICOMElement
+  overload: EvilDICOM.Core.Element.ElementFactory.GenerateElement*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Element.ElementFactory.GenerateElementFromStringData(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Enums.VR,System.String[])
+  commentId: M:EvilDICOM.Core.Element.ElementFactory.GenerateElementFromStringData(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Enums.VR,System.String[])
+  id: GenerateElementFromStringData(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Enums.VR,System.String[])
+  parent: EvilDICOM.Core.Element.ElementFactory
+  langs:
+  - csharp
+  - vb
+  name: GenerateElementFromStringData(Tag, VR, String[])
+  nameWithType: ElementFactory.GenerateElementFromStringData(Tag, VR, String[])
+  fullName: EvilDICOM.Core.Element.ElementFactory.GenerateElementFromStringData(EvilDICOM.Core.Element.Tag, EvilDICOM.Core.Enums.VR, System.String[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/_ElementFactory.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GenerateElementFromStringData
+    path: ../EvilDICOM/EvilDICOM/Core/Element/_ElementFactory.cs
+    startLine: 113
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nGenerates a concrete element class from the VR, tag, data and string data (from XML). \n"
+  example: []
+  syntax:
+    content: public static IDICOMElement GenerateElementFromStringData(Tag tag, VR vr, string[] data)
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+      description: the tag of the element to be generated
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+      description: the VR of the element to be generated
+    - id: data
+      type: System.String[]
+      description: the string data of the element
+    return:
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: a concrete DICOM element that uses the interface IDICOMElement
+    content.vb: Public Shared Function GenerateElementFromStringData(tag As Tag, vr As VR, data As String()) As IDICOMElement
+  overload: EvilDICOM.Core.Element.ElementFactory.GenerateElementFromStringData*
+  nameWithType.vb: ElementFactory.GenerateElementFromStringData(Tag, VR, String())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.Element.ElementFactory.GenerateElementFromStringData(EvilDICOM.Core.Element.Tag, EvilDICOM.Core.Enums.VR, System.String())
+  name.vb: GenerateElementFromStringData(Tag, VR, String())
+references:
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  isExternal: false
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Element.ElementFactory.GenerateElement*
+  commentId: Overload:EvilDICOM.Core.Element.ElementFactory.GenerateElement
+  isExternal: false
+  name: GenerateElement
+  nameWithType: ElementFactory.GenerateElement
+  fullName: EvilDICOM.Core.Element.ElementFactory.GenerateElement
+- uid: EvilDICOM.Core.Element.Tag
+  commentId: T:EvilDICOM.Core.Element.Tag
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: Tag
+  nameWithType: Tag
+  fullName: EvilDICOM.Core.Element.Tag
+- uid: EvilDICOM.Core.Enums.VR
+  commentId: T:EvilDICOM.Core.Enums.VR
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: VR
+  nameWithType: VR
+  fullName: EvilDICOM.Core.Enums.VR
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  commentId: T:EvilDICOM.Core.Enums.TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: TransferSyntax
+  nameWithType: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  commentId: T:EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IDICOMElement
+  nameWithType: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Core.Element.ElementFactory.GenerateElementFromStringData*
+  commentId: Overload:EvilDICOM.Core.Element.ElementFactory.GenerateElementFromStringData
+  isExternal: false
+  name: GenerateElementFromStringData
+  nameWithType: ElementFactory.GenerateElementFromStringData
+  fullName: EvilDICOM.Core.Element.ElementFactory.GenerateElementFromStringData
+- uid: System.String[]
+  name: String[]
+  nameWithType: String[]
+  fullName: System.String[]
+  nameWithType.vb: String()
+  fullName.vb: System.String()
+  name.vb: String()
+  spec.csharp:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

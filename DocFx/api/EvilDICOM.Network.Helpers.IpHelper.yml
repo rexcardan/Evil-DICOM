@@ -1,0 +1,96 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Helpers.IpHelper
+  commentId: T:EvilDICOM.Network.Helpers.IpHelper
+  id: IpHelper
+  parent: EvilDICOM.Network.Helpers
+  children:
+  - EvilDICOM.Network.Helpers.IpHelper.LocalIPAddress
+  langs:
+  - csharp
+  - vb
+  name: IpHelper
+  nameWithType: IpHelper
+  fullName: EvilDICOM.Network.Helpers.IpHelper
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Helpers/IpHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IpHelper
+    path: ../EvilDICOM/EvilDICOM/Network/Helpers/IpHelper.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Helpers
+  syntax:
+    content: 'public class IpHelper : object'
+    content.vb: >-
+      Public Class IpHelper
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Helpers.IpHelper.LocalIPAddress
+  commentId: M:EvilDICOM.Network.Helpers.IpHelper.LocalIPAddress
+  id: LocalIPAddress
+  parent: EvilDICOM.Network.Helpers.IpHelper
+  langs:
+  - csharp
+  - vb
+  name: LocalIPAddress()
+  nameWithType: IpHelper.LocalIPAddress()
+  fullName: EvilDICOM.Network.Helpers.IpHelper.LocalIPAddress()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Helpers/IpHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: LocalIPAddress
+    path: ../EvilDICOM/EvilDICOM/Network/Helpers/IpHelper.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Helpers
+  syntax:
+    content: public static string LocalIPAddress()
+    return:
+      type: System.String
+    content.vb: Public Shared Function LocalIPAddress As String
+  overload: EvilDICOM.Network.Helpers.IpHelper.LocalIPAddress*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Network.Helpers
+  commentId: N:EvilDICOM.Network.Helpers
+  isExternal: false
+  name: EvilDICOM.Network.Helpers
+  nameWithType: EvilDICOM.Network.Helpers
+  fullName: EvilDICOM.Network.Helpers
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.Helpers.IpHelper.LocalIPAddress*
+  commentId: Overload:EvilDICOM.Network.Helpers.IpHelper.LocalIPAddress
+  isExternal: false
+  name: LocalIPAddress
+  nameWithType: IpHelper.LocalIPAddress
+  fullName: EvilDICOM.Network.Helpers.IpHelper.LocalIPAddress
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

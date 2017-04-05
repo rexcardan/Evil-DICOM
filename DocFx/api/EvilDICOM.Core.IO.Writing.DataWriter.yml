@@ -1,0 +1,186 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Writing.DataWriter
+  commentId: T:EvilDICOM.Core.IO.Writing.DataWriter
+  id: DataWriter
+  parent: EvilDICOM.Core.IO.Writing
+  children:
+  - EvilDICOM.Core.IO.Writing.DataWriter.WriteBigEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Interfaces.IDICOMElement)
+  - EvilDICOM.Core.IO.Writing.DataWriter.WriteLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Interfaces.IDICOMElement)
+  langs:
+  - csharp
+  - vb
+  name: DataWriter
+  nameWithType: DataWriter
+  fullName: EvilDICOM.Core.IO.Writing.DataWriter
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DataWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DataWriter
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/DataWriter.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: 'public class DataWriter : object'
+    content.vb: >-
+      Public Class DataWriter
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Writing.DataWriter.WriteLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Interfaces.IDICOMElement)
+  commentId: M:EvilDICOM.Core.IO.Writing.DataWriter.WriteLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Interfaces.IDICOMElement)
+  id: WriteLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Interfaces.IDICOMElement)
+  parent: EvilDICOM.Core.IO.Writing.DataWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteLittleEndian(DICOMBinaryWriter, VR, DICOMWriteSettings, IDICOMElement)
+  nameWithType: DataWriter.WriteLittleEndian(DICOMBinaryWriter, VR, DICOMWriteSettings, IDICOMElement)
+  fullName: EvilDICOM.Core.IO.Writing.DataWriter.WriteLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter, EvilDICOM.Core.Enums.VR, EvilDICOM.Core.IO.Writing.DICOMWriteSettings, EvilDICOM.Core.Interfaces.IDICOMElement)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DataWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteLittleEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/DataWriter.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static void WriteLittleEndian(DICOMBinaryWriter dw, VR vr, DICOMWriteSettings settings, IDICOMElement toWrite)
+    parameters:
+    - id: dw
+      type: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    - id: toWrite
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+    content.vb: Public Shared Sub WriteLittleEndian(dw As DICOMBinaryWriter, vr As VR, settings As DICOMWriteSettings, toWrite As IDICOMElement)
+  overload: EvilDICOM.Core.IO.Writing.DataWriter.WriteLittleEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Writing.DataWriter.WriteBigEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Interfaces.IDICOMElement)
+  commentId: M:EvilDICOM.Core.IO.Writing.DataWriter.WriteBigEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Interfaces.IDICOMElement)
+  id: WriteBigEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Interfaces.IDICOMElement)
+  parent: EvilDICOM.Core.IO.Writing.DataWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteBigEndian(DICOMBinaryWriter, VR, DICOMWriteSettings, IDICOMElement)
+  nameWithType: DataWriter.WriteBigEndian(DICOMBinaryWriter, VR, DICOMWriteSettings, IDICOMElement)
+  fullName: EvilDICOM.Core.IO.Writing.DataWriter.WriteBigEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter, EvilDICOM.Core.Enums.VR, EvilDICOM.Core.IO.Writing.DICOMWriteSettings, EvilDICOM.Core.Interfaces.IDICOMElement)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DataWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteBigEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/DataWriter.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static void WriteBigEndian(DICOMBinaryWriter dw, VR vr, DICOMWriteSettings settings, IDICOMElement toWrite)
+    parameters:
+    - id: dw
+      type: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    - id: toWrite
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+    content.vb: Public Shared Sub WriteBigEndian(dw As DICOMBinaryWriter, vr As VR, settings As DICOMWriteSettings, toWrite As IDICOMElement)
+  overload: EvilDICOM.Core.IO.Writing.DataWriter.WriteBigEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.IO.Writing
+  commentId: N:EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: EvilDICOM.Core.IO.Writing
+  nameWithType: EvilDICOM.Core.IO.Writing
+  fullName: EvilDICOM.Core.IO.Writing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.IO.Writing.DataWriter.WriteLittleEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DataWriter.WriteLittleEndian
+  isExternal: false
+  name: WriteLittleEndian
+  nameWithType: DataWriter.WriteLittleEndian
+  fullName: EvilDICOM.Core.IO.Writing.DataWriter.WriteLittleEndian
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  parent: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: DICOMBinaryWriter
+  nameWithType: DICOMBinaryWriter
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+- uid: EvilDICOM.Core.Enums.VR
+  commentId: T:EvilDICOM.Core.Enums.VR
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: VR
+  nameWithType: VR
+  fullName: EvilDICOM.Core.Enums.VR
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  parent: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: DICOMWriteSettings
+  nameWithType: DICOMWriteSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  commentId: T:EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IDICOMElement
+  nameWithType: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Core.IO.Writing.DataWriter.WriteBigEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DataWriter.WriteBigEndian
+  isExternal: false
+  name: WriteBigEndian
+  nameWithType: DataWriter.WriteBigEndian
+  fullName: EvilDICOM.Core.IO.Writing.DataWriter.WriteBigEndian

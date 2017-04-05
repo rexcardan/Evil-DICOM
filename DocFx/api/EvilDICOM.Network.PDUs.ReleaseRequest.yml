@@ -1,0 +1,271 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.PDUs.ReleaseRequest
+  commentId: T:EvilDICOM.Network.PDUs.ReleaseRequest
+  id: ReleaseRequest
+  parent: EvilDICOM.Network.PDUs
+  children:
+  - EvilDICOM.Network.PDUs.ReleaseRequest.ToString
+  - EvilDICOM.Network.PDUs.ReleaseRequest.Type
+  - EvilDICOM.Network.PDUs.ReleaseRequest.Write
+  langs:
+  - csharp
+  - vb
+  name: ReleaseRequest
+  nameWithType: ReleaseRequest
+  fullName: EvilDICOM.Network.PDUs.ReleaseRequest
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/ReleaseRequest.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReleaseRequest
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/ReleaseRequest.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: 'public class ReleaseRequest : object, IPDU'
+    content.vb: >-
+      Public Class ReleaseRequest
+          Inherits Object
+          Implements IPDU
+  inheritance:
+  - System.Object
+  implements:
+  - EvilDICOM.Network.Interfaces.IPDU
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.PDUs.ReleaseRequest.Write
+  commentId: M:EvilDICOM.Network.PDUs.ReleaseRequest.Write
+  id: Write
+  parent: EvilDICOM.Network.PDUs.ReleaseRequest
+  langs:
+  - csharp
+  - vb
+  name: Write()
+  nameWithType: ReleaseRequest.Write()
+  fullName: EvilDICOM.Network.PDUs.ReleaseRequest.Write()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/ReleaseRequest.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Write
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/ReleaseRequest.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public byte[] Write()
+    return:
+      type: System.Byte[]
+    content.vb: Public Function Write As Byte()
+  overload: EvilDICOM.Network.PDUs.ReleaseRequest.Write*
+  implements:
+  - EvilDICOM.Network.Interfaces.IPDU.Write
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.ReleaseRequest.Type
+  commentId: P:EvilDICOM.Network.PDUs.ReleaseRequest.Type
+  id: Type
+  parent: EvilDICOM.Network.PDUs.ReleaseRequest
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: ReleaseRequest.Type
+  fullName: EvilDICOM.Network.PDUs.ReleaseRequest.Type
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/ReleaseRequest.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Type
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/ReleaseRequest.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public PDUType Type { get; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+    content.vb: Public ReadOnly Property Type As PDUType
+  overload: EvilDICOM.Network.PDUs.ReleaseRequest.Type*
+  implements:
+  - EvilDICOM.Network.Interfaces.IPDU.Type
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.Network.PDUs.ReleaseRequest.ToString
+  commentId: M:EvilDICOM.Network.PDUs.ReleaseRequest.ToString
+  id: ToString
+  parent: EvilDICOM.Network.PDUs.ReleaseRequest
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: ReleaseRequest.ToString()
+  fullName: EvilDICOM.Network.PDUs.ReleaseRequest.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/ReleaseRequest.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToString
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/ReleaseRequest.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overload: EvilDICOM.Network.PDUs.ReleaseRequest.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: EvilDICOM.Network.PDUs
+  commentId: N:EvilDICOM.Network.PDUs
+  isExternal: false
+  name: EvilDICOM.Network.PDUs
+  nameWithType: EvilDICOM.Network.PDUs
+  fullName: EvilDICOM.Network.PDUs
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.Interfaces.IPDU
+  commentId: T:EvilDICOM.Network.Interfaces.IPDU
+  parent: EvilDICOM.Network.Interfaces
+  isExternal: false
+  name: IPDU
+  nameWithType: IPDU
+  fullName: EvilDICOM.Network.Interfaces.IPDU
+- uid: EvilDICOM.Network.Interfaces
+  commentId: N:EvilDICOM.Network.Interfaces
+  isExternal: false
+  name: EvilDICOM.Network.Interfaces
+  nameWithType: EvilDICOM.Network.Interfaces
+  fullName: EvilDICOM.Network.Interfaces
+- uid: EvilDICOM.Network.PDUs.ReleaseRequest.Write*
+  commentId: Overload:EvilDICOM.Network.PDUs.ReleaseRequest.Write
+  isExternal: false
+  name: Write
+  nameWithType: ReleaseRequest.Write
+  fullName: EvilDICOM.Network.PDUs.ReleaseRequest.Write
+- uid: EvilDICOM.Network.Interfaces.IPDU.Write
+  commentId: M:EvilDICOM.Network.Interfaces.IPDU.Write
+  parent: EvilDICOM.Network.Interfaces.IPDU
+  isExternal: false
+  name: Write()
+  nameWithType: IPDU.Write()
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Write()
+  spec.csharp:
+  - uid: EvilDICOM.Network.Interfaces.IPDU.Write
+    name: Write
+    nameWithType: IPDU.Write
+    fullName: EvilDICOM.Network.Interfaces.IPDU.Write
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.Interfaces.IPDU.Write
+    name: Write
+    nameWithType: IPDU.Write
+    fullName: EvilDICOM.Network.Interfaces.IPDU.Write
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Network.PDUs.ReleaseRequest.Type*
+  commentId: Overload:EvilDICOM.Network.PDUs.ReleaseRequest.Type
+  isExternal: false
+  name: Type
+  nameWithType: ReleaseRequest.Type
+  fullName: EvilDICOM.Network.PDUs.ReleaseRequest.Type
+- uid: EvilDICOM.Network.Interfaces.IPDU.Type
+  commentId: P:EvilDICOM.Network.Interfaces.IPDU.Type
+  parent: EvilDICOM.Network.Interfaces.IPDU
+  isExternal: false
+  name: Type
+  nameWithType: IPDU.Type
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Type
+- uid: EvilDICOM.Network.Enums.PDUType
+  commentId: T:EvilDICOM.Network.Enums.PDUType
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: PDUType
+  nameWithType: PDUType
+  fullName: EvilDICOM.Network.Enums.PDUType
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.PDUs.ReleaseRequest.ToString*
+  commentId: Overload:EvilDICOM.Network.PDUs.ReleaseRequest.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: ReleaseRequest.ToString
+  fullName: EvilDICOM.Network.PDUs.ReleaseRequest.ToString
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

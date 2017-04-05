@@ -1,0 +1,541 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.DICOMData`1
+  commentId: T:EvilDICOM.Core.DICOMData`1
+  id: DICOMData`1
+  parent: EvilDICOM.Core
+  children:
+  - EvilDICOM.Core.DICOMData`1.#ctor
+  - EvilDICOM.Core.DICOMData`1.CreateFromArray(`0[])
+  - EvilDICOM.Core.DICOMData`1.CreateFromSingle(`0)
+  - EvilDICOM.Core.DICOMData`1.MultipicityValue
+  - EvilDICOM.Core.DICOMData`1.SingleValue
+  - EvilDICOM.Core.DICOMData`1.ToString
+  - EvilDICOM.Core.DICOMData`1.ToString(System.String)
+  langs:
+  - csharp
+  - vb
+  name: DICOMData<T>
+  nameWithType: DICOMData<T>
+  fullName: EvilDICOM.Core.DICOMData<T>
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOMData
+    path: ../EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: "\nA class to hold DICOM data. DICOM data is unique in that it can be a single value, multiple values and null. This\nclass tries to encapsulate those attributes while maintaining a flexible programming interface.\n"
+  example: []
+  syntax:
+    content: 'public class DICOMData<T> : object'
+    typeParameters:
+    - id: T
+      description: ''
+    content.vb: >-
+      Public Class DICOMData(Of T)
+          Inherits Object
+  inheritance:
+  - System.Object
+  nameWithType.vb: DICOMData(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T)
+  name.vb: DICOMData(Of T)
+- uid: EvilDICOM.Core.DICOMData`1.#ctor
+  commentId: M:EvilDICOM.Core.DICOMData`1.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Core.DICOMData`1
+  langs:
+  - csharp
+  - vb
+  name: DICOMData()
+  nameWithType: DICOMData<T>.DICOMData()
+  fullName: EvilDICOM.Core.DICOMData<T>.DICOMData()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: "\nThe constructor which ininitializes the underlying enumerable collection\n"
+  example: []
+  syntax:
+    content: public DICOMData()
+    content.vb: Public Sub New
+  overload: EvilDICOM.Core.DICOMData`1.#ctor*
+  nameWithType.vb: DICOMData(Of T).DICOMData()
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).DICOMData()
+- uid: EvilDICOM.Core.DICOMData`1.SingleValue
+  commentId: P:EvilDICOM.Core.DICOMData`1.SingleValue
+  id: SingleValue
+  parent: EvilDICOM.Core.DICOMData`1
+  langs:
+  - csharp
+  - vb
+  name: SingleValue
+  nameWithType: DICOMData<T>.SingleValue
+  fullName: EvilDICOM.Core.DICOMData<T>.SingleValue
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SingleValue
+    path: ../EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: "\nGets and sets a single value for the data of the DICOM element. If the collection contains has more than one data\nelement, only the first is returned. If setting a value, the data is cleared and only a single entry is saved.\n"
+  example: []
+  syntax:
+    content: public T SingleValue { get; set; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public Property SingleValue As T
+  overload: EvilDICOM.Core.DICOMData`1.SingleValue*
+  nameWithType.vb: DICOMData(Of T).SingleValue
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).SingleValue
+- uid: EvilDICOM.Core.DICOMData`1.MultipicityValue
+  commentId: P:EvilDICOM.Core.DICOMData`1.MultipicityValue
+  id: MultipicityValue
+  parent: EvilDICOM.Core.DICOMData`1
+  langs:
+  - csharp
+  - vb
+  name: MultipicityValue
+  nameWithType: DICOMData<T>.MultipicityValue
+  fullName: EvilDICOM.Core.DICOMData<T>.MultipicityValue
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MultipicityValue
+    path: ../EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 39
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: "\nA list of the data within the element. This is designed to be accomodate the multiplicity aspect of DICOM data\n"
+  example: []
+  syntax:
+    content: public List<T> MultipicityValue { get; set; }
+    parameters: []
+    return:
+      type: List{{T}}
+    content.vb: Public Property MultipicityValue As List(Of T)
+  overload: EvilDICOM.Core.DICOMData`1.MultipicityValue*
+  nameWithType.vb: DICOMData(Of T).MultipicityValue
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).MultipicityValue
+- uid: EvilDICOM.Core.DICOMData`1.CreateFromSingle(`0)
+  commentId: M:EvilDICOM.Core.DICOMData`1.CreateFromSingle(`0)
+  id: CreateFromSingle(`0)
+  parent: EvilDICOM.Core.DICOMData`1
+  langs:
+  - csharp
+  - vb
+  name: CreateFromSingle(T)
+  nameWithType: DICOMData<T>.CreateFromSingle(T)
+  fullName: EvilDICOM.Core.DICOMData<T>.CreateFromSingle(T)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CreateFromSingle
+    path: ../EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 50
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: "\nCreates a new DICOM Data object from a single data value\n"
+  example: []
+  syntax:
+    content: public static DICOMData<T> CreateFromSingle(T dataValue)
+    parameters:
+    - id: dataValue
+      type: '{T}'
+      description: the data value from which to initialize the DICOM Data object
+    return:
+      type: EvilDICOM.Core.DICOMData`1
+      description: ''
+    content.vb: Public Shared Function CreateFromSingle(dataValue As T) As DICOMData(Of T)
+  overload: EvilDICOM.Core.DICOMData`1.CreateFromSingle*
+  nameWithType.vb: DICOMData(Of T).CreateFromSingle(T)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).CreateFromSingle(T)
+- uid: EvilDICOM.Core.DICOMData`1.CreateFromArray(`0[])
+  commentId: M:EvilDICOM.Core.DICOMData`1.CreateFromArray(`0[])
+  id: CreateFromArray(`0[])
+  parent: EvilDICOM.Core.DICOMData`1
+  langs:
+  - csharp
+  - vb
+  name: CreateFromArray(T[])
+  nameWithType: DICOMData<T>.CreateFromArray(T[])
+  fullName: EvilDICOM.Core.DICOMData<T>.CreateFromArray(T[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CreateFromArray
+    path: ../EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 66
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: "\nCreates a new DICOM Data object from an array of data\n"
+  example: []
+  syntax:
+    content: public static DICOMData<T> CreateFromArray(T[] dataArray)
+    parameters:
+    - id: dataArray
+      type: '{T}[]'
+      description: the data array from which to initialize the DICOM Data object
+    return:
+      type: EvilDICOM.Core.DICOMData`1
+      description: ''
+    content.vb: Public Shared Function CreateFromArray(dataArray As T()) As DICOMData(Of T)
+  overload: EvilDICOM.Core.DICOMData`1.CreateFromArray*
+  nameWithType.vb: DICOMData(Of T).CreateFromArray(T())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).CreateFromArray(T())
+  name.vb: CreateFromArray(T())
+- uid: EvilDICOM.Core.DICOMData`1.ToString
+  commentId: M:EvilDICOM.Core.DICOMData`1.ToString
+  id: ToString
+  parent: EvilDICOM.Core.DICOMData`1
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: DICOMData<T>.ToString()
+  fullName: EvilDICOM.Core.DICOMData<T>.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToString
+    path: ../EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 76
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overload: EvilDICOM.Core.DICOMData`1.ToString*
+  nameWithType.vb: DICOMData(Of T).ToString()
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).ToString()
+- uid: EvilDICOM.Core.DICOMData`1.ToString(System.String)
+  commentId: M:EvilDICOM.Core.DICOMData`1.ToString(System.String)
+  id: ToString(System.String)
+  parent: EvilDICOM.Core.DICOMData`1
+  langs:
+  - csharp
+  - vb
+  name: ToString(String)
+  nameWithType: DICOMData<T>.ToString(String)
+  fullName: EvilDICOM.Core.DICOMData<T>.ToString(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMData.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToString
+    path: ../EvilDICOM/EvilDICOM/Core/DICOMData.cs
+    startLine: 86
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: "\nConverts the data to a string separated value\n"
+  example: []
+  syntax:
+    content: public string ToString(string split = "\\")
+    parameters:
+    - id: split
+      type: System.String
+      description: the separation character to use between the data elements (default is \)
+    return:
+      type: System.String
+      description: the data as a string
+    content.vb: Public Function ToString(split As String = "\") As String
+  overload: EvilDICOM.Core.DICOMData`1.ToString*
+  nameWithType.vb: DICOMData(Of T).ToString(String)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).ToString(System.String)
+references:
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.DICOMData`1.#ctor*
+  commentId: Overload:EvilDICOM.Core.DICOMData`1.#ctor
+  isExternal: false
+  name: DICOMData
+  nameWithType: DICOMData<T>.DICOMData
+  fullName: EvilDICOM.Core.DICOMData<T>.DICOMData
+  nameWithType.vb: DICOMData(Of T).DICOMData
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).DICOMData
+- uid: EvilDICOM.Core.DICOMData`1.SingleValue*
+  commentId: Overload:EvilDICOM.Core.DICOMData`1.SingleValue
+  isExternal: false
+  name: SingleValue
+  nameWithType: DICOMData<T>.SingleValue
+  fullName: EvilDICOM.Core.DICOMData<T>.SingleValue
+  nameWithType.vb: DICOMData(Of T).SingleValue
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).SingleValue
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: EvilDICOM.Core.DICOMData`1.MultipicityValue*
+  commentId: Overload:EvilDICOM.Core.DICOMData`1.MultipicityValue
+  isExternal: false
+  name: MultipicityValue
+  nameWithType: DICOMData<T>.MultipicityValue
+  fullName: EvilDICOM.Core.DICOMData<T>.MultipicityValue
+  nameWithType.vb: DICOMData(Of T).MultipicityValue
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).MultipicityValue
+- uid: List{{T}}
+  commentId: '!:List{`0}'
+  definition: List`1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.DICOMData`1.CreateFromSingle*
+  commentId: Overload:EvilDICOM.Core.DICOMData`1.CreateFromSingle
+  isExternal: false
+  name: CreateFromSingle
+  nameWithType: DICOMData<T>.CreateFromSingle
+  fullName: EvilDICOM.Core.DICOMData<T>.CreateFromSingle
+  nameWithType.vb: DICOMData(Of T).CreateFromSingle
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).CreateFromSingle
+- uid: EvilDICOM.Core.DICOMData`1
+  commentId: T:EvilDICOM.Core.DICOMData`1
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMData<T>
+  nameWithType: DICOMData<T>
+  fullName: EvilDICOM.Core.DICOMData<T>
+  nameWithType.vb: DICOMData(Of T)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T)
+  name.vb: DICOMData(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.DICOMData`1.CreateFromArray*
+  commentId: Overload:EvilDICOM.Core.DICOMData`1.CreateFromArray
+  isExternal: false
+  name: CreateFromArray
+  nameWithType: DICOMData<T>.CreateFromArray
+  fullName: EvilDICOM.Core.DICOMData<T>.CreateFromArray
+  nameWithType.vb: DICOMData(Of T).CreateFromArray
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).CreateFromArray
+- uid: '{T}[]'
+  name: T[]
+  nameWithType: T[]
+  fullName: T[]
+  nameWithType.vb: T()
+  fullName.vb: T()
+  name.vb: T()
+  spec.csharp:
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.DICOMData`1.ToString*
+  commentId: Overload:EvilDICOM.Core.DICOMData`1.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: DICOMData<T>.ToString
+  fullName: EvilDICOM.Core.DICOMData<T>.ToString
+  nameWithType.vb: DICOMData(Of T).ToString
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T).ToString
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

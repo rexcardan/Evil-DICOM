@@ -1,0 +1,339 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Extensions.AssociationExtensions
+  commentId: T:EvilDICOM.Network.Extensions.AssociationExtensions
+  id: AssociationExtensions
+  parent: EvilDICOM.Network.Extensions
+  children:
+  - EvilDICOM.Network.Extensions.AssociationExtensions.GetResponseContexts(EvilDICOM.Network.Association,IEnumerable{EvilDICOM.Network.PDUs.Items.PresentationContext})
+  - EvilDICOM.Network.Extensions.AssociationExtensions.SetFinalContexts(EvilDICOM.Network.Association,EvilDICOM.Network.PDUs.Accept)
+  langs:
+  - csharp
+  - vb
+  name: AssociationExtensions
+  nameWithType: AssociationExtensions
+  fullName: EvilDICOM.Network.Extensions.AssociationExtensions
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Extensions/AssociationExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AssociationExtensions
+    path: ../EvilDICOM/EvilDICOM/Network/Extensions/AssociationExtensions.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Extensions
+  syntax:
+    content: 'public static class AssociationExtensions : object'
+    content.vb: >-
+      Public Module AssociationExtensions
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: EvilDICOM.Network.Extensions.AssociationExtensions.GetResponseContexts(EvilDICOM.Network.Association,IEnumerable{EvilDICOM.Network.PDUs.Items.PresentationContext})
+  commentId: M:EvilDICOM.Network.Extensions.AssociationExtensions.GetResponseContexts(EvilDICOM.Network.Association,IEnumerable{EvilDICOM.Network.PDUs.Items.PresentationContext})
+  id: GetResponseContexts(EvilDICOM.Network.Association,IEnumerable{EvilDICOM.Network.PDUs.Items.PresentationContext})
+  isExtensionMethod: true
+  parent: EvilDICOM.Network.Extensions.AssociationExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetResponseContexts(Association, IEnumerable<PresentationContext>)
+  nameWithType: AssociationExtensions.GetResponseContexts(Association, IEnumerable<PresentationContext>)
+  fullName: EvilDICOM.Network.Extensions.AssociationExtensions.GetResponseContexts(EvilDICOM.Network.Association, IEnumerable<EvilDICOM.Network.PDUs.Items.PresentationContext>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Extensions/AssociationExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetResponseContexts
+    path: ../EvilDICOM/EvilDICOM/Network/Extensions/AssociationExtensions.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Extensions
+  summary: "\nTakes two sets of presentation contexts (typically from a request and a DICOM Service) and creates the \nagreed presentation context list for the accept response\n"
+  example: []
+  syntax:
+    content: public static List<PresentationContext> GetResponseContexts(this Association asc, IEnumerable<PresentationContext> reqContexts)
+    parameters:
+    - id: asc
+      type: EvilDICOM.Network.Association
+    - id: reqContexts
+      type: IEnumerable{EvilDICOM.Network.PDUs.Items.PresentationContext}
+    return:
+      type: List{EvilDICOM.Network.PDUs.Items.PresentationContext}
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetResponseContexts(asc As Association, reqContexts As IEnumerable(Of PresentationContext)) As List(Of PresentationContext)
+  overload: EvilDICOM.Network.Extensions.AssociationExtensions.GetResponseContexts*
+  nameWithType.vb: AssociationExtensions.GetResponseContexts(Association, IEnumerable(Of PresentationContext))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Network.Extensions.AssociationExtensions.GetResponseContexts(EvilDICOM.Network.Association, IEnumerable(Of EvilDICOM.Network.PDUs.Items.PresentationContext))
+  name.vb: GetResponseContexts(Association, IEnumerable(Of PresentationContext))
+- uid: EvilDICOM.Network.Extensions.AssociationExtensions.SetFinalContexts(EvilDICOM.Network.Association,EvilDICOM.Network.PDUs.Accept)
+  commentId: M:EvilDICOM.Network.Extensions.AssociationExtensions.SetFinalContexts(EvilDICOM.Network.Association,EvilDICOM.Network.PDUs.Accept)
+  id: SetFinalContexts(EvilDICOM.Network.Association,EvilDICOM.Network.PDUs.Accept)
+  isExtensionMethod: true
+  parent: EvilDICOM.Network.Extensions.AssociationExtensions
+  langs:
+  - csharp
+  - vb
+  name: SetFinalContexts(Association, Accept)
+  nameWithType: AssociationExtensions.SetFinalContexts(Association, Accept)
+  fullName: EvilDICOM.Network.Extensions.AssociationExtensions.SetFinalContexts(EvilDICOM.Network.Association, EvilDICOM.Network.PDUs.Accept)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Extensions/AssociationExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SetFinalContexts
+    path: ../EvilDICOM/EvilDICOM/Network/Extensions/AssociationExtensions.cs
+    startLine: 67
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Extensions
+  syntax:
+    content: public static void SetFinalContexts(this Association asc, Accept accept)
+    parameters:
+    - id: asc
+      type: EvilDICOM.Network.Association
+    - id: accept
+      type: EvilDICOM.Network.PDUs.Accept
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetFinalContexts(asc As Association, accept As Accept)
+  overload: EvilDICOM.Network.Extensions.AssociationExtensions.SetFinalContexts*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Network.Extensions
+  commentId: N:EvilDICOM.Network.Extensions
+  isExternal: false
+  name: EvilDICOM.Network.Extensions
+  nameWithType: EvilDICOM.Network.Extensions
+  fullName: EvilDICOM.Network.Extensions
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.Extensions.AssociationExtensions.GetResponseContexts*
+  commentId: Overload:EvilDICOM.Network.Extensions.AssociationExtensions.GetResponseContexts
+  isExternal: false
+  name: GetResponseContexts
+  nameWithType: AssociationExtensions.GetResponseContexts
+  fullName: EvilDICOM.Network.Extensions.AssociationExtensions.GetResponseContexts
+- uid: EvilDICOM.Network.Association
+  commentId: T:EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Association
+  nameWithType: Association
+  fullName: EvilDICOM.Network.Association
+- uid: IEnumerable{EvilDICOM.Network.PDUs.Items.PresentationContext}
+  commentId: '!:IEnumerable{EvilDICOM.Network.PDUs.Items.PresentationContext}'
+  definition: IEnumerable`1
+  name: IEnumerable<PresentationContext>
+  nameWithType: IEnumerable<PresentationContext>
+  fullName: IEnumerable<EvilDICOM.Network.PDUs.Items.PresentationContext>
+  nameWithType.vb: IEnumerable(Of PresentationContext)
+  fullName.vb: IEnumerable(Of EvilDICOM.Network.PDUs.Items.PresentationContext)
+  name.vb: IEnumerable(Of PresentationContext)
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.Items.PresentationContext
+    name: PresentationContext
+    nameWithType: PresentationContext
+    fullName: EvilDICOM.Network.PDUs.Items.PresentationContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.Items.PresentationContext
+    name: PresentationContext
+    nameWithType: PresentationContext
+    fullName: EvilDICOM.Network.PDUs.Items.PresentationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List{EvilDICOM.Network.PDUs.Items.PresentationContext}
+  commentId: '!:List{EvilDICOM.Network.PDUs.Items.PresentationContext}'
+  definition: List`1
+  name: List<PresentationContext>
+  nameWithType: List<PresentationContext>
+  fullName: List<EvilDICOM.Network.PDUs.Items.PresentationContext>
+  nameWithType.vb: List(Of PresentationContext)
+  fullName.vb: List(Of EvilDICOM.Network.PDUs.Items.PresentationContext)
+  name.vb: List(Of PresentationContext)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.Items.PresentationContext
+    name: PresentationContext
+    nameWithType: PresentationContext
+    fullName: EvilDICOM.Network.PDUs.Items.PresentationContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.Items.PresentationContext
+    name: PresentationContext
+    nameWithType: PresentationContext
+    fullName: EvilDICOM.Network.PDUs.Items.PresentationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+- uid: IEnumerable`1
+  isExternal: true
+  name: IEnumerable<>
+  nameWithType: IEnumerable<>
+  fullName: IEnumerable<>
+  nameWithType.vb: IEnumerable(Of )
+  fullName.vb: IEnumerable(Of )
+  name.vb: IEnumerable(Of )
+  spec.csharp:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Extensions.AssociationExtensions.SetFinalContexts*
+  commentId: Overload:EvilDICOM.Network.Extensions.AssociationExtensions.SetFinalContexts
+  isExternal: false
+  name: SetFinalContexts
+  nameWithType: AssociationExtensions.SetFinalContexts
+  fullName: EvilDICOM.Network.Extensions.AssociationExtensions.SetFinalContexts
+- uid: EvilDICOM.Network.PDUs.Accept
+  commentId: T:EvilDICOM.Network.PDUs.Accept
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: Accept
+  nameWithType: Accept
+  fullName: EvilDICOM.Network.PDUs.Accept
+- uid: EvilDICOM.Network.PDUs
+  commentId: N:EvilDICOM.Network.PDUs
+  isExternal: false
+  name: EvilDICOM.Network.PDUs
+  nameWithType: EvilDICOM.Network.PDUs
+  fullName: EvilDICOM.Network.PDUs

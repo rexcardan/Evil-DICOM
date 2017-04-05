@@ -1,0 +1,100 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Writing.DICOMPreambleWriter
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMPreambleWriter
+  id: DICOMPreambleWriter
+  parent: EvilDICOM.Core.IO.Writing
+  children:
+  - EvilDICOM.Core.IO.Writing.DICOMPreambleWriter.Write(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter)
+  langs:
+  - csharp
+  - vb
+  name: DICOMPreambleWriter
+  nameWithType: DICOMPreambleWriter
+  fullName: EvilDICOM.Core.IO.Writing.DICOMPreambleWriter
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMPreambleWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOMPreambleWriter
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMPreambleWriter.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: 'public static class DICOMPreambleWriter : object'
+    content.vb: >-
+      Public Module DICOMPreambleWriter
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: EvilDICOM.Core.IO.Writing.DICOMPreambleWriter.Write(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter)
+  commentId: M:EvilDICOM.Core.IO.Writing.DICOMPreambleWriter.Write(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter)
+  id: Write(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter)
+  parent: EvilDICOM.Core.IO.Writing.DICOMPreambleWriter
+  langs:
+  - csharp
+  - vb
+  name: Write(DICOMBinaryWriter)
+  nameWithType: DICOMPreambleWriter.Write(DICOMBinaryWriter)
+  fullName: EvilDICOM.Core.IO.Writing.DICOMPreambleWriter.Write(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMPreambleWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Write
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMPreambleWriter.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static void Write(DICOMBinaryWriter dw)
+    parameters:
+    - id: dw
+      type: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+    content.vb: Public Shared Sub Write(dw As DICOMBinaryWriter)
+  overload: EvilDICOM.Core.IO.Writing.DICOMPreambleWriter.Write*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.IO.Writing
+  commentId: N:EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: EvilDICOM.Core.IO.Writing
+  nameWithType: EvilDICOM.Core.IO.Writing
+  fullName: EvilDICOM.Core.IO.Writing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.IO.Writing.DICOMPreambleWriter.Write*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DICOMPreambleWriter.Write
+  isExternal: false
+  name: Write
+  nameWithType: DICOMPreambleWriter.Write
+  fullName: EvilDICOM.Core.IO.Writing.DICOMPreambleWriter.Write
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  parent: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: DICOMBinaryWriter
+  nameWithType: DICOMBinaryWriter
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter

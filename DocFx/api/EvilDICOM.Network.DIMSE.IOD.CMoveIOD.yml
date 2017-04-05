@@ -1,0 +1,361 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  id: CMoveIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  children:
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD.PatientId
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD.QueryLevel
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SeriesInstanceUID
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SOPInstanceUID
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SpecificCharacterSeet
+  - EvilDICOM.Network.DIMSE.IOD.CMoveIOD.StudyInstanceUID
+  langs:
+  - csharp
+  - vb
+  name: CMoveIOD
+  nameWithType: CMoveIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CMoveIOD
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: 'public class CMoveIOD : AbstractDIMSEIOD, IIOD'
+    content.vb: >-
+      Public Class CMoveIOD
+          Inherits AbstractDIMSEIOD
+          Implements IIOD
+  inheritance:
+  - System.Object
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  implements:
+  - EvilDICOM.Core.Interfaces.IIOD
+  inheritedMembers:
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.QueryLevel
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CMoveIOD.QueryLevel
+  id: QueryLevel
+  parent: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: QueryLevel
+  nameWithType: CMoveIOD.QueryLevel
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.QueryLevel
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: QueryLevel
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public QueryLevel QueryLevel { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.QueryLevel
+    content.vb: Public Property QueryLevel As QueryLevel
+  overload: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.QueryLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SpecificCharacterSeet
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SpecificCharacterSeet
+  id: SpecificCharacterSeet
+  parent: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: SpecificCharacterSeet
+  nameWithType: CMoveIOD.SpecificCharacterSeet
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SpecificCharacterSeet
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SpecificCharacterSeet
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string SpecificCharacterSeet { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SpecificCharacterSeet As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SpecificCharacterSeet*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.PatientId
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CMoveIOD.PatientId
+  id: PatientId
+  parent: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: PatientId
+  nameWithType: CMoveIOD.PatientId
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.PatientId
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PatientId
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string PatientId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PatientId As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.PatientId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.StudyInstanceUID
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CMoveIOD.StudyInstanceUID
+  id: StudyInstanceUID
+  parent: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: StudyInstanceUID
+  nameWithType: CMoveIOD.StudyInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.StudyInstanceUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StudyInstanceUID
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 33
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string StudyInstanceUID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StudyInstanceUID As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.StudyInstanceUID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SOPInstanceUID
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SOPInstanceUID
+  id: SOPInstanceUID
+  parent: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: SOPInstanceUID
+  nameWithType: CMoveIOD.SOPInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SOPInstanceUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SOPInstanceUID
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 39
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string SOPInstanceUID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SOPInstanceUID As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SOPInstanceUID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SeriesInstanceUID
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SeriesInstanceUID
+  id: SeriesInstanceUID
+  parent: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  langs:
+  - csharp
+  - vb
+  name: SeriesInstanceUID
+  nameWithType: CMoveIOD.SeriesInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SeriesInstanceUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SeriesInstanceUID
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CMoveIOD.cs
+    startLine: 45
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string SeriesInstanceUID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SeriesInstanceUID As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SeriesInstanceUID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Network.DIMSE.IOD
+  commentId: N:EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: EvilDICOM.Network.DIMSE.IOD
+  nameWithType: EvilDICOM.Network.DIMSE.IOD
+  fullName: EvilDICOM.Network.DIMSE.IOD
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: AbstractDIMSEIOD
+  nameWithType: AbstractDIMSEIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+- uid: EvilDICOM.Core.Interfaces.IIOD
+  commentId: T:EvilDICOM.Core.Interfaces.IIOD
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IIOD
+  nameWithType: IIOD
+  fullName: EvilDICOM.Core.Interfaces.IIOD
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+  commentId: F:EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+  parent: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  isExternal: false
+  name: _sel
+  nameWithType: AbstractDIMSEIOD._sel
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+  parent: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  isExternal: false
+  name: Elements
+  nameWithType: AbstractDIMSEIOD.Elements
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.QueryLevel*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CMoveIOD.QueryLevel
+  isExternal: false
+  name: QueryLevel
+  nameWithType: CMoveIOD.QueryLevel
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.QueryLevel
+- uid: EvilDICOM.Network.Enums.QueryLevel
+  commentId: T:EvilDICOM.Network.Enums.QueryLevel
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: QueryLevel
+  nameWithType: QueryLevel
+  fullName: EvilDICOM.Network.Enums.QueryLevel
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SpecificCharacterSeet*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SpecificCharacterSeet
+  isExternal: false
+  name: SpecificCharacterSeet
+  nameWithType: CMoveIOD.SpecificCharacterSeet
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SpecificCharacterSeet
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.PatientId*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CMoveIOD.PatientId
+  isExternal: false
+  name: PatientId
+  nameWithType: CMoveIOD.PatientId
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.PatientId
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.StudyInstanceUID*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CMoveIOD.StudyInstanceUID
+  isExternal: false
+  name: StudyInstanceUID
+  nameWithType: CMoveIOD.StudyInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.StudyInstanceUID
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SOPInstanceUID*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SOPInstanceUID
+  isExternal: false
+  name: SOPInstanceUID
+  nameWithType: CMoveIOD.SOPInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SOPInstanceUID
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SeriesInstanceUID*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SeriesInstanceUID
+  isExternal: false
+  name: SeriesInstanceUID
+  nameWithType: CMoveIOD.SeriesInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD.SeriesInstanceUID

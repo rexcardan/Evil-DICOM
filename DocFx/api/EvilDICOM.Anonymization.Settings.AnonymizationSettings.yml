@@ -1,0 +1,516 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  commentId: T:EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  id: AnonymizationSettings
+  parent: EvilDICOM.Anonymization.Settings
+  children:
+  - EvilDICOM.Anonymization.Settings.AnonymizationSettings.DateSettings
+  - EvilDICOM.Anonymization.Settings.AnonymizationSettings.Default
+  - EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeNames
+  - EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeStudyIDs
+  - EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeUIDs
+  - EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoDICOMProfile
+  - EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoRemovePrivateTags
+  - EvilDICOM.Anonymization.Settings.AnonymizationSettings.FirstName
+  - EvilDICOM.Anonymization.Settings.AnonymizationSettings.Id
+  - EvilDICOM.Anonymization.Settings.AnonymizationSettings.LastName
+  langs:
+  - csharp
+  - vb
+  name: AnonymizationSettings
+  nameWithType: AnonymizationSettings
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AnonymizationSettings
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  syntax:
+    content: 'public class AnonymizationSettings : object'
+    content.vb: >-
+      Public Class AnonymizationSettings
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.FirstName
+  commentId: P:EvilDICOM.Anonymization.Settings.AnonymizationSettings.FirstName
+  id: FirstName
+  parent: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  langs:
+  - csharp
+  - vb
+  name: FirstName
+  nameWithType: AnonymizationSettings.FirstName
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.FirstName
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FirstName
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  summary: "\nThe first name to make the new patient Id\n"
+  example: []
+  syntax:
+    content: public string FirstName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property FirstName As String
+  overload: EvilDICOM.Anonymization.Settings.AnonymizationSettings.FirstName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.LastName
+  commentId: P:EvilDICOM.Anonymization.Settings.AnonymizationSettings.LastName
+  id: LastName
+  parent: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  langs:
+  - csharp
+  - vb
+  name: LastName
+  nameWithType: AnonymizationSettings.LastName
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.LastName
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: LastName
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  summary: "\nThe last name to make the new patient Id\n"
+  example: []
+  syntax:
+    content: public string LastName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property LastName As String
+  overload: EvilDICOM.Anonymization.Settings.AnonymizationSettings.LastName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.Id
+  commentId: P:EvilDICOM.Anonymization.Settings.AnonymizationSettings.Id
+  id: Id
+  parent: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: AnonymizationSettings.Id
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.Id
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Id
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  summary: "\nThe new id for the anonymized file\n"
+  example: []
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: EvilDICOM.Anonymization.Settings.AnonymizationSettings.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeStudyIDs
+  commentId: P:EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeStudyIDs
+  id: DoAnonymizeStudyIDs
+  parent: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  langs:
+  - csharp
+  - vb
+  name: DoAnonymizeStudyIDs
+  nameWithType: AnonymizationSettings.DoAnonymizeStudyIDs
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeStudyIDs
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DoAnonymizeStudyIDs
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  summary: "\nSpecifies whether or not to replace study ids with generic names\n"
+  example: []
+  syntax:
+    content: public bool DoAnonymizeStudyIDs { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DoAnonymizeStudyIDs As Boolean
+  overload: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeStudyIDs*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeUIDs
+  commentId: P:EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeUIDs
+  id: DoAnonymizeUIDs
+  parent: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  langs:
+  - csharp
+  - vb
+  name: DoAnonymizeUIDs
+  nameWithType: AnonymizationSettings.DoAnonymizeUIDs
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeUIDs
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DoAnonymizeUIDs
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+    startLine: 30
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  summary: "\nSpecifies whether or not to replace and remap UIDs\n"
+  example: []
+  syntax:
+    content: public bool DoAnonymizeUIDs { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DoAnonymizeUIDs As Boolean
+  overload: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeUIDs*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DateSettings
+  commentId: P:EvilDICOM.Anonymization.Settings.AnonymizationSettings.DateSettings
+  id: DateSettings
+  parent: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  langs:
+  - csharp
+  - vb
+  name: DateSettings
+  nameWithType: AnonymizationSettings.DateSettings
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DateSettings
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DateSettings
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+    startLine: 34
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  summary: "\nSpecifies how dates are to be handled on anonymization\n"
+  example: []
+  syntax:
+    content: public DateSettings DateSettings { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Anonymization.Settings.DateSettings
+    content.vb: Public Property DateSettings As DateSettings
+  overload: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DateSettings*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoRemovePrivateTags
+  commentId: P:EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoRemovePrivateTags
+  id: DoRemovePrivateTags
+  parent: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  langs:
+  - csharp
+  - vb
+  name: DoRemovePrivateTags
+  nameWithType: AnonymizationSettings.DoRemovePrivateTags
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoRemovePrivateTags
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DoRemovePrivateTags
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+    startLine: 38
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  summary: "\nSpecifies if private tags are to be removed\n"
+  example: []
+  syntax:
+    content: public bool DoRemovePrivateTags { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DoRemovePrivateTags As Boolean
+  overload: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoRemovePrivateTags*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeNames
+  commentId: P:EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeNames
+  id: DoAnonymizeNames
+  parent: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  langs:
+  - csharp
+  - vb
+  name: DoAnonymizeNames
+  nameWithType: AnonymizationSettings.DoAnonymizeNames
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeNames
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DoAnonymizeNames
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+    startLine: 42
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  summary: "\nSpecifies if all names are to be removed from the file\n"
+  example: []
+  syntax:
+    content: public bool DoAnonymizeNames { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DoAnonymizeNames As Boolean
+  overload: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeNames*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoDICOMProfile
+  commentId: P:EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoDICOMProfile
+  id: DoDICOMProfile
+  parent: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  langs:
+  - csharp
+  - vb
+  name: DoDICOMProfile
+  nameWithType: AnonymizationSettings.DoDICOMProfile
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoDICOMProfile
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DoDICOMProfile
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+    startLine: 46
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  summary: "\nSpecifies if the standard anonymization profile identifiers are to have data cleaned\n"
+  example: []
+  syntax:
+    content: public bool DoDICOMProfile { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DoDICOMProfile As Boolean
+  overload: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoDICOMProfile*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.Default
+  commentId: P:EvilDICOM.Anonymization.Settings.AnonymizationSettings.Default
+  id: Default
+  parent: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  langs:
+  - csharp
+  - vb
+  name: Default
+  nameWithType: AnonymizationSettings.Default
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.Default
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Default
+    path: ../EvilDICOM/EvilDICOM/Anonymization/Settings/AnonymizationSettings.cs
+    startLine: 51
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  summary: "\nA default anonmyization schema\n"
+  example: []
+  syntax:
+    content: public static AnonymizationSettings Default { get; }
+    parameters: []
+    return:
+      type: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+    content.vb: Public Shared ReadOnly Property Default As AnonymizationSettings
+  overload: EvilDICOM.Anonymization.Settings.AnonymizationSettings.Default*
+  modifiers.csharp:
+  - public
+  - static
+  - get
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+references:
+- uid: EvilDICOM.Anonymization.Settings
+  commentId: N:EvilDICOM.Anonymization.Settings
+  isExternal: false
+  name: EvilDICOM.Anonymization.Settings
+  nameWithType: EvilDICOM.Anonymization.Settings
+  fullName: EvilDICOM.Anonymization.Settings
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.FirstName*
+  commentId: Overload:EvilDICOM.Anonymization.Settings.AnonymizationSettings.FirstName
+  isExternal: false
+  name: FirstName
+  nameWithType: AnonymizationSettings.FirstName
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.FirstName
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.LastName*
+  commentId: Overload:EvilDICOM.Anonymization.Settings.AnonymizationSettings.LastName
+  isExternal: false
+  name: LastName
+  nameWithType: AnonymizationSettings.LastName
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.LastName
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.Id*
+  commentId: Overload:EvilDICOM.Anonymization.Settings.AnonymizationSettings.Id
+  isExternal: false
+  name: Id
+  nameWithType: AnonymizationSettings.Id
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.Id
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeStudyIDs*
+  commentId: Overload:EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeStudyIDs
+  isExternal: false
+  name: DoAnonymizeStudyIDs
+  nameWithType: AnonymizationSettings.DoAnonymizeStudyIDs
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeStudyIDs
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeUIDs*
+  commentId: Overload:EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeUIDs
+  isExternal: false
+  name: DoAnonymizeUIDs
+  nameWithType: AnonymizationSettings.DoAnonymizeUIDs
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeUIDs
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DateSettings*
+  commentId: Overload:EvilDICOM.Anonymization.Settings.AnonymizationSettings.DateSettings
+  isExternal: false
+  name: DateSettings
+  nameWithType: AnonymizationSettings.DateSettings
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DateSettings
+- uid: EvilDICOM.Anonymization.Settings.DateSettings
+  commentId: T:EvilDICOM.Anonymization.Settings.DateSettings
+  parent: EvilDICOM.Anonymization.Settings
+  isExternal: false
+  name: DateSettings
+  nameWithType: DateSettings
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoRemovePrivateTags*
+  commentId: Overload:EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoRemovePrivateTags
+  isExternal: false
+  name: DoRemovePrivateTags
+  nameWithType: AnonymizationSettings.DoRemovePrivateTags
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoRemovePrivateTags
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeNames*
+  commentId: Overload:EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeNames
+  isExternal: false
+  name: DoAnonymizeNames
+  nameWithType: AnonymizationSettings.DoAnonymizeNames
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoAnonymizeNames
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoDICOMProfile*
+  commentId: Overload:EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoDICOMProfile
+  isExternal: false
+  name: DoDICOMProfile
+  nameWithType: AnonymizationSettings.DoDICOMProfile
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.DoDICOMProfile
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings.Default*
+  commentId: Overload:EvilDICOM.Anonymization.Settings.AnonymizationSettings.Default
+  isExternal: false
+  name: Default
+  nameWithType: AnonymizationSettings.Default
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings.Default
+- uid: EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  commentId: T:EvilDICOM.Anonymization.Settings.AnonymizationSettings
+  parent: EvilDICOM.Anonymization.Settings
+  isExternal: false
+  name: AnonymizationSettings
+  nameWithType: AnonymizationSettings
+  fullName: EvilDICOM.Anonymization.Settings.AnonymizationSettings

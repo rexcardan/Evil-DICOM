@@ -1,0 +1,917 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  id: CFindStudyIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  children:
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.#ctor
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.#ctor(EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.AccessionNumber
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ModalitiesInStudy
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.NameOfPhysiciansReadingStudy
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientBirthDate
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientId
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientsName
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.QueryLevel
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ReferringPhysicianName
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SeriesInstanceUID
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SOPInstanceUID
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDate
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDescription
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyId
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyInstanceUID
+  - EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyTime
+  langs:
+  - csharp
+  - vb
+  name: CFindStudyIOD
+  nameWithType: CFindStudyIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CFindStudyIOD
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: 'public class CFindStudyIOD : AbstractDIMSEIOD, IIOD'
+    content.vb: >-
+      Public Class CFindStudyIOD
+          Inherits AbstractDIMSEIOD
+          Implements IIOD
+  inheritance:
+  - System.Object
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  implements:
+  - EvilDICOM.Core.Interfaces.IIOD
+  inheritedMembers:
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+  - EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.#ctor
+  commentId: M:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: CFindStudyIOD()
+  nameWithType: CFindStudyIOD.CFindStudyIOD()
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.CFindStudyIOD()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public CFindStudyIOD()
+    content.vb: Public Sub New
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.#ctor(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.#ctor(EvilDICOM.Core.DICOMObject)
+  id: '#ctor(EvilDICOM.Core.DICOMObject)'
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: CFindStudyIOD(DICOMObject)
+  nameWithType: CFindStudyIOD.CFindStudyIOD(DICOMObject)
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.CFindStudyIOD(EvilDICOM.Core.DICOMObject)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 32
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public CFindStudyIOD(DICOMObject dcm)
+    parameters:
+    - id: dcm
+      type: EvilDICOM.Core.DICOMObject
+    content.vb: Public Sub New(dcm As DICOMObject)
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.QueryLevel
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.QueryLevel
+  id: QueryLevel
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: QueryLevel
+  nameWithType: CFindStudyIOD.QueryLevel
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.QueryLevel
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: QueryLevel
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 34
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public QueryLevel QueryLevel { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.QueryLevel
+    content.vb: Public Property QueryLevel As QueryLevel
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.QueryLevel*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientsName
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientsName
+  id: PatientsName
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: PatientsName
+  nameWithType: CFindStudyIOD.PatientsName
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientsName
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PatientsName
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 47
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public PersonName PatientsName { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Element.PersonName
+    content.vb: Public Property PatientsName As PersonName
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientsName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientId
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientId
+  id: PatientId
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: PatientId
+  nameWithType: CFindStudyIOD.PatientId
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientId
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PatientId
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 53
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string PatientId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PatientId As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDate
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDate
+  id: StudyDate
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: StudyDate
+  nameWithType: CFindStudyIOD.StudyDate
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDate
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StudyDate
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 59
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public System.DateTime? StudyDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property StudyDate As System.DateTime?
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyTime
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyTime
+  id: StudyTime
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: StudyTime
+  nameWithType: CFindStudyIOD.StudyTime
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyTime
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StudyTime
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 68
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public System.DateTime? StudyTime { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property StudyTime As System.DateTime?
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyTime*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.AccessionNumber
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.AccessionNumber
+  id: AccessionNumber
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: AccessionNumber
+  nameWithType: CFindStudyIOD.AccessionNumber
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.AccessionNumber
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AccessionNumber
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 74
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string AccessionNumber { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AccessionNumber As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.AccessionNumber*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyId
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyId
+  id: StudyId
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: StudyId
+  nameWithType: CFindStudyIOD.StudyId
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyId
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StudyId
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 80
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string StudyId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StudyId As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDescription
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDescription
+  id: StudyDescription
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: StudyDescription
+  nameWithType: CFindStudyIOD.StudyDescription
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDescription
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StudyDescription
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 86
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string StudyDescription { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StudyDescription As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDescription*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ReferringPhysicianName
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ReferringPhysicianName
+  id: ReferringPhysicianName
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: ReferringPhysicianName
+  nameWithType: CFindStudyIOD.ReferringPhysicianName
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ReferringPhysicianName
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReferringPhysicianName
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 92
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string ReferringPhysicianName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ReferringPhysicianName As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ReferringPhysicianName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.NameOfPhysiciansReadingStudy
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.NameOfPhysiciansReadingStudy
+  id: NameOfPhysiciansReadingStudy
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: NameOfPhysiciansReadingStudy
+  nameWithType: CFindStudyIOD.NameOfPhysiciansReadingStudy
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.NameOfPhysiciansReadingStudy
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: NameOfPhysiciansReadingStudy
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 98
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string NameOfPhysiciansReadingStudy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property NameOfPhysiciansReadingStudy As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.NameOfPhysiciansReadingStudy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ModalitiesInStudy
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ModalitiesInStudy
+  id: ModalitiesInStudy
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: ModalitiesInStudy
+  nameWithType: CFindStudyIOD.ModalitiesInStudy
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ModalitiesInStudy
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ModalitiesInStudy
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 104
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string ModalitiesInStudy { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ModalitiesInStudy As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ModalitiesInStudy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientBirthDate
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientBirthDate
+  id: PatientBirthDate
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: PatientBirthDate
+  nameWithType: CFindStudyIOD.PatientBirthDate
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientBirthDate
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PatientBirthDate
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 110
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public System.DateTime? PatientBirthDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property PatientBirthDate As System.DateTime?
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientBirthDate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyInstanceUID
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyInstanceUID
+  id: StudyInstanceUID
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: StudyInstanceUID
+  nameWithType: CFindStudyIOD.StudyInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyInstanceUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StudyInstanceUID
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 116
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string StudyInstanceUID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StudyInstanceUID As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyInstanceUID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SeriesInstanceUID
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SeriesInstanceUID
+  id: SeriesInstanceUID
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: SeriesInstanceUID
+  nameWithType: CFindStudyIOD.SeriesInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SeriesInstanceUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SeriesInstanceUID
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 122
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string SeriesInstanceUID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SeriesInstanceUID As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SeriesInstanceUID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SOPInstanceUID
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SOPInstanceUID
+  id: SOPInstanceUID
+  parent: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  langs:
+  - csharp
+  - vb
+  name: SOPInstanceUID
+  nameWithType: CFindStudyIOD.SOPInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SOPInstanceUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SOPInstanceUID
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindStudyIOD.cs
+    startLine: 128
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.IOD
+  syntax:
+    content: public string SOPInstanceUID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property SOPInstanceUID As String
+  overload: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SOPInstanceUID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Network.DIMSE.IOD
+  commentId: N:EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: EvilDICOM.Network.DIMSE.IOD
+  nameWithType: EvilDICOM.Network.DIMSE.IOD
+  fullName: EvilDICOM.Network.DIMSE.IOD
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  isExternal: false
+  name: AbstractDIMSEIOD
+  nameWithType: AbstractDIMSEIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+- uid: EvilDICOM.Core.Interfaces.IIOD
+  commentId: T:EvilDICOM.Core.Interfaces.IIOD
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IIOD
+  nameWithType: IIOD
+  fullName: EvilDICOM.Core.Interfaces.IIOD
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+  commentId: F:EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+  parent: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  isExternal: false
+  name: _sel
+  nameWithType: AbstractDIMSEIOD._sel
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD._sel
+- uid: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+  commentId: P:EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+  parent: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD
+  isExternal: false
+  name: Elements
+  nameWithType: AbstractDIMSEIOD.Elements
+  fullName: EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.Elements
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.#ctor*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.#ctor
+  isExternal: false
+  name: CFindStudyIOD
+  nameWithType: CFindStudyIOD.CFindStudyIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.CFindStudyIOD
+- uid: EvilDICOM.Core.DICOMObject
+  commentId: T:EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMObject
+  nameWithType: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.QueryLevel*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.QueryLevel
+  isExternal: false
+  name: QueryLevel
+  nameWithType: CFindStudyIOD.QueryLevel
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.QueryLevel
+- uid: EvilDICOM.Network.Enums.QueryLevel
+  commentId: T:EvilDICOM.Network.Enums.QueryLevel
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: QueryLevel
+  nameWithType: QueryLevel
+  fullName: EvilDICOM.Network.Enums.QueryLevel
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientsName*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientsName
+  isExternal: false
+  name: PatientsName
+  nameWithType: CFindStudyIOD.PatientsName
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientsName
+- uid: EvilDICOM.Core.Element.PersonName
+  commentId: T:EvilDICOM.Core.Element.PersonName
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: PersonName
+  nameWithType: PersonName
+  fullName: EvilDICOM.Core.Element.PersonName
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  isExternal: false
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientId*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientId
+  isExternal: false
+  name: PatientId
+  nameWithType: CFindStudyIOD.PatientId
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientId
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDate*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDate
+  isExternal: false
+  name: StudyDate
+  nameWithType: CFindStudyIOD.StudyDate
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDate
+- uid: System.Nullable{System.DateTime}
+  commentId: '!:System.Nullable{System.DateTime}'
+  definition: System.Nullable`1
+  name: Nullable<System.DateTime>
+  nameWithType: Nullable<System.DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of System.DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of System.DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: System.DateTime
+    nameWithType: System.DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  isExternal: true
+  name: Nullable<>
+  nameWithType: Nullable<>
+  fullName: System.Nullable<>
+  nameWithType.vb: Nullable(Of )
+  fullName.vb: System.Nullable(Of )
+  name.vb: Nullable(Of )
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyTime*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyTime
+  isExternal: false
+  name: StudyTime
+  nameWithType: CFindStudyIOD.StudyTime
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyTime
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.AccessionNumber*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.AccessionNumber
+  isExternal: false
+  name: AccessionNumber
+  nameWithType: CFindStudyIOD.AccessionNumber
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.AccessionNumber
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyId*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyId
+  isExternal: false
+  name: StudyId
+  nameWithType: CFindStudyIOD.StudyId
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyId
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDescription*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDescription
+  isExternal: false
+  name: StudyDescription
+  nameWithType: CFindStudyIOD.StudyDescription
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyDescription
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ReferringPhysicianName*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ReferringPhysicianName
+  isExternal: false
+  name: ReferringPhysicianName
+  nameWithType: CFindStudyIOD.ReferringPhysicianName
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ReferringPhysicianName
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.NameOfPhysiciansReadingStudy*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.NameOfPhysiciansReadingStudy
+  isExternal: false
+  name: NameOfPhysiciansReadingStudy
+  nameWithType: CFindStudyIOD.NameOfPhysiciansReadingStudy
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.NameOfPhysiciansReadingStudy
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ModalitiesInStudy*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ModalitiesInStudy
+  isExternal: false
+  name: ModalitiesInStudy
+  nameWithType: CFindStudyIOD.ModalitiesInStudy
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.ModalitiesInStudy
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientBirthDate*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientBirthDate
+  isExternal: false
+  name: PatientBirthDate
+  nameWithType: CFindStudyIOD.PatientBirthDate
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.PatientBirthDate
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyInstanceUID*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyInstanceUID
+  isExternal: false
+  name: StudyInstanceUID
+  nameWithType: CFindStudyIOD.StudyInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.StudyInstanceUID
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SeriesInstanceUID*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SeriesInstanceUID
+  isExternal: false
+  name: SeriesInstanceUID
+  nameWithType: CFindStudyIOD.SeriesInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SeriesInstanceUID
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SOPInstanceUID*
+  commentId: Overload:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SOPInstanceUID
+  isExternal: false
+  name: SOPInstanceUID
+  nameWithType: CFindStudyIOD.SOPInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.SOPInstanceUID

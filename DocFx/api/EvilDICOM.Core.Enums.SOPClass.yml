@@ -1,0 +1,774 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Enums.SOPClass
+  commentId: T:EvilDICOM.Core.Enums.SOPClass
+  id: SOPClass
+  parent: EvilDICOM.Core.Enums
+  children:
+  - EvilDICOM.Core.Enums.SOPClass.CR
+  - EvilDICOM.Core.Enums.SOPClass.CT
+  - EvilDICOM.Core.Enums.SOPClass.FIND
+  - EvilDICOM.Core.Enums.SOPClass.GET
+  - EvilDICOM.Core.Enums.SOPClass.Ion_Plan
+  - EvilDICOM.Core.Enums.SOPClass.MOVE
+  - EvilDICOM.Core.Enums.SOPClass.MR
+  - EvilDICOM.Core.Enums.SOPClass.NMR
+  - EvilDICOM.Core.Enums.SOPClass.PET
+  - EvilDICOM.Core.Enums.SOPClass.RT_Brachy_Record
+  - EvilDICOM.Core.Enums.SOPClass.RT_Dose
+  - EvilDICOM.Core.Enums.SOPClass.RT_Image
+  - EvilDICOM.Core.Enums.SOPClass.RT_IonBeam_Record
+  - EvilDICOM.Core.Enums.SOPClass.RT_IonPlan
+  - EvilDICOM.Core.Enums.SOPClass.RT_Plan
+  - EvilDICOM.Core.Enums.SOPClass.RT_Reg
+  - EvilDICOM.Core.Enums.SOPClass.RT_Structure
+  - EvilDICOM.Core.Enums.SOPClass.RT_Treatment_Record
+  - EvilDICOM.Core.Enums.SOPClass.Storage_Commitment_Push_Model
+  - EvilDICOM.Core.Enums.SOPClass.Ultrasound_Image
+  - EvilDICOM.Core.Enums.SOPClass.Unknown
+  - EvilDICOM.Core.Enums.SOPClass.Verification
+  langs:
+  - csharp
+  - vb
+  name: SOPClass
+  nameWithType: SOPClass
+  fullName: EvilDICOM.Core.Enums.SOPClass
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SOPClass
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: 'public enum SOPClass : int'
+    content.vb: Public Enum SOPClass As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Core.Enums.SOPClass.Unknown
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.Unknown
+  id: Unknown
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: Unknown
+  nameWithType: SOPClass.Unknown
+  fullName: EvilDICOM.Core.Enums.SOPClass.Unknown
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Unknown
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: Unknown = 0
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.Verification
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.Verification
+  id: Verification
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: Verification
+  nameWithType: SOPClass.Verification
+  fullName: EvilDICOM.Core.Enums.SOPClass.Verification
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Verification
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: Verification = 1
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.Storage_Commitment_Push_Model
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.Storage_Commitment_Push_Model
+  id: Storage_Commitment_Push_Model
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: Storage_Commitment_Push_Model
+  nameWithType: SOPClass.Storage_Commitment_Push_Model
+  fullName: EvilDICOM.Core.Enums.SOPClass.Storage_Commitment_Push_Model
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Storage_Commitment_Push_Model
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: Storage_Commitment_Push_Model = 2
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.CT
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.CT
+  id: CT
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: CT
+  nameWithType: SOPClass.CT
+  fullName: EvilDICOM.Core.Enums.SOPClass.CT
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CT
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: CT = 3
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.CR
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.CR
+  id: CR
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: CR
+  nameWithType: SOPClass.CR
+  fullName: EvilDICOM.Core.Enums.SOPClass.CR
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CR
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: CR = 4
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.Ultrasound_Image
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.Ultrasound_Image
+  id: Ultrasound_Image
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: Ultrasound_Image
+  nameWithType: SOPClass.Ultrasound_Image
+  fullName: EvilDICOM.Core.Enums.SOPClass.Ultrasound_Image
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Ultrasound_Image
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: Ultrasound_Image = 5
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.RT_Image
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.RT_Image
+  id: RT_Image
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: RT_Image
+  nameWithType: SOPClass.RT_Image
+  fullName: EvilDICOM.Core.Enums.SOPClass.RT_Image
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RT_Image
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: RT_Image = 6
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.RT_Dose
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.RT_Dose
+  id: RT_Dose
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: RT_Dose
+  nameWithType: SOPClass.RT_Dose
+  fullName: EvilDICOM.Core.Enums.SOPClass.RT_Dose
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RT_Dose
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: RT_Dose = 7
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.RT_Reg
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.RT_Reg
+  id: RT_Reg
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: RT_Reg
+  nameWithType: SOPClass.RT_Reg
+  fullName: EvilDICOM.Core.Enums.SOPClass.RT_Reg
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RT_Reg
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: RT_Reg = 8
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.RT_Structure
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.RT_Structure
+  id: RT_Structure
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: RT_Structure
+  nameWithType: SOPClass.RT_Structure
+  fullName: EvilDICOM.Core.Enums.SOPClass.RT_Structure
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RT_Structure
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: RT_Structure = 9
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.RT_Plan
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.RT_Plan
+  id: RT_Plan
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: RT_Plan
+  nameWithType: SOPClass.RT_Plan
+  fullName: EvilDICOM.Core.Enums.SOPClass.RT_Plan
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RT_Plan
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: RT_Plan = 10
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.RT_Brachy_Record
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.RT_Brachy_Record
+  id: RT_Brachy_Record
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: RT_Brachy_Record
+  nameWithType: SOPClass.RT_Brachy_Record
+  fullName: EvilDICOM.Core.Enums.SOPClass.RT_Brachy_Record
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RT_Brachy_Record
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: RT_Brachy_Record = 11
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.RT_Treatment_Record
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.RT_Treatment_Record
+  id: RT_Treatment_Record
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: RT_Treatment_Record
+  nameWithType: SOPClass.RT_Treatment_Record
+  fullName: EvilDICOM.Core.Enums.SOPClass.RT_Treatment_Record
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RT_Treatment_Record
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: RT_Treatment_Record = 12
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.RT_IonPlan
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.RT_IonPlan
+  id: RT_IonPlan
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: RT_IonPlan
+  nameWithType: SOPClass.RT_IonPlan
+  fullName: EvilDICOM.Core.Enums.SOPClass.RT_IonPlan
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RT_IonPlan
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: RT_IonPlan = 13
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.RT_IonBeam_Record
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.RT_IonBeam_Record
+  id: RT_IonBeam_Record
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: RT_IonBeam_Record
+  nameWithType: SOPClass.RT_IonBeam_Record
+  fullName: EvilDICOM.Core.Enums.SOPClass.RT_IonBeam_Record
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RT_IonBeam_Record
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: RT_IonBeam_Record = 14
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.MR
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.MR
+  id: MR
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: MR
+  nameWithType: SOPClass.MR
+  fullName: EvilDICOM.Core.Enums.SOPClass.MR
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MR
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: MR = 15
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.NMR
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.NMR
+  id: NMR
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: NMR
+  nameWithType: SOPClass.NMR
+  fullName: EvilDICOM.Core.Enums.SOPClass.NMR
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: NMR
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: NMR = 16
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.FIND
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.FIND
+  id: FIND
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: FIND
+  nameWithType: SOPClass.FIND
+  fullName: EvilDICOM.Core.Enums.SOPClass.FIND
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FIND
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: FIND = 17
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.MOVE
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.MOVE
+  id: MOVE
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: MOVE
+  nameWithType: SOPClass.MOVE
+  fullName: EvilDICOM.Core.Enums.SOPClass.MOVE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MOVE
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: MOVE = 18
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.GET
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.GET
+  id: GET
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: GET
+  nameWithType: SOPClass.GET
+  fullName: EvilDICOM.Core.Enums.SOPClass.GET
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GET
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 29
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: GET = 19
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.PET
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.PET
+  id: PET
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: PET
+  nameWithType: SOPClass.PET
+  fullName: EvilDICOM.Core.Enums.SOPClass.PET
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PET
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 30
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: PET = 20
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.SOPClass.Ion_Plan
+  commentId: F:EvilDICOM.Core.Enums.SOPClass.Ion_Plan
+  id: Ion_Plan
+  parent: EvilDICOM.Core.Enums.SOPClass
+  langs:
+  - csharp
+  - vb
+  name: Ion_Plan
+  nameWithType: SOPClass.Ion_Plan
+  fullName: EvilDICOM.Core.Enums.SOPClass.Ion_Plan
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Ion_Plan
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/SOPClass.cs
+    startLine: 31
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: Ion_Plan = 21
+    return:
+      type: EvilDICOM.Core.Enums.SOPClass
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.Enums.SOPClass
+  commentId: T:EvilDICOM.Core.Enums.SOPClass
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: SOPClass
+  nameWithType: SOPClass
+  fullName: EvilDICOM.Core.Enums.SOPClass

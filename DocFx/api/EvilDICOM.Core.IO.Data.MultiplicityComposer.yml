@@ -1,0 +1,325 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Data.MultiplicityComposer
+  commentId: T:EvilDICOM.Core.IO.Data.MultiplicityComposer
+  id: MultiplicityComposer
+  parent: EvilDICOM.Core.IO.Data
+  children:
+  - EvilDICOM.Core.IO.Data.MultiplicityComposer.ComposeMultipleBinary``1(EvilDICOM.Core.DICOMData{``0},Func{``0,System.Byte[]})
+  langs:
+  - csharp
+  - vb
+  name: MultiplicityComposer
+  nameWithType: MultiplicityComposer
+  fullName: EvilDICOM.Core.IO.Data.MultiplicityComposer
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/MultiplicityComposer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MultiplicityComposer
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Data/MultiplicityComposer.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: 'public class MultiplicityComposer : object'
+    content.vb: >-
+      Public Class MultiplicityComposer
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Data.MultiplicityComposer.ComposeMultipleBinary``1(EvilDICOM.Core.DICOMData{``0},Func{``0,System.Byte[]})
+  commentId: M:EvilDICOM.Core.IO.Data.MultiplicityComposer.ComposeMultipleBinary``1(EvilDICOM.Core.DICOMData{``0},Func{``0,System.Byte[]})
+  id: ComposeMultipleBinary``1(EvilDICOM.Core.DICOMData{``0},Func{``0,System.Byte[]})
+  parent: EvilDICOM.Core.IO.Data.MultiplicityComposer
+  langs:
+  - csharp
+  - vb
+  name: ComposeMultipleBinary<T>(DICOMData<T>, Func<T, Byte[]>)
+  nameWithType: MultiplicityComposer.ComposeMultipleBinary<T>(DICOMData<T>, Func<T, Byte[]>)
+  fullName: EvilDICOM.Core.IO.Data.MultiplicityComposer.ComposeMultipleBinary<T>(EvilDICOM.Core.DICOMData<T>, Func<T, System.Byte[]>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/MultiplicityComposer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ComposeMultipleBinary
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Data/MultiplicityComposer.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  summary: "\nWrites the multiple binary data objects as one string of bytes\n"
+  example: []
+  syntax:
+    content: public static byte[] ComposeMultipleBinary<T>(DICOMData<T> data, Func<T, byte[]> writeSingleFunc)
+    parameters:
+    - id: data
+      type: EvilDICOM.Core.DICOMData{{T}}
+      description: the data to be converted to binary
+    - id: writeSingleFunc
+      type: Func{{T},System.Byte[]}
+      description: the function that can convert a single data item into bytes
+    typeParameters:
+    - id: T
+      description: the type of data
+    return:
+      type: System.Byte[]
+      description: the concated array of bytes that contains all data items
+    content.vb: Public Shared Function ComposeMultipleBinary(Of T)(data As DICOMData(Of T), writeSingleFunc As Func(Of T, Byte())) As Byte()
+  overload: EvilDICOM.Core.IO.Data.MultiplicityComposer.ComposeMultipleBinary*
+  nameWithType.vb: MultiplicityComposer.ComposeMultipleBinary(Of T)(DICOMData(Of T), Func(Of T, Byte()))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.MultiplicityComposer.ComposeMultipleBinary(Of T)(EvilDICOM.Core.DICOMData(Of T), Func(Of T, System.Byte()))
+  name.vb: ComposeMultipleBinary(Of T)(DICOMData(Of T), Func(Of T, Byte()))
+references:
+- uid: EvilDICOM.Core.IO.Data
+  commentId: N:EvilDICOM.Core.IO.Data
+  isExternal: false
+  name: EvilDICOM.Core.IO.Data
+  nameWithType: EvilDICOM.Core.IO.Data
+  fullName: EvilDICOM.Core.IO.Data
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.IO.Data.MultiplicityComposer.ComposeMultipleBinary*
+  commentId: Overload:EvilDICOM.Core.IO.Data.MultiplicityComposer.ComposeMultipleBinary
+  isExternal: false
+  name: ComposeMultipleBinary
+  nameWithType: MultiplicityComposer.ComposeMultipleBinary
+  fullName: EvilDICOM.Core.IO.Data.MultiplicityComposer.ComposeMultipleBinary
+- uid: EvilDICOM.Core.DICOMData{{T}}
+  commentId: T:EvilDICOM.Core.DICOMData{``0}
+  parent: EvilDICOM.Core
+  definition: EvilDICOM.Core.DICOMData`1
+  name: DICOMData<T>
+  nameWithType: DICOMData<T>
+  fullName: EvilDICOM.Core.DICOMData<T>
+  nameWithType.vb: DICOMData(Of T)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T)
+  name.vb: DICOMData(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func{{T},System.Byte[]}
+  commentId: '!:Func{``0,System.Byte[]}'
+  definition: Func`2
+  name: Func<T, Byte[]>
+  nameWithType: Func<T, Byte[]>
+  fullName: Func<T, System.Byte[]>
+  nameWithType.vb: Func(Of T, Byte())
+  fullName.vb: Func(Of T, System.Byte())
+  name.vb: Func(Of T, Byte())
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.DICOMData`1
+  commentId: T:EvilDICOM.Core.DICOMData`1
+  parent: EvilDICOM.Core
+  isExternal: false
+  name: DICOMData<T>
+  nameWithType: DICOMData<T>
+  fullName: EvilDICOM.Core.DICOMData<T>
+  nameWithType.vb: DICOMData(Of T)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T)
+  name.vb: DICOMData(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  isExternal: false
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: Func`2
+  isExternal: true
+  name: Func<, >
+  nameWithType: Func<, >
+  fullName: Func<, >
+  nameWithType.vb: Func(Of , )
+  fullName.vb: Func(Of , )
+  name.vb: Func(Of , )
+  spec.csharp:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`2
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

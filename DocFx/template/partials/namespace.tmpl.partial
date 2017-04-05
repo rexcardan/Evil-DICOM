@@ -1,0 +1,30 @@
+{{!Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE file in the project root for full license information.}}
+
+{{^_disableContribution}}
+{{#docurl}}
+<a href="{{docurl}}" class="btn btn-primary pull-right mobile-hide">{{__global.improveThisDoc}}</a>
+{{/docurl}}
+{{#sourceurl}}
+<a href="{{sourceurl}}" class="btn btn-primary pull-right mobile-hide">{{__global.viewSource}}</a>
+{{/sourceurl}}
+{{/_disableContribution}}
+<h1 id="{{id}}" data-uid="{{uid}}">{{>partials/title}}</h1>
+<div class="markdown level0 summary">{{{summary}}}</div>
+<div class="markdown level0 conceptual">{{{conceptual}}}</div>
+<div class="markdown level0 remarks">{{{remarks}}}</div>
+<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<!-- API Ad -->
+<ins class="adsbygoogle"
+     style="display:inline-block;width:728px;height:90px"
+     data-ad-client="ca-pub-8634681343664488"
+     data-ad-slot="2969171149"></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+{{#children}}
+  <h3 id="{{id}}">{{>partials/namespaceSubtitle}}</h3>
+  {{#children}}
+    <h4>{{{specName.0.value}}}</h4>
+    <section>{{{summary}}}</section>
+  {{/children}}
+{{/children}}

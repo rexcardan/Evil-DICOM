@@ -1,0 +1,539 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Element.Tag
+  commentId: T:EvilDICOM.Core.Element.Tag
+  id: Tag
+  parent: EvilDICOM.Core.Element
+  children:
+  - EvilDICOM.Core.Element.Tag.#ctor(System.String)
+  - EvilDICOM.Core.Element.Tag.#ctor(System.String,System.String)
+  - EvilDICOM.Core.Element.Tag.CompleteID
+  - EvilDICOM.Core.Element.Tag.Element
+  - EvilDICOM.Core.Element.Tag.Equals(System.Object)
+  - EvilDICOM.Core.Element.Tag.GetHashCode
+  - EvilDICOM.Core.Element.Tag.Group
+  - EvilDICOM.Core.Element.Tag.IsPrivate
+  - EvilDICOM.Core.Element.Tag.op_Equality(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Element.Tag)
+  - EvilDICOM.Core.Element.Tag.op_Inequality(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Element.Tag)
+  - EvilDICOM.Core.Element.Tag.ToString
+  langs:
+  - csharp
+  - vb
+  name: Tag
+  nameWithType: Tag
+  fullName: EvilDICOM.Core.Element.Tag
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Tag
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nA small helper class help work set and get the tag ids for DICOM elements.\n"
+  example: []
+  syntax:
+    content: 'public class Tag : object'
+    content.vb: >-
+      Public Class Tag
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Element.Tag.#ctor(System.String,System.String)
+  commentId: M:EvilDICOM.Core.Element.Tag.#ctor(System.String,System.String)
+  id: '#ctor(System.String,System.String)'
+  parent: EvilDICOM.Core.Element.Tag
+  langs:
+  - csharp
+  - vb
+  name: Tag(String, String)
+  nameWithType: Tag.Tag(String, String)
+  fullName: EvilDICOM.Core.Element.Tag.Tag(System.String, System.String)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public Tag(string group, string element)
+    parameters:
+    - id: group
+      type: System.String
+    - id: element
+      type: System.String
+    content.vb: Public Sub New(group As String, element As String)
+  overload: EvilDICOM.Core.Element.Tag.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Element.Tag.#ctor(System.String)
+  commentId: M:EvilDICOM.Core.Element.Tag.#ctor(System.String)
+  id: '#ctor(System.String)'
+  parent: EvilDICOM.Core.Element.Tag
+  langs:
+  - csharp
+  - vb
+  name: Tag(String)
+  nameWithType: Tag.Tag(String)
+  fullName: EvilDICOM.Core.Element.Tag.Tag(System.String)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public Tag(string completeID)
+    parameters:
+    - id: completeID
+      type: System.String
+    content.vb: Public Sub New(completeID As String)
+  overload: EvilDICOM.Core.Element.Tag.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Element.Tag.Group
+  commentId: P:EvilDICOM.Core.Element.Tag.Group
+  id: Group
+  parent: EvilDICOM.Core.Element.Tag
+  langs:
+  - csharp
+  - vb
+  name: Group
+  nameWithType: Tag.Group
+  fullName: EvilDICOM.Core.Element.Tag.Group
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Group
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nThe group id of the element\n"
+  example: []
+  syntax:
+    content: public string Group { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Group As String
+  overload: EvilDICOM.Core.Element.Tag.Group*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Element.Tag.Element
+  commentId: P:EvilDICOM.Core.Element.Tag.Element
+  id: Element
+  parent: EvilDICOM.Core.Element.Tag
+  langs:
+  - csharp
+  - vb
+  name: Element
+  nameWithType: Tag.Element
+  fullName: EvilDICOM.Core.Element.Tag.Element
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Element
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+    startLine: 31
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nThe element id of the element\n"
+  example: []
+  syntax:
+    content: public string Element { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Element As String
+  overload: EvilDICOM.Core.Element.Tag.Element*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Element.Tag.CompleteID
+  commentId: P:EvilDICOM.Core.Element.Tag.CompleteID
+  id: CompleteID
+  parent: EvilDICOM.Core.Element.Tag
+  langs:
+  - csharp
+  - vb
+  name: CompleteID
+  nameWithType: Tag.CompleteID
+  fullName: EvilDICOM.Core.Element.Tag.CompleteID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CompleteID
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+    startLine: 36
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nThe complete id, containing both the group id GGGG and the element id EEEE as GGGGEEEE\n"
+  example: []
+  syntax:
+    content: public string CompleteID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CompleteID As String
+  overload: EvilDICOM.Core.Element.Tag.CompleteID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Element.Tag.ToString
+  commentId: M:EvilDICOM.Core.Element.Tag.ToString
+  id: ToString
+  parent: EvilDICOM.Core.Element.Tag
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Tag.ToString()
+  fullName: EvilDICOM.Core.Element.Tag.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToString
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+    startLine: 47
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overload: EvilDICOM.Core.Element.Tag.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: EvilDICOM.Core.Element.Tag.IsPrivate
+  commentId: M:EvilDICOM.Core.Element.Tag.IsPrivate
+  id: IsPrivate
+  parent: EvilDICOM.Core.Element.Tag
+  langs:
+  - csharp
+  - vb
+  name: IsPrivate()
+  nameWithType: Tag.IsPrivate()
+  fullName: EvilDICOM.Core.Element.Tag.IsPrivate()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IsPrivate
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+    startLine: 52
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public bool IsPrivate()
+    return:
+      type: System.Boolean
+    content.vb: Public Function IsPrivate As Boolean
+  overload: EvilDICOM.Core.Element.Tag.IsPrivate*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Element.Tag.Equals(System.Object)
+  commentId: M:EvilDICOM.Core.Element.Tag.Equals(System.Object)
+  id: Equals(System.Object)
+  parent: EvilDICOM.Core.Element.Tag
+  langs:
+  - csharp
+  - vb
+  name: Equals(Object)
+  nameWithType: Tag.Equals(Object)
+  fullName: EvilDICOM.Core.Element.Tag.Equals(System.Object)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Equals
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+    startLine: 62
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public override bool Equals(object obj)
+    parameters:
+    - id: obj
+      type: System.Object
+    return:
+      type: System.Boolean
+    content.vb: Public Overrides Function Equals(obj As Object) As Boolean
+  overload: EvilDICOM.Core.Element.Tag.Equals*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: EvilDICOM.Core.Element.Tag.GetHashCode
+  commentId: M:EvilDICOM.Core.Element.Tag.GetHashCode
+  id: GetHashCode
+  parent: EvilDICOM.Core.Element.Tag
+  langs:
+  - csharp
+  - vb
+  name: GetHashCode()
+  nameWithType: Tag.GetHashCode()
+  fullName: EvilDICOM.Core.Element.Tag.GetHashCode()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetHashCode
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+    startLine: 72
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public override int GetHashCode()
+    return:
+      type: System.Int32
+    content.vb: Public Overrides Function GetHashCode As Integer
+  overload: EvilDICOM.Core.Element.Tag.GetHashCode*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: EvilDICOM.Core.Element.Tag.op_Equality(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Element.Tag)
+  commentId: M:EvilDICOM.Core.Element.Tag.op_Equality(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Element.Tag)
+  id: op_Equality(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Element.Tag)
+  parent: EvilDICOM.Core.Element.Tag
+  langs:
+  - csharp
+  - vb
+  name: Equality(Tag, Tag)
+  nameWithType: Tag.Equality(Tag, Tag)
+  fullName: EvilDICOM.Core.Element.Tag.Equality(EvilDICOM.Core.Element.Tag, EvilDICOM.Core.Element.Tag)
+  type: Operator
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: op_Equality
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+    startLine: 77
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public static bool operator ==(Tag t1, Tag t2)
+    parameters:
+    - id: t1
+      type: EvilDICOM.Core.Element.Tag
+    - id: t2
+      type: EvilDICOM.Core.Element.Tag
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator =(t1 As Tag, t2 As Tag) As Boolean
+  overload: EvilDICOM.Core.Element.Tag.op_Equality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Element.Tag.op_Inequality(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Element.Tag)
+  commentId: M:EvilDICOM.Core.Element.Tag.op_Inequality(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Element.Tag)
+  id: op_Inequality(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Element.Tag)
+  parent: EvilDICOM.Core.Element.Tag
+  langs:
+  - csharp
+  - vb
+  name: Inequality(Tag, Tag)
+  nameWithType: Tag.Inequality(Tag, Tag)
+  fullName: EvilDICOM.Core.Element.Tag.Inequality(EvilDICOM.Core.Element.Tag, EvilDICOM.Core.Element.Tag)
+  type: Operator
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: op_Inequality
+    path: ../EvilDICOM/EvilDICOM/Core/Element/Tag.cs
+    startLine: 83
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public static bool operator !=(Tag t1, Tag t2)
+    parameters:
+    - id: t1
+      type: EvilDICOM.Core.Element.Tag
+    - id: t2
+      type: EvilDICOM.Core.Element.Tag
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Operator <>(t1 As Tag, t2 As Tag) As Boolean
+  overload: EvilDICOM.Core.Element.Tag.op_Inequality*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  isExternal: false
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Element.Tag.#ctor*
+  commentId: Overload:EvilDICOM.Core.Element.Tag.#ctor
+  isExternal: false
+  name: Tag
+  nameWithType: Tag.Tag
+  fullName: EvilDICOM.Core.Element.Tag.Tag
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Core.Element.Tag.Group*
+  commentId: Overload:EvilDICOM.Core.Element.Tag.Group
+  isExternal: false
+  name: Group
+  nameWithType: Tag.Group
+  fullName: EvilDICOM.Core.Element.Tag.Group
+- uid: EvilDICOM.Core.Element.Tag.Element*
+  commentId: Overload:EvilDICOM.Core.Element.Tag.Element
+  isExternal: false
+  name: Element
+  nameWithType: Tag.Element
+  fullName: EvilDICOM.Core.Element.Tag.Element
+- uid: EvilDICOM.Core.Element.Tag.CompleteID*
+  commentId: Overload:EvilDICOM.Core.Element.Tag.CompleteID
+  isExternal: false
+  name: CompleteID
+  nameWithType: Tag.CompleteID
+  fullName: EvilDICOM.Core.Element.Tag.CompleteID
+- uid: EvilDICOM.Core.Element.Tag.ToString*
+  commentId: Overload:EvilDICOM.Core.Element.Tag.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: Tag.ToString
+  fullName: EvilDICOM.Core.Element.Tag.ToString
+- uid: EvilDICOM.Core.Element.Tag.IsPrivate*
+  commentId: Overload:EvilDICOM.Core.Element.Tag.IsPrivate
+  isExternal: false
+  name: IsPrivate
+  nameWithType: Tag.IsPrivate
+  fullName: EvilDICOM.Core.Element.Tag.IsPrivate
+- uid: System.Boolean
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: EvilDICOM.Core.Element.Tag.Equals*
+  commentId: Overload:EvilDICOM.Core.Element.Tag.Equals
+  isExternal: false
+  name: Equals
+  nameWithType: Tag.Equals
+  fullName: EvilDICOM.Core.Element.Tag.Equals
+- uid: EvilDICOM.Core.Element.Tag.GetHashCode*
+  commentId: Overload:EvilDICOM.Core.Element.Tag.GetHashCode
+  isExternal: false
+  name: GetHashCode
+  nameWithType: Tag.GetHashCode
+  fullName: EvilDICOM.Core.Element.Tag.GetHashCode
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Core.Element.Tag.op_Equality*
+  commentId: Overload:EvilDICOM.Core.Element.Tag.op_Equality
+  isExternal: false
+  name: Equality
+  nameWithType: Tag.Equality
+  fullName: EvilDICOM.Core.Element.Tag.Equality
+- uid: EvilDICOM.Core.Element.Tag
+  commentId: T:EvilDICOM.Core.Element.Tag
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: Tag
+  nameWithType: Tag
+  fullName: EvilDICOM.Core.Element.Tag
+- uid: EvilDICOM.Core.Element.Tag.op_Inequality*
+  commentId: Overload:EvilDICOM.Core.Element.Tag.op_Inequality
+  isExternal: false
+  name: Inequality
+  nameWithType: Tag.Inequality
+  fullName: EvilDICOM.Core.Element.Tag.Inequality

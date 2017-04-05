@@ -1,0 +1,318 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Reading.SequenceReader
+  commentId: T:EvilDICOM.Core.IO.Reading.SequenceReader
+  id: SequenceReader
+  parent: EvilDICOM.Core.IO.Reading
+  children:
+  - EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  - EvilDICOM.Core.IO.Reading.SequenceReader.ReadItems(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  langs:
+  - csharp
+  - vb
+  name: SequenceReader
+  nameWithType: SequenceReader
+  fullName: EvilDICOM.Core.IO.Reading.SequenceReader
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/SequenceReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SequenceReader
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/SequenceReader.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: 'public class SequenceReader : object'
+    content.vb: >-
+      Public Class SequenceReader
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  commentId: M:EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  id: ReadIndefiniteLengthLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  parent: EvilDICOM.Core.IO.Reading.SequenceReader
+  langs:
+  - csharp
+  - vb
+  name: ReadIndefiniteLengthLittleEndian(DICOMBinaryReader, TransferSyntax)
+  nameWithType: SequenceReader.ReadIndefiniteLengthLittleEndian(DICOMBinaryReader, TransferSyntax)
+  fullName: EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader, EvilDICOM.Core.Enums.TransferSyntax)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/SequenceReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadIndefiniteLengthLittleEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/SequenceReader.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public static int ReadIndefiniteLengthLittleEndian(DICOMBinaryReader dr, TransferSyntax syntax)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+    - id: syntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function ReadIndefiniteLengthLittleEndian(dr As DICOMBinaryReader, syntax As TransferSyntax) As Integer
+  overload: EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthLittleEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  commentId: M:EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: ReadIndefiniteLengthBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.SequenceReader
+  langs:
+  - csharp
+  - vb
+  name: ReadIndefiniteLengthBigEndian(DICOMBinaryReader)
+  nameWithType: SequenceReader.ReadIndefiniteLengthBigEndian(DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/SequenceReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadIndefiniteLengthBigEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/SequenceReader.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public static int ReadIndefiniteLengthBigEndian(DICOMBinaryReader dr)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function ReadIndefiniteLengthBigEndian(dr As DICOMBinaryReader) As Integer
+  overload: EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthBigEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.SequenceReader.ReadItems(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  commentId: M:EvilDICOM.Core.IO.Reading.SequenceReader.ReadItems(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  id: ReadItems(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  parent: EvilDICOM.Core.IO.Reading.SequenceReader
+  langs:
+  - csharp
+  - vb
+  name: ReadItems(Byte[], TransferSyntax)
+  nameWithType: SequenceReader.ReadItems(Byte[], TransferSyntax)
+  fullName: EvilDICOM.Core.IO.Reading.SequenceReader.ReadItems(System.Byte[], EvilDICOM.Core.Enums.TransferSyntax)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/SequenceReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadItems
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/SequenceReader.cs
+    startLine: 52
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public static List<DICOMObject> ReadItems(byte[] data, TransferSyntax syntax)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    - id: syntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+    return:
+      type: List{EvilDICOM.Core.DICOMObject}
+    content.vb: Public Shared Function ReadItems(data As Byte(), syntax As TransferSyntax) As List(Of DICOMObject)
+  overload: EvilDICOM.Core.IO.Reading.SequenceReader.ReadItems*
+  nameWithType.vb: SequenceReader.ReadItems(Byte(), TransferSyntax)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Reading.SequenceReader.ReadItems(System.Byte(), EvilDICOM.Core.Enums.TransferSyntax)
+  name.vb: ReadItems(Byte(), TransferSyntax)
+references:
+- uid: EvilDICOM.Core.IO.Reading
+  commentId: N:EvilDICOM.Core.IO.Reading
+  isExternal: false
+  name: EvilDICOM.Core.IO.Reading
+  nameWithType: EvilDICOM.Core.IO.Reading
+  fullName: EvilDICOM.Core.IO.Reading
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthLittleEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthLittleEndian
+  isExternal: false
+  name: ReadIndefiniteLengthLittleEndian
+  nameWithType: SequenceReader.ReadIndefiniteLengthLittleEndian
+  fullName: EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthLittleEndian
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  commentId: T:EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  parent: EvilDICOM.Core.IO.Reading
+  isExternal: false
+  name: DICOMBinaryReader
+  nameWithType: DICOMBinaryReader
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  commentId: T:EvilDICOM.Core.Enums.TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: TransferSyntax
+  nameWithType: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthBigEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthBigEndian
+  isExternal: false
+  name: ReadIndefiniteLengthBigEndian
+  nameWithType: SequenceReader.ReadIndefiniteLengthBigEndian
+  fullName: EvilDICOM.Core.IO.Reading.SequenceReader.ReadIndefiniteLengthBigEndian
+- uid: EvilDICOM.Core.IO.Reading.SequenceReader.ReadItems*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.SequenceReader.ReadItems
+  isExternal: false
+  name: ReadItems
+  nameWithType: SequenceReader.ReadItems
+  fullName: EvilDICOM.Core.IO.Reading.SequenceReader.ReadItems
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: List{EvilDICOM.Core.DICOMObject}
+  commentId: '!:List{EvilDICOM.Core.DICOMObject}'
+  definition: List`1
+  name: List<DICOMObject>
+  nameWithType: List<DICOMObject>
+  fullName: List<EvilDICOM.Core.DICOMObject>
+  nameWithType.vb: List(Of DICOMObject)
+  fullName.vb: List(Of EvilDICOM.Core.DICOMObject)
+  name.vb: List(Of DICOMObject)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )

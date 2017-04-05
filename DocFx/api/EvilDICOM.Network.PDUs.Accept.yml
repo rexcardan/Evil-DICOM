@@ -1,0 +1,683 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.PDUs.Accept
+  commentId: T:EvilDICOM.Network.PDUs.Accept
+  id: Accept
+  parent: EvilDICOM.Network.PDUs
+  children:
+  - EvilDICOM.Network.PDUs.Accept.ApplicationContext
+  - EvilDICOM.Network.PDUs.Accept.CalledEntityTitle
+  - EvilDICOM.Network.PDUs.Accept.CallingEntityTitle
+  - EvilDICOM.Network.PDUs.Accept.Generate(EvilDICOM.Network.PDUs.Request,List{EvilDICOM.Network.PDUs.Items.PresentationContext})
+  - EvilDICOM.Network.PDUs.Accept.PresentationContexts
+  - EvilDICOM.Network.PDUs.Accept.ProtocolVersion
+  - EvilDICOM.Network.PDUs.Accept.ToString
+  - EvilDICOM.Network.PDUs.Accept.Type
+  - EvilDICOM.Network.PDUs.Accept.UserInfo
+  - EvilDICOM.Network.PDUs.Accept.Write
+  langs:
+  - csharp
+  - vb
+  name: Accept
+  nameWithType: Accept
+  fullName: EvilDICOM.Network.PDUs.Accept
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Accept
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: 'public class Accept : object, IPDU'
+    content.vb: >-
+      Public Class Accept
+          Inherits Object
+          Implements IPDU
+  inheritance:
+  - System.Object
+  implements:
+  - EvilDICOM.Network.Interfaces.IPDU
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.PDUs.Accept.ProtocolVersion
+  commentId: P:EvilDICOM.Network.PDUs.Accept.ProtocolVersion
+  id: ProtocolVersion
+  parent: EvilDICOM.Network.PDUs.Accept
+  langs:
+  - csharp
+  - vb
+  name: ProtocolVersion
+  nameWithType: Accept.ProtocolVersion
+  fullName: EvilDICOM.Network.PDUs.Accept.ProtocolVersion
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ProtocolVersion
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public int ProtocolVersion { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ProtocolVersion As Integer
+  overload: EvilDICOM.Network.PDUs.Accept.ProtocolVersion*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Accept.CalledEntityTitle
+  commentId: P:EvilDICOM.Network.PDUs.Accept.CalledEntityTitle
+  id: CalledEntityTitle
+  parent: EvilDICOM.Network.PDUs.Accept
+  langs:
+  - csharp
+  - vb
+  name: CalledEntityTitle
+  nameWithType: Accept.CalledEntityTitle
+  fullName: EvilDICOM.Network.PDUs.Accept.CalledEntityTitle
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CalledEntityTitle
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public string CalledEntityTitle { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CalledEntityTitle As String
+  overload: EvilDICOM.Network.PDUs.Accept.CalledEntityTitle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Accept.CallingEntityTitle
+  commentId: P:EvilDICOM.Network.PDUs.Accept.CallingEntityTitle
+  id: CallingEntityTitle
+  parent: EvilDICOM.Network.PDUs.Accept
+  langs:
+  - csharp
+  - vb
+  name: CallingEntityTitle
+  nameWithType: Accept.CallingEntityTitle
+  fullName: EvilDICOM.Network.PDUs.Accept.CallingEntityTitle
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CallingEntityTitle
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public string CallingEntityTitle { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property CallingEntityTitle As String
+  overload: EvilDICOM.Network.PDUs.Accept.CallingEntityTitle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Accept.ApplicationContext
+  commentId: P:EvilDICOM.Network.PDUs.Accept.ApplicationContext
+  id: ApplicationContext
+  parent: EvilDICOM.Network.PDUs.Accept
+  langs:
+  - csharp
+  - vb
+  name: ApplicationContext
+  nameWithType: Accept.ApplicationContext
+  fullName: EvilDICOM.Network.PDUs.Accept.ApplicationContext
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ApplicationContext
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public string ApplicationContext { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ApplicationContext As String
+  overload: EvilDICOM.Network.PDUs.Accept.ApplicationContext*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Accept.PresentationContexts
+  commentId: P:EvilDICOM.Network.PDUs.Accept.PresentationContexts
+  id: PresentationContexts
+  parent: EvilDICOM.Network.PDUs.Accept
+  langs:
+  - csharp
+  - vb
+  name: PresentationContexts
+  nameWithType: Accept.PresentationContexts
+  fullName: EvilDICOM.Network.PDUs.Accept.PresentationContexts
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PresentationContexts
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public List<PresentationContext> PresentationContexts { get; set; }
+    parameters: []
+    return:
+      type: List{EvilDICOM.Network.PDUs.Items.PresentationContext}
+    content.vb: Public Property PresentationContexts As List(Of PresentationContext)
+  overload: EvilDICOM.Network.PDUs.Accept.PresentationContexts*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Accept.UserInfo
+  commentId: P:EvilDICOM.Network.PDUs.Accept.UserInfo
+  id: UserInfo
+  parent: EvilDICOM.Network.PDUs.Accept
+  langs:
+  - csharp
+  - vb
+  name: UserInfo
+  nameWithType: Accept.UserInfo
+  fullName: EvilDICOM.Network.PDUs.Accept.UserInfo
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: UserInfo
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public UserInfo UserInfo { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.PDUs.Items.UserInfo
+    content.vb: Public Property UserInfo As UserInfo
+  overload: EvilDICOM.Network.PDUs.Accept.UserInfo*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Accept.Write
+  commentId: M:EvilDICOM.Network.PDUs.Accept.Write
+  id: Write
+  parent: EvilDICOM.Network.PDUs.Accept
+  langs:
+  - csharp
+  - vb
+  name: Write()
+  nameWithType: Accept.Write()
+  fullName: EvilDICOM.Network.PDUs.Accept.Write()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Write
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public byte[] Write()
+    return:
+      type: System.Byte[]
+    content.vb: Public Function Write As Byte()
+  overload: EvilDICOM.Network.PDUs.Accept.Write*
+  implements:
+  - EvilDICOM.Network.Interfaces.IPDU.Write
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Accept.Type
+  commentId: P:EvilDICOM.Network.PDUs.Accept.Type
+  id: Type
+  parent: EvilDICOM.Network.PDUs.Accept
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Accept.Type
+  fullName: EvilDICOM.Network.PDUs.Accept.Type
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Type
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+    startLine: 38
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public PDUType Type { get; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+    content.vb: Public ReadOnly Property Type As PDUType
+  overload: EvilDICOM.Network.PDUs.Accept.Type*
+  implements:
+  - EvilDICOM.Network.Interfaces.IPDU.Type
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.Network.PDUs.Accept.ToString
+  commentId: M:EvilDICOM.Network.PDUs.Accept.ToString
+  id: ToString
+  parent: EvilDICOM.Network.PDUs.Accept
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Accept.ToString()
+  fullName: EvilDICOM.Network.PDUs.Accept.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToString
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+    startLine: 67
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overload: EvilDICOM.Network.PDUs.Accept.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+- uid: EvilDICOM.Network.PDUs.Accept.Generate(EvilDICOM.Network.PDUs.Request,List{EvilDICOM.Network.PDUs.Items.PresentationContext})
+  commentId: M:EvilDICOM.Network.PDUs.Accept.Generate(EvilDICOM.Network.PDUs.Request,List{EvilDICOM.Network.PDUs.Items.PresentationContext})
+  id: Generate(EvilDICOM.Network.PDUs.Request,List{EvilDICOM.Network.PDUs.Items.PresentationContext})
+  parent: EvilDICOM.Network.PDUs.Accept
+  langs:
+  - csharp
+  - vb
+  name: Generate(Request, List<PresentationContext>)
+  nameWithType: Accept.Generate(Request, List<PresentationContext>)
+  fullName: EvilDICOM.Network.PDUs.Accept.Generate(EvilDICOM.Network.PDUs.Request, List<EvilDICOM.Network.PDUs.Items.PresentationContext>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Generate
+    path: ../EvilDICOM/EvilDICOM/Network/PDUs/Accept.cs
+    startLine: 86
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs
+  syntax:
+    content: public static Accept Generate(Request request, List<PresentationContext> contexts)
+    parameters:
+    - id: request
+      type: EvilDICOM.Network.PDUs.Request
+    - id: contexts
+      type: List{EvilDICOM.Network.PDUs.Items.PresentationContext}
+    return:
+      type: EvilDICOM.Network.PDUs.Accept
+    content.vb: Public Shared Function Generate(request As Request, contexts As List(Of PresentationContext)) As Accept
+  overload: EvilDICOM.Network.PDUs.Accept.Generate*
+  nameWithType.vb: Accept.Generate(Request, List(Of PresentationContext))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Network.PDUs.Accept.Generate(EvilDICOM.Network.PDUs.Request, List(Of EvilDICOM.Network.PDUs.Items.PresentationContext))
+  name.vb: Generate(Request, List(Of PresentationContext))
+references:
+- uid: EvilDICOM.Network.PDUs
+  commentId: N:EvilDICOM.Network.PDUs
+  isExternal: false
+  name: EvilDICOM.Network.PDUs
+  nameWithType: EvilDICOM.Network.PDUs
+  fullName: EvilDICOM.Network.PDUs
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.Interfaces.IPDU
+  commentId: T:EvilDICOM.Network.Interfaces.IPDU
+  parent: EvilDICOM.Network.Interfaces
+  isExternal: false
+  name: IPDU
+  nameWithType: IPDU
+  fullName: EvilDICOM.Network.Interfaces.IPDU
+- uid: EvilDICOM.Network.Interfaces
+  commentId: N:EvilDICOM.Network.Interfaces
+  isExternal: false
+  name: EvilDICOM.Network.Interfaces
+  nameWithType: EvilDICOM.Network.Interfaces
+  fullName: EvilDICOM.Network.Interfaces
+- uid: EvilDICOM.Network.PDUs.Accept.ProtocolVersion*
+  commentId: Overload:EvilDICOM.Network.PDUs.Accept.ProtocolVersion
+  isExternal: false
+  name: ProtocolVersion
+  nameWithType: Accept.ProtocolVersion
+  fullName: EvilDICOM.Network.PDUs.Accept.ProtocolVersion
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Network.PDUs.Accept.CalledEntityTitle*
+  commentId: Overload:EvilDICOM.Network.PDUs.Accept.CalledEntityTitle
+  isExternal: false
+  name: CalledEntityTitle
+  nameWithType: Accept.CalledEntityTitle
+  fullName: EvilDICOM.Network.PDUs.Accept.CalledEntityTitle
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Network.PDUs.Accept.CallingEntityTitle*
+  commentId: Overload:EvilDICOM.Network.PDUs.Accept.CallingEntityTitle
+  isExternal: false
+  name: CallingEntityTitle
+  nameWithType: Accept.CallingEntityTitle
+  fullName: EvilDICOM.Network.PDUs.Accept.CallingEntityTitle
+- uid: EvilDICOM.Network.PDUs.Accept.ApplicationContext*
+  commentId: Overload:EvilDICOM.Network.PDUs.Accept.ApplicationContext
+  isExternal: false
+  name: ApplicationContext
+  nameWithType: Accept.ApplicationContext
+  fullName: EvilDICOM.Network.PDUs.Accept.ApplicationContext
+- uid: EvilDICOM.Network.PDUs.Accept.PresentationContexts*
+  commentId: Overload:EvilDICOM.Network.PDUs.Accept.PresentationContexts
+  isExternal: false
+  name: PresentationContexts
+  nameWithType: Accept.PresentationContexts
+  fullName: EvilDICOM.Network.PDUs.Accept.PresentationContexts
+- uid: List{EvilDICOM.Network.PDUs.Items.PresentationContext}
+  commentId: '!:List{EvilDICOM.Network.PDUs.Items.PresentationContext}'
+  definition: List`1
+  name: List<PresentationContext>
+  nameWithType: List<PresentationContext>
+  fullName: List<EvilDICOM.Network.PDUs.Items.PresentationContext>
+  nameWithType.vb: List(Of PresentationContext)
+  fullName.vb: List(Of EvilDICOM.Network.PDUs.Items.PresentationContext)
+  name.vb: List(Of PresentationContext)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.Items.PresentationContext
+    name: PresentationContext
+    nameWithType: PresentationContext
+    fullName: EvilDICOM.Network.PDUs.Items.PresentationContext
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.Items.PresentationContext
+    name: PresentationContext
+    nameWithType: PresentationContext
+    fullName: EvilDICOM.Network.PDUs.Items.PresentationContext
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.PDUs.Accept.UserInfo*
+  commentId: Overload:EvilDICOM.Network.PDUs.Accept.UserInfo
+  isExternal: false
+  name: UserInfo
+  nameWithType: Accept.UserInfo
+  fullName: EvilDICOM.Network.PDUs.Accept.UserInfo
+- uid: EvilDICOM.Network.PDUs.Items.UserInfo
+  commentId: T:EvilDICOM.Network.PDUs.Items.UserInfo
+  parent: EvilDICOM.Network.PDUs.Items
+  isExternal: false
+  name: UserInfo
+  nameWithType: UserInfo
+  fullName: EvilDICOM.Network.PDUs.Items.UserInfo
+- uid: EvilDICOM.Network.PDUs.Items
+  commentId: N:EvilDICOM.Network.PDUs.Items
+  isExternal: false
+  name: EvilDICOM.Network.PDUs.Items
+  nameWithType: EvilDICOM.Network.PDUs.Items
+  fullName: EvilDICOM.Network.PDUs.Items
+- uid: EvilDICOM.Network.PDUs.Accept.Write*
+  commentId: Overload:EvilDICOM.Network.PDUs.Accept.Write
+  isExternal: false
+  name: Write
+  nameWithType: Accept.Write
+  fullName: EvilDICOM.Network.PDUs.Accept.Write
+- uid: EvilDICOM.Network.Interfaces.IPDU.Write
+  commentId: M:EvilDICOM.Network.Interfaces.IPDU.Write
+  parent: EvilDICOM.Network.Interfaces.IPDU
+  isExternal: false
+  name: Write()
+  nameWithType: IPDU.Write()
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Write()
+  spec.csharp:
+  - uid: EvilDICOM.Network.Interfaces.IPDU.Write
+    name: Write
+    nameWithType: IPDU.Write
+    fullName: EvilDICOM.Network.Interfaces.IPDU.Write
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.Interfaces.IPDU.Write
+    name: Write
+    nameWithType: IPDU.Write
+    fullName: EvilDICOM.Network.Interfaces.IPDU.Write
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Network.PDUs.Accept.Type*
+  commentId: Overload:EvilDICOM.Network.PDUs.Accept.Type
+  isExternal: false
+  name: Type
+  nameWithType: Accept.Type
+  fullName: EvilDICOM.Network.PDUs.Accept.Type
+- uid: EvilDICOM.Network.Interfaces.IPDU.Type
+  commentId: P:EvilDICOM.Network.Interfaces.IPDU.Type
+  parent: EvilDICOM.Network.Interfaces.IPDU
+  isExternal: false
+  name: Type
+  nameWithType: IPDU.Type
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Type
+- uid: EvilDICOM.Network.Enums.PDUType
+  commentId: T:EvilDICOM.Network.Enums.PDUType
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: PDUType
+  nameWithType: PDUType
+  fullName: EvilDICOM.Network.Enums.PDUType
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.PDUs.Accept.ToString*
+  commentId: Overload:EvilDICOM.Network.PDUs.Accept.ToString
+  isExternal: false
+  name: ToString
+  nameWithType: Accept.ToString
+  fullName: EvilDICOM.Network.PDUs.Accept.ToString
+- uid: EvilDICOM.Network.PDUs.Accept.Generate*
+  commentId: Overload:EvilDICOM.Network.PDUs.Accept.Generate
+  isExternal: false
+  name: Generate
+  nameWithType: Accept.Generate
+  fullName: EvilDICOM.Network.PDUs.Accept.Generate
+- uid: EvilDICOM.Network.PDUs.Request
+  commentId: T:EvilDICOM.Network.PDUs.Request
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: Request
+  nameWithType: Request
+  fullName: EvilDICOM.Network.PDUs.Request
+- uid: EvilDICOM.Network.PDUs.Accept
+  commentId: T:EvilDICOM.Network.PDUs.Accept
+  parent: EvilDICOM.Network.PDUs
+  isExternal: false
+  name: Accept
+  nameWithType: Accept
+  fullName: EvilDICOM.Network.PDUs.Accept

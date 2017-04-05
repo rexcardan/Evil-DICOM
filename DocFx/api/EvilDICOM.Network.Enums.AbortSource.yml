@@ -1,0 +1,150 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Enums.AbortSource
+  commentId: T:EvilDICOM.Network.Enums.AbortSource
+  id: AbortSource
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.AbortSource.DICOM_UL_SERV_PROVIDER
+  - EvilDICOM.Network.Enums.AbortSource.DICOM_UL_SERV_USER
+  - EvilDICOM.Network.Enums.AbortSource.RESERVED
+  langs:
+  - csharp
+  - vb
+  name: AbortSource
+  nameWithType: AbortSource
+  fullName: EvilDICOM.Network.Enums.AbortSource
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/AbortSource.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AbortSource
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/AbortSource.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: 'public enum AbortSource : byte'
+    content.vb: Public Enum AbortSource As Byte
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Network.Enums.AbortSource.DICOM_UL_SERV_USER
+  commentId: F:EvilDICOM.Network.Enums.AbortSource.DICOM_UL_SERV_USER
+  id: DICOM_UL_SERV_USER
+  parent: EvilDICOM.Network.Enums.AbortSource
+  langs:
+  - csharp
+  - vb
+  name: DICOM_UL_SERV_USER
+  nameWithType: AbortSource.DICOM_UL_SERV_USER
+  fullName: EvilDICOM.Network.Enums.AbortSource.DICOM_UL_SERV_USER
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/AbortSource.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOM_UL_SERV_USER
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/AbortSource.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: DICOM_UL_SERV_USER = null
+    return:
+      type: EvilDICOM.Network.Enums.AbortSource
+    content.vb: DICOM_UL_SERV_USER = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.AbortSource.RESERVED
+  commentId: F:EvilDICOM.Network.Enums.AbortSource.RESERVED
+  id: RESERVED
+  parent: EvilDICOM.Network.Enums.AbortSource
+  langs:
+  - csharp
+  - vb
+  name: RESERVED
+  nameWithType: AbortSource.RESERVED
+  fullName: EvilDICOM.Network.Enums.AbortSource.RESERVED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/AbortSource.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RESERVED
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/AbortSource.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED = null
+    return:
+      type: EvilDICOM.Network.Enums.AbortSource
+    content.vb: RESERVED = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.AbortSource.DICOM_UL_SERV_PROVIDER
+  commentId: F:EvilDICOM.Network.Enums.AbortSource.DICOM_UL_SERV_PROVIDER
+  id: DICOM_UL_SERV_PROVIDER
+  parent: EvilDICOM.Network.Enums.AbortSource
+  langs:
+  - csharp
+  - vb
+  name: DICOM_UL_SERV_PROVIDER
+  nameWithType: AbortSource.DICOM_UL_SERV_PROVIDER
+  fullName: EvilDICOM.Network.Enums.AbortSource.DICOM_UL_SERV_PROVIDER
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/AbortSource.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOM_UL_SERV_PROVIDER
+    path: ../EvilDICOM/EvilDICOM/Network/Enums/AbortSource.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: DICOM_UL_SERV_PROVIDER = null
+    return:
+      type: EvilDICOM.Network.Enums.AbortSource
+    content.vb: DICOM_UL_SERV_PROVIDER = Nothing
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  isExternal: false
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.Enums.AbortSource
+  commentId: T:EvilDICOM.Network.Enums.AbortSource
+  parent: EvilDICOM.Network.Enums
+  isExternal: false
+  name: AbortSource
+  nameWithType: AbortSource
+  fullName: EvilDICOM.Network.Enums.AbortSource

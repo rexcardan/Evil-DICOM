@@ -1,0 +1,265 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Reading.TagReader
+  commentId: T:EvilDICOM.Core.IO.Reading.TagReader
+  id: TagReader
+  parent: EvilDICOM.Core.IO.Reading
+  children:
+  - EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian(System.Byte[])
+  - EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian(System.Byte[])
+  langs:
+  - csharp
+  - vb
+  name: TagReader
+  nameWithType: TagReader
+  fullName: EvilDICOM.Core.IO.Reading.TagReader
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/TagReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: TagReader
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/TagReader.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: 'public class TagReader : object'
+    content.vb: >-
+      Public Class TagReader
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  commentId: M:EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: ReadLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.TagReader
+  langs:
+  - csharp
+  - vb
+  name: ReadLittleEndian(DICOMBinaryReader)
+  nameWithType: TagReader.ReadLittleEndian(DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/TagReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadLittleEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/TagReader.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public static Tag ReadLittleEndian(DICOMBinaryReader dr)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+    return:
+      type: EvilDICOM.Core.Element.Tag
+    content.vb: Public Shared Function ReadLittleEndian(dr As DICOMBinaryReader) As Tag
+  overload: EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian(System.Byte[])
+  id: ReadLittleEndian(System.Byte[])
+  parent: EvilDICOM.Core.IO.Reading.TagReader
+  langs:
+  - csharp
+  - vb
+  name: ReadLittleEndian(Byte[])
+  nameWithType: TagReader.ReadLittleEndian(Byte[])
+  fullName: EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/TagReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadLittleEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/TagReader.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public static Tag ReadLittleEndian(byte[] tagLE)
+    parameters:
+    - id: tagLE
+      type: System.Byte[]
+    return:
+      type: EvilDICOM.Core.Element.Tag
+    content.vb: Public Shared Function ReadLittleEndian(tagLE As Byte()) As Tag
+  overload: EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian*
+  nameWithType.vb: TagReader.ReadLittleEndian(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian(System.Byte())
+  name.vb: ReadLittleEndian(Byte())
+- uid: EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  commentId: M:EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: ReadBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.TagReader
+  langs:
+  - csharp
+  - vb
+  name: ReadBigEndian(DICOMBinaryReader)
+  nameWithType: TagReader.ReadBigEndian(DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/TagReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadBigEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/TagReader.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public static Tag ReadBigEndian(DICOMBinaryReader dr)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+    return:
+      type: EvilDICOM.Core.Element.Tag
+    content.vb: Public Shared Function ReadBigEndian(dr As DICOMBinaryReader) As Tag
+  overload: EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian(System.Byte[])
+  id: ReadBigEndian(System.Byte[])
+  parent: EvilDICOM.Core.IO.Reading.TagReader
+  langs:
+  - csharp
+  - vb
+  name: ReadBigEndian(Byte[])
+  nameWithType: TagReader.ReadBigEndian(Byte[])
+  fullName: EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/TagReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadBigEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Reading/TagReader.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public static Tag ReadBigEndian(byte[] tagBE)
+    parameters:
+    - id: tagBE
+      type: System.Byte[]
+    return:
+      type: EvilDICOM.Core.Element.Tag
+    content.vb: Public Shared Function ReadBigEndian(tagBE As Byte()) As Tag
+  overload: EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian*
+  nameWithType.vb: TagReader.ReadBigEndian(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian(System.Byte())
+  name.vb: ReadBigEndian(Byte())
+references:
+- uid: EvilDICOM.Core.IO.Reading
+  commentId: N:EvilDICOM.Core.IO.Reading
+  isExternal: false
+  name: EvilDICOM.Core.IO.Reading
+  nameWithType: EvilDICOM.Core.IO.Reading
+  fullName: EvilDICOM.Core.IO.Reading
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian
+  isExternal: false
+  name: ReadLittleEndian
+  nameWithType: TagReader.ReadLittleEndian
+  fullName: EvilDICOM.Core.IO.Reading.TagReader.ReadLittleEndian
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  commentId: T:EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  parent: EvilDICOM.Core.IO.Reading
+  isExternal: false
+  name: DICOMBinaryReader
+  nameWithType: DICOMBinaryReader
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+- uid: EvilDICOM.Core.Element.Tag
+  commentId: T:EvilDICOM.Core.Element.Tag
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: Tag
+  nameWithType: Tag
+  fullName: EvilDICOM.Core.Element.Tag
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  isExternal: false
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: System.Byte[]
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian
+  isExternal: false
+  name: ReadBigEndian
+  nameWithType: TagReader.ReadBigEndian
+  fullName: EvilDICOM.Core.IO.Reading.TagReader.ReadBigEndian

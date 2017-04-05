@@ -1,0 +1,148 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Element.Age
+  commentId: T:EvilDICOM.Core.Element.Age
+  id: Age
+  parent: EvilDICOM.Core.Element
+  children:
+  - EvilDICOM.Core.Element.Age.Number
+  - EvilDICOM.Core.Element.Age.Units
+  langs:
+  - csharp
+  - vb
+  name: Age
+  nameWithType: Age
+  fullName: EvilDICOM.Core.Element.Age
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/AgeString.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Age
+    path: ../EvilDICOM/EvilDICOM/Core/Element/AgeString.cs
+    startLine: 34
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nA small class to help manipulate the age in the AgeString class\n"
+  example: []
+  syntax:
+    content: 'public class Age : object'
+    content.vb: >-
+      Public Class Age
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Element.Age.Number
+  commentId: P:EvilDICOM.Core.Element.Age.Number
+  id: Number
+  parent: EvilDICOM.Core.Element.Age
+  langs:
+  - csharp
+  - vb
+  name: Number
+  nameWithType: Age.Number
+  fullName: EvilDICOM.Core.Element.Age.Number
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/AgeString.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Number
+    path: ../EvilDICOM/EvilDICOM/Core/Element/AgeString.cs
+    startLine: 44
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public int Number { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Number As Integer
+  overload: EvilDICOM.Core.Element.Age.Number*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Element.Age.Units
+  commentId: P:EvilDICOM.Core.Element.Age.Units
+  id: Units
+  parent: EvilDICOM.Core.Element.Age
+  langs:
+  - csharp
+  - vb
+  name: Units
+  nameWithType: Age.Units
+  fullName: EvilDICOM.Core.Element.Age.Units
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/AgeString.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Units
+    path: ../EvilDICOM/EvilDICOM/Core/Element/AgeString.cs
+    startLine: 45
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  syntax:
+    content: public Age.Unit Units { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Element.Age.Unit
+    content.vb: Public Property Units As Age.Unit
+  overload: EvilDICOM.Core.Element.Age.Units*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  isExternal: false
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Element.Age.Number*
+  commentId: Overload:EvilDICOM.Core.Element.Age.Number
+  isExternal: false
+  name: Number
+  nameWithType: Age.Number
+  fullName: EvilDICOM.Core.Element.Age.Number
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Core.Element.Age.Units*
+  commentId: Overload:EvilDICOM.Core.Element.Age.Units
+  isExternal: false
+  name: Units
+  nameWithType: Age.Units
+  fullName: EvilDICOM.Core.Element.Age.Units
+- uid: EvilDICOM.Core.Element.Age.Unit
+  commentId: T:EvilDICOM.Core.Element.Age.Unit
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: Age.Unit
+  nameWithType: Age.Unit
+  fullName: EvilDICOM.Core.Element.Age.Unit

@@ -1,0 +1,115 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Helpers.EnumHelper
+  commentId: T:EvilDICOM.Core.Helpers.EnumHelper
+  id: EnumHelper
+  parent: EvilDICOM.Core.Helpers
+  children:
+  - EvilDICOM.Core.Helpers.EnumHelper.StringToEnum``1(System.String)
+  langs:
+  - csharp
+  - vb
+  name: EnumHelper
+  nameWithType: EnumHelper
+  fullName: EvilDICOM.Core.Helpers.EnumHelper
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/EnumHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: EnumHelper
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/EnumHelper.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: 'public class EnumHelper : object'
+    content.vb: >-
+      Public Class EnumHelper
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Helpers.EnumHelper.StringToEnum``1(System.String)
+  commentId: M:EvilDICOM.Core.Helpers.EnumHelper.StringToEnum``1(System.String)
+  id: StringToEnum``1(System.String)
+  parent: EvilDICOM.Core.Helpers.EnumHelper
+  langs:
+  - csharp
+  - vb
+  name: StringToEnum<T>(String)
+  nameWithType: EnumHelper.StringToEnum<T>(String)
+  fullName: EvilDICOM.Core.Helpers.EnumHelper.StringToEnum<T>(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/EnumHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StringToEnum
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/EnumHelper.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static T StringToEnum<T>(string name)
+    parameters:
+    - id: name
+      type: System.String
+    typeParameters:
+    - id: T
+    return:
+      type: '{T}'
+    content.vb: Public Shared Function StringToEnum(Of T)(name As String) As T
+  overload: EvilDICOM.Core.Helpers.EnumHelper.StringToEnum*
+  nameWithType.vb: EnumHelper.StringToEnum(Of T)(String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.Helpers.EnumHelper.StringToEnum(Of T)(System.String)
+  name.vb: StringToEnum(Of T)(String)
+references:
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  isExternal: false
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Helpers.EnumHelper.StringToEnum*
+  commentId: Overload:EvilDICOM.Core.Helpers.EnumHelper.StringToEnum
+  isExternal: false
+  name: StringToEnum
+  nameWithType: EnumHelper.StringToEnum
+  fullName: EvilDICOM.Core.Helpers.EnumHelper.StringToEnum
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  isExternal: false
+  name: T
+  nameWithType: T
+  fullName: T

@@ -1,0 +1,1741 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Services.DIMSEService
+  commentId: T:EvilDICOM.Network.Services.DIMSEService
+  id: DIMSEService
+  parent: EvilDICOM.Network.Services
+  children:
+  - EvilDICOM.Network.Services.DIMSEService.#ctor
+  - EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceived
+  - EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceivedAction
+  - EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceived
+  - EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceivedAction
+  - EvilDICOM.Network.Services.DIMSEService.CFindRequestReceived
+  - EvilDICOM.Network.Services.DIMSEService.CFindRequestReceivedAction
+  - EvilDICOM.Network.Services.DIMSEService.CFindResponseReceived
+  - EvilDICOM.Network.Services.DIMSEService.CFindResponseReceivedAction
+  - EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceived
+  - EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceivedAction
+  - EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceived
+  - EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceivedAction
+  - EvilDICOM.Network.Services.DIMSEService.CStorePayloadAction
+  - EvilDICOM.Network.Services.DIMSEService.CStoreRequestReceived
+  - EvilDICOM.Network.Services.DIMSEService.CStoreRequestReceivedAction
+  - EvilDICOM.Network.Services.DIMSEService.CStoreResponseReceived
+  - EvilDICOM.Network.Services.DIMSEService.CStoreResponseReceivedAction
+  langs:
+  - csharp
+  - vb
+  name: DIMSEService
+  nameWithType: DIMSEService
+  fullName: EvilDICOM.Network.Services.DIMSEService
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DIMSEService
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  summary: "\nThis class handles incoming DIMSE messaging. It logs the message, creates and sends the appropriate response\n"
+  example: []
+  syntax:
+    content: 'public class DIMSEService : object'
+    content.vb: >-
+      Public Class DIMSEService
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Services.DIMSEService.#ctor
+  commentId: M:EvilDICOM.Network.Services.DIMSEService.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: DIMSEService()
+  nameWithType: DIMSEService.DIMSEService()
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEService()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public DIMSEService()
+    content.vb: Public Sub New
+  overload: EvilDICOM.Network.Services.DIMSEService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceivedAction
+  commentId: P:EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceivedAction
+  id: CEchoRequestReceivedAction
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CEchoRequestReceivedAction
+  nameWithType: DIMSEService.CEchoRequestReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceivedAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CEchoRequestReceivedAction
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<CEchoRequest, Association> CEchoRequestReceivedAction { get; set; }
+    parameters: []
+    return:
+      type: Action{EvilDICOM.Network.DIMSE.CEchoRequest,EvilDICOM.Network.Association}
+    content.vb: Public Property CEchoRequestReceivedAction As Action(Of CEchoRequest, Association)
+  overload: EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceivedAction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceivedAction
+  commentId: P:EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceivedAction
+  id: CEchoResponseReceivedAction
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CEchoResponseReceivedAction
+  nameWithType: DIMSEService.CEchoResponseReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceivedAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CEchoResponseReceivedAction
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<CEchoResponse, Association> CEchoResponseReceivedAction { get; set; }
+    parameters: []
+    return:
+      type: Action{EvilDICOM.Network.DIMSE.CEchoResponse,EvilDICOM.Network.Association}
+    content.vb: Public Property CEchoResponseReceivedAction As Action(Of CEchoResponse, Association)
+  overload: EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceivedAction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CStoreRequestReceivedAction
+  commentId: P:EvilDICOM.Network.Services.DIMSEService.CStoreRequestReceivedAction
+  id: CStoreRequestReceivedAction
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CStoreRequestReceivedAction
+  nameWithType: DIMSEService.CStoreRequestReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CStoreRequestReceivedAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CStoreRequestReceivedAction
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<CStoreRequest, Association> CStoreRequestReceivedAction { get; set; }
+    parameters: []
+    return:
+      type: Action{EvilDICOM.Network.DIMSE.CStoreRequest,EvilDICOM.Network.Association}
+    content.vb: Public Property CStoreRequestReceivedAction As Action(Of CStoreRequest, Association)
+  overload: EvilDICOM.Network.Services.DIMSEService.CStoreRequestReceivedAction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CStorePayloadAction
+  commentId: P:EvilDICOM.Network.Services.DIMSEService.CStorePayloadAction
+  id: CStorePayloadAction
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CStorePayloadAction
+  nameWithType: DIMSEService.CStorePayloadAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CStorePayloadAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CStorePayloadAction
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Func<DICOMObject, Association, bool> CStorePayloadAction { get; set; }
+    parameters: []
+    return:
+      type: Func{EvilDICOM.Core.DICOMObject,EvilDICOM.Network.Association,System.Boolean}
+    content.vb: Public Property CStorePayloadAction As Func(Of DICOMObject, Association, Boolean)
+  overload: EvilDICOM.Network.Services.DIMSEService.CStorePayloadAction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CStoreResponseReceivedAction
+  commentId: P:EvilDICOM.Network.Services.DIMSEService.CStoreResponseReceivedAction
+  id: CStoreResponseReceivedAction
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CStoreResponseReceivedAction
+  nameWithType: DIMSEService.CStoreResponseReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CStoreResponseReceivedAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CStoreResponseReceivedAction
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<CStoreResponse, Association> CStoreResponseReceivedAction { get; set; }
+    parameters: []
+    return:
+      type: Action{EvilDICOM.Network.DIMSE.CStoreResponse,EvilDICOM.Network.Association}
+    content.vb: Public Property CStoreResponseReceivedAction As Action(Of CStoreResponse, Association)
+  overload: EvilDICOM.Network.Services.DIMSEService.CStoreResponseReceivedAction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CFindRequestReceivedAction
+  commentId: P:EvilDICOM.Network.Services.DIMSEService.CFindRequestReceivedAction
+  id: CFindRequestReceivedAction
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CFindRequestReceivedAction
+  nameWithType: DIMSEService.CFindRequestReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CFindRequestReceivedAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CFindRequestReceivedAction
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<CFindRequest, Association> CFindRequestReceivedAction { get; set; }
+    parameters: []
+    return:
+      type: Action{EvilDICOM.Network.DIMSE.CFindRequest,EvilDICOM.Network.Association}
+    content.vb: Public Property CFindRequestReceivedAction As Action(Of CFindRequest, Association)
+  overload: EvilDICOM.Network.Services.DIMSEService.CFindRequestReceivedAction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CFindResponseReceivedAction
+  commentId: P:EvilDICOM.Network.Services.DIMSEService.CFindResponseReceivedAction
+  id: CFindResponseReceivedAction
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CFindResponseReceivedAction
+  nameWithType: DIMSEService.CFindResponseReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CFindResponseReceivedAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CFindResponseReceivedAction
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 29
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<CFindResponse, Association> CFindResponseReceivedAction { get; set; }
+    parameters: []
+    return:
+      type: Action{EvilDICOM.Network.DIMSE.CFindResponse,EvilDICOM.Network.Association}
+    content.vb: Public Property CFindResponseReceivedAction As Action(Of CFindResponse, Association)
+  overload: EvilDICOM.Network.Services.DIMSEService.CFindResponseReceivedAction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceivedAction
+  commentId: P:EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceivedAction
+  id: CMoveRequestReceivedAction
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CMoveRequestReceivedAction
+  nameWithType: DIMSEService.CMoveRequestReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceivedAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CMoveRequestReceivedAction
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 30
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<CMoveRequest, Association> CMoveRequestReceivedAction { get; set; }
+    parameters: []
+    return:
+      type: Action{EvilDICOM.Network.DIMSE.CMoveRequest,EvilDICOM.Network.Association}
+    content.vb: Public Property CMoveRequestReceivedAction As Action(Of CMoveRequest, Association)
+  overload: EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceivedAction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceivedAction
+  commentId: P:EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceivedAction
+  id: CMoveResponseReceivedAction
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CMoveResponseReceivedAction
+  nameWithType: DIMSEService.CMoveResponseReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceivedAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CMoveResponseReceivedAction
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 31
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Action<CMoveResponse, Association> CMoveResponseReceivedAction { get; set; }
+    parameters: []
+    return:
+      type: Action{EvilDICOM.Network.DIMSE.CMoveResponse,EvilDICOM.Network.Association}
+    content.vb: Public Property CMoveResponseReceivedAction As Action(Of CMoveResponse, Association)
+  overload: EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceivedAction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceived
+  commentId: E:EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceived
+  id: CEchoRequestReceived
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CEchoRequestReceived
+  nameWithType: DIMSEService.CEchoRequestReceived
+  fullName: EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CEchoRequestReceived
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 150
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event DIMSEService.DIMSERequestHandler<CEchoRequest> CEchoRequestReceived
+    return:
+      type: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{EvilDICOM.Network.DIMSE.CEchoRequest}
+    content.vb: Public Event CEchoRequestReceived As DIMSEService.DIMSERequestHandler(Of CEchoRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CFindRequestReceived
+  commentId: E:EvilDICOM.Network.Services.DIMSEService.CFindRequestReceived
+  id: CFindRequestReceived
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CFindRequestReceived
+  nameWithType: DIMSEService.CFindRequestReceived
+  fullName: EvilDICOM.Network.Services.DIMSEService.CFindRequestReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CFindRequestReceived
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 151
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event DIMSEService.DIMSERequestHandler<CFindRequest> CFindRequestReceived
+    return:
+      type: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{EvilDICOM.Network.DIMSE.CFindRequest}
+    content.vb: Public Event CFindRequestReceived As DIMSEService.DIMSERequestHandler(Of CFindRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceived
+  commentId: E:EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceived
+  id: CMoveRequestReceived
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CMoveRequestReceived
+  nameWithType: DIMSEService.CMoveRequestReceived
+  fullName: EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CMoveRequestReceived
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 152
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event DIMSEService.DIMSERequestHandler<CMoveRequest> CMoveRequestReceived
+    return:
+      type: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{EvilDICOM.Network.DIMSE.CMoveRequest}
+    content.vb: Public Event CMoveRequestReceived As DIMSEService.DIMSERequestHandler(Of CMoveRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CStoreRequestReceived
+  commentId: E:EvilDICOM.Network.Services.DIMSEService.CStoreRequestReceived
+  id: CStoreRequestReceived
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CStoreRequestReceived
+  nameWithType: DIMSEService.CStoreRequestReceived
+  fullName: EvilDICOM.Network.Services.DIMSEService.CStoreRequestReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CStoreRequestReceived
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 153
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event DIMSEService.DIMSERequestHandler<CStoreRequest> CStoreRequestReceived
+    return:
+      type: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{EvilDICOM.Network.DIMSE.CStoreRequest}
+    content.vb: Public Event CStoreRequestReceived As DIMSEService.DIMSERequestHandler(Of CStoreRequest)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceived
+  commentId: E:EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceived
+  id: CEchoResponseReceived
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CEchoResponseReceived
+  nameWithType: DIMSEService.CEchoResponseReceived
+  fullName: EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CEchoResponseReceived
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 189
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event DIMSEService.DIMSEResponseHandler<CEchoResponse> CEchoResponseReceived
+    return:
+      type: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{EvilDICOM.Network.DIMSE.CEchoResponse}
+    content.vb: Public Event CEchoResponseReceived As DIMSEService.DIMSEResponseHandler(Of CEchoResponse)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CFindResponseReceived
+  commentId: E:EvilDICOM.Network.Services.DIMSEService.CFindResponseReceived
+  id: CFindResponseReceived
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CFindResponseReceived
+  nameWithType: DIMSEService.CFindResponseReceived
+  fullName: EvilDICOM.Network.Services.DIMSEService.CFindResponseReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CFindResponseReceived
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 190
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event DIMSEService.DIMSEResponseHandler<CFindResponse> CFindResponseReceived
+    return:
+      type: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{EvilDICOM.Network.DIMSE.CFindResponse}
+    content.vb: Public Event CFindResponseReceived As DIMSEService.DIMSEResponseHandler(Of CFindResponse)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceived
+  commentId: E:EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceived
+  id: CMoveResponseReceived
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CMoveResponseReceived
+  nameWithType: DIMSEService.CMoveResponseReceived
+  fullName: EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CMoveResponseReceived
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 191
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event DIMSEService.DIMSEResponseHandler<CMoveResponse> CMoveResponseReceived
+    return:
+      type: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{EvilDICOM.Network.DIMSE.CMoveResponse}
+    content.vb: Public Event CMoveResponseReceived As DIMSEService.DIMSEResponseHandler(Of CMoveResponse)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.DIMSEService.CStoreResponseReceived
+  commentId: E:EvilDICOM.Network.Services.DIMSEService.CStoreResponseReceived
+  id: CStoreResponseReceived
+  parent: EvilDICOM.Network.Services.DIMSEService
+  langs:
+  - csharp
+  - vb
+  name: CStoreResponseReceived
+  nameWithType: DIMSEService.CStoreResponseReceived
+  fullName: EvilDICOM.Network.Services.DIMSEService.CStoreResponseReceived
+  type: Event
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CStoreResponseReceived
+    path: ../EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs
+    startLine: 192
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public event DIMSEService.DIMSEResponseHandler<CStoreResponse> CStoreResponseReceived
+    return:
+      type: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{EvilDICOM.Network.DIMSE.CStoreResponse}
+    content.vb: Public Event CStoreResponseReceived As DIMSEService.DIMSEResponseHandler(Of CStoreResponse)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Network.Services
+  commentId: N:EvilDICOM.Network.Services
+  isExternal: false
+  name: EvilDICOM.Network.Services
+  nameWithType: EvilDICOM.Network.Services
+  fullName: EvilDICOM.Network.Services
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.Services.DIMSEService.#ctor*
+  commentId: Overload:EvilDICOM.Network.Services.DIMSEService.#ctor
+  isExternal: false
+  name: DIMSEService
+  nameWithType: DIMSEService.DIMSEService
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEService
+- uid: EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceivedAction*
+  commentId: Overload:EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceivedAction
+  isExternal: false
+  name: CEchoRequestReceivedAction
+  nameWithType: DIMSEService.CEchoRequestReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceivedAction
+- uid: Action{EvilDICOM.Network.DIMSE.CEchoRequest,EvilDICOM.Network.Association}
+  commentId: '!:Action{EvilDICOM.Network.DIMSE.CEchoRequest,EvilDICOM.Network.Association}'
+  definition: Action`2
+  name: Action<CEchoRequest, Association>
+  nameWithType: Action<CEchoRequest, Association>
+  fullName: Action<EvilDICOM.Network.DIMSE.CEchoRequest, EvilDICOM.Network.Association>
+  nameWithType.vb: Action(Of CEchoRequest, Association)
+  fullName.vb: Action(Of EvilDICOM.Network.DIMSE.CEchoRequest, EvilDICOM.Network.Association)
+  name.vb: Action(Of CEchoRequest, Association)
+  spec.csharp:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CEchoRequest
+    name: CEchoRequest
+    nameWithType: CEchoRequest
+    fullName: EvilDICOM.Network.DIMSE.CEchoRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CEchoRequest
+    name: CEchoRequest
+    nameWithType: CEchoRequest
+    fullName: EvilDICOM.Network.DIMSE.CEchoRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Action`2
+  isExternal: true
+  name: Action<, >
+  nameWithType: Action<, >
+  fullName: Action<, >
+  nameWithType.vb: Action(Of , )
+  fullName.vb: Action(Of , )
+  name.vb: Action(Of , )
+  spec.csharp:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceivedAction*
+  commentId: Overload:EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceivedAction
+  isExternal: false
+  name: CEchoResponseReceivedAction
+  nameWithType: DIMSEService.CEchoResponseReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceivedAction
+- uid: Action{EvilDICOM.Network.DIMSE.CEchoResponse,EvilDICOM.Network.Association}
+  commentId: '!:Action{EvilDICOM.Network.DIMSE.CEchoResponse,EvilDICOM.Network.Association}'
+  definition: Action`2
+  name: Action<CEchoResponse, Association>
+  nameWithType: Action<CEchoResponse, Association>
+  fullName: Action<EvilDICOM.Network.DIMSE.CEchoResponse, EvilDICOM.Network.Association>
+  nameWithType.vb: Action(Of CEchoResponse, Association)
+  fullName.vb: Action(Of EvilDICOM.Network.DIMSE.CEchoResponse, EvilDICOM.Network.Association)
+  name.vb: Action(Of CEchoResponse, Association)
+  spec.csharp:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CEchoResponse
+    name: CEchoResponse
+    nameWithType: CEchoResponse
+    fullName: EvilDICOM.Network.DIMSE.CEchoResponse
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CEchoResponse
+    name: CEchoResponse
+    nameWithType: CEchoResponse
+    fullName: EvilDICOM.Network.DIMSE.CEchoResponse
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.CStoreRequestReceivedAction*
+  commentId: Overload:EvilDICOM.Network.Services.DIMSEService.CStoreRequestReceivedAction
+  isExternal: false
+  name: CStoreRequestReceivedAction
+  nameWithType: DIMSEService.CStoreRequestReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CStoreRequestReceivedAction
+- uid: Action{EvilDICOM.Network.DIMSE.CStoreRequest,EvilDICOM.Network.Association}
+  commentId: '!:Action{EvilDICOM.Network.DIMSE.CStoreRequest,EvilDICOM.Network.Association}'
+  definition: Action`2
+  name: Action<CStoreRequest, Association>
+  nameWithType: Action<CStoreRequest, Association>
+  fullName: Action<EvilDICOM.Network.DIMSE.CStoreRequest, EvilDICOM.Network.Association>
+  nameWithType.vb: Action(Of CStoreRequest, Association)
+  fullName.vb: Action(Of EvilDICOM.Network.DIMSE.CStoreRequest, EvilDICOM.Network.Association)
+  name.vb: Action(Of CStoreRequest, Association)
+  spec.csharp:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CStoreRequest
+    name: CStoreRequest
+    nameWithType: CStoreRequest
+    fullName: EvilDICOM.Network.DIMSE.CStoreRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CStoreRequest
+    name: CStoreRequest
+    nameWithType: CStoreRequest
+    fullName: EvilDICOM.Network.DIMSE.CStoreRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.CStorePayloadAction*
+  commentId: Overload:EvilDICOM.Network.Services.DIMSEService.CStorePayloadAction
+  isExternal: false
+  name: CStorePayloadAction
+  nameWithType: DIMSEService.CStorePayloadAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CStorePayloadAction
+- uid: Func{EvilDICOM.Core.DICOMObject,EvilDICOM.Network.Association,System.Boolean}
+  commentId: '!:Func{EvilDICOM.Core.DICOMObject,EvilDICOM.Network.Association,System.Boolean}'
+  definition: Func`3
+  name: Func<DICOMObject, Association, Boolean>
+  nameWithType: Func<DICOMObject, Association, Boolean>
+  fullName: Func<EvilDICOM.Core.DICOMObject, EvilDICOM.Network.Association, System.Boolean>
+  nameWithType.vb: Func(Of DICOMObject, Association, Boolean)
+  fullName.vb: Func(Of EvilDICOM.Core.DICOMObject, EvilDICOM.Network.Association, System.Boolean)
+  name.vb: Func(Of DICOMObject, Association, Boolean)
+  spec.csharp:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: Func`3
+  commentId: '!:Func`3'
+  isExternal: true
+  name: Func<, , >
+  nameWithType: Func<, , >
+  fullName: Func<, , >
+  nameWithType.vb: Func(Of , , )
+  fullName.vb: Func(Of , , )
+  name.vb: Func(Of , , )
+  spec.csharp:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Func`3
+    name: Func
+    nameWithType: Func
+    fullName: Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.CStoreResponseReceivedAction*
+  commentId: Overload:EvilDICOM.Network.Services.DIMSEService.CStoreResponseReceivedAction
+  isExternal: false
+  name: CStoreResponseReceivedAction
+  nameWithType: DIMSEService.CStoreResponseReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CStoreResponseReceivedAction
+- uid: Action{EvilDICOM.Network.DIMSE.CStoreResponse,EvilDICOM.Network.Association}
+  commentId: '!:Action{EvilDICOM.Network.DIMSE.CStoreResponse,EvilDICOM.Network.Association}'
+  definition: Action`2
+  name: Action<CStoreResponse, Association>
+  nameWithType: Action<CStoreResponse, Association>
+  fullName: Action<EvilDICOM.Network.DIMSE.CStoreResponse, EvilDICOM.Network.Association>
+  nameWithType.vb: Action(Of CStoreResponse, Association)
+  fullName.vb: Action(Of EvilDICOM.Network.DIMSE.CStoreResponse, EvilDICOM.Network.Association)
+  name.vb: Action(Of CStoreResponse, Association)
+  spec.csharp:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CStoreResponse
+    name: CStoreResponse
+    nameWithType: CStoreResponse
+    fullName: EvilDICOM.Network.DIMSE.CStoreResponse
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CStoreResponse
+    name: CStoreResponse
+    nameWithType: CStoreResponse
+    fullName: EvilDICOM.Network.DIMSE.CStoreResponse
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.CFindRequestReceivedAction*
+  commentId: Overload:EvilDICOM.Network.Services.DIMSEService.CFindRequestReceivedAction
+  isExternal: false
+  name: CFindRequestReceivedAction
+  nameWithType: DIMSEService.CFindRequestReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CFindRequestReceivedAction
+- uid: Action{EvilDICOM.Network.DIMSE.CFindRequest,EvilDICOM.Network.Association}
+  commentId: '!:Action{EvilDICOM.Network.DIMSE.CFindRequest,EvilDICOM.Network.Association}'
+  definition: Action`2
+  name: Action<CFindRequest, Association>
+  nameWithType: Action<CFindRequest, Association>
+  fullName: Action<EvilDICOM.Network.DIMSE.CFindRequest, EvilDICOM.Network.Association>
+  nameWithType.vb: Action(Of CFindRequest, Association)
+  fullName.vb: Action(Of EvilDICOM.Network.DIMSE.CFindRequest, EvilDICOM.Network.Association)
+  name.vb: Action(Of CFindRequest, Association)
+  spec.csharp:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CFindRequest
+    name: CFindRequest
+    nameWithType: CFindRequest
+    fullName: EvilDICOM.Network.DIMSE.CFindRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CFindRequest
+    name: CFindRequest
+    nameWithType: CFindRequest
+    fullName: EvilDICOM.Network.DIMSE.CFindRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.CFindResponseReceivedAction*
+  commentId: Overload:EvilDICOM.Network.Services.DIMSEService.CFindResponseReceivedAction
+  isExternal: false
+  name: CFindResponseReceivedAction
+  nameWithType: DIMSEService.CFindResponseReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CFindResponseReceivedAction
+- uid: Action{EvilDICOM.Network.DIMSE.CFindResponse,EvilDICOM.Network.Association}
+  commentId: '!:Action{EvilDICOM.Network.DIMSE.CFindResponse,EvilDICOM.Network.Association}'
+  definition: Action`2
+  name: Action<CFindResponse, Association>
+  nameWithType: Action<CFindResponse, Association>
+  fullName: Action<EvilDICOM.Network.DIMSE.CFindResponse, EvilDICOM.Network.Association>
+  nameWithType.vb: Action(Of CFindResponse, Association)
+  fullName.vb: Action(Of EvilDICOM.Network.DIMSE.CFindResponse, EvilDICOM.Network.Association)
+  name.vb: Action(Of CFindResponse, Association)
+  spec.csharp:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CFindResponse
+    name: CFindResponse
+    nameWithType: CFindResponse
+    fullName: EvilDICOM.Network.DIMSE.CFindResponse
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CFindResponse
+    name: CFindResponse
+    nameWithType: CFindResponse
+    fullName: EvilDICOM.Network.DIMSE.CFindResponse
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceivedAction*
+  commentId: Overload:EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceivedAction
+  isExternal: false
+  name: CMoveRequestReceivedAction
+  nameWithType: DIMSEService.CMoveRequestReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceivedAction
+- uid: Action{EvilDICOM.Network.DIMSE.CMoveRequest,EvilDICOM.Network.Association}
+  commentId: '!:Action{EvilDICOM.Network.DIMSE.CMoveRequest,EvilDICOM.Network.Association}'
+  definition: Action`2
+  name: Action<CMoveRequest, Association>
+  nameWithType: Action<CMoveRequest, Association>
+  fullName: Action<EvilDICOM.Network.DIMSE.CMoveRequest, EvilDICOM.Network.Association>
+  nameWithType.vb: Action(Of CMoveRequest, Association)
+  fullName.vb: Action(Of EvilDICOM.Network.DIMSE.CMoveRequest, EvilDICOM.Network.Association)
+  name.vb: Action(Of CMoveRequest, Association)
+  spec.csharp:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CMoveRequest
+    name: CMoveRequest
+    nameWithType: CMoveRequest
+    fullName: EvilDICOM.Network.DIMSE.CMoveRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CMoveRequest
+    name: CMoveRequest
+    nameWithType: CMoveRequest
+    fullName: EvilDICOM.Network.DIMSE.CMoveRequest
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceivedAction*
+  commentId: Overload:EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceivedAction
+  isExternal: false
+  name: CMoveResponseReceivedAction
+  nameWithType: DIMSEService.CMoveResponseReceivedAction
+  fullName: EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceivedAction
+- uid: Action{EvilDICOM.Network.DIMSE.CMoveResponse,EvilDICOM.Network.Association}
+  commentId: '!:Action{EvilDICOM.Network.DIMSE.CMoveResponse,EvilDICOM.Network.Association}'
+  definition: Action`2
+  name: Action<CMoveResponse, Association>
+  nameWithType: Action<CMoveResponse, Association>
+  fullName: Action<EvilDICOM.Network.DIMSE.CMoveResponse, EvilDICOM.Network.Association>
+  nameWithType.vb: Action(Of CMoveResponse, Association)
+  fullName.vb: Action(Of EvilDICOM.Network.DIMSE.CMoveResponse, EvilDICOM.Network.Association)
+  name.vb: Action(Of CMoveResponse, Association)
+  spec.csharp:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CMoveResponse
+    name: CMoveResponse
+    nameWithType: CMoveResponse
+    fullName: EvilDICOM.Network.DIMSE.CMoveResponse
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: Action`2
+    name: Action
+    nameWithType: Action
+    fullName: Action
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CMoveResponse
+    name: CMoveResponse
+    nameWithType: CMoveResponse
+    fullName: EvilDICOM.Network.DIMSE.CMoveResponse
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{EvilDICOM.Network.DIMSE.CEchoRequest}
+  commentId: T:EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{EvilDICOM.Network.DIMSE.CEchoRequest}
+  parent: EvilDICOM.Network.Services
+  definition: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+  name: DIMSEService.DIMSERequestHandler<CEchoRequest>
+  nameWithType: DIMSEService.DIMSERequestHandler<CEchoRequest>
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler<EvilDICOM.Network.DIMSE.CEchoRequest>
+  nameWithType.vb: DIMSEService.DIMSERequestHandler(Of CEchoRequest)
+  fullName.vb: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler(Of EvilDICOM.Network.DIMSE.CEchoRequest)
+  name.vb: DIMSEService.DIMSERequestHandler(Of CEchoRequest)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+    name: DIMSEService.DIMSERequestHandler
+    nameWithType: DIMSEService.DIMSERequestHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CEchoRequest
+    name: CEchoRequest
+    nameWithType: CEchoRequest
+    fullName: EvilDICOM.Network.DIMSE.CEchoRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+    name: DIMSEService.DIMSERequestHandler
+    nameWithType: DIMSEService.DIMSERequestHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CEchoRequest
+    name: CEchoRequest
+    nameWithType: CEchoRequest
+    fullName: EvilDICOM.Network.DIMSE.CEchoRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+  commentId: T:EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+  isExternal: false
+  name: DIMSEService.DIMSERequestHandler<T>
+  nameWithType: DIMSEService.DIMSERequestHandler<T>
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler<T>
+  nameWithType.vb: DIMSEService.DIMSERequestHandler(Of T)
+  fullName.vb: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler(Of T)
+  name.vb: DIMSEService.DIMSERequestHandler(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+    name: DIMSEService.DIMSERequestHandler
+    nameWithType: DIMSEService.DIMSERequestHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+    name: DIMSEService.DIMSERequestHandler
+    nameWithType: DIMSEService.DIMSERequestHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{EvilDICOM.Network.DIMSE.CFindRequest}
+  commentId: T:EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{EvilDICOM.Network.DIMSE.CFindRequest}
+  parent: EvilDICOM.Network.Services
+  definition: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+  name: DIMSEService.DIMSERequestHandler<CFindRequest>
+  nameWithType: DIMSEService.DIMSERequestHandler<CFindRequest>
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler<EvilDICOM.Network.DIMSE.CFindRequest>
+  nameWithType.vb: DIMSEService.DIMSERequestHandler(Of CFindRequest)
+  fullName.vb: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler(Of EvilDICOM.Network.DIMSE.CFindRequest)
+  name.vb: DIMSEService.DIMSERequestHandler(Of CFindRequest)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+    name: DIMSEService.DIMSERequestHandler
+    nameWithType: DIMSEService.DIMSERequestHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CFindRequest
+    name: CFindRequest
+    nameWithType: CFindRequest
+    fullName: EvilDICOM.Network.DIMSE.CFindRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+    name: DIMSEService.DIMSERequestHandler
+    nameWithType: DIMSEService.DIMSERequestHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CFindRequest
+    name: CFindRequest
+    nameWithType: CFindRequest
+    fullName: EvilDICOM.Network.DIMSE.CFindRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{EvilDICOM.Network.DIMSE.CMoveRequest}
+  commentId: T:EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{EvilDICOM.Network.DIMSE.CMoveRequest}
+  parent: EvilDICOM.Network.Services
+  definition: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+  name: DIMSEService.DIMSERequestHandler<CMoveRequest>
+  nameWithType: DIMSEService.DIMSERequestHandler<CMoveRequest>
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler<EvilDICOM.Network.DIMSE.CMoveRequest>
+  nameWithType.vb: DIMSEService.DIMSERequestHandler(Of CMoveRequest)
+  fullName.vb: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler(Of EvilDICOM.Network.DIMSE.CMoveRequest)
+  name.vb: DIMSEService.DIMSERequestHandler(Of CMoveRequest)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+    name: DIMSEService.DIMSERequestHandler
+    nameWithType: DIMSEService.DIMSERequestHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CMoveRequest
+    name: CMoveRequest
+    nameWithType: CMoveRequest
+    fullName: EvilDICOM.Network.DIMSE.CMoveRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+    name: DIMSEService.DIMSERequestHandler
+    nameWithType: DIMSEService.DIMSERequestHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CMoveRequest
+    name: CMoveRequest
+    nameWithType: CMoveRequest
+    fullName: EvilDICOM.Network.DIMSE.CMoveRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{EvilDICOM.Network.DIMSE.CStoreRequest}
+  commentId: T:EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{EvilDICOM.Network.DIMSE.CStoreRequest}
+  parent: EvilDICOM.Network.Services
+  definition: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+  name: DIMSEService.DIMSERequestHandler<CStoreRequest>
+  nameWithType: DIMSEService.DIMSERequestHandler<CStoreRequest>
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler<EvilDICOM.Network.DIMSE.CStoreRequest>
+  nameWithType.vb: DIMSEService.DIMSERequestHandler(Of CStoreRequest)
+  fullName.vb: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler(Of EvilDICOM.Network.DIMSE.CStoreRequest)
+  name.vb: DIMSEService.DIMSERequestHandler(Of CStoreRequest)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+    name: DIMSEService.DIMSERequestHandler
+    nameWithType: DIMSEService.DIMSERequestHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CStoreRequest
+    name: CStoreRequest
+    nameWithType: CStoreRequest
+    fullName: EvilDICOM.Network.DIMSE.CStoreRequest
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler`1
+    name: DIMSEService.DIMSERequestHandler
+    nameWithType: DIMSEService.DIMSERequestHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CStoreRequest
+    name: CStoreRequest
+    nameWithType: CStoreRequest
+    fullName: EvilDICOM.Network.DIMSE.CStoreRequest
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{EvilDICOM.Network.DIMSE.CEchoResponse}
+  commentId: T:EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{EvilDICOM.Network.DIMSE.CEchoResponse}
+  parent: EvilDICOM.Network.Services
+  definition: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+  name: DIMSEService.DIMSEResponseHandler<CEchoResponse>
+  nameWithType: DIMSEService.DIMSEResponseHandler<CEchoResponse>
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler<EvilDICOM.Network.DIMSE.CEchoResponse>
+  nameWithType.vb: DIMSEService.DIMSEResponseHandler(Of CEchoResponse)
+  fullName.vb: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler(Of EvilDICOM.Network.DIMSE.CEchoResponse)
+  name.vb: DIMSEService.DIMSEResponseHandler(Of CEchoResponse)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+    name: DIMSEService.DIMSEResponseHandler
+    nameWithType: DIMSEService.DIMSEResponseHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CEchoResponse
+    name: CEchoResponse
+    nameWithType: CEchoResponse
+    fullName: EvilDICOM.Network.DIMSE.CEchoResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+    name: DIMSEService.DIMSEResponseHandler
+    nameWithType: DIMSEService.DIMSEResponseHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CEchoResponse
+    name: CEchoResponse
+    nameWithType: CEchoResponse
+    fullName: EvilDICOM.Network.DIMSE.CEchoResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+  commentId: T:EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+  isExternal: false
+  name: DIMSEService.DIMSEResponseHandler<T>
+  nameWithType: DIMSEService.DIMSEResponseHandler<T>
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler<T>
+  nameWithType.vb: DIMSEService.DIMSEResponseHandler(Of T)
+  fullName.vb: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler(Of T)
+  name.vb: DIMSEService.DIMSEResponseHandler(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+    name: DIMSEService.DIMSEResponseHandler
+    nameWithType: DIMSEService.DIMSEResponseHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+    name: DIMSEService.DIMSEResponseHandler
+    nameWithType: DIMSEService.DIMSEResponseHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{EvilDICOM.Network.DIMSE.CFindResponse}
+  commentId: T:EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{EvilDICOM.Network.DIMSE.CFindResponse}
+  parent: EvilDICOM.Network.Services
+  definition: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+  name: DIMSEService.DIMSEResponseHandler<CFindResponse>
+  nameWithType: DIMSEService.DIMSEResponseHandler<CFindResponse>
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler<EvilDICOM.Network.DIMSE.CFindResponse>
+  nameWithType.vb: DIMSEService.DIMSEResponseHandler(Of CFindResponse)
+  fullName.vb: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler(Of EvilDICOM.Network.DIMSE.CFindResponse)
+  name.vb: DIMSEService.DIMSEResponseHandler(Of CFindResponse)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+    name: DIMSEService.DIMSEResponseHandler
+    nameWithType: DIMSEService.DIMSEResponseHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CFindResponse
+    name: CFindResponse
+    nameWithType: CFindResponse
+    fullName: EvilDICOM.Network.DIMSE.CFindResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+    name: DIMSEService.DIMSEResponseHandler
+    nameWithType: DIMSEService.DIMSEResponseHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CFindResponse
+    name: CFindResponse
+    nameWithType: CFindResponse
+    fullName: EvilDICOM.Network.DIMSE.CFindResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{EvilDICOM.Network.DIMSE.CMoveResponse}
+  commentId: T:EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{EvilDICOM.Network.DIMSE.CMoveResponse}
+  parent: EvilDICOM.Network.Services
+  definition: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+  name: DIMSEService.DIMSEResponseHandler<CMoveResponse>
+  nameWithType: DIMSEService.DIMSEResponseHandler<CMoveResponse>
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler<EvilDICOM.Network.DIMSE.CMoveResponse>
+  nameWithType.vb: DIMSEService.DIMSEResponseHandler(Of CMoveResponse)
+  fullName.vb: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler(Of EvilDICOM.Network.DIMSE.CMoveResponse)
+  name.vb: DIMSEService.DIMSEResponseHandler(Of CMoveResponse)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+    name: DIMSEService.DIMSEResponseHandler
+    nameWithType: DIMSEService.DIMSEResponseHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CMoveResponse
+    name: CMoveResponse
+    nameWithType: CMoveResponse
+    fullName: EvilDICOM.Network.DIMSE.CMoveResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+    name: DIMSEService.DIMSEResponseHandler
+    nameWithType: DIMSEService.DIMSEResponseHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CMoveResponse
+    name: CMoveResponse
+    nameWithType: CMoveResponse
+    fullName: EvilDICOM.Network.DIMSE.CMoveResponse
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{EvilDICOM.Network.DIMSE.CStoreResponse}
+  commentId: T:EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{EvilDICOM.Network.DIMSE.CStoreResponse}
+  parent: EvilDICOM.Network.Services
+  definition: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+  name: DIMSEService.DIMSEResponseHandler<CStoreResponse>
+  nameWithType: DIMSEService.DIMSEResponseHandler<CStoreResponse>
+  fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler<EvilDICOM.Network.DIMSE.CStoreResponse>
+  nameWithType.vb: DIMSEService.DIMSEResponseHandler(Of CStoreResponse)
+  fullName.vb: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler(Of EvilDICOM.Network.DIMSE.CStoreResponse)
+  name.vb: DIMSEService.DIMSEResponseHandler(Of CStoreResponse)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+    name: DIMSEService.DIMSEResponseHandler
+    nameWithType: DIMSEService.DIMSEResponseHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.CStoreResponse
+    name: CStoreResponse
+    nameWithType: CStoreResponse
+    fullName: EvilDICOM.Network.DIMSE.CStoreResponse
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler`1
+    name: DIMSEService.DIMSEResponseHandler
+    nameWithType: DIMSEService.DIMSEResponseHandler
+    fullName: EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.CStoreResponse
+    name: CStoreResponse
+    nameWithType: CStoreResponse
+    fullName: EvilDICOM.Network.DIMSE.CStoreResponse
+  - name: )
+    nameWithType: )
+    fullName: )

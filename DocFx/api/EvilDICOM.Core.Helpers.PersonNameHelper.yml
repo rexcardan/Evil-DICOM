@@ -1,0 +1,325 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper
+  commentId: T:EvilDICOM.Core.Helpers.PersonNameHelper
+  id: PersonNameHelper
+  parent: EvilDICOM.Core.Helpers
+  children:
+  - EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName(System.String)
+  - EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName(System.String)
+  - EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName(System.String)
+  - EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName(System.String,System.String)
+  - EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName(System.String,System.String)
+  - EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: PersonNameHelper
+  nameWithType: PersonNameHelper
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PersonNameHelper
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: 'public class PersonNameHelper : object'
+    content.vb: >-
+      Public Class PersonNameHelper
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName(System.String)
+  commentId: M:EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName(System.String)
+  id: GetFirstName(System.String)
+  parent: EvilDICOM.Core.Helpers.PersonNameHelper
+  langs:
+  - csharp
+  - vb
+  name: GetFirstName(String)
+  nameWithType: PersonNameHelper.GetFirstName(String)
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetFirstName
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string GetFirstName(string data)
+    parameters:
+    - id: data
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetFirstName(data As String) As String
+  overload: EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName(System.String,System.String)
+  commentId: M:EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName(System.String,System.String)
+  id: SetFirstName(System.String,System.String)
+  parent: EvilDICOM.Core.Helpers.PersonNameHelper
+  langs:
+  - csharp
+  - vb
+  name: SetFirstName(String, String)
+  nameWithType: PersonNameHelper.SetFirstName(String, String)
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SetFirstName
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string SetFirstName(string data, string name)
+    parameters:
+    - id: data
+      type: System.String
+    - id: name
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function SetFirstName(data As String, name As String) As String
+  overload: EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName(System.String)
+  commentId: M:EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName(System.String)
+  id: GetMiddleName(System.String)
+  parent: EvilDICOM.Core.Helpers.PersonNameHelper
+  langs:
+  - csharp
+  - vb
+  name: GetMiddleName(String)
+  nameWithType: PersonNameHelper.GetMiddleName(String)
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetMiddleName
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string GetMiddleName(string data)
+    parameters:
+    - id: data
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetMiddleName(data As String) As String
+  overload: EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName(System.String,System.String)
+  commentId: M:EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName(System.String,System.String)
+  id: SetMiddleName(System.String,System.String)
+  parent: EvilDICOM.Core.Helpers.PersonNameHelper
+  langs:
+  - csharp
+  - vb
+  name: SetMiddleName(String, String)
+  nameWithType: PersonNameHelper.SetMiddleName(String, String)
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SetMiddleName
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string SetMiddleName(string data, string name)
+    parameters:
+    - id: data
+      type: System.String
+    - id: name
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function SetMiddleName(data As String, name As String) As String
+  overload: EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName(System.String)
+  commentId: M:EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName(System.String)
+  id: GetLastName(System.String)
+  parent: EvilDICOM.Core.Helpers.PersonNameHelper
+  langs:
+  - csharp
+  - vb
+  name: GetLastName(String)
+  nameWithType: PersonNameHelper.GetLastName(String)
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetLastName
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string GetLastName(string data)
+    parameters:
+    - id: data
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetLastName(data As String) As String
+  overload: EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName(System.String,System.String)
+  commentId: M:EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName(System.String,System.String)
+  id: SetLastName(System.String,System.String)
+  parent: EvilDICOM.Core.Helpers.PersonNameHelper
+  langs:
+  - csharp
+  - vb
+  name: SetLastName(String, String)
+  nameWithType: PersonNameHelper.SetLastName(String, String)
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SetLastName
+    path: ../EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 33
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string SetLastName(string data, string name)
+    parameters:
+    - id: data
+      type: System.String
+    - id: name
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function SetLastName(data As String, name As String) As String
+  overload: EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  isExternal: false
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName*
+  commentId: Overload:EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName
+  isExternal: false
+  name: GetFirstName
+  nameWithType: PersonNameHelper.GetFirstName
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName*
+  commentId: Overload:EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName
+  isExternal: false
+  name: SetFirstName
+  nameWithType: PersonNameHelper.SetFirstName
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName*
+  commentId: Overload:EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName
+  isExternal: false
+  name: GetMiddleName
+  nameWithType: PersonNameHelper.GetMiddleName
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName*
+  commentId: Overload:EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName
+  isExternal: false
+  name: SetMiddleName
+  nameWithType: PersonNameHelper.SetMiddleName
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName*
+  commentId: Overload:EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName
+  isExternal: false
+  name: GetLastName
+  nameWithType: PersonNameHelper.GetLastName
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName*
+  commentId: Overload:EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName
+  isExternal: false
+  name: SetLastName
+  nameWithType: PersonNameHelper.SetLastName
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName

@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Enums.LogPriority
+  commentId: T:EvilDICOM.Core.Enums.LogPriority
+  id: LogPriority
+  parent: EvilDICOM.Core.Enums
+  children:
+  - EvilDICOM.Core.Enums.LogPriority.ERROR
+  - EvilDICOM.Core.Enums.LogPriority.NORMAL
+  - EvilDICOM.Core.Enums.LogPriority.WARNING
+  langs:
+  - csharp
+  - vb
+  name: LogPriority
+  nameWithType: LogPriority
+  fullName: EvilDICOM.Core.Enums.LogPriority
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/LogPriority.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: LogPriority
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/LogPriority.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: 'public enum LogPriority : int'
+    content.vb: Public Enum LogPriority As Integer
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Core.Enums.LogPriority.NORMAL
+  commentId: F:EvilDICOM.Core.Enums.LogPriority.NORMAL
+  id: NORMAL
+  parent: EvilDICOM.Core.Enums.LogPriority
+  langs:
+  - csharp
+  - vb
+  name: NORMAL
+  nameWithType: LogPriority.NORMAL
+  fullName: EvilDICOM.Core.Enums.LogPriority.NORMAL
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/LogPriority.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: NORMAL
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/LogPriority.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: NORMAL = 0
+    return:
+      type: EvilDICOM.Core.Enums.LogPriority
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.LogPriority.WARNING
+  commentId: F:EvilDICOM.Core.Enums.LogPriority.WARNING
+  id: WARNING
+  parent: EvilDICOM.Core.Enums.LogPriority
+  langs:
+  - csharp
+  - vb
+  name: WARNING
+  nameWithType: LogPriority.WARNING
+  fullName: EvilDICOM.Core.Enums.LogPriority.WARNING
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/LogPriority.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WARNING
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/LogPriority.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: WARNING = 1
+    return:
+      type: EvilDICOM.Core.Enums.LogPriority
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.LogPriority.ERROR
+  commentId: F:EvilDICOM.Core.Enums.LogPriority.ERROR
+  id: ERROR
+  parent: EvilDICOM.Core.Enums.LogPriority
+  langs:
+  - csharp
+  - vb
+  name: ERROR
+  nameWithType: LogPriority.ERROR
+  fullName: EvilDICOM.Core.Enums.LogPriority.ERROR
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/LogPriority.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ERROR
+    path: ../EvilDICOM/EvilDICOM/Core/Enums/LogPriority.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ERROR = 2
+    return:
+      type: EvilDICOM.Core.Enums.LogPriority
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.Enums.LogPriority
+  commentId: T:EvilDICOM.Core.Enums.LogPriority
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: LogPriority
+  nameWithType: LogPriority
+  fullName: EvilDICOM.Core.Enums.LogPriority

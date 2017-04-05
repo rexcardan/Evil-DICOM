@@ -1,0 +1,176 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Writing.VRWriter
+  commentId: T:EvilDICOM.Core.IO.Writing.VRWriter
+  id: VRWriter
+  parent: EvilDICOM.Core.IO.Writing
+  children:
+  - EvilDICOM.Core.IO.Writing.VRWriter.WriteVR(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Enums.VR)
+  - EvilDICOM.Core.IO.Writing.VRWriter.WriteVR(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Interfaces.IDICOMElement)
+  langs:
+  - csharp
+  - vb
+  name: VRWriter
+  nameWithType: VRWriter
+  fullName: EvilDICOM.Core.IO.Writing.VRWriter
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/VRWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: VRWriter
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/VRWriter.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: 'public class VRWriter : object'
+    content.vb: >-
+      Public Class VRWriter
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Writing.VRWriter.WriteVR(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Interfaces.IDICOMElement)
+  commentId: M:EvilDICOM.Core.IO.Writing.VRWriter.WriteVR(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Interfaces.IDICOMElement)
+  id: WriteVR(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Interfaces.IDICOMElement)
+  parent: EvilDICOM.Core.IO.Writing.VRWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteVR(DICOMBinaryWriter, DICOMWriteSettings, IDICOMElement)
+  nameWithType: VRWriter.WriteVR(DICOMBinaryWriter, DICOMWriteSettings, IDICOMElement)
+  fullName: EvilDICOM.Core.IO.Writing.VRWriter.WriteVR(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter, EvilDICOM.Core.IO.Writing.DICOMWriteSettings, EvilDICOM.Core.Interfaces.IDICOMElement)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/VRWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteVR
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/VRWriter.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static void WriteVR(DICOMBinaryWriter dw, DICOMWriteSettings settings, IDICOMElement toWrite)
+    parameters:
+    - id: dw
+      type: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    - id: toWrite
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+    content.vb: Public Shared Sub WriteVR(dw As DICOMBinaryWriter, settings As DICOMWriteSettings, toWrite As IDICOMElement)
+  overload: EvilDICOM.Core.IO.Writing.VRWriter.WriteVR*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Writing.VRWriter.WriteVR(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Enums.VR)
+  commentId: M:EvilDICOM.Core.IO.Writing.VRWriter.WriteVR(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Enums.VR)
+  id: WriteVR(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,EvilDICOM.Core.Enums.VR)
+  parent: EvilDICOM.Core.IO.Writing.VRWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteVR(DICOMBinaryWriter, DICOMWriteSettings, VR)
+  nameWithType: VRWriter.WriteVR(DICOMBinaryWriter, DICOMWriteSettings, VR)
+  fullName: EvilDICOM.Core.IO.Writing.VRWriter.WriteVR(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter, EvilDICOM.Core.IO.Writing.DICOMWriteSettings, EvilDICOM.Core.Enums.VR)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/VRWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteVR
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/VRWriter.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static void WriteVR(DICOMBinaryWriter dw, DICOMWriteSettings settings, VR vr)
+    parameters:
+    - id: dw
+      type: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+    content.vb: Public Shared Sub WriteVR(dw As DICOMBinaryWriter, settings As DICOMWriteSettings, vr As VR)
+  overload: EvilDICOM.Core.IO.Writing.VRWriter.WriteVR*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.IO.Writing
+  commentId: N:EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: EvilDICOM.Core.IO.Writing
+  nameWithType: EvilDICOM.Core.IO.Writing
+  fullName: EvilDICOM.Core.IO.Writing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.IO.Writing.VRWriter.WriteVR*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.VRWriter.WriteVR
+  isExternal: false
+  name: WriteVR
+  nameWithType: VRWriter.WriteVR
+  fullName: EvilDICOM.Core.IO.Writing.VRWriter.WriteVR
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  parent: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: DICOMBinaryWriter
+  nameWithType: DICOMBinaryWriter
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  parent: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: DICOMWriteSettings
+  nameWithType: DICOMWriteSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  commentId: T:EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IDICOMElement
+  nameWithType: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Core.Enums.VR
+  commentId: T:EvilDICOM.Core.Enums.VR
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: VR
+  nameWithType: VR
+  fullName: EvilDICOM.Core.Enums.VR
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums

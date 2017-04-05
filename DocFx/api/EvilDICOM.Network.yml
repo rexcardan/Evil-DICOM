@@ -1,0 +1,70 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  id: EvilDICOM.Network
+  children:
+  - EvilDICOM.Network.Association
+  - EvilDICOM.Network.DICOMSCP
+  - EvilDICOM.Network.DICOMSCP.StopHandler
+  - EvilDICOM.Network.DICOMSCU
+  - EvilDICOM.Network.DICOMServiceClass
+  - EvilDICOM.Network.Entity
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+  type: Namespace
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Network.Entity
+  commentId: T:EvilDICOM.Network.Entity
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Entity
+  nameWithType: Entity
+  fullName: EvilDICOM.Network.Entity
+- uid: EvilDICOM.Network.Association
+  commentId: T:EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: Association
+  nameWithType: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.DICOMSCP
+  commentId: T:EvilDICOM.Network.DICOMSCP
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMSCP
+  nameWithType: DICOMSCP
+  fullName: EvilDICOM.Network.DICOMSCP
+- uid: EvilDICOM.Network.DICOMSCP.StopHandler
+  commentId: T:EvilDICOM.Network.DICOMSCP.StopHandler
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMSCP.StopHandler
+  nameWithType: DICOMSCP.StopHandler
+  fullName: EvilDICOM.Network.DICOMSCP.StopHandler
+- uid: EvilDICOM.Network.DICOMSCU
+  commentId: T:EvilDICOM.Network.DICOMSCU
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMSCU
+  nameWithType: DICOMSCU
+  fullName: EvilDICOM.Network.DICOMSCU
+- uid: EvilDICOM.Network.DICOMServiceClass
+  commentId: T:EvilDICOM.Network.DICOMServiceClass
+  parent: EvilDICOM.Network
+  isExternal: false
+  name: DICOMServiceClass
+  nameWithType: DICOMServiceClass
+  fullName: EvilDICOM.Network.DICOMServiceClass
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  isExternal: false
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network

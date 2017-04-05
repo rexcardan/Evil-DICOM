@@ -1,0 +1,222 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Writing.LengthWriter
+  commentId: T:EvilDICOM.Core.IO.Writing.LengthWriter
+  id: LengthWriter
+  parent: EvilDICOM.Core.IO.Writing
+  children:
+  - EvilDICOM.Core.IO.Writing.LengthWriter.Write(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,System.Int32)
+  - EvilDICOM.Core.IO.Writing.LengthWriter.WriteBigEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,System.Int32,System.Int32)
+  - EvilDICOM.Core.IO.Writing.LengthWriter.WriteLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,System.Int32,System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: LengthWriter
+  nameWithType: LengthWriter
+  fullName: EvilDICOM.Core.IO.Writing.LengthWriter
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/LengthWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: LengthWriter
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/LengthWriter.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: 'public class LengthWriter : object'
+    content.vb: >-
+      Public Class LengthWriter
+          Inherits Object
+  inheritance:
+  - System.Object
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Writing.LengthWriter.WriteLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,System.Int32,System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Writing.LengthWriter.WriteLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,System.Int32,System.Int32)
+  id: WriteLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,System.Int32,System.Int32)
+  parent: EvilDICOM.Core.IO.Writing.LengthWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteLittleEndian(DICOMBinaryWriter, Int32, Int32)
+  nameWithType: LengthWriter.WriteLittleEndian(DICOMBinaryWriter, Int32, Int32)
+  fullName: EvilDICOM.Core.IO.Writing.LengthWriter.WriteLittleEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/LengthWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteLittleEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/LengthWriter.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static void WriteLittleEndian(DICOMBinaryWriter dw, int length, int numberOfBytes)
+    parameters:
+    - id: dw
+      type: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+    - id: length
+      type: System.Int32
+    - id: numberOfBytes
+      type: System.Int32
+    content.vb: Public Shared Sub WriteLittleEndian(dw As DICOMBinaryWriter, length As Integer, numberOfBytes As Integer)
+  overload: EvilDICOM.Core.IO.Writing.LengthWriter.WriteLittleEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Writing.LengthWriter.Write(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Writing.LengthWriter.Write(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,System.Int32)
+  id: Write(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Writing.DICOMWriteSettings,System.Int32)
+  parent: EvilDICOM.Core.IO.Writing.LengthWriter
+  langs:
+  - csharp
+  - vb
+  name: Write(DICOMBinaryWriter, VR, DICOMWriteSettings, Int32)
+  nameWithType: LengthWriter.Write(DICOMBinaryWriter, VR, DICOMWriteSettings, Int32)
+  fullName: EvilDICOM.Core.IO.Writing.LengthWriter.Write(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter, EvilDICOM.Core.Enums.VR, EvilDICOM.Core.IO.Writing.DICOMWriteSettings, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/LengthWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Write
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/LengthWriter.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static void Write(DICOMBinaryWriter dw, VR vr, DICOMWriteSettings settings, int length)
+    parameters:
+    - id: dw
+      type: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+    - id: length
+      type: System.Int32
+    content.vb: Public Shared Sub Write(dw As DICOMBinaryWriter, vr As VR, settings As DICOMWriteSettings, length As Integer)
+  overload: EvilDICOM.Core.IO.Writing.LengthWriter.Write*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Writing.LengthWriter.WriteBigEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,System.Int32,System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Writing.LengthWriter.WriteBigEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,System.Int32,System.Int32)
+  id: WriteBigEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter,System.Int32,System.Int32)
+  parent: EvilDICOM.Core.IO.Writing.LengthWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteBigEndian(DICOMBinaryWriter, Int32, Int32)
+  nameWithType: LengthWriter.WriteBigEndian(DICOMBinaryWriter, Int32, Int32)
+  fullName: EvilDICOM.Core.IO.Writing.LengthWriter.WriteBigEndian(EvilDICOM.Core.IO.Writing.DICOMBinaryWriter, System.Int32, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/LengthWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteBigEndian
+    path: ../EvilDICOM/EvilDICOM/Core/IO/Writing/LengthWriter.cs
+    startLine: 53
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static void WriteBigEndian(DICOMBinaryWriter dw, int length, int numberOfBytes)
+    parameters:
+    - id: dw
+      type: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+    - id: length
+      type: System.Int32
+    - id: numberOfBytes
+      type: System.Int32
+    content.vb: Public Shared Sub WriteBigEndian(dw As DICOMBinaryWriter, length As Integer, numberOfBytes As Integer)
+  overload: EvilDICOM.Core.IO.Writing.LengthWriter.WriteBigEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.IO.Writing
+  commentId: N:EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: EvilDICOM.Core.IO.Writing
+  nameWithType: EvilDICOM.Core.IO.Writing
+  fullName: EvilDICOM.Core.IO.Writing
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.IO.Writing.LengthWriter.WriteLittleEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.LengthWriter.WriteLittleEndian
+  isExternal: false
+  name: WriteLittleEndian
+  nameWithType: LengthWriter.WriteLittleEndian
+  fullName: EvilDICOM.Core.IO.Writing.LengthWriter.WriteLittleEndian
+- uid: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+  parent: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: DICOMBinaryWriter
+  nameWithType: DICOMBinaryWriter
+  fullName: EvilDICOM.Core.IO.Writing.DICOMBinaryWriter
+- uid: System.Int32
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Core.IO.Writing.LengthWriter.Write*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.LengthWriter.Write
+  isExternal: false
+  name: Write
+  nameWithType: LengthWriter.Write
+  fullName: EvilDICOM.Core.IO.Writing.LengthWriter.Write
+- uid: EvilDICOM.Core.Enums.VR
+  commentId: T:EvilDICOM.Core.Enums.VR
+  parent: EvilDICOM.Core.Enums
+  isExternal: false
+  name: VR
+  nameWithType: VR
+  fullName: EvilDICOM.Core.Enums.VR
+- uid: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+  parent: EvilDICOM.Core.IO.Writing
+  isExternal: false
+  name: DICOMWriteSettings
+  nameWithType: DICOMWriteSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMWriteSettings
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  isExternal: false
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.IO.Writing.LengthWriter.WriteBigEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.LengthWriter.WriteBigEndian
+  isExternal: false
+  name: WriteBigEndian
+  nameWithType: LengthWriter.WriteBigEndian
+  fullName: EvilDICOM.Core.IO.Writing.LengthWriter.WriteBigEndian

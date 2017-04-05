@@ -1,0 +1,682 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  commentId: T:EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  id: AbstractDIMSEBase
+  parent: EvilDICOM.Network.DIMSE
+  children:
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase._affectedSOPClassUID
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase._commandField
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase._dataSetType
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase._groupLength
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.Elements
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength
+  langs:
+  - csharp
+  - vb
+  name: AbstractDIMSEBase
+  nameWithType: AbstractDIMSEBase
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AbstractDIMSEBase
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: 'public abstract class AbstractDIMSEBase : object, IIOD'
+    content.vb: >-
+      Public MustInherit Class AbstractDIMSEBase
+          Inherits Object
+          Implements IIOD
+  inheritance:
+  - System.Object
+  derivedClasses:
+  - EvilDICOM.Network.DIMSE.AbstractDIMSE
+  - EvilDICOM.Network.DIMSE.CCancel
+  implements:
+  - EvilDICOM.Core.Interfaces.IIOD
+  extensionMethods:
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.Association)
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._commandField
+  commentId: F:EvilDICOM.Network.DIMSE.AbstractDIMSEBase._commandField
+  id: _commandField
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  langs:
+  - csharp
+  - vb
+  name: _commandField
+  nameWithType: AbstractDIMSEBase._commandField
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._commandField
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: _commandField
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: protected UnsignedShort _commandField
+    return:
+      type: EvilDICOM.Core.Element.UnsignedShort
+    content.vb: Protected _commandField As UnsignedShort
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._dataSetType
+  commentId: F:EvilDICOM.Network.DIMSE.AbstractDIMSEBase._dataSetType
+  id: _dataSetType
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  langs:
+  - csharp
+  - vb
+  name: _dataSetType
+  nameWithType: AbstractDIMSEBase._dataSetType
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._dataSetType
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: _dataSetType
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: protected UnsignedShort _dataSetType
+    return:
+      type: EvilDICOM.Core.Element.UnsignedShort
+    content.vb: Protected _dataSetType As UnsignedShort
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._groupLength
+  commentId: F:EvilDICOM.Network.DIMSE.AbstractDIMSEBase._groupLength
+  id: _groupLength
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  langs:
+  - csharp
+  - vb
+  name: _groupLength
+  nameWithType: AbstractDIMSEBase._groupLength
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._groupLength
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: _groupLength
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: protected UnsignedLong _groupLength
+    return:
+      type: EvilDICOM.Core.Element.UnsignedLong
+    content.vb: Protected _groupLength As UnsignedLong
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._affectedSOPClassUID
+  commentId: F:EvilDICOM.Network.DIMSE.AbstractDIMSEBase._affectedSOPClassUID
+  id: _affectedSOPClassUID
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  langs:
+  - csharp
+  - vb
+  name: _affectedSOPClassUID
+  nameWithType: AbstractDIMSEBase._affectedSOPClassUID
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._affectedSOPClassUID
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: _affectedSOPClassUID
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: protected UniqueIdentifier _affectedSOPClassUID
+    return:
+      type: EvilDICOM.Core.Element.UniqueIdentifier
+    content.vb: Protected _affectedSOPClassUID As UniqueIdentifier
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID
+  commentId: P:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID
+  id: AffectedSOPClassUID
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  langs:
+  - csharp
+  - vb
+  name: AffectedSOPClassUID
+  nameWithType: AbstractDIMSEBase.AffectedSOPClassUID
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AffectedSOPClassUID
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: public string AffectedSOPClassUID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AffectedSOPClassUID As String
+  overload: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength
+  commentId: P:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength
+  id: GroupLength
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  langs:
+  - csharp
+  - vb
+  name: GroupLength
+  nameWithType: AbstractDIMSEBase.GroupLength
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GroupLength
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+    startLine: 29
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: public uint GroupLength { get; set; }
+    parameters: []
+    return:
+      type: System.UInt32
+    content.vb: Public Property GroupLength As UInteger
+  overload: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField
+  commentId: P:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField
+  id: CommandField
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  langs:
+  - csharp
+  - vb
+  name: CommandField
+  nameWithType: AbstractDIMSEBase.CommandField
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CommandField
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+    startLine: 35
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: public ushort CommandField { get; protected set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public Property CommandField As UShort
+  overload: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField*
+  modifiers.csharp:
+  - public
+  - get
+  - protected set
+  modifiers.vb:
+  - Public
+  - Get
+  - Protected Set
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType
+  commentId: P:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType
+  id: DataSetType
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  langs:
+  - csharp
+  - vb
+  name: DataSetType
+  nameWithType: AbstractDIMSEBase.DataSetType
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DataSetType
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+    startLine: 41
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: public ushort DataSetType { get; set; }
+    parameters: []
+    return:
+      type: System.UInt16
+    content.vb: Public Property DataSetType As UShort
+  overload: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.Elements
+  commentId: P:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.Elements
+  id: Elements
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  langs:
+  - csharp
+  - vb
+  name: Elements
+  nameWithType: AbstractDIMSEBase.Elements
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.Elements
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Elements
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+    startLine: 47
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: public abstract List<IDICOMElement> Elements { get; }
+    parameters: []
+    return:
+      type: List{EvilDICOM.Core.Interfaces.IDICOMElement}
+    content.vb: Public MustOverride ReadOnly Property Elements As List(Of IDICOMElement)
+  overload: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.Elements*
+  implements:
+  - EvilDICOM.Core.Interfaces.IIOD.Elements
+  modifiers.csharp:
+  - public
+  - abstract
+  - get
+  modifiers.vb:
+  - Public
+  - MustOverride
+  - ReadOnly
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength
+  commentId: M:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength
+  id: SetGroupLength
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  langs:
+  - csharp
+  - vb
+  name: SetGroupLength()
+  nameWithType: AbstractDIMSEBase.SetGroupLength()
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SetGroupLength
+    path: ../EvilDICOM/EvilDICOM/Network/DIMSE/AbstractDIMSEBase.cs
+    startLine: 49
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE
+  syntax:
+    content: public void SetGroupLength()
+    content.vb: Public Sub SetGroupLength
+  overload: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Network.DIMSE
+  commentId: N:EvilDICOM.Network.DIMSE
+  isExternal: false
+  name: EvilDICOM.Network.DIMSE
+  nameWithType: EvilDICOM.Network.DIMSE
+  fullName: EvilDICOM.Network.DIMSE
+- uid: System.Object
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Interfaces.IIOD
+  commentId: T:EvilDICOM.Core.Interfaces.IIOD
+  parent: EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: IIOD
+  nameWithType: IIOD
+  fullName: EvilDICOM.Core.Interfaces.IIOD
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.Association)
+  commentId: M:EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Extensions.DIMSEExtensions
+  definition: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association)
+  name: LogData(Association)
+  nameWithType: DIMSEExtensions.LogData(Association)
+  fullName: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.Association)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.Association)
+    name: LogData
+    nameWithType: DIMSEExtensions.LogData
+    fullName: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.Association)
+    name: LogData
+    nameWithType: DIMSEExtensions.LogData
+    fullName: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  isExternal: false
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association)
+  commentId: M:EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association)
+  isExternal: false
+  name: LogData(AbstractDIMSEBase, Association)
+  nameWithType: DIMSEExtensions.LogData(AbstractDIMSEBase, Association)
+  fullName: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase, EvilDICOM.Network.Association)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association)
+    name: LogData
+    nameWithType: DIMSEExtensions.LogData
+    fullName: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+    name: AbstractDIMSEBase
+    nameWithType: AbstractDIMSEBase
+    fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association)
+    name: LogData
+    nameWithType: DIMSEExtensions.LogData
+    fullName: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+    name: AbstractDIMSEBase
+    nameWithType: AbstractDIMSEBase
+    fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Extensions.DIMSEExtensions
+  commentId: T:EvilDICOM.Network.Extensions.DIMSEExtensions
+  parent: EvilDICOM.Network.Extensions
+  isExternal: false
+  name: DIMSEExtensions
+  nameWithType: DIMSEExtensions
+  fullName: EvilDICOM.Network.Extensions.DIMSEExtensions
+- uid: EvilDICOM.Network.Extensions
+  commentId: N:EvilDICOM.Network.Extensions
+  isExternal: false
+  name: EvilDICOM.Network.Extensions
+  nameWithType: EvilDICOM.Network.Extensions
+  fullName: EvilDICOM.Network.Extensions
+- uid: EvilDICOM.Core.Element.UnsignedShort
+  commentId: T:EvilDICOM.Core.Element.UnsignedShort
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: UnsignedShort
+  nameWithType: UnsignedShort
+  fullName: EvilDICOM.Core.Element.UnsignedShort
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  isExternal: false
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: EvilDICOM.Core.Element.UnsignedLong
+  commentId: T:EvilDICOM.Core.Element.UnsignedLong
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: UnsignedLong
+  nameWithType: UnsignedLong
+  fullName: EvilDICOM.Core.Element.UnsignedLong
+- uid: EvilDICOM.Core.Element.UniqueIdentifier
+  commentId: T:EvilDICOM.Core.Element.UniqueIdentifier
+  parent: EvilDICOM.Core.Element
+  isExternal: false
+  name: UniqueIdentifier
+  nameWithType: UniqueIdentifier
+  fullName: EvilDICOM.Core.Element.UniqueIdentifier
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID*
+  commentId: Overload:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID
+  isExternal: false
+  name: AffectedSOPClassUID
+  nameWithType: AbstractDIMSEBase.AffectedSOPClassUID
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID
+- uid: System.String
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength*
+  commentId: Overload:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength
+  isExternal: false
+  name: GroupLength
+  nameWithType: AbstractDIMSEBase.GroupLength
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength
+- uid: System.UInt32
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField*
+  commentId: Overload:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField
+  isExternal: false
+  name: CommandField
+  nameWithType: AbstractDIMSEBase.CommandField
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField
+- uid: System.UInt16
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType*
+  commentId: Overload:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType
+  isExternal: false
+  name: DataSetType
+  nameWithType: AbstractDIMSEBase.DataSetType
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.Elements*
+  commentId: Overload:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.Elements
+  isExternal: false
+  name: Elements
+  nameWithType: AbstractDIMSEBase.Elements
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.Elements
+- uid: EvilDICOM.Core.Interfaces.IIOD.Elements
+  commentId: P:EvilDICOM.Core.Interfaces.IIOD.Elements
+  parent: EvilDICOM.Core.Interfaces.IIOD
+  isExternal: false
+  name: Elements
+  nameWithType: IIOD.Elements
+  fullName: EvilDICOM.Core.Interfaces.IIOD.Elements
+- uid: List{EvilDICOM.Core.Interfaces.IDICOMElement}
+  commentId: '!:List{EvilDICOM.Core.Interfaces.IDICOMElement}'
+  definition: List`1
+  name: List<IDICOMElement>
+  nameWithType: List<IDICOMElement>
+  fullName: List<EvilDICOM.Core.Interfaces.IDICOMElement>
+  nameWithType.vb: List(Of IDICOMElement)
+  fullName.vb: List(Of EvilDICOM.Core.Interfaces.IDICOMElement)
+  name.vb: List(Of IDICOMElement)
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    nameWithType: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    nameWithType: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: List`1
+  isExternal: true
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
+  spec.csharp:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: List`1
+    name: List
+    nameWithType: List
+    fullName: List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: ''
+    nameWithType: ''
+    fullName: ''
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength*
+  commentId: Overload:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength
+  isExternal: false
+  name: SetGroupLength
+  nameWithType: AbstractDIMSEBase.SetGroupLength
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength
