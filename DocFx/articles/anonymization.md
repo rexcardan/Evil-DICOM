@@ -1,7 +1,8 @@
-           ---
+---
 uid: anonymization.md
 title: Evil DICOM Anonymization
 ---
+
 ##Anonymization Operations
 Evil DICOM can quickly anonymize a DICOM file set with just a few lines of code. 
 
