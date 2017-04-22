@@ -1,6 +1,6 @@
 Evil DICOM
 =============
-<center><img align="center" src="https://github.com/rexcardan/Evil-DICOM/blob/gh-pages/images/evilDicomLogo.png" alt="Logo"></center>
+<center>![Logo](https://github.com/rexcardan/Evil-DICOM/blob/gh-pages/images/evilDicomLogo.png)</center>
 
 A simple to use C# library for reading and manipulating DICOM files. 
 New documentation added to github via Github pages. See links below:
@@ -14,7 +14,7 @@ var dBytes = File.ReadAllBytes(@&quot;MyDICOMFile.dcm&quot;);
 var dcm = DICOMObject.Read(dBytes);
 //***COOL CODE GOES HERE***
 //Writing is equally easy
-dcm.SaveAs(&quot;MyHackedDICOMFile.dcm&quot;);
+dcm.SaveAs("MyHackedDICOMFile.dcm");
 ```
 
 Read more at the project website at 
