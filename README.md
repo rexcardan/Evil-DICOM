@@ -1,4 +1,3 @@
-(
 Evil DICOM
 =============
 <img align="center" src="https://github.com/rexcardan/Evil-DICOM/blob/gh-pages/images/evilDicomLogo.png" alt="Logo">
@@ -8,7 +7,17 @@ New documentation added to github via Github pages. See links below:
 
 The following links will help you get started:
 
-Project website at 
+<pre><code class="lang-csharp">
+var dcm = DICOMObject.Read(@&quot;MyDICOMFile.dcm&quot;);
+//You can also read from bytes (eg. a stream)
+var dBytes = File.ReadAllBytes(@&quot;MyDICOMFile.dcm&quot;);
+var dcm = DICOMObject.Read(dBytes);
+//***COOL CODE GOES HERE***
+//Writing is equally easy
+dcm.SaveAs(&quot;MyHackedDICOMFile.dcm&quot;);
+</code></pre>
+
+Read more at the project website at 
 http://rexcardan.github.io/Evil-DICOM/
 
 | Content | Link |
