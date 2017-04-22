@@ -1,4 +1,4 @@
-
+(
 Evil DICOM
 =============
 <img align="center" src="https://github.com/rexcardan/Evil-DICOM/blob/gh-pages/images/evilDicomLogo.png" alt="Logo">
@@ -13,9 +13,9 @@ http://rexcardan.github.io/Evil-DICOM/
 
 | Content | Link |
 ------------- | -------------
-|	Introductory Video | [Youtube] (https://www.youtube.com/watch?v=rmYpxxqQ90s) |
-|	Examples | [Example Operations] (http://rexcardan.github.io/Evil-DICOM/articles/operations.html) |
-|	Online API | [API Documentation]http://rexcardan.github.io/Evil-DICOM/api/index.html |
+|	Introductory Video | [Youtube](https://www.youtube.com/watch?v=rmYpxxqQ90s) |
+|	Examples | [Example Operations](http://rexcardan.github.io/Evil-DICOM/articles/operations.html) |
+|	Online API | [API Documentation](http://rexcardan.github.io/Evil-DICOM/api/index.html) |
 
 ***
 
