@@ -18,4 +18,4 @@ Content | Link
 
 
 Supported by JetBrain's ReSharper
-![JetBrain's Logo](https://1drv.ms/i/s!Auq1vcftJWIqmrIJoV5sRBFs9CJRQA)
+![JetBrain's Logo](https://h9jd9q.dm2304.livefilestore.com/y4m0Q1iIXt3uj4zsf5dnlHI4HkdM4wH7JP2G7YCXNLBb6t59byWqX17LvJbJMs1E0PRvabL8ac_aMalS2yiX3pWvDBh-ue-NgmjliEMrPCBIEZ_0HEuMLhNXWKD3TFnhuJ6vglTOksYSo-GjFTnmNmoyNh9m4xxi8myABrlmN57XoMutalXWtRV4hdaay3sJZFXfMO5sVsCsvjXb-fYWS-fxw?width=2000&height=2168&cropmode=none)
