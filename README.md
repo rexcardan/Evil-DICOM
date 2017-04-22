@@ -1,9 +1,17 @@
+
 ![Logo](https://github.com/rexcardan/Evil-DICOM/blob/gh-pages/images/evilDicomLogo.png)
 
 A simple to use C# library for reading and manipulating DICOM files. 
-New documentation added to github via Github pages. See links below:
+New documentation added to github via Github pages. 
 
-The following links will help you get started:
+* Online API via DocFX
+* Dot Net Standard Compliant (multiplatform)
+* MIT Open Source license
+* Examples On GH Pages
+* [NuGet](https://www.nuget.org/packages/EvilDICOM) packages released with each build
+* 10,000+ downloads
+
+## Wickedly Simple
 
 ```cs
 var dcm = DICOMObject.Read("MyDICOMFile.dcm");
