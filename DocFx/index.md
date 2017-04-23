@@ -16,7 +16,7 @@ var dcm = DICOMObject.Read(dBytes);
 //***COOL CODE GOES HERE***
 
 //Writing is equally easy
-dcm.SaveAs("MyHackedDICOMFile.dcm");
+dcm.Write("MyHackedDICOMFile.dcm");
 ```
 The dcm variable is now a DICOM object. It is in fact the outermost DICOM object from the file string that was input into the Read() method. The DICOMObject class is the main class of Evil DICOM.  Of course the DICOM object is really just a container for all of the DICOM elements that you will want to get and luckily for you, it is easy to do. Now that we did the useless task of reading a file and writing it back unchanged, let's look at some code we can insert in between.
 
