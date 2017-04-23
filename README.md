@@ -15,9 +15,6 @@ New documentation added to github via Github pages.
 
 ```cs
 var dcm = DICOMObject.Read("MyDICOMFile.dcm");
-//You can also read from bytes (eg. a stream)
-var dBytes = File.ReadAllBytes("MyDICOMFile.dcm");
-var dcm = DICOMObject.Read(dBytes);
 //***COOL CODE GOES HERE***
 //Writing is equally easy
 dcm.Write("MyHackedDICOMFile.dcm");
