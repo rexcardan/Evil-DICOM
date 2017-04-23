@@ -20,7 +20,7 @@ var dBytes = File.ReadAllBytes("MyDICOMFile.dcm");
 var dcm = DICOMObject.Read(dBytes);
 //***COOL CODE GOES HERE***
 //Writing is equally easy
-dcm.SaveAs("MyHackedDICOMFile.dcm");
+dcm.Write("MyHackedDICOMFile.dcm");
 ```
 
 Read more at the project website at 
