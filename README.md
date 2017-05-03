@@ -7,7 +7,7 @@ New documentation added to github via Github pages.
 * Online API via DocFX
 * Dot Net Standard Compliant (multiplatform)
 * MIT Open Source license
-* Examples On GH Pages
+* Examples On [GH Pages](http://rexcardan.github.io/Evil-DICOM/)
 * [NuGet](https://www.nuget.org/packages/EvilDICOM) packages released with each build
 * 10,000+ downloads
 
