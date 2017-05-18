@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualStudio.TestTools.UnitTesting;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net;
@@ -8,9 +9,18 @@ using System.Threading.Tasks;
 
 namespace EvilDICOM.Network.Tests
 {
-    public static class IPAddressHelper
+    [TestClass]
+    public class IPAddressHelperTests
     {
-        public static string LocalIPAddress()
+        [TestMethod]
+        public void TestIPAddressGet()
+        {
+            var expected = LocalIPAddress();
+            var actual = EvilDICOM.Network.Helpers.IpHelper.LocalIPAddress();
+            Assert.AreEqual(expected, actual);
+        }
+
+        public string LocalIPAddress()
         {
             IPHostEntry host;
             string localIP = "";

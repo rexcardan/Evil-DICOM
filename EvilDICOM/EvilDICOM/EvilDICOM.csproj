@@ -1,38 +1,252 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
-
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
-    <TargetFrameworks>netstandard1.5;net45</TargetFrameworks>
-    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{3EF6CD55-D565-40F2-88E6-C0007C1B72E2}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>EvilDICOM</RootNamespace>
     <AssemblyName>EvilDICOM</AssemblyName>
-    <PackageId>EvilDICOM</PackageId>
-    <PackageTargetFallback Condition=" '$(TargetFramework)' == 'netstandard1.5' ">$(PackageTargetFallback);dnxcore50</PackageTargetFallback>
-    <NetStandardImplicitPackageVersion Condition=" '$(TargetFramework)' == 'netstandard1.5' ">1.6.0</NetStandardImplicitPackageVersion>
-    <GenerateAssemblyTitleAttribute>false</GenerateAssemblyTitleAttribute>
-    <GenerateAssemblyDescriptionAttribute>false</GenerateAssemblyDescriptionAttribute>
-    <GenerateAssemblyConfigurationAttribute>false</GenerateAssemblyConfigurationAttribute>
-    <GenerateAssemblyCompanyAttribute>false</GenerateAssemblyCompanyAttribute>
-    <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
-    <GenerateAssemblyCopyrightAttribute>false</GenerateAssemblyCopyrightAttribute>
-    <GenerateAssemblyVersionAttribute>false</GenerateAssemblyVersionAttribute>
-    <GenerateAssemblyFileVersionAttribute>false</GenerateAssemblyFileVersionAttribute>
+    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE;NET45</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup>
     <ApplicationIcon>evilEye.ico</ApplicationIcon>
-    <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
-    <Version>2.0.0.0</Version>
   </PropertyGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'netstandard1.5' ">
-    <PackageReference Include="System.Net.NameResolution" Version="4.3.0" />
-  </ItemGroup>
-
-  <PropertyGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <DefineConstants>$(DefineConstants);NET45</DefineConstants>
-  </PropertyGroup>
-
-  <ItemGroup Condition=" '$(TargetFramework)' == 'net45' ">
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq" />
+  <ItemGroup>
     <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
   </ItemGroup>
-
+  <ItemGroup>
+    <Compile Include="Anonymization\AnonymizationQueue.cs" />
+    <Compile Include="Anonymization\Anonymizers\DateAnonymizer.cs" />
+    <Compile Include="Anonymization\Anonymizers\NameAnonymize.cs" />
+    <Compile Include="Anonymization\Anonymizers\PatientIdAnonymizer.cs" />
+    <Compile Include="Anonymization\Anonymizers\PrivateTagAnonymizer.cs" />
+    <Compile Include="Anonymization\Anonymizers\ProfileAnonymizer.cs" />
+    <Compile Include="Anonymization\Anonymizers\StudyIdAnonymizer.cs" />
+    <Compile Include="Anonymization\Anonymizers\UIDAnonymizer.cs" />
+    <Compile Include="Anonymization\Helpers\DateHelper.cs" />
+    <Compile Include="Anonymization\Interfaces\IAnonymizer.cs" />
+    <Compile Include="Anonymization\Settings\AnonymizationSettings.cs" />
+    <Compile Include="Anonymization\Settings\DateSettings.cs" />
+    <Compile Include="Core\DICOMData.cs" />
+    <Compile Include="Core\DICOMForge.cs" />
+    <Compile Include="Core\DICOMObject.cs" />
+    <Compile Include="Core\DICOMObjectWrapper.cs" />
+    <Compile Include="Core\Dictionaries\TagDictionary.cs" />
+    <Compile Include="Core\Dictionaries\VRDictionary.cs" />
+    <Compile Include="Core\Element\AbstractElement.cs" />
+    <Compile Include="Core\Element\AgeString.cs" />
+    <Compile Include="Core\Element\ApplicationEntity.cs" />
+    <Compile Include="Core\Element\AttributeTag.cs" />
+    <Compile Include="Core\Element\CodeString.cs" />
+    <Compile Include="Core\Element\Date.cs" />
+    <Compile Include="Core\Element\DateTime.cs" />
+    <Compile Include="Core\Element\DecimalString.cs" />
+    <Compile Include="Core\Element\FloatingPointDouble.cs" />
+    <Compile Include="Core\Element\FloatingPointSingle.cs" />
+    <Compile Include="Core\Element\IntegerString.cs" />
+    <Compile Include="Core\Element\LongString.cs" />
+    <Compile Include="Core\Element\LongText.cs" />
+    <Compile Include="Core\Element\OtherByteString.cs" />
+    <Compile Include="Core\Element\OtherFloatString.cs" />
+    <Compile Include="Core\Element\OtherWordString.cs" />
+    <Compile Include="Core\Element\PersonName.cs" />
+    <Compile Include="Core\Element\Sequence.cs" />
+    <Compile Include="Core\Element\ShortString.cs" />
+    <Compile Include="Core\Element\ShortText.cs" />
+    <Compile Include="Core\Element\SignedLong.cs" />
+    <Compile Include="Core\Element\SignedShort.cs" />
+    <Compile Include="Core\Element\Tag.cs" />
+    <Compile Include="Core\Element\Time.cs" />
+    <Compile Include="Core\Element\UniqueIdentifier.cs" />
+    <Compile Include="Core\Element\Unknown.cs" />
+    <Compile Include="Core\Element\UnlimitedText.cs" />
+    <Compile Include="Core\Element\UnsignedLong.cs" />
+    <Compile Include="Core\Element\UnsignedShort.cs" />
+    <Compile Include="Core\Element\_ElementFactory.cs" />
+    <Compile Include="Core\Enums\LogPriority.cs" />
+    <Compile Include="Core\Enums\Priority.cs" />
+    <Compile Include="Core\Enums\SOPClass.cs" />
+    <Compile Include="Core\Enums\TransferSyntax.cs" />
+    <Compile Include="Core\Enums\VR.cs" />
+    <Compile Include="Core\Enums\VREncoding.cs" />
+    <Compile Include="Core\Extensions\ByteExtensions.cs" />
+    <Compile Include="Core\Extensions\DICOMObjectExtensions.cs" />
+    <Compile Include="Core\Extensions\IDICOMElementExtensions.cs" />
+    <Compile Include="Core\Extensions\IDICOMElementListExtensions.cs" />
+    <Compile Include="Core\Extensions\StringExtensions.cs" />
+    <Compile Include="Core\Extensions\XElementExtensions.cs" />
+    <Compile Include="Core\Helpers\AbstractSyntax.cs" />
+    <Compile Include="Core\Helpers\ArrayHelper.cs" />
+    <Compile Include="Core\Helpers\ByteHelper.cs" />
+    <Compile Include="Core\Helpers\Constants.cs" />
+    <Compile Include="Core\Helpers\DoubleHelper.cs" />
+    <Compile Include="Core\Helpers\EnumHelper.cs" />
+    <Compile Include="Core\Helpers\ExceptionHelper.cs" />
+    <Compile Include="Core\Helpers\PersonNameHelper.cs" />
+    <Compile Include="Core\Helpers\SOPClassHelper.cs" />
+    <Compile Include="Core\Helpers\TagHelper.cs" />
+    <Compile Include="Core\Helpers\TagSorter.cs" />
+    <Compile Include="Core\Helpers\TransferSyntaxHelper.cs" />
+    <Compile Include="Core\Helpers\UIDHelper.cs" />
+    <Compile Include="Core\Helpers\Vector3.cs" />
+    <Compile Include="Core\Interfaces\IDICOMBinaryReader.cs" />
+    <Compile Include="Core\Interfaces\IDICOMElement.cs" />
+    <Compile Include="Core\Interfaces\IImageDecoder.cs" />
+    <Compile Include="Core\Interfaces\IIOD.cs" />
+    <Compile Include="Core\IO\Data\AbstractBinaryDataReader.cs" />
+    <Compile Include="Core\IO\Data\BigEndianReader.cs" />
+    <Compile Include="Core\IO\Data\BigEndianWriter.cs" />
+    <Compile Include="Core\IO\Data\DataComposer.cs" />
+    <Compile Include="Core\IO\Data\DataPadder.cs" />
+    <Compile Include="Core\IO\Data\DataRestriction.cs" />
+    <Compile Include="Core\IO\Data\DICOMString.cs" />
+    <Compile Include="Core\IO\Data\LittleEndianReader.cs" />
+    <Compile Include="Core\IO\Data\LittleEndianWriter.cs" />
+    <Compile Include="Core\IO\Data\MultiplicityComposer.cs" />
+    <Compile Include="Core\IO\Data\MultiplicityReader.cs" />
+    <Compile Include="Core\IO\Data\StringDataComposer.cs" />
+    <Compile Include="Core\IO\Data\StringDataParser.cs" />
+    <Compile Include="Core\IO\Reading\DataReader.cs" />
+    <Compile Include="Core\IO\Reading\DICOMBinaryReader.cs" />
+    <Compile Include="Core\IO\Reading\DICOMElementReader.cs" />
+    <Compile Include="Core\IO\Reading\DICOMFileReader.cs" />
+    <Compile Include="Core\IO\Reading\DICOMObjectReader.cs" />
+    <Compile Include="Core\IO\Reading\DICOMPreambleReader.cs" />
+    <Compile Include="Core\IO\Reading\LengthReader.cs" />
+    <Compile Include="Core\IO\Reading\SequenceItemReader.cs" />
+    <Compile Include="Core\IO\Reading\SequenceReader.cs" />
+    <Compile Include="Core\IO\Reading\TagReader.cs" />
+    <Compile Include="Core\IO\Reading\VRReader.cs" />
+    <Compile Include="Core\IO\Writing\DataWriter.cs" />
+    <Compile Include="Core\IO\Writing\DICOMBinaryWriter.cs" />
+    <Compile Include="Core\IO\Writing\DICOMElementWriter.cs" />
+    <Compile Include="Core\IO\Writing\DICOMFileWriter.cs" />
+    <Compile Include="Core\IO\Writing\DICOMObjectWriter.cs" />
+    <Compile Include="Core\IO\Writing\DICOMPreambleWriter.cs" />
+    <Compile Include="Core\IO\Writing\DICOMTagWriter.cs" />
+    <Compile Include="Core\IO\Writing\DICOMWriteSettings.cs" />
+    <Compile Include="Core\IO\Writing\GroupWriter.cs" />
+    <Compile Include="Core\IO\Writing\LengthWriter.cs" />
+    <Compile Include="Core\IO\Writing\SequenceItemWriter.cs" />
+    <Compile Include="Core\IO\Writing\SequenceWriter.cs" />
+    <Compile Include="Core\IO\Writing\VRWriter.cs" />
+    <Compile Include="Core\Logging\ConsoleLogger.cs" />
+    <Compile Include="Core\Logging\EventLogger.cs" />
+    <Compile Include="Core\Logging\EvilLogger.cs" />
+    <Compile Include="Core\Modules\FileMetadata.cs" />
+    <Compile Include="Core\Modules\Patient.cs" />
+    <Compile Include="Core\Selection\DICOMSelector.cs" />
+    <Compile Include="Core\Selection\ListExtensions.cs" />
+    <Compile Include="Core\Selection\SequenceSelector.cs" />
+    <Compile Include="Network\ApplicationEntity.cs" />
+    <Compile Include="Network\Association.cs" />
+    <Compile Include="Network\DICOMSCP.cs" />
+    <Compile Include="Network\DICOMSCU.cs" />
+    <Compile Include="Network\DICOMServiceClass.cs" />
+    <Compile Include="Network\DIMSE\AbstractDIMSE.cs" />
+    <Compile Include="Network\DIMSE\AbstractDIMSEBase.cs" />
+    <Compile Include="Network\DIMSE\AbstractDIMSERequest.cs" />
+    <Compile Include="Network\DIMSE\AbstractDIMSEResponse.cs" />
+    <Compile Include="Network\DIMSE\CCancel.cs" />
+    <Compile Include="Network\DIMSE\CEchoRequest.cs" />
+    <Compile Include="Network\DIMSE\CEchoResponse.cs" />
+    <Compile Include="Network\DIMSE\CFindRequest.cs" />
+    <Compile Include="Network\DIMSE\CFindResponse.cs" />
+    <Compile Include="Network\DIMSE\CMoveRequest.cs" />
+    <Compile Include="Network\DIMSE\CMoveResponse.cs" />
+    <Compile Include="Network\DIMSE\CStoreRequest.cs" />
+    <Compile Include="Network\DIMSE\CStoreResponse.cs" />
+    <Compile Include="Network\DIMSE\IOD\AbstractDIMSEIOD.cs" />
+    <Compile Include="Network\DIMSE\IOD\CFindImageIOD.cs" />
+    <Compile Include="Network\DIMSE\IOD\CFindPlanIOD.cs" />
+    <Compile Include="Network\DIMSE\IOD\CFindSeriesIOD.cs" />
+    <Compile Include="Network\DIMSE\IOD\CFindStudyIOD.cs" />
+    <Compile Include="Network\DIMSE\IOD\CMoveIOD.cs" />
+    <Compile Include="Network\Enums\AbortReason.cs" />
+    <Compile Include="Network\Enums\AbortSource.cs" />
+    <Compile Include="Network\Enums\CommandField.cs" />
+    <Compile Include="Network\Enums\ItemType.cs" />
+    <Compile Include="Network\Enums\MessageType.cs" />
+    <Compile Include="Network\Enums\NetworkState.cs" />
+    <Compile Include="Network\Enums\PDUType.cs" />
+    <Compile Include="Network\Enums\PresentationContextReason.cs" />
+    <Compile Include="Network\Enums\QueryLevel.cs" />
+    <Compile Include="Network\Enums\RejectReason.cs" />
+    <Compile Include="Network\Enums\RejectResult.cs" />
+    <Compile Include="Network\Enums\RejectSource.cs" />
+    <Compile Include="Network\Enums\Root.cs" />
+    <Compile Include="Network\Enums\Status.cs" />
+    <Compile Include="Network\Extensions\AssociationExtensions.cs" />
+    <Compile Include="Network\Extensions\DIMSEExtensions.cs" />
+    <Compile Include="Network\Extensions\IIODExtensions.cs" />
+    <Compile Include="Network\Helpers\CFind.cs" />
+    <Compile Include="Network\Helpers\FileWriterSCP.cs" />
+    <Compile Include="Network\Helpers\IpHelper.cs" />
+    <Compile Include="Network\Interfaces\IMessage.cs" />
+    <Compile Include="Network\Interfaces\IPDU.cs" />
+    <Compile Include="Network\Messaging\AssociationMessenger.cs" />
+    <Compile Include="Network\Messaging\Message.cs" />
+    <Compile Include="Network\Messaging\PDataMessenger.cs" />
+    <Compile Include="Network\PDUs\Abort.cs" />
+    <Compile Include="Network\PDUs\Accept.cs" />
+    <Compile Include="Network\PDUs\Items\AsyncOperations.cs" />
+    <Compile Include="Network\PDUs\Items\ItemReader.cs" />
+    <Compile Include="Network\PDUs\Items\ItemWriter.cs" />
+    <Compile Include="Network\PDUs\Items\PDVItem.cs" />
+    <Compile Include="Network\PDUs\Items\PDVItemFragment.cs" />
+    <Compile Include="Network\PDUs\Items\PresentationContext.cs" />
+    <Compile Include="Network\PDUs\Items\UserInfo.cs" />
+    <Compile Include="Network\PDUs\PDataTF.cs" />
+    <Compile Include="Network\PDUs\Reject.cs" />
+    <Compile Include="Network\PDUs\ReleaseRequest.cs" />
+    <Compile Include="Network\PDUs\ReleaseResponse.cs" />
+    <Compile Include="Network\PDUs\Request.cs" />
+    <Compile Include="Network\Processors\DIMSEProcessor.cs" />
+    <Compile Include="Network\Processors\ErrorProcessor.cs" />
+    <Compile Include="Network\Processors\PDataProcessor.cs" />
+    <Compile Include="Network\Processors\PDUProcessor.cs" />
+    <Compile Include="Network\Querying\QueryBuilder.cs" />
+    <Compile Include="Network\Readers\DIMSEReader.cs" />
+    <Compile Include="Network\Readers\NetworkBinaryReader.cs" />
+    <Compile Include="Network\Readers\PDUReader.cs" />
+    <Compile Include="Network\Services\AssociationService.cs" />
+    <Compile Include="Network\Services\DIMSEService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RT\DoseMatrix.cs" />
+    <Compile Include="RT\DoseValue.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="evilEye.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
