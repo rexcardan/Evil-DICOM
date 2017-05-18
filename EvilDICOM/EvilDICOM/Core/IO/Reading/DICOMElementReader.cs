@@ -47,14 +47,12 @@ namespace EvilDICOM.Core.IO.Reading
         {
             Tag tag = TagReader.ReadLittleEndian(dr);
             VR vr = TagDictionary.GetVRFromTag(tag);
-            if (CheckForExplicitness(tag, dr, ref vr)) { return ReadElementExplicitLittleEndian(tag, vr, dr); }
-            else
-            {
-                int length = LengthReader.ReadLittleEndian(VR.Null, dr);
-                byte[] data = DataReader.ReadLittleEndian(length, dr, TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN);
-                IDICOMElement el = ElementFactory.GenerateElement(tag, vr, data, TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN);
-                return el;
-            }
+
+            int length = LengthReader.ReadLittleEndian(VR.Null, dr);
+            byte[] data = DataReader.ReadLittleEndian(length, dr, TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN);
+            IDICOMElement el = ElementFactory.GenerateElement(tag, vr, data, TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN);
+            return el;
+
         }
 
         /// <summary>
