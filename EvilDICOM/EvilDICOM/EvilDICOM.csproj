@@ -78,6 +78,8 @@
     <Compile Include="Core\Element\LongString.cs" />
     <Compile Include="Core\Element\LongText.cs" />
     <Compile Include="Core\Element\OtherByteString.cs" />
+    <Compile Include="Core\Element\OtherLongString.cs" />
+    <Compile Include="Core\Element\OtherDoubleString.cs" />
     <Compile Include="Core\Element\OtherFloatString.cs" />
     <Compile Include="Core\Element\OtherWordString.cs" />
     <Compile Include="Core\Element\PersonName.cs" />
@@ -89,7 +91,9 @@
     <Compile Include="Core\Element\Tag.cs" />
     <Compile Include="Core\Element\Time.cs" />
     <Compile Include="Core\Element\UniqueIdentifier.cs" />
+    <Compile Include="Core\Element\UniversalResourceId.cs" />
     <Compile Include="Core\Element\Unknown.cs" />
+    <Compile Include="Core\Element\UnlimitedCharacter.cs" />
     <Compile Include="Core\Element\UnlimitedText.cs" />
     <Compile Include="Core\Element\UnsignedLong.cs" />
     <Compile Include="Core\Element\UnsignedShort.cs" />
@@ -167,6 +171,7 @@
     <Compile Include="Core\Modules\FileMetadata.cs" />
     <Compile Include="Core\Modules\Patient.cs" />
     <Compile Include="Core\Selection\DICOMSelector.cs" />
+    <Compile Include="Core\Selection\DICOMSelectorProperties.cs" />
     <Compile Include="Core\Selection\ListExtensions.cs" />
     <Compile Include="Core\Selection\SequenceSelector.cs" />
     <Compile Include="Network\ApplicationEntity.cs" />

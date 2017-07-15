@@ -17,7 +17,7 @@ namespace EvilDICOM.Network.DIMSE
     {
         protected UnsignedShort _messageIdBeingRespondedTo = new UnsignedShort
         {
-            Tag = TagHelper.MESSAGE_IDBEING_RESPONDED_TO
+            Tag = TagHelper.MessageIDBeingRespondedTo
         };
 
         public CCancel(AbstractDIMSERequest req)

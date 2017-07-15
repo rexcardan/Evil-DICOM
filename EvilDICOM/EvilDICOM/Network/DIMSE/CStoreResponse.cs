@@ -15,7 +15,7 @@ namespace EvilDICOM.Network.DIMSE
     {
         private readonly UniqueIdentifier _affectedSOPInstanceUID = new UniqueIdentifier
         {
-            Tag = TagHelper.AFFECTED_SOPINSTANCE_UID
+            Tag = TagHelper.AffectedSOPInstanceUID
         };
 
         private ushort _dataSet = 257;

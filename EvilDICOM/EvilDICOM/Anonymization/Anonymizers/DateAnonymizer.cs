@@ -68,7 +68,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
 
         public void NullAndAnonymize(DICOMObject d)
         {
-            Date dob = d.FindFirst(TagHelper.PATIENT_BIRTH_DATE) as Date;
+            Date dob = d.FindFirst(TagHelper.Patient​Birth​Date) as Date;
             dob.Data = null;
 
             List<IDICOMElement> dates = d.FindAll(VR.Date);
@@ -89,12 +89,12 @@ namespace EvilDICOM.Anonymization.Anonymizers
 
         public void Make89AndAnonymize(DICOMObject d)
         {
-            Date dob = d.FindFirst(TagHelper.PATIENT_BIRTH_DATE) as Date;
+            Date dob = d.FindFirst(TagHelper.Patient​Birth​Date) as Date;
             List<IDICOMElement> dates = d.FindAll(VR.Date);
             if (dates.Count > 0)
             {
                 Date oldest = (Date)dates
-                    .Where(da => (da as Date).Data != null && da.Tag.CompleteID != TagHelper.PATIENT_BIRTH_DATE.CompleteID)
+                    .Where(da => (da as Date).Data != null && da.Tag.CompleteID != TagHelper.Patient​Birth​Date.CompleteID)
                     .OrderBy(da => (da as Date).Data)
                     .ToList()[0];
                 System.DateTime oldestDate = (System.DateTime)oldest.Data;

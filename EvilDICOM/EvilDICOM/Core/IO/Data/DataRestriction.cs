@@ -1,4 +1,6 @@
-﻿using EvilDICOM.Core.Enums;
+﻿using System;
+using System.Net;
+using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Logging;
 
 namespace EvilDICOM.Core.IO.Data
@@ -39,13 +41,27 @@ namespace EvilDICOM.Core.IO.Data
                 case VR.ShortText:
                 case VR.Time:
                 case VR.UnlimitedText:
+                case VR.UnlimitedCharacter:
+                case VR.UniversalResourceId:
                     return DataPadder.PadSpace(data);
                 default:
                     return data;
             }
         }
 
-         public static bool EnforceRealNonZero(double value,string propertyName){
+        public static string EnforceUrlEncoding(string originalValue)
+        {
+            var encoded = WebUtility.UrlEncode(originalValue.TrimEnd(' '));
+            if (encoded != originalValue.TrimEnd(' '))
+            {
+                EvilLogger.Instance.Log(
+                    "Not URI compliant data string Original = {0}, URI Encoded = {1}",
+                    originalValue, encoded);
+            }
+            return encoded;
+        }
+
+        public static bool EnforceRealNonZero(double value,string propertyName){
              if (value == 0 || double.IsNaN(value))
              {
                  var msg = string.Format("{0} must be real and non-zero. Current value is {1}", propertyName, value);

@@ -131,7 +131,7 @@ namespace EvilDICOM.Core.IO.Reading
                 {
                     dr.StreamPosition = position;
                     IDICOMElement el = DICOMElementReader.ReadElementExplicitLittleEndian(dr);
-                    Tag uid = TagHelper.TRANSFER_SYNTAX_UID;
+                    Tag uid = TagHelper.Transfer​Syntax​UID;
                     if (el.Tag == uid)
                     {
                         syntax = TransferSyntaxHelper.GetSyntax(el);

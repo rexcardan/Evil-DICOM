@@ -463,7 +463,7 @@ namespace EvilDICOM.Core
         {
             get
             {
-                var pixelData = FindFirst(TagHelper.PIXEL_DATA) as AbstractElement<byte>;
+                var pixelData = FindFirst(TagHelper.Pixel​Data) as AbstractElement<byte>;
                 if (pixelData != null)
                 {
                     return new MemoryStream(pixelData.DataContainer.MultipicityValue.ToArray());
@@ -550,6 +550,12 @@ namespace EvilDICOM.Core
         public void Write(string file, DICOMWriteSettings settings = null)
         {
             settings = settings ?? DICOMWriteSettings.Default();
+            //If image is compressed, lets not change the transfer syntax UID (so image will not be read incorrectly)
+            var setSyntax = GetSelector().TransferSyntaxUID?.Data;
+            if (setSyntax != null && TransferSyntaxHelper.IsCompressedImage(setSyntax))
+            {
+                settings.TransferSyntax = TransferSyntaxHelper.GetSyntax(setSyntax);
+            }
             DICOMFileWriter.Write(file, settings, this);
         }
 

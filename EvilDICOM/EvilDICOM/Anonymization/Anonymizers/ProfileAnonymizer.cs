@@ -34,79 +34,79 @@ namespace EvilDICOM.Anonymization.Anonymizers
             List<IDICOMElement> profile = new List<IDICOMElement>();
 
             //PATIENT SEX
-            profile.Add(GenerateEmptyDICOMString(TagHelper.PATIENT_SEX));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Patient​Sex));
 
             //OTHER PATIENT IDS
-            profile.Add(GenerateEmptyDICOMString(TagHelper.OTHER_PATIENT_IDS));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Other​Patient​IDs));
 
             //OTHER PATIENT NAME
-            profile.Add(GenerateEmptyDICOMString(TagHelper.OTHER_PATIENT_NAMES));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Other​Patient​Names));
 
             //ETHNIC GROUP
-            profile.Add(GenerateEmptyDICOMString(TagHelper.ETHNIC_GROUP));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Ethnic​Group));
 
             //PATIENT COMMENTS
-            profile.Add(GenerateEmptyDICOMString(TagHelper.PATIENT_COMMENTS));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Patient​Comments));
 
             //REFERRING PHYSICIAN NAME
-            profile.Add(GenerateEmptyDICOMString(TagHelper.REFERRING_PHYSICIAN_NAME));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Referring​Physician​Name));
 
             //ACCESSION NUMBER
-            profile.Add(GenerateEmptyDICOMString(TagHelper.ACCESSION_NUMBER));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Accession​Number));
 
             //PHYSICIANS RECORD
-            profile.Add(GenerateEmptyDICOMString(TagHelper.PHYSICIANS_OF_RECORD));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Physicians​Of​Record));
 
             //PHYSICIANS READING STUDY
-            profile.Add(GenerateEmptyDICOMString(TagHelper.NAME_OF_PHYSICIANS_READING_STUDY));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Name​Of​Physicians​Reading​Study));
 
             //ADMITTING DIAGNOSIS DESCRIPTION
-            profile.Add(GenerateEmptyDICOMString(TagHelper.ADMITTING_DIAGNOSES_DESCRIPTION));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Admitting​Diagnoses​Description));
 
             //PATIENTS SIZE
-            profile.Add(GenerateZeroDecimalString(TagHelper.PATIENT_SIZE));
+            profile.Add(GenerateZeroDecimalString(TagHelper.Patient​Size));
 
             //PATIENTS WEIGHT
-            profile.Add(GenerateZeroDecimalString(TagHelper.PATIENT_WEIGHT));
+            profile.Add(GenerateZeroDecimalString(TagHelper.Patient​Weight));
 
             //OCCUPATION
-            profile.Add(GenerateEmptyDICOMString(TagHelper.OCCUPATION));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Occupation));
 
             //ADDITIONAL PATIENT HISTORY
-            profile.Add(GenerateEmptyDICOMString(TagHelper.ADDITIONAL_PATIENT_HISTORY));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Additional​Patient​History));
 
             //PERFORMING PHYSICIAN NAME
-            profile.Add(GenerateEmptyDICOMString(TagHelper.PERFORMING_PHYSICIAN_NAME));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Performing​Physician​Name));
 
             //PROTOCOL NAME
-            profile.Add(GenerateEmptyDICOMString(TagHelper.PROTOCOL_NAME));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Protocol​Name));
 
             //SERIES DESCRIPTION
-            profile.Add(GenerateEmptyDICOMString(TagHelper.SERIES_DESCRIPTION));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Series​Description));
 
             //OPERATORS NAME
-            profile.Add(GenerateEmptyDICOMString(TagHelper.OPERATORS_NAME));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Operators​Name));
 
             //INSTITUITION NAME
-            profile.Add(GenerateEmptyDICOMString(TagHelper.INSTITUTION_NAME));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Institution​Name));
 
             //INSTITUTION ADDRESS
-            profile.Add(GenerateEmptyDICOMString(TagHelper.INSTITUTION_ADDRESS));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Institution​Address));
 
             //STATION NAME
-            profile.Add(GenerateEmptyDICOMString(TagHelper.STATION_NAME));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Station​Name));
 
             //INSTITUTION DEPARTMENT NAME
-            profile.Add(GenerateEmptyDICOMString(TagHelper.INSTITUTIONAL_DEPARTMENT_NAME));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Institutional​Department​Name));
 
             //DEVICE SERIAL NUMBER
-            profile.Add(GenerateEmptyDICOMString(TagHelper.DEVICE_SERIAL_NUMBER));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Device​Serial​Number));
 
             //DERIVATION DESCRIPTION
-            profile.Add(GenerateEmptyDICOMString(TagHelper.DERIVATION_DESCRIPTION));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Derivation​Description));
 
             //IMAGE COMMENTS
-            profile.Add(GenerateEmptyDICOMString(TagHelper.IMAGE_COMMENTS));
+            profile.Add(GenerateEmptyDICOMString(TagHelper.Image​Comments));
 
             return profile;
         }

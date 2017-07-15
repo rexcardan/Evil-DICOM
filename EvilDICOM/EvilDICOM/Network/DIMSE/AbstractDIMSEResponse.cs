@@ -13,10 +13,10 @@ namespace EvilDICOM.Network.DIMSE
     {
         protected UnsignedShort _messageIdBeingRespondedTo = new UnsignedShort
         {
-            Tag = TagHelper.MESSAGE_IDBEING_RESPONDED_TO
+            Tag = TagHelper.MessageIDBeingRespondedTo
         };
 
-        protected UnsignedShort _status = new UnsignedShort {Tag = TagHelper.STATUS};
+        protected UnsignedShort _status = new UnsignedShort {Tag = TagHelper.Status};
 
         public AbstractDIMSEResponse()
         {

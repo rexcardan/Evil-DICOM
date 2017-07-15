@@ -94,7 +94,7 @@ namespace EvilDICOM.Network.Services
                 asc.LastActive = DateTime.Now;
                 asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
                 var resp = new CStoreResponse(req, Status.SUCCESS);
-                IDICOMElement syntax = req.Data.FindFirst(TagHelper.SOPCLASS_UID);
+                IDICOMElement syntax = req.Data.FindFirst(TagHelper.SOP​Class​UID);
                 RaiseDIMSERequestReceived<CStoreRequest>(req, asc);
 
                 if (syntax != null)

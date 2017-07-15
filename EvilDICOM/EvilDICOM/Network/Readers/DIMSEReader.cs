@@ -49,7 +49,7 @@ namespace EvilDICOM.Network.Readers
         public static bool TryReadDIMSE(DICOMObject dcm, out AbstractDIMSE dimse)
         {
             dimse = null;
-            var command = (dcm.FindFirst(TagHelper.COMMAND_FIELD) as UnsignedShort);
+            var command = (dcm.FindFirst(TagHelper.CommandField) as UnsignedShort);
             uint? commandField = command != null ? (uint?) command.Data : null;
             if (commandField != null)
             {

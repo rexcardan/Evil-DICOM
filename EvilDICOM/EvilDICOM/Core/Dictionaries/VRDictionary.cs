@@ -31,6 +31,10 @@ namespace EvilDICOM.Core.Dictionaries
                     return VR.ShortText;
                 case "LT":
                     return VR.LongText;
+                case "UC":
+                    return VR.UnlimitedCharacter;
+                case "UR":
+                    return VR.UniversalResourceId;
                 case "UT":
                     return VR.UnlimitedText;
                 case "AE":
@@ -71,6 +75,10 @@ namespace EvilDICOM.Core.Dictionaries
                     return VR.OtherWordString;
                 case "OF":
                     return VR.OtherFloatString;
+                case "OD":
+                    return VR.OtherDoubleString;
+                case "OL":
+                    return VR.OtherLongString;
                 case "SQ":
                     return VR.Sequence;
                 case "UN":
@@ -99,6 +107,10 @@ namespace EvilDICOM.Core.Dictionaries
                     return "ST";
                 case VR.LongText:
                     return "LT";
+                case VR.UnlimitedCharacter:
+                    return "UC";
+                case VR.UniversalResourceId:
+                    return "UR";
                 case VR.UnlimitedText:
                     return "UT";
                 case VR.ApplicationEntity:
@@ -139,6 +151,10 @@ namespace EvilDICOM.Core.Dictionaries
                     return "OW";
                 case VR.OtherFloatString:
                     return "OF";
+                case VR.OtherDoubleString:
+                    return "OD";
+                case VR.OtherLongString:
+                    return "OL";
                 case VR.Sequence:
                     return "SQ";
                 case VR.Unknown:
@@ -204,6 +220,8 @@ namespace EvilDICOM.Core.Dictionaries
             switch (vr)
             {
                 case VR.OtherByteString:
+                case VR.OtherDoubleString:
+                case VR.OtherLongString:
                 case VR.OtherWordString:
                 case VR.OtherFloatString:
                 case VR.Sequence:

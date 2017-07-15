@@ -5,17 +5,17 @@ namespace EvilDICOM.Core.Element
     /// <summary>
     ///     Encapsulates the OtherFloatString VR type
     /// </summary>
-    public class OtherFloatString : AbstractElement<byte>
+    public class OtherDoubleString : AbstractElement<byte>
     {
-        public OtherFloatString()
+        public OtherDoubleString()
         {
-            VR = VR.OtherFloatString;
+            VR = VR.OtherDoubleString;
         }
 
-        public OtherFloatString(Tag tag, byte[] data)
+        public OtherDoubleString(Tag tag, byte[] data)
             : base(tag, data)
         {
-            VR = VR.OtherFloatString;
+            VR = VR.OtherDoubleString;
         }
     }
 }

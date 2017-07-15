@@ -10,7 +10,7 @@ namespace EvilDICOM.Network.DIMSE
 {
     public abstract class AbstractDIMSERequest : AbstractDIMSE
     {
-        protected UnsignedShort _messageId = new UnsignedShort {Tag = TagHelper.MESSAGE_ID};
+        protected UnsignedShort _messageId = new UnsignedShort {Tag = TagHelper.MessageID};
 
         public AbstractDIMSERequest()
         {

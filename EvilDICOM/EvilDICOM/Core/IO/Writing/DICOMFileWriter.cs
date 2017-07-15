@@ -37,23 +37,5 @@ namespace EvilDICOM.Core.IO.Writing
                 DICOMObjectWriter.Write(dw, settings, toWrite);
             }
         }
-
-        public static void WriteLittleEndian(string filePath, DICOMObject toWrite)
-        {
-            DICOMWriteSettings settings = DICOMWriteSettings.Default();
-            IDICOMElement currentUID = toWrite.FindFirst(TagHelper.TRANSFER_SYNTAX_UID);
-            if (currentUID != null)
-            {
-                settings.TransferSyntax = TransferSyntaxHelper.GetSyntax(currentUID);
-            }
-
-            //TODO Currently don't support BigEndian writing : switch syntax to supported
-            if (settings.TransferSyntax == TransferSyntax.EXPLICIT_VR_BIG_ENDIAN)
-            {
-                settings.TransferSyntax = TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN;
-            }
-
-            Write(filePath, settings, toWrite);
-        }
     }
 }

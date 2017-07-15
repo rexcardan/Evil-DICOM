@@ -10,6 +10,7 @@
         LongString,
         ShortText,
         LongText,
+        UnlimitedCharacter,
         UnlimitedText,
         ApplicationEntity,
         PersonName,
@@ -32,6 +33,9 @@
         OtherFloatString,
         Sequence,
         Unknown,
-        Null
+        UniversalResourceId,
+        Null,
+        OtherDoubleString,
+        OtherLongString
     }
 }

@@ -82,7 +82,9 @@ namespace EvilDICOM.Core.Element
                 case VR.ShortString:
                 case VR.ShortText:
                 case VR.Time:
+                case VR.UnlimitedCharacter:
                 case VR.UnlimitedText:
+                case VR.UniversalResourceId:
                 case VR.UniqueIdentifier:
                     return ReadString(vr, tag, data);
 
@@ -95,6 +97,10 @@ namespace EvilDICOM.Core.Element
                     return new OtherFloatString(tag, data as byte[]);
                 case VR.OtherWordString:
                     return new OtherWordString(tag, data as byte[]);
+                case VR.OtherDoubleString:
+                    return new OtherDoubleString(tag, data as byte[]);
+                case VR.OtherLongString:
+                    return new OtherLongString(tag, data as byte[]);
                 default:
                     var unk = new Unknown(tag, data as byte[]);
                     unk.TransferSyntax = syntax;
@@ -155,6 +161,10 @@ namespace EvilDICOM.Core.Element
                     return new OtherFloatString(tag, ByteHelper.HexStringToByteArray(data.First()));
                 case VR.OtherWordString:
                     return new OtherWordString(tag, ByteHelper.HexStringToByteArray(data.First()));
+                case VR.OtherLongString:
+                    return new OtherLongString(tag, ByteHelper.HexStringToByteArray(data.First()));
+                case VR.OtherDoubleString:
+                    return new OtherDoubleString(tag, ByteHelper.HexStringToByteArray(data.First()));
                 default:
                     return new Unknown(tag, ByteHelper.HexStringToByteArray(data.First()));
             }
@@ -196,10 +206,14 @@ namespace EvilDICOM.Core.Element
                     return new ShortText(tag, DICOMString.Read(data as byte[]));
                 case VR.Time:
                     return new Time(tag, DICOMString.Read(data as byte[]));
+                case VR.UnlimitedCharacter:
+                    return new UnlimitedCharacter(tag, DICOMString.Read(data as byte[]));
                 case VR.UnlimitedText:
                     return new UnlimitedText(tag, DICOMString.Read(data as byte[]));
                 case VR.UniqueIdentifier:
                     return new UniqueIdentifier(tag, DICOMString.Read(data as byte[]));
+                case VR.UniversalResourceId:
+                    return new UniversalResourceId(tag, DICOMString.Read(data as byte[]));
                 default:
                     return new Unknown(tag, data as byte[]);
             }

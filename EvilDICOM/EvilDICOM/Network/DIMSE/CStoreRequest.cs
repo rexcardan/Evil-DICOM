@@ -13,20 +13,20 @@ namespace EvilDICOM.Network.DIMSE
     {
         private readonly UniqueIdentifier _affectedSOPInstanceUID = new UniqueIdentifier
         {
-            Tag = TagHelper.AFFECTED_SOPINSTANCE_UID
+            Tag = TagHelper.AffectedSOPInstanceUID
         };
 
         private readonly ApplicationEntity _moveOrigAETitle = new ApplicationEntity
         {
-            Tag = TagHelper.MOVE_ORIGINATOR_APPLICATION_ENTITY_TITLE
+            Tag = TagHelper.MoveOriginatorApplicationEntityTitle
         };
 
         private readonly UnsignedShort _moveOrigMessageID = new UnsignedShort
         {
-            Tag = TagHelper.MOVE_ORIGINATOR_MESSAGE_ID
+            Tag = TagHelper.MoveOriginatorMessageID
         };
 
-        private readonly UnsignedShort _priority = new UnsignedShort { Tag = TagHelper.PRIORITY };
+        private readonly UnsignedShort _priority = new UnsignedShort { Tag = TagHelper.Priority };
 
         public CStoreRequest()
         {

@@ -12,49 +12,49 @@ namespace EvilDICOM.Core.Modules
 
         private readonly UnsignedLong _groupLength = new UnsignedLong
         {
-            Tag = TagHelper.FILE_META_INFORMATION_GROUP_LENGTH
+            Tag = TagHelper.File​Meta​Information​Group​Length
         };
 
         private readonly UniqueIdentifier _implementationClassUID = new UniqueIdentifier
         {
-            Tag = TagHelper.IMPLEMENTATION_CLASS_UID
+            Tag = TagHelper.Implementation​Class​UID
         };
 
         private readonly UniqueIdentifier _implementationVersionName = new UniqueIdentifier
         {
-            Tag = TagHelper.IMPLEMENTATION_VERSION_NAME
+            Tag = TagHelper.Implementation​Version​Name
         };
 
         private readonly OtherByteString _infoVersion = new OtherByteString
         {
-            Tag = TagHelper.FILE_META_INFORMATION_VERSION
+            Tag = TagHelper.File​Meta​Information​Version
         };
 
         private readonly UniqueIdentifier _mediaStorageSOPClassUID = new UniqueIdentifier
         {
-            Tag = TagHelper.MEDIA_STORAGE_SOPCLASS_UID
+            Tag = TagHelper.Media​Storage​SOP​Class​UID
         };
 
         private readonly UniqueIdentifier _mediaStorageSOPInstanceUID = new UniqueIdentifier
         {
-            Tag = TagHelper.MEDIA_STORAGE_SOPINSTANCE_UID
+            Tag = TagHelper.Media​Storage​SOP​Instance​UID
         };
 
-        private readonly OtherByteString _privateInfo = new OtherByteString {Tag = TagHelper.PRIVATE_INFORMATION};
+        private readonly OtherByteString _privateInfo = new OtherByteString {Tag = TagHelper.Private​Information};
 
         private readonly UniqueIdentifier _privateInfoCreatorUID = new UniqueIdentifier
         {
-            Tag = TagHelper.PRIVATE_INFORMATION_CREATOR_UID
+            Tag = TagHelper.Private​Information​Creator​UID
         };
 
         private readonly ApplicationEntity _sourceAETitle = new ApplicationEntity
         {
-            Tag = TagHelper.SOURCE_APPLICATION_ENTITY_TITLE
+            Tag = TagHelper.Source​Application​Entity​Title
         };
 
         private readonly UniqueIdentifier _transferSyntaxUID = new UniqueIdentifier
         {
-            Tag = TagHelper.TRANSFER_SYNTAX_UID
+            Tag = TagHelper.Transfer​Syntax​UID
         };
 
         #endregion

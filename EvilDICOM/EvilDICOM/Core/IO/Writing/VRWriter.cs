@@ -18,7 +18,7 @@ namespace EvilDICOM.Core.IO.Writing
 
         public static void WriteVR(DICOMBinaryWriter dw, DICOMWriteSettings settings, VR vr)
         {
-            if (!(settings.TransferSyntax == TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN))
+            if (settings.TransferSyntax != TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
             {
                 string abbreviation = VRDictionary.GetAbbreviationFromVR(vr);
                 dw.Write(abbreviation);

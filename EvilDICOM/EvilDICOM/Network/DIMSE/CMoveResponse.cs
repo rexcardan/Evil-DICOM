@@ -13,22 +13,22 @@ namespace EvilDICOM.Network.DIMSE
     {
         private readonly UnsignedShort _numCompletedOps = new UnsignedShort
         {
-            Tag = TagHelper.NUMBER_OF_COMPLETED_SUBOPERATIONS
+            Tag = TagHelper.NumberOfCompletedSuboperations
         };
 
         private readonly UnsignedShort _numFailedOps = new UnsignedShort
         {
-            Tag = TagHelper.NUMBER_OF_FAILED_SUBOPERATIONS
+            Tag = TagHelper.NumberOfFailedSuboperations
         };
 
         private readonly UnsignedShort _numRemainingOps = new UnsignedShort
         {
-            Tag = TagHelper.NUMBER_OF_REMAINING_SUBOPERATIONS
+            Tag = TagHelper.NumberOfRemainingSuboperations
         };
 
         private readonly UnsignedShort _numWarningOps = new UnsignedShort
         {
-            Tag = TagHelper.NUMBER_OF_WARNING_SUBOPERATIONS
+            Tag = TagHelper.NumberOfWarningSuboperations
         };
 
         public CMoveResponse()

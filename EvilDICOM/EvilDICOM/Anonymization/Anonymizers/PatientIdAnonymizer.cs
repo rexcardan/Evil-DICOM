@@ -38,13 +38,13 @@ namespace EvilDICOM.Anonymization.Anonymizers
         {
             EvilLogger.Instance.Log("Anonymizing patient identity...", 0);
             //PATIENTS NAME
-            var name = DICOMForge.PatientName;
+            var name = DICOMForge.Patient​Name();
             name.FirstName = FirstName;
             name.LastName = LastName;
             d.ReplaceOrAdd(name);
 
             //PATIENT ID
-            var id = DICOMForge.PatientID;
+            var id = DICOMForge.Patient​ID();
             id.Data = Id;
             d.ReplaceOrAdd(id);
         }

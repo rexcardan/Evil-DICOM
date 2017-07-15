@@ -15,7 +15,7 @@ namespace EvilDICOM.Network.DIMSE
     {
         #region PRIVATE
 
-        private readonly UnsignedShort _priority = new UnsignedShort { Tag = TagHelper.PRIORITY };
+        private readonly UnsignedShort _priority = new UnsignedShort { Tag = TagHelper.Priority };
 
         #endregion
 

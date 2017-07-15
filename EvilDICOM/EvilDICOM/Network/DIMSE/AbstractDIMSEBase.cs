@@ -16,10 +16,10 @@ namespace EvilDICOM.Network.DIMSE
 {
     public abstract class AbstractDIMSEBase :  IIOD
     {
-        protected UnsignedShort _commandField = new UnsignedShort { Tag = TagHelper.COMMAND_FIELD, Data = 1 };
-        protected UnsignedShort _dataSetType = new UnsignedShort { Tag = TagHelper.COMMAND_DATA_SET_TYPE };
-        protected UnsignedLong _groupLength = new UnsignedLong { Tag = TagHelper.COMMAND_GROUP_LENGTH };
-        protected UniqueIdentifier _affectedSOPClassUID = new UniqueIdentifier { Tag = TagHelper.AFFECTED_SOPCLASS_UID };
+        protected UnsignedShort _commandField = new UnsignedShort { Tag = TagHelper.CommandField, Data = 1 };
+        protected UnsignedShort _dataSetType = new UnsignedShort { Tag = TagHelper.CommandDataSetType };
+        protected UnsignedLong _groupLength = new UnsignedLong { Tag = TagHelper.CommandGroupLength };
+        protected UniqueIdentifier _affectedSOPClassUID = new UniqueIdentifier { Tag = TagHelper.AffectedSOPClassUID };
 
         public string AffectedSOPClassUID
         {

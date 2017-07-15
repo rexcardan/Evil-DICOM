@@ -37,13 +37,13 @@ namespace EvilDICOM.Network.DIMSE.IOD
                 }
                 return (QueryLevel)S.Enum.Parse(typeof(QueryLevel), _sel.QueryRetrieveLevel.Data);
             }
-            set { _sel.Forge(DF.QueryRetrieveLevel).Data = value.ToString(); }
+            set { _sel.Forge(DF.QueryRetrieveLevel(value.ToString())); }
         }
 
         public string StudyInstanceUID
         {
             get { return _sel.StudyInstanceUID != null ? _sel.StudyInstanceUID.Data : null; }
-            set { _sel.Forge(DF.StudyInstanceUID).Data = value; }
+            set { _sel.Forge(DF.StudyInstanceUID(value)); }
         }
 
         public int? SeriesNumber
@@ -53,7 +53,7 @@ namespace EvilDICOM.Network.DIMSE.IOD
                 if (_sel.SeriesNumber != null && _sel.SeriesNumber.Data_.Any()) return _sel.SeriesNumber.Data_[0];
                 return null;
             }
-            set { _sel.Forge(DF.SeriesNumber).Data_ = value != null ? new List<int>() { (int)value } : new List<int>(); }
+            set { _sel.Forge(DF.SeriesNumber()).Data_ = value != null ? new List<int>() { (int)value } : new List<int>(); }
         }
 
         public int? NumberOfSeriesRelatedInstances
@@ -63,37 +63,37 @@ namespace EvilDICOM.Network.DIMSE.IOD
                 if (_sel.NumberOfSeriesRelatedInstances != null && _sel.NumberOfSeriesRelatedInstances.Data_.Any()) return _sel.NumberOfSeriesRelatedInstances.Data_[0];
                 return null;
             }
-            set { _sel.Forge(DF.NumberOfSeriesRelatedInstances).Data_ = value != null ? new List<int>() { (int)value } : new List<int>(); }
+            set { _sel.Forge(DF.NumberOfSeriesRelatedInstances()).Data_ = value != null ? new List<int>() { (int)value } : new List<int>(); }
         }
 
         public string SeriesDescription
         {
             get { return _sel.SeriesDescription != null ? _sel.SeriesDescription.Data : null; }
-            set { _sel.Forge(DF.SeriesDescription).Data = value; }
+            set { _sel.Forge(DF.SeriesDescription(value)); }
         }
 
         public string Modality
         {
             get { return _sel.Modality != null ? _sel.Modality.Data : null; }
-            set { _sel.Forge(DF.Modality).Data = value; }
+            set { _sel.Forge(DF.Modality(value)); }
         }
 
         public S.DateTime? SeriesDate
         {
             get { return _sel.SeriesDate != null ? _sel.SeriesDate.Data : null; }
-            set { _sel.Forge(DF.SeriesDate).Data = value; }
+            set { _sel.Forge(DF.SeriesDate(value)); }
         }
 
         public S.DateTime? SeriesTime
         {
             get { return _sel.SeriesTime != null ? _sel.SeriesTime.Data : null; }
-            set { _sel.Forge(DF.SeriesTime).Data = value; }
+            set { _sel.Forge(DF.SeriesTime(value)); }
         }
 
         public string SeriesInstanceUID
         {
             get { return _sel.SeriesInstanceUID != null ? _sel.SeriesInstanceUID.Data : null; }
-            set { _sel.Forge(DF.SeriesInstanceUID).Data = value; }
+            set { _sel.Forge(DF.SeriesInstanceUID(value)); }
         }
     }
 }

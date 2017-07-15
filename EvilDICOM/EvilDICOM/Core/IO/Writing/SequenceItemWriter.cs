@@ -36,7 +36,7 @@ namespace EvilDICOM.Core.IO.Writing
 
         public static void WriteItemLittleEndian(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d)
         {
-            DICOMTagWriter.WriteLittleEndian(dw, TagHelper.SEQUENCE_ITEM);
+            DICOMTagWriter.WriteLittleEndian(dw, TagHelper.Item);
             using (var stream = new MemoryStream())
             {
                 using (var itemDw = new DICOMBinaryWriter(stream))

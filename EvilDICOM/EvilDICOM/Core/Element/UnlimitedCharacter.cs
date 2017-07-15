@@ -1,23 +1,25 @@
-﻿using EvilDICOM.Core.Enums;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.IO.Data;
 
 namespace EvilDICOM.Core.Element
 {
-    /// <summary>
-    ///     Encapsulates the UnlimitedText VR type
-    /// </summary>
-    public class UnlimitedText : AbstractElement<string>
+    public class UnlimitedCharacter : AbstractElement<string>
     {
-        public UnlimitedText()
+        public UnlimitedCharacter()
         {
-            VR = VR.UnlimitedText;
+            VR = VR.UnlimitedCharacter;
         }
 
-        public UnlimitedText(Tag tag, string data)
+        public UnlimitedCharacter(Tag tag, string data)
         {
             Tag = tag;
             Data = data;
-            VR = VR.UnlimitedText;
+            VR = VR.UnlimitedCharacter;
         }
 
         /// <summary>

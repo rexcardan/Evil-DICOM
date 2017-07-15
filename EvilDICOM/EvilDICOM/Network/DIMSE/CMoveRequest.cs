@@ -13,8 +13,8 @@ namespace EvilDICOM.Network.DIMSE
 {
     public class CMoveRequest : AbstractDIMSERequest, IIOD
     {
-        private readonly ApplicationEntity _moveDestination = new ApplicationEntity { Tag = TagHelper.MOVE_DESTINATION };
-        private readonly UnsignedShort _priority = new UnsignedShort { Tag = TagHelper.PRIORITY };
+        private readonly ApplicationEntity _moveDestination = new ApplicationEntity { Tag = TagHelper.MoveDestination };
+        private readonly UnsignedShort _priority = new UnsignedShort { Tag = TagHelper.Priority };
 
         public CMoveRequest(CMoveIOD iod, string moveToAeTitle, Root root = Root.STUDY, Priority priority = Core.Enums.Priority.MEDIUM,
             ushort messageId = 1)

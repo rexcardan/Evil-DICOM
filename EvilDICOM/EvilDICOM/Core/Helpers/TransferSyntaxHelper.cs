@@ -89,6 +89,19 @@ namespace EvilDICOM.Core.Helpers
         }
 
         /// <summary>
+        /// Indicates if the pixel data is in compressed form
+        /// </summary>
+        /// <param name="syntax">the string of the transfer syntax UID</param>
+        /// <returns>boolean indicating if image is compressed</returns>
+        public static bool IsCompressedImage(string syntaxUIDString)
+        {
+            var syntax = GetSyntax(syntaxUIDString);
+            return syntax != TransferSyntax.EXPLICIT_VR_BIG_ENDIAN &&
+                   syntax != TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN &&
+                   syntax != TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN;
+        }
+
+        /// <summary>
         ///     Converts the string to the transfer syntax enum for reading the file
         /// </summary>
         /// <param name="el">the transfer syntax element</param>
@@ -137,7 +150,7 @@ namespace EvilDICOM.Core.Helpers
         /// <param name="selector">the transfer syntax to set</param>
         public static void SetSyntax(DICOMObject dicom, TransferSyntax selector)
         {
-            UniqueIdentifier syntax = DICOMForge.TransferSyntaxUID;
+            UniqueIdentifier syntax = DICOMForge.Transfer​Syntax​UID();
             if (syntax != null)
             {
                 string transferSyntax = string.Empty;
