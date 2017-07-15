@@ -1,12 +1,15 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Linq;
 using EvilDICOM.Network.Associations.PDUs;
 using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.Enums;
+using EvilDICOM.Network.Extensions;
 using EvilDICOM.Network.Messaging;
 using EvilDICOM.Network.PDUs;
-using EvilDICOM.Network.Helpers;
-using EvilDICOM.Network.Extensions;
+
+#endregion
 
 namespace EvilDICOM.Network.Services
 {
@@ -66,21 +69,17 @@ namespace EvilDICOM.Network.Services
 
                     asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
                     while (asc.OutboundMessages.Any())
-                    {
                         if (asc.State == NetworkState.TRANSPORT_CONNECTION_OPEN)
                         {
                             AbstractDIMSEBase dimse;
                             if (asc.OutboundMessages.TryDequeue(out dimse))
-                            {
                                 PDataMessenger.Send(dimse, asc);
-                            }
                         }
-                    }
                 }
                 else
                 {
                     asc.Release();
-                }              
+                }
             };
 
             AssociationRejectAction = (rej, asc) =>
@@ -107,6 +106,7 @@ namespace EvilDICOM.Network.Services
         }
 
         #region EVENTS AND HANDLERS
+
         public delegate void AbortRequestHandler(Abort abort, Association asc);
 
         public delegate void AssociationAcceptedHandler(Accept acc, Association asc);
@@ -126,9 +126,7 @@ namespace EvilDICOM.Network.Services
         public void RaiseAssociationRequestReceived(Request req, Association asc)
         {
             if (AssociationRequestReceived != null)
-            {
                 AssociationRequestReceived(req, asc);
-            }
         }
 
         //ASSOCIATION ACCEPTED
@@ -138,9 +136,7 @@ namespace EvilDICOM.Network.Services
         public void RaiseAssociationAcceptanceReceived(Accept acc, Association asc)
         {
             if (AssociationAcceptanceReceived != null)
-            {
                 AssociationAcceptanceReceived(acc, asc);
-            }
         }
 
         //ASSOCIATION REJECTED
@@ -150,9 +146,7 @@ namespace EvilDICOM.Network.Services
         public void RaiseAssociationRejectionReceived(Reject rej, Association asc)
         {
             if (AssociationRejectionReceived != null)
-            {
                 AssociationRejectionReceived(rej, asc);
-            }
         }
 
         //RELEASE REQUEST
@@ -162,9 +156,7 @@ namespace EvilDICOM.Network.Services
         public void RaiseReleaseRequestReceived(ReleaseRequest relReq, Association asc)
         {
             if (ReleaseRequestReceived != null)
-            {
                 ReleaseRequestReceived(relReq, asc);
-            }
         }
 
         //RELEASE RESPONSE
@@ -174,9 +166,7 @@ namespace EvilDICOM.Network.Services
         public void RaiseReleaseResponseReceived(ReleaseResponse relRs, Association asc)
         {
             if (ReleaseResponseReceived != null)
-            {
                 ReleaseResponseReceived(relRs, asc);
-            }
         }
 
         //ABORT REQUEST
@@ -186,9 +176,7 @@ namespace EvilDICOM.Network.Services
         public void RaiseAbortRequestReceived(Abort abort, Association asc)
         {
             if (AbortRequestReceived != null)
-            {
                 AbortRequestReceived(abort, asc);
-            }
         }
 
         #endregion

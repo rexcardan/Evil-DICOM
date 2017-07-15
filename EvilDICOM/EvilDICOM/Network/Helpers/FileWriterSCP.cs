@@ -1,13 +1,10 @@
-﻿using EvilDICOM.Core;
-using EvilDICOM.Core.Helpers;
-using EvilDICOM.Core.IO.Writing;
-using System;
-using System.Collections.Generic;
+﻿#region
+
 using System.IO;
-using System.Linq;
-using System.Text;
 using System.Threading;
-using System.Threading.Tasks;
+using EvilDICOM.Core.IO.Writing;
+
+#endregion
 
 namespace EvilDICOM.Network.Helpers
 {
@@ -16,7 +13,7 @@ namespace EvilDICOM.Network.Helpers
     /// </summary>
     public class FileWriterSCP : DICOMSCP
     {
-        private string _storagePath;
+        private readonly string _storagePath;
         private CancellationToken _token;
 
         public FileWriterSCP(Entity ae, string storageLocation)

@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
+﻿#region
+
 using System.IO;
 using System.Linq;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Writing
 {
@@ -15,8 +18,8 @@ namespace EvilDICOM.Core.IO.Writing
 
         public static int WriteGroup(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d, IDICOMElement el)
         {
-            byte[] groupBytes = WriteGroupBytes(d, settings, el.Tag.Group);
-            int length = groupBytes.Length;
+            var groupBytes = WriteGroupBytes(d, settings, el.Tag.Group);
+            var length = groupBytes.Length;
             var ul = el as UnsignedLong;
             ul.SetData((uint) length);
             DICOMElementWriter.Write(dw, settings, ul);
@@ -26,19 +29,15 @@ namespace EvilDICOM.Core.IO.Writing
 
         public static byte[] WriteGroupBytes(DICOMObject d, DICOMWriteSettings settings, string groupId)
         {
-            List<IDICOMElement> groupElements = d.Elements.Where(el => el.Tag.Group == groupId).ToList();
+            var groupElements = d.Elements.Where(el => el.Tag.Group == groupId).ToList();
             byte[] groupBytes;
             using (var stream = new MemoryStream())
             {
                 using (var groupDW = new DICOMBinaryWriter(stream))
                 {
-                    foreach (IDICOMElement el in groupElements)
-                    {
+                    foreach (var el in groupElements)
                         if (!IsGroupHeader(el))
-                        {
                             DICOMElementWriter.Write(groupDW, settings, el);
-                        }
-                    }
                 }
                 groupBytes = stream.ToArray();
             }

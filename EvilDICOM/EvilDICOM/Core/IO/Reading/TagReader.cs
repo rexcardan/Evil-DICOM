@@ -1,5 +1,9 @@
-﻿using EvilDICOM.Core.Element;
+﻿#region
+
+using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Reading
 {
@@ -7,7 +11,7 @@ namespace EvilDICOM.Core.IO.Reading
     {
         public static Tag ReadLittleEndian(DICOMBinaryReader dr)
         {
-            byte[] tag = dr.ReadBytes(4);
+            var tag = dr.ReadBytes(4);
             tag = new[] {tag[1], tag[0], tag[3], tag[2]};
             return CreateTag(tag);
         }
@@ -20,7 +24,7 @@ namespace EvilDICOM.Core.IO.Reading
 
         public static Tag ReadBigEndian(DICOMBinaryReader dr)
         {
-            byte[] tag = dr.ReadBytes(4);
+            var tag = dr.ReadBytes(4);
             return CreateTag(tag);
         }
 
@@ -31,7 +35,7 @@ namespace EvilDICOM.Core.IO.Reading
 
         private static Tag CreateTag(byte[] tag)
         {
-            string tagId = ByteHelper.ByteArrayToHexString(tag);
+            var tagId = ByteHelper.ByteArrayToHexString(tag);
             return new Tag(tagId);
         }
     }

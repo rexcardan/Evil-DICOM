@@ -1,8 +1,12 @@
-﻿using System.Text;
+﻿#region
+
+using System.Text;
 using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -10,7 +14,7 @@ namespace EvilDICOM.Core.IO.Data
     {
         public static byte[] GetDataLittleEndian(IDICOMElement el)
         {
-            VR vr = VRDictionary.GetVRFromType(el);
+            var vr = VRDictionary.GetVRFromType(el);
             switch (vr)
             {
                 case VR.AttributeTag:
@@ -53,7 +57,7 @@ namespace EvilDICOM.Core.IO.Data
 
         public static byte[] GetDataBigEndian(IDICOMElement el)
         {
-            VR vr = VRDictionary.GetVRFromType(el);
+            var vr = VRDictionary.GetVRFromType(el);
             switch (vr)
             {
                 case VR.AttributeTag:
@@ -174,9 +178,7 @@ namespace EvilDICOM.Core.IO.Data
         public static byte[] GetASCIIBytes(string s)
         {
             if (!string.IsNullOrEmpty(s))
-            {
                 return Encoding.UTF8.GetBytes(s);
-            }
             return new byte[0];
         }
     }

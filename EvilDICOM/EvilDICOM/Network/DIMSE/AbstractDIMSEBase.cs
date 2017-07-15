@@ -1,25 +1,23 @@
-﻿using EvilDICOM.Core;
+﻿#region
+
+using System.Collections.Generic;
+using EvilDICOM.Core;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.IO.Writing;
-using EvilDICOM.Network.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Reflection;
-using System.Text;
-using System.Threading.Tasks;
 using C = EvilDICOM.Network.Enums.CommandField;
+
+#endregion
 
 namespace EvilDICOM.Network.DIMSE
 {
-    public abstract class AbstractDIMSEBase :  IIOD
+    public abstract class AbstractDIMSEBase : IIOD
     {
-        protected UnsignedShort _commandField = new UnsignedShort { Tag = TagHelper.CommandField, Data = 1 };
-        protected UnsignedShort _dataSetType = new UnsignedShort { Tag = TagHelper.CommandDataSetType };
-        protected UnsignedLong _groupLength = new UnsignedLong { Tag = TagHelper.CommandGroupLength };
-        protected UniqueIdentifier _affectedSOPClassUID = new UniqueIdentifier { Tag = TagHelper.AffectedSOPClassUID };
+        protected UniqueIdentifier _affectedSOPClassUID = new UniqueIdentifier {Tag = TagHelper.AffectedSOPClassUID};
+        protected UnsignedShort _commandField = new UnsignedShort {Tag = TagHelper.CommandField, Data = 1};
+        protected UnsignedShort _dataSetType = new UnsignedShort {Tag = TagHelper.CommandDataSetType};
+        protected UnsignedLong _groupLength = new UnsignedLong {Tag = TagHelper.CommandGroupLength};
 
         public string AffectedSOPClassUID
         {
@@ -50,7 +48,7 @@ namespace EvilDICOM.Network.DIMSE
         public void SetGroupLength()
         {
             var bytes = GroupWriter.WriteGroupBytes(new DICOMObject(Elements), DICOMWriteSettings.Default(), "0000");
-            GroupLength = (uint)bytes.Length;
+            GroupLength = (uint) bytes.Length;
         }
     }
 }

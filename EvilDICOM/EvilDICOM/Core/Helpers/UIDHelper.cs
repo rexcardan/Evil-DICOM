@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Linq;
+
+#endregion
 
 //using System.Numerics;
 
@@ -32,10 +36,10 @@ namespace EvilDICOM.Core.Helpers
 
         private static string GenerateSystemGuid()
         {
-            Guid g = Guid.NewGuid();
+            var g = Guid.NewGuid();
             var uints = new uint[4];
             Buffer.BlockCopy(g.ToByteArray(), 0, uints, 0, 16);
-            return String.Join("", uints.Select(i => i.ToString()).ToArray());
+            return string.Join("", uints.Select(i => i.ToString()).ToArray());
         }
     }
 

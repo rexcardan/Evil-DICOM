@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using System.Linq;
 using EvilDICOM.Core.Element;
+
+#endregion
 
 namespace EvilDICOM.Core.Selection
 {
@@ -9,10 +13,8 @@ namespace EvilDICOM.Core.Selection
         public SequenceSelector(Sequence s)
         {
             Data_ = new List<DICOMSelector>();
-            foreach (DICOMObject item in s.Items)
-            {
+            foreach (var item in s.Items)
                 Data_.Add(new DICOMSelector(item));
-            }
             Tag = s.Tag;
         }
 
@@ -25,10 +27,8 @@ namespace EvilDICOM.Core.Selection
         {
             var s = new Sequence();
             s.Tag = Tag;
-            foreach (DICOMSelector item in Items)
-            {
+            foreach (var item in Items)
                 s.Items.Add(item.ToDICOMObject());
-            }
             return s;
         }
 

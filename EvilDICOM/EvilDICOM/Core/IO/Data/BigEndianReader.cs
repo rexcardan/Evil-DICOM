@@ -1,7 +1,11 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Linq;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.IO.Reading;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -9,7 +13,7 @@ namespace EvilDICOM.Core.IO.Data
     {
         public static AttributeTag AttributeTag(Tag tag, byte[] data)
         {
-            Tag aTag = TagReader.ReadBigEndian(data);
+            var aTag = TagReader.ReadBigEndian(data);
             return new AttributeTag(tag, aTag);
         }
 

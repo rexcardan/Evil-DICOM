@@ -1,28 +1,29 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.IO;
 using System.Net;
-using System.Linq;
 using System.Net.Sockets;
-using EvilDICOM.Core.Helpers;
-using EvilDICOM.Core.IO.Reading;
 using EvilDICOM.Core.Logging;
 using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Interfaces;
+using EvilDICOM.Network.Messaging;
 using EvilDICOM.Network.PDUs.Items;
 using EvilDICOM.Network.Processors;
 using EvilDICOM.Network.Readers;
-using EvilDICOM.Network.Messaging;
-using System.IO;
+
+#endregion
 
 namespace EvilDICOM.Network
 {
     public class Association
     {
-        private bool _abortRequested = false;
-        private bool _cancelRequested = false;
+        private bool _abortRequested;
+        private bool _cancelRequested;
 
         public Association(DICOMServiceClass serviceClass, TcpClient client)
         {
@@ -30,8 +31,8 @@ namespace EvilDICOM.Network
             Stream = new BufferedStream(client.GetStream());
             Reader = new NetworkBinaryReader(Stream);
             PresentationContexts = new List<PresentationContext>();
-            IpAddress = ((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString();
-            Port = ((IPEndPoint)client.Client.RemoteEndPoint).Port;
+            IpAddress = ((IPEndPoint) client.Client.RemoteEndPoint).Address.ToString();
+            Port = ((IPEndPoint) client.Client.RemoteEndPoint).Port;
             PDUProcessor = new PDUProcessor();
             PDataProcessor = new PDataProcessor();
             State = NetworkState.IDLE;
@@ -69,6 +70,102 @@ namespace EvilDICOM.Network
         public NetworkBinaryReader Reader { get; private set; }
         public NetworkState State { get; set; }
 
+        public void Listen(TimeSpan? maxWaitTime = null)
+        {
+            maxWaitTime = maxWaitTime ?? TimeSpan.FromSeconds(25);
+            var clock = new Stopwatch();
+            clock.Start();
+            while (State != NetworkState.CLOSING_ASSOCIATION && clock.Elapsed < maxWaitTime)
+            {
+                if (_abortRequested)
+                {
+                    HandleAbort();
+                    break;
+                }
+                if (_cancelRequested) HandleCancel();
+
+                var message = Read();
+                if (message != null)
+                {
+                    clock.Restart();
+                    Process(message);
+                    Stream.Flush();
+                    clock.Restart();
+                }
+            }
+        }
+
+        private void HandleCancel()
+        {
+            AbstractDIMSEBase cancel;
+            OutboundMessages.TryPeek(out cancel);
+            if (cancel is CCancel)
+            {
+                OutboundMessages.TryDequeue(out cancel);
+                Stream.Flush();
+                PDataMessenger.Send(cancel, this);
+            }
+        }
+
+        private void HandleAbort()
+        {
+            AssociationMessenger.SendAbort(this);
+            State = NetworkState.CLOSING_ASSOCIATION;
+        }
+
+        public IMessage Read()
+        {
+            try
+            {
+                var message = PDUReader.Read(Reader);
+                return message;
+            }
+            catch (Exception e)
+            {
+                Logger.Log(e.Message);
+                return null;
+            }
+        }
+
+        public void Process(IMessage message)
+        {
+            if (message != null)
+                switch (message.Type)
+                {
+                    case MessageType.PDU:
+                        PDUProcessor.Process(message, this);
+                        break;
+                    case MessageType.PDATA_TF:
+                        PDataProcessor.Process(message, this);
+                        break;
+                    case MessageType.ERROR:
+                        ErrorProcessor.Process(message);
+                        break;
+                }
+        }
+
+        public void Release()
+        {
+            State = NetworkState.CLOSING_ASSOCIATION;
+            Stream.Flush();
+        }
+
+        public void RequestAbort()
+        {
+            _abortRequested = true;
+        }
+
+        public override string ToString()
+        {
+            return string.Format("ASSOCIATION\nIP Address : {0}\nPort :{1}\n", IpAddress, Port);
+        }
+
+        public void Cancel(CCancel cancel)
+        {
+            _cancelRequested = true;
+            OutboundMessages.Enqueue(cancel);
+        }
+
         #region ASSOCIATION IDENTITY
 
         /// <summary>
@@ -88,104 +185,12 @@ namespace EvilDICOM.Network
 
         #endregion
 
-        public void Listen(TimeSpan? maxWaitTime = null)
-        {
-            maxWaitTime = maxWaitTime ?? TimeSpan.FromSeconds(25);
-            var clock = new Stopwatch();
-            clock.Start();
-            while (State != NetworkState.CLOSING_ASSOCIATION && clock.Elapsed < maxWaitTime)
-            {
-                if (_abortRequested) { HandleAbort(); break; }
-                if (_cancelRequested) { HandleCancel(); }
-
-                IMessage message = Read();
-                if (message != null)
-                {
-                    clock.Restart();
-                    Process(message);
-                    Stream.Flush();
-                    clock.Restart();
-                }
-
-            }
-        }
-
-        private void HandleCancel()
-        {
-            AbstractDIMSEBase cancel;
-            OutboundMessages.TryPeek(out cancel);
-            if (cancel is CCancel)
-            {
-                OutboundMessages.TryDequeue(out cancel);
-                this.Stream.Flush();
-                PDataMessenger.Send(cancel, this);
-            }
-        }
-
-        private void HandleAbort()
-        {
-            AssociationMessenger.SendAbort(this);
-            State = NetworkState.CLOSING_ASSOCIATION;
-        }
-
-        public IMessage Read()
-        {
-            try
-            {
-                IMessage message = PDUReader.Read(Reader);
-                return message;
-            }
-            catch (Exception e)
-            {
-                Logger.Log(e.Message);
-                return null;
-            }
-
-        }
-
-        public void Process(IMessage message)
-        {
-            if (message != null)
-            {
-                switch (message.Type)
-                {
-                    case MessageType.PDU:
-                        PDUProcessor.Process(message, this);
-                        break;
-                    case MessageType.PDATA_TF:
-                        PDataProcessor.Process(message, this);
-                        break;
-                    case MessageType.ERROR:
-                        ErrorProcessor.Process(message);
-                        break;
-                }
-            }
-        }
-
-        public void Release()
-        {
-            State = NetworkState.CLOSING_ASSOCIATION;
-            Stream.Flush();
-        }
-
-        public void RequestAbort()
-        {
-            _abortRequested = true;
-        }
-
-        public override string ToString()
-        {
-            return string.Format("ASSOCIATION\nIP Address : {0}\nPort :{1}\n", IpAddress, Port);
-        }
-
         #region MESSAGING
 
         public void SendMessage(byte[] message)
         {
             if (message != null && Stream.CanWrite)
-            {
                 Stream.Write(message, 0, message.Length);
-            }
         }
 
         public void SendMessage(IPDU message)
@@ -194,11 +199,5 @@ namespace EvilDICOM.Network
         }
 
         #endregion
-
-        public void Cancel(CCancel cancel)
-        {
-            _cancelRequested = true;
-            OutboundMessages.Enqueue(cancel);
-        }
     }
 }

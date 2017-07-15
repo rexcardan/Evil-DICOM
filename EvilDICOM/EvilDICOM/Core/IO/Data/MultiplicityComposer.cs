@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -17,14 +21,12 @@ namespace EvilDICOM.Core.IO.Data
             if (data != null)
             {
                 var bytes = new List<byte>();
-                foreach (T datum in data.MultipicityValue)
+                foreach (var datum in data.MultipicityValue)
                 {
                     //Write one data item
-                    byte[] single = writeSingleFunc(datum);
-                    foreach (byte byt in single)
-                    {
+                    var single = writeSingleFunc(datum);
+                    foreach (var byt in single)
                         bytes.Add(byt);
-                    }
                 }
                 return bytes.ToArray();
             }

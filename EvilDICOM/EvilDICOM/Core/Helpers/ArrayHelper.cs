@@ -1,4 +1,8 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
+
+#endregion
 
 namespace EvilDICOM.Core.Helpers
 {
@@ -22,17 +26,11 @@ namespace EvilDICOM.Core.Helpers
         {
             //Check they are the same length
             if (array1.Length != array2.Length)
-            {
                 return false;
-            }
             //Check all elements are the same
-            for (int i = 0; i < array1.Length; i++)
-            {
+            for (var i = 0; i < array1.Length; i++)
                 if (!array1[i].Equals(array2[i]))
-                {
                     return false;
-                }
-            }
             return true;
         }
     }

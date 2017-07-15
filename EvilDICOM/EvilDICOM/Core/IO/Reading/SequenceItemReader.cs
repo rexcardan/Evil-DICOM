@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Reading
 {
@@ -15,15 +19,11 @@ namespace EvilDICOM.Core.IO.Reading
             DICOMObject d;
             //Skip tag
             dr.Skip(4);
-            int length = LengthReader.ReadLittleEndian(VR.Null, dr);
+            var length = LengthReader.ReadLittleEndian(VR.Null, dr);
             if (LengthReader.IsIndefinite(length))
-            {
                 d = ReadIndefiniteLittleEndian(dr, syntax);
-            }
             else
-            {
                 d = DICOMObjectReader.ReadObject(dr.ReadBytes(length), syntax);
-            }
 
             return d;
         }
@@ -33,22 +33,18 @@ namespace EvilDICOM.Core.IO.Reading
             DICOMObject d;
             //Skip tag
             dr.Skip(4);
-            int length = LengthReader.ReadLittleEndian(VR.Null, dr);
+            var length = LengthReader.ReadLittleEndian(VR.Null, dr);
             if (LengthReader.IsIndefinite(length))
-            {
                 d = ReadIndefiniteBigEndian(dr, syntax);
-            }
             else
-            {
                 d = DICOMObjectReader.ReadObject(dr.ReadBytes(length), syntax);
-            }
 
             return d;
         }
 
         public static void SkipItemLittleEndian(DICOMBinaryReader dr, TransferSyntax syntax)
         {
-            int length = LengthReader.ReadLittleEndian(VR.Null, dr.Skip(4));
+            var length = LengthReader.ReadLittleEndian(VR.Null, dr.Skip(4));
             if (length != -1)
             {
                 dr.Skip(length);
@@ -56,50 +52,42 @@ namespace EvilDICOM.Core.IO.Reading
             else
             {
                 if (syntax == TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN)
-                {
                     while (!IsEndOfSequenceItemLittleEndian(dr))
                     {
                         dr.StreamPosition -= 8;
                         DICOMElementReader.SkipElementExplicitLittleEndian(dr);
                     }
-                }
                 else
-                {
                     while (!IsEndOfSequenceItemLittleEndian(dr))
                     {
                         dr.StreamPosition -= 8;
                         DICOMElementReader.SkipElementImplicitLittleEndian(dr);
                     }
-                }
             }
         }
 
         public static void SkipItemBigEndian(DICOMBinaryReader dr)
         {
-            int length = LengthReader.ReadBigEndian(VR.Null, dr.Skip(4));
+            var length = LengthReader.ReadBigEndian(VR.Null, dr.Skip(4));
             if (length != -1)
-            {
                 dr.Skip(length);
-            }
             else
-            {
                 while (!IsEndOfSequenceItemBigEndian(dr))
                 {
                     dr.StreamPosition -= 8;
                     DICOMElementReader.SkipElementExplicitBigEndian(dr);
                 }
-            }
         }
 
         private static bool IsEndOfSequenceItemLittleEndian(DICOMBinaryReader dr)
         {
-            byte[] bytes = dr.ReadBytes(8);
+            var bytes = dr.ReadBytes(8);
             return ByteHelper.AreEqual(bytes, _endOfSequenceItem_LE);
         }
 
         private static bool IsEndOfSequenceItemBigEndian(DICOMBinaryReader dr)
         {
-            byte[] bytes = dr.ReadBytes(8);
+            var bytes = dr.ReadBytes(8);
             return ByteHelper.AreEqual(bytes, _endOfSequenceItem_BE);
         }
 
@@ -121,13 +109,9 @@ namespace EvilDICOM.Core.IO.Reading
             {
                 dr.StreamPosition -= 8;
                 if (syntax == TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN)
-                {
                     elements.Add(DICOMElementReader.ReadElementExplicitLittleEndian(dr));
-                }
                 else
-                {
                     elements.Add(DICOMElementReader.ReadElementImplicitLittleEndian(dr));
-                }
             }
             return new DICOMObject(elements);
         }

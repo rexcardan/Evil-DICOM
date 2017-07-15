@@ -1,8 +1,11 @@
-﻿using System.Collections.Generic;
-using System.Net.Sockets;
+﻿#region
+
+using System.Collections.Generic;
 using EvilDICOM.Core.Helpers;
-using EvilDICOM.Network.Services;
 using EvilDICOM.Core.Logging;
+using EvilDICOM.Network.Services;
+
+#endregion
 
 namespace EvilDICOM.Network
 {

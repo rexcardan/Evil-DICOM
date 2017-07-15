@@ -1,6 +1,10 @@
-﻿using EvilDICOM.Core.Dictionaries;
+﻿#region
+
+using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Writing
 {
@@ -10,8 +14,8 @@ namespace EvilDICOM.Core.IO.Writing
         {
             if (!(settings.TransferSyntax == TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN))
             {
-                VR vr = VRDictionary.GetVRFromType(toWrite);
-                string abbreviation = VRDictionary.GetAbbreviationFromVR(vr);
+                var vr = VRDictionary.GetVRFromType(toWrite);
+                var abbreviation = VRDictionary.GetAbbreviationFromVR(vr);
                 dw.Write(abbreviation);
             }
         }
@@ -20,7 +24,7 @@ namespace EvilDICOM.Core.IO.Writing
         {
             if (settings.TransferSyntax != TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
             {
-                string abbreviation = VRDictionary.GetAbbreviationFromVR(vr);
+                var abbreviation = VRDictionary.GetAbbreviationFromVR(vr);
                 dw.Write(abbreviation);
             }
         }

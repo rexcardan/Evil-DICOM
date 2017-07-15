@@ -1,8 +1,12 @@
-﻿using System.IO;
+﻿#region
+
+using System.IO;
+using System.Text;
 using EvilDICOM.Core.IO.Writing;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Interfaces;
-using System.Text;
+
+#endregion
 
 namespace EvilDICOM.Network.PDUs
 {
@@ -38,50 +42,71 @@ namespace EvilDICOM.Network.PDUs
 
         public override string ToString()
         {
-            StringBuilder sb = new StringBuilder();
+            var sb = new StringBuilder();
             sb.AppendLine("A-ASSOCIATION RJ");
             sb.AppendLine("-----------------------------");
-            sb.AppendFormat("Result : {0}\n", Result==RejectResult.REJECTED_TRANSIENT?
-                "Transient":"Permanent");
-            string source = string.Empty;
-            switch (this.Source)
+            sb.AppendFormat("Result : {0}\n", Result == RejectResult.REJECTED_TRANSIENT ? "Transient" : "Permanent");
+            var source = string.Empty;
+            switch (Source)
             {
-                case RejectSource.DICOM_UL_SERVICE_USER: source = "SCU"; break;
-                case RejectSource.DICOM_UL_SERVICE_PROVIDER_ACSE: source = "SCP ACSE"; break;
-                case RejectSource.DICOM_UL_SERVICE_PROVIDER_PRESENTATION: source = "SCP Presentation"; break;
+                case RejectSource.DICOM_UL_SERVICE_USER:
+                    source = "SCU";
+                    break;
+                case RejectSource.DICOM_UL_SERVICE_PROVIDER_ACSE:
+                    source = "SCP ACSE";
+                    break;
+                case RejectSource.DICOM_UL_SERVICE_PROVIDER_PRESENTATION:
+                    source = "SCP Presentation";
+                    break;
             }
             sb.AppendFormat("Source : {0}\n", source);
 
-            string reason = string.Empty;
-            if (this.Source == RejectSource.DICOM_UL_SERVICE_USER)
-            {
-                switch ((int)this.Reason)
+            var reason = string.Empty;
+            if (Source == RejectSource.DICOM_UL_SERVICE_USER)
+                switch ((int) Reason)
                 {
-                    case 1: reason = "No reason given"; break;
-                    case 2: reason = "Application context not supported"; break;
-                    case 3: reason = "Calling AE Title Not Recognized"; break;
-                    case 7: reason = "Called AE Title Not Recognized"; break;
-                    default: reason = "Unknown"; break;
+                    case 1:
+                        reason = "No reason given";
+                        break;
+                    case 2:
+                        reason = "Application context not supported";
+                        break;
+                    case 3:
+                        reason = "Calling AE Title Not Recognized";
+                        break;
+                    case 7:
+                        reason = "Called AE Title Not Recognized";
+                        break;
+                    default:
+                        reason = "Unknown";
+                        break;
                 }
-            }
-            else if (this.Source == RejectSource.DICOM_UL_SERVICE_PROVIDER_ACSE)
-            {
-                switch ((int)this.Reason)
+            else if (Source == RejectSource.DICOM_UL_SERVICE_PROVIDER_ACSE)
+                switch ((int) Reason)
                 {
-                    case 1: reason = "No reason given"; break;
-                    case 2: reason = "Protocol version not supported"; break;
+                    case 1:
+                        reason = "No reason given";
+                        break;
+                    case 2:
+                        reason = "Protocol version not supported";
+                        break;
                 }
-            }
             else
-            {
-                switch ((int)this.Reason)
+                switch ((int) Reason)
                 {
-                    case 0: reason = "Reserved"; break;
-                    case 1: reason = "Temporary congestion"; break;
-                    case 2: reason = "Local limit exceeded"; break;
-                    default: reason = "Unknown"; break;
+                    case 0:
+                        reason = "Reserved";
+                        break;
+                    case 1:
+                        reason = "Temporary congestion";
+                        break;
+                    case 2:
+                        reason = "Local limit exceeded";
+                        break;
+                    default:
+                        reason = "Unknown";
+                        break;
                 }
-            }
             sb.AppendFormat("Reason : {0}\n", reason);
             return sb.ToString();
         }

@@ -1,11 +1,9 @@
-﻿using EvilDICOM.Core;
-using EvilDICOM.Core.Element;
-using EvilDICOM.Core.Helpers;
+﻿#region
+
+using EvilDICOM.Core;
 using EvilDICOM.Core.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
+#endregion
 
 namespace EvilDICOM.Anonymization.Anonymizers
 {
@@ -14,25 +12,27 @@ namespace EvilDICOM.Anonymization.Anonymizers
     /// </summary>
     public class PatientIdAnonymizer : IAnonymizer
     {
-        /// <summary>
-        /// The first name to make the new patient Id
-        /// </summary>
-        public string FirstName { get; set; }
-        /// <summary>
-        /// The last name to make the new patient Id
-        /// </summary>
-        public string LastName { get; set; }
-        /// <summary>
-        /// The new id for the anonymized file
-        /// </summary>
-        public string Id { get; set; }
-
         public PatientIdAnonymizer(string firstName, string lastName, string id)
         {
             FirstName = firstName;
             LastName = lastName;
             Id = id;
         }
+
+        /// <summary>
+        /// The first name to make the new patient Id
+        /// </summary>
+        public string FirstName { get; set; }
+
+        /// <summary>
+        /// The last name to make the new patient Id
+        /// </summary>
+        public string LastName { get; set; }
+
+        /// <summary>
+        /// The new id for the anonymized file
+        /// </summary>
+        public string Id { get; set; }
 
         public void Anonymize(DICOMObject d)
         {
@@ -48,6 +48,5 @@ namespace EvilDICOM.Anonymization.Anonymizers
             id.Data = Id;
             d.ReplaceOrAdd(id);
         }
-
     }
 }

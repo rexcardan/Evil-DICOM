@@ -1,5 +1,9 @@
-﻿using System.Text;
+﻿#region
+
+using System.Text;
 using EvilDICOM.Core.Helpers;
+
+#endregion
 
 namespace EvilDICOM.Network.PDUs.Items
 {

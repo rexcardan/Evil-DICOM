@@ -1,7 +1,10 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.IO;
-using System.Linq;
 using System.Text;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Reading
 {
@@ -72,12 +75,10 @@ namespace EvilDICOM.Core.IO.Reading
         public virtual byte[] ReadBytes(int count)
         {
             var buffer = new byte[count];
-            int read = _binaryReader.Read(buffer, 0, count);
+            var read = _binaryReader.Read(buffer, 0, count);
 
             if (read < count)
-            {
                 Array.Resize(ref buffer, read);
-            }
 
             return buffer;
         }
@@ -96,7 +97,7 @@ namespace EvilDICOM.Core.IO.Reading
         {
             if (_binaryReader.BaseStream.CanSeek)
             {
-                byte[] buffer = ReadBytes(count);
+                var buffer = ReadBytes(count);
                 StreamPosition -= count;
                 return buffer;
             }
@@ -109,7 +110,7 @@ namespace EvilDICOM.Core.IO.Reading
         /// <param name="substreamLength">the number of bytes to include in the new stream (starting from the current position)</param>
         public virtual DICOMBinaryReader GetSubStream(int substreamLength)
         {
-            byte[] newStream = Take(substreamLength);
+            var newStream = Take(substreamLength);
             return new DICOMBinaryReader(newStream);
         }
 
@@ -121,12 +122,10 @@ namespace EvilDICOM.Core.IO.Reading
         public virtual char[] ReadChars(int count)
         {
             var buffer = new char[count];
-            int read = _binaryReader.Read(buffer, 0, count);
+            var read = _binaryReader.Read(buffer, 0, count);
 
             if (read < count)
-            {
                 Array.Resize(ref buffer, read);
-            }
 
             return buffer;
         }
@@ -149,13 +148,9 @@ namespace EvilDICOM.Core.IO.Reading
         public virtual DICOMBinaryReader Skip(int count)
         {
             if (_binaryReader.BaseStream.CanSeek)
-            {
-                _binaryReader.BaseStream.Seek(count, System.IO.SeekOrigin.Current);
-            }
+                _binaryReader.BaseStream.Seek(count, SeekOrigin.Current);
             else
-            {
                 ReadBytes(count);
-            }
             return this;
         }
 
@@ -167,9 +162,8 @@ namespace EvilDICOM.Core.IO.Reading
         public long IndexOf(byte[] bytePattern)
         {
             int candidate;
-            int index = 0;
+            var index = 0;
             while ((candidate = _binaryReader.ReadByte()) != -1)
-            {
                 if (candidate == bytePattern[index++])
                 {
                     if (index == bytePattern.Length)
@@ -179,7 +173,6 @@ namespace EvilDICOM.Core.IO.Reading
                 {
                     index = 0;
                 }
-            }
             return -1;
         }
 

@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using EvilDICOM.Core;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Selection;
+
+#endregion
 
 namespace EvilDICOM.Network.DIMSE.IOD
 {

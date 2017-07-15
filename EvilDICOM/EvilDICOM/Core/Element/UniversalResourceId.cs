@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿#region
+
 using System.Net;
-using System.Text;
-using System.Threading.Tasks;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.IO.Data;
-using Microsoft.SqlServer.Server;
+
+#endregion
 
 namespace EvilDICOM.Core.Element
 {
@@ -29,11 +27,11 @@ namespace EvilDICOM.Core.Element
         /// </summary>
         public override string Data
         {
-            get { return base.DataContainer.SingleValue; }
+            get { return DataContainer.SingleValue; }
             set
             {
-                base.DataContainer = base.DataContainer ?? new DICOMData<string>();
-                base.DataContainer.SingleValue = DataRestriction.EnforceLengthRestriction(uint.MaxValue - 1, value);
+                DataContainer = DataContainer ?? new DICOMData<string>();
+                DataContainer.SingleValue = DataRestriction.EnforceLengthRestriction(uint.MaxValue - 1, value);
             }
         }
 

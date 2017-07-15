@@ -1,8 +1,12 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using EvilDICOM.Core.Extensions;
 using EvilDICOM.Core.IO.Reading;
 using EvilDICOM.Network.Enums;
+
+#endregion
 
 namespace EvilDICOM.Network.PDUs.Items
 {
@@ -10,7 +14,7 @@ namespace EvilDICOM.Network.PDUs.Items
     {
         public static void AssertItemType(DICOMBinaryReader dr, string itemName, ItemType itemType)
         {
-            byte header = dr.Peek(1)[0];
+            var header = dr.Peek(1)[0];
             if (header != (byte) itemType)
                 throw new Exception();
         }
@@ -19,7 +23,7 @@ namespace EvilDICOM.Network.PDUs.Items
         {
             AssertItemType(dr, itemName, iType);
             dr.Skip(2); // PDU ID and Reserved Null Byte
-            int length = LengthReader.ReadBigEndian(dr, 2);
+            var length = LengthReader.ReadBigEndian(dr, 2);
             return dr.ReadString(length).Trim();
         }
 
@@ -38,7 +42,7 @@ namespace EvilDICOM.Network.PDUs.Items
             AssertItemType(dr, "Async Operations", ItemType.ASYNCHRONOUS_OPERATIONS_WINDOW);
             var ao = new AsyncOperations();
             dr.Skip(2); // // PDU ID and Reserved Null Byte
-            int length = LengthReader.ReadBigEndian(dr, 2);
+            var length = LengthReader.ReadBigEndian(dr, 2);
             ao.MaxInvokeOperations = LengthReader.ReadBigEndian(dr, 2);
             ao.MaxPerformOperations = LengthReader.ReadBigEndian(dr, 2);
             return ao;
@@ -58,14 +62,14 @@ namespace EvilDICOM.Network.PDUs.Items
         {
             AssertItemType(dr, "Maximum Length", ItemType.MAXIMUM_LENGTH);
             dr.Skip(2); // PDU ID and Reserved Null Byte
-            int length = LengthReader.ReadBigEndian(dr, 2);
+            var length = LengthReader.ReadBigEndian(dr, 2);
             return LengthReader.ReadBigEndian(dr, 4);
         }
 
         public static PDVItem ReadPDVItem(DICOMBinaryReader dr)
         {
             var pi = new PDVItem();
-            int length = LengthReader.ReadBigEndian(dr, 4);
+            var length = LengthReader.ReadBigEndian(dr, 4);
             pi.PresentationContextID = dr.Take(1)[0];
             pi.Fragment = ReadPDVFragment(dr, length - 1);
             return pi;
@@ -74,7 +78,7 @@ namespace EvilDICOM.Network.PDUs.Items
         public static PDVItemFragment ReadPDVFragment(DICOMBinaryReader dr, int length)
         {
             var pif = new PDVItemFragment();
-            byte messageHeader = dr.Take(1)[0];
+            var messageHeader = dr.Take(1)[0];
             pif.IsCommandObject = messageHeader.GetBit(0);
             pif.IsLastItem = messageHeader.GetBit(1);
             pif.Data = dr.ReadBytes(length - 1);
@@ -85,7 +89,7 @@ namespace EvilDICOM.Network.PDUs.Items
         {
             AssertItemType(dr, "Presentation Context Request", ItemType.PRESENTATION_CONTEXT_REQUEST);
             dr.Skip(2); // PDU id Reserved Null Byte
-            int length = LengthReader.ReadBigEndian(dr, 2);
+            var length = LengthReader.ReadBigEndian(dr, 2);
             return ReadPresentationCtxContents(dr.Take(length), true);
         }
 
@@ -93,7 +97,7 @@ namespace EvilDICOM.Network.PDUs.Items
         {
             AssertItemType(dr, "Presentation Context Accept", ItemType.PRESENTATION_CONTEXT_ACCEPT);
             dr.Skip(2); // PDU id Reserved Null Byte
-            int length = LengthReader.ReadBigEndian(dr, 2);
+            var length = LengthReader.ReadBigEndian(dr, 2);
             return ReadPresentationCtxContents(dr.Take(length));
         }
 
@@ -105,20 +109,16 @@ namespace EvilDICOM.Network.PDUs.Items
             {
                 pc.Id = dr.Take(1)[0];
                 dr.Skip(1); //Reserved Null Byte
-                pc.Reason = (PresentationContextReason) Enum.ToObject(typeof (PresentationContextReason), dr.Take(1)[0]);
+                pc.Reason = (PresentationContextReason) Enum.ToObject(typeof(PresentationContextReason), dr.Take(1)[0]);
                 dr.Skip(1); //Reserved Null Byte
                 if (requestType)
-                {
                     pc.AbstractSyntax = ReadAbstractSyntax(dr).Trim();
-                }
                 while (dr.StreamPosition < dr.StreamLength)
                 {
-                    long initPos = dr.StreamPosition;
+                    var initPos = dr.StreamPosition;
                     pc.TransferSyntaxes.Add(ReadTransferSyntax(dr));
                     if (dr.StreamPosition == initPos)
-                    {
                         break;
-                    }
                 }
             }
             return pc;
@@ -134,15 +134,13 @@ namespace EvilDICOM.Network.PDUs.Items
             AssertItemType(dr, "User Info", ItemType.USER_INFO);
             var ui = new UserInfo();
             dr.Skip(2); // PDU ID and Reserved Null Byte
-            int length = LengthReader.ReadBigEndian(dr, 2);
+            var length = LengthReader.ReadBigEndian(dr, 2);
             if (length > 0)
             {
                 ui.MaxPDULength = (int) ReadMaxLength(dr);
                 ui.ImplementationUID = ReadImplementationClassUID(dr);
                 if (dr.Peek(1)[0] == (byte) ItemType.ASYNCHRONOUS_OPERATIONS_WINDOW)
-                {
                     ui.AsynchronousOperations = ReadAsyncOperations(dr);
-                }
                 ui.ImplementationVersion = ReadImplementationVersion(dr);
             }
             return ui;

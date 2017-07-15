@@ -1,11 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
+﻿#region
+
 using System.IO;
 using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
-using System.Xml;
 using System.Xml.Linq;
+
+#endregion
 
 namespace EvilDICOM.Core.Extensions
 {
@@ -19,7 +19,7 @@ namespace EvilDICOM.Core.Extensions
         public static string ToXMLString(this DICOMObject dcm)
         {
             var els = dcm.Elements.Select(el => el.ToXElement()).ToList();
-            StringBuilder builder = new StringBuilder();
+            var builder = new StringBuilder();
             using (TextWriter writer = new StringWriter(builder))
             {
                 var doc = new XDocument();
@@ -42,7 +42,7 @@ namespace EvilDICOM.Core.Extensions
                 var doc = XDocument.Load(tr);
                 dcm.Elements.Clear();
                 var dicom = doc.Element("DICOM");
-                foreach(var el in dicom.Elements())
+                foreach (var el in dicom.Elements())
                 {
                     var dcmEl = el.ToDICOMElement();
                     dcm.Add(dcmEl);

@@ -1,4 +1,8 @@
-﻿using System;
+﻿#region
+
+using System;
+
+#endregion
 
 namespace EvilDICOM.Core.Helpers
 {
@@ -6,7 +10,7 @@ namespace EvilDICOM.Core.Helpers
     {
         public static T StringToEnum<T>(string name)
         {
-            return (T) Enum.Parse(typeof (T), name, false);
+            return (T) Enum.Parse(typeof(T), name, false);
         }
     }
 }

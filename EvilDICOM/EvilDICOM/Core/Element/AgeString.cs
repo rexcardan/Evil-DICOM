@@ -1,5 +1,9 @@
-﻿using EvilDICOM.Core.Enums;
+﻿#region
+
+using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.IO.Data;
+
+#endregion
 
 namespace EvilDICOM.Core.Element
 {

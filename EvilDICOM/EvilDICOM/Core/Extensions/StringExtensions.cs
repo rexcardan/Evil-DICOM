@@ -1,5 +1,9 @@
-﻿using System.Linq;
+﻿#region
+
+using System.Linq;
 using System.Text;
+
+#endregion
 
 namespace EvilDICOM.Core.Extensions
 {
@@ -16,15 +20,13 @@ namespace EvilDICOM.Core.Extensions
         public static string ToUpperUnderscore(this string camelCase)
         {
             var build = new StringBuilder();
-            for (int i = 0; i < camelCase.Length; i++)
+            for (var i = 0; i < camelCase.Length; i++)
             {
-                char current = camelCase.ElementAt(i);
+                var current = camelCase.ElementAt(i);
                 build.Append(char.ToUpper(current));
-                char next = i + 1 < camelCase.Length ? camelCase.ElementAt(i + 1) : camelCase.ElementAt(i);
+                var next = i + 1 < camelCase.Length ? camelCase.ElementAt(i + 1) : camelCase.ElementAt(i);
                 if (char.IsLower(current) && char.IsUpper(next))
-                {
                     build.Append("_");
-                }
             }
             return build.ToString();
         }

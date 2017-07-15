@@ -1,9 +1,13 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.IO;
 using System.Text;
 using EvilDICOM.Core.IO.Writing;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Network.Associations.PDUs
 {
@@ -18,12 +22,12 @@ namespace EvilDICOM.Network.Associations.PDUs
             var stream = new MemoryStream();
             using (var dw = new DICOMBinaryWriter(stream))
             {
-                dw.Write((byte)PDUType.A_ABORT);
+                dw.Write((byte) PDUType.A_ABORT);
                 dw.WriteNullBytes(1); //Reserved Null byte
                 LengthWriter.WriteBigEndian(dw, 4, 4);
                 dw.WriteNullBytes(2); //Reserved Null bytes
-                dw.Write((byte)Source);
-                dw.Write((byte)Reason);
+                dw.Write((byte) Source);
+                dw.Write((byte) Reason);
                 written = stream.ToArray();
             }
             return written;

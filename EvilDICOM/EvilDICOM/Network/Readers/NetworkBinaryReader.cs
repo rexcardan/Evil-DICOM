@@ -1,20 +1,21 @@
-﻿using System;
+﻿#region
+
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Sockets;
-using System.Runtime.InteropServices;
 using System.Text;
-using System.Threading.Tasks;
 using EvilDICOM.Core.IO.Reading;
-using System.Diagnostics;
+
+#endregion
 
 namespace EvilDICOM.Network.Readers
 {
     public class NetworkBinaryReader
     {
         #region PRIVATE
+
         protected BinaryReader _binaryReader;
+
         #endregion
 
         /// <summary>
@@ -22,7 +23,6 @@ namespace EvilDICOM.Network.Readers
         /// </summary>
         /// <param name="stream"></param>
         public NetworkBinaryReader(BufferedStream stream)
-            : base()
         {
             _binaryReader = new BinaryReader(stream, new ASCIIEncoding());
         }
@@ -42,7 +42,6 @@ namespace EvilDICOM.Network.Readers
                 read.AddRange(buffer.Take(numRead));
             }
             return read.ToArray();
-
         }
 
         /// <summary>
@@ -62,7 +61,7 @@ namespace EvilDICOM.Network.Readers
         /// <param name="substreamLength">the number of bytes to include in the new stream (starting from the current position)</param>
         public DICOMBinaryReader GetSubStream(int substreamLength)
         {
-            byte[] newStream = Take(substreamLength);
+            var newStream = Take(substreamLength);
             return new DICOMBinaryReader(newStream);
         }
 
@@ -74,7 +73,7 @@ namespace EvilDICOM.Network.Readers
         public char[] ReadChars(int count)
         {
             var charBytes = ReadBytes(count);
-            return ASCIIEncoding.UTF8.GetChars(charBytes);
+            return Encoding.UTF8.GetChars(charBytes);
         }
 
         /// <summary>

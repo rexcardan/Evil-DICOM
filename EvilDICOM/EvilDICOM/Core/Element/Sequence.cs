@@ -1,5 +1,9 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using EvilDICOM.Core.Enums;
+
+#endregion
 
 namespace EvilDICOM.Core.Element
 {
@@ -19,11 +23,11 @@ namespace EvilDICOM.Core.Element
         /// </summary>
         public List<DICOMObject> Items
         {
-            get { return base.DataContainer != null ? DataContainer.MultipicityValue : null; }
+            get { return DataContainer != null ? DataContainer.MultipicityValue : null; }
             set
             {
-                base.DataContainer = base.DataContainer ?? new DICOMData<DICOMObject>();
-                base.DataContainer.MultipicityValue = value;
+                DataContainer = DataContainer ?? new DICOMData<DICOMObject>();
+                DataContainer.MultipicityValue = value;
             }
         }
 

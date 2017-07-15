@@ -1,18 +1,18 @@
-﻿using EvilDICOM.Core;
+﻿#region
+
 using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using EvilDICOM.Core;
 using DF = EvilDICOM.Core.DICOMForge;
-using EvilDICOM.Network.Enums;
+
+#endregion
 
 namespace EvilDICOM.Network.DIMSE.IOD
 {
     public class CFindPlanIOD : CFindImageIOD
     {
-
-        public CFindPlanIOD(DICOMObject dcm) : base(dcm) { }
+        public CFindPlanIOD(DICOMObject dcm) : base(dcm)
+        {
+        }
 
         public string PlanLabel
         {
@@ -20,13 +20,13 @@ namespace EvilDICOM.Network.DIMSE.IOD
             set { _sel.Forge(DF.RTPlanLabel(value)); }
         }
 
-        public System.DateTime? PlanDate
+        public DateTime? PlanDate
         {
             get { return _sel.RTPlanDate != null ? _sel.RTPlanDate.Data : null; }
             set { _sel.Forge(DF.RTPlanDate(value)); }
         }
 
-        public System.DateTime? PlanTime
+        public DateTime? PlanTime
         {
             get { return _sel.RTPlanTime != null ? _sel.RTPlanTime.Data : null; }
             set { _sel.Forge(DF.RTPlanTime(value)); }

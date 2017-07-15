@@ -1,5 +1,9 @@
-﻿using EvilDICOM.Network.DIMSE;
+﻿#region
+
+using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.Enums;
+
+#endregion
 
 namespace EvilDICOM.Network.Processors
 {

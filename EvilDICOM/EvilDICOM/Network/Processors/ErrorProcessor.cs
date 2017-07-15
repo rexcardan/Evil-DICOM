@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region
+
+using System;
 using EvilDICOM.Network.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Network.Processors
 {

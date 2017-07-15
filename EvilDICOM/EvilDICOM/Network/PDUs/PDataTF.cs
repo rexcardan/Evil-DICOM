@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using EvilDICOM.Core;
@@ -8,6 +10,8 @@ using EvilDICOM.Core.IO.Writing;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Interfaces;
 using EvilDICOM.Network.PDUs.Items;
+
+#endregion
 
 namespace EvilDICOM.Network.PDUs
 {
@@ -68,7 +72,7 @@ namespace EvilDICOM.Network.PDUs
                 {
                     dw.Write((byte) PDUType.P_DATA_TRANSFER);
                     dw.WriteNullBytes(1); //Reserved Null byte
-                    byte[] items = WriteItems();
+                    var items = WriteItems();
                     LengthWriter.WriteBigEndian(dw, items.Length, 4);
                     dw.Write(items);
                     written = stream.ToArray();
@@ -99,10 +103,8 @@ namespace EvilDICOM.Network.PDUs
             {
                 using (var dw = new DICOMBinaryWriter(stream))
                 {
-                    foreach (PDVItem item in Items)
-                    {
+                    foreach (var item in Items)
                         ItemWriter.WritePDVItem(dw, item);
-                    }
                     written = stream.ToArray();
                 }
             }

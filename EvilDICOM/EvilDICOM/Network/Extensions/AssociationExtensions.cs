@@ -1,10 +1,11 @@
-﻿using EvilDICOM.Network.PDUs;
-using EvilDICOM.Network.PDUs.Items;
-using System;
+﻿#region
+
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using EvilDICOM.Network.PDUs;
+using EvilDICOM.Network.PDUs.Items;
+
+#endregion
 
 namespace EvilDICOM.Network.Extensions
 {
@@ -17,10 +18,11 @@ namespace EvilDICOM.Network.Extensions
         /// <param name="source1"></param>
         /// <param name="source2"></param>
         /// <returns></returns>
-        public static List<PresentationContext> GetResponseContexts(this Association asc, IEnumerable<PresentationContext> reqContexts)
+        public static List<PresentationContext> GetResponseContexts(this Association asc,
+            IEnumerable<PresentationContext> reqContexts)
         {
             var serviceContexts = asc.PresentationContexts;
-            List<PresentationContext> response = new List<PresentationContext>();
+            var response = new List<PresentationContext>();
 
             foreach (var ctx in reqContexts)
             {
@@ -45,7 +47,8 @@ namespace EvilDICOM.Network.Extensions
                     else
                     {
                         //Transfer syntax not supported
-                        asc.Logger.Log("Transfer syntax(es) not supported : {0}", string.Join(",", ctx.TransferSyntaxes));
+                        asc.Logger.Log("Transfer syntax(es) not supported : {0}",
+                            string.Join(",", ctx.TransferSyntaxes));
                         ctx.Reason = Enums.PresentationContextReason.TRANSFER_SYNAXES_NOT_SUPPORTED;
                         response.Add(ctx);
                     }
@@ -60,14 +63,13 @@ namespace EvilDICOM.Network.Extensions
                     ctx.TransferSyntaxes.Add(syntax);
                     response.Add(ctx);
                 }
-
             }
             return response;
         }
 
         public static void SetFinalContexts(this Association asc, Accept accept)
         {
-            List<PresentationContext> final = new List<PresentationContext>();
+            var final = new List<PresentationContext>();
             foreach (var ctx in asc.PresentationContexts)
             {
                 var accepted = accept.PresentationContexts.FirstOrDefault(p => p.Id == ctx.Id);

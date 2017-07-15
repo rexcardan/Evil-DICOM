@@ -1,6 +1,10 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -21,9 +25,9 @@ namespace EvilDICOM.Core.IO.Data
         public static T[] ReadMultipleBinary<T>(byte[] data, int singleLength, Func<byte[], T> readSingleFunc)
         {
             var values = new List<T>();
-            for (int i = 0; i < data.Length; i += singleLength)
+            for (var i = 0; i < data.Length; i += singleLength)
             {
-                byte[] singleBytes = data.Skip(i).Take(singleLength).ToArray();
+                var singleBytes = data.Skip(i).Take(singleLength).ToArray();
                 values.Add(readSingleFunc(singleBytes));
             }
             return values.ToArray();

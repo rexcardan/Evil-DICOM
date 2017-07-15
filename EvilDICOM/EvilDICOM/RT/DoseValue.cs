@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-
-namespace EvilDICOM.RT
+﻿namespace EvilDICOM.RT
 {
     /// <summary>
     /// A simple container for dose values as a function of 3D space
@@ -18,7 +13,10 @@ namespace EvilDICOM.RT
         public DoseValue(double x, double y, double z, double dose)
             : this()
         {
-            X = x; Y = y; Z = z; Dose = dose;
+            X = x;
+            Y = y;
+            Z = z;
+            Dose = dose;
         }
     }
 }

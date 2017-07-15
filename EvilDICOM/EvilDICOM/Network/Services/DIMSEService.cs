@@ -1,13 +1,15 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Linq;
 using EvilDICOM.Core;
 using EvilDICOM.Core.Helpers;
-using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Extensions;
 using EvilDICOM.Network.Messaging;
-using System.Threading.Tasks;
+
+#endregion
 
 namespace EvilDICOM.Network.Services
 {
@@ -16,6 +18,14 @@ namespace EvilDICOM.Network.Services
     /// </summary>
     public class DIMSEService
     {
+        //DICOM Object Received
+
+        public delegate void DIMSERequestHandler<T>(T req, Association asc) where T : AbstractDIMSERequest;
+
+        public delegate void DIMSEResponseHandler<T>(T req, Association asc) where T : AbstractDIMSEResponse;
+
+        public delegate void LogHandler(string toLog);
+
         public DIMSEService()
         {
             SetDefaultActions();
@@ -41,15 +51,14 @@ namespace EvilDICOM.Network.Services
                 asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
                 var response = new CEchoResponse(cEchoReq, Status.SUCCESS);
                 PDataMessenger.Send(response, asc);
-                RaiseDIMSERequestReceived<CEchoRequest>(cEchoReq, asc);
-   
+                RaiseDIMSERequestReceived(cEchoReq, asc);
             };
 
             CEchoResponseReceivedAction = (cEchoRp, asc) =>
             {
                 asc.Logger.Log("<-- DIMSE" + cEchoRp.GetLogString());
                 asc.LastActive = DateTime.Now;
-                RaiseDIMSEResponseReceived<CEchoResponse>(cEchoRp, asc);
+                RaiseDIMSEResponseReceived(cEchoRp, asc);
                 AssociationMessenger.SendReleaseRequest(asc);
             };
 
@@ -57,12 +66,10 @@ namespace EvilDICOM.Network.Services
             {
                 asc.Logger.Log("<-- DIMSE" + cFindResp.GetLogString());
                 asc.LastActive = DateTime.Now;
-                RaiseDIMSEResponseReceived<CFindResponse>(cFindResp, asc);
+                RaiseDIMSEResponseReceived(cFindResp, asc);
                 cFindResp.LogData(asc);
                 if (cFindResp.Status != (ushort) Status.PENDING)
-                {
                     AssociationMessenger.SendReleaseRequest(asc);
-                }
             };
 
             CMoveRequestReceivedAction = (cMoveReq, asc) =>
@@ -71,7 +78,7 @@ namespace EvilDICOM.Network.Services
                 cMoveReq.LogData(asc);
                 asc.LastActive = DateTime.Now;
                 asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
-                RaiseDIMSERequestReceived<CMoveRequest>(cMoveReq, asc);
+                RaiseDIMSERequestReceived(cMoveReq, asc);
                 throw new NotImplementedException();
             };
 
@@ -80,11 +87,9 @@ namespace EvilDICOM.Network.Services
                 asc.Logger.Log("<-- DIMSE" + cMoveRes.GetLogString());
                 cMoveRes.LogData(asc);
                 asc.LastActive = DateTime.Now;
-                RaiseDIMSEResponseReceived<CMoveResponse>(cMoveRes, asc);
+                RaiseDIMSEResponseReceived(cMoveRes, asc);
                 if (cMoveRes.Status != (ushort) Status.PENDING)
-                {
                     AssociationMessenger.SendReleaseRequest(asc);
-                }
             };
 
             CStoreRequestReceivedAction = async (req, asc) =>
@@ -94,19 +99,18 @@ namespace EvilDICOM.Network.Services
                 asc.LastActive = DateTime.Now;
                 asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
                 var resp = new CStoreResponse(req, Status.SUCCESS);
-                IDICOMElement syntax = req.Data.FindFirst(TagHelper.SOP​Class​UID);
-                RaiseDIMSERequestReceived<CStoreRequest>(req, asc);
+                var syntax = req.Data.FindFirst(TagHelper.SOP​Class​UID);
+                RaiseDIMSERequestReceived(req, asc);
 
                 if (syntax != null)
-                {
-                    //If can store (supported Abstract Syntax) - Try
                     if (asc.PresentationContexts.Any(p => p.Id == req.DataPresentationContextId))
                     {
                         try
                         {
-                            bool success = CStorePayloadAction(req.Data, asc);
-                            resp.Status = success ? resp.Status : (ushort)Status.FAILURE;
-                            PDataMessenger.Send(resp, asc, asc.PresentationContexts.First(p => p.Id == req.DataPresentationContextId));
+                            var success = CStorePayloadAction(req.Data, asc);
+                            resp.Status = success ? resp.Status : (ushort) Status.FAILURE;
+                            PDataMessenger.Send(resp, asc,
+                                asc.PresentationContexts.First(p => p.Id == req.DataPresentationContextId));
                         }
                         catch (Exception e)
                         {
@@ -118,9 +122,8 @@ namespace EvilDICOM.Network.Services
                     {
                         //Abstract syntax not supported
                         resp.Status = (ushort) Status.FAILURE;
-                        PDataMessenger.Send(resp, asc);           
+                        PDataMessenger.Send(resp, asc);
                     }
-                }
             };
 
             CStoreResponseReceivedAction = (cStoreResp, asc) =>
@@ -128,23 +131,13 @@ namespace EvilDICOM.Network.Services
                 asc.Logger.Log("<-- DIMSE" + cStoreResp.GetLogString());
                 cStoreResp.LogData(asc);
                 asc.LastActive = DateTime.Now;
-                RaiseDIMSEResponseReceived<CStoreResponse>(cStoreResp, asc);
-                if (cStoreResp.Status != (ushort)Status.PENDING)
-                {
+                RaiseDIMSEResponseReceived(cStoreResp, asc);
+                if (cStoreResp.Status != (ushort) Status.PENDING)
                     AssociationMessenger.SendReleaseRequest(asc);
-                }
             };
 
             CStorePayloadAction = (dcm, asc) => { return true; };
         }
-
-        //DICOM Object Received
-
-        public delegate void DIMSERequestHandler<T>(T req, Association asc) where T : AbstractDIMSERequest;
-
-        public delegate void DIMSEResponseHandler<T>(T req, Association asc) where T : AbstractDIMSEResponse;
-
-        public delegate void LogHandler(string toLog);
 
         //---------------DIMSE REQUESTS----------------------
 
@@ -156,33 +149,17 @@ namespace EvilDICOM.Network.Services
         private void RaiseDIMSERequestReceived<T>(T req, Association asc) where T : AbstractDIMSERequest
         {
             if (typeof(T) == typeof(CEchoRequest))
-            {
                 if (CEchoRequestReceived != null)
-                {
                     CEchoRequestReceived(req as CEchoRequest, asc);
-                }
-            }
             if (typeof(T) == typeof(CFindRequest))
-            {
                 if (CFindRequestReceived != null)
-                {
                     CFindRequestReceived(req as CFindRequest, asc);
-                }
-            }
             if (typeof(T) == typeof(CMoveRequest))
-            {
                 if (CMoveRequestReceived != null)
-                {
                     CMoveRequestReceived(req as CMoveRequest, asc);
-                }
-            }
             if (typeof(T) == typeof(CStoreRequest))
-            {
                 if (CStoreRequestReceived != null)
-                {
                     CStoreRequestReceived(req as CStoreRequest, asc);
-                }
-            }
         }
 
         //----------------DIMSE RESPONSES-------------------------
@@ -195,33 +172,17 @@ namespace EvilDICOM.Network.Services
         private void RaiseDIMSEResponseReceived<T>(T resp, Association asc) where T : AbstractDIMSEResponse
         {
             if (typeof(T) == typeof(CEchoResponse))
-            {
                 if (CEchoResponseReceived != null)
-                {
                     CEchoResponseReceived(resp as CEchoResponse, asc);
-                }
-            }
             if (typeof(T) == typeof(CFindResponse))
-            {
                 if (CFindResponseReceived != null)
-                {
                     CFindResponseReceived(resp as CFindResponse, asc);
-                }
-            }
             if (typeof(T) == typeof(CMoveResponse))
-            {
                 if (CMoveResponseReceived != null)
-                {
                     CMoveResponseReceived(resp as CMoveResponse, asc);
-                }
-            }
             if (typeof(T) == typeof(CStoreResponse))
-            {
                 if (CStoreResponseReceived != null)
-                {
                     CStoreResponseReceived(resp as CStoreResponse, asc);
-                }
-            }
         }
     }
 }

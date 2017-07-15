@@ -1,7 +1,11 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Core.Dictionaries
 {
@@ -78,7 +82,8 @@ namespace EvilDICOM.Core.Dictionaries
                 new TagInfo {Description = "OffsetOfTheFirstDirectoryRecordOfTheRootDirectoryEntity", VR = "UL"}
             },
             {
-                "00041202", new TagInfo {Description = "OffsetOfTheLastDirectoryRecordOfTheRootDirectoryEntity", VR = "UL"}
+                "00041202",
+                new TagInfo {Description = "OffsetOfTheLastDirectoryRecordOfTheRootDirectoryEntity", VR = "UL"}
             },
             {"00041212", new TagInfo {Description = "FileSetConsistencyFlag", VR = "US"}},
             {"00041220", new TagInfo {Description = "DirectoryRecordSequence", VR = "SQ"}},
@@ -236,7 +241,8 @@ namespace EvilDICOM.Core.Dictionaries
             {"00082244", new TagInfo {Description = "TransducerOrientationSequenceRetired", VR = "SQ"}},
             {"00082246", new TagInfo {Description = "TransducerOrientationModifierSequenceRetired", VR = "SQ"}},
             {
-                "00082251", new TagInfo {Description = "AnatomicStructureSpaceOrRegionCodeSequenceTrialRetired", VR = "SQ"}
+                "00082251",
+                new TagInfo {Description = "AnatomicStructureSpaceOrRegionCodeSequenceTrialRetired", VR = "SQ"}
             },
             {"00082253", new TagInfo {Description = "AnatomicPortalOfEntranceCodeSequenceTrialRetired", VR = "SQ"}},
             {"00082255", new TagInfo {Description = "AnatomicApproachDirectionCodeSequenceTrialRetired", VR = "SQ"}},
@@ -1356,7 +1362,10 @@ namespace EvilDICOM.Core.Dictionaries
             {"00221037", new TagInfo {Description = "TargetRefraction", VR = "FL"}},
             {"00221039", new TagInfo {Description = "RefractiveProcedureOccurred", VR = "CS"}},
             {"00221040", new TagInfo {Description = "RefractiveSurgeryTypeCodeSequence", VR = "SQ"}},
-            {"00221044", new TagInfo {Description = "OphthalmicUltrasoundAxialMeasurementsTypeCodeSequence", VR = "SQ"}},
+            {
+                "00221044",
+                new TagInfo {Description = "OphthalmicUltrasoundAxialMeasurementsTypeCodeSequence", VR = "SQ"}
+            },
             {"00221050", new TagInfo {Description = "OphthalmicAxialLengthMeasurementsSequence", VR = "SQ"}},
             {"00221053", new TagInfo {Description = "IOLPower", VR = "FL"}},
             {"00221054", new TagInfo {Description = "PredictedRefractiveError", VR = "FL"}},
@@ -1453,7 +1462,8 @@ namespace EvilDICOM.Core.Dictionaries
             {"00240065", new TagInfo {Description = "AgeCorrectedSensitivityDeviationAlgorithmSequence", VR = "SQ"}},
             {"00240066", new TagInfo {Description = "GlobalDeviationFromNormal", VR = "FL"}},
             {
-                "00240067", new TagInfo {Description = "GeneralizedDefectSensitivityDeviationAlgorithmSequence", VR = "SQ"}
+                "00240067",
+                new TagInfo {Description = "GeneralizedDefectSensitivityDeviationAlgorithmSequence", VR = "SQ"}
             },
             {"00240068", new TagInfo {Description = "LocalizedDeviationfromNormal", VR = "FL"}},
             {"00240069", new TagInfo {Description = "PatientReliabilityIndicator", VR = "LO"}},
@@ -1945,10 +1955,12 @@ namespace EvilDICOM.Core.Dictionaries
             {"00404010", new TagInfo {Description = "ScheduledProcedureStepModificationDateTime", VR = "DT"}},
             {"00404011", new TagInfo {Description = "ExpectedCompletionDateTime", VR = "DT"}},
             {
-                "00404015", new TagInfo {Description = "ResultingGeneralPurposePerformedProcedureStepsSequence", VR = "SQ"}
+                "00404015",
+                new TagInfo {Description = "ResultingGeneralPurposePerformedProcedureStepsSequence", VR = "SQ"}
             },
             {
-                "00404016", new TagInfo {Description = "ReferencedGeneralPurposeScheduledProcedureStepSequence", VR = "SQ"}
+                "00404016",
+                new TagInfo {Description = "ReferencedGeneralPurposeScheduledProcedureStepSequence", VR = "SQ"}
             },
             {"00404018", new TagInfo {Description = "ScheduledWorkitemCodeSequence", VR = "SQ"}},
             {"00404019", new TagInfo {Description = "PerformedWorkitemCodeSequence", VR = "SQ"}},
@@ -2015,7 +2027,10 @@ namespace EvilDICOM.Core.Dictionaries
             {"0040A073", new TagInfo {Description = "VerifyingObserverSequence", VR = "SQ"}},
             {"0040A074", new TagInfo {Description = "ObjectBinaryIdentifierTrialRetired", VR = "OB"}},
             {"0040A075", new TagInfo {Description = "VerifyingObserverName", VR = "PN"}},
-            {"0040A076", new TagInfo {Description = "DocumentingObserverIdentifierCodeSequenceTrialRetired", VR = "SQ"}},
+            {
+                "0040A076",
+                new TagInfo {Description = "DocumentingObserverIdentifierCodeSequenceTrialRetired", VR = "SQ"}
+            },
             {"0040A078", new TagInfo {Description = "AuthorObserverSequence", VR = "SQ"}},
             {"0040A07A", new TagInfo {Description = "ParticipantSequence", VR = "SQ"}},
             {"0040A07C", new TagInfo {Description = "CustodialOrganizationSequence", VR = "SQ"}},
@@ -2028,7 +2043,10 @@ namespace EvilDICOM.Core.Dictionaries
             {"0040A090", new TagInfo {Description = "EquivalentCDADocumentSequenceRetired", VR = "SQ"}},
             {"0040A0B0", new TagInfo {Description = "ReferencedWaveformChannels", VR = "US"}},
             {"0040A110", new TagInfo {Description = "DateOfDocumentOrVerbalTransactionTrialRetired", VR = "DA"}},
-            {"0040A112", new TagInfo {Description = "TimeOfDocumentCreationOrVerbalTransactionTrialRetired", VR = "TM"}},
+            {
+                "0040A112",
+                new TagInfo {Description = "TimeOfDocumentCreationOrVerbalTransactionTrialRetired", VR = "TM"}
+            },
             {"0040A120", new TagInfo {Description = "DateTime", VR = "DT"}},
             {"0040A121", new TagInfo {Description = "Date", VR = "DA"}},
             {"0040A122", new TagInfo {Description = "Time", VR = "TM"}},
@@ -3725,8 +3743,8 @@ namespace EvilDICOM.Core.Dictionaries
             if (tag.Element == GROUP_HEADER) return VR.UnsignedLong;
             if (Tags.ContainsKey(tag.CompleteID.ToUpperInvariant()))
             {
-                TagInfo t = Tags[tag.CompleteID.ToUpperInvariant()];
-                string vr = t.VR;
+                var t = Tags[tag.CompleteID.ToUpperInvariant()];
+                var vr = t.VR;
                 return VRDictionary.GetVRFromAbbreviation(vr);
             }
             return VR.Unknown;
@@ -3740,7 +3758,7 @@ namespace EvilDICOM.Core.Dictionaries
         /// <param name="description">the description of the element</param>
         public static void AddEntry<T>(string id, string description) where T : IDICOMElement
         {
-            Tags.Add(id, new TagInfo {Description = description, VR = VRDictionary.GetAbbreviationFromType(typeof (T))});
+            Tags.Add(id, new TagInfo {Description = description, VR = VRDictionary.GetAbbreviationFromType(typeof(T))});
         }
 
         /// <summary>
@@ -3750,7 +3768,7 @@ namespace EvilDICOM.Core.Dictionaries
         /// <returns>a string description of the tag in camel case</returns>
         public static string GetDescription(string completeId)
         {
-            string element = completeId.Substring(4, 4);
+            var element = completeId.Substring(4, 4);
             return element == GROUP_HEADER
                 ? string.Format("Group header for group {0}", completeId.Substring(0, 4))
                 : Tags.ContainsKey(completeId)

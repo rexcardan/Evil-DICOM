@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using EvilDICOM.Core;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
@@ -9,14 +11,17 @@ using EvilDICOM.Network.DIMSE.IOD;
 using EvilDICOM.Network.Enums;
 using C = EvilDICOM.Network.Enums.CommandField;
 
+#endregion
+
 namespace EvilDICOM.Network.DIMSE
 {
     public class CMoveRequest : AbstractDIMSERequest, IIOD
     {
-        private readonly ApplicationEntity _moveDestination = new ApplicationEntity { Tag = TagHelper.MoveDestination };
-        private readonly UnsignedShort _priority = new UnsignedShort { Tag = TagHelper.Priority };
+        private readonly ApplicationEntity _moveDestination = new ApplicationEntity {Tag = TagHelper.MoveDestination};
+        private readonly UnsignedShort _priority = new UnsignedShort {Tag = TagHelper.Priority};
 
-        public CMoveRequest(CMoveIOD iod, string moveToAeTitle, Root root = Root.STUDY, Priority priority = Core.Enums.Priority.MEDIUM,
+        public CMoveRequest(CMoveIOD iod, string moveToAeTitle, Root root = Root.STUDY,
+            Priority priority = Core.Enums.Priority.MEDIUM,
             ushort messageId = 1)
         {
             switch (root)
@@ -28,10 +33,10 @@ namespace EvilDICOM.Network.DIMSE
                     AffectedSOPClassUID = AbstractSyntax.STUDY_MOVE;
                     break;
             }
-            CommandField = (ushort)C.C_MOVE_RQ;
+            CommandField = (ushort) C.C_MOVE_RQ;
             Data = new DICOMObject(iod.Elements);
             MoveDestination = moveToAeTitle;
-            Priority = (ushort)priority;
+            Priority = (ushort) priority;
             MessageID = messageId;
         }
 
@@ -40,7 +45,7 @@ namespace EvilDICOM.Network.DIMSE
             var sel = new DICOMSelector(d);
             GroupLength = sel.CommandGroupLength.Data;
             AffectedSOPClassUID = sel.AffectedSOPClassUID.Data;
-            CommandField = (ushort)C.C_MOVE_RQ;
+            CommandField = (ushort) C.C_MOVE_RQ;
             MessageID = sel.MessageID.Data;
             Priority = sel.Priority.Data;
             DataSetType = sel.CommandDataSetType.Data;

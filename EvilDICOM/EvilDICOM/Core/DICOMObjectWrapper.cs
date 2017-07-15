@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using System.Linq;
 using EvilDICOM.Core.Element;
+
+#endregion
 
 namespace EvilDICOM.Core
 {
@@ -35,16 +39,15 @@ namespace EvilDICOM.Core
         /// <returns>a list of wrapped DICOM objects</returns>
         public List<T> GetWrappedSequence<T>(Tag tag) where T : DICOMObjectWrapper, new()
         {
-            DICOMData<DICOMObject> seq = _dcm.TryGetDataValue<DICOMObject>(tag, null);
+            var seq = _dcm.TryGetDataValue<DICOMObject>(tag, null);
             if (seq != null)
-            {
                 return seq.MultipicityValue.Select(si =>
-                {
-                    var t = new T();
-                    t._dcm = si;
-                    return t;
-                }).ToList();
-            }
+                    {
+                        var t = new T();
+                        t._dcm = si;
+                        return t;
+                    })
+                    .ToList();
             return null;
         }
 

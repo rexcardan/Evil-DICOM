@@ -1,6 +1,8 @@
-﻿using System.Collections.Generic;
-using System.Linq;
+﻿#region
+
 using EvilDICOM.Core.Element;
+
+#endregion
 
 namespace EvilDICOM.Core.Selection
 {

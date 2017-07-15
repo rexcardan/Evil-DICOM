@@ -1,24 +1,33 @@
-﻿using EvilDICOM.Network.PDUs.Items;
-using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿#region
+
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
 using System.Threading.Tasks;
+using EvilDICOM.Network.PDUs.Items;
+
+#endregion
 
 namespace EvilDICOM.Network
 {
     public class DICOMSCP : DICOMServiceClass
     {
-        TcpListener _server;
-        bool _started = false;
+        public delegate void StopHandler();
 
-        public DICOMSCP(Entity ae) : base(ae) { _server = new TcpListener(IPAddress.Parse(ApplicationEntity.IpAddress), ApplicationEntity.Port); }
+        private readonly TcpListener _server;
+        private bool _started;
+
+        public DICOMSCP(Entity ae) : base(ae)
+        {
+            _server = new TcpListener(IPAddress.Parse(ApplicationEntity.IpAddress), ApplicationEntity.Port);
+        }
+
+        public bool IsListening
+        {
+            get { return _started; }
+        }
 
         public async void ListenForIncomingAssociations(bool keepListenerRunning)
         {
-
             while (true)
             {
                 if (!_started)
@@ -26,12 +35,10 @@ namespace EvilDICOM.Network
                     _server.Start();
                     _started = true;
                 }
-                var connection = await _server.AcceptTcpClientAsync(); 
+                var connection = await _server.AcceptTcpClientAsync();
                 SpinUpAssociation(connection);
                 if (!keepListenerRunning)
-                {
                     break;
-                }
             }
         }
 
@@ -62,13 +69,11 @@ namespace EvilDICOM.Network
             Logger.Log("Starting association with {0}.", asc.IpAddress, asc.Port);
             //Add supported presentation contexts
             foreach (var ab in SupportedAbstractSyntaxes)
-            {
-                asc.PresentationContexts.Add(new PresentationContext()
+                asc.PresentationContexts.Add(new PresentationContext
                 {
                     AbstractSyntax = ab,
                     TransferSyntaxes = SupportedTransferSyntaxes
                 });
-            }
             return asc;
         }
 
@@ -77,21 +82,12 @@ namespace EvilDICOM.Network
             _server.Stop();
         }
 
-        public bool IsListening
-        {
-            get { return _started; }
-        }
-
-        public delegate void StopHandler();
-
         public event StopHandler SCPStopped;
 
         public void RaisedSCPStopped()
         {
             if (SCPStopped != null)
-            {
                 SCPStopped();
-            }
         }
     }
 }

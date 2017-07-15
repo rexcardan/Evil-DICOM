@@ -1,13 +1,12 @@
-﻿using EvilDICOM.Core.Element;
+﻿#region
+
+using System.Collections.Generic;
+using EvilDICOM.Core;
 using EvilDICOM.Network.Enums;
 using S = System;
 using DF = EvilDICOM.Core.DICOMForge;
-using EvilDICOM.Core.Interfaces;
-using System.Collections.Generic;
-using EvilDICOM.Core;
-using EvilDICOM.Core.Helpers;
 using System.Linq;
-using EvilDICOM.Network.Interfaces;
+#endregion
 
 namespace EvilDICOM.Network.DIMSE.IOD
 {
@@ -25,17 +24,17 @@ namespace EvilDICOM.Network.DIMSE.IOD
             SeriesTime = SeriesDate = null;
         }
 
-        public CFindSeriesIOD(DICOMObject dcm) : base(dcm) { }
+        public CFindSeriesIOD(DICOMObject dcm) : base(dcm)
+        {
+        }
 
         public QueryLevel QueryLevel
         {
             get
             {
                 if (_sel.QueryRetrieveLevel == null)
-                {
                     _sel.QueryRetrieveLevel.Data = QueryLevel.PATIENT.ToString();
-                }
-                return (QueryLevel)S.Enum.Parse(typeof(QueryLevel), _sel.QueryRetrieveLevel.Data);
+                return (QueryLevel) S.Enum.Parse(typeof(QueryLevel), _sel.QueryRetrieveLevel.Data);
             }
             set { _sel.Forge(DF.QueryRetrieveLevel(value.ToString())); }
         }
@@ -53,17 +52,22 @@ namespace EvilDICOM.Network.DIMSE.IOD
                 if (_sel.SeriesNumber != null && _sel.SeriesNumber.Data_.Any()) return _sel.SeriesNumber.Data_[0];
                 return null;
             }
-            set { _sel.Forge(DF.SeriesNumber()).Data_ = value != null ? new List<int>() { (int)value } : new List<int>(); }
+            set { _sel.Forge(DF.SeriesNumber()).Data_ = value != null ? new List<int> {(int) value} : new List<int>(); }
         }
 
         public int? NumberOfSeriesRelatedInstances
         {
             get
             {
-                if (_sel.NumberOfSeriesRelatedInstances != null && _sel.NumberOfSeriesRelatedInstances.Data_.Any()) return _sel.NumberOfSeriesRelatedInstances.Data_[0];
+                if (_sel.NumberOfSeriesRelatedInstances != null && _sel.NumberOfSeriesRelatedInstances.Data_.Any())
+                    return _sel.NumberOfSeriesRelatedInstances.Data_[0];
                 return null;
             }
-            set { _sel.Forge(DF.NumberOfSeriesRelatedInstances()).Data_ = value != null ? new List<int>() { (int)value } : new List<int>(); }
+            set
+            {
+                _sel.Forge(DF.NumberOfSeriesRelatedInstances()).Data_ =
+                    value != null ? new List<int> {(int) value} : new List<int>();
+            }
         }
 
         public string SeriesDescription

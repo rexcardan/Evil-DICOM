@@ -1,4 +1,8 @@
-﻿using EvilDICOM.Core.Enums;
+﻿#region
+
+using EvilDICOM.Core.Enums;
+
+#endregion
 
 namespace EvilDICOM.Core.Logging
 {
@@ -22,9 +26,7 @@ namespace EvilDICOM.Core.Logging
         public void Log(string toLogMessage, LogPriority priority, params object[] args)
         {
             if (LogRequested != null)
-            {
                 LogRequested(string.Format(toLogMessage, args), priority);
-            }
         }
     }
 }

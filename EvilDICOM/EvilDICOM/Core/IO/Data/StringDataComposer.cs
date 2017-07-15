@@ -1,8 +1,11 @@
-﻿using System;
+﻿#region
+
+using System.Globalization;
 using System.Linq;
 using EvilDICOM.Core.Element;
 using DateTime = System.DateTime;
-using System.Globalization;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -12,7 +15,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (data != null)
             {
-                string ageString = String.Format(CultureInfo.InvariantCulture, "{0:00#}", data.Number);
+                var ageString = string.Format(CultureInfo.InvariantCulture, "{0:00#}", data.Number);
                 switch (data.Units)
                 {
                     case Age.Unit.DAYS:
@@ -56,18 +59,14 @@ namespace EvilDICOM.Core.IO.Data
         public static string ComposeDecimalString(double[] data)
         {
             if (data != null)
-            {
-                return String.Join("\\", data.Select(d => d.ToString(CultureInfo.InvariantCulture)).ToArray());
-            }
+                return string.Join("\\", data.Select(d => d.ToString(CultureInfo.InvariantCulture)).ToArray());
             return string.Empty;
         }
 
         public static string ComposeIntegerString(int[] data)
         {
             if (data != null)
-            {
-                return String.Join("\\", data.Select(d => d.ToString(CultureInfo.InvariantCulture)).ToArray());
-            }
+                return string.Join("\\", data.Select(d => d.ToString(CultureInfo.InvariantCulture)).ToArray());
             return string.Empty;
         }
 

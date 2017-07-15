@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿#region
+
+using System.Text;
+
+#endregion
 
 namespace EvilDICOM.Network.PDUs.Items
 {

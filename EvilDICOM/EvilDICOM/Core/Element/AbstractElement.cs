@@ -1,9 +1,13 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Interfaces;
-using System.Linq;
+
+#endregion
 
 namespace EvilDICOM.Core.Element
 {
@@ -101,7 +105,7 @@ namespace EvilDICOM.Core.Element
         public object DData
         {
             get { return DataContainer.SingleValue; }
-            set { DataContainer.SingleValue = (T)value; }
+            set { DataContainer.SingleValue = (T) value; }
         }
 
         /// <summary>
@@ -111,7 +115,7 @@ namespace EvilDICOM.Core.Element
         public ICollection DData_
         {
             get { return DataContainer.MultipicityValue; }
-            set { DataContainer.MultipicityValue = (List<T>)value; }
+            set { DataContainer.MultipicityValue = (List<T>) value; }
         }
 
         /// <summary>
@@ -121,14 +125,10 @@ namespace EvilDICOM.Core.Element
         public override string ToString()
         {
             if (DatType == typeof(byte) && Data_.Count > 10)
-            {
-                return string.Format("{0} ({1}) -> {2}...", Tag, VR, DataContainer != null ? string.Join(" | ", Data_.Take(10)) : "null");
-            }
-            else
-            {
-                return string.Format("{0} ({1}) -> {2}", Tag, VR, DataContainer != null ? string.Join(" | ", Data_) : "null");
-            }
-
+                return string.Format("{0} ({1}) -> {2}...", Tag, VR,
+                    DataContainer != null ? string.Join(" | ", Data_.Take(10)) : "null");
+            return string.Format("{0} ({1}) -> {2}", Tag, VR,
+                DataContainer != null ? string.Join(" | ", Data_) : "null");
         }
 
         /// <summary>

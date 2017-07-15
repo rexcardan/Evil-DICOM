@@ -1,13 +1,14 @@
-﻿using EvilDICOM.Core;
-using EvilDICOM.Core.Element;
-using EvilDICOM.Core.Helpers;
-using EvilDICOM.Core.Interfaces;
-using EvilDICOM.Core.Logging;
+﻿#region
+
 using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using EvilDICOM.Core;
+using EvilDICOM.Core.Element;
+using EvilDICOM.Core.Helpers;
+using EvilDICOM.Core.Logging;
+
+#endregion
 
 namespace EvilDICOM.Anonymization.Anonymizers
 {
@@ -16,16 +17,34 @@ namespace EvilDICOM.Anonymization.Anonymizers
     /// </summary>
     public class StudyIdAnonymizer : IAnonymizer
     {
-
-        public StudyIdAnonymizer(){
-            Studies= new List<DICOMStudy>();
+        public StudyIdAnonymizer()
+        {
+            Studies = new List<DICOMStudy>();
             StudyDictionary = new Dictionary<string, string>();
         }
-        List<DICOMStudy> Studies { get; set; } 
+
+        private List<DICOMStudy> Studies { get; set; }
+
         /// <summary>
         /// A dictionary which stores the original study id and type of study
         /// </summary>
-        public Dictionary<string, string> StudyDictionary { get; set; } 
+        public Dictionary<string, string> StudyDictionary { get; set; }
+
+        public string Name
+        {
+            get { return "Study Id Anonymizer"; }
+        }
+
+        public void Anonymize(DICOMObject d)
+        {
+            EvilLogger.Instance.Log("Removing study IDs and descriptions...");
+            var sID = d.FindFirst(TagHelper.Study​ID) as ShortString;
+            if (sID != null)
+                sID.Data = StudyDictionary[sID.Data];
+            var desc = d.FindFirst(TagHelper.Study​Description) as LongString;
+            if (desc != null)
+                desc.Data = string.Empty;
+        }
 
         /// <summary>
         /// This method is to be called once all DICOM objects are added. It then remaps study ids in a private dictionary
@@ -38,8 +57,8 @@ namespace EvilDICOM.Anonymization.Anonymizers
         public void GenerateNames()
         {
             Studies = Studies.OrderBy(s => s.ID).ToList();
-            int i = 1;
-            foreach (DICOMStudy s in Studies)
+            var i = 1;
+            foreach (var s in Studies)
             {
                 StudyDictionary.Add(s.ID, string.Format("{0}_{1}", "Study", i));
                 i++;
@@ -50,16 +69,16 @@ namespace EvilDICOM.Anonymization.Anonymizers
         {
             var types = Enum.GetValues(typeof(DICOMFileType)).Cast<DICOMFileType>();
 
-            foreach (DICOMFileType type in types)
+            foreach (var type in types)
             {
-                List<DICOMStudy> studiesOfType = Studies
-                .Where(s => s.Type == type)
-                .OrderBy(s => s.Date)
-                .ToList();
+                var studiesOfType = Studies
+                    .Where(s => s.Type == type)
+                    .OrderBy(s => s.Date)
+                    .ToList();
 
-                string abbreviation = GetTypeAbbreviation(type);
-                int i = 1;
-                foreach (DICOMStudy s in studiesOfType)
+                var abbreviation = GetTypeAbbreviation(type);
+                var i = 1;
+                foreach (var s in studiesOfType)
                 {
                     StudyDictionary.Add(s.ID, string.Format("{0}_{1}", abbreviation, i));
                     i++;
@@ -84,44 +103,29 @@ namespace EvilDICOM.Anonymization.Anonymizers
 
         public void AddDICOMObject(DICOMObject d)
         {
-            IDICOMElement id = d.FindFirst(TagHelper.Study​ID.CompleteID);
+            var id = d.FindFirst(TagHelper.Study​ID.CompleteID);
             if (id != null)
             {
-                string studyID = (id as ShortString).Data;
-                DICOMFileType type = GetFileType(d);
+                var studyID = (id as ShortString).Data;
+                var type = GetFileType(d);
                 if (!Studies.Exists(s => s.ID == studyID))
                 {
-                    DICOMStudy study = new DICOMStudy();
+                    var study = new DICOMStudy();
                     study.ID = studyID;
                     study.Type = type;
-                    Date dt = d.FindFirst(TagHelper.Study​Date.CompleteID) as Date;
+                    var dt = d.FindFirst(TagHelper.Study​Date.CompleteID) as Date;
                     study.Date = dt.Data;
                     Studies.Add(study);
                 }
             }
         }
 
-        public void Anonymize(DICOMObject d)
-        {
-            EvilLogger.Instance.Log("Removing study IDs and descriptions...");
-            ShortString sID = d.FindFirst(TagHelper.Study​ID) as ShortString;
-            if (sID != null)
-            {
-                sID.Data = StudyDictionary[sID.Data];
-            }
-            LongString desc = d.FindFirst(TagHelper.Study​Description) as LongString;
-            if (desc != null)
-            {
-                desc.Data = string.Empty;
-            }
-        }
-
         public static DICOMFileType GetFileType(DICOMObject d)
         {
-            IDICOMElement el = d.FindFirst(TagHelper.SOP​Class​UID.CompleteID);
+            var el = d.FindFirst(TagHelper.SOP​Class​UID.CompleteID);
             if (el != null)
             {
-                UniqueIdentifier ui = el as UniqueIdentifier;
+                var ui = el as UniqueIdentifier;
                 switch (ui.Data)
                 {
                     case "1.2.840.10008.5.1.4.1.1.481.1": return DICOMFileType.RT_IMAGE;
@@ -135,11 +139,6 @@ namespace EvilDICOM.Anonymization.Anonymizers
                 }
             }
             return DICOMFileType.OTHER;
-        }
-
-        public string Name
-        {
-            get { return "Study Id Anonymizer"; }
         }
     }
 

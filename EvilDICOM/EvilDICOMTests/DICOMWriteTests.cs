@@ -13,18 +13,9 @@ namespace EvilDICOM.Core.Tests
     public class DICOMWriteTests
     {
         [TestMethod]
-        public void WriteLittleEndian()
-        {
-            var dcm = DICOMFileReader.Read(Resources.explicitLittleEndian);
-
-            //Writing a file out
-            DICOMFileWriter.WriteLittleEndian("myPath.dcm", dcm);
-        }
-
-        [TestMethod]
         public void WriteMultipleFl()
         {
-            var vssd = DICOMForge.VirtualSourceAxisDistances;
+            var vssd = DICOMForge.VirtualSourceAxisDistances();
             vssd.Data_ = new System.Collections.Generic.List<float>() { 2538.4199f, 2541.00f };
             byte[] elBytes = null;
             using (var stream = new MemoryStream())

@@ -1,5 +1,9 @@
-﻿using EvilDICOM.Core.Enums;
+﻿#region
+
+using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.IO.Data;
+
+#endregion
 
 namespace EvilDICOM.Core.Element
 {
@@ -25,11 +29,11 @@ namespace EvilDICOM.Core.Element
         /// </summary>
         public override string Data
         {
-            get { return base.DataContainer.SingleValue; }
+            get { return DataContainer.SingleValue; }
             set
             {
-                base.DataContainer = base.DataContainer ?? new DICOMData<string>();
-                base.DataContainer.SingleValue = DataRestriction.EnforceLengthRestriction(50, value);
+                DataContainer = DataContainer ?? new DICOMData<string>();
+                DataContainer.SingleValue = DataRestriction.EnforceLengthRestriction(50, value);
             }
         }
     }

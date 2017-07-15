@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using System.Linq;
 using EvilDICOM.Core;
 using EvilDICOM.Core.Enums;
@@ -8,11 +10,13 @@ using EvilDICOM.Core.Selection;
 using EvilDICOM.Network.Enums;
 using C = EvilDICOM.Network.Enums.CommandField;
 
+#endregion
+
 namespace EvilDICOM.Network.DIMSE
 {
     public class CEchoResponse : AbstractDIMSEResponse, IIOD
     {
-        private ushort _dataSet = 257;
+        private readonly ushort _dataSet = 257;
 
         /// <summary>
         ///     Used to generate a new Echo Response from an Echo Request
@@ -23,12 +27,13 @@ namespace EvilDICOM.Network.DIMSE
         public CEchoResponse(CEchoRequest req, Status status)
         {
             AffectedSOPClassUID = req.AffectedSOPClassUID;
-            CommandField = (ushort)C.C_ECHO_RP;
+            CommandField = (ushort) C.C_ECHO_RP;
             MessageIDBeingRespondedTo = req.MessageID;
             DataSetType = _dataSet;
-            Status = (ushort)status;
-            GroupLength = (uint)GroupWriter.WriteGroupBytes(new DICOMObject(Elements.Skip(1).Take(5).ToList()),
-                new DICOMWriteSettings { TransferSyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN }, "0000").Length;
+            Status = (ushort) status;
+            GroupLength = (uint) GroupWriter.WriteGroupBytes(new DICOMObject(Elements.Skip(1).Take(5).ToList()),
+                    new DICOMWriteSettings {TransferSyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN}, "0000")
+                .Length;
         }
 
         public CEchoResponse(DICOMObject d)
@@ -36,10 +41,9 @@ namespace EvilDICOM.Network.DIMSE
             var sel = new DICOMSelector(d);
             GroupLength = sel.CommandGroupLength.Data;
             if (sel.AffectedSOPClassUID != null)
-            {
                 AffectedSOPClassUID = sel.AffectedSOPClassUID.Data;
-            };
-            CommandField = (ushort)C.C_ECHO_RP;
+            ;
+            CommandField = (ushort) C.C_ECHO_RP;
             MessageIDBeingRespondedTo = sel.MessageIDBeingRespondedTo.Data;
             DataSetType = sel.CommandDataSetType.Data;
             Status = sel.Status.Data;

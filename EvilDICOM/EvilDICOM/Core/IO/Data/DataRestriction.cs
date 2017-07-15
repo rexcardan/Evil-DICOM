@@ -1,7 +1,10 @@
-﻿using System;
+﻿#region
+
 using System.Net;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Logging;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -53,39 +56,32 @@ namespace EvilDICOM.Core.IO.Data
         {
             var encoded = WebUtility.UrlEncode(originalValue.TrimEnd(' '));
             if (encoded != originalValue.TrimEnd(' '))
-            {
                 EvilLogger.Instance.Log(
                     "Not URI compliant data string Original = {0}, URI Encoded = {1}",
                     originalValue, encoded);
-            }
             return encoded;
         }
 
-        public static bool EnforceRealNonZero(double value,string propertyName){
-             if (value == 0 || double.IsNaN(value))
-             {
-                 var msg = string.Format("{0} must be real and non-zero. Current value is {1}", propertyName, value);
-                 EvilLogger.Instance.Log(msg);
-                 return false;
-             }
-             else
-             {
-                 return true;
-             }
-         }
+        public static bool EnforceRealNonZero(double value, string propertyName)
+        {
+            if (value == 0 || double.IsNaN(value))
+            {
+                var msg = string.Format("{0} must be real and non-zero. Current value is {1}", propertyName, value);
+                EvilLogger.Instance.Log(msg);
+                return false;
+            }
+            return true;
+        }
 
-         public static bool EnforceRealNonZero(int value, string propertyName)
-         {
-             if (value == 0)
-             {
-                 var msg = string.Format("{0} must be real and non-zero. Current value is {1}", propertyName, value);
-                 EvilLogger.Instance.Log(msg);
-                 return false;
-             }
-             else
-             {
-                 return true;
-             }
-         }
+        public static bool EnforceRealNonZero(int value, string propertyName)
+        {
+            if (value == 0)
+            {
+                var msg = string.Format("{0} must be real and non-zero. Current value is {1}", propertyName, value);
+                EvilLogger.Instance.Log(msg);
+                return false;
+            }
+            return true;
+        }
     }
 }

@@ -1,6 +1,10 @@
-﻿using EvilDICOM.Core.Element;
+﻿#region
+
+using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Core.Helpers
 {
@@ -150,10 +154,10 @@ namespace EvilDICOM.Core.Helpers
         /// <param name="selector">the transfer syntax to set</param>
         public static void SetSyntax(DICOMObject dicom, TransferSyntax selector)
         {
-            UniqueIdentifier syntax = DICOMForge.Transfer​Syntax​UID();
+            var syntax = DICOMForge.Transfer​Syntax​UID();
             if (syntax != null)
             {
-                string transferSyntax = string.Empty;
+                var transferSyntax = string.Empty;
                 switch (selector)
                 {
                     case TransferSyntax.EXPLICIT_VR_BIG_ENDIAN:

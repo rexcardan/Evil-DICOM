@@ -1,8 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region
+
+using System;
+
+#endregion
 
 namespace EvilDICOM.Core.Helpers
 {
@@ -12,24 +12,6 @@ namespace EvilDICOM.Core.Helpers
     public class Vector3
     {
         private double[] values;
-
-        #region CONSTRUCTORS
-
-        public Vector3(double x = 0, double y = 0, double z = 0)
-        {
-            values = new[] { x, y, z };
-        }
-
-        public Vector3(double[] values)
-        {
-            if (values.Length != 3)
-            {
-                throw new ArgumentException("Must be three dimensions!");
-            }
-            this.values = values;
-        }
-
-        #endregion
 
         #region ACCESSORS
 
@@ -51,10 +33,24 @@ namespace EvilDICOM.Core.Helpers
                 if (index < values.Length)
                     values[index] = value;
                 else
-                {
                     throw new IndexOutOfRangeException("Vector 3 array only has length of 3!");
-                }
             }
+        }
+
+        #endregion
+
+        #region CONSTRUCTORS
+
+        public Vector3(double x = 0, double y = 0, double z = 0)
+        {
+            values = new[] {x, y, z};
+        }
+
+        public Vector3(double[] values)
+        {
+            if (values.Length != 3)
+                throw new ArgumentException("Must be three dimensions!");
+            this.values = values;
         }
 
         #endregion
@@ -114,9 +110,7 @@ namespace EvilDICOM.Core.Helpers
             set
             {
                 if (value.Length != Length)
-                {
                     throw new ArgumentException("Must be three dimensions!");
-                }
                 values = value;
             }
         }
@@ -140,15 +134,15 @@ namespace EvilDICOM.Core.Helpers
         /// <returns>a double representing the magnitude of the vector</returns>
         public double Norm()
         {
-            return System.Math.Sqrt(this * this);
+            return Math.Sqrt(this * this);
         }
 
         public float DistanceTo(Vector3 v)
         {
             return
                 (float)
-                    System.Math.Sqrt(System.Math.Pow((v[0] - this[0]), 2) + System.Math.Pow((v[1] - this[1]), 2) +
-                                     System.Math.Pow((v[2] - this[2]), 2));
+                Math.Sqrt(Math.Pow(v[0] - this[0], 2) + Math.Pow(v[1] - this[1], 2) +
+                          Math.Pow(v[2] - this[2], 2));
         }
 
         public double[] ToArray()
@@ -168,7 +162,8 @@ namespace EvilDICOM.Core.Helpers
         /// <returns>a new vector that is the cross product of the two vectors</returns>
         public Vector3 CrossMultiply(Vector3 v)
         {
-            return new Vector3(this[1] * v[2] - this[2] * v[1], this[2] * v[0] - this[0] * v[2], this[0] * v[1] - this[1] * v[0]);
+            return new Vector3(this[1] * v[2] - this[2] * v[1], this[2] * v[0] - this[0] * v[2],
+                this[0] * v[1] - this[1] * v[0]);
         }
 
         #endregion
@@ -229,8 +224,8 @@ namespace EvilDICOM.Core.Helpers
         {
             if (obj is Vector3)
             {
-                var v = (Vector3)obj;
-                return ReferenceEquals(v, null) ? false : ((v.X == X) && (v.Y == Y) && (v.Z == Z));
+                var v = (Vector3) obj;
+                return ReferenceEquals(v, null) ? false : v.X == X && v.Y == Y && v.Z == Z;
             }
             return false;
         }

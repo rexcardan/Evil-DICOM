@@ -1,4 +1,8 @@
-﻿using System.Text;
+﻿#region
+
+using System.Text;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -8,21 +12,19 @@ namespace EvilDICOM.Core.IO.Data
 
         public static string Read(byte[] data)
         {
-            return _encoder.GetString(data).TrimEnd(new[] {'\0'}).TrimEnd(new[] {' '});
+            return _encoder.GetString(data).TrimEnd('\0').TrimEnd(' ');
         }
 
         public static byte[] Write(string data)
         {
             if (IsEven(data))
-            {
                 return _encoder.GetBytes(data);
-            }
             return PadOddBytes(_encoder, data);
         }
 
         private static bool IsEven(string data)
         {
-            return data.Length%2 == 0;
+            return data.Length % 2 == 0;
         }
 
         private static byte[] PadOddBytes(Encoding ascii, string data)
@@ -34,6 +36,5 @@ namespace EvilDICOM.Core.IO.Data
         {
             _encoder = enc;
         }
-
     }
 }

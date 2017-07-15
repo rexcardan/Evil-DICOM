@@ -1,4 +1,8 @@
-﻿using System;
+﻿#region
+
+using System;
+
+#endregion
 
 namespace EvilDICOM.Core.Helpers
 {
@@ -6,18 +10,16 @@ namespace EvilDICOM.Core.Helpers
     {
         public static int GetSignificantDigitsPostDecimal(double d)
         {
-            double floor = d - Math.Floor(d);
-            int numDecimals = floor.ToString("#.#########").Length - 1;
+            var floor = d - Math.Floor(d);
+            var numDecimals = floor.ToString("#.#########").Length - 1;
             return numDecimals < 0 ? 0 : numDecimals;
         }
 
         public static string BuildDICOMStringFormat(double d)
         {
             if (d == 0)
-            {
                 return "0.0";
-            }
-            int sigDigit = GetSignificantDigitsPostDecimal(d);
+            var sigDigit = GetSignificantDigitsPostDecimal(d);
             switch (sigDigit)
             {
                 case 0:

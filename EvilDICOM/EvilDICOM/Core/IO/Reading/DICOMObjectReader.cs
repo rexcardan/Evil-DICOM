@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Reading
 {
@@ -8,7 +12,7 @@ namespace EvilDICOM.Core.IO.Reading
     {
         public static DICOMObject ReadObject(DICOMBinaryReader dr, TransferSyntax syntax)
         {
-            List<IDICOMElement> elements = DICOMElementReader.ReadAllElements(dr, syntax);
+            var elements = DICOMElementReader.ReadAllElements(dr, syntax);
             return new DICOMObject(elements);
         }
 

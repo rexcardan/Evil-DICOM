@@ -1,11 +1,15 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.IO.Writing;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Interfaces;
 using EvilDICOM.Network.PDUs.Items;
-using EvilDICOM.Core.Helpers;
+
+#endregion
 
 namespace EvilDICOM.Network.PDUs
 {
@@ -25,9 +29,9 @@ namespace EvilDICOM.Network.PDUs
             {
                 using (var dw = new DICOMBinaryWriter(stream))
                 {
-                    dw.Write((byte)PDUType.A_ASSOC_ACCEPT);
+                    dw.Write((byte) PDUType.A_ASSOC_ACCEPT);
                     dw.WriteNullBytes(1); //Reserved Null byte
-                    byte[] body = WriteBody();
+                    var body = WriteBody();
                     LengthWriter.WriteBigEndian(dw, body.Length, 4);
                     dw.Write(body);
                     written = stream.ToArray();
@@ -54,10 +58,8 @@ namespace EvilDICOM.Network.PDUs
                 dw.Write(CallingEntityTitle.PadRight(16));
                 dw.WriteNullBytes(32); //Reserved Null bytes
                 ItemWriter.WriteApplicationContext(dw, ApplicationContext);
-                foreach (PresentationContext pc in PresentationContexts)
-                {
+                foreach (var pc in PresentationContexts)
                     ItemWriter.WritePresentationCtxAcceptType(dw, pc);
-                }
                 ItemWriter.WriteUserInfo(dw, UserInfo);
                 body = stream.ToArray();
             }
@@ -76,10 +78,8 @@ namespace EvilDICOM.Network.PDUs
             sb.AppendLine(string.Format("Protocol Version : {0}", ProtocolVersion));
             sb.AppendLine();
             sb.AppendLine(UserInfo.ToString());
-            foreach (PresentationContext ctx in PresentationContexts)
-            {
+            foreach (var ctx in PresentationContexts)
                 sb.AppendLine(ctx.ToString());
-            }
             sb.AppendLine();
             return sb.ToString();
         }

@@ -1,10 +1,13 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using System.Linq;
-using EvilDICOM.Core.Element;
+using System.Threading.Tasks;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
-using System.Threading.Tasks;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Reading
 {
@@ -23,12 +26,12 @@ namespace EvilDICOM.Core.IO.Reading
         public static DICOMObject Read(string filePath,
             TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
         {
-            TransferSyntax syntax = trySyntax;
+            var syntax = trySyntax;
             List<IDICOMElement> elements;
             using (var dr = new DICOMBinaryReader(filePath))
             {
                 DICOMPreambleReader.Read(dr);
-                List<IDICOMElement> metaElements = ReadFileMetadata(dr, ref syntax);
+                var metaElements = ReadFileMetadata(dr, ref syntax);
                 elements = metaElements.Concat(DICOMElementReader.ReadAllElements(dr, syntax)).ToList();
             }
             return new DICOMObject(elements);
@@ -45,12 +48,12 @@ namespace EvilDICOM.Core.IO.Reading
         {
             return await Task.Run(() =>
             {
-                TransferSyntax syntax = trySyntax;
+                var syntax = trySyntax;
                 List<IDICOMElement> elements;
                 using (var dr = new DICOMBinaryReader(filePath))
                 {
                     DICOMPreambleReader.Read(dr);
-                    List<IDICOMElement> metaElements = ReadFileMetadata(dr, ref syntax);
+                    var metaElements = ReadFileMetadata(dr, ref syntax);
                     elements = metaElements.Concat(DICOMElementReader.ReadAllElements(dr, syntax)).ToList();
                 }
                 return new DICOMObject(elements);
@@ -65,12 +68,12 @@ namespace EvilDICOM.Core.IO.Reading
         public static DICOMObject Read(byte[] fileBytes,
             TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
         {
-            TransferSyntax syntax = trySyntax; //Will keep if metadata doesn't exist
+            var syntax = trySyntax; //Will keep if metadata doesn't exist
             List<IDICOMElement> elements;
             using (var dr = new DICOMBinaryReader(fileBytes))
             {
                 DICOMPreambleReader.Read(dr);
-                List<IDICOMElement> metaElements = ReadFileMetadata(dr, ref syntax);
+                var metaElements = ReadFileMetadata(dr, ref syntax);
                 elements = metaElements.Concat(DICOMElementReader.ReadAllElements(dr, syntax)).ToList();
             }
             return new DICOMObject(elements);
@@ -126,16 +129,14 @@ namespace EvilDICOM.Core.IO.Reading
 
             while (dr.StreamPosition < dr.StreamLength)
             {
-                long position = dr.StreamPosition;
+                var position = dr.StreamPosition;
                 if (TagReader.ReadLittleEndian(dr).Group == _metaGroup)
                 {
                     dr.StreamPosition = position;
-                    IDICOMElement el = DICOMElementReader.ReadElementExplicitLittleEndian(dr);
-                    Tag uid = TagHelper.Transfer​Syntax​UID;
+                    var el = DICOMElementReader.ReadElementExplicitLittleEndian(dr);
+                    var uid = TagHelper.Transfer​Syntax​UID;
                     if (el.Tag == uid)
-                    {
                         syntax = TransferSyntaxHelper.GetSyntax(el);
-                    }
                     elements.Add(el);
                 }
                 else

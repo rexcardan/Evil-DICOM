@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿#region
+
 using System.Net;
 using System.Net.Sockets;
-using System.Text;
-using System.Threading.Tasks;
+
+#endregion
 
 namespace EvilDICOM.Network.Helpers
 {
@@ -13,16 +12,14 @@ namespace EvilDICOM.Network.Helpers
         public static string LocalIPAddress()
         {
             IPHostEntry host;
-            string localIP = "";
+            var localIP = "";
             host = Dns.GetHostEntryAsync(Dns.GetHostName()).Result;
-            foreach (IPAddress ip in host.AddressList)
-            {
+            foreach (var ip in host.AddressList)
                 if (ip.AddressFamily == AddressFamily.InterNetwork)
                 {
                     localIP = ip.ToString();
                     break;
                 }
-            }
             return localIP;
         }
     }

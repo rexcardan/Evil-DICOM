@@ -1,11 +1,10 @@
-﻿using EvilDICOM.Network.DIMSE;
+﻿#region
+
+using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.DIMSE.IOD;
 using EvilDICOM.Network.Enums;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+
+#endregion
 
 namespace EvilDICOM.Network.Helpers
 {

@@ -1,6 +1,10 @@
-﻿using EvilDICOM.Core.Element;
+﻿#region
+
+using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Writing
 {
@@ -22,7 +26,7 @@ namespace EvilDICOM.Core.IO.Writing
             }
             else
             {
-                byte[] itemsBytes = SequenceItemWriter.WriteItemsLittleEndian(settings, s.Items);
+                var itemsBytes = SequenceItemWriter.WriteItemsLittleEndian(settings, s.Items);
                 LengthWriter.Write(dw, VR.Sequence, settings, itemsBytes.Length);
                 dw.Write(itemsBytes);
             }
@@ -31,9 +35,7 @@ namespace EvilDICOM.Core.IO.Writing
         private static void WriteIndefiniteLength(DICOMWriteSettings settings, DICOMBinaryWriter dw)
         {
             if (!(settings.TransferSyntax == TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN))
-            {
                 dw.WriteNullBytes(2);
-            }
             dw.Write(new byte[] {0xFF, 0xFF, 0xFF, 0xFF});
         }
 

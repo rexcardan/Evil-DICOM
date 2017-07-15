@@ -1,10 +1,13 @@
-﻿using EvilDICOM.Core.Enums;
+﻿#region
+
+using System.Linq;
+using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.IO.Data;
 using EvilDICOM.Core.IO.Reading;
-using System.Linq;
-using System;
+
+#endregion
 
 namespace EvilDICOM.Core.Element
 {
@@ -26,7 +29,6 @@ namespace EvilDICOM.Core.Element
         {
             //HANDLE NUMBERS
             if (syntax == TransferSyntax.EXPLICIT_VR_BIG_ENDIAN)
-            {
                 switch (vr)
                 {
                     case VR.AttributeTag:
@@ -44,9 +46,7 @@ namespace EvilDICOM.Core.Element
                     case VR.UnsignedShort:
                         return new UnsignedShort(tag, BigEndianReader.ReadUnsignedShort(data as byte[]));
                 }
-            }
             else
-            {
                 switch (vr)
                 {
                     case VR.AttributeTag:
@@ -64,7 +64,6 @@ namespace EvilDICOM.Core.Element
                     case VR.UnsignedShort:
                         return new UnsignedShort(tag, LittleEndianReader.ReadUnsignedShort(data as byte[]));
                 }
-            }
             //HANDLE ALL OTHERS
             switch (vr)
             {
@@ -90,7 +89,7 @@ namespace EvilDICOM.Core.Element
 
                 //HANDLE BYTE DATA
                 case VR.Sequence:
-                    return new Sequence { Tag = tag, Items = SequenceReader.ReadItems(data as byte[], syntax) };
+                    return new Sequence {Tag = tag, Items = SequenceReader.ReadItems(data as byte[], syntax)};
                 case VR.OtherByteString:
                     return new OtherByteString(tag, data as byte[]);
                 case VR.OtherFloatString:
@@ -154,7 +153,7 @@ namespace EvilDICOM.Core.Element
                 case VR.Time: return new Time(tag, StringDataParser.GetNullableDate(data.First()));
                 //HANDLE BYTE DATA
                 case VR.Sequence:
-                    return new Sequence { Tag = tag, Items = data.Select(d => DICOMObject.FromXML(d)).ToList()};
+                    return new Sequence {Tag = tag, Items = data.Select(d => DICOMObject.FromXML(d)).ToList()};
                 case VR.OtherByteString:
                     return new OtherByteString(tag, ByteHelper.HexStringToByteArray(data.First()));
                 case VR.OtherFloatString:

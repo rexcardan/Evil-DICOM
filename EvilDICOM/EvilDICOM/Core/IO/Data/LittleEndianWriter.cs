@@ -1,6 +1,10 @@
-﻿using System;
+﻿#region
+
+using System;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.IO.Writing;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -42,6 +46,8 @@ namespace EvilDICOM.Core.IO.Data
             return MultiplicityComposer.ComposeMultipleBinary(data, WriteUnsignedShortSingle);
         }
 
+        //Writes a single data element (VM = 1)
+
         #region SINGLE WRITERS
 
         public static byte[] WriteTagSingle(Tag tag)
@@ -80,7 +86,5 @@ namespace EvilDICOM.Core.IO.Data
         }
 
         #endregion
-
-        //Writes a single data element (VM = 1)
     }
 }

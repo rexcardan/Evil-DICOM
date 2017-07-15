@@ -1,64 +1,17 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using System.Linq;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 
+#endregion
+
 namespace EvilDICOM.Core.Modules
 {
     public class FileMetadata : IIOD
     {
-        #region PRIVATE
-
-        private readonly UnsignedLong _groupLength = new UnsignedLong
-        {
-            Tag = TagHelper.File​Meta​Information​Group​Length
-        };
-
-        private readonly UniqueIdentifier _implementationClassUID = new UniqueIdentifier
-        {
-            Tag = TagHelper.Implementation​Class​UID
-        };
-
-        private readonly UniqueIdentifier _implementationVersionName = new UniqueIdentifier
-        {
-            Tag = TagHelper.Implementation​Version​Name
-        };
-
-        private readonly OtherByteString _infoVersion = new OtherByteString
-        {
-            Tag = TagHelper.File​Meta​Information​Version
-        };
-
-        private readonly UniqueIdentifier _mediaStorageSOPClassUID = new UniqueIdentifier
-        {
-            Tag = TagHelper.Media​Storage​SOP​Class​UID
-        };
-
-        private readonly UniqueIdentifier _mediaStorageSOPInstanceUID = new UniqueIdentifier
-        {
-            Tag = TagHelper.Media​Storage​SOP​Instance​UID
-        };
-
-        private readonly OtherByteString _privateInfo = new OtherByteString {Tag = TagHelper.Private​Information};
-
-        private readonly UniqueIdentifier _privateInfoCreatorUID = new UniqueIdentifier
-        {
-            Tag = TagHelper.Private​Information​Creator​UID
-        };
-
-        private readonly ApplicationEntity _sourceAETitle = new ApplicationEntity
-        {
-            Tag = TagHelper.Source​Application​Entity​Title
-        };
-
-        private readonly UniqueIdentifier _transferSyntaxUID = new UniqueIdentifier
-        {
-            Tag = TagHelper.Transfer​Syntax​UID
-        };
-
-        #endregion
-
         public uint GroupLength
         {
             get { return _groupLength.Data; }
@@ -139,5 +92,56 @@ namespace EvilDICOM.Core.Modules
                 };
             }
         }
+
+        #region PRIVATE
+
+        private readonly UnsignedLong _groupLength = new UnsignedLong
+        {
+            Tag = TagHelper.File​Meta​Information​Group​Length
+        };
+
+        private readonly UniqueIdentifier _implementationClassUID = new UniqueIdentifier
+        {
+            Tag = TagHelper.Implementation​Class​UID
+        };
+
+        private readonly UniqueIdentifier _implementationVersionName = new UniqueIdentifier
+        {
+            Tag = TagHelper.Implementation​Version​Name
+        };
+
+        private readonly OtherByteString _infoVersion = new OtherByteString
+        {
+            Tag = TagHelper.File​Meta​Information​Version
+        };
+
+        private readonly UniqueIdentifier _mediaStorageSOPClassUID = new UniqueIdentifier
+        {
+            Tag = TagHelper.Media​Storage​SOP​Class​UID
+        };
+
+        private readonly UniqueIdentifier _mediaStorageSOPInstanceUID = new UniqueIdentifier
+        {
+            Tag = TagHelper.Media​Storage​SOP​Instance​UID
+        };
+
+        private readonly OtherByteString _privateInfo = new OtherByteString {Tag = TagHelper.Private​Information};
+
+        private readonly UniqueIdentifier _privateInfoCreatorUID = new UniqueIdentifier
+        {
+            Tag = TagHelper.Private​Information​Creator​UID
+        };
+
+        private readonly ApplicationEntity _sourceAETitle = new ApplicationEntity
+        {
+            Tag = TagHelper.Source​Application​Entity​Title
+        };
+
+        private readonly UniqueIdentifier _transferSyntaxUID = new UniqueIdentifier
+        {
+            Tag = TagHelper.Transfer​Syntax​UID
+        };
+
+        #endregion
     }
 }

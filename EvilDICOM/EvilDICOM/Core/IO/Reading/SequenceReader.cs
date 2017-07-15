@@ -1,6 +1,10 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Reading
 {
@@ -11,7 +15,7 @@ namespace EvilDICOM.Core.IO.Reading
 
         public static int ReadIndefiniteLengthLittleEndian(DICOMBinaryReader dr, TransferSyntax syntax)
         {
-            long startingPos = dr.StreamPosition;
+            var startingPos = dr.StreamPosition;
             while (!IsEndOfSequenceLittleEndian(dr))
             {
                 dr.StreamPosition -= 8;
@@ -22,7 +26,7 @@ namespace EvilDICOM.Core.IO.Reading
 
         public static int ReadIndefiniteLengthBigEndian(DICOMBinaryReader dr)
         {
-            long startingPos = dr.StreamPosition;
+            var startingPos = dr.StreamPosition;
             while (!IsEndOfSequenceBigEndian(dr))
             {
                 dr.StreamPosition -= 8;
@@ -33,13 +37,13 @@ namespace EvilDICOM.Core.IO.Reading
 
         private static bool IsEndOfSequenceLittleEndian(DICOMBinaryReader dr)
         {
-            byte[] bytes = dr.ReadBytes(8);
+            var bytes = dr.ReadBytes(8);
             return ByteHelper.AreEqual(bytes, _endOfSequence_LE);
         }
 
         private static bool IsEndOfSequenceBigEndian(DICOMBinaryReader dr)
         {
-            byte[] bytes = dr.ReadBytes(8);
+            var bytes = dr.ReadBytes(8);
             return ByteHelper.AreEqual(bytes, _endOfSequence_BE);
         }
 
@@ -56,7 +60,6 @@ namespace EvilDICOM.Core.IO.Reading
             using (var dr = new DICOMBinaryReader(data))
             {
                 while (dr.StreamPosition < dr.StreamLength)
-                {
                     switch (syntax)
                     {
                         case TransferSyntax.EXPLICIT_VR_BIG_ENDIAN:
@@ -66,7 +69,6 @@ namespace EvilDICOM.Core.IO.Reading
                             objects.Add(SequenceItemReader.ReadLittleEndian(dr, syntax));
                             break;
                     }
-                }
             }
             return objects;
         }

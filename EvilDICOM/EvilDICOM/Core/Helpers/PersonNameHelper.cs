@@ -9,7 +9,7 @@
 
         public static string SetFirstName(string data, string name)
         {
-            string[] nameParts = Parse(data);
+            var nameParts = Parse(data);
             nameParts[0] = name;
             return FormatName(nameParts[0], nameParts[1], nameParts[2]);
         }
@@ -21,7 +21,7 @@
 
         public static string SetMiddleName(string data, string name)
         {
-            string[] nameParts = Parse(data);
+            var nameParts = Parse(data);
             nameParts[1] = name;
             return FormatName(nameParts[0], nameParts[1], nameParts[2]);
         }
@@ -33,7 +33,7 @@
 
         public static string SetLastName(string data, string name)
         {
-            string[] nameParts = Parse(data);
+            var nameParts = Parse(data);
             nameParts[2] = name;
             return FormatName(nameParts[0], nameParts[1], nameParts[2]);
         }
@@ -42,10 +42,10 @@
         {
             if (!string.IsNullOrEmpty(unparsedName))
             {
-                string[] nameParts = unparsedName.Split('^');
-                string lastName = nameParts.Length > 0 ? nameParts[0] : string.Empty;
-                string firstName = nameParts.Length > 1 ? nameParts[1] : string.Empty;
-                string middleName = nameParts.Length > 2 ? nameParts[2] : string.Empty;
+                var nameParts = unparsedName.Split('^');
+                var lastName = nameParts.Length > 0 ? nameParts[0] : string.Empty;
+                var firstName = nameParts.Length > 1 ? nameParts[1] : string.Empty;
+                var middleName = nameParts.Length > 2 ? nameParts[2] : string.Empty;
                 return new[] {firstName, middleName, lastName};
             }
             return new[] {string.Empty, string.Empty, string.Empty};

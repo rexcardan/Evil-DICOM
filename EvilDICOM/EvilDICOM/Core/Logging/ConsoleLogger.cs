@@ -1,5 +1,9 @@
-﻿using System;
+﻿#region
+
+using System;
 using EvilDICOM.Core.Enums;
+
+#endregion
 
 namespace EvilDICOM.Core.Logging
 {
@@ -8,8 +12,8 @@ namespace EvilDICOM.Core.Logging
     /// </summary>
     public class ConsoleLogger
     {
+        private readonly ConsoleColor _defaultColor;
         private EventLogger eventLogger;
-        private ConsoleColor _defaultColor;
 
         public ConsoleLogger(EventLogger eventLogger, ConsoleColor color = ConsoleColor.White)
         {

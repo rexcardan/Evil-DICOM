@@ -1,4 +1,8 @@
-﻿using System;
+﻿#region
+
+using System;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -12,9 +16,7 @@ namespace EvilDICOM.Core.IO.Data
         public static byte[] PadNull(byte[] toPad)
         {
             if (toPad != null)
-            {
                 return Pad(toPad, 0x00);
-            }
             return toPad;
         }
 
@@ -47,7 +49,7 @@ namespace EvilDICOM.Core.IO.Data
         /// <returns></returns>
         private static bool IsEven(byte[] toPad)
         {
-            return toPad.Length%2 == 0;
+            return toPad.Length % 2 == 0;
         }
     }
 }

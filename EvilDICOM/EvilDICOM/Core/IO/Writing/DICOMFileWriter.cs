@@ -1,7 +1,9 @@
-﻿using System.IO;
-using EvilDICOM.Core.Enums;
+﻿#region
+
+using System.IO;
 using EvilDICOM.Core.Helpers;
-using EvilDICOM.Core.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Writing
 {

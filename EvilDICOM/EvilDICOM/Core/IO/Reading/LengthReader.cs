@@ -1,7 +1,11 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Linq;
 using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Enums;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Reading
 {
@@ -58,12 +62,12 @@ namespace EvilDICOM.Core.IO.Reading
         /// <returns></returns>
         public static int ReadLittleEndian(VR vr, DICOMBinaryReader dr)
         {
-            int length = 0;
+            var length = 0;
 
             switch (VRDictionary.GetEncodingFromVR(vr))
             {
                 case VREncoding.Implicit:
-                    byte[] byteLength = dr.ReadBytes(4);
+                    var byteLength = dr.ReadBytes(4);
                     length = BitConverter.ToInt32(byteLength, 0);
                     break;
                 case VREncoding.ExplicitLong:

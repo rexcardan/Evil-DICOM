@@ -1,12 +1,13 @@
-﻿using EvilDICOM.Core;
+﻿#region
+
+using System.Collections.Generic;
+using EvilDICOM.Core;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
+#endregion
 
 namespace EvilDICOM.Anonymization.Anonymizers
 {
@@ -19,9 +20,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
         {
             EvilLogger.Instance.Log("Clearing DICOM profile...");
             foreach (var el in GenerateProfile())
-            {
                 d.Replace(el);
-            }
         }
 
         /// <summary>
@@ -31,7 +30,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
         /// <returns></returns>
         public List<IDICOMElement> GenerateProfile()
         {
-            List<IDICOMElement> profile = new List<IDICOMElement>();
+            var profile = new List<IDICOMElement>();
 
             //PATIENT SEX
             profile.Add(GenerateEmptyDICOMString(TagHelper.Patient​Sex));
@@ -113,7 +112,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
 
         private IDICOMElement GenerateZeroDecimalString(Tag tag)
         {
-            DecimalString ds = new DecimalString(tag, new double[] { 0.0 });
+            var ds = new DecimalString(tag, new[] {0.0});
             return ds;
         }
 

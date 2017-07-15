@@ -1,6 +1,10 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections;
 using EvilDICOM.Core.Element;
+
+#endregion
 
 namespace EvilDICOM.Core.Interfaces
 {

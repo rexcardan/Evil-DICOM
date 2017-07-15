@@ -1,8 +1,7 @@
-﻿using System;
+﻿#region
+
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using EvilDICOM.Core;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
@@ -10,6 +9,8 @@ using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.IO.Writing;
 using C = EvilDICOM.Network.Enums.CommandField;
+
+#endregion
 
 namespace EvilDICOM.Network.DIMSE
 {
@@ -22,12 +23,13 @@ namespace EvilDICOM.Network.DIMSE
 
         public CCancel(AbstractDIMSERequest req)
         {
-            this.AffectedSOPClassUID = req.AffectedSOPClassUID;
-            this.MessageIDBeingResponsedTo = req.MessageID;
-            this.DataSetType = 257; // No data
-            this.CommandField = (ushort)C.C_CANCEL;
-            GroupLength = (uint)GroupWriter.WriteGroupBytes(new DICOMObject(Elements.Skip(1).Take(5).ToList()),
-               new DICOMWriteSettings { TransferSyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN }, "0000").Length;
+            AffectedSOPClassUID = req.AffectedSOPClassUID;
+            MessageIDBeingResponsedTo = req.MessageID;
+            DataSetType = 257; // No data
+            CommandField = (ushort) C.C_CANCEL;
+            GroupLength = (uint) GroupWriter.WriteGroupBytes(new DICOMObject(Elements.Skip(1).Take(5).ToList()),
+                    new DICOMWriteSettings {TransferSyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN}, "0000")
+                .Length;
         }
 
         public ushort MessageIDBeingResponsedTo
@@ -36,7 +38,7 @@ namespace EvilDICOM.Network.DIMSE
             set { _messageIdBeingRespondedTo.Data = value; }
         }
 
-        public override List<Core.Interfaces.IDICOMElement> Elements
+        public override List<IDICOMElement> Elements
         {
             get
             {

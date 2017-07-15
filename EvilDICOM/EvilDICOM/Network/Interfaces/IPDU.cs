@@ -1,4 +1,8 @@
-﻿using EvilDICOM.Network.Enums;
+﻿#region
+
+using EvilDICOM.Network.Enums;
+
+#endregion
 
 namespace EvilDICOM.Network.Interfaces
 {

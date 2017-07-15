@@ -1,5 +1,9 @@
-﻿using EvilDICOM.Core.Element;
+﻿#region
+
+using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Writing
 {
@@ -7,14 +11,14 @@ namespace EvilDICOM.Core.IO.Writing
     {
         public static byte[] WriteLittleEndian(Tag tag)
         {
-            byte[] tagBytes = ByteHelper.HexStringToByteArray(tag.CompleteID);
+            var tagBytes = ByteHelper.HexStringToByteArray(tag.CompleteID);
             tagBytes = new[] {tagBytes[1], tagBytes[0], tagBytes[3], tagBytes[2]};
             return tagBytes;
         }
 
         public static void WriteLittleEndian(DICOMBinaryWriter dw, Tag tag)
         {
-            byte[] tagBytes = WriteLittleEndian(tag);
+            var tagBytes = WriteLittleEndian(tag);
             dw.Write(tagBytes);
         }
 
@@ -25,7 +29,7 @@ namespace EvilDICOM.Core.IO.Writing
 
         public static void WriteBigEndian(DICOMBinaryWriter dw, Tag tag)
         {
-            byte[] tagBytes = WriteBigEndian(tag);
+            var tagBytes = WriteBigEndian(tag);
             dw.Write(tagBytes);
         }
     }

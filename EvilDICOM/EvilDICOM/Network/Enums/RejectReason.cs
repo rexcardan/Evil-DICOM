@@ -17,7 +17,7 @@
     public enum RejectReason_SCP_ASCE : byte
     {
         NO_REASON_GIVEN = 1,
-        PROTOCOL_VERSION_NOT_SUPPORTED = 2,
+        PROTOCOL_VERSION_NOT_SUPPORTED = 2
     }
 
     public enum RejectReason_SCP_PRESENTATION : byte

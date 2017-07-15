@@ -1,9 +1,9 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using System.Net.Sockets;
 using EvilDICOM.Core;
-using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.IO.Writing;
 using EvilDICOM.Network.DIMSE;
@@ -11,6 +11,8 @@ using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Extensions;
 using EvilDICOM.Network.PDUs;
 using EvilDICOM.Network.PDUs.Items;
+
+#endregion
 
 namespace EvilDICOM.Network.Messaging
 {
@@ -28,20 +30,20 @@ namespace EvilDICOM.Network.Messaging
                 asc.Logger.Log("--> DIMSE" + dimse.GetLogString());
                 dimse.LogData(asc);
                 var stream = asc.Stream;
-                pContext = pContext ?? asc.PresentationContexts.First(a => a.AbstractSyntax == dimse.AffectedSOPClassUID);
-                List<PDataTF> pds = GetPDataTFs(dimse, pContext, asc.UserInfo.MaxPDULength);
+                pContext =
+                    pContext ?? asc.PresentationContexts.First(a => a.AbstractSyntax == dimse.AffectedSOPClassUID);
+                var pds = GetPDataTFs(dimse, pContext, asc.UserInfo.MaxPDULength);
                 if (pds.Count > 0 && stream.CanWrite)
-                {
-                    foreach (PDataTF pd in pds)
+                    foreach (var pd in pds)
                     {
-                        byte[] message = pd.Write();
+                        var message = pd.Write();
                         stream.Write(message, 0, message.Length);
                     }
-                }
             }
         }
 
-        public static List<PDataTF> GetPDataTFs(AbstractDIMSEBase dimse, PresentationContext pContext, int maxPDULength = 16384)
+        public static List<PDataTF> GetPDataTFs(AbstractDIMSEBase dimse, PresentationContext pContext,
+            int maxPDULength = 16384)
         {
             var list = new List<PDataTF>();
             var commandEls = dimse.Elements;
@@ -50,7 +52,7 @@ namespace EvilDICOM.Network.Messaging
             var dataDIMSE = dimse as AbstractDIMSE;
             if (dataDIMSE != null && dataDIMSE.Data != null)
             {
-                List<byte[]> chunks = GetChunks(dataDIMSE.Data, maxPDULength, pContext);
+                var chunks = GetChunks(dataDIMSE.Data, maxPDULength, pContext);
                 chunks
                     .Select((c, i) => new PDataTF(c, i == chunks.Count - 1, false, pContext))
                     .ToList()
@@ -86,11 +88,11 @@ namespace EvilDICOM.Network.Messaging
             }
 
             var split = new List<byte[]>();
-            int i = 0;
+            var i = 0;
             while (i < dicomBytes.Length)
             {
-                int toTake = dicomBytes.Length >= (maxPduSize - 6) ? maxPduSize - 6 : dicomBytes.Length;
-                byte[] fragment = dicomBytes.Skip(i).Take(toTake).ToArray();
+                var toTake = dicomBytes.Length >= maxPduSize - 6 ? maxPduSize - 6 : dicomBytes.Length;
+                var fragment = dicomBytes.Skip(i).Take(toTake).ToArray();
                 i += fragment.Length;
                 split.Add(fragment);
             }

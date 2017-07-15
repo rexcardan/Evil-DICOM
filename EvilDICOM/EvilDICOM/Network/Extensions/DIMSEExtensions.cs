@@ -1,11 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿#region
+
 using EvilDICOM.Network.DIMSE;
-using EvilDICOM.Network.Enums;
-using EvilDICOM.Core.Helpers;
+
+#endregion
 
 namespace EvilDICOM.Network.Extensions
 {
@@ -19,10 +16,8 @@ namespace EvilDICOM.Network.Extensions
                 if (abd.HasData)
                 {
                     foreach (var el in abd.Data.Elements)
-                    {
                         asc.Logger.Log(el);
-                    }
-                    asc.Logger.Log("");//Space
+                    asc.Logger.Log(""); //Space
                 }
             }
         }
@@ -34,7 +29,7 @@ namespace EvilDICOM.Network.Extensions
         //    .Where(r => r.Data.Elements.Any(e => e.Tag == TagHelper.STUDY_INSTANCE_UID))
         //    .Where(r => !string.IsNullOrEmpty(r.Data.Elements.First(e => e.Tag == TagHelper.STUDY_INSTANCE_UID).DData as string))
         //    .ToList();
-            
+
         //    iods.ForEach(i=>i.QueryLevel = QueryLevel.SERIES);
 
         //    foreach (var iod in iods)

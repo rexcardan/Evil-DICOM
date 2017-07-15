@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Reflection;
-using System.Text;
+﻿#region
+
 using EvilDICOM.Core;
-using EvilDICOM.Core.Element;
-using EvilDICOM.Core.Helpers;
-using EvilDICOM.Core.Interfaces;
-using EvilDICOM.Network.Enums;
 using C = EvilDICOM.Network.Enums.CommandField;
+
+#endregion
 
 namespace EvilDICOM.Network.DIMSE
 {
@@ -29,13 +25,12 @@ namespace EvilDICOM.Network.DIMSE
             set
             {
                 _data = value;
-                DataSetType = value != null ? (ushort)0 : (ushort)257;
+                DataSetType = value != null ? (ushort) 0 : (ushort) 257;
             }
         }
 
 
         //TODO Move this to the association class
         internal int DataPresentationContextId { get; set; }
-
     }
 }

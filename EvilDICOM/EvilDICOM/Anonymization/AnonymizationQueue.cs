@@ -1,11 +1,11 @@
-﻿using System;
+﻿#region
+
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using EvilDICOM.Core;
-using EvilDICOM.Anonymization.Settings;
 using EvilDICOM.Anonymization.Anonymizers;
+using EvilDICOM.Anonymization.Settings;
+using EvilDICOM.Core;
+
+#endregion
 
 namespace EvilDICOM.Anonymization
 {
@@ -14,10 +14,18 @@ namespace EvilDICOM.Anonymization
     /// </summary>
     public class AnonymizationQueue
     {
+        //PROGRESS REPORTING (for UI)
+        public delegate void ProgressUpdatedHandler(double progress);
+
         public AnonymizationQueue()
         {
             Queue = new List<IAnonymizer>();
         }
+
+        /// <summary>
+        /// The current list of anonymization settings
+        /// </summary>
+        public List<IAnonymizer> Queue { get; set; }
 
         public static AnonymizationQueue BuildQueue(AnonymizationSettings settings, IEnumerable<string> dcmFiles)
         {
@@ -25,20 +33,24 @@ namespace EvilDICOM.Anonymization
 
             if (settings.DoAnonymizeStudyIDs || settings.DoAnonymizeUIDs)
             {
-                StudyIdAnonymizer studyAnon = settings.DoAnonymizeStudyIDs ? new StudyIdAnonymizer() : null;
-                UIDAnonymizer uidAnon = settings.DoAnonymizeUIDs ? new UIDAnonymizer() : null;
+                var studyAnon = settings.DoAnonymizeStudyIDs ? new StudyIdAnonymizer() : null;
+                var uidAnon = settings.DoAnonymizeUIDs ? new UIDAnonymizer() : null;
                 foreach (var file in dcmFiles)
                 {
                     var ob = DICOMObject.Read(file);
                     if (uidAnon != null) uidAnon.AddDICOMObject(ob);
                     if (studyAnon != null) studyAnon.AddDICOMObject(ob);
                 }
-                if (studyAnon != null) { studyAnon.FinalizeDictionary(); anonQue.Queue.Add(studyAnon); }
-                if (uidAnon != null) { anonQue.Queue.Add(uidAnon); }
+                if (studyAnon != null)
+                {
+                    studyAnon.FinalizeDictionary();
+                    anonQue.Queue.Add(studyAnon);
+                }
+                if (uidAnon != null) anonQue.Queue.Add(uidAnon);
             }
-            if (settings.DoAnonymizeNames) { anonQue.Queue.Add(new NameAnonymizer()); }
-            if (settings.DoRemovePrivateTags) { anonQue.Queue.Add(new PrivateTagAnonymizer()); }
-            if (settings.DoDICOMProfile) { anonQue.Queue.Add(new ProfileAnonymizer()); }
+            if (settings.DoAnonymizeNames) anonQue.Queue.Add(new NameAnonymizer());
+            if (settings.DoRemovePrivateTags) anonQue.Queue.Add(new PrivateTagAnonymizer());
+            if (settings.DoDICOMProfile) anonQue.Queue.Add(new ProfileAnonymizer());
             anonQue.Queue.Add(new PatientIdAnonymizer(settings.FirstName, settings.LastName, settings.Id));
             anonQue.Queue.Add(new DateAnonymizer(settings.DateSettings));
             return anonQue;
@@ -60,7 +72,7 @@ namespace EvilDICOM.Anonymization
         /// <param name="dcm">the DICOM object (file) to be anonymized</param>
         public void Anonymize(DICOMObject dcm)
         {
-            int i = 1;
+            var i = 1;
             foreach (var anony in Queue)
             {
                 anony.Anonymize(dcm);
@@ -70,11 +82,6 @@ namespace EvilDICOM.Anonymization
         }
 
         /// <summary>
-        /// The current list of anonymization settings
-        /// </summary>
-        public List<IAnonymizer> Queue { get; set; }
-
-        /// <summary>
         /// Calculates a value for a progress update
         /// </summary>
         /// <param name="i"></param>
@@ -82,11 +89,8 @@ namespace EvilDICOM.Anonymization
         /// <returns></returns>
         private double CalculateProgress(int i, int totalOperations)
         {
-            return (int)((double)i / (double)(totalOperations) * 100);
+            return (int) (i / (double) totalOperations * 100);
         }
-
-        //PROGRESS REPORTING (for UI)
-        public delegate void ProgressUpdatedHandler(double progress);
 
         /// <summary>
         /// Reports a double value of the current progress from 0 to 100
@@ -96,9 +100,7 @@ namespace EvilDICOM.Anonymization
         public void RaiseProgressUpdated(double progress)
         {
             if (ProgressUpdated != null)
-            {
                 ProgressUpdated(progress);
-            }
         }
     }
 }

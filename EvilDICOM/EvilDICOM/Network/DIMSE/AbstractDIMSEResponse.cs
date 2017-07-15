@@ -1,4 +1,5 @@
-﻿using System;
+﻿#region
+
 using System.Collections.Generic;
 using EvilDICOM.Core;
 using EvilDICOM.Core.Element;
@@ -6,6 +7,8 @@ using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Selection;
 using EvilDICOM.Network.Enums;
+
+#endregion
 
 namespace EvilDICOM.Network.DIMSE
 {
@@ -27,9 +30,8 @@ namespace EvilDICOM.Network.DIMSE
             var sel = new DICOMSelector(d);
             GroupLength = sel.CommandGroupLength.Data;
             if (sel.AffectedSOPClassUID != null)
-            {
                 AffectedSOPClassUID = sel.AffectedSOPClassUID.Data;
-            };
+            ;
             MessageIDBeingRespondedTo = sel.MessageIDBeingRespondedTo.Data;
             DataSetType = sel.CommandDataSetType.Data;
             Status = sel.Status.Data;

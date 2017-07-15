@@ -1,5 +1,9 @@
-﻿using EvilDICOM.Network.Enums;
+﻿#region
+
+using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Network.PDUs
 {

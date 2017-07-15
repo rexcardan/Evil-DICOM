@@ -1,11 +1,14 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using EvilDICOM.Core;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Selection;
 using C = EvilDICOM.Network.Enums.CommandField;
-using EvilDICOM.Network.Enums;
+
+#endregion
 
 namespace EvilDICOM.Network.DIMSE
 {
@@ -26,11 +29,11 @@ namespace EvilDICOM.Network.DIMSE
             Tag = TagHelper.MoveOriginatorMessageID
         };
 
-        private readonly UnsignedShort _priority = new UnsignedShort { Tag = TagHelper.Priority };
+        private readonly UnsignedShort _priority = new UnsignedShort {Tag = TagHelper.Priority};
 
         public CStoreRequest()
         {
-            CommandField = (ushort)C.C_STORE_RQ;
+            CommandField = (ushort) C.C_STORE_RQ;
         }
 
         public CStoreRequest(DICOMObject d)
@@ -46,7 +49,31 @@ namespace EvilDICOM.Network.DIMSE
             MoveOrigAETitle = sel.MoveOriginatorApplicationEntityTitle != null
                 ? sel.MoveOriginatorApplicationEntityTitle.Data
                 : "";
-            MoveOrigMessageID = sel.MoveOriginatorMessageID != null ? sel.MoveOriginatorMessageID.Data : default(ushort);
+            MoveOrigMessageID = sel.MoveOriginatorMessageID != null
+                ? sel.MoveOriginatorMessageID.Data
+                : default(ushort);
+        }
+
+        /// <summary>
+        ///     The order of elements to send in a IIOD packet
+        /// </summary>
+        public override List<IDICOMElement> Elements
+        {
+            get
+            {
+                return new List<IDICOMElement>
+                {
+                    _groupLength,
+                    _affectedSOPClassUID,
+                    _commandField,
+                    _messageId,
+                    _priority,
+                    _dataSetType,
+                    _affectedSOPInstanceUID,
+                    _moveOrigAETitle,
+                    _moveOrigMessageID
+                };
+            }
         }
 
 
@@ -77,27 +104,5 @@ namespace EvilDICOM.Network.DIMSE
         }
 
         #endregion
-
-        /// <summary>
-        ///     The order of elements to send in a IIOD packet
-        /// </summary>
-        public override List<IDICOMElement> Elements
-        {
-            get
-            {
-                return new List<IDICOMElement>
-                {
-                    _groupLength,
-                    _affectedSOPClassUID,
-                    _commandField,
-                    _messageId,
-                    _priority,
-                    _dataSetType,
-                    _affectedSOPInstanceUID,
-                    _moveOrigAETitle,
-                    _moveOrigMessageID
-                };
-            }
-        }
     }
 }

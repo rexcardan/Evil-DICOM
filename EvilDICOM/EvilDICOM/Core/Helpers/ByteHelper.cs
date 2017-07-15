@@ -1,5 +1,8 @@
-﻿using System;
+﻿#region
+
 using System.Text;
+
+#endregion
 
 namespace EvilDICOM.Core.Helpers
 {
@@ -13,9 +16,9 @@ namespace EvilDICOM.Core.Helpers
         public static string ByteArrayToHexString(byte[] Bytes)
         {
             var Result = new StringBuilder();
-            string HexAlphabet = "0123456789ABCDEF";
+            var HexAlphabet = "0123456789ABCDEF";
 
-            foreach (byte B in Bytes)
+            foreach (var B in Bytes)
             {
                 Result.Append(HexAlphabet[B >> 4]);
                 Result.Append(HexAlphabet[B & 0xF]);
@@ -32,7 +35,7 @@ namespace EvilDICOM.Core.Helpers
         public static string ByteToHexString(byte b)
         {
             var Result = new StringBuilder();
-            string HexAlphabet = "0123456789ABCDEF";
+            var HexAlphabet = "0123456789ABCDEF";
             Result.Append(HexAlphabet[b >> 4]);
             Result.Append(HexAlphabet[b & 0xF]);
             return Result.ToString();
@@ -45,7 +48,7 @@ namespace EvilDICOM.Core.Helpers
         /// <returns>an array of bytes representing the hexadecimal string passed in</returns>
         public static byte[] HexStringToByteArray(string hexString)
         {
-            var Bytes = new byte[hexString.Length/2];
+            var Bytes = new byte[hexString.Length / 2];
             int[] HexValue =
             {
                 0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07, 0x08, 0x09,
@@ -54,10 +57,8 @@ namespace EvilDICOM.Core.Helpers
             };
 
             for (int x = 0, i = 0; i < hexString.Length; i += 2, x += 1)
-            {
-                Bytes[x] = (byte) (HexValue[Char.ToUpper(hexString[i + 0]) - '0'] << 4 |
-                                   HexValue[Char.ToUpper(hexString[i + 1]) - '0']);
-            }
+                Bytes[x] = (byte) ((HexValue[char.ToUpper(hexString[i + 0]) - '0'] << 4) |
+                                   HexValue[char.ToUpper(hexString[i + 1]) - '0']);
 
             return Bytes;
         }
@@ -65,10 +66,8 @@ namespace EvilDICOM.Core.Helpers
         public static string[] GetHexStringArray(byte[] bytes)
         {
             var hexArray = new string[bytes.Length];
-            for (int i = 0; i < bytes.Length; i++)
-            {
+            for (var i = 0; i < bytes.Length; i++)
                 hexArray[i] = ByteArrayToHexString(new[] {bytes[i]});
-            }
             return hexArray;
         }
 
@@ -79,8 +78,8 @@ namespace EvilDICOM.Core.Helpers
             fixed (byte* p1 = bytes, p2 = toCompare)
             {
                 byte* x1 = p1, x2 = p2;
-                int l = bytes.Length;
-                for (int i = 0; i < l/8; i++, x1 += 8, x2 += 8)
+                var l = bytes.Length;
+                for (var i = 0; i < l / 8; i++, x1 += 8, x2 += 8)
                     if (*((long*) x1) != *((long*) x2)) return false;
                 if ((l & 4) != 0)
                 {

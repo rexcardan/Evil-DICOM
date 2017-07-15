@@ -1,8 +1,12 @@
-﻿using System;
+﻿#region
+
+using System;
 using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Logging;
+
+#endregion
 
 namespace EvilDICOM.Core.Element
 {
@@ -35,16 +39,16 @@ namespace EvilDICOM.Core.Element
         /// <returns>whether or not the read was successfull</returns>
         public bool TryReadAs<T>(out T outValue) where T : IDICOMElement
         {
-            VR vr = VRDictionary.GetVRFromType(typeof (T));
+            var vr = VRDictionary.GetVRFromType(typeof(T));
             try
             {
-                IDICOMElement el = ElementFactory.GenerateElement(Tag, vr, Data_.ToArray(), TransferSyntax);
+                var el = ElementFactory.GenerateElement(Tag, vr, Data_.ToArray(), TransferSyntax);
                 outValue = (T) el;
                 return true;
             }
             catch (Exception e)
             {
-                EvilLogger.Instance.Log("Couldn't cast unknown type as type {0} for {1}", LogPriority.ERROR, typeof (T),
+                EvilLogger.Instance.Log("Couldn't cast unknown type as type {0} for {1}", LogPriority.ERROR, typeof(T),
                     Tag);
                 outValue = default(T);
                 return false;

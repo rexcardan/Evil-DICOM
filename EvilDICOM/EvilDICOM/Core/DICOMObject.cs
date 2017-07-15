@@ -1,8 +1,11 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using System.Globalization;
 using System.IO;
 using System.Linq;
+using System.Threading.Tasks;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Extensions;
@@ -12,7 +15,8 @@ using EvilDICOM.Core.IO.Reading;
 using EvilDICOM.Core.IO.Writing;
 using EvilDICOM.Core.Selection;
 using DateTime = System.DateTime;
-using System.Threading.Tasks;
+
+#endregion
 
 namespace EvilDICOM.Core
 {
@@ -59,24 +63,38 @@ namespace EvilDICOM.Core
             get
             {
                 var allElements = new List<IDICOMElement>();
-                foreach (IDICOMElement elem in Elements)
+                foreach (var elem in Elements)
                 {
                     allElements.Add(elem);
                     if (elem is Sequence)
                     {
                         var s = elem as Sequence;
-                        foreach (DICOMObject d in s.Items)
-                        {
-                            foreach (IDICOMElement elem2 in d.AllElements)
-                            {
-                                allElements.Add(elem2);
-                            }
-                        }
+                        foreach (var d in s.Items)
+                        foreach (var elem2 in d.AllElements)
+                            allElements.Add(elem2);
                     }
                 }
                 return allElements;
             }
         }
+
+        #region IMAGE PROPERTIES
+
+        /// <summary>
+        ///     Grabs the pixel data bytes and sends it as a stream. Returns null if no pixel data element is found.
+        /// </summary>
+        public Stream PixelStream
+        {
+            get
+            {
+                var pixelData = FindFirst(TagHelper.Pixel​Data) as AbstractElement<byte>;
+                if (pixelData != null)
+                    return new MemoryStream(pixelData.DataContainer.MultipicityValue.ToArray());
+                return null;
+            }
+        }
+
+        #endregion
 
         /// <summary>
         ///     Adds an element to the DICOM object
@@ -100,18 +118,12 @@ namespace EvilDICOM.Core
         {
             var found = FindFirst(tagToFind) as AbstractElement<T>;
             if (found != null)
-            {
                 return found.DataContainer;
-            }
             var data = new DICOMData<T>();
             if (typeof(T).IsArray)
-            {
-                data.MultipicityValue = ((T[])defaultValueIfNull).ToList();
-            }
+                data.MultipicityValue = ((T[]) defaultValueIfNull).ToList();
             else
-            {
-                data.SingleValue = (T)defaultValueIfNull;
-            }
+                data.SingleValue = (T) defaultValueIfNull;
             return data;
         }
 
@@ -178,11 +190,12 @@ namespace EvilDICOM.Core
                 .Select(u =>
                 {
                     T t;
-                    bool success = u.TryReadAs(out t);
-                    return new { success, t };
-                }).
-                Where(u => u.success)
-                .Select(u => u.t).ToList();
+                    var success = u.TryReadAs(out t);
+                    return new {success, t};
+                })
+                .Where(u => u.success)
+                .Select(u => u.t)
+                .ToList();
         }
 
         /// <summary>
@@ -204,10 +217,10 @@ namespace EvilDICOM.Core
         /// <returns>a list of all elements that are strongly typed</returns>
         public List<T> FindAll<T>()
         {
-            Type t = typeof(T);
+            var t = typeof(T);
             return
                 AllElements.Where(el => el is T)
-                    .Select(el => (T)Convert.ChangeType(el, t, CultureInfo.CurrentCulture))
+                    .Select(el => (T) Convert.ChangeType(el, t, CultureInfo.CurrentCulture))
                     .ToList();
         }
 
@@ -246,21 +259,17 @@ namespace EvilDICOM.Core
             var matches = new List<IDICOMElement>();
             if (descendingTags.Length > 1)
             {
-                string[] newDescTags = ArrayHelper.Pop(descendingTags);
-                List<IDICOMElement> sequences =
+                var newDescTags = ArrayHelper.Pop(descendingTags);
+                var sequences =
                     AllElements.Where(e => e.IsVR(VR.Sequence))
                         .Where(el => el.Tag.CompleteID == descendingTags[0])
                         .ToList();
-                foreach (IDICOMElement seq in sequences)
+                foreach (var seq in sequences)
                 {
                     var s = seq as Sequence;
-                    foreach (DICOMObject d in s.Items)
-                    {
-                        foreach (IDICOMElement el in d.FindAll(newDescTags))
-                        {
-                            matches.Add(el);
-                        }
-                    }
+                    foreach (var d in s.Items)
+                    foreach (var el in d.FindAll(newDescTags))
+                        matches.Add(el);
                 }
             }
             else
@@ -283,7 +292,7 @@ namespace EvilDICOM.Core
         /// <returns>a list of all elements that meet the search criteria</returns>
         public List<IDICOMElement> FindAll(Tag[] descendingTags)
         {
-            string[] strings = descendingTags.Select(t => t.CompleteID).ToArray();
+            var strings = descendingTags.Select(t => t.CompleteID).ToArray();
             return FindAll(strings);
         }
 
@@ -294,7 +303,7 @@ namespace EvilDICOM.Core
         /// <returns>one single DICOM element that is first occurence of the tag in the structure</returns>
         public IDICOMElement FindFirst(string toFind)
         {
-            IDICOMElement found = AllElements.FirstOrDefault(el => el.Tag.CompleteID == toFind);
+            var found = AllElements.FirstOrDefault(el => el.Tag.CompleteID == toFind);
             return found;
         }
 
@@ -315,17 +324,13 @@ namespace EvilDICOM.Core
         public void Remove(string tag)
         {
             Elements.RemoveAll(el => el.Tag.CompleteID == tag);
-            foreach (IDICOMElement elem in Elements)
-            {
+            foreach (var elem in Elements)
                 if (elem is Sequence)
                 {
                     var s = elem as Sequence;
-                    foreach (DICOMObject d in s.Items)
-                    {
+                    foreach (var d in s.Items)
                         d.Remove(tag);
-                    }
                 }
-            }
         }
 
         /// <summary>
@@ -346,7 +351,7 @@ namespace EvilDICOM.Core
         /// <returns>bool indicating whether or not the element was replaced</returns>
         private bool Replace<T>(AbstractElement<T> element)
         {
-            if (element.Tag == null) { return false; }
+            if (element.Tag == null) return false;
             var toReplace = FindFirst(element.Tag) as AbstractElement<T>;
             if (toReplace == null) return false;
             toReplace.DataContainer = element.DataContainer;
@@ -360,7 +365,7 @@ namespace EvilDICOM.Core
         /// <returns>whether or not the operation was successful</returns>
         public bool Replace(IDICOMElement el)
         {
-            IDICOMElement toReplace = FindFirst(el.Tag);
+            var toReplace = FindFirst(el.Tag);
             if (toReplace == null) return false;
             toReplace.DData_ = el.DData_;
             return true;
@@ -375,15 +380,22 @@ namespace EvilDICOM.Core
         public void ReplaceOrAdd<T>(AbstractElement<T> element)
         {
             if (!Replace(element))
-            {
                 Add(element);
-            }
         }
 
         public override string ToString()
         {
-            return string.Format("DICOM Object [{0}] : {1} Elements", this.SOPClass.ToString(), Elements.Count);
+            return string.Format("DICOM Object [{0}] : {1} Elements", SOPClass, Elements.Count);
         }
+
+        #region GET SELECTOR
+
+        public DICOMSelector GetSelector()
+        {
+            return new DICOMSelector(this);
+        }
+
+        #endregion
 
         #region REPLACE OR ADD OVERLOADS
 
@@ -450,35 +462,6 @@ namespace EvilDICOM.Core
         public void ReplaceOrAdd(AbstractElement<DateTime?> element)
         {
             ReplaceOrAdd<DateTime?>(element);
-        }
-
-        #endregion
-
-        #region IMAGE PROPERTIES
-
-        /// <summary>
-        ///     Grabs the pixel data bytes and sends it as a stream. Returns null if no pixel data element is found.
-        /// </summary>
-        public Stream PixelStream
-        {
-            get
-            {
-                var pixelData = FindFirst(TagHelper.Pixel​Data) as AbstractElement<byte>;
-                if (pixelData != null)
-                {
-                    return new MemoryStream(pixelData.DataContainer.MultipicityValue.ToArray());
-                }
-                return null;
-            }
-        }
-
-        #endregion
-
-        #region GET SELECTOR
-
-        public DICOMSelector GetSelector()
-        {
-            return new DICOMSelector(this);
         }
 
         #endregion
@@ -553,9 +536,7 @@ namespace EvilDICOM.Core
             //If image is compressed, lets not change the transfer syntax UID (so image will not be read incorrectly)
             var setSyntax = GetSelector().TransferSyntaxUID?.Data;
             if (setSyntax != null && TransferSyntaxHelper.IsCompressedImage(setSyntax))
-            {
                 settings.TransferSyntax = TransferSyntaxHelper.GetSyntax(setSyntax);
-            }
             DICOMFileWriter.Write(file, settings, this);
         }
 

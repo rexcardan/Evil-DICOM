@@ -1,7 +1,11 @@
-﻿using EvilDICOM.Core.Dictionaries;
+﻿#region
+
+using System;
+using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.IO.Data;
-using System;
+
+#endregion
 
 namespace EvilDICOM.Core.Element
 {
@@ -39,7 +43,7 @@ namespace EvilDICOM.Core.Element
             get { return Group + Element; }
             set
             {
-                string completeID = DataRestriction.EnforceLengthRestriction(8, value);
+                var completeID = DataRestriction.EnforceLengthRestriction(8, value);
                 Group = completeID.Substring(0, 4);
                 Element = completeID.Substring(4, 4);
             }
@@ -54,7 +58,7 @@ namespace EvilDICOM.Core.Element
         {
             var groupBytes = ByteHelper.HexStringToByteArray(Group);
             Array.Reverse(groupBytes);
-            var val = BitConverter.ToInt16(groupBytes,0);
+            var val = BitConverter.ToInt16(groupBytes, 0);
             return val % 2 != 0; //Odd group
         }
 
@@ -64,9 +68,7 @@ namespace EvilDICOM.Core.Element
         {
             var tag = obj as Tag;
             if ((object) tag != null)
-            {
                 return tag.CompleteID == CompleteID;
-            }
             return false;
         }
 

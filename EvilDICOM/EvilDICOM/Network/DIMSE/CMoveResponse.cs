@@ -1,4 +1,6 @@
-﻿using System.Collections.Generic;
+﻿#region
+
+using System.Collections.Generic;
 using EvilDICOM.Core;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
@@ -6,6 +8,8 @@ using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Selection;
 using EvilDICOM.Network.Enums;
 using C = EvilDICOM.Network.Enums.CommandField;
+
+#endregion
 
 namespace EvilDICOM.Network.DIMSE
 {

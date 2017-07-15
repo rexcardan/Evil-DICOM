@@ -1,5 +1,9 @@
+#region
+
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Writing
 {
@@ -10,16 +14,17 @@ namespace EvilDICOM.Core.IO.Writing
             return el.Tag.Group == "0002";
         }
 
-        public static void Write(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d, bool isSequenceItem = false)
+        public static void Write(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d,
+            bool isSequenceItem = false)
         {
-            for (int i = 0; i < d.Elements.Count; i++)
+            for (var i = 0; i < d.Elements.Count; i++)
             {
-                IDICOMElement el = d.Elements[i];
+                var el = d.Elements[i];
                 if (!isSequenceItem) TransferSyntaxHelper.SetSyntax(d, settings.TransferSyntax);
-                DICOMWriteSettings currentSettings = IsFileMetaGroup(el) ? settings.GetFileMetaSettings() : settings;
+                var currentSettings = IsFileMetaGroup(el) ? settings.GetFileMetaSettings() : settings;
                 if (GroupWriter.IsGroupHeader(el))
                 {
-                    int skip = GroupWriter.WriteGroup(dw, currentSettings, d, el);
+                    var skip = GroupWriter.WriteGroup(dw, currentSettings, d, el);
                     i += skip;
                 }
                 else
@@ -36,15 +41,16 @@ namespace EvilDICOM.Core.IO.Writing
         /// <param name="settings"></param>
         /// <param name="d"></param>
         /// <param name="isSequenceItem"></param>
-        public static void WriteSameSyntax(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d, bool isSequenceItem = false)
+        public static void WriteSameSyntax(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d,
+            bool isSequenceItem = false)
         {
-            for (int i = 0; i < d.Elements.Count; i++)
+            for (var i = 0; i < d.Elements.Count; i++)
             {
-                IDICOMElement el = d.Elements[i];
+                var el = d.Elements[i];
                 if (!isSequenceItem) TransferSyntaxHelper.SetSyntax(d, settings.TransferSyntax);
                 if (GroupWriter.IsGroupHeader(el))
                 {
-                    int skip = GroupWriter.WriteGroup(dw, settings, d, el);
+                    var skip = GroupWriter.WriteGroup(dw, settings, d, el);
                     i += skip;
                 }
                 else

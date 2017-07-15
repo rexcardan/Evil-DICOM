@@ -1,4 +1,8 @@
-﻿using EvilDICOM.Core.Enums;
+﻿#region
+
+using EvilDICOM.Core.Enums;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Reading
 {
@@ -16,11 +20,9 @@ namespace EvilDICOM.Core.IO.Reading
         public static byte[] ReadLittleEndian(int lengthToRead, DICOMBinaryReader dr, TransferSyntax syntax)
         {
             if (lengthToRead != -1)
-            {
                 return dr.ReadBytes(lengthToRead);
-            }
-            int length = SequenceReader.ReadIndefiniteLengthLittleEndian(dr, syntax);
-            byte[] seqBytes = dr.ReadBytes(length);
+            var length = SequenceReader.ReadIndefiniteLengthLittleEndian(dr, syntax);
+            var seqBytes = dr.ReadBytes(length);
             dr.Skip(8);
             return seqBytes;
         }
@@ -34,11 +36,9 @@ namespace EvilDICOM.Core.IO.Reading
         public static byte[] ReadBigEndian(int lengthToRead, DICOMBinaryReader dr)
         {
             if (lengthToRead != -1)
-            {
                 return dr.ReadBytes(lengthToRead);
-            }
-            int length = SequenceReader.ReadIndefiniteLengthBigEndian(dr);
-            byte[] seqBytes = dr.ReadBytes(length);
+            var length = SequenceReader.ReadIndefiniteLengthBigEndian(dr);
+            var seqBytes = dr.ReadBytes(length);
             dr.Skip(8);
             return seqBytes;
         }

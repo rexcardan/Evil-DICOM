@@ -1,4 +1,6 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Collections.Generic;
 using System.IO;
 using EvilDICOM.Core;
@@ -9,7 +11,8 @@ using EvilDICOM.Core.IO.Reading;
 using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.PDUs;
-using EvilDICOM.Network.PDUs.Items;
+
+#endregion
 
 namespace EvilDICOM.Network.Readers
 {
@@ -19,7 +22,7 @@ namespace EvilDICOM.Network.Readers
             TransferSyntax syntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
         {
             long bytesRead;
-            DICOMObject dMessage = DICOMObjectReader.ReadObject(dimse,
+            var dMessage = DICOMObjectReader.ReadObject(dimse,
                 syntax, out bytesRead);
             return dMessage;
         }
@@ -34,13 +37,9 @@ namespace EvilDICOM.Network.Readers
             var merged = new byte[0];
             using (var stream = new MemoryStream())
             {
-                foreach (PDataTF d in data)
-                {
-                    foreach (PDVItem item in d.Items)
-                    {
-                        stream.Write(item.Fragment.Data, 0, item.Fragment.Data.Length);
-                    }
-                }
+                foreach (var d in data)
+                foreach (var item in d.Items)
+                    stream.Write(item.Fragment.Data, 0, item.Fragment.Data.Length);
                 merged = stream.ToArray();
             }
             return merged;
@@ -49,8 +48,8 @@ namespace EvilDICOM.Network.Readers
         public static bool TryReadDIMSE(DICOMObject dcm, out AbstractDIMSE dimse)
         {
             dimse = null;
-            var command = (dcm.FindFirst(TagHelper.CommandField) as UnsignedShort);
-            uint? commandField = command != null ? (uint?) command.Data : null;
+            var command = dcm.FindFirst(TagHelper.CommandField) as UnsignedShort;
+            var commandField = command != null ? (uint?) command.Data : null;
             if (commandField != null)
             {
                 switch (commandField)
@@ -88,13 +87,13 @@ namespace EvilDICOM.Network.Readers
         //TODO Merge these methods
         private static T ReadDIMSERequest<T>(DICOMObject dcm) where T : AbstractDIMSERequest
         {
-            var req = (T) Activator.CreateInstance(typeof (T), dcm);
+            var req = (T) Activator.CreateInstance(typeof(T), dcm);
             return req;
         }
 
         private static T ReadDIMSEResponse<T>(DICOMObject dcm) where T : AbstractDIMSEResponse
         {
-            var req = (T) Activator.CreateInstance(typeof (T), dcm);
+            var req = (T) Activator.CreateInstance(typeof(T), dcm);
             return req;
         }
     }

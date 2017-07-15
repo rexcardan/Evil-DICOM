@@ -1,6 +1,4 @@
-﻿using System;
-
-namespace EvilDICOM.Core.Logging
+﻿namespace EvilDICOM.Core.Logging
 {
     /// <summary>
     ///     The singleton instance of a logging system for the core Evil DICOM operations. Can subscribe, to
@@ -9,7 +7,7 @@ namespace EvilDICOM.Core.Logging
     public sealed class EvilLogger : EventLogger
     {
         private static volatile EvilLogger instance;
-        private static readonly object locker = new Object();
+        private static readonly object locker = new object();
 
         private EvilLogger()
         {
@@ -20,13 +18,11 @@ namespace EvilDICOM.Core.Logging
             get
             {
                 if (instance == null)
-                {
                     lock (locker)
                     {
                         if (instance == null)
                             instance = new EvilLogger();
                     }
-                }
 
                 return instance;
             }

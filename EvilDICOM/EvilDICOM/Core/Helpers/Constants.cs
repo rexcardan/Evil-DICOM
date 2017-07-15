@@ -1,4 +1,8 @@
-﻿using System.Reflection;
+﻿#region
+
+using System.Reflection;
+
+#endregion
 
 namespace EvilDICOM.Core.Helpers
 {

@@ -1,15 +1,14 @@
-﻿using System;
+﻿#region
+
 using System.Collections.Generic;
 using System.Linq;
-using EvilDICOM.Core;
-using EvilDICOM.Core.Helpers;
+using System.Threading.Tasks;
 using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.DIMSE.IOD;
 using EvilDICOM.Network.Enums;
-using System.Threading;
-using EvilDICOM.Core.Logging;
-using System.Threading.Tasks;
 using EvilDICOM.Network.Helpers;
+
+#endregion
 
 namespace EvilDICOM.Network.Querying
 {
@@ -18,8 +17,8 @@ namespace EvilDICOM.Network.Querying
     /// </summary>
     public class QueryBuilder
     {
-        private DICOMSCU _scu;
-        private Entity _scp;
+        private readonly Entity _scp;
+        private readonly DICOMSCU _scu;
 
         /// <summary>
         /// A Query builder constructor which requires a SCU and SCP entity
@@ -36,20 +35,20 @@ namespace EvilDICOM.Network.Querying
         {
             var query = CFind.CreateStudyQuery(patientId);
             var studyUids = _scu.GetResponse(query, _scp) // Studies
-                .Where(r => r.Status == (ushort)Status.PENDING)
+                .Where(r => r.Status == (ushort) Status.PENDING)
                 .Where(r => r.HasData);
             return studyUids.Select(r => r.GetIOD<CFindStudyIOD>());
         }
 
         public IEnumerable<CFindSeriesIOD> GetSeriesUids(IEnumerable<CFindStudyIOD> studies)
         {
-            List<CFindSeriesIOD> results = new List<CFindSeriesIOD>();
+            var results = new List<CFindSeriesIOD>();
 
             foreach (var study in studies)
             {
                 var req = CFind.CreateSeriesQuery(study.StudyInstanceUID);
                 var seriesUids = _scu.GetResponse(req, _scp)
-                    .Where(r => r.Status == (ushort)Status.PENDING)
+                    .Where(r => r.Status == (ushort) Status.PENDING)
                     .Where(r => r.HasData)
                     .Select(r => r.GetIOD<CFindSeriesIOD>());
                 results.AddRange(seriesUids);
@@ -59,40 +58,40 @@ namespace EvilDICOM.Network.Querying
 
         public IEnumerable<CFindSeriesIOD> GetSeriesUids(CFindStudyIOD study)
         {
-            return GetSeriesUids(new CFindStudyIOD[] { study });
+            return GetSeriesUids(new[] {study});
         }
 
         public IEnumerable<CFindImageIOD> GetImageUids(IEnumerable<CFindSeriesIOD> series)
         {
-            List<CFindImageIOD> results = new List<CFindImageIOD>();
+            var results = new List<CFindImageIOD>();
 
             foreach (var ser in series)
             {
                 var req = CFind.CreateImageQuery(ser.SeriesInstanceUID);
                 var imagesUids = _scu.GetResponse(req, _scp)
-                    .Where(r => r.Status == (ushort)Status.PENDING)
+                    .Where(r => r.Status == (ushort) Status.PENDING)
                     .Where(r => r.HasData)
                     .Select(r => r.GetIOD<CFindImageIOD>())
                     .ToList();
-                results.AddRange(imagesUids);           
+                results.AddRange(imagesUids);
             }
             return results;
         }
 
         public IEnumerable<CFindImageIOD> GetImageUids(CFindSeriesIOD series)
         {
-            return GetImageUids(new CFindSeriesIOD[] { series });
+            return GetImageUids(new[] {series});
         }
 
         public IEnumerable<T> GetImageUids<T>(IEnumerable<CFindSeriesIOD> series) where T : CFindImageIOD
         {
-            List<T> results = new List<T>();
+            var results = new List<T>();
 
             foreach (var ser in series)
             {
                 var req = CFind.CreateImageQuery(ser.SeriesInstanceUID);
                 var imagesUids = _scu.GetResponse(req, _scp)
-                    .Where(r => r.Status == (ushort)Status.PENDING)
+                    .Where(r => r.Status == (ushort) Status.PENDING)
                     .Where(r => r.HasData)
                     .Select(r => r.GetIOD<T>())
                     .ToList();
@@ -103,7 +102,7 @@ namespace EvilDICOM.Network.Querying
 
         public IEnumerable<T> GetImageUids<T>(CFindSeriesIOD series) where T : CFindImageIOD
         {
-            return GetImageUids<T>(new CFindSeriesIOD[] { series });
+            return GetImageUids<T>(new[] {series});
         }
 
         /// <summary>

@@ -1,16 +1,16 @@
-﻿using EvilDICOM.Core.Element;
+﻿#region
+
+using EvilDICOM.Core;
+using EvilDICOM.Core.Element;
 using EvilDICOM.Network.Enums;
 using S = System;
 using DF = EvilDICOM.Core.DICOMForge;
-using EvilDICOM.Core.Interfaces;
-using System.Collections.Generic;
-using EvilDICOM.Core;
-using EvilDICOM.Core.Helpers;
-using EvilDICOM.Network.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Network.DIMSE.IOD
 {
-    public class CFindImageIOD :  AbstractDIMSEIOD
+    public class CFindImageIOD : AbstractDIMSEIOD
     {
         public CFindImageIOD()
         {
@@ -22,17 +22,17 @@ namespace EvilDICOM.Network.DIMSE.IOD
             SeriesInstanceUID = string.Empty;
         }
 
-        public CFindImageIOD(DICOMObject dcm) : base(dcm) { }
+        public CFindImageIOD(DICOMObject dcm) : base(dcm)
+        {
+        }
 
         public QueryLevel QueryLevel
         {
             get
             {
                 if (_sel.Query​Retrieve​Level == null)
-                {
                     _sel.Query​Retrieve​Level.Data = QueryLevel.PATIENT.ToString();
-                }
-                return (QueryLevel) S.Enum.Parse(typeof (QueryLevel), _sel.Query​Retrieve​Level.Data);
+                return (QueryLevel) S.Enum.Parse(typeof(QueryLevel), _sel.Query​Retrieve​Level.Data);
             }
             set { _sel.Forge(DF.Query​Retrieve​Level(value.ToString())); }
         }

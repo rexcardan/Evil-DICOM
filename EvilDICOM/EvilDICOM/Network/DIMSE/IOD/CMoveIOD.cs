@@ -1,6 +1,10 @@
-﻿using System;
+﻿#region
+
+using System;
 using EvilDICOM.Network.Enums;
 using DF = EvilDICOM.Core.DICOMForge;
+
+#endregion
 
 namespace EvilDICOM.Network.DIMSE.IOD
 {
@@ -11,10 +15,8 @@ namespace EvilDICOM.Network.DIMSE.IOD
             get
             {
                 if (_sel.Query​Retrieve​Level == null)
-                {
                     _sel.Query​Retrieve​Level.Data = QueryLevel.PATIENT.ToString();
-                }
-                return (QueryLevel) Enum.Parse(typeof (QueryLevel), _sel.Query​Retrieve​Level.Data);
+                return (QueryLevel) Enum.Parse(typeof(QueryLevel), _sel.Query​Retrieve​Level.Data);
             }
             set { _sel.Forge(DF.Query​Retrieve​Level(value.ToString())); }
         }

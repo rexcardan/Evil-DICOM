@@ -1,5 +1,9 @@
-﻿using EvilDICOM.Core.Enums;
+﻿#region
+
+using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.IO.Data;
+
+#endregion
 
 namespace EvilDICOM.Core.Element
 {
@@ -19,7 +23,7 @@ namespace EvilDICOM.Core.Element
             VR = VR.Time;
         }
 
-        public Time(Tag tag, System.DateTime? time):base(tag, time)
+        public Time(Tag tag, System.DateTime? time) : base(tag, time)
         {
             VR = VR.Time;
         }

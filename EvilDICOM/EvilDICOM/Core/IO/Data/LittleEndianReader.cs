@@ -1,8 +1,11 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.Linq;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.IO.Reading;
-using EvilDICOM.Core.Helpers;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Data
 {
@@ -11,8 +14,8 @@ namespace EvilDICOM.Core.IO.Data
         public static Tag ReadTag(byte[] data)
         {
             //TODO add support for VM > 1
-            if (data.Any()) { return ReadTag(data, ReadTagSingle).First(); }
-            else { return new Tag("00000000"); }
+            if (data.Any()) return ReadTag(data, ReadTagSingle).First();
+            return new Tag("00000000");
         }
 
         public static float[] ReadSinglePrecision(byte[] data)

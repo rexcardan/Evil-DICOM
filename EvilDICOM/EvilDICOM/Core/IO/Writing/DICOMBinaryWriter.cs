@@ -1,6 +1,10 @@
-﻿using System;
+﻿#region
+
+using System;
 using System.IO;
 using System.Text;
+
+#endregion
 
 namespace EvilDICOM.Core.IO.Writing
 {
@@ -46,16 +50,14 @@ namespace EvilDICOM.Core.IO.Writing
 
         public void Write(string chars)
         {
-            char[] asCharArray = chars.ToCharArray();
+            var asCharArray = chars.ToCharArray();
             Write(asCharArray);
         }
 
         public void WriteNullBytes(int numberToWrite)
         {
-            for (int i = 0; i < numberToWrite; i++)
-            {
+            for (var i = 0; i < numberToWrite; i++)
                 Write(0x00);
-            }
         }
     }
 }

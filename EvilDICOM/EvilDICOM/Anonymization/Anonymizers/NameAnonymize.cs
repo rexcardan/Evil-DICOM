@@ -1,10 +1,10 @@
-﻿using EvilDICOM.Core;
+﻿#region
+
+using EvilDICOM.Core;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Logging;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+
+#endregion
 
 namespace EvilDICOM.Anonymization.Anonymizers
 {
@@ -17,9 +17,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
         {
             EvilLogger.Instance.Log("Anonymizing names...", 0);
             foreach (var name in d.FindAll(VR.PersonName))
-            {
                 name.DData = "Anonymized";
-            }
         }
     }
 }

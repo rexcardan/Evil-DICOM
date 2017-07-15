@@ -1,8 +1,12 @@
-﻿using System.Collections;
+﻿#region
+
+using System.Collections;
 using System.IO;
 using System.Linq;
 using EvilDICOM.Core.IO.Writing;
 using EvilDICOM.Network.Enums;
+
+#endregion
 
 namespace EvilDICOM.Network.PDUs.Items
 {
@@ -88,7 +92,7 @@ namespace EvilDICOM.Network.PDUs.Items
             bits.Set(0, frag.IsCommandObject);
             bits.Set(1, frag.IsLastItem);
             var bytes = new byte[1];
-            ((ICollection)bits).CopyTo(bytes, 0);
+            bits.CopyTo(bytes, 0);
             dw.Write(bytes[0]);
         }
 
@@ -127,10 +131,8 @@ namespace EvilDICOM.Network.PDUs.Items
                     intern.Write((byte) pc.Reason);
                     intern.WriteNullBytes(1);
                     WriteAbstractSyntax(intern, pc.AbstractSyntax);
-                    foreach (string syntax in pc.TransferSyntaxes)
-                    {
+                    foreach (var syntax in pc.TransferSyntaxes)
                         WriteTransferSyntax(intern, syntax);
-                    }
                     internBytes = stream.ToArray();
                 }
             }

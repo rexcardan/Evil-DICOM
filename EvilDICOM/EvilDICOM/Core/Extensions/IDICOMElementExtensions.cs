@@ -1,10 +1,14 @@
-﻿using EvilDICOM.Core.Dictionaries;
+﻿#region
+
+using System.Collections.Generic;
+using System.Xml.Linq;
+using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
-using System.Collections.Generic;
-using System.Xml.Linq;
+
+#endregion
 
 namespace EvilDICOM.Core.Extensions
 {
@@ -92,24 +96,20 @@ namespace EvilDICOM.Core.Extensions
             if (el.IsVR(VR.Sequence))
             {
                 var seq = el as Sequence;
-                for (int i = 0; i < seq.Items.Count; i++)
+                for (var i = 0; i < seq.Items.Count; i++)
                 {
                     var item = new XElement("Item");
-                    foreach(var it in seq.Items[i].Elements)
-                    {
+                    foreach (var it in seq.Items[i].Elements)
                         item.Add(it.ToXElement());
-                    }
                     xel.Add(item);
                 }
             }
             else // Just add data
             {
-                if(el.DatType != typeof(byte))
+                if (el.DatType != typeof(byte))
                 {
                     foreach (var d in el.DData_)
-                    {
                         xel.Add(new XElement("Data", d));
-                    }
                 }
                 else
                 {
@@ -121,6 +121,5 @@ namespace EvilDICOM.Core.Extensions
             }
             return xel;
         }
-
     }
 }

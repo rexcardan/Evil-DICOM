@@ -1,23 +1,24 @@
-﻿using EvilDICOM.Core.Element;
+﻿#region
+
+using EvilDICOM.Core;
+using EvilDICOM.Core.Element;
+using EvilDICOM.Core.Helpers;
 using EvilDICOM.Network.Enums;
 using S = System;
 using DF = EvilDICOM.Core.DICOMForge;
-using EvilDICOM.Core.Interfaces;
-using System.Collections.Generic;
-using EvilDICOM.Core;
-using EvilDICOM.Core.Helpers;
-using EvilDICOM.Network.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Network.DIMSE.IOD
 {
     public class CFindStudyIOD : AbstractDIMSEIOD
     {
-         public CFindStudyIOD()
+        public CFindStudyIOD()
         {
             QueryLevel = QueryLevel.STUDY;
             SOPInstanceUID = string.Empty;
             PatientId = string.Empty;
-            PatientsName = new PersonName() { Tag = TagHelper.Patient​Name, Data = string.Empty };
+            PatientsName = new PersonName {Tag = TagHelper.Patient​Name, Data = string.Empty};
             StudyDate = null;
             AccessionNumber = string.Empty;
             StudyId = string.Empty;
@@ -30,17 +31,17 @@ namespace EvilDICOM.Network.DIMSE.IOD
             SeriesInstanceUID = string.Empty;
         }
 
-         public CFindStudyIOD(DICOMObject dcm) : base(dcm) { }
+        public CFindStudyIOD(DICOMObject dcm) : base(dcm)
+        {
+        }
 
         public QueryLevel QueryLevel
         {
             get
             {
                 if (_sel.Query​Retrieve​Level == null)
-                {
                     _sel.Query​Retrieve​Level.Data = QueryLevel.PATIENT.ToString();
-                }
-                return (QueryLevel) S.Enum.Parse(typeof (QueryLevel), _sel.Query​Retrieve​Level.Data);
+                return (QueryLevel) S.Enum.Parse(typeof(QueryLevel), _sel.Query​Retrieve​Level.Data);
             }
             set { _sel.Forge(DF.Query​Retrieve​Level(value.ToString())); }
         }
@@ -60,10 +61,7 @@ namespace EvilDICOM.Network.DIMSE.IOD
         public S.DateTime? StudyDate
         {
             get { return _sel.StudyDate != null ? _sel.StudyDate.Data : null; }
-            set
-            {
-                _sel.Forge(DF.StudyDate(value));
-            }
+            set { _sel.Forge(DF.StudyDate(value)); }
         }
 
         public S.DateTime? StudyTime

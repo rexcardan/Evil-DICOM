@@ -1,7 +1,11 @@
-﻿using System;
+﻿#region
+
+using System;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
+
+#endregion
 
 namespace EvilDICOM.Core.Dictionaries
 {
@@ -171,7 +175,7 @@ namespace EvilDICOM.Core.Dictionaries
         /// <returns>the VR type</returns>
         public static VR GetVRFromType(IDICOMElement el)
         {
-            Type t = el.GetType();
+            var t = el.GetType();
             return EnumHelper.StringToEnum<VR>(t.Name);
         }
 
@@ -192,7 +196,7 @@ namespace EvilDICOM.Core.Dictionaries
         /// <returns>the VR abbreviation</returns>
         public static string GetAbbreviationFromType(IDICOMElement el)
         {
-            Type t = el.GetType();
+            var t = el.GetType();
             var vr = EnumHelper.StringToEnum<VR>(t.Name);
             return GetAbbreviationFromVR(vr);
         }
