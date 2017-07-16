@@ -14,6 +14,7 @@ namespace EvilDICOM.Core.Element
     {
         public DecimalString()
         {
+            VR = VR.DecimalString;
         }
 
         public DecimalString(Tag tag, string data)

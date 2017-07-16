@@ -1,4 +1,4 @@
-﻿namespace EvilDICOM.Core.Enums
+namespace EvilDICOM.Core.Enums
 {
     public enum SOPClass
     {

@@ -13,6 +13,7 @@ namespace EvilDICOM.Core.Element
     {
         public UnsignedShort()
         {
+            VR = VR.UnsignedShort;
         }
 
         public UnsignedShort(Tag tag, int data)

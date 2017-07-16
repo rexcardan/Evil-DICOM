@@ -14,6 +14,7 @@ namespace EvilDICOM.Core.Element
     {
         public Date()
         {
+            VR = VR.Date;
         }
 
         public Date(Tag tag, string data)

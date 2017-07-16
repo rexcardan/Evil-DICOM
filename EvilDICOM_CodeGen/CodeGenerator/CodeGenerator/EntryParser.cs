@@ -18,7 +18,7 @@ namespace CodeGenerator
         /// <param name="g"></param>
         /// <param name="entry"></param>
         /// <returns></returns>
-        internal static (string, SyntaxNode, SyntaxNode) Parse(SyntaxGenerator g, DictionaryData entry)
+        internal static (string, SyntaxNode) Parse(SyntaxGenerator g, DictionaryData entry)
         {
             var readVr = new string(entry.VR.Replace("OR", "").Take(2).ToArray());
             if (readVr != "Se" && !string.IsNullOrEmpty(entry.Keyword))
@@ -37,19 +37,12 @@ namespace CodeGenerator
                 var dataTypeName = dataType.Name.StartsWith("Nullable") ? "System.DateTime?" : dataType.Name;
 
                 //Initialize strings as empty string instead of null
-                var parameter = g.ParameterDeclaration("data", g.IdentifierName(dataTypeName),
-                    g.DefaultExpression(g.IdentifierName(dataTypeName)), RefKind.None);
-                if (dataTypeName == "String")
-                {
-                    parameter = g.ParameterDeclaration("data", g.IdentifierName(dataTypeName),
-                        g.LiteralExpression(""), RefKind.None);
-                }
-                var listParameter = g.ParameterDeclaration("data", g.IdentifierName($"List<{dataTypeName}>"),
-                    g.NullLiteralExpression(), RefKind.None);
+                var parameter = g.ParameterDeclaration("data", g.IdentifierName($"params {dataTypeName}[]"),
+                    null, RefKind.None);
 
-                return (cName, parameter, listParameter);
+                return (cName, parameter);
             }
-            return (null, null,null);
+            return (null, null);
         }
 
 

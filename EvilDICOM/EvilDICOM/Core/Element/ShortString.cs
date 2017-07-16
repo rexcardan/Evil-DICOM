@@ -11,6 +11,7 @@ namespace EvilDICOM.Core.Element
     {
         public ShortString()
         {
+            VR = VR.ShortString;
         }
 
         public ShortString(Tag tag, string data)

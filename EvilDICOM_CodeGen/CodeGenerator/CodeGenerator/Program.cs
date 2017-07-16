@@ -30,15 +30,12 @@ namespace CodeGenerator
             var tags = new List<SyntaxNode>();
             var selectors = new List<SyntaxNode>();
 
-            //DICOMForge
-
-
             foreach (var entry in dictionary.Where(d => !string.IsNullOrEmpty(d.Keyword)))
             {
                 //Build a tag no matter what
                 tags.Add(TagBuilder.Generate(g, entry));
 
-                var (cName, parameter, listParameter) = EntryParser.Parse(g, entry);
+                var (cName, parameter) = EntryParser.Parse(g, entry);
 
                 if (cName != null)
                 {
@@ -65,15 +62,14 @@ namespace CodeGenerator
                         g.AssignmentStatement(g.IdentifierName("element.Tag"),
                             g.ObjectCreationExpression(g.IdentifierName("Tag"),
                                 g.Argument(RefKind.None, g.LiteralExpression(entry.Id)))),
-                        g.AssignmentStatement(g.IdentifierName("element.Data"), g.IdentifierName("data")),
+                        g.AssignmentStatement(g.IdentifierName("element.Data_"), g.IdentifierName("data?.ToList()")),
                         g.ReturnStatement(g.IdentifierName("element"))
                     };
 
                     var m = g.MethodDeclaration(entry.Keyword, new SyntaxNode[] { parameter }, null, g.IdentifierName(cName), Accessibility.Public,
                          DeclarationModifiers.Static, methStatements);
                     forgeNodes.Add(m);
-                    m = g.MethodDeclaration(entry.Keyword, new SyntaxNode[] { listParameter }, null, g.IdentifierName(cName), Accessibility.Public,
-                        DeclarationModifiers.Static, methStatements);
+                 
                 }
             }
 

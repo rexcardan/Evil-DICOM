@@ -17,6 +17,7 @@ namespace EvilDICOM.Core.Element
     {
         public Unknown()
         {
+            VR = VR.Unknown;
         }
 
         public Unknown(Tag tag, byte[] data)
