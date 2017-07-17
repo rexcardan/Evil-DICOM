@@ -10,6 +10,7 @@ using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Extensions;
 using EvilDICOM.Core.Helpers;
+using EvilDICOM.Core.Image;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.IO.Reading;
 using EvilDICOM.Core.IO.Writing;
@@ -89,7 +90,7 @@ namespace EvilDICOM.Core
             {
                 var pixelData = FindFirst(TagHelper.Pixel​Data) as AbstractElement<byte>;
                 if (pixelData != null)
-                    return new MemoryStream(pixelData.DataContainer.MultipicityValue.ToArray());
+                    return new PixelStream(pixelData.DataContainer.MultipicityValue.ToArray());
                 return null;
             }
         }

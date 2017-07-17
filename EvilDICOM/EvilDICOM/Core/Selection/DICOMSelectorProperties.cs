@@ -106034,11 +106034,11 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public OtherByteString Pixel​Data
+        public AbstractElement<byte> Pixel​Data
         {
             get
             {
-                return (OtherByteString)(_dicom.FindFirst("7FE00010"));
+                return (AbstractElement<byte>)(_dicom.FindFirst("7FE00010"));
             }
 
             set
@@ -106047,11 +106047,11 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public List<OtherByteString> Pixel​Data_
+        public List<AbstractElement<byte>> Pixel​Data_
         {
             get
             {
-                return _dicom.FindAll("7FE00010").Select(d => d as OtherByteString).ToList();
+                return _dicom.FindAll("7FE00010").Select(d => d as AbstractElement<byte>).ToList();
             }
 
             set

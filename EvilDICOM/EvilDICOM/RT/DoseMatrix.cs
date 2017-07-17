@@ -97,13 +97,13 @@ namespace EvilDICOM.RT
         public int DimensionX
         {
             get { return _doseObject.Columns.Data; }
-            set { _doseObject.Columns.Data = (ushort) value; }
+            set { _doseObject.Columns.Data = (ushort)value; }
         }
 
         public int DimensionY
         {
             get { return _doseObject.Rows.Data; }
-            set { _doseObject.Rows.Data = (ushort) value; }
+            set { _doseObject.Rows.Data = (ushort)value; }
         }
 
         public int DimensionZ
@@ -118,10 +118,7 @@ namespace EvilDICOM.RT
             {
                 var max = DoseValues.Max();
                 var index = DoseValues.IndexOf(max);
-                int x;
-                int y;
-                int z;
-                IndexToLatticeXYZ(index, out x, out y, out z);
+                var (x, y, z) = IndexHelper.IndexToLatticeXYZ(index, DimensionX, DimensionY);
                 return new DoseValue(x * XRes + X0, y * YRes + Y0, z * ZRes + Z0, max);
             }
         }
@@ -150,10 +147,10 @@ namespace EvilDICOM.RT
             var values = new List<DoseValue>();
             var pointer = endXYZmm - startXYZmm;
             var length = startXYZmm.DistanceTo(endXYZmm);
-            var numPts = (int) Math.Ceiling(length / resolution_mm);
+            var numPts = (int)Math.Ceiling(length / resolution_mm);
             for (var i = 0; i <= numPts; i++)
             {
-                var pt = startXYZmm + (1 - (double) i / numPts) * pointer;
+                var pt = startXYZmm + (1 - (double)i / numPts) * pointer;
                 if (IsInBounds(pt))
                     values.Add(GetPointDose(pt));
             }
@@ -170,15 +167,15 @@ namespace EvilDICOM.RT
         {
             //From method at http://en.wikipedia.org/wiki/Trilinear_interpolation
             var interpX = (x - X0) / XRes % 1 != 0.0; // Interpolate X?
-            var xSteps = (int) ((x - X0) / XRes);
+            var xSteps = (int)((x - X0) / XRes);
             var lowX = X0 + xSteps * XRes;
             var highX = X0 + (xSteps + 1) * XRes;
             var interpY = (y - Y0) / YRes % 1 != 0; // Interpolate Y?
-            var ySteps = (int) ((y - Y0) / YRes);
+            var ySteps = (int)((y - Y0) / YRes);
             var lowY = Y0 + ySteps * YRes;
             var highY = Y0 + (ySteps + 1) * YRes;
             var interpZ = (z - Z0) / ZRes % 1 != 0; // Interpolate Z?
-            var zSteps = (int) ((z - Z0) / ZRes);
+            var zSteps = (int)((z - Z0) / ZRes);
             var lowZ = Z0 + zSteps * ZRes;
             var highZ = Z0 + (zSteps + 1) * ZRes;
 
@@ -223,27 +220,9 @@ namespace EvilDICOM.RT
 
         private double GetDiscretePointDose(int xSteps, int ySteps, int zSteps)
         {
-            int index;
-            LatticeXYZToIndex(xSteps, ySteps, zSteps, out index);
+            int index = IndexHelper.LatticeXYZToIndex(xSteps, ySteps, zSteps, DimensionX, DimensionY);
             var value = DoseValues[index];
             return value;
-        }
-
-        public void IndexToLatticeXYZ(int index, out int x, out int y, out int z)
-        {
-            z = index / (DimensionX * DimensionY);
-            y = index % (DimensionX * DimensionY) / DimensionX;
-            x = index % (DimensionX * DimensionY) % DimensionX;
-        }
-
-        public static void LatticeXYZToIndex(int x, int y, int z, int latticeWidth, int latticeHeight, out int index)
-        {
-            index = x + y * latticeWidth + z * latticeWidth * latticeHeight;
-        }
-
-        public void LatticeXYZToIndex(int x, int y, int z, out int index)
-        {
-            LatticeXYZToIndex(x, y, z, DimensionX, DimensionY, out index);
         }
 
         public void ConvertRelToAbs(double totalDose)
@@ -259,7 +238,7 @@ namespace EvilDICOM.RT
                 var binWriter = new BinaryWriter(stream);
                 foreach (var d in DoseValues)
                 {
-                    var integ = (int) (d / _16b);
+                    var integ = (int)(d / _16b);
                     var bytes = BitConverter.GetBytes(integ);
                     binWriter.Write(integ);
                 }
@@ -274,7 +253,7 @@ namespace EvilDICOM.RT
             if (DataRestriction.EnforceRealNonZero(Scaling, "Scaling") &&
                 DataRestriction.EnforceRealNonZero(ValueSizeInBytes, "ValueSizeInBytes"))
             {
-                _doseObject.Bits​Stored.Data = (ushort) (ValueSizeInBytes * 8);
+                _doseObject.Bits​Stored.Data = (ushort)(ValueSizeInBytes * 8);
                 _doseObject.Dose​Grid​Scaling.Data = Scaling;
                 using (var stream = _doseObject.ToDICOMObject().PixelStream)
                 {
@@ -283,13 +262,13 @@ namespace EvilDICOM.RT
                     if (ValueSizeInBytes == 4)
                         foreach (var dv in DoseValues)
                         {
-                            var val = (int) (dv / Scaling);
+                            var val = (int)(dv / Scaling);
                             bw.Write(BitConverter.GetBytes(val));
                         }
                     else
                         foreach (var dv in DoseValues)
                         {
-                            var val = (ushort) (dv / Scaling);
+                            var val = (ushort)(dv / Scaling);
                             bw.Write(BitConverter.GetBytes(val));
                         }
                 }
