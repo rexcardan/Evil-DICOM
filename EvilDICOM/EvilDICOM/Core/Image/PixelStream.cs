@@ -51,6 +51,22 @@ namespace EvilDICOM.Core.Image
         }
 
         /// <summary>
+        /// Converts the byte array to 32 bit integer array
+        /// </summary>
+        /// <returns></returns>
+        public void SetValues32(int[] pixels, bool isDataLittleEndian = true)
+        {
+            var binWriter = new BinaryWriter(this);
+            binWriter.BaseStream.Position = 0;
+            for (int i = 0; i < pixels.Length; i++)
+            {
+                var data = BitConverter.GetBytes(pixels[i]);
+                if (isDataLittleEndian != BitConverter.IsLittleEndian) Array.Reverse(data);
+                binWriter.Write(data);
+            }
+        }
+
+        /// <summary>
         /// Converts the byte array to 16 bit integer array
         /// </summary>
         /// <returns></returns>

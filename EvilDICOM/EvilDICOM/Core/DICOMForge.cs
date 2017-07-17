@@ -33937,9 +33937,9 @@ namespace EvilDICOM.Core
             return element;
         }
 
-        public static OtherByteString Pixel​Data(params Byte[] data)
+        public static T Pixel​Data<T>(params Byte[] data) where T:AbstractElement<byte>, new()
         {
-            var element = (new OtherByteString());
+            var element = (new T());
             element.Tag = (new Tag("7FE00010"));
             element.Data_ = (data?.ToList());
             return element;

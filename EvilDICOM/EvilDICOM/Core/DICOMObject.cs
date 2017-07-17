@@ -84,7 +84,7 @@ namespace EvilDICOM.Core
         /// <summary>
         ///     Grabs the pixel data bytes and sends it as a stream. Returns null if no pixel data element is found.
         /// </summary>
-        public Stream PixelStream
+        public PixelStream PixelStream
         {
             get
             {
@@ -92,6 +92,12 @@ namespace EvilDICOM.Core
                 if (pixelData != null)
                     return new PixelStream(pixelData.DataContainer.MultipicityValue.ToArray());
                 return null;
+            }
+            set
+            {
+                var pixelData = FindFirst(TagHelper.Pixel​Data) as AbstractElement<byte>;
+                if (pixelData != null)
+                    pixelData.Data_ = value.ToArray().ToList();
             }
         }
 
