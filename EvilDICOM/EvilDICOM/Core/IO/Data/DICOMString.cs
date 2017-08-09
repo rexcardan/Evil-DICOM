@@ -1,5 +1,8 @@
 ﻿#region
 
+using System;
+using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 #endregion
@@ -35,6 +38,12 @@ namespace EvilDICOM.Core.IO.Data
         public void SetEncoder(Encoding enc)
         {
             _encoder = enc;
+        }
+
+        public static List<string> ReadMultiple(byte[] data)
+        {
+            var text = Read(data);
+            return text.Split('\\').ToList();
         }
     }
 }

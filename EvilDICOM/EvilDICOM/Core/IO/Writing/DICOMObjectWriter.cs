@@ -17,10 +17,11 @@ namespace EvilDICOM.Core.IO.Writing
         public static void Write(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d,
             bool isSequenceItem = false)
         {
+            if (!isSequenceItem) TransferSyntaxHelper.SetSyntax(d, settings.TransferSyntax);
+
             for (var i = 0; i < d.Elements.Count; i++)
             {
                 var el = d.Elements[i];
-                if (!isSequenceItem) TransferSyntaxHelper.SetSyntax(d, settings.TransferSyntax);
                 var currentSettings = IsFileMetaGroup(el) ? settings.GetFileMetaSettings() : settings;
                 if (GroupWriter.IsGroupHeader(el))
                 {

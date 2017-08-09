@@ -520,17 +520,6 @@ namespace EvilDICOM.Core
             return DICOMFileReader.Read(file, trySyntax);
         }
 
-        /// <summary>
-        /// Constructs a new DICOM Object from an XML string. Use ToXML() to generate a valid synax for inspection
-        /// </summary>
-        /// <param name="xml">an xml string representing DICOM object, outermost xml element must be <DICOM></param>
-        /// <returns></returns>
-        public static DICOMObject FromXML(string xml)
-        {
-            var dcm = new DICOMObject();
-            dcm.LoadFromXML(xml);
-            return dcm;
-        }
 
         /// <summary>
         /// Writes DICOM object to a file
@@ -545,15 +534,6 @@ namespace EvilDICOM.Core
             if (setSyntax != null && TransferSyntaxHelper.IsCompressedImage(setSyntax))
                 settings.TransferSyntax = TransferSyntaxHelper.GetSyntax(setSyntax);
             DICOMFileWriter.Write(file, settings, this);
-        }
-
-        /// <summary>
-        /// Writes the DICOM Object to an XML string for visualization and manipluation. Use FromXML() to get back.
-        /// </summary>
-        /// <returns></returns>
-        public string ToXML()
-        {
-            return this.ToXMLString();
         }
 
         public byte[] GetBytes(DICOMWriteSettings settings = null)

@@ -30,24 +30,5 @@ namespace EvilDICOM.Core.Extensions
             }
             return builder.ToString();
         }
-
-        /// <summary>
-        /// Converts a XML string to a DICOM object
-        /// </summary>
-        /// <returns></returns>
-        public static void LoadFromXML(this DICOMObject dcm, string xml)
-        {
-            using (var tr = new StringReader(xml))
-            {
-                var doc = XDocument.Load(tr);
-                dcm.Elements.Clear();
-                var dicom = doc.Element("DICOM");
-                foreach (var el in dicom.Elements())
-                {
-                    var dcmEl = el.ToDICOMElement();
-                    dcm.Add(dcmEl);
-                }
-            }
-        }
     }
 }

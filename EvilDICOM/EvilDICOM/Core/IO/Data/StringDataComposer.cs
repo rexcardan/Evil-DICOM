@@ -1,4 +1,6 @@
-﻿#region
+﻿using System;
+using System.Collections.Generic;
+#region
 
 using System.Globalization;
 using System.Linq;
@@ -77,6 +79,34 @@ namespace EvilDICOM.Core.IO.Data
                 var date = (DateTime) data;
                 return date.ToString("HHmmss.ffffff", CultureInfo.InvariantCulture);
             }
+            return string.Empty;
+        }
+
+        public static string ComposeMultipleString(List<string> data_)
+        {
+            if (data_ != null)
+                return string.Join("\\", data_.ToArray());
+            return string.Empty;
+        }
+
+        public static string ComposeDates(List<DateTime?> data_)
+        {
+            if (data_ != null)
+                return string.Join("\\", data_.Select(d=>ComposeDate(d)).ToArray());
+            return string.Empty;
+        }
+
+        public static string ComposeDateTimes(List<DateTime?> data_)
+        {
+            if (data_ != null)
+                return string.Join("\\", data_.Select(d => ComposeDateTime(d)).ToArray());
+            return string.Empty;
+        }
+
+        public static string ComposeTimes(List<DateTime?> data_)
+        {
+            if (data_ != null)
+                return string.Join("\\", data_.Select(d => ComposeTime(d)).ToArray());
             return string.Empty;
         }
     }

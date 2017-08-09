@@ -89,7 +89,7 @@ namespace EvilDICOM.Core.Element
 
                 //HANDLE BYTE DATA
                 case VR.Sequence:
-                    return new Sequence {Tag = tag, Items = SequenceReader.ReadItems(data as byte[], syntax)};
+                    return new Sequence { Tag = tag, Items = SequenceReader.ReadItems(data as byte[], syntax) };
                 case VR.OtherByteString:
                     return new OtherByteString(tag, data as byte[]);
                 case VR.OtherFloatString:
@@ -109,67 +109,6 @@ namespace EvilDICOM.Core.Element
 
 
         /// <summary>
-        ///     Generates a concrete element class from the VR, tag, data and string data (from XML). 
-        /// </summary>
-        /// <param name="tag">the tag of the element to be generated</param>
-        /// <param name="vr">the VR of the element to be generated</param>
-        /// <param name="data">the string data of the element</param>
-        /// <param name="syntax">the transfer syntax by which to interepret the data</param>
-        /// <returns>a concrete DICOM element that uses the interface IDICOMElement</returns>
-        public static IDICOMElement GenerateElementFromStringData(Tag tag, VR vr, string[] data)
-        {
-            switch (vr)
-            {
-                case VR.AttributeTag:
-                    return new AttributeTag(tag, new Tag(data.First()));
-                case VR.FloatingPointDouble:
-                    return new FloatingPointDouble(tag, data.Select(d => double.Parse(d)).ToArray());
-                case VR.FloatingPointSingle:
-                    return new FloatingPointSingle(tag, data.Select(d => float.Parse(d)).ToArray());
-                case VR.SignedLong:
-                    return new SignedLong(tag, data.Select(d => int.Parse(d)).ToArray());
-                case VR.SignedShort:
-                    return new SignedShort(tag, data.Select(d => short.Parse(d)).ToArray());
-                case VR.UnsignedLong:
-                    return new UnsignedLong(tag, data.Select(d => uint.Parse(d)).ToArray());
-                case VR.UnsignedShort:
-                    return new UnsignedShort(tag, data.Select(d => ushort.Parse(d)).ToArray());
-                //HANDLE STRINGS
-                case VR.AgeString: return new AgeString(tag, data.First());
-                case VR.ApplicationEntity: return new ApplicationEntity(tag, data.First());
-                case VR.CodeString: return new CodeString(tag, data.First());
-                case VR.DecimalString: return new DecimalString(tag, data.Select(d => double.Parse(d)).ToArray());
-                case VR.IntegerString: return new IntegerString(tag, data.Select(d => int.Parse(d)).ToArray());
-                case VR.LongString: return new LongString(tag, data.First());
-                case VR.LongText: return new LongText(tag, data.First());
-                case VR.PersonName: return new PersonName(tag, data.First());
-                case VR.ShortString: return new ShortString(tag, data.First());
-                case VR.ShortText: return new ShortText(tag, data.First());
-                case VR.UnlimitedText: return new UnlimitedText(tag, data.First());
-                case VR.UniqueIdentifier: return new UniqueIdentifier(tag, data.First());
-                //HANDLE DATES
-                case VR.Date: return new Date(tag, StringDataParser.GetNullableDate(data.First()));
-                case VR.DateTime: return new DateTime(tag, StringDataParser.GetNullableDate(data.First()));
-                case VR.Time: return new Time(tag, StringDataParser.GetNullableDate(data.First()));
-                //HANDLE BYTE DATA
-                case VR.Sequence:
-                    return new Sequence {Tag = tag, Items = data.Select(d => DICOMObject.FromXML(d)).ToList()};
-                case VR.OtherByteString:
-                    return new OtherByteString(tag, ByteHelper.HexStringToByteArray(data.First()));
-                case VR.OtherFloatString:
-                    return new OtherFloatString(tag, ByteHelper.HexStringToByteArray(data.First()));
-                case VR.OtherWordString:
-                    return new OtherWordString(tag, ByteHelper.HexStringToByteArray(data.First()));
-                case VR.OtherLongString:
-                    return new OtherLongString(tag, ByteHelper.HexStringToByteArray(data.First()));
-                case VR.OtherDoubleString:
-                    return new OtherDoubleString(tag, ByteHelper.HexStringToByteArray(data.First()));
-                default:
-                    return new Unknown(tag, ByteHelper.HexStringToByteArray(data.First()));
-            }
-        }
-
-        /// <summary>
         ///     Reads string data and creates the appropriate DICOM element
         /// </summary>
         /// <param name="data">the string data as an object (fresh from the DICOM reader)</param>
@@ -184,7 +123,7 @@ namespace EvilDICOM.Core.Element
                 case VR.ApplicationEntity:
                     return new ApplicationEntity(tag, DICOMString.Read(data as byte[]));
                 case VR.CodeString:
-                    return new CodeString(tag, DICOMString.Read(data as byte[]));
+                    return new CodeString() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[]) };
                 case VR.Date:
                     return new Date(tag, DICOMString.Read(data as byte[]));
                 case VR.DateTime:
@@ -196,17 +135,17 @@ namespace EvilDICOM.Core.Element
                 case VR.LongString:
                     return new LongString(tag, DICOMString.Read(data as byte[]));
                 case VR.LongText:
-                    return new LongText(tag, DICOMString.Read(data as byte[]));
+                    return new LongText() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[]) };
                 case VR.PersonName:
-                    return new PersonName(tag, DICOMString.Read(data as byte[]));
+                    return new PersonName() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[]) };
                 case VR.ShortString:
-                    return new ShortString(tag, DICOMString.Read(data as byte[]));
+                    return new ShortString() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[]) };
                 case VR.ShortText:
                     return new ShortText(tag, DICOMString.Read(data as byte[]));
                 case VR.Time:
                     return new Time(tag, DICOMString.Read(data as byte[]));
                 case VR.UnlimitedCharacter:
-                    return new UnlimitedCharacter(tag, DICOMString.Read(data as byte[]));
+                    return new UnlimitedCharacter() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[]) };
                 case VR.UnlimitedText:
                     return new UnlimitedText(tag, DICOMString.Read(data as byte[]));
                 case VR.UniqueIdentifier:
