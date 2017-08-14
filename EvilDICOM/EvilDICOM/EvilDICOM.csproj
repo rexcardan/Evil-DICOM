@@ -38,9 +38,8 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
-    <Reference Include="System.ValueTuple, Version=4.0.1.1, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.3.1\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
-      <Private>True</Private>
+    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>C:\Users\vision\Documents\Visual Studio 2017\Projects\DICOMMaker\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -66,6 +65,7 @@
     <Compile Include="Core\DICOMForge.cs" />
     <Compile Include="Core\DICOMObject.cs" />
     <Compile Include="Core\DICOMObjectWrapper.cs" />
+    <Compile Include="Core\Dictionaries\EncodingDictionary.cs" />
     <Compile Include="Core\Dictionaries\TagDictionary.cs" />
     <Compile Include="Core\Dictionaries\VRDictionary.cs" />
     <Compile Include="Core\Element\AbstractElement.cs" />

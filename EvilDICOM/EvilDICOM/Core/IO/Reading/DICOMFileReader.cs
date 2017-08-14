@@ -123,9 +123,6 @@ namespace EvilDICOM.Core.IO.Reading
         public static List<IDICOMElement> ReadFileMetadata(DICOMBinaryReader dr, ref TransferSyntax syntax)
         {
             var elements = new List<IDICOMElement>();
-            syntax = syntax != TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN
-                ? syntax
-                : TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN;
 
             while (dr.StreamPosition < dr.StreamLength)
             {
@@ -134,9 +131,7 @@ namespace EvilDICOM.Core.IO.Reading
                 {
                     dr.StreamPosition = position;
                     var el = DICOMElementReader.ReadElementExplicitLittleEndian(dr);
-                    var uid = TagHelper.Transfer​Syntax​UID;
-                    if (el.Tag == uid)
-                        syntax = TransferSyntaxHelper.GetSyntax(el);
+                    syntax = TransferSyntaxHelper.GetSyntax(el);
                     elements.Add(el);
                 }
                 else

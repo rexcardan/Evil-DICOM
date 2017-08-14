@@ -82,6 +82,46 @@ namespace EvilDICOM.Core.IO.Reading
             return length;
         }
 
+        public static int PeekLittleEndian(VR vr, DICOMBinaryReader dr)
+        {
+            var length = 0;
+
+            switch (VRDictionary.GetEncodingFromVR(vr))
+            {
+                case VREncoding.Implicit:
+                    var byteLength = dr.Peek(4);
+                    length = BitConverter.ToInt32(byteLength, 0);
+                    break;
+                case VREncoding.ExplicitLong:
+                    byteLength = dr.Peek(6).Skip(2).Take(4).ToArray();
+                    length = BitConverter.ToInt32(byteLength, 0);
+                    break;
+                case VREncoding.ExplicitShort:
+                    byteLength = dr.Peek(2);
+                    length = BitConverter.ToUInt16(byteLength, 0);
+                    break;
+            }
+            return length;
+        }
+
+        public static int PeekBigEndian(VR vr, DICOMBinaryReader dr)
+        {
+            var bytes = new byte[0];
+            switch (VRDictionary.GetEncodingFromVR(vr))
+            {
+                case VREncoding.Implicit:
+                    bytes = dr.Peek(4);
+                    break;
+                case VREncoding.ExplicitLong:
+                    bytes = dr.Peek(6).Skip(2).Take(4).ToArray();
+                    break;
+                case VREncoding.ExplicitShort:
+                    bytes = dr.Peek(2);
+                    break;
+            }
+            return ReadBigEndian(bytes); ;
+        }
+
         /// <summary>
         ///     Reads the length in big endian byte format from a series of bytes in a stream. The number of bytes is automatically
         ///     determined from
