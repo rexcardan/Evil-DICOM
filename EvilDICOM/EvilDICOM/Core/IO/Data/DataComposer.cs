@@ -12,7 +12,7 @@ namespace EvilDICOM.Core.IO.Data
 {
     public class DataComposer
     {
-        public static byte[] GetDataLittleEndian(IDICOMElement el)
+        public static byte[] GetDataLittleEndian(IDICOMElement el, StringEncoding enc)
         {
             var vr = VRDictionary.GetVRFromType(el);
             switch (vr)
@@ -51,11 +51,11 @@ namespace EvilDICOM.Core.IO.Data
                     var ush = el as UnsignedShort;
                     return LittleEndianWriter.WriteUnsignedShort(ush.DataContainer);
                 default:
-                    return GetStringBytes(vr, el);
+                    return GetStringBytes(vr, el, enc);
             }
         }
 
-        public static byte[] GetDataBigEndian(IDICOMElement el)
+        public static byte[] GetDataBigEndian(IDICOMElement el, StringEncoding enc)
         {
             var vr = VRDictionary.GetVRFromType(el);
             switch (vr)
@@ -100,11 +100,11 @@ namespace EvilDICOM.Core.IO.Data
                     var ush = el as UnsignedShort;
                     return BigEndianWriter.WriteUnsignedShort(ush.DataContainer);
                 default:
-                    return GetStringBytes(vr, el);
+                    return GetStringBytes(vr, el, enc);
             }
         }
 
-        public static byte[] GetStringBytes(VR vr, IDICOMElement el)
+        public static byte[] GetStringBytes(VR vr, IDICOMElement el, StringEncoding enc)
         {
             string data;
             byte[] unpadded;
@@ -113,94 +113,94 @@ namespace EvilDICOM.Core.IO.Data
                 case VR.AgeString:
                     var age = el as AgeString;
                     data = StringDataComposer.ComposeMultipleString(age.Data_);
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.ApplicationEntity:
                     var ae = el as ApplicationEntity;
                     data = StringDataComposer.ComposeMultipleString(ae.Data_);
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.CodeString:
                     var cs = el as CodeString;
                     data = StringDataComposer.ComposeMultipleString(cs.Data_);
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.Date:
                     var d = el as Date;
                     data = StringDataComposer.ComposeDates(d.Data_);
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.DateTime:
                     var dt = el as DateTime;
                     data = StringDataComposer.ComposeDateTimes(dt.Data_);
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.DecimalString:
                     var ds = el as DecimalString;
                     data = StringDataComposer.ComposeDecimalString(ds.DataContainer.MultipicityValue.ToArray());
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.IntegerString:
                     var iSt = el as IntegerString;
                     data = StringDataComposer.ComposeIntegerString(iSt.DataContainer.MultipicityValue.ToArray());
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.LongString:
                     var ls = el as LongString;
                     data = StringDataComposer.ComposeMultipleString(ls.Data_);
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.LongText:
                     var lt = el as LongText;
                     data = StringDataComposer.ComposeMultipleString(lt.Data_);
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.PersonName:
                     var pn = el as PersonName;
                     data = StringDataComposer.ComposeMultipleString(pn.Data_);
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.ShortString:
                     var ss = el as ShortString;
                     data = StringDataComposer.ComposeMultipleString(ss.Data_);
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.ShortText:
                     var st = el as ShortText; // VM=1 ALWAYS
-                    unpadded = GetASCIIBytes(st.Data);
+                    unpadded = GetEncodedBytes(st.Data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.Time:
                     var t = el as Time;
                     data = StringDataComposer.ComposeTimes(t.Data_);
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.UnlimitedText:
                     var ut = el as UnlimitedText; // VM=1 ALWAYS
-                    unpadded = GetASCIIBytes(ut.Data);
+                    unpadded = GetEncodedBytes(ut.Data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.UnlimitedCharacter:
                     var uc = el as UnlimitedCharacter;
                     data = StringDataComposer.ComposeMultipleString(uc.Data_);
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.UniqueIdentifier:
                     var ui = el as UniqueIdentifier;
                     data = StringDataComposer.ComposeMultipleString(ui.Data_);
-                    unpadded = GetASCIIBytes(data);
+                    unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.UniversalResourceId:
                     var uid = el as UniversalResourceId; // VM=1 ALWAYS
-                    unpadded = GetASCIIBytes(uid.Data);
+                    unpadded = GetEncodedBytes(uid.Data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 default:
                     return null;
             }
         }
 
-        public static byte[] GetASCIIBytes(string s)
+        public static byte[] GetEncodedBytes(string s, StringEncoding enc)
         {
             if (!string.IsNullOrEmpty(s))
-                return Encoding.UTF8.GetBytes(s);
+                return EncodingDictionary.GetEncodingFromISO(enc).GetBytes(s);
             return new byte[0];
         }
     }

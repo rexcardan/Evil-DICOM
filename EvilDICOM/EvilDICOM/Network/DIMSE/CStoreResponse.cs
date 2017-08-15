@@ -42,7 +42,7 @@ namespace EvilDICOM.Network.DIMSE
             AffectedSOPInstanceUID = req.AffectedSOPInstanceUID;
             Status = (ushort) status;
             GroupLength = (uint) GroupWriter.WriteGroupBytes(new DICOMObject(Elements.Skip(1).Take(6).ToList()),
-                    new DICOMWriteSettings(), "0000")
+                    new DICOMIOSettings(), "0000")
                 .Length;
         }
 

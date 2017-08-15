@@ -10,7 +10,7 @@ namespace EvilDICOM.Core.IO.Writing
 {
     public class DICOMElementWriter
     {
-        public static void WriteLittleEndian(DICOMBinaryWriter dw, DICOMWriteSettings settings, IDICOMElement toWrite)
+        public static void WriteLittleEndian(DICOMBinaryWriter dw, DICOMIOSettings settings, IDICOMElement toWrite)
         {
             var vr = VRDictionary.GetVRFromType(toWrite);
             if (vr == VR.Sequence)
@@ -25,7 +25,7 @@ namespace EvilDICOM.Core.IO.Writing
             }
         }
 
-        public static void WriteBigEndian(DICOMBinaryWriter dw, DICOMWriteSettings settings, IDICOMElement toWrite)
+        public static void WriteBigEndian(DICOMBinaryWriter dw, DICOMIOSettings settings, IDICOMElement toWrite)
         {
             DICOMTagWriter.WriteBigEndian(dw, toWrite.Tag);
             var vr = VRDictionary.GetVRFromType(toWrite);
@@ -33,7 +33,7 @@ namespace EvilDICOM.Core.IO.Writing
             DataWriter.WriteBigEndian(dw, vr, settings, toWrite);
         }
 
-        public static void Write(DICOMBinaryWriter dw, DICOMWriteSettings settings, IDICOMElement el)
+        public static void Write(DICOMBinaryWriter dw, DICOMIOSettings settings, IDICOMElement el)
         {
             if (settings.TransferSyntax == TransferSyntax.EXPLICIT_VR_BIG_ENDIAN)
                 WriteBigEndian(dw, settings, el);

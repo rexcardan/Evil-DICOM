@@ -54,7 +54,7 @@ namespace EvilDICOM.Core.IO.Reading
             return length;
         }
 
-        public static List<DICOMObject> ReadItems(byte[] data, TransferSyntax syntax)
+        public static List<DICOMObject> ReadItems(byte[] data, TransferSyntax syntax, StringEncoding enc)
         {
             var objects = new List<DICOMObject>();
             using (var dr = new DICOMBinaryReader(data))
@@ -63,10 +63,10 @@ namespace EvilDICOM.Core.IO.Reading
                     switch (syntax)
                     {
                         case TransferSyntax.EXPLICIT_VR_BIG_ENDIAN:
-                            objects.Add(SequenceItemReader.ReadBigEndian(dr, syntax));
+                            objects.Add(SequenceItemReader.ReadBigEndian(dr, syntax, enc));
                             break;
                         default:
-                            objects.Add(SequenceItemReader.ReadLittleEndian(dr, syntax));
+                            objects.Add(SequenceItemReader.ReadLittleEndian(dr, syntax, enc));
                             break;
                     }
             }

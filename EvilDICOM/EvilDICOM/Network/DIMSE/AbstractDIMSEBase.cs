@@ -47,7 +47,7 @@ namespace EvilDICOM.Network.DIMSE
 
         public void SetGroupLength()
         {
-            var bytes = GroupWriter.WriteGroupBytes(new DICOMObject(Elements), DICOMWriteSettings.Default(), "0000");
+            var bytes = GroupWriter.WriteGroupBytes(new DICOMObject(Elements), DICOMIOSettings.Default(), "0000");
             GroupLength = (uint) bytes.Length;
         }
     }

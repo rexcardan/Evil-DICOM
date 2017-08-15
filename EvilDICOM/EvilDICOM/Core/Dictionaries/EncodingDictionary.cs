@@ -1,4 +1,5 @@
-﻿using System;
+﻿using EvilDICOM.Core.Enums;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,7 +9,7 @@ namespace EvilDICOM.Core.Dictionaries
 {
     public class EncodingDictionary
     {
-        private static Dictionary<string, string> encodingMap = new Dictionary<string, string>()
+        public static Dictionary<string, string> encodingMap = new Dictionary<string, string>()
         {
             {"ISO IR 13","shift_jis"},
             {"ISO IR 100","iso-8859-1"},
@@ -33,7 +34,7 @@ namespace EvilDICOM.Core.Dictionaries
             {"ISO 2022 IR 138","iso-8859-8"},
             {"ISO 2022 IR 148","iso-8859-9"},
             {"ISO IR 166","windows-874"},
-            {"ISO IR 166","windows-874"},
+            {"ISO 2022 IR 166","windows-874"},
             {"ISO 2022 IR 149","x-cp20949"},
             {"ISO IR 192","utf-8"},
             {"GB18030","GB18030"},
@@ -44,6 +45,11 @@ namespace EvilDICOM.Core.Dictionaries
             var iso = isoStandard.Replace("_", string.Empty).ToUpper();
             if (encodingMap.ContainsKey(iso)) { return Encoding.GetEncoding(encodingMap[iso]); }
             else return Encoding.UTF8;
+        }
+
+        public static Encoding GetEncodingFromISO(StringEncoding enc)
+        {
+            return GetEncodingFromISO(enc.ToString());
         }
     }
 }

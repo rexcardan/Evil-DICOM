@@ -15,7 +15,7 @@ namespace EvilDICOM.Core.IO.Writing
         /// <param name="filePath">the path to which to write the file</param>
         /// <param name="settings">the write settings</param>
         /// <param name="toWrite">the object to write</param>
-        public static void Write(string filePath, DICOMWriteSettings settings, DICOMObject toWrite)
+        public static void Write(string filePath, DICOMIOSettings settings, DICOMObject toWrite)
         {
             using (var fs = new FileStream(filePath, FileMode.Create))
             {
@@ -29,9 +29,9 @@ namespace EvilDICOM.Core.IO.Writing
         /// <param name="stream">the stream to which to write the file</param>
         /// <param name="settings">the write settings</param>
         /// <param name="toWrite">the object to write</param>
-        public static void Write(Stream stream, DICOMWriteSettings settings, DICOMObject toWrite)
+        public static void Write(Stream stream, DICOMIOSettings settings, DICOMObject toWrite)
         {
-            settings = settings ?? DICOMWriteSettings.Default();
+            settings = settings ?? DICOMIOSettings.Default();
             using (var dw = new DICOMBinaryWriter(stream))
             {
                 DICOMPreambleWriter.Write(dw);

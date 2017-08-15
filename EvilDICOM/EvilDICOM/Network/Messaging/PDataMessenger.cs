@@ -78,7 +78,7 @@ namespace EvilDICOM.Network.Messaging
                 {
                     var tx = TransferSyntaxHelper.GetSyntax(pc.TransferSyntaxes.First());
                     DICOMObjectWriter.WriteSameSyntax(dw,
-                        new DICOMWriteSettings
+                        new DICOMIOSettings
                         {
                             TransferSyntax = tx,
                             DoWriteIndefiniteSequences = false

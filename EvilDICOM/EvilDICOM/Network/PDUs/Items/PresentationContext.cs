@@ -24,9 +24,9 @@ namespace EvilDICOM.Network.PDUs.Items
         public string AbstractSyntax { get; set; }
         public List<string> TransferSyntaxes { get; set; }
 
-        public DICOMWriteSettings ToDICOMWriteSettings()
+        public DICOMIOSettings ToDICOMWriteSettings()
         {
-            var settings = DICOMWriteSettings.Default();
+            var settings = DICOMIOSettings.Default();
             settings.TransferSyntax = TransferSyntaxHelper.GetSyntax(TransferSyntaxes.FirstOrDefault());
             return settings;
         }

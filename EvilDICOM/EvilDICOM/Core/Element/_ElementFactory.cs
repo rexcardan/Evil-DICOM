@@ -25,7 +25,7 @@ namespace EvilDICOM.Core.Element
         /// <param name="data">the raw data to be procesed (byte array)</param>
         /// <param name="syntax">the transfer syntax by which to interepret the data</param>
         /// <returns>a concrete DICOM element that uses the interface IDICOMElement</returns>
-        public static IDICOMElement GenerateElement(Tag tag, VR vr, object data, TransferSyntax syntax)
+        public static IDICOMElement GenerateElement(Tag tag, VR vr, object data, TransferSyntax syntax, StringEncoding enc)
         {
             //HANDLE NUMBERS
             if (syntax == TransferSyntax.EXPLICIT_VR_BIG_ENDIAN)
@@ -85,11 +85,11 @@ namespace EvilDICOM.Core.Element
                 case VR.UnlimitedText:
                 case VR.UniversalResourceId:
                 case VR.UniqueIdentifier:
-                    return ReadString(vr, tag, data);
+                    return ReadString(vr, tag, data, enc);
 
                 //HANDLE BYTE DATA
                 case VR.Sequence:
-                    return new Sequence { Tag = tag, Items = SequenceReader.ReadItems(data as byte[], syntax) };
+                    return new Sequence { Tag = tag, Items = SequenceReader.ReadItems(data as byte[], syntax, enc) };
                 case VR.OtherByteString:
                     return new OtherByteString(tag, data as byte[]);
                 case VR.OtherFloatString:
@@ -114,44 +114,44 @@ namespace EvilDICOM.Core.Element
         /// <param name="data">the string data as an object (fresh from the DICOM reader)</param>
         /// <param name="vr">the VR of the element to be generated</param>
         /// <returns>a concrete DICOM element that uses the interface IDICOMElement</returns>
-        private static IDICOMElement ReadString(VR vr, Tag tag, object data)
+        private static IDICOMElement ReadString(VR vr, Tag tag, object data, StringEncoding enc)
         {
             switch (vr)
             {
                 case VR.AgeString:
-                    return new AgeString(tag, DICOMString.Read(data as byte[]));
+                    return new AgeString(tag, DICOMString.Read(data as byte[], enc));
                 case VR.ApplicationEntity:
-                    return new ApplicationEntity(tag, DICOMString.Read(data as byte[]));
+                    return new ApplicationEntity(tag, DICOMString.Read(data as byte[], enc));
                 case VR.CodeString:
-                    return new CodeString() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[]) };
+                    return new CodeString() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[], enc) };
                 case VR.Date:
-                    return new Date(tag, DICOMString.Read(data as byte[]));
+                    return new Date(tag, DICOMString.Read(data as byte[], enc));
                 case VR.DateTime:
-                    return new DateTime(tag, DICOMString.Read(data as byte[]));
+                    return new DateTime(tag, DICOMString.Read(data as byte[], enc));
                 case VR.DecimalString:
-                    return new DecimalString(tag, DICOMString.Read(data as byte[]));
+                    return new DecimalString(tag, DICOMString.Read(data as byte[], enc));
                 case VR.IntegerString:
-                    return new IntegerString(tag, DICOMString.Read(data as byte[]));
+                    return new IntegerString(tag, DICOMString.Read(data as byte[], enc));
                 case VR.LongString:
-                    return new LongString(tag, DICOMString.Read(data as byte[]));
+                    return new LongString(tag, DICOMString.Read(data as byte[], enc));
                 case VR.LongText:
-                    return new LongText() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[]) };
+                    return new LongText() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[], enc) };
                 case VR.PersonName:
-                    return new PersonName() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[]) };
+                    return new PersonName() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[], enc) };
                 case VR.ShortString:
-                    return new ShortString() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[]) };
+                    return new ShortString() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[], enc) };
                 case VR.ShortText:
-                    return new ShortText(tag, DICOMString.Read(data as byte[]));
+                    return new ShortText(tag, DICOMString.Read(data as byte[], enc));
                 case VR.Time:
-                    return new Time(tag, DICOMString.Read(data as byte[]));
+                    return new Time(tag, DICOMString.Read(data as byte[], enc));
                 case VR.UnlimitedCharacter:
-                    return new UnlimitedCharacter() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[]) };
+                    return new UnlimitedCharacter() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[], enc) };
                 case VR.UnlimitedText:
-                    return new UnlimitedText(tag, DICOMString.Read(data as byte[]));
+                    return new UnlimitedText(tag, DICOMString.Read(data as byte[], enc));
                 case VR.UniqueIdentifier:
-                    return new UniqueIdentifier(tag, DICOMString.Read(data as byte[]));
+                    return new UniqueIdentifier(tag, DICOMString.Read(data as byte[], enc));
                 case VR.UniversalResourceId:
-                    return new UniversalResourceId(tag, DICOMString.Read(data as byte[]));
+                    return new UniversalResourceId(tag, DICOMString.Read(data as byte[], enc));
                 default:
                     return new Unknown(tag, data as byte[]);
             }

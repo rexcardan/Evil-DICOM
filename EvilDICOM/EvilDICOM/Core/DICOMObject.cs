@@ -526,9 +526,9 @@ namespace EvilDICOM.Core
         /// </summary>
         /// <param name="file">the path to write</param>
         /// <param name="settings">the DICOM settings to write (endianness, and indefinite sequences)</param>
-        public void Write(string file, DICOMWriteSettings settings = null)
+        public void Write(string file, DICOMIOSettings settings = null)
         {
-            settings = settings ?? DICOMWriteSettings.Default();
+            settings = settings ?? DICOMIOSettings.Default();
             //If image is compressed, lets not change the transfer syntax UID (so image will not be read incorrectly)
             var setSyntax = GetSelector().TransferSyntaxUID?.Data;
             if (setSyntax != null && TransferSyntaxHelper.IsCompressedImage(setSyntax))
@@ -536,9 +536,9 @@ namespace EvilDICOM.Core
             DICOMFileWriter.Write(file, settings, this);
         }
 
-        public byte[] GetBytes(DICOMWriteSettings settings = null)
+        public byte[] GetBytes(DICOMIOSettings settings = null)
         {
-            settings = settings ?? DICOMWriteSettings.Default();
+            settings = settings ?? DICOMIOSettings.Default();
             using (var stream = new MemoryStream())
             {
                 DICOMFileWriter.Write(stream, settings, this);
@@ -620,5 +620,17 @@ namespace EvilDICOM.Core
         }
 
         #endregion
+
+        public override bool Equals(object obj)
+        {
+            if (!(obj is DICOMObject)) return false;
+            var dcm = obj as DICOMObject;
+            return DICOMComparer.CompareObjects(this, dcm).Count == 0;
+        }
+
+        public override int GetHashCode()
+        {
+            return base.GetHashCode();
+        }
     }
 }

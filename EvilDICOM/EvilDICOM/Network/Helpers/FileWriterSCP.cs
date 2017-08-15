@@ -28,7 +28,7 @@ namespace EvilDICOM.Network.Helpers
                 using (var fs = new FileStream(path, FileMode.Create))
                 {
                     Logger.Log("Writing file {0}...", path);
-                    DICOMFileWriter.Write(fs, DICOMWriteSettings.Default(), dcm);
+                    DICOMFileWriter.Write(fs, DICOMIOSettings.Default(), dcm);
                 }
                 return true;
             };

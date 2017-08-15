@@ -43,7 +43,7 @@ namespace EvilDICOM.Core.Element
             var vr = VRDictionary.GetVRFromType(typeof(T));
             try
             {
-                var el = ElementFactory.GenerateElement(Tag, vr, Data_.ToArray(), TransferSyntax);
+                var el = ElementFactory.GenerateElement(Tag, vr, Data_.ToArray(), TransferSyntax, StringEncoding.ISO_IR_192);
                 outValue = (T) el;
                 return true;
             }

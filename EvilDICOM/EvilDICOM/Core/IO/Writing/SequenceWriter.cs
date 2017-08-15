@@ -13,7 +13,7 @@ namespace EvilDICOM.Core.IO.Writing
         private static readonly byte[] _endOfSequence_LE = {0xFE, 0xFF, 0xDD, 0xE0, 0x00, 0x00, 0x00, 0x00};
         private static readonly byte[] _endOfSequence_BE = {0xFF, 0xFE, 0xE0, 0xDD, 0x00, 0x00, 0x00, 0x00};
 
-        public static void WriteLittleEndian(DICOMBinaryWriter dw, DICOMWriteSettings settings, IDICOMElement toWrite)
+        public static void WriteLittleEndian(DICOMBinaryWriter dw, DICOMIOSettings settings, IDICOMElement toWrite)
         {
             var s = toWrite as Sequence;
             DICOMTagWriter.WriteLittleEndian(dw, toWrite.Tag);
@@ -32,7 +32,7 @@ namespace EvilDICOM.Core.IO.Writing
             }
         }
 
-        private static void WriteIndefiniteLength(DICOMWriteSettings settings, DICOMBinaryWriter dw)
+        private static void WriteIndefiniteLength(DICOMIOSettings settings, DICOMBinaryWriter dw)
         {
             if (!(settings.TransferSyntax == TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN))
                 dw.WriteNullBytes(2);

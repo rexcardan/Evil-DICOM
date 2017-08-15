@@ -14,7 +14,7 @@ namespace EvilDICOM.Core.IO.Writing
             return el.Tag.Group == "0002";
         }
 
-        public static void Write(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d,
+        public static void Write(DICOMBinaryWriter dw, DICOMIOSettings settings, DICOMObject d,
             bool isSequenceItem = false)
         {
             if (!isSequenceItem) TransferSyntaxHelper.SetSyntax(d, settings.TransferSyntax);
@@ -42,7 +42,7 @@ namespace EvilDICOM.Core.IO.Writing
         /// <param name="settings"></param>
         /// <param name="d"></param>
         /// <param name="isSequenceItem"></param>
-        public static void WriteSameSyntax(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d,
+        public static void WriteSameSyntax(DICOMBinaryWriter dw, DICOMIOSettings settings, DICOMObject d,
             bool isSequenceItem = false)
         {
             for (var i = 0; i < d.Elements.Count; i++)

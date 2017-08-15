@@ -16,7 +16,7 @@ namespace EvilDICOM.Core.IO.Writing
             return el.Tag.Element == "0000";
         }
 
-        public static int WriteGroup(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d, IDICOMElement el)
+        public static int WriteGroup(DICOMBinaryWriter dw, DICOMIOSettings settings, DICOMObject d, IDICOMElement el)
         {
             var groupBytes = WriteGroupBytes(d, settings, el.Tag.Group);
             var length = groupBytes.Length;
@@ -27,7 +27,7 @@ namespace EvilDICOM.Core.IO.Writing
             return d.Elements.Where(elm => elm.Tag.Group == ul.Tag.Group).ToList().Count - 1;
         }
 
-        public static byte[] WriteGroupBytes(DICOMObject d, DICOMWriteSettings settings, string groupId)
+        public static byte[] WriteGroupBytes(DICOMObject d, DICOMIOSettings settings, string groupId)
         {
             var groupElements = d.Elements.Where(el => el.Tag.Group == groupId).ToList();
             byte[] groupBytes;

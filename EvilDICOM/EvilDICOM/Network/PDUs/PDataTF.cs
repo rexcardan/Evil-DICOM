@@ -30,7 +30,7 @@ namespace EvilDICOM.Network.PDUs
             {
                 using (var dw = new DICOMBinaryWriter(stream))
                 {
-                    var settings = new DICOMWriteSettings();
+                    var settings = new DICOMIOSettings();
                     settings.TransferSyntax = isCommandObject
                         ? TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN
                         : TransferSyntaxHelper.GetSyntax(context.TransferSyntaxes[0]);

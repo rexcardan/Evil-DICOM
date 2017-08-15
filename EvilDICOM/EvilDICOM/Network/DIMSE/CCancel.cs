@@ -28,7 +28,7 @@ namespace EvilDICOM.Network.DIMSE
             DataSetType = 257; // No data
             CommandField = (ushort) C.C_CANCEL;
             GroupLength = (uint) GroupWriter.WriteGroupBytes(new DICOMObject(Elements.Skip(1).Take(5).ToList()),
-                    new DICOMWriteSettings {TransferSyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN}, "0000")
+                    new DICOMIOSettings {TransferSyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN}, "0000")
                 .Length;
         }
 

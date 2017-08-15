@@ -105,6 +105,7 @@
     <Compile Include="Core\Enums\LogPriority.cs" />
     <Compile Include="Core\Enums\Priority.cs" />
     <Compile Include="Core\Enums\SOPClass.cs" />
+    <Compile Include="Core\Enums\StringEncoding.cs" />
     <Compile Include="Core\Enums\TransferSyntax.cs" />
     <Compile Include="Core\Enums\VR.cs" />
     <Compile Include="Core\Enums\VREncoding.cs" />
@@ -118,6 +119,7 @@
     <Compile Include="Core\Helpers\ArrayHelper.cs" />
     <Compile Include="Core\Helpers\ByteHelper.cs" />
     <Compile Include="Core\Helpers\Constants.cs" />
+    <Compile Include="Core\Helpers\DICOMComparer.cs" />
     <Compile Include="Core\Helpers\DoubleHelper.cs" />
     <Compile Include="Core\Helpers\EnumHelper.cs" />
     <Compile Include="Core\Helpers\ExceptionHelper.cs" />
@@ -168,7 +170,7 @@
     <Compile Include="Core\IO\Writing\DICOMObjectWriter.cs" />
     <Compile Include="Core\IO\Writing\DICOMPreambleWriter.cs" />
     <Compile Include="Core\IO\Writing\DICOMTagWriter.cs" />
-    <Compile Include="Core\IO\Writing\DICOMWriteSettings.cs" />
+    <Compile Include="Core\IO\Writing\DICOMIOSettings.cs" />
     <Compile Include="Core\IO\Writing\GroupWriter.cs" />
     <Compile Include="Core\IO\Writing\LengthWriter.cs" />
     <Compile Include="Core\IO\Writing\SequenceItemWriter.cs" />

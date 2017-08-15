@@ -10,7 +10,7 @@ namespace EvilDICOM.Core.IO.Writing
 {
     public class VRWriter
     {
-        public static void WriteVR(DICOMBinaryWriter dw, DICOMWriteSettings settings, IDICOMElement toWrite)
+        public static void WriteVR(DICOMBinaryWriter dw, DICOMIOSettings settings, IDICOMElement toWrite)
         {
             if (!(settings.TransferSyntax == TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN))
             {
@@ -20,7 +20,7 @@ namespace EvilDICOM.Core.IO.Writing
             }
         }
 
-        public static void WriteVR(DICOMBinaryWriter dw, DICOMWriteSettings settings, VR vr)
+        public static void WriteVR(DICOMBinaryWriter dw, DICOMIOSettings settings, VR vr)
         {
             if (settings.TransferSyntax != TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
             {

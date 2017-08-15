@@ -14,13 +14,13 @@ namespace EvilDICOM.Core.IO.Writing
         private static readonly byte[] _endOfSequenceItem_LE = {0xFE, 0xFF, 0x0D, 0xE0, 0x00, 0x00, 0x00, 0x00};
         private static byte[] _endOfSequenceItem_BE = {0xFF, 0xFE, 0xE0, 0x0D, 0x00, 0x00, 0x00, 0x00};
 
-        public static void WriteItemsLittleEndian(DICOMBinaryWriter dw, DICOMWriteSettings settings,
+        public static void WriteItemsLittleEndian(DICOMBinaryWriter dw, DICOMIOSettings settings,
             List<DICOMObject> items)
         {
             dw.Write(WriteItemsLittleEndian(settings, items));
         }
 
-        public static byte[] WriteItemsLittleEndian(DICOMWriteSettings settings, List<DICOMObject> items)
+        public static byte[] WriteItemsLittleEndian(DICOMIOSettings settings, List<DICOMObject> items)
         {
             byte[] allItemBytes;
             using (var stream = new MemoryStream())
@@ -36,7 +36,7 @@ namespace EvilDICOM.Core.IO.Writing
             return allItemBytes;
         }
 
-        public static void WriteItemLittleEndian(DICOMBinaryWriter dw, DICOMWriteSettings settings, DICOMObject d)
+        public static void WriteItemLittleEndian(DICOMBinaryWriter dw, DICOMIOSettings settings, DICOMObject d)
         {
             DICOMTagWriter.WriteLittleEndian(dw, TagHelper.Item);
             using (var stream = new MemoryStream())
