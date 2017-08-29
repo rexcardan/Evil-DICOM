@@ -42,7 +42,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (data != null)
             {
-                var date = (DateTime) data;
+                var date = (DateTime)data;
                 return date.ToString("yyyyMMdd", CultureInfo.InvariantCulture);
             }
             return string.Empty;
@@ -52,7 +52,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (data != null)
             {
-                var date = (DateTime) data;
+                var date = (DateTime)data;
                 return date.ToString("yyyyMMddHHmmss.ffffff", CultureInfo.InvariantCulture);
             }
             return string.Empty;
@@ -61,7 +61,18 @@ namespace EvilDICOM.Core.IO.Data
         public static string ComposeDecimalString(double[] data)
         {
             if (data != null)
-                return string.Join("\\", data.Select(d => d.ToString(CultureInfo.InvariantCulture)).ToArray());
+                return string.Join("\\", data.Select(d =>
+                {
+                    //Max character is 16. Start with 12 decimal and work our way down
+                    var limit = 12;
+                    string format = string.Empty;
+                    while ((format = d.ToString($"G{limit}", CultureInfo.InvariantCulture)).Length > 16)
+                    {
+                        limit--;
+                    };
+                    return format;
+                }).ToArray());
+                
             return string.Empty;
         }
 
@@ -76,7 +87,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             if (data != null)
             {
-                var date = (DateTime) data;
+                var date = (DateTime)data;
                 return date.ToString("HHmmss.ffffff", CultureInfo.InvariantCulture);
             }
             return string.Empty;
@@ -92,7 +103,7 @@ namespace EvilDICOM.Core.IO.Data
         public static string ComposeDates(List<DateTime?> data_)
         {
             if (data_ != null)
-                return string.Join("\\", data_.Select(d=>ComposeDate(d)).ToArray());
+                return string.Join("\\", data_.Select(d => ComposeDate(d)).ToArray());
             return string.Empty;
         }
 

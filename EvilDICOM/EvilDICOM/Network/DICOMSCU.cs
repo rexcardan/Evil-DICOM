@@ -147,6 +147,37 @@ namespace EvilDICOM.Network
         /// <param name="toAETite">the entity title which will receive the image</param>
         /// <param name="msgId">the message id</param>
         /// <returns>the move response</returns>
+        public CGetResponse SendGetImage(Entity daemon, CFindImageIOD iod, ref ushort msgId)
+        {
+            var mr = new ManualResetEvent(false);
+            CGetResponse resp = null;
+            var cr = new Services.DIMSEService.DIMSEResponseHandler<CGetResponse>((res, asc) =>
+            {
+                if (!(res.Status == (ushort)Status.PENDING))
+                    mr.Set();
+                resp = res;
+            });
+
+            iod.QueryLevel = QueryLevel.IMAGE;
+
+            var request = new CGetRequest(iod, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
+            DIMSEService.CGetResponseReceived += cr;
+            SendMessage(request, daemon);
+            mr.WaitOne();
+            DIMSEService.CGetResponseReceived -= cr;
+            msgId += 2;
+            return resp;
+        }
+
+        /// <summary>
+        /// Emits a CMove operation to an entity which moves an image from the entity to the specified AETitle
+        /// </summary>
+        /// <param name="scp">the provider which will perform the move</param>
+        /// <param name="sopUid">the uid of the image to be moved</param>
+        /// <param name="patientId">the patient id of the image</param>
+        /// <param name="toAETite">the entity title which will receive the image</param>
+        /// <param name="msgId">the message id</param>
+        /// <returns>the move response</returns>
         public CMoveResponse SendCMoveImage(Entity daemon, string patientId, string sopInstanceUid, string toAETite,
             ref ushort msgId)
         {

@@ -40,6 +40,8 @@ namespace EvilDICOM.Network.Services
         public Action<CFindResponse, Association> CFindResponseReceivedAction { get; set; }
         public Action<CMoveRequest, Association> CMoveRequestReceivedAction { get; set; }
         public Action<CMoveResponse, Association> CMoveResponseReceivedAction { get; set; }
+        public Action<CGetRequest, Association> CGetRequestReceivedAction { get; set; }
+        public Action<CGetResponse, Association> CGetResponseReceivedAction { get; set; }
 
         private void SetDefaultActions()
         {
@@ -60,6 +62,26 @@ namespace EvilDICOM.Network.Services
                 asc.LastActive = DateTime.Now;
                 RaiseDIMSEResponseReceived(cEchoRp, asc);
                 AssociationMessenger.SendReleaseRequest(asc);
+            };
+
+            CGetRequestReceivedAction = (cGetReq, asc) =>
+            {
+                asc.Logger.Log("<-- DIMSE" + cGetReq.GetLogString());
+                cGetReq.LogData(asc);
+                asc.LastActive = DateTime.Now;
+                asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
+                RaiseDIMSERequestReceived(cGetReq, asc);
+                throw new NotImplementedException();
+            };
+
+            CGetResponseReceivedAction = (cGetRes, asc) =>
+            {
+                asc.Logger.Log("<-- DIMSE" + cGetRes.GetLogString());
+                cGetRes.LogData(asc);
+                asc.LastActive = DateTime.Now;
+                RaiseDIMSEResponseReceived(cGetRes, asc);
+                if (cGetRes.Status != (ushort)Status.PENDING)
+                    AssociationMessenger.SendReleaseRequest(asc);
             };
 
             CFindResponseReceivedAction = (cFindResp, asc) =>
@@ -145,6 +167,7 @@ namespace EvilDICOM.Network.Services
         public event DIMSERequestHandler<CFindRequest> CFindRequestReceived;
         public event DIMSERequestHandler<CMoveRequest> CMoveRequestReceived;
         public event DIMSERequestHandler<CStoreRequest> CStoreRequestReceived;
+        public event DIMSERequestHandler<CGetRequest> CGetRequestReceived;
 
         private void RaiseDIMSERequestReceived<T>(T req, Association asc) where T : AbstractDIMSERequest
         {
@@ -160,6 +183,9 @@ namespace EvilDICOM.Network.Services
             if (typeof(T) == typeof(CStoreRequest))
                 if (CStoreRequestReceived != null)
                     CStoreRequestReceived(req as CStoreRequest, asc);
+            if (typeof(T) == typeof(CGetRequest))
+                if (CGetRequestReceived != null)
+                    CGetRequestReceived(req as CGetRequest, asc);
         }
 
         //----------------DIMSE RESPONSES-------------------------
@@ -168,6 +194,7 @@ namespace EvilDICOM.Network.Services
         public event DIMSEResponseHandler<CFindResponse> CFindResponseReceived;
         public event DIMSEResponseHandler<CMoveResponse> CMoveResponseReceived;
         public event DIMSEResponseHandler<CStoreResponse> CStoreResponseReceived;
+        public event DIMSEResponseHandler<CGetResponse> CGetResponseReceived;
 
         private void RaiseDIMSEResponseReceived<T>(T resp, Association asc) where T : AbstractDIMSEResponse
         {
@@ -183,6 +210,9 @@ namespace EvilDICOM.Network.Services
             if (typeof(T) == typeof(CStoreResponse))
                 if (CStoreResponseReceived != null)
                     CStoreResponseReceived(resp as CStoreResponse, asc);
+            if (typeof(T) == typeof(CGetResponse))
+                if (CStoreResponseReceived != null)
+                    CGetResponseReceived(resp as CGetResponse, asc);
         }
     }
 }

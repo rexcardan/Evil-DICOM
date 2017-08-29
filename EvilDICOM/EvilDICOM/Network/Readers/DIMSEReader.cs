@@ -78,6 +78,12 @@ namespace EvilDICOM.Network.Readers
                     case (ushort) CommandField.C_MOVE_RP:
                         dimse = ReadDIMSEResponse<CMoveResponse>(dcm);
                         break;
+                    case (ushort)CommandField.C_GET_RQ:
+                        dimse = ReadDIMSERequest<CGetRequest>(dcm);
+                        break;
+                    case (ushort)CommandField.C_GET_RP:
+                        dimse = ReadDIMSEResponse<CGetResponse>(dcm);
+                        break;
                 }
                 return true;
             }
