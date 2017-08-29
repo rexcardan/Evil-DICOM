@@ -14,9 +14,6 @@ namespace EvilDICOM.Anonymization
     /// </summary>
     public class AnonymizationQueue
     {
-        //PROGRESS REPORTING (for UI)
-        public delegate void ProgressUpdatedHandler(double progress);
-
         public AnonymizationQueue()
         {
             Queue = new List<IAnonymizer>();
@@ -92,6 +89,8 @@ namespace EvilDICOM.Anonymization
             return (int) (i / (double) totalOperations * 100);
         }
 
+        //PROGRESS REPORTING (for UI)
+        public delegate void ProgressUpdatedHandler(double progress);
         /// <summary>
         /// Reports a double value of the current progress from 0 to 100
         /// </summary>

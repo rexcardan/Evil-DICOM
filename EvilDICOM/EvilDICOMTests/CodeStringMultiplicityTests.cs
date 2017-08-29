@@ -38,7 +38,7 @@ namespace EvilDICOMTests
                 //WRITE
                 using (var bw = new DICOMBinaryWriter(ms))
                 {
-                    DICOMObjectWriter.Write(bw, DICOMWriteSettings.Default(), dcm);
+                    DICOMObjectWriter.Write(bw, DICOMIOSettings.Default(), dcm);
                 }
                 bytes = ms.ToArray();
             }

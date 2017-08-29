@@ -20,7 +20,7 @@ namespace EvilDICOM.Core.IO.Reading
         /// </summary>
         /// <param name="dr">the binary reader which is reading the DICOM object</param>
         /// <returns>the next DICOM element</returns>
-        public static IDICOMElement ReadElementExplicitLittleEndian(DICOMBinaryReader dr, StringEncoding enc)
+        public static IDICOMElement ReadElementExplicitLittleEndian(DICOMBinaryReader dr, StringEncoding enc = StringEncoding.ISO_IR_192)
         {
             var tag = TagReader.ReadLittleEndian(dr);
             var vr = VRReader.ReadVR(dr);
@@ -46,7 +46,7 @@ namespace EvilDICOM.Core.IO.Reading
         /// </summary>
         /// <param name="dr">the binary reader which is reading the DICOM object</param>
         /// <returns>the next DICOM element</returns>
-        public static IDICOMElement ReadElementImplicitLittleEndian(DICOMBinaryReader dr, StringEncoding enc)
+        public static IDICOMElement ReadElementImplicitLittleEndian(DICOMBinaryReader dr, StringEncoding enc = StringEncoding.ISO_IR_192)
         {
             var tag = TagReader.ReadLittleEndian(dr);
             var vr = TagDictionary.GetVRFromTag(tag);
