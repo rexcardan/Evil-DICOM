@@ -3,6 +3,7 @@
 using System;
 using System.Collections;
 using EvilDICOM.Core.Element;
+using EvilDICOM.Core.Enums;
 
 #endregion
 
@@ -10,6 +11,7 @@ namespace EvilDICOM.Core.Interfaces
 {
     public interface IDICOMElement
     {
+        VR VR { get; }
         Tag Tag { get; set; }
         Type DatType { get; }
 
