@@ -16,7 +16,7 @@ namespace EvilDICOM.Core.Tests
             var dcm = new DICOMObject();
             var fs = new FloatingPointSingle(new Tag("30091047"), 25.0f);
             dcm.Add(fs);
-            dcm.Write("test.dcm", new EvilDICOM.Core.IO.Writing.DICOMWriteSettings() { TransferSyntax = EvilDICOM.Core.Enums.TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN });
+            dcm.Write("test.dcm", new EvilDICOM.Core.IO.Writing.DICOMIOSettings() { TransferSyntax = EvilDICOM.Core.Enums.TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN });
 
 
             dcm = DICOMObject.Read("test.dcm");
@@ -32,7 +32,7 @@ namespace EvilDICOM.Core.Tests
             var dcm = new DICOMObject();
             var fs = new FloatingPointSingle(new Tag("30091047"), 25.0f);
             dcm.Add(fs);
-            dcm.Write("test.dcm", new EvilDICOM.Core.IO.Writing.DICOMWriteSettings() { TransferSyntax = EvilDICOM.Core.Enums.TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN });
+            dcm.Write("test.dcm", new EvilDICOM.Core.IO.Writing.DICOMIOSettings() { TransferSyntax = EvilDICOM.Core.Enums.TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN });
 
             TagDictionary.AddEntry<FloatingPointSingle>("30091047", "MyCustomType");
             dcm = DICOMObject.Read("test.dcm");

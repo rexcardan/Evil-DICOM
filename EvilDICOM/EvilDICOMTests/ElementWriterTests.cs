@@ -18,14 +18,14 @@ namespace EvilDICOMTests
             ds.DData_ = Enumerable.Range(1, 15000).Select(i => ((double)i) + 0.005).ToList();
             ds.Tag = new Tag("00082130");
             byte[] written;
-            var settings = DICOMWriteSettings.Default();
+            var settings = DICOMIOSettings.Default();
 
             using (var ms = new MemoryStream())
             {
                 using (var dw = new DICOMBinaryWriter(ms))
                 {
 
-                    DICOMElementWriter.Write(dw, DICOMWriteSettings.Default(), ds);
+                    DICOMElementWriter.Write(dw, DICOMIOSettings.Default(), ds);
                 }
                 written = ms.ToArray();
             }

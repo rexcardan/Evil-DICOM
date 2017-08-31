@@ -57,7 +57,7 @@ namespace EvilDICOMTests
             {
                 var dw = new DICOMBinaryWriter(ms);
                 VR vr = VR.CodeString;
-                DICOMWriteSettings settings = new DICOMWriteSettings() { TransferSyntax = TransferSyntax.EXPLICIT_VR_BIG_ENDIAN, DoWriteIndefiniteSequences = false };
+                DICOMIOSettings settings = new DICOMIOSettings() { TransferSyntax = TransferSyntax.EXPLICIT_VR_BIG_ENDIAN, DoWriteIndefiniteSequences = false };
                 var data = new byte[10];
                 LengthWriter.Write(dw, vr, settings, data != null ? data.Length : 0);
                 bytes = ms.ToArray();

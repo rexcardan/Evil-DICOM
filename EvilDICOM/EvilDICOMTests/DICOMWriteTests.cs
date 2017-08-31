@@ -22,7 +22,7 @@ namespace EvilDICOM.Core.Tests
             {
                 using (var dw = new DICOMBinaryWriter(stream))
                 {
-                    DICOMElementWriter.Write(dw, DICOMWriteSettings.DefaultExplicit(), vssd);
+                    DICOMElementWriter.Write(dw, DICOMIOSettings.DefaultExplicit(), vssd);
                     elBytes = stream.ToArray();
                 }
             }
@@ -49,7 +49,7 @@ namespace EvilDICOM.Core.Tests
             {
                 using (var dw = new DICOMBinaryWriter(ms))
                 {
-                    var settings = new DICOMWriteSettings() { TransferSyntax = Enums.TransferSyntax.EXPLICIT_VR_BIG_ENDIAN, DoWriteIndefiniteSequences = false };
+                    var settings = new DICOMIOSettings() { TransferSyntax = Enums.TransferSyntax.EXPLICIT_VR_BIG_ENDIAN, DoWriteIndefiniteSequences = false };
                     DICOMObjectWriter.Write(dw, settings, dcm);
                 }
                 bytes = ms.ToArray();
