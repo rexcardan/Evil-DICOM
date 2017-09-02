@@ -4,6 +4,8 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using EvilDICOM.Network.PDUs.Items;
+using System;
+using System.Diagnostics;
 
 #endregion
 
@@ -15,6 +17,7 @@ namespace EvilDICOM.Network
 
         private readonly TcpListener _server;
         private bool _started;
+        private bool _requestStop = false;
 
         public DICOMSCP(Entity ae) : base(ae)
         {
@@ -28,17 +31,26 @@ namespace EvilDICOM.Network
 
         public async void ListenForIncomingAssociations(bool keepListenerRunning)
         {
-            while (true)
+            _requestStop = false;
+            while (!_requestStop)
             {
                 if (!_started)
                 {
                     _server.Start();
                     _started = true;
                 }
-                var connection = await _server.AcceptTcpClientAsync();
-                SpinUpAssociation(connection);
-                if (!keepListenerRunning)
-                    break;
+                try
+                {
+                    var connection = await _server.AcceptTcpClientAsync();
+                    SpinUpAssociation(connection);
+                    if (!keepListenerRunning || _requestStop)
+                        break;
+                }
+                catch(Exception e)
+                {
+                    Debug.WriteLine(e.Message);
+                }
+
             }
         }
 
@@ -79,7 +91,10 @@ namespace EvilDICOM.Network
 
         public void Stop()
         {
+            _requestStop = true;
             _server.Stop();
+            _started = false;
+            RaisedSCPStopped();
         }
 
         public event StopHandler SCPStopped;

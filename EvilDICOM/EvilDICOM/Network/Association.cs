@@ -147,7 +147,15 @@ namespace EvilDICOM.Network
         public void Release()
         {
             State = NetworkState.CLOSING_ASSOCIATION;
-            Stream.Flush();
+            try
+            {
+                Stream.Flush();
+            }
+            catch(Exception e)
+            {
+                Debug.WriteLine(e);
+            }
+
         }
 
         public void RequestAbort()
