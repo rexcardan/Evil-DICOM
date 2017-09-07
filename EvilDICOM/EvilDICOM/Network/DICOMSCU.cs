@@ -8,6 +8,7 @@ using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.DIMSE.IOD;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Messaging;
+using EvilDICOM.Core.Element;
 
 #endregion
 
@@ -23,7 +24,7 @@ namespace EvilDICOM.Network
         {
             var client = new TcpClient();
             client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
-            var assoc = new Association(this, client) {AeTitle = ae.AeTitle};
+            var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
             PDataMessenger.Send(dimse, assoc);
             assoc.Listen();
         }
@@ -32,7 +33,7 @@ namespace EvilDICOM.Network
         {
             var client = new TcpClient();
             client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
-            var assoc = new Association(this, client) {AeTitle = ae.AeTitle};
+            var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
             PDataMessenger.Send(cFind, assoc);
             var responses = new List<CFindResponse>();
 
@@ -40,7 +41,7 @@ namespace EvilDICOM.Network
             action = (resp, asc) =>
             {
                 responses.Add(resp);
-                if (resp.Status != (ushort) Status.PENDING)
+                if (resp.Status != (ushort)Status.PENDING)
                     DIMSEService.CFindResponseReceived -= action;
             };
             DIMSEService.CFindResponseReceived += action;
@@ -52,7 +53,7 @@ namespace EvilDICOM.Network
         {
             var client = new TcpClient();
             client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
-            var assoc = new Association(this, client) {AeTitle = ae.AeTitle};
+            var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
             PDataMessenger.Send(cMove, assoc);
             var responses = new List<CMoveResponse>();
 
@@ -60,7 +61,7 @@ namespace EvilDICOM.Network
             action = (resp, asc) =>
             {
                 responses.Add(resp);
-                if (resp.Status != (ushort) Status.PENDING)
+                if (resp.Status != (ushort)Status.PENDING)
                     DIMSEService.CMoveResponseReceived -= action;
             };
             DIMSEService.CMoveResponseReceived += action;
@@ -113,11 +114,15 @@ namespace EvilDICOM.Network
         /// <returns>the move response</returns>
         public CMoveResponse SendCMoveImage(Entity daemon, CFindImageIOD iod, string toAETite, ref ushort msgId)
         {
+            System.DateTime lastContact = System.DateTime.Now;
+            int msWait = 2000;
+
             var mr = new ManualResetEvent(false);
             CMoveResponse resp = null;
             var cr = new Services.DIMSEService.DIMSEResponseHandler<CMoveResponse>((res, asc) =>
             {
-                if (!(res.Status == (ushort) Status.PENDING))
+                lastContact = System.DateTime.Now;
+                if (!(res.Status == (ushort)Status.PENDING))
                     mr.Set();
                 resp = res;
             });
@@ -132,7 +137,8 @@ namespace EvilDICOM.Network
             var request = new CMoveRequest(result, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
             DIMSEService.CMoveResponseReceived += cr;
             SendMessage(request, daemon);
-            mr.WaitOne();
+            while ((System.DateTime.Now - lastContact).TotalMilliseconds < msWait)
+                mr.WaitOne(msWait);
             DIMSEService.CMoveResponseReceived -= cr;
             msgId += 2;
             return resp;
@@ -181,7 +187,7 @@ namespace EvilDICOM.Network
         public CMoveResponse SendCMoveImage(Entity daemon, string patientId, string sopInstanceUid, string toAETite,
             ref ushort msgId)
         {
-            var cfindIod = new CFindImageIOD {PatientId = patientId, SOPInstanceUID = sopInstanceUid};
+            var cfindIod = new CFindImageIOD { PatientId = patientId, SOPInstanceUID = sopInstanceUid };
             return SendCMoveImage(daemon, cfindIod, toAETite, ref msgId);
         }
     }
