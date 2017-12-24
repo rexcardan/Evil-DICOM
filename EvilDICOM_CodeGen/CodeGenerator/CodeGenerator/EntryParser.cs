@@ -27,7 +27,7 @@ namespace CodeGenerator
                 Type dataType = null;
 
 
-                var instance = (IDICOMElement) (Activator.CreateInstance(typeof(DICOMObject).Assembly.FullName,
+                var instance = (IDICOMElement)(Activator.CreateInstance(typeof(DICOMObject).Assembly.FullName,
                         $"EvilDICOM.Core.Element.{cName}")
                     .Unwrap());
                 cName = cName == "DateTime" ? "Element.DateTime" : cName;
@@ -43,6 +43,25 @@ namespace CodeGenerator
                 return (cName, parameter);
             }
             return (null, null);
+        }
+
+        internal static Type ParseDataType(DictionaryData entry)
+        {
+            var readVr = new string(entry.VR.Replace("OR", "").Take(2).ToArray());
+            if (readVr != "Se" && !string.IsNullOrEmpty(entry.Keyword))
+            {
+                var cName = GetVRFromAbbreviation(readVr).ToString();
+                Type dataType = null;
+
+
+                var instance = (IDICOMElement)(Activator.CreateInstance(typeof(DICOMObject).Assembly.FullName,
+                        $"EvilDICOM.Core.Element.{cName}")
+                    .Unwrap());
+                cName = cName == "DateTime" ? "Element.DateTime" : cName;
+                dataType = instance.DatType;
+                return dataType;
+            }
+            return null;
         }
 
 

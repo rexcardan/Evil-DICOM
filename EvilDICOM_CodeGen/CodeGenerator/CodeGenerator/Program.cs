@@ -18,17 +18,56 @@ namespace CodeGenerator
     {
         static void Main(string[] args)
         {
-            SOPClassUIDBuilder.BuildSOPClassUIDs(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Helpers\SOPClassUID.cs");
-            SOPClassUIDBuilder.BuildSOPClassDictionary(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Helpers\SOPClassDictionary.cs");
-            SOPClassUIDBuilder.BuildSOPClass(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Enums\SOPClass.cs");
+            //SOPClassUIDBuilder.BuildSOPClassUIDs(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Helpers\SOPClassUID.cs");
+            //SOPClassUIDBuilder.BuildSOPClassDictionary(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Helpers\SOPClassDictionary.cs");
+            //SOPClassUIDBuilder.BuildSOPClass(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Enums\SOPClass.cs");
             var g = GeneratorBuilder.Instance.Generator;
 
             //DICOMDefinitionLoader.UpdateCurrentFromWeb();
-            var dictionary = DICOMDefinitionLoader.LoadCurrentDictionary();
+            var dictionary = DICOMDefinitionLoader.LoadCurrentDictionary().ToList();
+
+            // Get Anonymization tags
+            var anonTags = DICOMDefinitionLoader.LoadAnonymizationTags().ToList();
 
             var forgeNodes = new List<SyntaxNode>();
             var tags = new List<SyntaxNode>();
             var selectors = new List<SyntaxNode>();
+            var anonymizationNodes = new List<SyntaxNode>();
+
+            List<SyntaxNode> anonProfile = new List<SyntaxNode>();
+            anonProfile.Add(g.AssignmentStatement(g.IdentifierName("var profile"), g.IdentifierName("new List<IDICOMElement>()")));
+            foreach (var atag in anonTags)
+            {
+                var action = "AnonymizeAction.REMOVE_ELEMENT";
+                switch (atag.Metadata)
+                {
+                    case "D": action = "AnonymizeAction.DUMMY_DATA"; break;
+                    case "Z":
+                    case "Z/D": action = "AnonymizeAction.NULL_DATA"; break;
+                    case "X/Z":
+                    case "X/D":
+                    case "X/Z/D":
+                    case "X": action = "AnonymizeAction.REMOVE_ELEMENT"; break;
+                    case "K":
+                    case "C": action = "AnonymizeAction.CLEAN"; break;
+                    case "X/Z/U*":
+                    case "U": action = "AnonymizeAction.CLEAN"; break;
+                }
+                atag.VR = dictionary.FirstOrDefault(d => d.Id == atag.Id)?.VR;
+                var entry = g.IdentifierName($"yield return new ConfidentialElement(){{Id=\"{atag.Id}\", ElementName=\"{atag.Name}\", VR=VR.{VRDictionary.GetVRFromAbbreviation(atag.VR)}, Action = {action}}} )");
+                anonProfile.Add(entry);
+            }
+            anonProfile.Add(g.ReturnStatement(g.IdentifierName("profile")));
+
+            var method = g.MethodDeclaration("GenerateProfileElements", null, null, g.IdentifierName("List<IDICOMElement>"), Accessibility.Public, DeclarationModifiers.Static, anonProfile);
+
+            var anonNode = g.ClassDeclaration("AnonStub",
+                   null,
+                   Accessibility.Public,
+                   DeclarationModifiers.Static, null, null, new SyntaxNode[] { method });
+            var anonMethod = g.CompilationUnit(anonNode).NormalizeWhitespace().ToString();
+
+
 
             foreach (var entry in dictionary.Where(d => !string.IsNullOrEmpty(d.Keyword)))
             {
@@ -69,7 +108,7 @@ namespace CodeGenerator
                     var m = g.MethodDeclaration(entry.Keyword, new SyntaxNode[] { parameter }, null, g.IdentifierName(cName), Accessibility.Public,
                          DeclarationModifiers.Static, methStatements);
                     forgeNodes.Add(m);
-                 
+
                 }
             }
 
