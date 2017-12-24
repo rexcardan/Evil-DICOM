@@ -58,9 +58,8 @@ namespace EvilDICOM.Core
             if (dataValue != null)
             {
                 data.SingleValue = dataValue;
-                return data;
             }
-            return null;
+            return data;
         }
 
         /// <summary>
@@ -74,9 +73,8 @@ namespace EvilDICOM.Core
             if (dataArray != null)
             {
                 data.MultipicityValue = dataArray.ToList();
-                return data;
             }
-            return null;
+            return data;
         }
 
         public override string ToString()

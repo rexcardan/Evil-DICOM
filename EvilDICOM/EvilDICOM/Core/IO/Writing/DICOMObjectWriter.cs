@@ -2,6 +2,8 @@
 
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
+using EvilDICOM.Core.Logging;
+using System;
 
 #endregion
 
@@ -30,7 +32,16 @@ namespace EvilDICOM.Core.IO.Writing
                 }
                 else
                 {
-                    DICOMElementWriter.Write(dw, currentSettings, el);
+                    EvilLogger.Instance.Log($"Writing element ${el.Tag.CompleteID}", priority: Enums.LogPriority.NORMAL);
+                    try
+                    {
+                        DICOMElementWriter.Write(dw, currentSettings, el);
+                    }
+                    catch (Exception e)
+                    {
+                        EvilLogger.Instance.Log($"Error writing :  ${el.Tag.CompleteID}\n{e}", priority: Enums.LogPriority.ERROR);
+                        throw e;
+                    }
                 }
             }
         }
