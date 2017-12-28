@@ -55,6 +55,12 @@ namespace EvilDICOM.Network.DIMSE.IOD
             set { _sel.Forge(DF.SeriesNumber()).Data_ = value != null ? new List<int> {(int) value} : new List<int>(); }
         }
 
+        public string PatientId
+        {
+            get { return _sel.Patient​ID != null ? _sel.Patient​ID.Data : null; }
+            set { _sel.Forge(DF.Patient​ID(value)); }
+        }
+
         public int? NumberOfSeriesRelatedInstances
         {
             get

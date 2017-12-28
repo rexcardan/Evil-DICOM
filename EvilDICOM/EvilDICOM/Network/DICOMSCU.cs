@@ -144,6 +144,69 @@ namespace EvilDICOM.Network
             return resp;
         }
 
+        public CMoveResponse SendCMoveSeries(Entity daemon, CFindSeriesIOD iod, string toAETite, ref ushort msgId)
+        {
+            System.DateTime lastContact = System.DateTime.Now;
+            int msWait = 2000;
+
+            var mr = new ManualResetEvent(false);
+            CMoveResponse resp = null;
+            var cr = new Services.DIMSEService.DIMSEResponseHandler<CMoveResponse>((res, asc) =>
+            {
+                lastContact = System.DateTime.Now;
+                if (!(res.Status == (ushort)Status.PENDING))
+                    mr.Set();
+                resp = res;
+            });
+            var result = new CMoveIOD
+            {
+                QueryLevel = QueryLevel.SERIES,
+                SOPInstanceUID = iod.SeriesInstanceUID,
+                PatientId = iod.PatientId,
+                StudyInstanceUID = iod.StudyInstanceUID,
+                SeriesInstanceUID = iod.SeriesInstanceUID
+            };
+            var request = new CMoveRequest(result, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
+            DIMSEService.CMoveResponseReceived += cr;
+            SendMessage(request, daemon);
+            while ((System.DateTime.Now - lastContact).TotalMilliseconds < msWait)
+                mr.WaitOne(msWait);
+            DIMSEService.CMoveResponseReceived -= cr;
+            msgId += 2;
+            return resp;
+        }
+
+        public CMoveResponse SendCMoveStudy(Entity daemon, CFindStudyIOD iod, string toAETite, ref ushort msgId)
+        {
+            System.DateTime lastContact = System.DateTime.Now;
+            int msWait = 2000;
+
+            var mr = new ManualResetEvent(false);
+            CMoveResponse resp = null;
+            var cr = new Services.DIMSEService.DIMSEResponseHandler<CMoveResponse>((res, asc) =>
+            {
+                lastContact = System.DateTime.Now;
+                if (!(res.Status == (ushort)Status.PENDING))
+                    mr.Set();
+                resp = res;
+            });
+            var result = new CMoveIOD
+            {
+                QueryLevel = QueryLevel.STUDY,
+                SOPInstanceUID = iod.StudyInstanceUID,
+                PatientId = iod.PatientId,
+                StudyInstanceUID = iod.StudyInstanceUID,
+            };
+            var request = new CMoveRequest(result, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
+            DIMSEService.CMoveResponseReceived += cr;
+            SendMessage(request, daemon);
+            while ((System.DateTime.Now - lastContact).TotalMilliseconds < msWait)
+                mr.WaitOne(msWait);
+            DIMSEService.CMoveResponseReceived -= cr;
+            msgId += 2;
+            return resp;
+        }
+
         /// <summary>
         /// Emits a CMove operation to an entity which moves an image from the entity to the specified AETitle
         /// </summary>
