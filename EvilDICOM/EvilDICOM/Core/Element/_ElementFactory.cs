@@ -1,8 +1,6 @@
 ﻿#region
 
-using System.Linq;
 using EvilDICOM.Core.Enums;
-using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.IO.Data;
 using EvilDICOM.Core.IO.Reading;

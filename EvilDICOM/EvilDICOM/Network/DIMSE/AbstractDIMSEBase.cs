@@ -6,7 +6,6 @@ using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.IO.Writing;
-using C = EvilDICOM.Network.Enums.CommandField;
 
 #endregion
 

@@ -1,8 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using EvilDICOM.Core.Enums;
-using System.Linq;
 using EvilDICOM.Core.Element;
 
 namespace EvilDICOM.Core.Helpers

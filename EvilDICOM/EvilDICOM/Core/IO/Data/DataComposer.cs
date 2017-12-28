@@ -1,6 +1,5 @@
 ﻿#region
 
-using System.Text;
 using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;

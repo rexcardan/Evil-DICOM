@@ -6,11 +6,7 @@ using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Selection;
 using EvilDICOM.Network.DIMSE.IOD;
 using EvilDICOM.Network.Enums;
-using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using C = EvilDICOM.Network.Enums.CommandField;
 
 namespace EvilDICOM.Network.DIMSE

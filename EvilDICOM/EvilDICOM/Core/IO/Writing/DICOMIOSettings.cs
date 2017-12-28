@@ -1,6 +1,5 @@
 ﻿#region
 
-using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Enums;
 
 #endregion

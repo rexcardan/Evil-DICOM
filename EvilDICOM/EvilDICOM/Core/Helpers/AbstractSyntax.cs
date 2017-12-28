@@ -1,7 +1,6 @@
 ﻿#region
 
 using System.Collections.Generic;
-using EvilDICOM.Core.Selection;
 
 #endregion
 

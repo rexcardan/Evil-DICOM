@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace EvilDICOM.Core.Helpers
+﻿namespace EvilDICOM.Core.Helpers
 {
     /// <summary>
     /// Has helpful methods for converting from an index to x,y,z coordinates in a pixel lattice and visa versa

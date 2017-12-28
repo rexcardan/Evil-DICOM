@@ -8,7 +8,6 @@ using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.DIMSE.IOD;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Messaging;
-using EvilDICOM.Core.Element;
 
 #endregion
 

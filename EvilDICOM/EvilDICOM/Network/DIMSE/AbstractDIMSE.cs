@@ -1,7 +1,6 @@
 ﻿#region
 
 using EvilDICOM.Core;
-using C = EvilDICOM.Network.Enums.CommandField;
 
 #endregion
 
