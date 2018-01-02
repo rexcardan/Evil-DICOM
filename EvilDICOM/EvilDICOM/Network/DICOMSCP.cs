@@ -62,11 +62,7 @@ namespace EvilDICOM.Network
                 Logger.Log(asc.ToString());
                 asc.Listen();
                 Logger.Log("Closing association with {0}.", asc.IpAddress, asc.Port);
-#if NET45
                 client.Close();
-#else
-                client.Dispose();
-#endif
             });
         }
 

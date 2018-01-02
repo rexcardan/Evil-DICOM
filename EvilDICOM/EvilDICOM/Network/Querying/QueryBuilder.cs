@@ -33,8 +33,9 @@ namespace EvilDICOM.Network.Querying
 
         public IEnumerable<CFindStudyIOD> GetStudyUids(string patientId)
         {
+            ushort msgId = 1;
             var query = CFind.CreateStudyQuery(patientId);
-            var studyUids = _scu.GetResponse(query, _scp) // Studies
+            var studyUids = _scu.GetResponses<CFindResponse, CFindRequest>(query, _scp, ref msgId) // Studies
                 .Where(r => r.Status == (ushort) Status.PENDING)
                 .Where(r => r.HasData);
             return studyUids.Select(r => r.GetIOD<CFindStudyIOD>());
@@ -43,11 +44,11 @@ namespace EvilDICOM.Network.Querying
         public IEnumerable<CFindSeriesIOD> GetSeriesUids(IEnumerable<CFindStudyIOD> studies)
         {
             var results = new List<CFindSeriesIOD>();
-
+            ushort msgId = 1;
             foreach (var study in studies)
             {
                 var req = CFind.CreateSeriesQuery(study.StudyInstanceUID);
-                var seriesUids = _scu.GetResponse(req, _scp)
+                var seriesUids = _scu.GetResponses<CFindResponse, CFindRequest>(req, _scp, ref msgId)
                     .Where(r => r.Status == (ushort) Status.PENDING)
                     .Where(r => r.HasData)
                     .Select(r => r.GetIOD<CFindSeriesIOD>());
@@ -64,11 +65,11 @@ namespace EvilDICOM.Network.Querying
         public IEnumerable<CFindImageIOD> GetImageUids(IEnumerable<CFindSeriesIOD> series)
         {
             var results = new List<CFindImageIOD>();
-
+            ushort msgId = 1;
             foreach (var ser in series)
             {
                 var req = CFind.CreateImageQuery(ser.SeriesInstanceUID);
-                var imagesUids = _scu.GetResponse(req, _scp)
+                var imagesUids = _scu.GetResponses<CFindResponse, CFindRequest>(req, _scp, ref msgId)
                     .Where(r => r.Status == (ushort) Status.PENDING)
                     .Where(r => r.HasData)
                     .Select(r => r.GetIOD<CFindImageIOD>())
@@ -86,11 +87,11 @@ namespace EvilDICOM.Network.Querying
         public IEnumerable<T> GetImageUids<T>(IEnumerable<CFindSeriesIOD> series) where T : CFindImageIOD
         {
             var results = new List<T>();
-
+            ushort msgId = 1;
             foreach (var ser in series)
             {
                 var req = CFind.CreateImageQuery(ser.SeriesInstanceUID);
-                var imagesUids = _scu.GetResponse(req, _scp)
+                var imagesUids = _scu.GetResponses<CFindResponse, CFindRequest>(req, _scp, ref msgId)
                     .Where(r => r.Status == (ushort) Status.PENDING)
                     .Where(r => r.HasData)
                     .Select(r => r.GetIOD<T>())
@@ -103,35 +104,6 @@ namespace EvilDICOM.Network.Querying
         public IEnumerable<T> GetImageUids<T>(CFindSeriesIOD series) where T : CFindImageIOD
         {
             return GetImageUids<T>(new[] {series});
-        }
-
-        /// <summary>
-        /// Instructs a C-MOVE operation for an image from the SCP of the QueryBuilder to the input AETitle
-        /// </summary>
-        /// <param name="ir">the C Find iod of the a query (get ImageUids())</param>
-        /// <param name="receivingAETitle">the AE title to send the image to (from the SCP of this query builder)</param>
-        /// <param name="msgId">the message id for this image. It will be incremented for looping operations within this method</param>
-        /// <returns>a C-MOVE response for this operation</returns>
-        public CMoveResponse SendImage(CFindImageIOD ir, string receivingAETitle, ref ushort msgId)
-        {
-            var resp = _scu.SendCMoveImage(_scp, ir, receivingAETitle, ref msgId);
-            return resp;
-        }
-
-        /// <summary>
-        /// Instructs a C-MOVE operation for an image from the SCP of the QueryBuilder to the input AETitle
-        /// </summary>
-        /// <param name="ir">the C Find iod of the a query (get ImageUids())</param>
-        /// <param name="receivingAETitle">the AE title to send the image to (from the SCP of this query builder)</param>
-        /// <param name="msgId">the message id for this image. It will NOT be incremented for looping operations within this method</param>
-        /// <returns>a C-MOVE response for this operation</returns>
-        public async Task<CMoveResponse> SendImageAsync(CFindImageIOD ir, string receivingAETitle, ushort msgId)
-        {
-            return await Task.Run(() =>
-            {
-                var resp = _scu.SendCMoveImage(_scp, ir, receivingAETitle, ref msgId);
-                return resp;
-            });
         }
     }
 }

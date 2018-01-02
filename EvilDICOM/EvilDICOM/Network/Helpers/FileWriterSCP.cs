@@ -2,6 +2,7 @@
 
 using System.IO;
 using System.Threading;
+using System.Threading.Tasks;
 using EvilDICOM.Core.IO.Writing;
 
 #endregion
@@ -23,14 +24,18 @@ namespace EvilDICOM.Network.Helpers
             _storagePath = storageLocation;
             DIMSEService.CStorePayloadAction = (dcm, asc) =>
             {
-                var uid = dcm.GetSelector().SOPInstanceUID.Data;
-                var path = Path.Combine(_storagePath, uid + ".dcm");
-                using (var fs = new FileStream(path, FileMode.Create))
+                return Task.Run(() =>
                 {
-                    Logger.Log("Writing file {0}...", path);
-                    DICOMFileWriter.Write(fs, DICOMIOSettings.Default(), dcm);
-                }
-                return true;
+                    var uid = dcm.GetSelector().SOPInstanceUID.Data;
+                    var path = Path.Combine(_storagePath, uid + ".dcm");
+                    using (var fs = new FileStream(path, FileMode.Create))
+                    {
+                        Logger.Log("Writing file {0}...", path);
+                        DICOMFileWriter.Write(fs, DICOMIOSettings.Default(), dcm);
+                    }
+                    return true;
+                }, _token);
+               
             };
         }
     }

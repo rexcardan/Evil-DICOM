@@ -1,5 +1,6 @@
 ﻿#region
 
+using System;
 using System.Collections.Generic;
 using System.Net;
 using System.Net.Sockets;
@@ -21,50 +22,61 @@ namespace EvilDICOM.Network
 
         public void SendMessage(AbstractDIMSERequest dimse, Entity ae)
         {
-            var client = new TcpClient();
-            client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
-            var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
-            PDataMessenger.Send(dimse, assoc);
-            assoc.Listen();
+            using (var client = new TcpClient())
+            {
+                client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
+                var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
+                PDataMessenger.Send(dimse, assoc);
+                assoc.Listen();
+            }
         }
 
-        public IEnumerable<CFindResponse> GetResponse(CFindRequest cFind, Entity ae)
+        public T GetResponse<T,U>(U request, Entity e, ref ushort msgId) where U : AbstractDIMSERequest where T:AbstractDIMSEResponse
         {
-            var client = new TcpClient();
-            client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
-            var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
-            PDataMessenger.Send(cFind, assoc);
-            var responses = new List<CFindResponse>();
+            System.DateTime lastContact = System.DateTime.Now;
+            int msWait = 2000;
 
-            Services.DIMSEService.DIMSEResponseHandler<CFindResponse> action = null;
-            action = (resp, asc) =>
+            var mr = new ManualResetEvent(false);
+            T resp = null;
+            var cr = new Services.DIMSEService.DIMSEResponseHandler<T>((res, asc) =>
             {
-                responses.Add(resp);
-                if (resp.Status != (ushort)Status.PENDING)
-                    DIMSEService.CFindResponseReceived -= action;
-            };
-            DIMSEService.CFindResponseReceived += action;
-            assoc.Listen();
-            return responses;
+                lastContact = System.DateTime.Now;
+                if (!(res.Status == (ushort)Status.PENDING))
+                    mr.Set();
+                resp = res;
+            });
+
+            DIMSEService.Subscribe(cr);
+            SendMessage(request, e);
+            while ((System.DateTime.Now - lastContact).TotalMilliseconds < msWait)
+                mr.WaitOne(msWait);
+            DIMSEService.Unsubscribe(cr);
+            msgId += 2;
+            return resp;
         }
 
-        public IEnumerable<CMoveResponse> GetResponse(CMoveRequest cMove, Entity ae)
+        public IEnumerable<T> GetResponses<T, U>(U request, Entity e, ref ushort msgId) where U : AbstractDIMSERequest where T : AbstractDIMSEResponse
         {
-            var client = new TcpClient();
-            client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
-            var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
-            PDataMessenger.Send(cMove, assoc);
-            var responses = new List<CMoveResponse>();
+            System.DateTime lastContact = System.DateTime.Now;
+            int msWait = 2000;
 
-            Services.DIMSEService.DIMSEResponseHandler<CMoveResponse> action = null;
-            action = (resp, asc) =>
+            var mr = new ManualResetEvent(false);
+
+            List<T> responses = new List<T>();
+            var cr = new Services.DIMSEService.DIMSEResponseHandler<T>((res, asc) =>
             {
-                responses.Add(resp);
-                if (resp.Status != (ushort)Status.PENDING)
-                    DIMSEService.CMoveResponseReceived -= action;
-            };
-            DIMSEService.CMoveResponseReceived += action;
-            assoc.Listen();
+                lastContact = System.DateTime.Now;
+                if (!(res.Status == (ushort)Status.PENDING))
+                    mr.Set();
+                responses.Add(res);
+            });
+
+            DIMSEService.Subscribe(cr);
+            SendMessage(request, e);
+            while ((System.DateTime.Now - lastContact).TotalMilliseconds < msWait)
+                mr.WaitOne(msWait);
+            DIMSEService.Unsubscribe(cr);
+            msgId += 2;
             return responses;
         }
 
@@ -111,20 +123,8 @@ namespace EvilDICOM.Network
         /// <param name="toAETite">the entity title which will receive the image</param>
         /// <param name="msgId">the message id</param>
         /// <returns>the move response</returns>
-        public CMoveResponse SendCMoveImage(Entity daemon, CFindImageIOD iod, string toAETite, ref ushort msgId)
+        public CMoveResponse SendCMove(Entity daemon, CFindImageIOD iod, string toAETite, ref ushort msgId)
         {
-            System.DateTime lastContact = System.DateTime.Now;
-            int msWait = 2000;
-
-            var mr = new ManualResetEvent(false);
-            CMoveResponse resp = null;
-            var cr = new Services.DIMSEService.DIMSEResponseHandler<CMoveResponse>((res, asc) =>
-            {
-                lastContact = System.DateTime.Now;
-                if (!(res.Status == (ushort)Status.PENDING))
-                    mr.Set();
-                resp = res;
-            });
             var result = new CMoveIOD
             {
                 QueryLevel = QueryLevel.IMAGE,
@@ -134,29 +134,11 @@ namespace EvilDICOM.Network
                 SeriesInstanceUID = iod.SeriesInstanceUID
             };
             var request = new CMoveRequest(result, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
-            DIMSEService.CMoveResponseReceived += cr;
-            SendMessage(request, daemon);
-            while ((System.DateTime.Now - lastContact).TotalMilliseconds < msWait)
-                mr.WaitOne(msWait);
-            DIMSEService.CMoveResponseReceived -= cr;
-            msgId += 2;
-            return resp;
+            return GetResponse<CMoveResponse, CMoveRequest>(request, daemon, ref msgId);
         }
 
-        public CMoveResponse SendCMoveSeries(Entity daemon, CFindSeriesIOD iod, string toAETite, ref ushort msgId)
+        public CMoveResponse SendCMove(Entity daemon, CFindSeriesIOD iod, string toAETite, ref ushort msgId)
         {
-            System.DateTime lastContact = System.DateTime.Now;
-            int msWait = 2000;
-
-            var mr = new ManualResetEvent(false);
-            CMoveResponse resp = null;
-            var cr = new Services.DIMSEService.DIMSEResponseHandler<CMoveResponse>((res, asc) =>
-            {
-                lastContact = System.DateTime.Now;
-                if (!(res.Status == (ushort)Status.PENDING))
-                    mr.Set();
-                resp = res;
-            });
             var result = new CMoveIOD
             {
                 QueryLevel = QueryLevel.SERIES,
@@ -166,29 +148,11 @@ namespace EvilDICOM.Network
                 SeriesInstanceUID = iod.SeriesInstanceUID
             };
             var request = new CMoveRequest(result, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
-            DIMSEService.CMoveResponseReceived += cr;
-            SendMessage(request, daemon);
-            while ((System.DateTime.Now - lastContact).TotalMilliseconds < msWait)
-                mr.WaitOne(msWait);
-            DIMSEService.CMoveResponseReceived -= cr;
-            msgId += 2;
-            return resp;
+            return GetResponse<CMoveResponse, CMoveRequest>(request, daemon, ref msgId);
         }
 
         public CMoveResponse SendCMoveStudy(Entity daemon, CFindStudyIOD iod, string toAETite, ref ushort msgId)
         {
-            System.DateTime lastContact = System.DateTime.Now;
-            int msWait = 2000;
-
-            var mr = new ManualResetEvent(false);
-            CMoveResponse resp = null;
-            var cr = new Services.DIMSEService.DIMSEResponseHandler<CMoveResponse>((res, asc) =>
-            {
-                lastContact = System.DateTime.Now;
-                if (!(res.Status == (ushort)Status.PENDING))
-                    mr.Set();
-                resp = res;
-            });
             var result = new CMoveIOD
             {
                 QueryLevel = QueryLevel.STUDY,
@@ -197,13 +161,7 @@ namespace EvilDICOM.Network
                 StudyInstanceUID = iod.StudyInstanceUID,
             };
             var request = new CMoveRequest(result, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
-            DIMSEService.CMoveResponseReceived += cr;
-            SendMessage(request, daemon);
-            while ((System.DateTime.Now - lastContact).TotalMilliseconds < msWait)
-                mr.WaitOne(msWait);
-            DIMSEService.CMoveResponseReceived -= cr;
-            msgId += 2;
-            return resp;
+            return GetResponse<CMoveResponse, CMoveRequest>(request, daemon, ref msgId);
         }
 
         /// <summary>
@@ -235,22 +193,6 @@ namespace EvilDICOM.Network
             DIMSEService.CGetResponseReceived -= cr;
             msgId += 2;
             return resp;
-        }
-
-        /// <summary>
-        /// Emits a CMove operation to an entity which moves an image from the entity to the specified AETitle
-        /// </summary>
-        /// <param name="scp">the provider which will perform the move</param>
-        /// <param name="sopUid">the uid of the image to be moved</param>
-        /// <param name="patientId">the patient id of the image</param>
-        /// <param name="toAETite">the entity title which will receive the image</param>
-        /// <param name="msgId">the message id</param>
-        /// <returns>the move response</returns>
-        public CMoveResponse SendCMoveImage(Entity daemon, string patientId, string sopInstanceUid, string toAETite,
-            ref ushort msgId)
-        {
-            var cfindIod = new CFindImageIOD { PatientId = patientId, SOPInstanceUID = sopInstanceUid };
-            return SendCMoveImage(daemon, cfindIod, toAETite, ref msgId);
         }
     }
 }
