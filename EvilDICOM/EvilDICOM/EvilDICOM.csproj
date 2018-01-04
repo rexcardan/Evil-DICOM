@@ -254,11 +254,13 @@
     <Compile Include="Network\Processors\ErrorProcessor.cs" />
     <Compile Include="Network\Processors\PDataProcessor.cs" />
     <Compile Include="Network\Processors\PDUProcessor.cs" />
-    <Compile Include="Network\Querying\QueryBuilder.cs" />
+    <Compile Include="Network\SCUOps\CMover.cs" />
+    <Compile Include="Network\SCUOps\CFinder.cs" />
     <Compile Include="Network\Readers\DIMSEReader.cs" />
     <Compile Include="Network\Readers\NetworkBinaryReader.cs" />
     <Compile Include="Network\Readers\PDUReader.cs" />
     <Compile Include="Network\Services\AssociationService.cs" />
+    <Compile Include="Network\Services\CStoreService.cs" />
     <Compile Include="Network\Services\DIMSEService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RT\DoseMatrix.cs" />

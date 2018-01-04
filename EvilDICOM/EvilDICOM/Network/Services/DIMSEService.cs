@@ -29,13 +29,14 @@ namespace EvilDICOM.Network.Services
 
         public DIMSEService()
         {
+            this.CStoreService = new CStoreService(this);
             SetDefaultActions();
         }
 
+        public CStoreService CStoreService { get; private set; }
+
         public Action<CEchoRequest, Association> CEchoRequestReceivedAction { get; private set; }
         public Action<CEchoResponse, Association> CEchoResponseReceivedAction { get; private set; }
-        public Action<CStoreRequest, Association> CStoreRequestReceivedAction { get; private set; }
-        public Action<CStoreResponse, Association> CStoreResponseReceivedAction { get; private set; }
         public Action<CFindRequest, Association> CFindRequestReceivedAction { get; private set; }
         public Action<CFindResponse, Association> CFindResponseReceivedAction { get; private set; }
         public Action<CMoveRequest, Association> CMoveRequestReceivedAction { get; set; }
@@ -43,11 +44,10 @@ namespace EvilDICOM.Network.Services
         public Action<CGetRequest, Association> CGetRequestReceivedAction { get; private set; }
         public Action<CGetResponse, Association> CGetResponseReceivedAction { get; private set; }
 
-        //The only action that can be set outside of the class
-        public Func<DICOMObject, Association, bool> CStorePayloadAction { get; set; }
 
         private void SetDefaultActions()
         {
+            
             CEchoRequestReceivedAction = (cEchoReq, asc) =>
             {
                 asc.Logger.Log("<-- DIMSE" + cEchoReq.GetLogString());
@@ -117,49 +117,7 @@ namespace EvilDICOM.Network.Services
                     AssociationMessenger.SendReleaseRequest(asc);
             };
 
-            CStoreRequestReceivedAction = (req, asc) =>
-            {
-                asc.Logger.Log("<-- DIMSE" + req.GetLogString());
-                req.LogData(asc);
-                asc.LastActive = DateTime.Now;
-                asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
-                var resp = new CStoreResponse(req, Status.SUCCESS);
-                var syntax = req.Data.FindFirst(TagHelper.SOP​Class​UID);
-                RaiseDIMSERequestReceived(req, asc);
 
-                if (syntax != null)
-                    if (asc.PresentationContexts.Any(p => p.Id == req.DataPresentationContextId))
-                    {
-                        try
-                        {
-                            var success = CStorePayloadAction != null ? CStorePayloadAction.Invoke(req.Data, asc):false;
-                            resp.Status = success ? resp.Status : (ushort)Status.FAILURE;
-                            PDataMessenger.Send(resp, asc,
-                                asc.PresentationContexts.First(p => p.Id == req.DataPresentationContextId));
-                        }
-                        catch (Exception e)
-                        {
-                            resp.Status = (ushort)Status.FAILURE;
-                            PDataMessenger.Send(resp, asc);
-                        }
-                    }
-                    else
-                    {
-                        //Abstract syntax not supported
-                        resp.Status = (ushort)Status.FAILURE;
-                        PDataMessenger.Send(resp, asc);
-                    }
-            };
-
-            CStoreResponseReceivedAction = (cStoreResp, asc) =>
-            {
-                asc.Logger.Log("<-- DIMSE" + cStoreResp.GetLogString());
-                cStoreResp.LogData(asc);
-                asc.LastActive = DateTime.Now;
-                RaiseDIMSEResponseReceived(cStoreResp, asc);
-                if (cStoreResp.Status != (ushort)Status.PENDING)
-                    AssociationMessenger.SendReleaseRequest(asc);
-            };
         }
 
         public void Subscribe<T>(DIMSEResponseHandler<T> cr) where T : AbstractDIMSEResponse
@@ -226,7 +184,7 @@ namespace EvilDICOM.Network.Services
         public event DIMSERequestHandler<CStoreRequest> CStoreRequestReceived;
         public event DIMSERequestHandler<CGetRequest> CGetRequestReceived;
 
-        private void RaiseDIMSERequestReceived<T>(T req, Association asc) where T : AbstractDIMSERequest
+        internal void RaiseDIMSERequestReceived<T>(T req, Association asc) where T : AbstractDIMSERequest
         {
             if (typeof(T) == typeof(CEchoRequest))
                 CEchoRequestReceived?.Invoke(req as CEchoRequest, asc);
@@ -248,7 +206,7 @@ namespace EvilDICOM.Network.Services
         public event DIMSEResponseHandler<CStoreResponse> CStoreResponseReceived;
         public event DIMSEResponseHandler<CGetResponse> CGetResponseReceived;
 
-        private void RaiseDIMSEResponseReceived<T>(T resp, Association asc) where T : AbstractDIMSEResponse
+        internal void RaiseDIMSEResponseReceived<T>(T resp, Association asc) where T : AbstractDIMSEResponse
         {
             if (typeof(T) == typeof(CEchoResponse))
                 CEchoResponseReceived?.Invoke(resp as CEchoResponse, asc);

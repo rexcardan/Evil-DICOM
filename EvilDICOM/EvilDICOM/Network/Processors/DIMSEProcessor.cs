@@ -18,7 +18,7 @@ namespace EvilDICOM.Network.Processors
             }
             if (dimse is CStoreRequest)
             {
-                asc.ServiceClass.DIMSEService.CStoreRequestReceivedAction(dimse as CStoreRequest, asc);
+                asc.ServiceClass.DIMSEService.CStoreService.OnRequestRecieved(dimse as CStoreRequest, asc);
                 asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
             }
             if (dimse is CMoveRequest)
@@ -43,7 +43,7 @@ namespace EvilDICOM.Network.Processors
             }
             if (dimse is CStoreResponse)
             {
-                asc.ServiceClass.DIMSEService.CStoreResponseReceivedAction(dimse as CStoreResponse, asc);
+                asc.ServiceClass.DIMSEService.CStoreService.OnResponseRecieved(dimse as CStoreResponse, asc);
                 asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
             }
             if (dimse is CGetResponse)

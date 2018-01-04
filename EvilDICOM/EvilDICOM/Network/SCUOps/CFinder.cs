@@ -10,12 +10,12 @@ using EvilDICOM.Network.Helpers;
 
 #endregion
 
-namespace EvilDICOM.Network.Querying
+namespace EvilDICOM.Network.SCUOps
 {
     /// <summary>
     /// A class to help with CFind and CMove operations
     /// </summary>
-    public class QueryBuilder
+    public class CFinder
     {
         private readonly Entity _scp;
         private readonly DICOMSCU _scu;
@@ -25,13 +25,13 @@ namespace EvilDICOM.Network.Querying
         /// </summary>
         /// <param name="scu">The SCU client which will perform the operations and queries</param>
         /// <param name="scp">the SCP which will send the results</param>
-        public QueryBuilder(DICOMSCU scu, Entity scp)
+        public CFinder(DICOMSCU scu, Entity scp)
         {
             _scu = scu;
             _scp = scp;
         }
 
-        public IEnumerable<CFindStudyIOD> GetStudyUids(string patientId)
+        public IEnumerable<CFindStudyIOD> FindStudies(string patientId)
         {
             ushort msgId = 1;
             var query = CFind.CreateStudyQuery(patientId);
@@ -41,7 +41,7 @@ namespace EvilDICOM.Network.Querying
             return studyUids.Select(r => r.GetIOD<CFindStudyIOD>());
         }
 
-        public IEnumerable<CFindSeriesIOD> GetSeriesUids(IEnumerable<CFindStudyIOD> studies)
+        public IEnumerable<CFindSeriesIOD> FindSeries(IEnumerable<CFindStudyIOD> studies)
         {
             var results = new List<CFindSeriesIOD>();
             ushort msgId = 1;
@@ -57,12 +57,12 @@ namespace EvilDICOM.Network.Querying
             return results;
         }
 
-        public IEnumerable<CFindSeriesIOD> GetSeriesUids(CFindStudyIOD study)
+        public IEnumerable<CFindSeriesIOD> FindSeries(CFindStudyIOD study)
         {
-            return GetSeriesUids(new[] {study});
+            return FindSeries(new[] {study});
         }
 
-        public IEnumerable<CFindImageIOD> GetImageUids(IEnumerable<CFindSeriesIOD> series)
+        public IEnumerable<CFindImageIOD> FindImages(IEnumerable<CFindSeriesIOD> series)
         {
             var results = new List<CFindImageIOD>();
             ushort msgId = 1;
@@ -79,12 +79,12 @@ namespace EvilDICOM.Network.Querying
             return results;
         }
 
-        public IEnumerable<CFindImageIOD> GetImageUids(CFindSeriesIOD series)
+        public IEnumerable<CFindImageIOD> FindImages(CFindSeriesIOD series)
         {
-            return GetImageUids(new[] {series});
+            return FindImages(new[] {series});
         }
 
-        public IEnumerable<T> GetImageUids<T>(IEnumerable<CFindSeriesIOD> series) where T : CFindImageIOD
+        public IEnumerable<T> FindImages<T>(IEnumerable<CFindSeriesIOD> series) where T : CFindImageIOD
         {
             var results = new List<T>();
             ushort msgId = 1;
@@ -101,9 +101,9 @@ namespace EvilDICOM.Network.Querying
             return results;
         }
 
-        public IEnumerable<T> GetImageUids<T>(CFindSeriesIOD series) where T : CFindImageIOD
+        public IEnumerable<T> FindImages<T>(CFindSeriesIOD series) where T : CFindImageIOD
         {
-            return GetImageUids<T>(new[] {series});
+            return FindImages<T>(new[] {series});
         }
     }
 }
