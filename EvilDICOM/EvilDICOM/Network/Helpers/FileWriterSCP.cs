@@ -24,18 +24,14 @@ namespace EvilDICOM.Network.Helpers
             _storagePath = storageLocation;
             DIMSEService.CStorePayloadAction = (dcm, asc) =>
             {
-                return Task.Run(() =>
+                var uid = dcm.GetSelector().SOPInstanceUID.Data;
+                var path = Path.Combine(_storagePath, uid + ".dcm");
+                using (var fs = new FileStream(path, FileMode.Create))
                 {
-                    var uid = dcm.GetSelector().SOPInstanceUID.Data;
-                    var path = Path.Combine(_storagePath, uid + ".dcm");
-                    using (var fs = new FileStream(path, FileMode.Create))
-                    {
-                        Logger.Log("Writing file {0}...", path);
-                        DICOMFileWriter.Write(fs, DICOMIOSettings.Default(), dcm);
-                    }
-                    return true;
-                }, _token);
-               
+                    Logger.Log("Writing file {0}...", path);
+                    DICOMFileWriter.Write(fs, DICOMIOSettings.Default(), dcm);
+                }
+                return true;
             };
         }
     }

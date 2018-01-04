@@ -44,7 +44,7 @@ namespace EvilDICOM.Network.Services
         public Action<CGetResponse, Association> CGetResponseReceivedAction { get; private set; }
 
         //The only action that can be set outside of the class
-        public Func<DICOMObject, Association, Task<bool>> CStorePayloadAction { get; set; }
+        public Func<DICOMObject, Association, bool> CStorePayloadAction { get; set; }
 
         private void SetDefaultActions()
         {
@@ -117,7 +117,7 @@ namespace EvilDICOM.Network.Services
                     AssociationMessenger.SendReleaseRequest(asc);
             };
 
-            CStoreRequestReceivedAction = async (req, asc) =>
+            CStoreRequestReceivedAction = (req, asc) =>
             {
                 asc.Logger.Log("<-- DIMSE" + req.GetLogString());
                 req.LogData(asc);
@@ -132,7 +132,7 @@ namespace EvilDICOM.Network.Services
                     {
                         try
                         {
-                            var success = CStorePayloadAction != null ? await CStorePayloadAction.Invoke(req.Data, asc) : false;
+                            var success = CStorePayloadAction != null ? CStorePayloadAction.Invoke(req.Data, asc):false;
                             resp.Status = success ? resp.Status : (ushort)Status.FAILURE;
                             PDataMessenger.Send(resp, asc,
                                 asc.PresentationContexts.First(p => p.Id == req.DataPresentationContextId));

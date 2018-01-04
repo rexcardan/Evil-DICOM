@@ -22,16 +22,16 @@ namespace EvilDICOM.Network
 
         public void SendMessage(AbstractDIMSERequest dimse, Entity ae)
         {
-            using (var client = new TcpClient())
-            {
-                client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
-                var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
-                PDataMessenger.Send(dimse, assoc);
-                assoc.Listen();
-            }
+            var client = new TcpClient();
+
+            client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
+            var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
+            PDataMessenger.Send(dimse, assoc);
+            assoc.Listen();
+
         }
 
-        public T GetResponse<T,U>(U request, Entity e, ref ushort msgId) where U : AbstractDIMSERequest where T:AbstractDIMSEResponse
+        public T GetResponse<T, U>(U request, Entity e, ref ushort msgId) where U : AbstractDIMSERequest where T : AbstractDIMSEResponse
         {
             System.DateTime lastContact = System.DateTime.Now;
             int msWait = 2000;
@@ -66,9 +66,9 @@ namespace EvilDICOM.Network
             var cr = new Services.DIMSEService.DIMSEResponseHandler<T>((res, asc) =>
             {
                 lastContact = System.DateTime.Now;
-                if (!(res.Status == (ushort)Status.PENDING))
-                    mr.Set();
                 responses.Add(res);
+                if (res.Status != (ushort)Status.PENDING)
+                    mr.Set();
             });
 
             DIMSEService.Subscribe(cr);

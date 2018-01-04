@@ -4,7 +4,7 @@
     public enum Status : ushort
     {
         SUCCESS = 0,
-        WARNING = 1,
+        WARNING = 45056,
         FAILURE = 10,
         FAILURE_UNABLE_TO_PROCESS = 49152,
         FAILURE_UNABLE_TO_FIND = 49153,
