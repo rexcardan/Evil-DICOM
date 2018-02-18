@@ -22,6 +22,7 @@ namespace EvilDICOM.Network.Processors
             var pdata = message.DynPayload as PDataTF;
             var pdatas = new List<PDataTF> {pdata};
             if (!pdata.Items.Any(i => i.Fragment.IsLastItem))
+            {
                 try
                 {
                     pdatas = pdatas.Concat(ReadPDataTFs(asc.Reader)).ToList();
@@ -31,6 +32,7 @@ namespace EvilDICOM.Network.Processors
                     asc.Logger.Log(e.Message);
                     asc.RequestAbort();
                 }
+            }
             if (pdatas.Any(p => p.Items.Any(i => i.Fragment.IsCommandObject)))
             {
                 return ProcessCommand(pdatas, asc);

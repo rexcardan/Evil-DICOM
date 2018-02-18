@@ -29,16 +29,22 @@ namespace EvilDICOM.Network.Messaging
             {
                 asc.Logger.Log("--> DIMSE" + dimse.GetLogString());
                 dimse.LogData(asc);
-                var stream = asc.Stream;
-                pContext =
-                    pContext ?? asc.PresentationContexts.First(a => a.AbstractSyntax == dimse.AffectedSOPClassUID);
-                var pds = GetPDataTFs(dimse, pContext, asc.UserInfo.MaxPDULength);
-                if (pds.Count > 0 && stream.CanWrite)
-                    foreach (var pd in pds)
-                    {
-                        var message = pd.Write();
-                        stream.Write(message, 0, message.Length);
-                    }
+                pContext = pContext ?? asc.PresentationContexts.First(a => a.AbstractSyntax == dimse.AffectedSOPClassUID);
+                var maxPDU = asc.UserInfo.MaxPDULength;
+                WriteDimseToStream(dimse, asc.Stream, pContext, maxPDU);
+            }
+        }
+
+        public static void WriteDimseToStream(AbstractDIMSEBase dimse, Stream stream, PresentationContext pContext, int maxPDULength = 16384)
+        {
+            var pds = GetPDataTFs(dimse, pContext, maxPDULength);
+            if (pds.Count > 0 && stream.CanWrite)
+            {
+                foreach (var pd in pds)
+                {
+                    var message = pd.Write();
+                    stream.Write(message, 0, message.Length);
+                }
             }
         }
 

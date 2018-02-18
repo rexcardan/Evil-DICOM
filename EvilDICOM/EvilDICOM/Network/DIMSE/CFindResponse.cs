@@ -1,7 +1,9 @@
 ﻿#region
 
 using EvilDICOM.Core;
+using EvilDICOM.Core.IO.Writing;
 using EvilDICOM.Network.DIMSE.IOD;
+using System.Linq;
 using C = EvilDICOM.Network.Enums.CommandField;
 
 #endregion
@@ -13,7 +15,18 @@ namespace EvilDICOM.Network.DIMSE
         public CFindResponse(DICOMObject d)
             : base(d)
         {
-            CommandField = (ushort) C.C_FIND_RQ;
+            CommandField = (ushort) C.C_FIND_RP;
+        }
+
+        /// <summary>
+        /// Creates a base C-Find response but more data needs to be supplied. See CFindService response methods
+        /// </summary>
+        /// <param name="req"></param>
+        public CFindResponse(CFindRequest req)
+        {
+            AffectedSOPClassUID = req.AffectedSOPClassUID;
+            CommandField = (ushort)C.C_FIND_RP;
+            MessageIDBeingRespondedTo = req.MessageID;
         }
 
         public T GetIOD<T>() where T : AbstractDIMSEIOD

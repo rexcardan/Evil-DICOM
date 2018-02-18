@@ -1,6 +1,7 @@
 ﻿#region
 
 using EvilDICOM.Core;
+using EvilDICOM.Network.Enums;
 
 #endregion
 
@@ -14,7 +15,7 @@ namespace EvilDICOM.Network.DIMSE
         {
             get
             {
-                return DataSetType != 257; //0x01 0x01
+                return DataSetType != (ushort)CommandDataSetType.EMPTY; //0x01 0x01
             }
         }
 
@@ -24,7 +25,7 @@ namespace EvilDICOM.Network.DIMSE
             set
             {
                 _data = value;
-                DataSetType = value != null ? (ushort) 0 : (ushort) 257;
+                DataSetType = value != null ? (ushort)CommandDataSetType.HAS_DATA : (ushort)CommandDataSetType.EMPTY;
             }
         }
 

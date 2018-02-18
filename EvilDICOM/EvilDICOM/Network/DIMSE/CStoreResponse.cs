@@ -21,8 +21,6 @@ namespace EvilDICOM.Network.DIMSE
             Tag = TagHelper.AffectedSOPInstanceUID
         };
 
-        private readonly ushort _dataSet = 257;
-
         public CStoreResponse()
         {
         }
@@ -38,7 +36,7 @@ namespace EvilDICOM.Network.DIMSE
             AffectedSOPClassUID = req.AffectedSOPClassUID;
             CommandField = (ushort) C.C_STORE_RP;
             MessageIDBeingRespondedTo = req.MessageID;
-            DataSetType = _dataSet;
+            DataSetType = (ushort)CommandDataSetType.EMPTY;
             AffectedSOPInstanceUID = req.AffectedSOPInstanceUID;
             Status = (ushort) status;
             GroupLength = (uint) GroupWriter.WriteGroupBytes(new DICOMObject(Elements.Skip(1).Take(6).ToList()),

@@ -16,8 +16,6 @@ namespace EvilDICOM.Network.DIMSE
 {
     public class CEchoResponse : AbstractDIMSEResponse, IIOD
     {
-        private readonly ushort _dataSet = 257;
-
         /// <summary>
         ///     Used to generate a new Echo Response from an Echo Request
         /// </summary>
@@ -29,7 +27,7 @@ namespace EvilDICOM.Network.DIMSE
             AffectedSOPClassUID = req.AffectedSOPClassUID;
             CommandField = (ushort) C.C_ECHO_RP;
             MessageIDBeingRespondedTo = req.MessageID;
-            DataSetType = _dataSet;
+            DataSetType = (ushort)CommandDataSetType.EMPTY;
             Status = (ushort) status;
             GroupLength = (uint) GroupWriter.WriteGroupBytes(new DICOMObject(Elements.Skip(1).Take(5).ToList()),
                     new DICOMIOSettings {TransferSyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN}, "0000")

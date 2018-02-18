@@ -30,15 +30,15 @@ namespace EvilDICOM.Network.Services
         public DIMSEService()
         {
             this.CStoreService = new CStoreService(this);
+            this.CFindService = new CFindService(this);
             SetDefaultActions();
         }
 
         public CStoreService CStoreService { get; private set; }
+        public CFindService CFindService { get; private set; }
 
         public Action<CEchoRequest, Association> CEchoRequestReceivedAction { get; private set; }
         public Action<CEchoResponse, Association> CEchoResponseReceivedAction { get; private set; }
-        public Action<CFindRequest, Association> CFindRequestReceivedAction { get; private set; }
-        public Action<CFindResponse, Association> CFindResponseReceivedAction { get; private set; }
         public Action<CMoveRequest, Association> CMoveRequestReceivedAction { get; set; }
         public Action<CMoveResponse, Association> CMoveResponseReceivedAction { get; private set; }
         public Action<CGetRequest, Association> CGetRequestReceivedAction { get; private set; }
@@ -84,16 +84,6 @@ namespace EvilDICOM.Network.Services
                 asc.LastActive = DateTime.Now;
                 RaiseDIMSEResponseReceived(cGetRes, asc);
                 if (cGetRes.Status != (ushort)Status.PENDING)
-                    AssociationMessenger.SendReleaseRequest(asc);
-            };
-
-            CFindResponseReceivedAction = (cFindResp, asc) =>
-            {
-                asc.Logger.Log("<-- DIMSE" + cFindResp.GetLogString());
-                asc.LastActive = DateTime.Now;
-                RaiseDIMSEResponseReceived(cFindResp, asc);
-                cFindResp.LogData(asc);
-                if (cFindResp.Status != (ushort)Status.PENDING)
                     AssociationMessenger.SendReleaseRequest(asc);
             };
 

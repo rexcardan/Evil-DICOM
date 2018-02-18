@@ -31,9 +31,15 @@ namespace EvilDICOM.Network.Processors
                 asc.ServiceClass.DIMSEService.CGetRequestReceivedAction(dimse as CGetRequest, asc);
                 asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
             }
+            //C-FIND
             if (dimse is CFindRequest)
             {
-                asc.ServiceClass.DIMSEService.CFindRequestReceivedAction(dimse as CFindRequest, asc);
+                asc.ServiceClass.DIMSEService.CFindService.OnRequestRecieved(dimse as CFindRequest, asc);
+                asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
+            }
+            if (dimse is CFindResponse)
+            {
+                asc.ServiceClass.DIMSEService.CFindService.OnResponseRecieved(dimse as CFindResponse, asc);
                 asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
             }
             if (dimse is CEchoResponse)
@@ -54,11 +60,6 @@ namespace EvilDICOM.Network.Processors
             if (dimse is CMoveResponse)
             {
                 asc.ServiceClass.DIMSEService.CMoveResponseReceivedAction(dimse as CMoveResponse, asc);
-                asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
-            }
-            if (dimse is CFindResponse)
-            {
-                asc.ServiceClass.DIMSEService.CFindResponseReceivedAction(dimse as CFindResponse, asc);
                 asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
             }
         }

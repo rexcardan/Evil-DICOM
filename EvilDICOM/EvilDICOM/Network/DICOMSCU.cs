@@ -10,6 +10,7 @@ using EvilDICOM.Network.DIMSE.IOD;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Messaging;
 using EvilDICOM.Network.SCUOps;
+using EvilDICOM.Core.Enums;
 
 #endregion
 
@@ -21,14 +22,30 @@ namespace EvilDICOM.Network
         {
         }
 
-        public void SendMessage(AbstractDIMSERequest dimse, Entity ae)
+        /// <summary>
+        /// Sends a message to an entity
+        /// </summary>
+        /// <param name="dimse">the message to send</param>
+        /// <param name="ae">the entity to send the message</param>
+        /// <returns>true if message send was success</returns>
+        public bool SendMessage(AbstractDIMSERequest dimse, Entity ae)
         {
             using (var client = new TcpClient())
             {
-                client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
-                var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
-                PDataMessenger.Send(dimse, assoc);
-                assoc.Listen();
+                try
+                {
+                    client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
+                    var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
+                    PDataMessenger.Send(dimse, assoc);
+                    assoc.Listen();
+                    return true;
+                }
+                catch(Exception e)
+                {
+                    Logger.Log($"Could not connect to {ae.AeTitle} @{ae.IpAddress}:{ae.Port}", LogPriority.ERROR);
+                    Logger.Log($"{e.ToString()}", LogPriority.ERROR);
+                    return false;
+                }
             }
         }
 
@@ -77,7 +94,6 @@ namespace EvilDICOM.Network
             var cr = new Services.DIMSEService.DIMSEResponseHandler<T>((res, asc) =>
             {
                 lastContact = System.DateTime.Now;
-                Console.WriteLine($"Adding response {lastContact}");
                 responses.Add(res);
                 if (res.Status != (ushort)Status.PENDING)
                     mr.Set();

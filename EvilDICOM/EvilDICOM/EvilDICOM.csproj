@@ -213,6 +213,7 @@
     <Compile Include="Network\DIMSE\IOD\CMoveIOD.cs" />
     <Compile Include="Network\Enums\AbortReason.cs" />
     <Compile Include="Network\Enums\AbortSource.cs" />
+    <Compile Include="Network\Enums\CommandDataSetType.cs" />
     <Compile Include="Network\Enums\CommandField.cs" />
     <Compile Include="Network\Enums\ItemType.cs" />
     <Compile Include="Network\Enums\MessageType.cs" />
@@ -260,6 +261,7 @@
     <Compile Include="Network\Readers\NetworkBinaryReader.cs" />
     <Compile Include="Network\Readers\PDUReader.cs" />
     <Compile Include="Network\Services\AssociationService.cs" />
+    <Compile Include="Network\Services\CFindService.cs" />
     <Compile Include="Network\Services\CStoreService.cs" />
     <Compile Include="Network\Services\DIMSEService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

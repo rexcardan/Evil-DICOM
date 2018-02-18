@@ -47,7 +47,8 @@ namespace EvilDICOM.Core.IO.Writing
         }
 
         /// <summary>
-        /// Ignores the rule of writing metadata in explicit VR little endian and instead writes all elements with the passed in syntax
+        /// Ignores the rule of writing metadata in explicit VR little endian and instead writes all elements with the same passed in syntax
+        /// Used in PData writing
         /// </summary>
         /// <param name="dw"></param>
         /// <param name="settings"></param>
@@ -59,7 +60,6 @@ namespace EvilDICOM.Core.IO.Writing
             for (var i = 0; i < d.Elements.Count; i++)
             {
                 var el = d.Elements[i];
-                if (!isSequenceItem) TransferSyntaxHelper.SetSyntax(d, settings.TransferSyntax);
                 if (GroupWriter.IsGroupHeader(el))
                 {
                     var skip = GroupWriter.WriteGroup(dw, settings, d, el);

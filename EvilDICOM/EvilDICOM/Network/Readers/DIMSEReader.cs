@@ -38,8 +38,11 @@ namespace EvilDICOM.Network.Readers
             using (var stream = new MemoryStream())
             {
                 foreach (var d in data)
-                foreach (var item in d.Items)
-                    stream.Write(item.Fragment.Data, 0, item.Fragment.Data.Length);
+                {
+                    foreach (var item in d.Items)
+                        stream.Write(item.Fragment.Data, 0, item.Fragment.Data.Length);
+
+                }
                 merged = stream.ToArray();
             }
             return merged;
@@ -49,33 +52,33 @@ namespace EvilDICOM.Network.Readers
         {
             dimse = null;
             var command = dcm.FindFirst(TagHelper.CommandField) as UnsignedShort;
-            var commandField = command != null ? (uint?) command.Data : null;
+            var commandField = command != null ? (uint?)command.Data : null;
             if (commandField != null)
             {
                 switch (commandField)
                 {
-                    case (ushort) CommandField.C_ECHO_RQ:
+                    case (ushort)CommandField.C_ECHO_RQ:
                         dimse = ReadDIMSERequest<CEchoRequest>(dcm);
                         break;
-                    case (ushort) CommandField.C_ECHO_RP:
+                    case (ushort)CommandField.C_ECHO_RP:
                         dimse = ReadDIMSEResponse<CEchoResponse>(dcm);
                         break;
-                    case (ushort) CommandField.C_STORE_RQ:
+                    case (ushort)CommandField.C_STORE_RQ:
                         dimse = ReadDIMSERequest<CStoreRequest>(dcm);
                         break;
-                    case (ushort) CommandField.C_STORE_RP:
+                    case (ushort)CommandField.C_STORE_RP:
                         dimse = ReadDIMSEResponse<CStoreResponse>(dcm);
                         break;
-                    case (ushort) CommandField.C_FIND_RQ:
+                    case (ushort)CommandField.C_FIND_RQ:
                         dimse = ReadDIMSERequest<CFindRequest>(dcm);
                         break;
-                    case (ushort) CommandField.C_FIND_RP:
+                    case (ushort)CommandField.C_FIND_RP:
                         dimse = ReadDIMSEResponse<CFindResponse>(dcm);
                         break;
-                    case (ushort) CommandField.C_MOVE_RQ:
+                    case (ushort)CommandField.C_MOVE_RQ:
                         dimse = ReadDIMSERequest<CMoveRequest>(dcm);
                         break;
-                    case (ushort) CommandField.C_MOVE_RP:
+                    case (ushort)CommandField.C_MOVE_RP:
                         dimse = ReadDIMSEResponse<CMoveResponse>(dcm);
                         break;
                     case (ushort)CommandField.C_GET_RQ:
@@ -93,13 +96,13 @@ namespace EvilDICOM.Network.Readers
         //TODO Merge these methods
         private static T ReadDIMSERequest<T>(DICOMObject dcm) where T : AbstractDIMSERequest
         {
-            var req = (T) Activator.CreateInstance(typeof(T), dcm);
+            var req = (T)Activator.CreateInstance(typeof(T), dcm);
             return req;
         }
 
         private static T ReadDIMSEResponse<T>(DICOMObject dcm) where T : AbstractDIMSEResponse
         {
-            var req = (T) Activator.CreateInstance(typeof(T), dcm);
+            var req = (T)Activator.CreateInstance(typeof(T), dcm);
             return req;
         }
     }
