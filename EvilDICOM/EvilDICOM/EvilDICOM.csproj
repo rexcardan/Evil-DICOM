@@ -264,6 +264,7 @@
     <Compile Include="Network\Services\CFindService.cs" />
     <Compile Include="Network\Services\CStoreService.cs" />
     <Compile Include="Network\Services\DIMSEService.cs" />
+    <Compile Include="Network\Services\Interfaces\IFindService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RT\DoseMatrix.cs" />
     <Compile Include="RT\DoseValue.cs" />
@@ -273,6 +274,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Network\Services\CFind\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

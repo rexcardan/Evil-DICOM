@@ -1,8 +1,10 @@
 ﻿#region
 
 using EvilDICOM.Core;
+using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.IO.Writing;
 using EvilDICOM.Network.DIMSE.IOD;
+using System.Collections.Generic;
 using System.Linq;
 using C = EvilDICOM.Network.Enums.CommandField;
 
@@ -43,6 +45,25 @@ namespace EvilDICOM.Network.DIMSE
                     return new CFindPlanIOD(new DICOMObject(Data.Elements)) as T;
             }
             return null;
+        }
+
+        /// <summary>
+        ///     The order of elements to send in a IIOD packet
+        /// </summary>
+        public override List<IDICOMElement> Elements
+        {
+            get
+            {
+                return new List<IDICOMElement>
+                {
+                    _groupLength,
+                    _affectedSOPClassUID,
+                    _commandField,
+                    _messageIdBeingRespondedTo,
+                    _dataSetType,
+                    _status
+                };
+            }
         }
     }
 }
