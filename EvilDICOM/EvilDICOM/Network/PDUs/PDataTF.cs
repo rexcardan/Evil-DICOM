@@ -34,7 +34,7 @@ namespace EvilDICOM.Network.PDUs
                     settings.TransferSyntax = isCommandObject
                         ? TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN
                         : TransferSyntaxHelper.GetSyntax(context.TransferSyntaxes[0]);
-                    DICOMObjectWriter.Write(dw, settings, dicom);
+                    DICOMObjectWriter.Write(dw, settings, dicom,true);
                     data = stream.ToArray();
                 }
             }

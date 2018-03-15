@@ -185,13 +185,15 @@ namespace EvilDICOM.Core.IO.Reading
         /// <returns>the length</returns>
         public static int ReadBigEndian(byte[] length)
         {
-            Array.Reverse(length);
-            switch (length.Length)
+            var copy = new byte[length.Length];
+            Array.Copy(length, copy, length.Length);
+            Array.Reverse(copy);
+            switch (copy.Length)
             {
                 case 2:
-                    return BitConverter.ToUInt16(length, 0);
+                    return BitConverter.ToUInt16(copy, 0);
                 case 4:
-                    return BitConverter.ToInt32(length, 0);
+                    return BitConverter.ToInt32(copy, 0);
                 default:
                     return 0;
             }
