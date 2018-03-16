@@ -59,6 +59,11 @@ namespace EvilDICOM.Network
             return new CMover(this, callingEntity);
         }
 
+        public CStorer GetCStorer(Entity callingEnity)
+        {
+            return new CStorer(this, callingEnity);
+        }
+
         public T GetResponse<T, U>(U request, Entity e, ref ushort msgId) where U : AbstractDIMSERequest where T : AbstractDIMSEResponse
         {
             System.DateTime lastContact = System.DateTime.Now;

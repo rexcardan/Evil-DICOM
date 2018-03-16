@@ -8,6 +8,8 @@ using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Selection;
 using EvilDICOM.Network.Enums;
 using C = EvilDICOM.Network.Enums.CommandField;
+using EvilDICOM.Core.IO.Writing;
+using System.Linq;
 
 #endregion
 
@@ -62,6 +64,16 @@ namespace EvilDICOM.Network.DIMSE
                 ? sel.NumberOfWarningSuboperations.Data
                 : (ushort) 0;
             Status = sel.Status.Data;
+        }
+
+        public CMoveResponse(CMoveRequest req, Status status)
+        {
+            this.CommandField = (ushort)C.C_MOVE_RP;
+            this.AffectedSOPClassUID = req.AffectedSOPClassUID;
+            this.MessageIDBeingRespondedTo = req.MessageID;
+            this.DataSetType = (ushort)257;
+            this.Status = (ushort)status;
+            this.GroupLength = (uint)GroupWriter.WriteGroupBytes(new DICOMObject(this.Elements.Skip<IDICOMElement>(1).Take<IDICOMElement>(6).ToList<IDICOMElement>()), new DICOMIOSettings(), "0000").Length;
         }
 
         /// <summary>
