@@ -1,6 +1,7 @@
 ﻿using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.DIMSE.IOD;
 using EvilDICOM.Network.Enums;
+using EvilDICOM.Network.Services;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,12 +10,12 @@ using System.Threading.Tasks;
 
 namespace EvilDICOM.Network.SCUOps
 {
-    public class CMover
+    public class CMover : IDisposable
     {
         private DICOMSCU _scu;
         private Entity callingEntity;
 
-        public CMover(DICOMSCU dICOMSCU, Entity callingEntity)
+        public CMover(DICOMSCU dICOMSCU, Entity callingEntity) 
         {
             this._scu = dICOMSCU;
             this.callingEntity = callingEntity;
@@ -69,5 +70,33 @@ namespace EvilDICOM.Network.SCUOps
             var request = new CMoveRequest(result, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
             return _scu.GetResponse<CMoveResponse, CMoveRequest>(request, callingEntity, ref msgId);
         }
+
+        private void DIMSEService_CMoveResponseReceived(CMoveResponse req, Association asc)
+        {
+            if ((int)req.Status != 65280)
+                return;
+            this.OnProgressUpdated((int)req.NumberOfCompletedOps, (int)req.NumberOfRemainingOps, (int)req.NumberOfFailedOps, (int)req.NumberOfWarningOps);
+        }
+
+        public CMover.ProgressUpdatedHandler ProgressUpdated;
+
+        private void OnProgressUpdated(int completed, int remaining, int failed, int warning)
+        {
+            CMover.ProgressUpdatedHandler progressUpdated = this.ProgressUpdated;
+            if (progressUpdated == null)
+                return;
+            int completed1 = completed;
+            int remaining1 = remaining;
+            int failed1 = failed;
+            int warning1 = warning;
+            progressUpdated(completed1, remaining1, failed1, warning1);
+        }
+
+        public void Dispose()
+        {
+            this._scu.DIMSEService.CMoveResponseReceived -= new DIMSEService.DIMSEResponseHandler<CMoveResponse>(this.DIMSEService_CMoveResponseReceived);
+        }
+
+        public delegate void ProgressUpdatedHandler(int completed, int remaining, int failed, int warning);
     }
 }
