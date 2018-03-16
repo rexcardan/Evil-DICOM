@@ -19,6 +19,7 @@ namespace EvilDICOM.Network.SCUOps
         {
             this._scu = dICOMSCU;
             this.callingEntity = callingEntity;
+            this._scu.DIMSEService.CMoveResponseReceived += new DIMSEService.DIMSEResponseHandler<CMoveResponse>(this.DIMSEService_CMoveResponseReceived);
         }
 
         /// <summary>
