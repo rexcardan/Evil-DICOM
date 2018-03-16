@@ -39,7 +39,7 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\..\..\DBFinder\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -194,6 +194,7 @@
     <Compile Include="Network\DIMSE\AbstractDIMSEBase.cs" />
     <Compile Include="Network\DIMSE\AbstractDIMSERequest.cs" />
     <Compile Include="Network\DIMSE\AbstractDIMSEResponse.cs" />
+    <Compile Include="Network\DIMSE\Actions\StorageCommitmentRequest.cs" />
     <Compile Include="Network\DIMSE\CCancel.cs" />
     <Compile Include="Network\DIMSE\CEchoRequest.cs" />
     <Compile Include="Network\DIMSE\CEchoResponse.cs" />
@@ -211,6 +212,9 @@
     <Compile Include="Network\DIMSE\IOD\CFindSeriesIOD.cs" />
     <Compile Include="Network\DIMSE\IOD\CFindStudyIOD.cs" />
     <Compile Include="Network\DIMSE\IOD\CMoveIOD.cs" />
+    <Compile Include="Network\DIMSE\NActionRequest.cs" />
+    <Compile Include="Network\DIMSE\NActionResponse.cs" />
+    <Compile Include="Network\DIMSE\ReqAbstractDIMSEBase.cs" />
     <Compile Include="Network\Enums\AbortReason.cs" />
     <Compile Include="Network\Enums\AbortSource.cs" />
     <Compile Include="Network\Enums\CommandDataSetType.cs" />
@@ -273,10 +277,10 @@
     <Content Include="evilEye.ico" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="packages.config" />
+    <Folder Include="Network\Services\CFind\" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Network\Services\CFind\" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
