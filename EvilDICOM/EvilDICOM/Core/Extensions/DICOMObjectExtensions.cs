@@ -30,5 +30,21 @@ namespace EvilDICOM.Core.Extensions
             }
             return builder.ToString();
         }
+
+        /// <summary>
+        /// Removes all elements beginning with 0002
+        /// </summary>
+        /// <param name="dcm">DICOM object containing metadata header</param>
+        public static void RemoveMetaHeader(this DICOMObject dcm)
+        {
+            string _metaGroup = "0002";
+            dcm.Elements
+                .Where(e => e.Tag.Group == _metaGroup)
+                .ToList()
+                .ForEach(e=>
+                {
+                    dcm.Elements.Remove(e);
+                });
+        }
     }
 }

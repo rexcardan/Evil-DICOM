@@ -1,4 +1,5 @@
 ﻿using EvilDICOM.Core;
+using EvilDICOM.Core.Extensions;
 using EvilDICOM.Core.Logging;
 using EvilDICOM.Network.DIMSE;
 using System;
@@ -30,6 +31,7 @@ namespace EvilDICOM.Network.SCUOps
         /// <returns>a C-Store response of the operation</returns>
         public CStoreResponse SendCStore(DICOMObject dcm, ref ushort msgId)
         {
+            dcm.RemoveMetaHeader();
             var request = GenerateCStoreRequest(dcm, msgId);
             return _scu.GetResponse<CStoreResponse, CStoreRequest>(request, callingEntity, ref msgId);
         }
