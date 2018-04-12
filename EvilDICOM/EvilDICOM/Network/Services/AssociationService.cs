@@ -45,16 +45,16 @@ namespace EvilDICOM.Network.Services
                 {
                     var accept = Accept.Generate(req, ctxs);
                     asc.UserInfo = req.UserInfo;
-                    asc.State = NetworkState.ASSOCIATION_ESTABLISHED_WAITING_ON_DATA;
                     asc.LastActive = DateTime.Now;
                     asc.PresentationContexts = ctxs; //Simplified agreed contexts
                     AssociationMessenger.SendAccept(accept, asc);
+                    asc.State = NetworkState.ASSOCIATION_ESTABLISHED_WAITING_ON_DATA;
                 }
                 else
                 {
-                    asc.State = NetworkState.CLOSING_ASSOCIATION;
                     asc.LastActive = DateTime.Now;
                     AssociationMessenger.SendReject(asc);
+                    asc.State = NetworkState.CLOSING_ASSOCIATION;
                 }
             };
 
@@ -66,15 +66,7 @@ namespace EvilDICOM.Network.Services
                 if (asc.PresentationContexts.Any())
                 {
                     asc.UserInfo = acc.UserInfo;
-
                     asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
-                    while (asc.OutboundMessages.Any())
-                        if (asc.State == NetworkState.TRANSPORT_CONNECTION_OPEN)
-                        {
-                            AbstractDIMSEBase dimse;
-                            if (asc.OutboundMessages.TryDequeue(out dimse))
-                                PDataMessenger.Send(dimse, asc);
-                        }
                 }
                 else
                 {
@@ -101,6 +93,7 @@ namespace EvilDICOM.Network.Services
             {
                 asc.Logger.Log("<-- " + rel);
                 RaiseReleaseResponseReceived(rel, asc);
+                asc.State = NetworkState.CLOSING_ASSOCIATION;
                 asc.Release();
             };
         }

@@ -61,16 +61,20 @@ namespace EvilDICOM.Network.Messaging
             request.UserInfo = new UserInfo();
             asc.Logger.Log("--> " + request);
             asc.SendMessage(request);
+            asc.State = NetworkState.ASSOCIATION_ESTABLISHED_WAITING_ON_DATA;
         }
 
         public static void SendReleaseRequest(Association asc)
         {
             var req = new ReleaseRequest();
-            asc.State = NetworkState.AWAITING_RELEASE_RESPONSE;
             asc.Logger.Log("-->" + req);
             var message = req.Write();
             if (asc.Stream.CanWrite)
+            {
                 asc.Stream.Write(message, 0, message.Length);
+                asc.State = NetworkState.AWAITING_RELEASE_RESPONSE;
+            }
+
         }
 
         public static void SendReleaseResponse(Association asc)
@@ -79,7 +83,10 @@ namespace EvilDICOM.Network.Messaging
             asc.Logger.Log("-->" + resp);
             var message = resp.Write();
             if (asc.Stream.CanWrite)
+            {
                 asc.Stream.Write(message, 0, message.Length);
+                asc.State = NetworkState.CLOSING_ASSOCIATION;
+            }  
         }
 
         public static void SendAbort(Association asc, AbortSource abortSource = AbortSource.DICOM_UL_SERV_PROVIDER,

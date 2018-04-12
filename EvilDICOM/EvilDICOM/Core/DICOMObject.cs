@@ -48,6 +48,16 @@ namespace EvilDICOM.Core
         }
 
         /// <summary>
+        /// Contructor with elements
+        /// </summary>
+        /// <param name="elements">a param array of elements to be included in the object</param>
+        public DICOMObject(params IDICOMElement[] elements)
+        {
+            _elements = elements.ToList();
+            _elements.SortByTagID();
+        }
+
+        /// <summary>
         ///     The list of first level DICOM elements inside this DICOM object
         /// </summary>
         public List<IDICOMElement> Elements
