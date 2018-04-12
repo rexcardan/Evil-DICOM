@@ -55,5 +55,7 @@ namespace EvilDICOM.Core.Helpers
             RTIonBeamsTreatmentRecordStorage,
             RTIonPlanStorage
         };
+
+        public static string StorageCommitment_Push = "1.2.840.10008.1.20.1";
     }
 }

@@ -5,6 +5,7 @@ using System.Collections.Concurrent;
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
+using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using EvilDICOM.Core.Logging;
@@ -22,21 +23,31 @@ namespace EvilDICOM.Network
 {
     public class Association
     {
+        private TcpClient _client;
         private bool _abortRequested;
         private bool _cancelRequested;
 
         public Association(DICOMServiceClass serviceClass, TcpClient client)
         {
+            _client = client;
             ServiceClass = serviceClass;
             Stream = new BufferedStream(client.GetStream());
             Reader = new NetworkBinaryReader(Stream);
             PresentationContexts = new List<PresentationContext>();
-            IpAddress = ((IPEndPoint) client.Client.RemoteEndPoint).Address.ToString();
-            Port = ((IPEndPoint) client.Client.RemoteEndPoint).Port;
+            IpAddress = ((IPEndPoint)client.Client.RemoteEndPoint).Address.ToString();
+            Port = ((IPEndPoint)client.Client.RemoteEndPoint).Port;
             PDUProcessor = new PDUProcessor();
             PDataProcessor = new PDataProcessor();
             State = NetworkState.IDLE;
             OutboundMessages = new ConcurrentQueue<AbstractDIMSEBase>();
+        }
+
+        public bool IsClientConnected
+        {
+            get
+            {
+                return _client != null && _client.Connected;
+            }
         }
 
         public DICOMServiceClass ServiceClass { get; private set; }
@@ -68,7 +79,16 @@ namespace EvilDICOM.Network
         public ConcurrentQueue<AbstractDIMSEBase> OutboundMessages { get; set; }
         public BufferedStream Stream { get; private set; }
         public NetworkBinaryReader Reader { get; private set; }
-        public NetworkState State { get; set; }
+        private NetworkState state;
+        public NetworkState State
+        {
+            get { return state; }
+            set
+            {
+                Logger.Log($"|-----{value}-----|");
+                state = value;
+            }
+        }
 
         public void Listen(TimeSpan? maxWaitTime = null)
         {
@@ -84,14 +104,38 @@ namespace EvilDICOM.Network
                 }
                 if (_cancelRequested) HandleCancel();
 
-                var message = Read();
-                if (message != null)
+                if(State != NetworkState.CLOSING_ASSOCIATION &&
+                   State != NetworkState.TRANSPORT_CONNECTION_OPEN)
                 {
-                    clock.Restart();
-                    Process(message);
-                    Stream.Flush();
-                    clock.Restart();
+                    var message = Read();
+                    if (message != null)
+                    {
+                        clock.Restart();
+                        Process(message);
+                        Stream.Flush();
+                        clock.Restart();
+                    }
                 }
+
+                if(State == NetworkState.TRANSPORT_CONNECTION_OPEN && !OutboundMessages.IsEmpty)
+                {
+                    while (OutboundMessages.Any())
+                        if (State == NetworkState.TRANSPORT_CONNECTION_OPEN)
+                        {
+                            AbstractDIMSEBase dimse;
+                            if (OutboundMessages.TryDequeue(out dimse))
+                                PDataMessenger.Send(dimse, this);
+                        }
+                }
+
+                if (!IsClientConnected)
+                {
+                    Logger.Log("Connection closed - ending association."); break;
+                }
+            }
+            if (State != NetworkState.CLOSING_ASSOCIATION)
+            {
+                Logger.Log("Network timeout - closing association.");
             }
         }
 
@@ -146,12 +190,11 @@ namespace EvilDICOM.Network
 
         public void Release()
         {
-            State = NetworkState.CLOSING_ASSOCIATION;
             try
             {
                 Stream.Flush();
             }
-            catch(Exception e)
+            catch (Exception e)
             {
                 Debug.WriteLine(e);
             }

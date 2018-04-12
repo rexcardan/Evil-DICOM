@@ -3,12 +3,14 @@ using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.IO.Writing;
+using EvilDICOM.Core.Selection;
 using EvilDICOM.Network.Enums;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static EvilDICOM.Network.Enums.CommandField;
 
 namespace EvilDICOM.Network.DIMSE
 {
@@ -16,8 +18,21 @@ namespace EvilDICOM.Network.DIMSE
     {
         public NActionRequest()
         {
-            CommandField = 0x0130;
+            CommandField = (ushort)N_ACTION_RQ;
             DataSetType = (ushort)CommandDataSetType.EMPTY;
+        }
+
+        public NActionRequest(DICOMObject d)
+        {
+            CommandField = (ushort)N_ACTION_RQ;
+            var sel = new DICOMSelector(d);
+            GroupLength = sel.CommandGroupLength.Data;
+            RequestedSOPClassUID = sel.RequestedSOPClassUID.Data;
+            RequestedSOPInstanceUID = sel.RequestedSOPInstanceUID.Data;
+            CommandField = sel.CommandField.Data;
+            MessageID = sel.MessageID.Data;
+            DataSetType = sel.CommandDataSetType.Data;
+            ActionTypeID = sel.ActionTypeID.Data;
         }
 
         protected UniqueIdentifier _requestedSOPClassUID = new UniqueIdentifier { Tag = TagHelper.RequestedSOPClassUID };
@@ -29,7 +44,6 @@ namespace EvilDICOM.Network.DIMSE
         }
 
         protected UniqueIdentifier _requestedSOPInstanceUID = new UniqueIdentifier { Tag = TagHelper.RequestedSOPInstanceUID };
-
         public string RequestedSOPInstanceUID
         {
             get { return _requestedSOPInstanceUID.Data; }
@@ -37,7 +51,6 @@ namespace EvilDICOM.Network.DIMSE
         }
 
         protected UnsignedShort _actionTypeId = new UnsignedShort { Tag = TagHelper.ActionTypeID };
-
         public ushort ActionTypeID
         {
             get { return _actionTypeId.Data; }

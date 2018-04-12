@@ -15,8 +15,8 @@ namespace EvilDICOM.Network.PDUs.Items
         public static void AssertItemType(DICOMBinaryReader dr, string itemName, ItemType itemType)
         {
             var header = dr.Peek(1)[0];
-            if (header != (byte) itemType)
-                throw new Exception();
+            if (header != (byte)itemType)
+                throw new FormatException($"Could not read {itemName} from DICOM stream");
         }
 
         private static string ReadUIDItem(DICOMBinaryReader dr, string itemName, ItemType iType)
@@ -56,6 +56,11 @@ namespace EvilDICOM.Network.PDUs.Items
         public static string ReadImplementationVersion(DICOMBinaryReader dr)
         {
             return ReadUIDItem(dr, "Implementation Version", ItemType.IMPLEMENTATION_VERSION_NAME);
+        }
+
+        private static string ReadSCPSCURoleSelection(DICOMBinaryReader dr)
+        {
+            return ReadUIDItem(dr, "SCU/SCP Role", ItemType.SCPSCU_ROLE_SELECTION);
         }
 
         public static int? ReadMaxLength(DICOMBinaryReader dr)
@@ -109,7 +114,7 @@ namespace EvilDICOM.Network.PDUs.Items
             {
                 pc.Id = dr.Take(1)[0];
                 dr.Skip(1); //Reserved Null Byte
-                pc.Reason = (PresentationContextReason) Enum.ToObject(typeof(PresentationContextReason), dr.Take(1)[0]);
+                pc.Reason = (PresentationContextReason)Enum.ToObject(typeof(PresentationContextReason), dr.Take(1)[0]);
                 dr.Skip(1); //Reserved Null Byte
                 if (requestType)
                     pc.AbstractSyntax = ReadAbstractSyntax(dr).Trim();
@@ -137,11 +142,22 @@ namespace EvilDICOM.Network.PDUs.Items
             var length = LengthReader.ReadBigEndian(dr, 2);
             if (length > 0)
             {
-                ui.MaxPDULength = (int) ReadMaxLength(dr);
+                ui.MaxPDULength = (int)ReadMaxLength(dr);
+
+                if (dr.StreamPosition >= dr.StreamLength) { return ui; }
                 ui.ImplementationUID = ReadImplementationClassUID(dr);
-                if (dr.Peek(1)[0] == (byte) ItemType.ASYNCHRONOUS_OPERATIONS_WINDOW)
+
+                if (dr.StreamPosition >= dr.StreamLength) { return ui; }
+                if (dr.Peek(1)[0] == (byte)ItemType.ASYNCHRONOUS_OPERATIONS_WINDOW)
                     ui.AsynchronousOperations = ReadAsyncOperations(dr);
-                ui.ImplementationVersion = ReadImplementationVersion(dr);
+
+                if (dr.StreamPosition >= dr.StreamLength) { return ui; }
+                if (dr.Peek(1)[0] == (byte)ItemType.IMPLEMENTATION_VERSION_NAME)
+                    ui.ImplementationVersion = ReadImplementationVersion(dr);
+
+                if (dr.StreamPosition >= dr.StreamLength) { return ui; }
+                if (dr.Peek(1)[0] == (byte)ItemType.SCPSCU_ROLE_SELECTION)
+                    ui.ImplementationVersion = ReadSCPSCURoleSelection(dr);
             }
             return ui;
         }

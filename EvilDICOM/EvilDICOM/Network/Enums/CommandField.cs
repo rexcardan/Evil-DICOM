@@ -13,7 +13,10 @@
         C_ECHO_RP = 32816,
         C_STORE_RP = 32769,
         C_CANCEL = 4095,
-        N_ACTION_RQ = 304,
-        N_ACTION_RP = 8130
+        N_ACTION_RQ = 0x0130,
+        N_ACTION_RP = 0x8130,
+        N_EVENT_REPORT_RQ = 0x0100,
+        N_EVENT_REPORT_RP = 0x8100
+
     }
 }

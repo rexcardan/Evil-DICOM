@@ -31,11 +31,17 @@ namespace EvilDICOM.Network.Services
         {
             this.CStoreService = new CStoreService(this);
             this.CFindService = new CFindService(this);
+            this.NActionService = new NActionService(this);
+            this.NEventReportService = new NEventReportService(this);
+            this.StorageCommitmentService = new StorageCommitmentService(this);
             SetDefaultActions();
         }
 
         public CStoreService CStoreService { get; private set; }
         public CFindService CFindService { get; private set; }
+        public NActionService NActionService { get; private set; }
+        public NEventReportService NEventReportService { get; private set; }
+        public StorageCommitmentService StorageCommitmentService { get; private set; }
 
         public Action<CEchoRequest, Association> CEchoRequestReceivedAction { get; private set; }
         public Action<CEchoResponse, Association> CEchoResponseReceivedAction { get; private set; }
@@ -122,6 +128,10 @@ namespace EvilDICOM.Network.Services
                 CStoreResponseReceived += (cr as DIMSEResponseHandler<CStoreResponse>);
             if (typeof(T) == typeof(CGetResponse))
                 CGetResponseReceived += (cr as DIMSEResponseHandler<CGetResponse>);
+            if (typeof(T) == typeof(NActionResponse))
+                NActionResponseReceived += (cr as DIMSEResponseHandler<NActionResponse>);
+            if (typeof(T) == typeof(NEventReportResponse))
+                NEventReportResponseReceived += (cr as DIMSEResponseHandler<NEventReportResponse>);
         }
 
         public void Unsubscribe<T>(DIMSEResponseHandler<T> cr) where T : AbstractDIMSEResponse
@@ -136,6 +146,10 @@ namespace EvilDICOM.Network.Services
                 CStoreResponseReceived -= (cr as DIMSEResponseHandler<CStoreResponse>);
             if (typeof(T) == typeof(CGetResponse))
                 CGetResponseReceived -= (cr as DIMSEResponseHandler<CGetResponse>);
+            if (typeof(T) == typeof(NActionResponse))
+                NActionResponseReceived -= (cr as DIMSEResponseHandler<NActionResponse>);
+            if (typeof(T) == typeof(NEventReportResponse))
+                NEventReportResponseReceived -= (cr as DIMSEResponseHandler<NEventReportResponse>);
         }
 
         public void Subscribe<T>(DIMSERequestHandler<T> cr) where T : AbstractDIMSERequest
@@ -150,6 +164,10 @@ namespace EvilDICOM.Network.Services
                 CStoreRequestReceived += (cr as DIMSERequestHandler<CStoreRequest>);
             if (typeof(T) == typeof(CGetRequest))
                 CGetRequestReceived += (cr as DIMSERequestHandler<CGetRequest>);
+            if (typeof(T) == typeof(NActionRequest))
+                NActionRequestRecieved += (cr as DIMSERequestHandler<NActionRequest>);
+            if (typeof(T) == typeof(NEventReportRequest))
+                NEventReportRequestRecieved += (cr as DIMSERequestHandler<NEventReportRequest>);
         }
 
         public void Unsubscribe<T>(DIMSERequestHandler<T> cr) where T : AbstractDIMSERequest
@@ -164,6 +182,10 @@ namespace EvilDICOM.Network.Services
                 CStoreRequestReceived -= (cr as DIMSERequestHandler<CStoreRequest>);
             if (typeof(T) == typeof(CGetRequest))
                 CGetRequestReceived -= (cr as DIMSERequestHandler<CGetRequest>);
+            if (typeof(T) == typeof(NActionRequest))
+                NActionRequestRecieved -= (cr as DIMSERequestHandler<NActionRequest>);
+            if (typeof(T) == typeof(NEventReportRequest))
+                NEventReportRequestRecieved -= (cr as DIMSERequestHandler<NEventReportRequest>);
         }
 
         //---------------DIMSE REQUESTS----------------------
@@ -173,6 +195,8 @@ namespace EvilDICOM.Network.Services
         public event DIMSERequestHandler<CMoveRequest> CMoveRequestReceived;
         public event DIMSERequestHandler<CStoreRequest> CStoreRequestReceived;
         public event DIMSERequestHandler<CGetRequest> CGetRequestReceived;
+        public event DIMSERequestHandler<NActionRequest> NActionRequestRecieved;
+        public event DIMSERequestHandler<NEventReportRequest> NEventReportRequestRecieved;
 
         internal void RaiseDIMSERequestReceived<T>(T req, Association asc) where T : AbstractDIMSERequest
         {
@@ -186,6 +210,10 @@ namespace EvilDICOM.Network.Services
                 CStoreRequestReceived?.Invoke(req as CStoreRequest, asc);
             if (typeof(T) == typeof(CGetRequest))
                 CGetRequestReceived?.Invoke(req as CGetRequest, asc);
+            if (typeof(T) == typeof(NActionRequest))
+                NActionRequestRecieved?.Invoke(req as NActionRequest, asc);
+            if (typeof(T) == typeof(NEventReportRequest))
+                NEventReportRequestRecieved?.Invoke(req as NEventReportRequest, asc);
         }
 
         //----------------DIMSE RESPONSES-------------------------
@@ -195,6 +223,8 @@ namespace EvilDICOM.Network.Services
         public event DIMSEResponseHandler<CMoveResponse> CMoveResponseReceived;
         public event DIMSEResponseHandler<CStoreResponse> CStoreResponseReceived;
         public event DIMSEResponseHandler<CGetResponse> CGetResponseReceived;
+        public event DIMSEResponseHandler<NActionResponse> NActionResponseReceived;
+        public event DIMSEResponseHandler<NEventReportResponse> NEventReportResponseReceived;
 
         internal void RaiseDIMSEResponseReceived<T>(T resp, Association asc) where T : AbstractDIMSEResponse
         {
@@ -208,6 +238,10 @@ namespace EvilDICOM.Network.Services
                 CStoreResponseReceived?.Invoke(resp as CStoreResponse, asc);
             if (typeof(T) == typeof(CGetResponse))
                 CGetResponseReceived?.Invoke(resp as CGetResponse, asc);
+            if (typeof(T) == typeof(NActionResponse))
+                NActionResponseReceived?.Invoke(resp as NActionResponse, asc);
+            if (typeof(T) == typeof(NEventReportResponse))
+                NEventReportResponseReceived?.Invoke(resp as NEventReportResponse, asc);
         }
     }
 }

@@ -51,52 +51,65 @@ namespace EvilDICOM.Network.Readers
         public static bool TryReadDIMSE(DICOMObject dcm, out AbstractDIMSE dimse)
         {
             dimse = null;
-            var command = dcm.FindFirst(TagHelper.CommandField) as UnsignedShort;
-            var commandField = command != null ? (uint?)command.Data : null;
-            if (commandField != null)
+            try
             {
-                switch (commandField)
+                var command = dcm.FindFirst(TagHelper.CommandField) as UnsignedShort;
+                var commandField = command != null ? (uint?)command.Data : null;
+                if (commandField != null)
                 {
-                    case (ushort)CommandField.C_ECHO_RQ:
-                        dimse = ReadDIMSERequest<CEchoRequest>(dcm);
-                        break;
-                    case (ushort)CommandField.C_ECHO_RP:
-                        dimse = ReadDIMSEResponse<CEchoResponse>(dcm);
-                        break;
-                    case (ushort)CommandField.C_STORE_RQ:
-                        dimse = ReadDIMSERequest<CStoreRequest>(dcm);
-                        break;
-                    case (ushort)CommandField.C_STORE_RP:
-                        dimse = ReadDIMSEResponse<CStoreResponse>(dcm);
-                        break;
-                    case (ushort)CommandField.C_FIND_RQ:
-                        dimse = ReadDIMSERequest<CFindRequest>(dcm);
-                        break;
-                    case (ushort)CommandField.C_FIND_RP:
-                        dimse = ReadDIMSEResponse<CFindResponse>(dcm);
-                        break;
-                    case (ushort)CommandField.C_MOVE_RQ:
-                        dimse = ReadDIMSERequest<CMoveRequest>(dcm);
-                        break;
-                    case (ushort)CommandField.C_MOVE_RP:
-                        dimse = ReadDIMSEResponse<CMoveResponse>(dcm);
-                        break;
-                    case (ushort)CommandField.C_GET_RQ:
-                        dimse = ReadDIMSERequest<CGetRequest>(dcm);
-                        break;
-                    case (ushort)CommandField.C_GET_RP:
-                        dimse = ReadDIMSEResponse<CGetResponse>(dcm);
-                        break;
-                    case (ushort)CommandField.N_ACTION_RQ:
-                        dimse = ReadDIMSERequest<NActionRequest>(dcm);
-                        break;
-                    case (ushort)CommandField.N_ACTION_RP:
-                        dimse = ReadDIMSEResponse<NActionResponse>(dcm);
-                        break;
+                    switch (commandField)
+                    {
+                        case (ushort)CommandField.C_ECHO_RQ:
+                            dimse = ReadDIMSERequest<CEchoRequest>(dcm);
+                            break;
+                        case (ushort)CommandField.C_ECHO_RP:
+                            dimse = ReadDIMSEResponse<CEchoResponse>(dcm);
+                            break;
+                        case (ushort)CommandField.C_STORE_RQ:
+                            dimse = ReadDIMSERequest<CStoreRequest>(dcm);
+                            break;
+                        case (ushort)CommandField.C_STORE_RP:
+                            dimse = ReadDIMSEResponse<CStoreResponse>(dcm);
+                            break;
+                        case (ushort)CommandField.C_FIND_RQ:
+                            dimse = ReadDIMSERequest<CFindRequest>(dcm);
+                            break;
+                        case (ushort)CommandField.C_FIND_RP:
+                            dimse = ReadDIMSEResponse<CFindResponse>(dcm);
+                            break;
+                        case (ushort)CommandField.C_MOVE_RQ:
+                            dimse = ReadDIMSERequest<CMoveRequest>(dcm);
+                            break;
+                        case (ushort)CommandField.C_MOVE_RP:
+                            dimse = ReadDIMSEResponse<CMoveResponse>(dcm);
+                            break;
+                        case (ushort)CommandField.C_GET_RQ:
+                            dimse = ReadDIMSERequest<CGetRequest>(dcm);
+                            break;
+                        case (ushort)CommandField.C_GET_RP:
+                            dimse = ReadDIMSEResponse<CGetResponse>(dcm);
+                            break;
+                        case (ushort)CommandField.N_ACTION_RQ:
+                            dimse = ReadDIMSERequest<NActionRequest>(dcm);
+                            break;
+                        case (ushort)CommandField.N_ACTION_RP:
+                            dimse = ReadDIMSEResponse<NActionResponse>(dcm);
+                            break;
+                        case (ushort)CommandField.N_EVENT_REPORT_RQ:
+                            dimse = ReadDIMSERequest<NEventReportRequest>(dcm);
+                            break;
+                        case (ushort)CommandField.N_EVENT_REPORT_RP:
+                            dimse = ReadDIMSEResponse<NEventReportResponse>(dcm);
+                            break;
+                    }
+                    return true;
                 }
-                return true;
+                else { return false; } // No command field
             }
-            return false;
+            catch(Exception e)
+            {
+                return false;
+            }
         }
 
         //TODO Merge these methods

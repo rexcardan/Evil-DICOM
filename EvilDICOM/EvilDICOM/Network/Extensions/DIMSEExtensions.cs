@@ -15,9 +15,16 @@ namespace EvilDICOM.Network.Extensions
                 var abd = dimse as AbstractDIMSE;
                 if (abd.HasData)
                 {
-                    foreach (var el in abd.Data.Elements)
-                        asc.Logger.Log(el);
-                    asc.Logger.Log(""); //Space
+                    if (abd.Data == null)
+                    {
+                        asc.Logger.Log("Expected data but no data present!");
+                    }
+                    else
+                    {
+                        foreach (var el in abd.Data.Elements)
+                            asc.Logger.Log(el);
+                        asc.Logger.Log(""); //Space
+                    }
                 }
             }
         }

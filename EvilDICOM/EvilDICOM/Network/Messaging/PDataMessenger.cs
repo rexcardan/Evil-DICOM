@@ -25,6 +25,11 @@ namespace EvilDICOM.Network.Messaging
                 asc.OutboundMessages.Enqueue(dimse);
                 AssociationMessenger.SendRequest(asc, dimse.AffectedSOPClassUID);
             }
+            else if (!asc.IsClientConnected)
+            {
+                //Connection lost
+                asc.Logger.Log("TCP connection has been lost. Ending association");     
+            }
             else
             {
                 asc.Logger.Log("--> DIMSE" + dimse.GetLogString());
@@ -32,6 +37,18 @@ namespace EvilDICOM.Network.Messaging
                 pContext = pContext ?? asc.PresentationContexts.First(a => a.AbstractSyntax == dimse.AffectedSOPClassUID);
                 var maxPDU = asc.UserInfo.MaxPDULength;
                 WriteDimseToStream(dimse, asc.Stream, pContext, maxPDU);
+                if(dimse is AbstractDIMSEResponse && !(dimse is NEventReportResponse))
+                {
+                    asc.State = NetworkState.AWAITING_RELEASE;
+                }
+                else if(dimse is NEventReportResponse)
+                {
+                    AssociationMessenger.SendReleaseRequest(asc);
+                }
+                else
+                {
+                    asc.State = NetworkState.ASSOCIATION_ESTABLISHED_WAITING_ON_DATA;
+                }
             }
         }
 

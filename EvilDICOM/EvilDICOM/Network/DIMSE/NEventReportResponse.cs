@@ -13,22 +13,27 @@ using static EvilDICOM.Network.Enums.CommandField;
 
 namespace EvilDICOM.Network.DIMSE
 {
-    public class NActionResponse : AbstractDIMSEResponse
+    public class NEventReportResponse : AbstractDIMSEResponse
     {
-        public NActionResponse(NActionRequest req, Status status)
+        public NEventReportResponse()
         {
+            this.CommandField = (ushort)N_EVENT_REPORT_RP;
+        }
+
+        public NEventReportResponse(NEventReportRequest req, Status status)
+        {
+            this.CommandField = (ushort)N_EVENT_REPORT_RP;
             this.MessageIDBeingRespondedTo = req.MessageID;
-            this.CommandField = (ushort)N_ACTION_RP;
+            this.AffectedSOPClassUID = req.AffectedSOPClassUID;
+            this.AffectedSOPInstanceUID = req.AffectedSOPInstanceUID;
+            this.EventTypeId = req.EventTypeId;
             this.DataSetType = (ushort)CommandDataSetType.EMPTY;
-            this.AffectedSOPClassUID = req.RequestedSOPClassUID;
-            this.AffectedSOPInstanceUID = req.RequestedSOPInstanceUID;
-            this.ActionTypeID = req.ActionTypeID;
             this.Status = (ushort)status;
         }
 
-        public NActionResponse(DICOMObject d)
+        public NEventReportResponse(DICOMObject d)
         {
-            CommandField = (ushort)N_ACTION_RP;
+            CommandField = (ushort)N_EVENT_REPORT_RP;
             var sel = new DICOMSelector(d);
             GroupLength = sel.CommandGroupLength.Data;
             AffectedSOPClassUID = sel.AffectedSOPClassUID.Data;
@@ -36,16 +41,16 @@ namespace EvilDICOM.Network.DIMSE
             MessageIDBeingRespondedTo = sel.MessageIDBeingRespondedTo.Data;
             DataSetType = sel.CommandDataSetType.Data;
             Status = sel.Status.Data;
-            if (sel.ActionTypeID != null)
-                ActionTypeID = sel.ActionTypeID.Data;
+            if (sel.EventTypeID != null)
+                EventTypeId = sel.ActionTypeID.Data;
         }
 
-        protected UnsignedShort _actionTypeId = new UnsignedShort { Tag = TagHelper.ActionTypeID };
+        protected UnsignedShort _eventTypeId = new UnsignedShort { Tag = TagHelper.EventTypeID };
 
-        public ushort ActionTypeID
+        public ushort EventTypeId
         {
-            get { return _actionTypeId.Data; }
-            set { _actionTypeId.Data = value; }
+            get { return _eventTypeId.Data; }
+            set { _eventTypeId.Data = value; }
         }
 
         protected UniqueIdentifier _affectedSOPInstanceUID = new UniqueIdentifier { Tag = TagHelper.AffectedSOPInstanceUID };
@@ -70,8 +75,7 @@ namespace EvilDICOM.Network.DIMSE
                     _messageIdBeingRespondedTo,
                     _dataSetType,
                     _status,
-                    _affectedSOPInstanceUID,
-                    _actionTypeId
+                    _eventTypeId,
                 };
             }
         }

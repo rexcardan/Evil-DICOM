@@ -214,6 +214,8 @@
     <Compile Include="Network\DIMSE\IOD\CMoveIOD.cs" />
     <Compile Include="Network\DIMSE\NActionRequest.cs" />
     <Compile Include="Network\DIMSE\NActionResponse.cs" />
+    <Compile Include="Network\DIMSE\NEventReportRequest.cs" />
+    <Compile Include="Network\DIMSE\NEventReportResponse.cs" />
     <Compile Include="Network\DIMSE\ReqAbstractDIMSEBase.cs" />
     <Compile Include="Network\Enums\AbortReason.cs" />
     <Compile Include="Network\Enums\AbortSource.cs" />
@@ -265,11 +267,15 @@
     <Compile Include="Network\Readers\NetworkBinaryReader.cs" />
     <Compile Include="Network\Readers\PDUReader.cs" />
     <Compile Include="Network\SCUOps\CStorer.cs" />
+    <Compile Include="Network\SCUOps\StorageVerifier.cs" />
     <Compile Include="Network\Services\AssociationService.cs" />
     <Compile Include="Network\Services\CFindService.cs" />
     <Compile Include="Network\Services\CStoreService.cs" />
     <Compile Include="Network\Services\DIMSEService.cs" />
     <Compile Include="Network\Services\Interfaces\IFindService.cs" />
+    <Compile Include="Network\Services\NActionService.cs" />
+    <Compile Include="Network\Services\NEventReportService.cs" />
+    <Compile Include="Network\Services\StorageCommitmentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RT\DoseMatrix.cs" />
     <Compile Include="RT\DoseValue.cs" />
