@@ -29,7 +29,7 @@ namespace ConsoleApp1
             var results = verifier.VerifyStorage(new Dictionary<string, string>()
             {
                 { dcm.GetSelector().SOPClassUID.Data, dcm.GetSelector().SOPInstanceUID.Data }
-            });
+            }, 10000);
             Console.Read();
 
             //var scp = new DICOMSCP(Entity.CreateLocal("DVTK_STR_SCP", 104));

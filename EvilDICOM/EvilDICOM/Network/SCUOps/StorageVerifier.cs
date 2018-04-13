@@ -25,14 +25,13 @@ namespace EvilDICOM.Network.SCUOps
             this.callingEntity = callingEntity;
         }
 
-        public List<bool> VerifyStorage(Dictionary<string, string> dictionary)
+        public List<bool> VerifyStorage(Dictionary<string, string> dictionary, int msTimeout = 10000)
         {
             var results = new List<bool>();
             var request = CreateRequest(dictionary);
             request.MessageID = _messageId;
             _messageId += 3;
             System.DateTime lastContact = System.DateTime.Now;
-            int msWait = 10000;
 
             var mr = new ManualResetEvent(false);
             NEventReportRequest req = null;
@@ -60,7 +59,7 @@ namespace EvilDICOM.Network.SCUOps
 
             _scu.DIMSEService.Subscribe(cr);
             _scu.SendMessage(request, callingEntity);
-            mr.WaitOne(msWait);
+            mr.WaitOne(msTimeout);
             _scu.DIMSEService.Unsubscribe(cr);
             return results;
 

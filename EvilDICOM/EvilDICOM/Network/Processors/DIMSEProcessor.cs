@@ -69,6 +69,14 @@ namespace EvilDICOM.Network.Processors
             {
                 asc.ServiceClass.DIMSEService.NEventReportService.OnResponseReceived(dimse as NEventReportResponse, asc);
             }
+            //If status is Pending...we need to open the reader to keep reading
+            if (dimse is AbstractDIMSEResponse)
+            {
+                if ((dimse as AbstractDIMSEResponse).Status == (ushort)Status.PENDING)
+                {
+                    asc.State = NetworkState.ASSOCIATION_ESTABLISHED_WAITING_ON_DATA;
+                }
+            }
         }
     }
 }
