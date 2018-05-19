@@ -40,7 +40,8 @@ var defaultRoiNumbers = dcm.FindAll(new Tag[] { TagHelper.STRUCTURE_SET_ROISEQUE
 .Select(rn => rn as IntegerString).ToList();
 
 //THE SELECTION module way
-var roiNumbers = sel.StructureSetROISequence.ROINumber_;
+var roiNumbers = sel.StructureSetROISequence
+				.Select(s => s.ROINumber_);
 
 foreach (var roi in roiNumbers)
 {
@@ -51,11 +52,14 @@ Assert.AreEqual(roiNumbers.Count, 4);
 ###Deep Descension
 The real payoff of using the module comes when you need to dig deep. The following show just how easy it is to drill deep into the DICOM object using the Selection object
 ```csharp
-var dcm = DICOMFileReader.Read(Resources.structure);
-var sel = new DICOMSelector(dcm);
-//The first ROT Contour Sequence >> 2nd Contour Sequence >> 36th Number of Contour Point element
-var numPoints = sel.ROIContourSequence.ContourSequence_[1].NumberOfContourPoints_[35];
-Assert.AreEqual(numPoints.Data, 602);
+var dcm = DICOMObject.Read("structureSet.dcm");
+var selector = dcm.GetSelector();
+var numCtrPoints = selector.ROIContourSequence
+                .Select(s => s.ContourSequence_[1])
+                .Select(s => s.NumberOfContourPoints_[4]);
+Assert.AreEqual(numCtrPoints.Data, 186);
+
+![Object Illustration](../images/selection.png "Selecting Deep Descension")
 ```
 ###Quick Manipulation
 It is also very easy to quickly modify DICOM data (for anonymization for example).
@@ -65,9 +69,14 @@ var dcm = DICOMFileReader.Read(Resources.structure);
 var sel = new DICOMSelector(dcm);
 
 //Modify some data deep in the DICOM object
-sel.ROIContourSequence.ContourSequence_[0].NumberOfContourPoints_[1].Data = 603;
+selector.ROIContourSequence
+        .Select(s => s.ContourSequence_[1])
+        .Select(s => s.NumberOfContourPoints_[4]).Data = 500;
 DICOMFileWriter.WriteLittleEndian("structureMod.dcm", sel.ToDICOMObject());
 dcm = DICOMFileReader.Read("structureMod.dcm");
-sel = new DICOMSelector(dcm);
-Assert.AreEqual(sel.ROIContourSequence.ContourSequence_[0].NumberOfContourPoints_[1].Data, 603);
+selector = new DICOMSelector(dcm);
+var numCtrPoints = selector.ROIContourSequence
+                .Select(s => s.ContourSequence_[1])
+                .Select(s => s.NumberOfContourPoints_[4]);
+Assert.AreEqual(numCtrPoints.Data, 500);
 ```

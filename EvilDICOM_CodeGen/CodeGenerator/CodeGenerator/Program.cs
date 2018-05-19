@@ -32,6 +32,7 @@ namespace CodeGenerator
             var forgeNodes = new List<SyntaxNode>();
             var tags = new List<SyntaxNode>();
             var selectors = new List<SyntaxNode>();
+            var seqSelectors = new List<SyntaxNode>();
             var anonymizationNodes = new List<SyntaxNode>();
 
             List<SyntaxNode> anonProfile = new List<SyntaxNode>();
@@ -83,18 +84,23 @@ namespace CodeGenerator
                     var sel = g.PropertyDeclaration(entry.Keyword, g.IdentifierName(cName), Accessibility.Public,
                         DeclarationModifiers.None, propGetStatements, propSetStatements);
                     selectors.Add(sel);
+                    seqSelectors.Add(g.PropertyDeclaration(entry.Keyword, g.IdentifierName(cName), Accessibility.Public,
+                       DeclarationModifiers.ReadOnly, SelectorBuilder.GenerateSequencePropertyStatements(g, cName, entry), null));
 
                     // return _dicom.FindAll("00000000").Select(d => d as UnsignedLong).ToList();
                     var returnMany = g.ReturnStatement(g.InvocationExpression(
                         g.IdentifierName($"_dicom.FindAll(\"{entry.Id}\").Select(d => d as {cName}).ToList")));
-
+                    var returnManySeq = g.ReturnStatement(g.InvocationExpression(
+                        g.IdentifierName($"Items.FindAll<{cName}>(\"{entry.Id}\").ToList")));
                     selectors.Add(g.PropertyDeclaration(entry.Keyword + "_", g.IdentifierName($"List<{cName}>"),
-                        Accessibility.Public, DeclarationModifiers.None, new SyntaxNode[] { returnMany }));
+                        Accessibility.Public, DeclarationModifiers.ReadOnly, new SyntaxNode[] { returnMany }));
+                    var selSeqProp = g.PropertyDeclaration(entry.Keyword + "_", g.IdentifierName($"List<{cName}>"),
+                         Accessibility.Public, DeclarationModifiers.ReadOnly, new SyntaxNode[] { returnManySeq});
 
-
+                    seqSelectors.Add(selSeqProp);
                     //FORGE
                     var methStatements = new SyntaxNode[]
-                    {
+                     {
                         // return new UnsignedLong { Tag = new Tag("00000001") };
                         g.AssignmentStatement(g.IdentifierName("var element"),
                             g.ObjectCreationExpression(g.IdentifierName(cName))),
@@ -103,7 +109,7 @@ namespace CodeGenerator
                                 g.Argument(RefKind.None, g.LiteralExpression(entry.Id)))),
                         g.AssignmentStatement(g.IdentifierName("element.Data_"), g.IdentifierName("data?.ToList()")),
                         g.ReturnStatement(g.IdentifierName("element"))
-                    };
+                     };
 
                     var m = g.MethodDeclaration(entry.Keyword, new SyntaxNode[] { parameter }, null, g.IdentifierName(cName), Accessibility.Public,
                          DeclarationModifiers.Static, methStatements);
@@ -143,9 +149,18 @@ namespace CodeGenerator
             selectorNode = g.CompilationUnit(UsingsHelper.GetUsings().Concat(new SyntaxNode[] { namespaceDeclaration
             })).NormalizeWhitespace();
 
-            File.WriteAllText(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\DICOMForge.cs", forgeNode.NormalizeWhitespace().ToString());
-            File.WriteAllText(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Helpers\TagHelper.cs", tagHelperNode.NormalizeWhitespace().ToString());
+            var selectorSeqNode = g.ClassDeclaration("SequenceSelector",
+              null,
+              Accessibility.Public,
+              DeclarationModifiers.Partial, g.IdentifierName("AbstractElement<DICOMSelector>"), null, seqSelectors);
+            namespaceDeclaration = g.NamespaceDeclaration("EvilDICOM.Core.Selection", selectorSeqNode);
+            selectorSeqNode = g.CompilationUnit(UsingsHelper.GetUsings().Concat(new SyntaxNode[] { namespaceDeclaration
+            })).NormalizeWhitespace();
+
+            //File.WriteAllText(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\DICOMForge.cs", forgeNode.NormalizeWhitespace().ToString());
+            //File.WriteAllText(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Helpers\TagHelper.cs", tagHelperNode.NormalizeWhitespace().ToString());
             File.WriteAllText(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Selection\DICOMSelectorProperties.cs", selectorNode.NormalizeWhitespace().ToString());
+            File.WriteAllText(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Selection\SequenceSelectorProperties.cs", selectorSeqNode.NormalizeWhitespace().ToString());
         }
 
     }

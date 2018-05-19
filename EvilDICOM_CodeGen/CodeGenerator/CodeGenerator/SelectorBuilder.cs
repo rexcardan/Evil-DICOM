@@ -32,5 +32,20 @@ namespace CodeGenerator
             };
             return (propGetStatements, propSetStatements);
         }
+
+        internal static SyntaxNode[] GenerateSequencePropertyStatements(SyntaxGenerator g, string cName, DictionaryData entry)
+        {
+            var propGetStatements = new SyntaxNode[]
+            {
+                //get { return _dicom.FindFirst("00000000") as UnsignedLong;
+                //}
+                //set { _dicom.ReplaceOrAdd(value); }
+
+                g.ReturnStatement(g.CastExpression(g.IdentifierName(cName), g.InvocationExpression(g.IdentifierName($"Items.FindFirst<{cName}>"),
+                    new SyntaxNode[]{g.Argument(RefKind.None, g.LiteralExpression(entry.Id))})))
+            };
+
+            return propGetStatements;
+        }
     }
 }
