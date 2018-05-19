@@ -58,9 +58,8 @@ var numCtrPoints = selector.ROIContourSequence
                 .Select(s => s.ContourSequence_[1])
                 .Select(s => s.NumberOfContourPoints_[4]);
 Assert.AreEqual(numCtrPoints.Data, 186);
-
-![Object Illustration](../images/selection.png "Selecting Deep Descension")
 ```
+![Object Illustration](../images/selection.png "Selecting Deep Descension")
 ###Quick Manipulation
 It is also very easy to quickly modify DICOM data (for anonymization for example).
 
