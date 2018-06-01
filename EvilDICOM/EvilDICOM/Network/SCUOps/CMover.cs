@@ -50,7 +50,6 @@ namespace EvilDICOM.Network.SCUOps
             var result = new CMoveIOD
             {
                 QueryLevel = QueryLevel.SERIES,
-                SOPInstanceUID = iod.SeriesInstanceUID,
                 PatientId = iod.PatientId,
                 StudyInstanceUID = iod.StudyInstanceUID,
                 SeriesInstanceUID = iod.SeriesInstanceUID
@@ -64,7 +63,6 @@ namespace EvilDICOM.Network.SCUOps
             var result = new CMoveIOD
             {
                 QueryLevel = QueryLevel.STUDY,
-                SOPInstanceUID = iod.StudyInstanceUID,
                 PatientId = iod.PatientId,
                 StudyInstanceUID = iod.StudyInstanceUID,
             };
