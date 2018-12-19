@@ -58,6 +58,12 @@ namespace EvilDICOM.Network.SCUOps
             return _scu.GetResponse<CMoveResponse, CMoveRequest>(request, callingEntity, ref msgId);
         }
 
+        public CMoveResponse SendCMove(CMoveIOD iod, string toAETite, ref ushort msgId)
+        {
+            var request = new CMoveRequest(iod, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
+            return _scu.GetResponse<CMoveResponse, CMoveRequest>(request, callingEntity, ref msgId);
+        }
+
         public CMoveResponse SendCMove(CFindStudyIOD iod, string toAETite, ref ushort msgId)
         {
             var result = new CMoveIOD
