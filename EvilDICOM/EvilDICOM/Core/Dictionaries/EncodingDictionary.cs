@@ -39,7 +39,7 @@ namespace EvilDICOM.Core.Dictionaries
 
         public static Encoding GetEncodingFromISO(string isoStandard)
         {
-            var iso = isoStandard.Replace("_", string.Empty).ToUpper();
+            var iso = isoStandard.Replace("_", " ").ToUpper();
             if (encodingMap.ContainsKey(iso)) { return Encoding.GetEncoding(encodingMap[iso]); }
             else return Encoding.UTF8;
         }
