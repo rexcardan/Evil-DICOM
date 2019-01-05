@@ -99,12 +99,17 @@ namespace EvilDICOM.Network
             {
                 if (_abortRequested)
                 {
+                    Logger.Log("Abort requested...aborting.");
                     HandleAbort();
                     break;
                 }
-                if (_cancelRequested) HandleCancel();
+                if (_cancelRequested)
+                {
+                    Logger.Log("Cancellation requested...cancelling.");
+                    HandleCancel();
+                }
 
-                if(State != NetworkState.CLOSING_ASSOCIATION &&
+                if (State != NetworkState.CLOSING_ASSOCIATION &&
                    State != NetworkState.TRANSPORT_CONNECTION_OPEN)
                 {
                     var message = Read();
