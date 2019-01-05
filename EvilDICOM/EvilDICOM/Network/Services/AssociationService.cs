@@ -93,7 +93,6 @@ namespace EvilDICOM.Network.Services
             {
                 asc.Logger.Log("<-- " + rel);
                 RaiseReleaseResponseReceived(rel, asc);
-                asc.State = NetworkState.CLOSING_ASSOCIATION;
                 asc.Release();
             };
         }

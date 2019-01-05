@@ -193,6 +193,7 @@ namespace EvilDICOM.Network
             try
             {
                 Stream.Flush();
+                State = NetworkState.CLOSING_ASSOCIATION;
             }
             catch (Exception e)
             {

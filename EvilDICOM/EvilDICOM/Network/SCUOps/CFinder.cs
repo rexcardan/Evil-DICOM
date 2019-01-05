@@ -49,9 +49,10 @@ namespace EvilDICOM.Network.SCUOps
             {
                 var req = CFind.CreateSeriesQuery(study.StudyInstanceUID);
                 var seriesUids = _scu.GetResponses<CFindResponse, CFindRequest>(req, _scp, ref msgId)
-                    .Where(r => r.Status == (ushort) Status.PENDING)
+                    .Where(r => r.Status == (ushort)Status.PENDING)
                     .Where(r => r.HasData)
-                    .Select(r => r.GetIOD<CFindSeriesIOD>());
+                    .Select(r => r.GetIOD<CFindSeriesIOD>()).ToList();
+                seriesUids.ForEach(s => s.PatientId = study.PatientId);
                 results.AddRange(seriesUids);
             }
             return results;
