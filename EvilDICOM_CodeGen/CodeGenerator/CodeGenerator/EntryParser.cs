@@ -27,9 +27,7 @@ namespace CodeGenerator
                 Type dataType = null;
 
 
-                var instance = (IDICOMElement)(Activator.CreateInstance(typeof(DICOMObject).Assembly.FullName,
-                        $"EvilDICOM.Core.Element.{cName}")
-                    .Unwrap());
+                var instance = (IDICOMElement)(Activator.CreateInstance(typeof(DICOMObject).Assembly.FullName, $"EvilDICOM.Core.Element.{cName}").Unwrap());
                 cName = cName == "DateTime" ? "Element.DateTime" : cName;
                 dataType = instance.DatType;
 
@@ -37,8 +35,7 @@ namespace CodeGenerator
                 var dataTypeName = dataType.Name.StartsWith("Nullable") ? "System.DateTime?" : dataType.Name;
 
                 //Initialize strings as empty string instead of null
-                var parameter = g.ParameterDeclaration("data", g.IdentifierName($"params {dataTypeName}[]"),
-                    null, RefKind.None);
+                var parameter = g.ParameterDeclaration("data", g.IdentifierName($"params {dataTypeName}[]"), null, RefKind.None);
 
                 return (cName, parameter);
             }
@@ -54,17 +51,14 @@ namespace CodeGenerator
                 Type dataType = null;
 
 
-                var instance = (IDICOMElement)(Activator.CreateInstance(typeof(DICOMObject).Assembly.FullName,
-                        $"EvilDICOM.Core.Element.{cName}")
-                    .Unwrap());
+                var instance = (IDICOMElement)(Activator.CreateInstance(typeof(DICOMObject).Assembly.FullName, $"EvilDICOM.Core.Element.{cName}").Unwrap());
                 cName = cName == "DateTime" ? "Element.DateTime" : cName;
                 dataType = instance.DatType;
                 return dataType;
             }
             return null;
         }
-
-
+        
         /// <summary>
         ///     Creates the DICOM two letter abbreviation from a VR type.
         /// </summary>
