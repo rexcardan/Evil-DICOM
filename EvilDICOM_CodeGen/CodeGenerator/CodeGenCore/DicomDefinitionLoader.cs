@@ -1,30 +1,52 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
-using System.Text;
+using System.Net.Http;
+using System.Threading.Tasks;
 using System.Xml.Linq;
 
 namespace CodeGenCore
 {
     public static class DicomDefinitionLoader
     {
-        private const string Part6Path = @"C:\Users\Tirth\Programming\Evil-DICOM\EvilDICOM_CodeGen\CodeGenerator\CodeGenCore\Resources\part06.xml";
-        private const string Part7Path = @"C:\Users\Tirth\Programming\Evil-DICOM\EvilDICOM_CodeGen\CodeGenerator\CodeGenCore\Resources\part07.xml";
-        private const string Part4Path = @"C:\Users\Tirth\Programming\Evil-DICOM\EvilDICOM_CodeGen\CodeGenerator\CodeGenCore\Resources\part04.xml";
-        private const string Part15Path = @"C:\Users\Tirth\Programming\Evil-DICOM\EvilDICOM_CodeGen\CodeGenerator\CodeGenCore\Resources\part15.xml";
+        private const string DefinitionDir = @"C:\Users\Tirth\Downloads\dicom_nema";
 
         private static readonly XNamespace XmlNs = "http://www.w3.org/XML/1998/namespace";
         private static readonly XNamespace DocNs = "http://docbook.org/ns/docbook";
 
-        private static IEnumerable<List<string>> GetTableData(string docPath, string tableId)
+        public static async Task DownloadCurrentDefinitions()
         {
-            var doc = XDocument.Load(docPath);
+            using (var client = new HttpClient { BaseAddress = new Uri(@"http://dicom.nema.org/medical/dicom/current/source/docbook/") })
+                foreach (var part in new[] { 4, 6, 7, 15 })
+                {
+                    var partName = $"part{part:D2}";
+                    await client.DownloadFile($"{partName}/{partName}.xml", Path.Combine(DefinitionDir, $"{partName}.xml"));
+                }
+        }
+
+        internal static async Task<string> DownloadFile(this HttpClient client, string address, string fileName)
+        {
+            var file = new FileInfo(fileName);
+            if (file.Exists)
+                file.Delete();
+
+            using (var contentStream = await client.GetStreamAsync(address))
+            using (var fileStream = file.OpenWrite())
+                await contentStream.CopyToAsync(fileStream);
+
+            return file.FullName;
+        }
+
+        private static IEnumerable<List<string>> GetTableData(int partNum, string tableId)
+        {
+            var doc = XDocument.Load(Path.Combine(DefinitionDir, $"part{partNum:D2}.xml"));
 
             // Standard SOP Classes Table
             var table = doc.Descendants(DocNs + "table").SingleOrDefault(t => t.Attribute(XmlNs + "id")?.Value == tableId);
             if (table == null)
             {
-                Console.WriteLine($"Couldn't get table {tableId} from {docPath}");
+                Console.WriteLine($"Couldn't get table {tableId} from {partNum}");
                 yield break;
             }
 
@@ -35,7 +57,7 @@ namespace CodeGenCore
 
         public static IEnumerable<DictionaryData> LoadCurrentSopClasses()
         {
-            foreach (var rowData in GetTableData(Part4Path, "table_B.5-1"))
+            foreach (var rowData in GetTableData(4, "table_B.5-1"))
             {
                 var id = rowData[1];
                 var name = rowData[0];
@@ -52,7 +74,7 @@ namespace CodeGenCore
 
         public static IEnumerable<DictionaryData> LoadAnonymizationTags()
         {
-            foreach (var rowData in GetTableData(Part15Path, "table_E.1-1"))
+            foreach (var rowData in GetTableData(15, "table_E.1-1"))
             {
                 var id = rowData[1];
                 var name = rowData[0];
@@ -78,10 +100,10 @@ namespace CodeGenCore
 
         public static IEnumerable<DictionaryData> LoadCurrentDictionary()
         {
-            var data = GetTableData(Part6Path, "table_7-1") // file meta
-                .Concat(GetTableData(Part6Path, "table_8-1")) // directory elements
-                .Concat(GetTableData(Part6Path, "table_6-1")) // data elements
-                .Concat(GetTableData(Part7Path, "table_E.1-1")); // command elements
+            var data = GetTableData(6, "table_7-1") // file meta
+                .Concat(GetTableData(6, "table_8-1")) // directory elements
+                .Concat(GetTableData(6, "table_6-1")) // data elements
+                .Concat(GetTableData(7, "table_E.1-1")); // command elements
 
             foreach (var rowData in data)
             {

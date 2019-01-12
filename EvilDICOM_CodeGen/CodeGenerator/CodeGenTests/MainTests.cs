@@ -1,4 +1,4 @@
-using System;
+using System.Threading.Tasks;
 using CodeGenCore;
 using Xunit;
 using Xunit.Abstractions;
@@ -18,6 +18,12 @@ namespace CodeGenTests
         public void TestStuff()
         {
 
+        }
+
+        [Fact]
+        public async Task TestDownloadDefinitions()
+        {
+            await DicomDefinitionLoader.DownloadCurrentDefinitions();
         }
 
         [Fact]

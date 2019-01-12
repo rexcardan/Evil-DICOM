@@ -3,13 +3,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using EvilDICOM.Core;
-using EvilDICOM.Core.Dictionaries;
-using EvilDICOM.Core.Element;
-using EvilDICOM.Core.Interfaces;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Editing;
 using System.IO;
+using EvilDICOM.Core.Dictionaries;
 using Microsoft.CodeAnalysis.CSharp;
 
 namespace CodeGenerator

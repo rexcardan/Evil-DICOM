@@ -1,7 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.IO;
+﻿using System.Collections.Generic;
 using System.Linq;
+using EvilDICOM.Core;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Selection;
 using Microsoft.CodeAnalysis;
@@ -68,12 +67,31 @@ namespace CodeGenCore
                 seqSelectors.Add(manySeqSelector);
 
                 // forge
+                var forgeStatements = new[] 
+                {
+                    g.AssignmentStatement(g.IdentifierName("var element"), g.ObjectCreationExpression(g.IdentifierName(className))),
+                    g.AssignmentStatement(g.IdentifierName("element.Tag"), g.ObjectCreationExpression(g.IdentifierName("Tag"), g.Argument(RefKind.None, g.LiteralExpression(entry.Id)))),
+                    g.AssignmentStatement(g.IdentifierName("element.Data_"), g.IdentifierName("data?.ToList()")),
+                    g.ReturnStatement(g.IdentifierName("element"))
+                };
+
+                var forgeMethod = g.MethodDeclaration(entry.Keyword, new[] { node }, 
+                    null, 
+                    g.IdentifierName(className), 
+                    Accessibility.Public,
+                    DeclarationModifiers.Static, 
+                    forgeStatements);
+
+                forgeNodes.Add(forgeMethod);
             }
 
-            PublicStaticClassFull(typeof(TagHelper), tags)
+            CodeGenHelper.PublicStaticClassFull(typeof(DICOMForge), forgeNodes)
+                .WriteClass("DICOMForge.cs");
+
+            CodeGenHelper.PublicStaticClassFull(typeof(TagHelper), tags)
                 .WriteClass("TagHelper.cs");
 
-            PublicPartialClassFull(typeof(DICOMSelector), selectors)
+            CodeGenHelper.PublicPartialClassFull(typeof(DICOMSelector), selectors)
                 .WriteClass("DICOMSelectorProperties.cs");
 
             GeneratorBuilder.Instance.Generator.ClassDeclaration(typeof(SequenceSelector).Name,
@@ -87,42 +105,5 @@ namespace CodeGenCore
                 .AddImports()
                 .WriteClass("SequenceSelectorProperties.cs");
         }
-
-        public static void WriteClass(this SyntaxNode node, string fileName)
-            => File.WriteAllText(fileName, node.NormalizeWhitespace().ToFullString());
-
-        public static SyntaxNode AddImports(this SyntaxNode node)
-            => GeneratorBuilder.Instance.Generator.CompilationUnit(ImportHelper.CommonImports.Concat(new[] { node }));
-
-        public static SyntaxNode AddNamespace(this SyntaxNode node, string ns)
-            => GeneratorBuilder.Instance.Generator.NamespaceDeclaration(ns, node);
-
-        public static SyntaxNode PublicStaticClassFull(Type type, IEnumerable<SyntaxNode> members)
-            => PublicStaticClass(type.Name, members)
-                .AddNamespace(type.Namespace)
-                .AddImports();
-
-        public static SyntaxNode PublicPartialClassFull(Type type, IEnumerable<SyntaxNode> members)
-            => PublicPartialClass(type.Name, members)
-                .AddNamespace(type.Namespace)
-                .AddImports();
-
-        public static SyntaxNode PublicStaticClass(string className, IEnumerable<SyntaxNode> members)
-            => GeneratorBuilder.Instance.Generator.ClassDeclaration(className,
-                null,
-                Accessibility.Public,
-                DeclarationModifiers.Static,
-                null,
-                null,
-                members);
-
-        public static SyntaxNode PublicPartialClass(string className, IEnumerable<SyntaxNode> members)
-            => GeneratorBuilder.Instance.Generator.ClassDeclaration(className,
-                null,
-                Accessibility.Public,
-                DeclarationModifiers.Partial,
-                null,
-                null,
-                members);
     }
 }
