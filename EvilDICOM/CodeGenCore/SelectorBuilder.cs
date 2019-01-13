@@ -1,32 +1,32 @@
 ﻿using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Editing;
+using static EvilDICOM.CodeGenerator.GeneratorInstance;
 
 namespace EvilDICOM.CodeGenerator
 {
     public static class SelectorBuilder
     {
-        public static (SyntaxNode[] getStatements, SyntaxNode[] setStatements) GeneratePropertyStatements(this SyntaxGenerator g, string className, DictionaryData entry)
+        public static (SyntaxNode[] getStatements, SyntaxNode[] setStatements) GeneratePropertyStatements(this DictionaryData entry, string className)
         {
             var getStatements = new[]
             {
-                g.ReturnStatement(g.CastExpression(g.IdentifierName(className),
-                    g.InvocationExpression(g.IdentifierName("_dicom.FindFirst"), g.Argument(RefKind.None, g.LiteralExpression(entry.Id)))))
+                G.ReturnStatement(G.CastExpression(G.IdentifierName(className),
+                    G.InvocationExpression(G.IdentifierName("_dicom.FindFirst"), G.Argument(RefKind.None, G.LiteralExpression(entry.Id)))))
             };
 
             var setStatements = new[]
             {
-                g.InvocationExpression(g.IdentifierName("_dicom.ReplaceOrAdd"), g.Argument(RefKind.None, g.IdentifierName("value")))
+                G.InvocationExpression(G.IdentifierName("_dicom.ReplaceOrAdd"), G.Argument(RefKind.None, G.IdentifierName("value")))
             };
 
             return (getStatements, setStatements);
         }
 
-        public static SyntaxNode[] GenerateSequencePropertyStatements(this SyntaxGenerator g, string className, DictionaryData entry)
+        public static SyntaxNode[] GenerateSequencePropertyStatements(this DictionaryData entry, string className)
         {
             var getStatements = new[]
             {
-                g.ReturnStatement(g.CastExpression(g.IdentifierName(className),
-                    g.InvocationExpression(g.IdentifierName($"Items.FindFirst<{className}>"), g.Argument(RefKind.None, g.LiteralExpression(entry.Id)))))
+                G.ReturnStatement(G.CastExpression(G.IdentifierName(className),
+                    G.InvocationExpression(G.IdentifierName($"Items.FindFirst<{className}>"), G.Argument(RefKind.None, G.LiteralExpression(entry.Id)))))
             };
 
             return getStatements;

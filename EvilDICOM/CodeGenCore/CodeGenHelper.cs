@@ -18,7 +18,7 @@ namespace EvilDICOM.CodeGenerator
                 .AddImports();
 
         public static SyntaxNode PublicStaticClass(string className, IEnumerable<SyntaxNode> members)
-            => GeneratorBuilder.Instance.Generator.ClassDeclaration(className,
+            => GeneratorInstance.G.ClassDeclaration(className,
                 null,
                 Accessibility.Public,
                 DeclarationModifiers.Static,
@@ -27,7 +27,7 @@ namespace EvilDICOM.CodeGenerator
                 members);
 
         public static SyntaxNode PublicPartialClass(string className, IEnumerable<SyntaxNode> members)
-            => GeneratorBuilder.Instance.Generator.ClassDeclaration(className,
+            => GeneratorInstance.G.ClassDeclaration(className,
                 null,
                 Accessibility.Public,
                 DeclarationModifiers.Partial,

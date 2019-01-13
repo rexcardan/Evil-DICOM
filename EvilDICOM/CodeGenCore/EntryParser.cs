@@ -2,7 +2,7 @@
 using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Interfaces;
 using Microsoft.CodeAnalysis;
-using Microsoft.CodeAnalysis.Editing;
+using static EvilDICOM.CodeGenerator.GeneratorInstance;
 
 namespace EvilDICOM.CodeGenerator
 {
@@ -15,7 +15,7 @@ namespace EvilDICOM.CodeGenerator
             EvilDicomAssembly = Assembly.LoadFrom("EvilDICOM");
         }
 
-        public static (string className, SyntaxNode node) Parse(this SyntaxGenerator g, DictionaryData entry)
+        public static (string className, SyntaxNode node) Parse(this DictionaryData entry)
         {
             if (entry.VR.StartsWith("See"))
                 return (null, null);
@@ -38,7 +38,7 @@ namespace EvilDICOM.CodeGenerator
                 : dataType.Name;
 
             // initialize strings as empty string instead of null
-            var parameter = g.ParameterDeclaration("data", g.IdentifierName($"params {dataTypeName}[]"));
+            var parameter = G.ParameterDeclaration("data", G.IdentifierName($"params {dataTypeName}[]"));
 
             return (className, parameter);
         }

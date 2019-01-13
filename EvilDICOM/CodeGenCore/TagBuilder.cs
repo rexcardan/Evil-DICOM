@@ -1,17 +1,18 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Editing;
+using static EvilDICOM.CodeGenerator.GeneratorInstance;
 
 namespace EvilDICOM.CodeGenerator
 {
     public static class TagBuilder
     {
-        public static SyntaxNode GenerateTag(this SyntaxGenerator g, DictionaryData entry)
+        public static SyntaxNode GenerateTag(this DictionaryData entry)
         {
-            return g.FieldDeclaration(entry.Keyword,
-                g.IdentifierName("Tag"),
+            return G.FieldDeclaration(entry.Keyword,
+                G.IdentifierName("Tag"),
                 Accessibility.Public,
                 DeclarationModifiers.Static,
-                g.ObjectCreationExpression(g.IdentifierName("Tag"), g.Argument(RefKind.None, g.LiteralExpression(entry.Id))));
+                G.ObjectCreationExpression(G.IdentifierName("Tag"), G.Argument(RefKind.None, G.LiteralExpression(entry.Id))));
         }
     }
 }

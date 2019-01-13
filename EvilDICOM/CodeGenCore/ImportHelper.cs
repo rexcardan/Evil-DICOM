@@ -1,5 +1,6 @@
 ﻿using System.Linq;
 using Microsoft.CodeAnalysis;
+using static EvilDICOM.CodeGenerator.GeneratorInstance;
 
 namespace EvilDICOM.CodeGenerator
 {
@@ -9,8 +10,6 @@ namespace EvilDICOM.CodeGenerator
 
         static ImportHelper()
         {
-            var g = GeneratorBuilder.Instance.Generator;
-
             CommonImports = new[]
             {
                 "System",
@@ -19,7 +18,7 @@ namespace EvilDICOM.CodeGenerator
                 "System.Linq",
                 "EvilDICOM.Core.Element",
                 "EvilDICOM.Core.Enums"
-            }.Select(ns => g.NamespaceImportDeclaration(ns)).ToArray();
+            }.Select(ns => G.NamespaceImportDeclaration(ns)).ToArray();
         }
     }
 }

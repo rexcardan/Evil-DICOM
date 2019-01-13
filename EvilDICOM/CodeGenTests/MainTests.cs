@@ -29,19 +29,31 @@ namespace EvilDICOM.CodeGeneratorTests
         [Fact]
         public void TestSopClassBuilder()
         {
-            SopClassUidBuilder.BuildSopClassUids("SopClassUid.cs");
+            SopClassUidBuilder.BuildSopClassUids();
         }
 
         [Fact]
         public void TestSopEnumBuilder()
         {
-            SopClassUidBuilder.BuildSopClassEnum("SopClass.cs");
+            SopClassUidBuilder.BuildSopClassEnum();
+        }
+
+        [Fact]
+        public void TestSopClassDictionary()
+        {
+            SopClassUidBuilder.BuildSopClassDictionary();
         }
 
         [Fact]
         public void TestElementBuilder()
         {
             CodeGen.GenerateStuff();
+        }
+
+        [Fact]
+        public void TestAnonStuff()
+        {
+            CodeGen.GenerateAnonStuff();
         }
     }
 }
