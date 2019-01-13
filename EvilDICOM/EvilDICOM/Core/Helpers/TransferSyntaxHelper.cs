@@ -154,7 +154,7 @@ namespace EvilDICOM.Core.Helpers
         /// <param name="selector">the transfer syntax to set</param>
         public static void SetSyntax(DICOMObject dicom, TransferSyntax selector)
         {
-            var syntax = DICOMForge.Transfer​Syntax​UID();
+            var syntax = DICOMForge.TransferSyntaxUID();
             if (syntax != null)
             {
                 var transferSyntax = string.Empty;

@@ -59,7 +59,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
 
         public void NullAndAnonymize(DICOMObject d)
         {
-            var dob = d.FindFirst(TagHelper.Patient​Birth​Date) as Date;
+            var dob = d.FindFirst(TagHelper.PatientBirthDate) as Date;
             dob.Data = null;
 
             var dates = d.FindAll(VR.Date);
@@ -80,13 +80,13 @@ namespace EvilDICOM.Anonymization.Anonymizers
 
         public void Make89AndAnonymize(DICOMObject d)
         {
-            var dob = d.FindFirst(TagHelper.Patient​Birth​Date) as Date;
+            var dob = d.FindFirst(TagHelper.PatientBirthDate) as Date;
             var dates = d.FindAll(VR.Date);
             if (dates.Count > 0)
             {
                 var oldest = (Date) dates
                     .Where(da => (da as Date).Data != null &&
-                                 da.Tag.CompleteID != TagHelper.Patient​Birth​Date.CompleteID)
+                                 da.Tag.CompleteID != TagHelper.PatientBirthDate.CompleteID)
                     .OrderBy(da => (da as Date).Data)
                     .ToList()[0];
                 var oldestDate = (System.DateTime) oldest.Data;

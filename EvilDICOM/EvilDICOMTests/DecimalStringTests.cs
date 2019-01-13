@@ -22,7 +22,7 @@ namespace EvilDICOM.Core.Tests
         [TestInitialize]
         public void Init()
         {
-            _decimalString = new DecimalString(TagHelper.Beam​Dose​Specification​Point, new[] {1.0, -3.5, 2.5});
+            _decimalString = new DecimalString(TagHelper.BeamDoseSpecificationPoint, new[] {1.0, -3.5, 2.5});
         }
 
         [TestCleanup]

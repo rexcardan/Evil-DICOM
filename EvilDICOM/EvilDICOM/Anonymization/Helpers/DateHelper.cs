@@ -39,7 +39,7 @@ namespace EvilDICOM.Anonymization.Helpers
             //Check patient age - if 89 or older set anonymization options to 
             //Not conserve patient age
             var ageTest = DICOMFileReader.Read(file);
-            var dob = ageTest.FindFirst(TagHelper.Patient​Birth​Date.CompleteID) as Date;
+            var dob = ageTest.FindFirst(TagHelper.PatientBirthDate.CompleteID) as Date;
             if (dob != null)
             {
                 var age = CalculateAge(dob);

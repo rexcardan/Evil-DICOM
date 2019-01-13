@@ -38,10 +38,10 @@ namespace EvilDICOM.Anonymization.Anonymizers
         public void Anonymize(DICOMObject d)
         {
             EvilLogger.Instance.Log("Removing study IDs and descriptions...");
-            var sID = d.FindFirst(TagHelper.Study​ID) as ShortString;
+            var sID = d.FindFirst(TagHelper.StudyID) as ShortString;
             if (sID != null)
                 sID.Data = StudyDictionary[sID.Data];
-            var desc = d.FindFirst(TagHelper.Study​Description) as LongString;
+            var desc = d.FindFirst(TagHelper.StudyDescription) as LongString;
             if (desc != null)
                 desc.Data = string.Empty;
         }
@@ -103,7 +103,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
 
         public void AddDICOMObject(DICOMObject d)
         {
-            var id = d.FindFirst(TagHelper.Study​ID.CompleteID);
+            var id = d.FindFirst(TagHelper.StudyID.CompleteID);
             if (id != null)
             {
                 var studyID = (id as ShortString).Data;
@@ -113,7 +113,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
                     var study = new DICOMStudy();
                     study.ID = studyID;
                     study.Type = type;
-                    var dt = d.FindFirst(TagHelper.Study​Date.CompleteID) as Date;
+                    var dt = d.FindFirst(TagHelper.StudyDate.CompleteID) as Date;
                     study.Date = dt.Data;
                     Studies.Add(study);
                 }
@@ -122,7 +122,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
 
         public static DICOMFileType GetFileType(DICOMObject d)
         {
-            var el = d.FindFirst(TagHelper.SOP​Class​UID.CompleteID);
+            var el = d.FindFirst(TagHelper.SOPClassUID.CompleteID);
             if (el != null)
             {
                 var ui = el as UniqueIdentifier;

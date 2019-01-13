@@ -57,11 +57,11 @@ namespace EvilDICOM.Anonymization.Anonymizers
 
         private bool IsProtectedUID(Tag tag)
         {
-            return tag.CompleteID == TagHelper.Transfer​Syntax​UID.CompleteID ||
-                   tag.CompleteID == TagHelper.SOP​Class​UID.CompleteID ||
-                   tag.CompleteID == TagHelper.Media​Storage​SOP​Class​UID.CompleteID ||
-                   tag.CompleteID == TagHelper.Implementation​Class​UID.CompleteID ||
-                   tag.CompleteID == TagHelper.Referenced​SOP​Class​UID.CompleteID;
+            return tag.CompleteID == TagHelper.TransferSyntaxUID.CompleteID ||
+                   tag.CompleteID == TagHelper.SOPClassUID.CompleteID ||
+                   tag.CompleteID == TagHelper.MediaStorageSOPClassUID.CompleteID ||
+                   tag.CompleteID == TagHelper.ImplementationClassUID.CompleteID ||
+                   tag.CompleteID == TagHelper.ReferencedSOPClassUID.CompleteID;
         }
 
         public void AddToUIDDictionary(string uid)

@@ -12,10 +12,10 @@ namespace EvilDICOM.Core.Modules
 {
     public class Patient : IIOD
     {
-        private readonly Date _birthdate = new Date {Tag = TagHelper.Patient​Birth​Date};
-        private readonly LongString _id = new LongString {Tag = TagHelper.Patient​ID};
-        private readonly PersonName _name = new PersonName {Tag = TagHelper.Patient​Name};
-        private readonly CodeString _sex = new CodeString {Tag = TagHelper.Patient​Sex};
+        private readonly Date _birthdate = new Date {Tag = TagHelper.PatientBirthDate};
+        private readonly LongString _id = new LongString {Tag = TagHelper.PatientID};
+        private readonly PersonName _name = new PersonName {Tag = TagHelper.PatientName};
+        private readonly CodeString _sex = new CodeString {Tag = TagHelper.PatientSex};
 
         public string Name
         {

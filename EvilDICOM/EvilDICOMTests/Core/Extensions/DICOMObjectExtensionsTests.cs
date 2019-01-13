@@ -16,7 +16,7 @@ namespace EvilDICOM.Core.Extensions.Tests
         public void RemoveMetaHeaderTest()
         {
             var dcm = new DICOMObject();
-            dcm.Elements.Add(DICOMForge.File​Meta​Information​Group​Length(0));
+            dcm.Elements.Add(DICOMForge.FileMetaInformationGroupLength(0));
             dcm.Elements.Add(DICOMForge.FileMetaInformationVersion(0));
             dcm.Elements.Add(DICOMForge.PatientID("123456"));
 

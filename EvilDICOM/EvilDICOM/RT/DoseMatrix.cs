@@ -22,9 +22,9 @@ namespace EvilDICOM.RT
         public DoseMatrix(DICOMObject dcm)
         {
             _doseObject = new DICOMSelector(dcm);
-            ValueSizeInBytes = _doseObject.Bits​Stored.Data / 8;
+            ValueSizeInBytes = _doseObject.BitsStored.Data / 8;
             DoseValues = new List<double>();
-            Scaling = _doseObject.Dose​Grid​Scaling.Data;
+            Scaling = _doseObject.DoseGridScaling.Data;
             using (var stream = _doseObject.ToDICOMObject().PixelStream)
             {
                 var binReader = new BinaryReader(stream);
@@ -43,40 +43,40 @@ namespace EvilDICOM.RT
 
         public double XRes
         {
-            get { return _doseObject.Pixel​Spacing.Data_[0]; }
-            set { _doseObject.Pixel​Spacing.Data_[0] = value; }
+            get { return _doseObject.PixelSpacing.Data_[0]; }
+            set { _doseObject.PixelSpacing.Data_[0] = value; }
         }
 
         public double YRes
         {
-            get { return _doseObject.Pixel​Spacing.Data_[1]; }
-            set { _doseObject.Pixel​Spacing.Data_[1] = value; }
+            get { return _doseObject.PixelSpacing.Data_[1]; }
+            set { _doseObject.PixelSpacing.Data_[1] = value; }
         }
 
         public double ZRes
         {
             get
             {
-                return _doseObject.Grid​Frame​Offset​Vector.Data_[1] - _doseObject.Grid​Frame​Offset​Vector.Data_[0];
+                return _doseObject.GridFrameOffsetVector.Data_[1] - _doseObject.GridFrameOffsetVector.Data_[0];
             }
         }
 
         public double X0
         {
-            get { return _doseObject.Image​Position​Patient.Data_[0]; }
-            set { _doseObject.Image​Position​Patient.Data_[0] = value; }
+            get { return _doseObject.ImagePositionPatient.Data_[0]; }
+            set { _doseObject.ImagePositionPatient.Data_[0] = value; }
         }
 
         public double Y0
         {
-            get { return _doseObject.Image​Position​Patient.Data_[1]; }
-            set { _doseObject.Image​Position​Patient.Data_[1] = value; }
+            get { return _doseObject.ImagePositionPatient.Data_[1]; }
+            set { _doseObject.ImagePositionPatient.Data_[1] = value; }
         }
 
         public double Z0
         {
-            get { return _doseObject.Image​Position​Patient.Data_[2]; }
-            set { _doseObject.Image​Position​Patient.Data_[2] = value; }
+            get { return _doseObject.ImagePositionPatient.Data_[2]; }
+            set { _doseObject.ImagePositionPatient.Data_[2] = value; }
         }
 
         public double XMax
@@ -108,8 +108,8 @@ namespace EvilDICOM.RT
 
         public int DimensionZ
         {
-            get { return _doseObject.Number​Of​Frames.Data; }
-            set { _doseObject.Number​Of​Frames.Data = value; }
+            get { return _doseObject.NumberOfFrames.Data; }
+            set { _doseObject.NumberOfFrames.Data = value; }
         }
 
         public DoseValue MaxPointDose
@@ -125,7 +125,7 @@ namespace EvilDICOM.RT
 
         public double[] DirectionalCosines
         {
-            get { return _doseObject.Image​Orientation​Patient.Data_.ToArray(); }
+            get { return _doseObject.ImageOrientationPatient.Data_.ToArray(); }
         }
 
         public double Scaling { get; set; }
@@ -229,9 +229,9 @@ namespace EvilDICOM.RT
         {
             DoseValues = DoseValues.Select(d => d * totalDose).ToList();
             var _16b = 1 / Math.Pow(2, 16);
-            _doseObject.Dose​Grid​Scaling.Data = _16b;
-            _doseObject.Dose​Units.Data = "GY";
-            _doseObject.Dose​Type.Data = "PHYSICAL";
+            _doseObject.DoseGridScaling.Data = _16b;
+            _doseObject.DoseUnits.Data = "GY";
+            _doseObject.DoseType.Data = "PHYSICAL";
 
             using (var stream = new MemoryStream())
             {
@@ -242,7 +242,7 @@ namespace EvilDICOM.RT
                     var bytes = BitConverter.GetBytes(integ);
                     binWriter.Write(integ);
                 }
-                var ows = new OtherWordString(TagHelper.Pixel​Data, stream.ToArray());
+                var ows = new OtherWordString(TagHelper.PixelData, stream.ToArray());
                 _doseObject.ToDICOMObject().Replace(ows);
             }
         }
@@ -275,8 +275,8 @@ namespace EvilDICOM.RT
             if (DataRestriction.EnforceRealNonZero(Scaling, "Scaling") &&
                 DataRestriction.EnforceRealNonZero(ValueSizeInBytes, "ValueSizeInBytes"))
             {
-                _doseObject.Bits​Stored.Data = (ushort)(ValueSizeInBytes * 8);
-                _doseObject.Dose​Grid​Scaling.Data = Scaling;
+                _doseObject.BitsStored.Data = (ushort)(ValueSizeInBytes * 8);
+                _doseObject.DoseGridScaling.Data = Scaling;
                 using (var stream = _doseObject.ToDICOMObject().PixelStream)
                 {
                     var bw = new BinaryWriter(stream);

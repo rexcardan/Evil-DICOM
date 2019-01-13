@@ -98,14 +98,14 @@ namespace EvilDICOM.Core
         {
             get
             {
-                var pixelData = FindFirst(TagHelper.Pixel​Data) as AbstractElement<byte>;
+                var pixelData = FindFirst(TagHelper.PixelData) as AbstractElement<byte>;
                 if (pixelData != null)
                     return new PixelStream(pixelData.DataContainer.MultipicityValue.ToArray());
                 return null;
             }
             set
             {
-                var pixelData = FindFirst(TagHelper.Pixel​Data) as AbstractElement<byte>;
+                var pixelData = FindFirst(TagHelper.PixelData) as AbstractElement<byte>;
                 if (pixelData != null)
                     pixelData.Data_ = value.ToArray().ToList();
             }

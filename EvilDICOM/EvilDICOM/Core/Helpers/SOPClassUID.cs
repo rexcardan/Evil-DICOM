@@ -48,8 +48,8 @@ namespace EvilDICOM.Core.Helpers
         public const String Pseudo_ColorSoftcopyPresentationStateStorage = "1.2.840.10008.5.1.4.1.1.11.3";
         public const String BlendingSoftcopyPresentationStateStorage = "1.2.840.10008.5.1.4.1.1.11.4";
         public const String XAXRFGrayscaleSoftcopyPresentationStateStorage = "1.2.840.10008.5.1.4.1.1.11.5";
-        public const String GrayscalePlanarMPRVolumetricPresentationStateStorage = "1.2.840.10008.​5.​1.​4.​1.​1.​11.​6";
-        public const String CompositingPlanarMPRVolumetricPresentationStateStorage = "1.2.840.10008.​5.​1.​4.​1.​1.​11.​7";
+        public const String GrayscalePlanarMPRVolumetricPresentationStateStorage = "1.2.840.10008.5.1.4.1.1.11.6";
+        public const String CompositingPlanarMPRVolumetricPresentationStateStorage = "1.2.840.10008.5.1.4.1.1.11.7";
         public const String AdvancedBlendingPresentationStateStorage = "1.2.840.10008.5.1.4.1.1.11.8";
         public const String VolumeRenderingVolumetricPresentationStateStorage = "1.2.840.10008.5.1.4.1.1.11.9";
         public const String SegmentedVolumeRenderingVolumetricPresentationStateStorage = "1.2.840.10008.5.1.4.1.1.11.10";
@@ -118,11 +118,11 @@ namespace EvilDICOM.Core.Helpers
         public const String RadiopharmaceuticalRadiationDoseSRStorage = "1.2.840.10008.5.1.4.1.1.88.68";
         public const String ColonCADSRStorage = "1.2.840.10008.5.1.4.1.1.88.69";
         public const String ImplantationPlanSRDocumentStorage = "1.2.840.10008.5.1.4.1.1.88.70";
-        public const String AcquisitionContextSRStorage = "1.2.840.10008.5.​1.​4.​1.​1.​88.​71";
-        public const String SimplifiedAdultEchoSRStorage = "1.2.840.10008.5.​1.​4.​1.​1.​88.​72";
-        public const String PatientRadiationDoseSRStorage = "1.2.840.10008.5.​1.​4.​1.​1.​88.​73";
-        public const String PlannedImagingAgentAdministrationSRStorage = "1.2.840.10008.5.​1.​4.​1.​1.​88.​74";
-        public const String PerformedImagingAgentAdministrationSRStorage = "1.2.840.10008.5.​1.​4.​1.​1.​88.​75";
+        public const String AcquisitionContextSRStorage = "1.2.840.10008.5.1.4.1.1.88.71";
+        public const String SimplifiedAdultEchoSRStorage = "1.2.840.10008.5.1.4.1.1.88.72";
+        public const String PatientRadiationDoseSRStorage = "1.2.840.10008.5.1.4.1.1.88.73";
+        public const String PlannedImagingAgentAdministrationSRStorage = "1.2.840.10008.5.1.4.1.1.88.74";
+        public const String PerformedImagingAgentAdministrationSRStorage = "1.2.840.10008.5.1.4.1.1.88.75";
         public const String ContentAssessmentResultsStorage = "1.2.840.10008.5.1.4.1.1.90.1";
         public const String EncapsulatedPDFStorage = "1.2.840.10008.5.1.4.1.1.104.1";
         public const String EncapsulatedCDAStorage = "1.2.840.10008.5.1.4.1.1.104.2";

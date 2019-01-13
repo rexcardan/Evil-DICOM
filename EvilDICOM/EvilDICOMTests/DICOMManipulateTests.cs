@@ -24,7 +24,7 @@ namespace EvilDICOM.Core.Tests
             var allInstances = dcm.FindAll("00020000");
 
             //Finds all Code Value (0008,0100) elements that are children of Procedure Code Sequence Elements (0008,1032)
-            var specificTree = dcm.FindAll(new Tag[]{ TagHelper.Procedure​Code​Sequence, TagHelper.Code​Value });
+            var specificTree = dcm.FindAll(new Tag[]{ TagHelper.ProcedureCodeSequence, TagHelper.CodeValue });
 
             //Finds all elements that are of VR type PersonName
             var allPersonsNameElements = dcm.FindAll(Enums.VR.PersonName);
@@ -33,7 +33,7 @@ namespace EvilDICOM.Core.Tests
             var refName = new PersonName{
                 FirstName = "Fred",
                 LastName = "Flinstone",
-                Tag = TagHelper.Referring​Physician​Name
+                Tag = TagHelper.ReferringPhysicianName
             };
             dcm.Replace(refName);
 
@@ -54,7 +54,7 @@ namespace EvilDICOM.Core.Tests
             var dcm = DICOMFileReader.Read(Resources.explicitLittleEndian);
             //Remove elements by tag
             dcm.Remove("00020000");
-            dcm.Remove(TagHelper.Segment​Number);
+            dcm.Remove(TagHelper.SegmentNumber);
         }
     }
 }

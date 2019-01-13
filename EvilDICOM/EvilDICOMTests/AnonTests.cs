@@ -15,8 +15,8 @@ namespace EvilDICOMTests
         {
             var dcm = DICOMFileReader.Read(Resources.explicitLittleEndian);
             var sel = dcm.GetSelector();
-            sel.Patient​ID = DICOMForge.Patient​ID();
-            sel.Patient​ID.Data = "12345";
+            sel.PatientID = DICOMForge.PatientID();
+            sel.PatientID.Data = "12345";
             sel.PatientName.LastName = "Flinstone";
             sel.PatientName.FirstName = "Fred";
 

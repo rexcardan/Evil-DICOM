@@ -22,7 +22,7 @@ namespace EvilDICOMTests
         {
             var dcm = DICOMObject.Read(Properties.Resources.explicitLittleEndian);
             Assert.AreEqual(dcm.Elements.Count, 72);
-            Assert.AreEqual(dcm.GetSelector().Slice​Thickness.Data, 10);
+            Assert.AreEqual(dcm.GetSelector().SliceThickness.Data, 10);
         }
 
         [TestMethod]

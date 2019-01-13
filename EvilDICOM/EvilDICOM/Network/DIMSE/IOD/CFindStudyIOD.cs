@@ -18,7 +18,7 @@ namespace EvilDICOM.Network.DIMSE.IOD
             QueryLevel = QueryLevel.STUDY;
             SOPInstanceUID = string.Empty;
             PatientId = string.Empty;
-            PatientsName = new PersonName {Tag = TagHelper.Patient​Name, Data = string.Empty};
+            PatientsName = new PersonName {Tag = TagHelper.PatientName, Data = string.Empty};
             StudyDate = null;
             AccessionNumber = string.Empty;
             StudyId = string.Empty;
@@ -39,23 +39,23 @@ namespace EvilDICOM.Network.DIMSE.IOD
         {
             get
             {
-                if (_sel.Query​Retrieve​Level == null)
-                    _sel.Query​Retrieve​Level.Data = QueryLevel.PATIENT.ToString();
-                return (QueryLevel) S.Enum.Parse(typeof(QueryLevel), _sel.Query​Retrieve​Level.Data);
+                if (_sel.QueryRetrieveLevel == null)
+                    _sel.QueryRetrieveLevel.Data = QueryLevel.PATIENT.ToString();
+                return (QueryLevel) S.Enum.Parse(typeof(QueryLevel), _sel.QueryRetrieveLevel.Data);
             }
-            set { _sel.Forge(DF.Query​Retrieve​Level(value.ToString())); }
+            set { _sel.Forge(DF.QueryRetrieveLevel(value.ToString())); }
         }
 
         public PersonName PatientsName
         {
-            get { return _sel.Patient​Name != null ? _sel.Patient​Name : null; }
-            set { _sel.Patient​Name = value; }
+            get { return _sel.PatientName != null ? _sel.PatientName : null; }
+            set { _sel.PatientName = value; }
         }
 
         public string PatientId
         {
-            get { return _sel.Patient​ID != null ? _sel.Patient​ID.Data : null; }
-            set { _sel.Forge(DF.Patient​ID(value)); }
+            get { return _sel.PatientID != null ? _sel.PatientID.Data : null; }
+            set { _sel.Forge(DF.PatientID(value)); }
         }
 
         public S.DateTime? StudyDate
