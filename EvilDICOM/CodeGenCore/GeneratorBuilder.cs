@@ -1,7 +1,7 @@
 ﻿using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Editing;
 
-namespace CodeGenCore
+namespace EvilDICOM.CodeGenerator
 {
     public class GeneratorBuilder
     {

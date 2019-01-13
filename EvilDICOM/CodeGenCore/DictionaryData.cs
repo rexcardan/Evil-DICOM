@@ -1,4 +1,4 @@
-﻿namespace CodeGenCore
+﻿namespace EvilDICOM.CodeGenerator
 {
     public class DictionaryData
     {

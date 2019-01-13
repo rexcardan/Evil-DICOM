@@ -4,6 +4,10 @@
     <TargetFramework>netcoreapp3.0</TargetFramework>
 
     <IsPackable>false</IsPackable>
+
+    <AssemblyName>EvilDICOM.CodeGeneratorTests</AssemblyName>
+
+    <RootNamespace>EvilDICOM.CodeGeneratorTests</RootNamespace>
   </PropertyGroup>
 
   <ItemGroup>
@@ -16,7 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\CodeGenCore\CodeGenCore.csproj" />
+    <ProjectReference Include="..\CodeGenCore\CodeGenerator.csproj" />
   </ItemGroup>
 
 </Project>

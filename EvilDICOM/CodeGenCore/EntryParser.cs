@@ -1,13 +1,10 @@
-﻿using System;
-using System.Diagnostics;
-using System.Reflection;
-using EvilDICOM.Core;
+﻿using System.Reflection;
 using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Interfaces;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Editing;
 
-namespace CodeGenCore
+namespace EvilDICOM.CodeGenerator
 {
     public static class EntryParser
     {

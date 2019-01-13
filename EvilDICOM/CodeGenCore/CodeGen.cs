@@ -6,7 +6,7 @@ using EvilDICOM.Core.Selection;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Editing;
 
-namespace CodeGenCore
+namespace EvilDICOM.CodeGenerator
 {
     public static class CodeGen
     {

@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using EvilDICOM.Core.Enums;
@@ -7,7 +6,7 @@ using EvilDICOM.Core.Helpers;
 using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Editing;
 
-namespace CodeGenCore
+namespace EvilDICOM.CodeGenerator
 {
     public static class SopClassUidBuilder
     {

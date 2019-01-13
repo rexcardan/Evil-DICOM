@@ -1,9 +1,9 @@
 using System.Threading.Tasks;
-using CodeGenCore;
+using EvilDICOM.CodeGenerator;
 using Xunit;
 using Xunit.Abstractions;
 
-namespace CodeGenTests
+namespace EvilDICOM.CodeGeneratorTests
 {
     public class MainTest
     {

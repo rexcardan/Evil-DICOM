@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.Linq;
 using Newtonsoft.Json;
 
-namespace CodeGenCore
+namespace EvilDICOM.CodeGenerator
 {
     internal static class Program
     {

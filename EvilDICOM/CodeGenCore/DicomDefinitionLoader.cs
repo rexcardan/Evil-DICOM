@@ -6,7 +6,7 @@ using System.Net.Http;
 using System.Threading.Tasks;
 using System.Xml.Linq;
 
-namespace CodeGenCore
+namespace EvilDICOM.CodeGenerator
 {
     public static class DicomDefinitionLoader
     {

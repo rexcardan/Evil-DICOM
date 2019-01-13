@@ -1,7 +1,7 @@
 ﻿using System.Linq;
 using Microsoft.CodeAnalysis;
 
-namespace CodeGenCore
+namespace EvilDICOM.CodeGenerator
 {
     public static class ImportHelper
     {
