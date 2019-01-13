@@ -1,9 +1,11 @@
+// THIS CODE WAS GENERATED AUTOMATICALLY
+
 using System;
 using System.Collections;
 using System.Collections.Generic;
-using EvilDICOM.Core.Enums;
 using System.Linq;
 using EvilDICOM.Core.Element;
+using EvilDICOM.Core.Enums;
 
 namespace EvilDICOM.Core.Selection
 {
@@ -1145,6 +1147,22 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence Anatomic​Regions​In​StudyC​ode​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00080063"));
+            }
+        }
+
+        public List<Sequence> Anatomic​Regions​In​StudyC​ode​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00080063").ToList();
+            }
+        }
+
         public CodeString Conversion​Type
         {
             get
@@ -1481,6 +1499,38 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence Coding​Scheme​Resources​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00080109"));
+            }
+        }
+
+        public List<Sequence> Coding​Scheme​Resources​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00080109").ToList();
+            }
+        }
+
+        public CodeString Coding​Scheme​URL​Type
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("0008010A"));
+            }
+        }
+
+        public List<CodeString> Coding​Scheme​URL​Type_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("0008010A").ToList();
+            }
+        }
+
         public CodeString Context​Group​Extension​Flag
         {
             get
@@ -1526,6 +1576,22 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<UniqueIdentifier>("0008010D").ToList();
+            }
+        }
+
+        public UniversalResourceId Coding​Scheme​URL
+        {
+            get
+            {
+                return (UniversalResourceId)(Items.FindFirst<UniversalResourceId>("0008010E"));
+            }
+        }
+
+        public List<UniversalResourceId> Coding​Scheme​URL_
+        {
+            get
+            {
+                return Items.FindAll<UniversalResourceId>("0008010E").ToList();
             }
         }
 
@@ -2201,6 +2267,22 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence Institutional​Department​Type​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00081041"));
+            }
+        }
+
+        public List<Sequence> Institutional​Department​Type​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00081041").ToList();
+            }
+        }
+
         public PersonName Physicians​Of​Record
         {
             get
@@ -2614,6 +2696,22 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<UniqueIdentifier>("00081155").ToList();
+            }
+        }
+
+        public Sequence Definition​Source​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00081156"));
+            }
+        }
+
+        public List<Sequence> Definition​Source​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00081156").ToList();
             }
         }
 
@@ -5206,6 +5304,38 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<ShortText>("00120051").ToList();
+            }
+        }
+
+        public FloatingPointDouble Longitudinal​Temporal​Offset​From​Event
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("00120052"));
+            }
+        }
+
+        public List<FloatingPointDouble> Longitudinal​Temporal​Offset​From​Event_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("00120052").ToList();
+            }
+        }
+
+        public CodeString Longitudinal​Temporal​Event​Type
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00120053"));
+            }
+        }
+
+        public List<CodeString> Longitudinal​Temporal​Event​Type_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00120053").ToList();
             }
         }
 
@@ -11161,6 +11291,22 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public DecimalString Compression​​Pressure
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("001811A3"));
+            }
+        }
+
+        public List<DecimalString> Compression​​Pressure_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("001811A3").ToList();
+            }
+        }
+
         public LongString Paddle​Description
         {
             get
@@ -11174,6 +11320,22 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<LongString>("001811A4").ToList();
+            }
+        }
+
+        public DecimalString Compression​​Contact​​Area
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("001811A5"));
+            }
+        }
+
+        public List<DecimalString> Compression​​Contact​​Area_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("001811A5").ToList();
             }
         }
 
@@ -17401,7 +17563,7 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public Sequence CTX​Ray​Details​Sequence
+        public Sequence CT​X​Ray​Details​Sequence
         {
             get
             {
@@ -17409,7 +17571,7 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public List<Sequence> CTX​Ray​Details​Sequence_
+        public List<Sequence> CT​X​Ray​Details​Sequence_
         {
             get
             {
@@ -17766,6 +17928,582 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<Sequence>("00189360").ToList();
+            }
+        }
+
+        public CodeString Multienergy​CT​Acquisition
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00189361"));
+            }
+        }
+
+        public List<CodeString> Multienergy​CT​Acquisition_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00189361").ToList();
+            }
+        }
+
+        public Sequence Multienergy​CT​Acquisition​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00189362"));
+            }
+        }
+
+        public List<Sequence> Multienergy​CT​Acquisition​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00189362").ToList();
+            }
+        }
+
+        public Sequence Multienergy​CT​Processing​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00189363"));
+            }
+        }
+
+        public List<Sequence> Multienergy​CT​Processing​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00189363").ToList();
+            }
+        }
+
+        public Sequence Multienergy​CT​Characteristics​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00189364"));
+            }
+        }
+
+        public List<Sequence> Multienergy​CT​Characteristics​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00189364").ToList();
+            }
+        }
+
+        public Sequence Multienergy​CT​XRay​Source​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00189365"));
+            }
+        }
+
+        public List<Sequence> Multienergy​CT​XRay​Source​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00189365").ToList();
+            }
+        }
+
+        public UnsignedShort XRay​Source​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00189366"));
+            }
+        }
+
+        public List<UnsignedShort> XRay​Source​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00189366").ToList();
+            }
+        }
+
+        public UnlimitedCharacter XRay​Source​ID
+        {
+            get
+            {
+                return (UnlimitedCharacter)(Items.FindFirst<UnlimitedCharacter>("00189367"));
+            }
+        }
+
+        public List<UnlimitedCharacter> XRay​Source​ID_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedCharacter>("00189367").ToList();
+            }
+        }
+
+        public CodeString Multienergy​Source​Technique
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00189368"));
+            }
+        }
+
+        public List<CodeString> Multienergy​Source​Technique_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00189368").ToList();
+            }
+        }
+
+        public Element.DateTime Source​Start​Date​Time
+        {
+            get
+            {
+                return (Element.DateTime)(Items.FindFirst<Element.DateTime>("00189369"));
+            }
+        }
+
+        public List<Element.DateTime> Source​Start​Date​Time_
+        {
+            get
+            {
+                return Items.FindAll<Element.DateTime>("00189369").ToList();
+            }
+        }
+
+        public Element.DateTime Source​End​Date​Time
+        {
+            get
+            {
+                return (Element.DateTime)(Items.FindFirst<Element.DateTime>("0018936A"));
+            }
+        }
+
+        public List<Element.DateTime> Source​End​Date​Time_
+        {
+            get
+            {
+                return Items.FindAll<Element.DateTime>("0018936A").ToList();
+            }
+        }
+
+        public UnsignedShort Switching​Phase​Number
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("0018936B"));
+            }
+        }
+
+        public List<UnsignedShort> Switching​Phase​Number_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("0018936B").ToList();
+            }
+        }
+
+        public DecimalString Switching​Phase​Nominal​Duration
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("0018936C"));
+            }
+        }
+
+        public List<DecimalString> Switching​Phase​Nominal​Duration_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("0018936C").ToList();
+            }
+        }
+
+        public DecimalString Switching​Phase​Transition​Duration
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("0018936D"));
+            }
+        }
+
+        public List<DecimalString> Switching​Phase​Transition​Duration_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("0018936D").ToList();
+            }
+        }
+
+        public DecimalString Effective​Bin​Energy
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("0018936E"));
+            }
+        }
+
+        public List<DecimalString> Effective​Bin​Energy_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("0018936E").ToList();
+            }
+        }
+
+        public Sequence Multienergy​CT​XRay​Detector​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("0018936F"));
+            }
+        }
+
+        public List<Sequence> Multienergy​CT​XRay​Detector​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("0018936F").ToList();
+            }
+        }
+
+        public UnsignedShort XRay​Detector​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00189370"));
+            }
+        }
+
+        public List<UnsignedShort> XRay​Detector​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00189370").ToList();
+            }
+        }
+
+        public UnlimitedCharacter XRay​Detector​ID
+        {
+            get
+            {
+                return (UnlimitedCharacter)(Items.FindFirst<UnlimitedCharacter>("00189371"));
+            }
+        }
+
+        public List<UnlimitedCharacter> XRay​Detector​ID_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedCharacter>("00189371").ToList();
+            }
+        }
+
+        public CodeString Multienergy​Detector​Type
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00189372"));
+            }
+        }
+
+        public List<CodeString> Multienergy​Detector​Type_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00189372").ToList();
+            }
+        }
+
+        public ShortText XRay​Detector​Label
+        {
+            get
+            {
+                return (ShortText)(Items.FindFirst<ShortText>("00189373"));
+            }
+        }
+
+        public List<ShortText> XRay​Detector​Label_
+        {
+            get
+            {
+                return Items.FindAll<ShortText>("00189373").ToList();
+            }
+        }
+
+        public DecimalString Nominal​Max​Energy
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00189374"));
+            }
+        }
+
+        public List<DecimalString> Nominal​Max​Energy_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00189374").ToList();
+            }
+        }
+
+        public DecimalString Nominal​Min​Energy
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00189375"));
+            }
+        }
+
+        public List<DecimalString> Nominal​Min​Energy_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00189375").ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​XRay​Detector​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00189376"));
+            }
+        }
+
+        public List<UnsignedShort> Referenced​XRay​Detector​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00189376").ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​XRay​Source​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00189377"));
+            }
+        }
+
+        public List<UnsignedShort> Referenced​XRay​Source​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00189377").ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​Path​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("00189378"));
+            }
+        }
+
+        public List<UnsignedShort> Referenced​Path​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("00189378").ToList();
+            }
+        }
+
+        public Sequence Multienergy​CT​Path​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00189379"));
+            }
+        }
+
+        public List<Sequence> Multienergy​CT​Path​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00189379").ToList();
+            }
+        }
+
+        public UnsignedShort Multienergy​CT​Path​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("0018937A"));
+            }
+        }
+
+        public List<UnsignedShort> Multienergy​CT​Path​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("0018937A").ToList();
+            }
+        }
+
+        public UnlimitedText Multienergy​Acquisition​Description
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("0018937B"));
+            }
+        }
+
+        public List<UnlimitedText> Multienergy​Acquisition​Description_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("0018937B").ToList();
+            }
+        }
+
+        public FloatingPointDouble Monoenergetic​Energy​Equivalent
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("0018937C"));
+            }
+        }
+
+        public List<FloatingPointDouble> Monoenergetic​Energy​Equivalent_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("0018937C").ToList();
+            }
+        }
+
+        public Sequence Material​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("0018937D"));
+            }
+        }
+
+        public List<Sequence> Material​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("0018937D").ToList();
+            }
+        }
+
+        public CodeString Decomposition​Method
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("0018937E"));
+            }
+        }
+
+        public List<CodeString> Decomposition​Method_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("0018937E").ToList();
+            }
+        }
+
+        public UnlimitedText Decomposition​Description
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("0018937F"));
+            }
+        }
+
+        public List<UnlimitedText> Decomposition​Description_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("0018937F").ToList();
+            }
+        }
+
+        public Sequence Decomposition​Algorithm​Identification​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00189380"));
+            }
+        }
+
+        public List<Sequence> Decomposition​Algorithm​Identification​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00189380").ToList();
+            }
+        }
+
+        public Sequence Decomposition​Material​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00189381"));
+            }
+        }
+
+        public List<Sequence> Decomposition​Material​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00189381").ToList();
+            }
+        }
+
+        public Sequence Material​Attenuation​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00189382"));
+            }
+        }
+
+        public List<Sequence> Material​Attenuation​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00189382").ToList();
+            }
+        }
+
+        public DecimalString Photon​Energy
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00189383"));
+            }
+        }
+
+        public List<DecimalString> Photon​Energy_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00189383").ToList();
+            }
+        }
+
+        public DecimalString XRay​Mass​Attenuation​Coefficient
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("00189384"));
+            }
+        }
+
+        public List<DecimalString> XRay​Mass​Attenuation​Coefficient_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("00189384").ToList();
             }
         }
 
@@ -24278,6 +25016,22 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<Sequence>("00221035").ToList();
+            }
+        }
+
+        public Sequence Source​Of​Corneal​Size​Data​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00221036"));
+            }
+        }
+
+        public List<Sequence> Source​Of​Corneal​Size​Data​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00221036").ToList();
             }
         }
 
@@ -34425,6 +35179,22 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence Whole​Slide​Microscopy​Image​Frame​Type​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00400710"));
+            }
+        }
+
+        public List<Sequence> Whole​Slide​Microscopy​Image​Frame​Type​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00400710").ToList();
+            }
+        }
+
         public Sequence Image​Center​Point​Coordinates​Sequence
         {
             get
@@ -35174,6 +35944,22 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<Sequence>("00404007").ToList();
+            }
+        }
+
+        public Element.DateTime Scheduled​Procedure​Step​Expiration​Date​Time
+        {
+            get
+            {
+                return (Element.DateTime)(Items.FindFirst<Element.DateTime>("00404008"));
+            }
+        }
+
+        public List<Element.DateTime> Scheduled​Procedure​Step​Expiration​Date​Time_
+        {
+            get
+            {
+                return Items.FindAll<Element.DateTime>("00404008").ToList();
             }
         }
 
@@ -38345,6 +39131,182 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence Approval​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00440100"));
+            }
+        }
+
+        public List<Sequence> Approval​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00440100").ToList();
+            }
+        }
+
+        public Sequence Assertion​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00440101"));
+            }
+        }
+
+        public List<Sequence> Assertion​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00440101").ToList();
+            }
+        }
+
+        public UniqueIdentifier Assertion​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("00440102"));
+            }
+        }
+
+        public List<UniqueIdentifier> Assertion​UID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("00440102").ToList();
+            }
+        }
+
+        public Sequence Asserter​Identification​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00440103"));
+            }
+        }
+
+        public List<Sequence> Asserter​Identification​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00440103").ToList();
+            }
+        }
+
+        public Element.DateTime Assertion​DateTime
+        {
+            get
+            {
+                return (Element.DateTime)(Items.FindFirst<Element.DateTime>("00440104"));
+            }
+        }
+
+        public List<Element.DateTime> Assertion​DateTime_
+        {
+            get
+            {
+                return Items.FindAll<Element.DateTime>("00440104").ToList();
+            }
+        }
+
+        public Element.DateTime Assertion​Expiration​DateTime
+        {
+            get
+            {
+                return (Element.DateTime)(Items.FindFirst<Element.DateTime>("00440105"));
+            }
+        }
+
+        public List<Element.DateTime> Assertion​Expiration​DateTime_
+        {
+            get
+            {
+                return Items.FindAll<Element.DateTime>("00440105").ToList();
+            }
+        }
+
+        public UnlimitedText Assertion​Comments
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("00440106"));
+            }
+        }
+
+        public List<UnlimitedText> Assertion​Comments_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("00440106").ToList();
+            }
+        }
+
+        public Sequence Related​Assertion​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00440107"));
+            }
+        }
+
+        public List<Sequence> Related​Assertion​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00440107").ToList();
+            }
+        }
+
+        public UniqueIdentifier Referenced​Assertion​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("00440108"));
+            }
+        }
+
+        public List<UniqueIdentifier> Referenced​Assertion​UID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("00440108").ToList();
+            }
+        }
+
+        public Sequence Approval​Subject​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00440109"));
+            }
+        }
+
+        public List<Sequence> Approval​Subject​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00440109").ToList();
+            }
+        }
+
+        public Sequence Organizational​Role​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("0044010A"));
+            }
+        }
+
+        public List<Sequence> Organizational​Role​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("0044010A").ToList();
+            }
+        }
+
         public LongString Lens​Description
         {
             get
@@ -38582,6 +39544,22 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<FloatingPointDouble>("00460046").ToList();
+            }
+        }
+
+        public Sequence Corneal​Size​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00460047"));
+            }
+        }
+
+        public List<Sequence> Corneal​Size​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00460047").ToList();
             }
         }
 
@@ -40105,6 +41083,38 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public UnsignedLong Number​Of​Optical​Paths
+        {
+            get
+            {
+                return (UnsignedLong)(Items.FindFirst<UnsignedLong>("00480302"));
+            }
+        }
+
+        public List<UnsignedLong> Number​Of​Optical​Paths_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedLong>("00480302").ToList();
+            }
+        }
+
+        public UnsignedLong Total​Pixel​Matrix​Focal​Planes
+        {
+            get
+            {
+                return (UnsignedLong)(Items.FindFirst<UnsignedLong>("00480303"));
+            }
+        }
+
+        public List<UnsignedLong> Total​Pixel​Matrix​Focal​Planes_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedLong>("00480303").ToList();
+            }
+        }
+
         public CodeString Calibration​Image
         {
             get
@@ -40358,6 +41368,22 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<LongString>("00500020").ToList();
+            }
+        }
+
+        public ShortText Long​Device​Description
+        {
+            get
+            {
+                return (ShortText)(Items.FindFirst<ShortText>("00500021"));
+            }
+        }
+
+        public List<ShortText> Long​Device​Description_
+        {
+            get
+            {
+                return Items.FindAll<ShortText>("00500021").ToList();
             }
         }
 
@@ -42470,6 +43496,22 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<Sequence>("00620012").ToList();
+            }
+        }
+
+        public CodeString Segments​Overlap
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00620013"));
+            }
+        }
+
+        public List<CodeString> Segments​Overlap_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00620013").ToList();
             }
         }
 
@@ -44825,6 +45867,54 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public CodeString Model​Modification
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00687001"));
+            }
+        }
+
+        public List<CodeString> Model​Modification_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00687001").ToList();
+            }
+        }
+
+        public CodeString Model​Mirroring
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("00687002"));
+            }
+        }
+
+        public List<CodeString> Model​Mirroring_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("00687002").ToList();
+            }
+        }
+
+        public Sequence Model​Usage​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00687003"));
+            }
+        }
+
+        public List<Sequence> Model​Usage​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00687003").ToList();
+            }
+        }
+
         public Sequence Graphic​Annotation​Sequence
         {
             get
@@ -46422,6 +47512,22 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<UniqueIdentifier>("0070031A").ToList();
+            }
+        }
+
+        public UniqueIdentifier Referenced​Fiducial​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("0070031B"));
+            }
+        }
+
+        public List<UniqueIdentifier> Referenced​Fiducial​UID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("0070031B").ToList();
             }
         }
 
@@ -49833,6 +50939,22 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence Procedure​Step​Progress​Parameters​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("00741007"));
+            }
+        }
+
+        public List<Sequence> Procedure​Step​Progress​Parameters​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("00741007").ToList();
+            }
+        }
+
         public Sequence Procedure​Step​Communications​URI​Sequence
         {
             get
@@ -51897,7 +53019,7 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public Sequence Structured​Contraint​Observation​Sequence
+        public Sequence Structured​Constraint​Observation​Sequence
         {
             get
             {
@@ -51905,7 +53027,7 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public List<Sequence> Structured​Contraint​Observation​Sequence_
+        public List<Sequence> Structured​Constraint​Observation​Sequence_
         {
             get
             {
@@ -52710,6 +53832,22 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<CodeString>("04000565").ToList();
+            }
+        }
+
+        public CodeString Instance​Origin​Status
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("04000600"));
+            }
+        }
+
+        public List<CodeString> Instance​Origin​Status_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("04000600").ToList();
             }
         }
 
@@ -55798,6 +56936,22 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<CodeString>("30060036").ToList();
+            }
+        }
+
+        public Sequence ROI​Derivation​Algorithm​Identification​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30060037"));
+            }
+        }
+
+        public List<Sequence> ROI​Derivation​Algorithm​Identification​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30060037").ToList();
             }
         }
 
@@ -58921,6 +60075,38 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public CodeString Depth​Value​Averaging​Flag
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("300A0093"));
+            }
+        }
+
+        public List<CodeString> Depth​Value​Averaging​Flag_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("300A0093").ToList();
+            }
+        }
+
+        public DecimalString Beam​Dose​Point​Source​To​External​Contour​Distance
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("300A0094"));
+            }
+        }
+
+        public List<DecimalString> Beam​Dose​Point​Source​To​External​Contour​Distance_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("300A0094").ToList();
+            }
+        }
+
         public IntegerString Number​Of​Brachy​Application​Setups
         {
             get
@@ -61849,6 +63035,70 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public DecimalString Channel​Effective​Length
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("300A0271"));
+            }
+        }
+
+        public List<DecimalString> Channel​Effective​Length_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("300A0271").ToList();
+            }
+        }
+
+        public DecimalString Channel​Inner​Length
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("300A0272"));
+            }
+        }
+
+        public List<DecimalString> Channel​Inner​Length_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("300A0272").ToList();
+            }
+        }
+
+        public ShortString Afterloader​Channel​ID
+        {
+            get
+            {
+                return (ShortString)(Items.FindFirst<ShortString>("300A0273"));
+            }
+        }
+
+        public List<ShortString> Afterloader​Channel​ID_
+        {
+            get
+            {
+                return Items.FindAll<ShortString>("300A0273").ToList();
+            }
+        }
+
+        public DecimalString Source​Applicator​Tip​Length
+        {
+            get
+            {
+                return (DecimalString)(Items.FindFirst<DecimalString>("300A0274"));
+            }
+        }
+
+        public List<DecimalString> Source​Applicator​Tip​Length_
+        {
+            get
+            {
+                return Items.FindAll<DecimalString>("300A0274").ToList();
+            }
+        }
+
         public Sequence Channel​Sequence
         {
             get
@@ -64726,6 +65976,2150 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return Items.FindAll<PersonName>("300E0008").ToList();
+            }
+        }
+
+        public Sequence Radiobiological​Dose​Effect​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100001"));
+            }
+        }
+
+        public List<Sequence> Radiobiological​Dose​Effect​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100001").ToList();
+            }
+        }
+
+        public CodeString Radiobiological​Dose​Effect​Flag
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("30100002"));
+            }
+        }
+
+        public List<CodeString> Radiobiological​Dose​Effect​Flag_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("30100002").ToList();
+            }
+        }
+
+        public Sequence Effective​Dose​Calculation​Method​Category​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100003"));
+            }
+        }
+
+        public List<Sequence> Effective​Dose​Calculation​Method​Category​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100003").ToList();
+            }
+        }
+
+        public Sequence Effective​Dose​Calculation​Method​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100004"));
+            }
+        }
+
+        public List<Sequence> Effective​Dose​Calculation​Method​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100004").ToList();
+            }
+        }
+
+        public LongString Effective​Dose​Method​Description
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("30100005"));
+            }
+        }
+
+        public List<LongString> Effective​Dose​Method​Description_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("30100005").ToList();
+            }
+        }
+
+        public UniqueIdentifier Conceptual​Volume​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("30100006"));
+            }
+        }
+
+        public List<UniqueIdentifier> Conceptual​Volume​UID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("30100006").ToList();
+            }
+        }
+
+        public Sequence Originating​SOPInstance​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100007"));
+            }
+        }
+
+        public List<Sequence> Originating​SOPInstance​Reference​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100007").ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Constituent​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100008"));
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Constituent​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100008").ToList();
+            }
+        }
+
+        public Sequence Equivalent​Conceptual​Volume​Instance​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100009"));
+            }
+        }
+
+        public List<Sequence> Equivalent​Conceptual​Volume​Instance​Reference​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100009").ToList();
+            }
+        }
+
+        public Sequence Equivalent​Conceptual​Volumes​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010000A"));
+            }
+        }
+
+        public List<Sequence> Equivalent​Conceptual​Volumes​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010000A").ToList();
+            }
+        }
+
+        public UniqueIdentifier Referenced​Conceptual​Volume​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("3010000B"));
+            }
+        }
+
+        public List<UniqueIdentifier> Referenced​Conceptual​Volume​UID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("3010000B").ToList();
+            }
+        }
+
+        public UnlimitedText Conceptual​Volume​Combination​Expression
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("3010000C"));
+            }
+        }
+
+        public List<UnlimitedText> Conceptual​Volume​Combination​Expression_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("3010000C").ToList();
+            }
+        }
+
+        public UnsignedShort Conceptual​Volume​Constituent​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("3010000D"));
+            }
+        }
+
+        public List<UnsignedShort> Conceptual​Volume​Constituent​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("3010000D").ToList();
+            }
+        }
+
+        public CodeString Conceptual​Volume​Combination​Flag
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("3010000E"));
+            }
+        }
+
+        public List<CodeString> Conceptual​Volume​Combination​Flag_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("3010000E").ToList();
+            }
+        }
+
+        public ShortText Conceptual​Volume​Combination​Description
+        {
+            get
+            {
+                return (ShortText)(Items.FindFirst<ShortText>("3010000F"));
+            }
+        }
+
+        public List<ShortText> Conceptual​Volume​Combination​Description_
+        {
+            get
+            {
+                return Items.FindAll<ShortText>("3010000F").ToList();
+            }
+        }
+
+        public CodeString Conceptual​Volume​Segmentation​Defined​Flag
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("30100010"));
+            }
+        }
+
+        public List<CodeString> Conceptual​Volume​Segmentation​Defined​Flag_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("30100010").ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Segmentation​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100011"));
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Segmentation​Reference​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100011").ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Constituent​Segmentation​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100012"));
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Constituent​Segmentation​Reference​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100012").ToList();
+            }
+        }
+
+        public UniqueIdentifier Constituent​Conceptual​Volume​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("30100013"));
+            }
+        }
+
+        public List<UniqueIdentifier> Constituent​Conceptual​Volume​UID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("30100013").ToList();
+            }
+        }
+
+        public Sequence Derivation​Conceptual​Volume​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100014"));
+            }
+        }
+
+        public List<Sequence> Derivation​Conceptual​Volume​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100014").ToList();
+            }
+        }
+
+        public UniqueIdentifier Source​Conceptual​Volume​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("30100015"));
+            }
+        }
+
+        public List<UniqueIdentifier> Source​Conceptual​Volume​UID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("30100015").ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Derivation​Algorithm​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100016"));
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Derivation​Algorithm​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100016").ToList();
+            }
+        }
+
+        public ShortText Conceptual​Volume​Description
+        {
+            get
+            {
+                return (ShortText)(Items.FindFirst<ShortText>("30100017"));
+            }
+        }
+
+        public List<ShortText> Conceptual​Volume​Description_
+        {
+            get
+            {
+                return Items.FindAll<ShortText>("30100017").ToList();
+            }
+        }
+
+        public Sequence Source​Conceptual​Volume​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100018"));
+            }
+        }
+
+        public List<Sequence> Source​Conceptual​Volume​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100018").ToList();
+            }
+        }
+
+        public Sequence Author​Identification​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100019"));
+            }
+        }
+
+        public List<Sequence> Author​Identification​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100019").ToList();
+            }
+        }
+
+        public LongString Manufacturers​Model​Version
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("3010001A"));
+            }
+        }
+
+        public List<LongString> Manufacturers​Model​Version_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("3010001A").ToList();
+            }
+        }
+
+        public UnlimitedCharacter Device​Alternate​Identifier
+        {
+            get
+            {
+                return (UnlimitedCharacter)(Items.FindFirst<UnlimitedCharacter>("3010001B"));
+            }
+        }
+
+        public List<UnlimitedCharacter> Device​Alternate​Identifier_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedCharacter>("3010001B").ToList();
+            }
+        }
+
+        public CodeString Device​Alternate​Identifier​Type
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("3010001C"));
+            }
+        }
+
+        public List<CodeString> Device​Alternate​Identifier​Type_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("3010001C").ToList();
+            }
+        }
+
+        public LongText Device​Alternate​Identifier​Format
+        {
+            get
+            {
+                return (LongText)(Items.FindFirst<LongText>("3010001D"));
+            }
+        }
+
+        public List<LongText> Device​Alternate​Identifier​Format_
+        {
+            get
+            {
+                return Items.FindAll<LongText>("3010001D").ToList();
+            }
+        }
+
+        public LongString Segmentation​Creation​Template​Label
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("3010001E"));
+            }
+        }
+
+        public List<LongString> Segmentation​Creation​Template​Label_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("3010001E").ToList();
+            }
+        }
+
+        public UniqueIdentifier Segmentation​Template​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("3010001F"));
+            }
+        }
+
+        public List<UniqueIdentifier> Segmentation​Template​UID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("3010001F").ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​Segment​Reference​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("30100020"));
+            }
+        }
+
+        public List<UnsignedShort> Referenced​Segment​Reference​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("30100020").ToList();
+            }
+        }
+
+        public Sequence Segment​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100021"));
+            }
+        }
+
+        public List<Sequence> Segment​Reference​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100021").ToList();
+            }
+        }
+
+        public UnsignedShort Segment​Reference​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("30100022"));
+            }
+        }
+
+        public List<UnsignedShort> Segment​Reference​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("30100022").ToList();
+            }
+        }
+
+        public Sequence Direct​Segment​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100023"));
+            }
+        }
+
+        public List<Sequence> Direct​Segment​Reference​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100023").ToList();
+            }
+        }
+
+        public Sequence Combination​Segment​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100024"));
+            }
+        }
+
+        public List<Sequence> Combination​Segment​Reference​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100024").ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100025"));
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100025").ToList();
+            }
+        }
+
+        public Sequence Segmented​RTAccessory​Device​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100026"));
+            }
+        }
+
+        public List<Sequence> Segmented​RTAccessory​Device​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100026").ToList();
+            }
+        }
+
+        public Sequence Segment​Characteristics​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100027"));
+            }
+        }
+
+        public List<Sequence> Segment​Characteristics​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100027").ToList();
+            }
+        }
+
+        public Sequence Related​Segment​Characteristics​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100028"));
+            }
+        }
+
+        public List<Sequence> Related​Segment​Characteristics​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100028").ToList();
+            }
+        }
+
+        public UnsignedShort Segment​Characteristics​Precedence
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("30100029"));
+            }
+        }
+
+        public List<UnsignedShort> Segment​Characteristics​Precedence_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("30100029").ToList();
+            }
+        }
+
+        public Sequence RTSegment​Annotation​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010002A"));
+            }
+        }
+
+        public List<Sequence> RTSegment​Annotation​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010002A").ToList();
+            }
+        }
+
+        public Sequence Segment​Annotation​Category​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010002B"));
+            }
+        }
+
+        public List<Sequence> Segment​Annotation​Category​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010002B").ToList();
+            }
+        }
+
+        public Sequence Segment​Annotation​Type​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010002C"));
+            }
+        }
+
+        public List<Sequence> Segment​Annotation​Type​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010002C").ToList();
+            }
+        }
+
+        public LongString Device​Label
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("3010002D"));
+            }
+        }
+
+        public List<LongString> Device​Label_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("3010002D").ToList();
+            }
+        }
+
+        public Sequence Device​Type​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010002E"));
+            }
+        }
+
+        public List<Sequence> Device​Type​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010002E").ToList();
+            }
+        }
+
+        public Sequence Patient​Equipment​Relationship​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100030"));
+            }
+        }
+
+        public List<Sequence> Patient​Equipment​Relationship​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100030").ToList();
+            }
+        }
+
+        public UniqueIdentifier Referenced​Fiducials​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("30100031"));
+            }
+        }
+
+        public List<UniqueIdentifier> Referenced​Fiducials​UID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("30100031").ToList();
+            }
+        }
+
+        public Sequence Patient​Treatment​Orientation​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100032"));
+            }
+        }
+
+        public List<Sequence> Patient​Treatment​Orientation​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100032").ToList();
+            }
+        }
+
+        public ShortString User​Content​Label
+        {
+            get
+            {
+                return (ShortString)(Items.FindFirst<ShortString>("30100033"));
+            }
+        }
+
+        public List<ShortString> User​Content​Label_
+        {
+            get
+            {
+                return Items.FindAll<ShortString>("30100033").ToList();
+            }
+        }
+
+        public LongString User​Content​Long​Label
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("30100034"));
+            }
+        }
+
+        public List<LongString> User​Content​Long​Label_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("30100034").ToList();
+            }
+        }
+
+        public ShortString Entity​Label
+        {
+            get
+            {
+                return (ShortString)(Items.FindFirst<ShortString>("30100035"));
+            }
+        }
+
+        public List<ShortString> Entity​Label_
+        {
+            get
+            {
+                return Items.FindAll<ShortString>("30100035").ToList();
+            }
+        }
+
+        public LongString Entity​Name
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("30100036"));
+            }
+        }
+
+        public List<LongString> Entity​Name_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("30100036").ToList();
+            }
+        }
+
+        public ShortText Entity​Description
+        {
+            get
+            {
+                return (ShortText)(Items.FindFirst<ShortText>("30100037"));
+            }
+        }
+
+        public List<ShortText> Entity​Description_
+        {
+            get
+            {
+                return Items.FindAll<ShortText>("30100037").ToList();
+            }
+        }
+
+        public LongString Entity​Long​Label
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("30100038"));
+            }
+        }
+
+        public List<LongString> Entity​Long​Label_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("30100038").ToList();
+            }
+        }
+
+        public UnsignedShort Device​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("30100039"));
+            }
+        }
+
+        public List<UnsignedShort> Device​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("30100039").ToList();
+            }
+        }
+
+        public UnsignedShort RTTreatment​Phase​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("3010003A"));
+            }
+        }
+
+        public List<UnsignedShort> RTTreatment​Phase​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("3010003A").ToList();
+            }
+        }
+
+        public UniqueIdentifier RTTreatment​Phase​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("3010003B"));
+            }
+        }
+
+        public List<UniqueIdentifier> RTTreatment​Phase​UID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("3010003B").ToList();
+            }
+        }
+
+        public UnsignedShort RTPrescription​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("3010003C"));
+            }
+        }
+
+        public List<UnsignedShort> RTPrescription​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("3010003C").ToList();
+            }
+        }
+
+        public UnsignedShort RTSegment​Annotation​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("3010003D"));
+            }
+        }
+
+        public List<UnsignedShort> RTSegment​Annotation​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("3010003D").ToList();
+            }
+        }
+
+        public UnsignedShort Basis​RTTreatment​Phase​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("3010003E"));
+            }
+        }
+
+        public List<UnsignedShort> Basis​RTTreatment​Phase​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("3010003E").ToList();
+            }
+        }
+
+        public UnsignedShort Related​RTTreatment​Phase​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("3010003F"));
+            }
+        }
+
+        public List<UnsignedShort> Related​RTTreatment​Phase​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("3010003F").ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​RTTreatment​Phase​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("30100040"));
+            }
+        }
+
+        public List<UnsignedShort> Referenced​RTTreatment​Phase​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("30100040").ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​RTPrescription​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("30100041"));
+            }
+        }
+
+        public List<UnsignedShort> Referenced​RTPrescription​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("30100041").ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​Parent​RTPrescription​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("30100042"));
+            }
+        }
+
+        public List<UnsignedShort> Referenced​Parent​RTPrescription​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("30100042").ToList();
+            }
+        }
+
+        public ShortText Manufacturer​Device​Identifier
+        {
+            get
+            {
+                return (ShortText)(Items.FindFirst<ShortText>("30100043"));
+            }
+        }
+
+        public List<ShortText> Manufacturer​Device​Identifier_
+        {
+            get
+            {
+                return Items.FindAll<ShortText>("30100043").ToList();
+            }
+        }
+
+        public Sequence Instance​Level​Referenced​Performed​Procedure​Step​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100044"));
+            }
+        }
+
+        public List<Sequence> Instance​Level​Referenced​Performed​Procedure​Step​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100044").ToList();
+            }
+        }
+
+        public CodeString RTTreatment​Phase​Intent​Presence​Flag
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("30100045"));
+            }
+        }
+
+        public List<CodeString> RTTreatment​Phase​Intent​Presence​Flag_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("30100045").ToList();
+            }
+        }
+
+        public CodeString Radiotherapy​Treatment​Type
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("30100046"));
+            }
+        }
+
+        public List<CodeString> Radiotherapy​Treatment​Type_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("30100046").ToList();
+            }
+        }
+
+        public CodeString Teletherapy​Radiation​Type
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("30100047"));
+            }
+        }
+
+        public List<CodeString> Teletherapy​Radiation​Type_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("30100047").ToList();
+            }
+        }
+
+        public CodeString Brachytherapy​Source​Type
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("30100048"));
+            }
+        }
+
+        public List<CodeString> Brachytherapy​Source​Type_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("30100048").ToList();
+            }
+        }
+
+        public Sequence Referenced​RTTreatment​Phase​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100049"));
+            }
+        }
+
+        public List<Sequence> Referenced​RTTreatment​Phase​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100049").ToList();
+            }
+        }
+
+        public Sequence Referenced​Direct​Segment​Instance​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010004A"));
+            }
+        }
+
+        public List<Sequence> Referenced​Direct​Segment​Instance​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010004A").ToList();
+            }
+        }
+
+        public Sequence Intended​RTTreatment​Phase​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010004B"));
+            }
+        }
+
+        public List<Sequence> Intended​RTTreatment​Phase​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010004B").ToList();
+            }
+        }
+
+        public Date Intended​Phase​Start​Date
+        {
+            get
+            {
+                return (Date)(Items.FindFirst<Date>("3010004C"));
+            }
+        }
+
+        public List<Date> Intended​Phase​Start​Date_
+        {
+            get
+            {
+                return Items.FindAll<Date>("3010004C").ToList();
+            }
+        }
+
+        public Date Intended​Phase​End​Date
+        {
+            get
+            {
+                return (Date)(Items.FindFirst<Date>("3010004D"));
+            }
+        }
+
+        public List<Date> Intended​Phase​End​Date_
+        {
+            get
+            {
+                return Items.FindAll<Date>("3010004D").ToList();
+            }
+        }
+
+        public Sequence RTTreatment​Phase​Interval​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010004E"));
+            }
+        }
+
+        public List<Sequence> RTTreatment​Phase​Interval​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010004E").ToList();
+            }
+        }
+
+        public CodeString Temporal​Relationship​Interval​Anchor
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("3010004F"));
+            }
+        }
+
+        public List<CodeString> Temporal​Relationship​Interval​Anchor_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("3010004F").ToList();
+            }
+        }
+
+        public FloatingPointDouble Minimum​Number​Of​Interval​Days
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("30100050"));
+            }
+        }
+
+        public List<FloatingPointDouble> Minimum​Number​Of​Interval​Days_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("30100050").ToList();
+            }
+        }
+
+        public FloatingPointDouble Maximum​Number​Of​Interval​Days
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("30100051"));
+            }
+        }
+
+        public List<FloatingPointDouble> Maximum​Number​Of​Interval​Days_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("30100051").ToList();
+            }
+        }
+
+        public UniqueIdentifier Pertinent​SOPClasses​In​Study
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("30100052"));
+            }
+        }
+
+        public List<UniqueIdentifier> Pertinent​SOPClasses​In​Study_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("30100052").ToList();
+            }
+        }
+
+        public UniqueIdentifier Pertinent​SOPClasses​In​Series
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("30100053"));
+            }
+        }
+
+        public List<UniqueIdentifier> Pertinent​SOPClasses​In​Series_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("30100053").ToList();
+            }
+        }
+
+        public LongString RTPrescription​Label
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("30100054"));
+            }
+        }
+
+        public List<LongString> RTPrescription​Label_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("30100054").ToList();
+            }
+        }
+
+        public Sequence RTPhysician​Intent​Predecessor​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100055"));
+            }
+        }
+
+        public List<Sequence> RTPhysician​Intent​Predecessor​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100055").ToList();
+            }
+        }
+
+        public LongString RTTreatment​Approach​Label
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("30100056"));
+            }
+        }
+
+        public List<LongString> RTTreatment​Approach​Label_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("30100056").ToList();
+            }
+        }
+
+        public Sequence RTPhysician​Intent​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100057"));
+            }
+        }
+
+        public List<Sequence> RTPhysician​Intent​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100057").ToList();
+            }
+        }
+
+        public UnsignedShort RTPhysician​Intent​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("30100058"));
+            }
+        }
+
+        public List<UnsignedShort> RTPhysician​Intent​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("30100058").ToList();
+            }
+        }
+
+        public CodeString RTTreatment​Intent​Type
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("30100059"));
+            }
+        }
+
+        public List<CodeString> RTTreatment​Intent​Type_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("30100059").ToList();
+            }
+        }
+
+        public UnlimitedText RTPhysician​Intent​Narrative
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("3010005A"));
+            }
+        }
+
+        public List<UnlimitedText> RTPhysician​Intent​Narrative_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("3010005A").ToList();
+            }
+        }
+
+        public Sequence RTProtocol​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010005B"));
+            }
+        }
+
+        public List<Sequence> RTProtocol​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010005B").ToList();
+            }
+        }
+
+        public ShortText Reason​For​Superseding
+        {
+            get
+            {
+                return (ShortText)(Items.FindFirst<ShortText>("3010005C"));
+            }
+        }
+
+        public List<ShortText> Reason​For​Superseding_
+        {
+            get
+            {
+                return Items.FindAll<ShortText>("3010005C").ToList();
+            }
+        }
+
+        public Sequence RTDiagnosis​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010005D"));
+            }
+        }
+
+        public List<Sequence> RTDiagnosis​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010005D").ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​RTPhysician​Intent​Index
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("3010005E"));
+            }
+        }
+
+        public List<UnsignedShort> Referenced​RTPhysician​Intent​Index_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("3010005E").ToList();
+            }
+        }
+
+        public Sequence RTPhysician​Intent​Input​Instance​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010005F"));
+            }
+        }
+
+        public List<Sequence> RTPhysician​Intent​Input​Instance​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010005F").ToList();
+            }
+        }
+
+        public Sequence RTAnatomic​Prescription​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100060"));
+            }
+        }
+
+        public List<Sequence> RTAnatomic​Prescription​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100060").ToList();
+            }
+        }
+
+        public UnlimitedText Prior​Treatment​Dose​Description
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("30100061"));
+            }
+        }
+
+        public List<UnlimitedText> Prior​Treatment​Dose​Description_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("30100061").ToList();
+            }
+        }
+
+        public Sequence Prior​Treatment​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100062"));
+            }
+        }
+
+        public List<Sequence> Prior​Treatment​Reference​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100062").ToList();
+            }
+        }
+
+        public CodeString Dosimetric​Objective​Evaluation​Scope
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("30100063"));
+            }
+        }
+
+        public List<CodeString> Dosimetric​Objective​Evaluation​Scope_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("30100063").ToList();
+            }
+        }
+
+        public Sequence Therapeutic​Role​Category​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100064"));
+            }
+        }
+
+        public List<Sequence> Therapeutic​Role​Category​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100064").ToList();
+            }
+        }
+
+        public Sequence Therapeutic​Role​Type​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100065"));
+            }
+        }
+
+        public List<Sequence> Therapeutic​Role​Type​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100065").ToList();
+            }
+        }
+
+        public UnsignedShort Conceptual​Volume​Optimization​Precedence
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("30100066"));
+            }
+        }
+
+        public List<UnsignedShort> Conceptual​Volume​Optimization​Precedence_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("30100066").ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Category​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100067"));
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Category​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100067").ToList();
+            }
+        }
+
+        public CodeString Conceptual​Volume​Blocking​Constraint
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("30100068"));
+            }
+        }
+
+        public List<CodeString> Conceptual​Volume​Blocking​Constraint_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("30100068").ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Type​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100069"));
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Type​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100069").ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Type​Modifier​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010006A"));
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Type​Modifier​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010006A").ToList();
+            }
+        }
+
+        public Sequence RTPrescription​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010006B"));
+            }
+        }
+
+        public List<Sequence> RTPrescription​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010006B").ToList();
+            }
+        }
+
+        public Sequence Dosimetric​Objective​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010006C"));
+            }
+        }
+
+        public List<Sequence> Dosimetric​Objective​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010006C").ToList();
+            }
+        }
+
+        public Sequence Dosimetric​Objective​Type​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("3010006D"));
+            }
+        }
+
+        public List<Sequence> Dosimetric​Objective​Type​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("3010006D").ToList();
+            }
+        }
+
+        public UniqueIdentifier Dosimetric​Objective​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("3010006E"));
+            }
+        }
+
+        public List<UniqueIdentifier> Dosimetric​Objective​UID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("3010006E").ToList();
+            }
+        }
+
+        public UniqueIdentifier Referenced​Dosimetric​Objective​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(Items.FindFirst<UniqueIdentifier>("3010006F"));
+            }
+        }
+
+        public List<UniqueIdentifier> Referenced​Dosimetric​Objective​UID_
+        {
+            get
+            {
+                return Items.FindAll<UniqueIdentifier>("3010006F").ToList();
+            }
+        }
+
+        public Sequence Dosimetric​Objective​Parameter​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100070"));
+            }
+        }
+
+        public List<Sequence> Dosimetric​Objective​Parameter​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100070").ToList();
+            }
+        }
+
+        public Sequence Referenced​Dosimetric​Objectives​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100071"));
+            }
+        }
+
+        public List<Sequence> Referenced​Dosimetric​Objectives​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100071").ToList();
+            }
+        }
+
+        public CodeString Absolute​Dosimetric​Objective​Flag
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("30100073"));
+            }
+        }
+
+        public List<CodeString> Absolute​Dosimetric​Objective​Flag_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("30100073").ToList();
+            }
+        }
+
+        public FloatingPointDouble Dosimetric​Objective​Weight
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("30100074"));
+            }
+        }
+
+        public List<FloatingPointDouble> Dosimetric​Objective​Weight_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("30100074").ToList();
+            }
+        }
+
+        public CodeString Dosimetric​Objective​Purpose
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("30100075"));
+            }
+        }
+
+        public List<CodeString> Dosimetric​Objective​Purpose_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("30100075").ToList();
+            }
+        }
+
+        public Sequence Planning​Input​Information​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100076"));
+            }
+        }
+
+        public List<Sequence> Planning​Input​Information​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100076").ToList();
+            }
+        }
+
+        public LongString Treatment​Site
+        {
+            get
+            {
+                return (LongString)(Items.FindFirst<LongString>("30100077"));
+            }
+        }
+
+        public List<LongString> Treatment​Site_
+        {
+            get
+            {
+                return Items.FindAll<LongString>("30100077").ToList();
+            }
+        }
+
+        public Sequence Treatment​Site​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100078"));
+            }
+        }
+
+        public List<Sequence> Treatment​Site​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100078").ToList();
+            }
+        }
+
+        public Sequence Fraction​Pattern​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100079"));
+            }
+        }
+
+        public List<Sequence> Fraction​Pattern​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100079").ToList();
+            }
+        }
+
+        public UnlimitedText Treatment​Technique​Notes
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("3010007A"));
+            }
+        }
+
+        public List<UnlimitedText> Treatment​Technique​Notes_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("3010007A").ToList();
+            }
+        }
+
+        public UnlimitedText Prescription​Notes
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("3010007B"));
+            }
+        }
+
+        public List<UnlimitedText> Prescription​Notes_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("3010007B").ToList();
+            }
+        }
+
+        public IntegerString Number​Of​Interval​Fractions
+        {
+            get
+            {
+                return (IntegerString)(Items.FindFirst<IntegerString>("3010007C"));
+            }
+        }
+
+        public List<IntegerString> Number​Of​Interval​Fractions_
+        {
+            get
+            {
+                return Items.FindAll<IntegerString>("3010007C").ToList();
+            }
+        }
+
+        public UnsignedShort Number​Of​Fractions
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("3010007D"));
+            }
+        }
+
+        public List<UnsignedShort> Number​Of​Fractions_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("3010007D").ToList();
+            }
+        }
+
+        public UnsignedShort Intended​Delivery​Duration
+        {
+            get
+            {
+                return (UnsignedShort)(Items.FindFirst<UnsignedShort>("3010007E"));
+            }
+        }
+
+        public List<UnsignedShort> Intended​Delivery​Duration_
+        {
+            get
+            {
+                return Items.FindAll<UnsignedShort>("3010007E").ToList();
+            }
+        }
+
+        public UnlimitedText Fractionation​Notes
+        {
+            get
+            {
+                return (UnlimitedText)(Items.FindFirst<UnlimitedText>("3010007F"));
+            }
+        }
+
+        public List<UnlimitedText> Fractionation​Notes_
+        {
+            get
+            {
+                return Items.FindAll<UnlimitedText>("3010007F").ToList();
+            }
+        }
+
+        public Sequence RTTreatment​Technique​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100080"));
+            }
+        }
+
+        public List<Sequence> RTTreatment​Technique​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100080").ToList();
+            }
+        }
+
+        public Sequence Prescription​Notes​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100081"));
+            }
+        }
+
+        public List<Sequence> Prescription​Notes​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100081").ToList();
+            }
+        }
+
+        public Sequence Fraction​Based​Relationship​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100082"));
+            }
+        }
+
+        public List<Sequence> Fraction​Based​Relationship​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100082").ToList();
+            }
+        }
+
+        public CodeString Fraction​Based​Relationship​Interval​Anchor
+        {
+            get
+            {
+                return (CodeString)(Items.FindFirst<CodeString>("30100083"));
+            }
+        }
+
+        public List<CodeString> Fraction​Based​Relationship​Interval​Anchor_
+        {
+            get
+            {
+                return Items.FindAll<CodeString>("30100083").ToList();
+            }
+        }
+
+        public FloatingPointDouble Minimum​Hours​Between​Fractions
+        {
+            get
+            {
+                return (FloatingPointDouble)(Items.FindFirst<FloatingPointDouble>("30100084"));
+            }
+        }
+
+        public List<FloatingPointDouble> Minimum​Hours​Between​Fractions_
+        {
+            get
+            {
+                return Items.FindAll<FloatingPointDouble>("30100084").ToList();
+            }
+        }
+
+        public Time Intended​Fraction​Start​Time
+        {
+            get
+            {
+                return (Time)(Items.FindFirst<Time>("30100085"));
+            }
+        }
+
+        public List<Time> Intended​Fraction​Start​Time_
+        {
+            get
+            {
+                return Items.FindAll<Time>("30100085").ToList();
+            }
+        }
+
+        public LongText Intended​Start​Day​Of​Week
+        {
+            get
+            {
+                return (LongText)(Items.FindFirst<LongText>("30100086"));
+            }
+        }
+
+        public List<LongText> Intended​Start​Day​Of​Week_
+        {
+            get
+            {
+                return Items.FindAll<LongText>("30100086").ToList();
+            }
+        }
+
+        public Sequence Weekday​Fraction​Pattern​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100087"));
+            }
+        }
+
+        public List<Sequence> Weekday​Fraction​Pattern​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100087").ToList();
+            }
+        }
+
+        public Sequence Delivery​Time​Structure​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(Items.FindFirst<Sequence>("30100088"));
+            }
+        }
+
+        public List<Sequence> Delivery​Time​Structure​Code​Sequence_
+        {
+            get
+            {
+                return Items.FindAll<Sequence>("30100088").ToList();
             }
         }
 

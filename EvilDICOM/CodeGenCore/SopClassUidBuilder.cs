@@ -21,7 +21,7 @@ namespace EvilDICOM.CodeGenerator
                     DeclarationModifiers.Const,
                     G.LiteralExpression(sopClass.Id)));
 
-            CodeGenHelper.PublicStaticClassFull(typeof(SOPClassUID), sopFields)
+            CodeGenHelper.PublicPartialClassFull(typeof(SOPClassUID), sopFields)
                 .WriteOut("SOPClassUID.cs");
         }
 

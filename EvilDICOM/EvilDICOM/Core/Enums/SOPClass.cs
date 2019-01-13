@@ -1,3 +1,5 @@
+// THIS CODE WAS GENERATED AUTOMATICALLY
+
 namespace EvilDICOM.Core.Enums
 {
     public enum SOPClass
@@ -112,9 +114,12 @@ namespace EvilDICOM.Core.Enums
         AcquisitionContextSRStorage,
         SimplifiedAdultEchoSRStorage,
         PatientRadiationDoseSRStorage,
+        PlannedImagingAgentAdministrationSRStorage,
+        PerformedImagingAgentAdministrationSRStorage,
         ContentAssessmentResultsStorage,
         EncapsulatedPDFStorage,
         EncapsulatedCDAStorage,
+        EncapsulatedSTLStorage,
         PositronEmissionTomographyImageStorage,
         EnhancedPETImageStorage,
         LegacyConvertedEnhancedPETImageStorage,
@@ -129,6 +134,8 @@ namespace EvilDICOM.Core.Enums
         RTTreatmentSummaryRecordStorage,
         RTIonPlanStorage,
         RTIonBeamsTreatmentRecordStorage,
+        RTPhysicianIntentStorage,
+        RTSegmentAnnotationStorage,
         RTBeamsDeliveryInstructionStorage,
         RTBrachyApplicationSetupDeliveryInstructionStorage,
         Unknown

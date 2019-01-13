@@ -1,4 +1,11 @@
+// THIS CODE WAS GENERATED AUTOMATICALLY
+
 using System;
+using System.Collections;
+using System.Collections.Generic;
+using System.Linq;
+using EvilDICOM.Core.Element;
+using EvilDICOM.Core.Enums;
 
 namespace EvilDICOM.Core.Helpers
 {
@@ -114,9 +121,12 @@ namespace EvilDICOM.Core.Helpers
         public const String AcquisitionContextSRStorage = "1.2.840.10008.5.​1.​4.​1.​1.​88.​71";
         public const String SimplifiedAdultEchoSRStorage = "1.2.840.10008.5.​1.​4.​1.​1.​88.​72";
         public const String PatientRadiationDoseSRStorage = "1.2.840.10008.5.​1.​4.​1.​1.​88.​73";
+        public const String PlannedImagingAgentAdministrationSRStorage = "1.2.840.10008.5.​1.​4.​1.​1.​88.​74";
+        public const String PerformedImagingAgentAdministrationSRStorage = "1.2.840.10008.5.​1.​4.​1.​1.​88.​75";
         public const String ContentAssessmentResultsStorage = "1.2.840.10008.5.1.4.1.1.90.1";
         public const String EncapsulatedPDFStorage = "1.2.840.10008.5.1.4.1.1.104.1";
         public const String EncapsulatedCDAStorage = "1.2.840.10008.5.1.4.1.1.104.2";
+        public const String EncapsulatedSTLStorage = "1.2.840.10008.5.1.4.1.1.104.3";
         public const String PositronEmissionTomographyImageStorage = "1.2.840.10008.5.1.4.1.1.128";
         public const String EnhancedPETImageStorage = "1.2.840.10008.5.1.4.1.1.130";
         public const String LegacyConvertedEnhancedPETImageStorage = "1.2.840.10008.5.1.4.1.1.128.1";
@@ -131,6 +141,8 @@ namespace EvilDICOM.Core.Helpers
         public const String RTTreatmentSummaryRecordStorage = "1.2.840.10008.5.1.4.1.1.481.7";
         public const String RTIonPlanStorage = "1.2.840.10008.5.1.4.1.1.481.8";
         public const String RTIonBeamsTreatmentRecordStorage = "1.2.840.10008.5.1.4.1.1.481.9";
+        public const String RTPhysicianIntentStorage = "1.2.840.10008.5.1.4.1.1.481.10";
+        public const String RTSegmentAnnotationStorage = "1.2.840.10008.5.1.4.1.1.481.11";
         public const String RTBeamsDeliveryInstructionStorage = "1.2.840.10008.5.1.4.34.7";
         public const String RTBrachyApplicationSetupDeliveryInstructionStorage = "1.2.840.10008.5.1.4.34.10";
     }

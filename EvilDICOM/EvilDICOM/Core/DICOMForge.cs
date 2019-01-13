@@ -1,6 +1,11 @@
+// THIS CODE WAS GENERATED AUTOMATICALLY
+
 using System;
+using System.Collections;
+using System.Collections.Generic;
 using System.Linq;
 using EvilDICOM.Core.Element;
+using EvilDICOM.Core.Enums;
 
 namespace EvilDICOM.Core
 {
@@ -574,6 +579,14 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static Sequence Anatomic​Regions​In​StudyC​ode​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00080063"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static CodeString Conversion​Type(params String[] data)
         {
             var element = (new CodeString());
@@ -742,6 +755,22 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static Sequence Coding​Scheme​Resources​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00080109"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Coding​Scheme​URL​Type(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("0008010A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static CodeString Context​Group​Extension​Flag(params String[] data)
         {
             var element = (new CodeString());
@@ -762,6 +791,14 @@ namespace EvilDICOM.Core
         {
             var element = (new UniqueIdentifier());
             element.Tag = (new Tag("0008010D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniversalResourceId Coding​Scheme​URL(params String[] data)
+        {
+            var element = (new UniversalResourceId());
+            element.Tag = (new Tag("0008010E"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -1102,6 +1139,14 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static Sequence Institutional​Department​Type​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00081041"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static PersonName Physicians​Of​Record(params String[] data)
         {
             var element = (new PersonName());
@@ -1306,6 +1351,14 @@ namespace EvilDICOM.Core
         {
             var element = (new UniqueIdentifier());
             element.Tag = (new Tag("00081155"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Definition​Source​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00081156"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -2602,6 +2655,22 @@ namespace EvilDICOM.Core
         {
             var element = (new ShortText());
             element.Tag = (new Tag("00120051"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble Longitudinal​Temporal​Offset​From​Event(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("00120052"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Longitudinal​Temporal​Event​Type(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00120053"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -5582,10 +5651,26 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static DecimalString Compression​​Pressure(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("001811A3"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static LongString Paddle​Description(params String[] data)
         {
             var element = (new LongString());
             element.Tag = (new Tag("001811A4"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Compression​​Contact​​Area(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("001811A5"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -8702,7 +8787,7 @@ namespace EvilDICOM.Core
             return element;
         }
 
-        public static Sequence CTX​Ray​Details​Sequence(params DICOMObject[] data)
+        public static Sequence CT​X​Ray​Details​Sequence(params DICOMObject[] data)
         {
             var element = (new Sequence());
             element.Tag = (new Tag("00189325"));
@@ -8882,6 +8967,294 @@ namespace EvilDICOM.Core
         {
             var element = (new Sequence());
             element.Tag = (new Tag("00189360"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Multienergy​CT​Acquisition(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00189361"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Multienergy​CT​Acquisition​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00189362"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Multienergy​CT​Processing​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00189363"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Multienergy​CT​Characteristics​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00189364"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Multienergy​CT​XRay​Source​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00189365"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort XRay​Source​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00189366"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedCharacter XRay​Source​ID(params String[] data)
+        {
+            var element = (new UnlimitedCharacter());
+            element.Tag = (new Tag("00189367"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Multienergy​Source​Technique(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00189368"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Element.DateTime Source​Start​Date​Time(params System.DateTime?[] data)
+        {
+            var element = (new Element.DateTime());
+            element.Tag = (new Tag("00189369"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Element.DateTime Source​End​Date​Time(params System.DateTime?[] data)
+        {
+            var element = (new Element.DateTime());
+            element.Tag = (new Tag("0018936A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Switching​Phase​Number(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("0018936B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Switching​Phase​Nominal​Duration(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("0018936C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Switching​Phase​Transition​Duration(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("0018936D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Effective​Bin​Energy(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("0018936E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Multienergy​CT​XRay​Detector​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("0018936F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort XRay​Detector​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00189370"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedCharacter XRay​Detector​ID(params String[] data)
+        {
+            var element = (new UnlimitedCharacter());
+            element.Tag = (new Tag("00189371"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Multienergy​Detector​Type(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00189372"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static ShortText XRay​Detector​Label(params String[] data)
+        {
+            var element = (new ShortText());
+            element.Tag = (new Tag("00189373"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Nominal​Max​Energy(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00189374"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Nominal​Min​Energy(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00189375"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Referenced​XRay​Detector​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00189376"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Referenced​XRay​Source​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00189377"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Referenced​Path​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("00189378"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Multienergy​CT​Path​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00189379"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Multienergy​CT​Path​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("0018937A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText Multienergy​Acquisition​Description(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("0018937B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble Monoenergetic​Energy​Equivalent(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("0018937C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Material​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("0018937D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Decomposition​Method(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("0018937E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText Decomposition​Description(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("0018937F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Decomposition​Algorithm​Identification​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00189380"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Decomposition​Material​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00189381"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Material​Attenuation​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00189382"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Photon​Energy(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00189383"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString XRay​Mass​Attenuation​Coefficient(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("00189384"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -12138,6 +12511,14 @@ namespace EvilDICOM.Core
         {
             var element = (new Sequence());
             element.Tag = (new Tag("00221035"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Source​Of​Corneal​Size​Data​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00221036"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -17214,6 +17595,14 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static Sequence Whole​Slide​Microscopy​Image​Frame​Type​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00400710"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static Sequence Image​Center​Point​Coordinates​Sequence(params DICOMObject[] data)
         {
             var element = (new Sequence());
@@ -17586,6 +17975,14 @@ namespace EvilDICOM.Core
         {
             var element = (new Sequence());
             element.Tag = (new Tag("00404007"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Element.DateTime Scheduled​Procedure​Step​Expiration​Date​Time(params System.DateTime?[] data)
+        {
+            var element = (new Element.DateTime());
+            element.Tag = (new Tag("00404008"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -19174,6 +19571,94 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static Sequence Approval​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00440100"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Assertion​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00440101"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier Assertion​UID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("00440102"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Asserter​Identification​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00440103"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Element.DateTime Assertion​DateTime(params System.DateTime?[] data)
+        {
+            var element = (new Element.DateTime());
+            element.Tag = (new Tag("00440104"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Element.DateTime Assertion​Expiration​DateTime(params System.DateTime?[] data)
+        {
+            var element = (new Element.DateTime());
+            element.Tag = (new Tag("00440105"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText Assertion​Comments(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("00440106"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Related​Assertion​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00440107"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier Referenced​Assertion​UID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("00440108"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Approval​Subject​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00440109"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Organizational​Role​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("0044010A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static LongString Lens​Description(params String[] data)
         {
             var element = (new LongString());
@@ -19290,6 +19775,14 @@ namespace EvilDICOM.Core
         {
             var element = (new FloatingPointDouble());
             element.Tag = (new Tag("00460046"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Corneal​Size​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00460047"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -20054,6 +20547,22 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static UnsignedLong Number​Of​Optical​Paths(params UInt32[] data)
+        {
+            var element = (new UnsignedLong());
+            element.Tag = (new Tag("00480302"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedLong Total​Pixel​Matrix​Focal​Planes(params UInt32[] data)
+        {
+            var element = (new UnsignedLong());
+            element.Tag = (new Tag("00480303"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static CodeString Calibration​Image(params String[] data)
         {
             var element = (new CodeString());
@@ -20178,6 +20687,14 @@ namespace EvilDICOM.Core
         {
             var element = (new LongString());
             element.Tag = (new Tag("00500020"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static ShortText Long​Device​Description(params String[] data)
+        {
+            var element = (new ShortText());
+            element.Tag = (new Tag("00500021"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -21234,6 +21751,14 @@ namespace EvilDICOM.Core
         {
             var element = (new Sequence());
             element.Tag = (new Tag("00620012"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Segments​Overlap(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00620013"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -22414,6 +22939,30 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static CodeString Model​Modification(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00687001"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Model​Mirroring(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("00687002"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Model​Usage​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00687003"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static Sequence Graphic​Annotation​Sequence(params DICOMObject[] data)
         {
             var element = (new Sequence());
@@ -23210,6 +23759,14 @@ namespace EvilDICOM.Core
         {
             var element = (new UniqueIdentifier());
             element.Tag = (new Tag("0070031A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier Referenced​Fiducial​UID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("0070031B"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -24918,6 +25475,14 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static Sequence Procedure​Step​Progress​Parameters​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("00741007"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static Sequence Procedure​Step​Communications​URI​Sequence(params DICOMObject[] data)
         {
             var element = (new Sequence());
@@ -25950,7 +26515,7 @@ namespace EvilDICOM.Core
             return element;
         }
 
-        public static Sequence Structured​Contraint​Observation​Sequence(params DICOMObject[] data)
+        public static Sequence Structured​Constraint​Observation​Sequence(params DICOMObject[] data)
         {
             var element = (new Sequence());
             element.Tag = (new Tag("0082000C"));
@@ -26354,6 +26919,14 @@ namespace EvilDICOM.Core
         {
             var element = (new CodeString());
             element.Tag = (new Tag("04000565"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Instance​Origin​Status(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("04000600"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -27898,6 +28471,14 @@ namespace EvilDICOM.Core
         {
             var element = (new CodeString());
             element.Tag = (new Tag("30060036"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence ROI​Derivation​Algorithm​Identification​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30060037"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -29462,6 +30043,22 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static CodeString Depth​Value​Averaging​Flag(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("300A0093"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Beam​Dose​Point​Source​To​External​Contour​Distance(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("300A0094"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static IntegerString Number​Of​Brachy​Application​Setups(params Int32[] data)
         {
             var element = (new IntegerString());
@@ -30926,6 +31523,38 @@ namespace EvilDICOM.Core
             return element;
         }
 
+        public static DecimalString Channel​Effective​Length(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("300A0271"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Channel​Inner​Length(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("300A0272"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static ShortString Afterloader​Channel​ID(params String[] data)
+        {
+            var element = (new ShortString());
+            element.Tag = (new Tag("300A0273"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static DecimalString Source​Applicator​Tip​Length(params Double[] data)
+        {
+            var element = (new DecimalString());
+            element.Tag = (new Tag("300A0274"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
         public static Sequence Channel​Sequence(params DICOMObject[] data)
         {
             var element = (new Sequence());
@@ -32362,6 +32991,1078 @@ namespace EvilDICOM.Core
         {
             var element = (new PersonName());
             element.Tag = (new Tag("300E0008"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Radiobiological​Dose​Effect​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100001"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Radiobiological​Dose​Effect​Flag(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("30100002"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Effective​Dose​Calculation​Method​Category​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100003"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Effective​Dose​Calculation​Method​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100004"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString Effective​Dose​Method​Description(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("30100005"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier Conceptual​Volume​UID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("30100006"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Originating​SOPInstance​Reference​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100007"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Conceptual​Volume​Constituent​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100008"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Equivalent​Conceptual​Volume​Instance​Reference​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100009"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Equivalent​Conceptual​Volumes​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010000A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier Referenced​Conceptual​Volume​UID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("3010000B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText Conceptual​Volume​Combination​Expression(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("3010000C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Conceptual​Volume​Constituent​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("3010000D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Conceptual​Volume​Combination​Flag(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("3010000E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static ShortText Conceptual​Volume​Combination​Description(params String[] data)
+        {
+            var element = (new ShortText());
+            element.Tag = (new Tag("3010000F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Conceptual​Volume​Segmentation​Defined​Flag(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("30100010"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Conceptual​Volume​Segmentation​Reference​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100011"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Conceptual​Volume​Constituent​Segmentation​Reference​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100012"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier Constituent​Conceptual​Volume​UID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("30100013"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Derivation​Conceptual​Volume​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100014"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier Source​Conceptual​Volume​UID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("30100015"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Conceptual​Volume​Derivation​Algorithm​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100016"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static ShortText Conceptual​Volume​Description(params String[] data)
+        {
+            var element = (new ShortText());
+            element.Tag = (new Tag("30100017"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Source​Conceptual​Volume​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100018"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Author​Identification​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100019"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString Manufacturers​Model​Version(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("3010001A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedCharacter Device​Alternate​Identifier(params String[] data)
+        {
+            var element = (new UnlimitedCharacter());
+            element.Tag = (new Tag("3010001B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Device​Alternate​Identifier​Type(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("3010001C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongText Device​Alternate​Identifier​Format(params String[] data)
+        {
+            var element = (new LongText());
+            element.Tag = (new Tag("3010001D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString Segmentation​Creation​Template​Label(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("3010001E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier Segmentation​Template​UID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("3010001F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Referenced​Segment​Reference​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("30100020"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Segment​Reference​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100021"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Segment​Reference​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("30100022"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Direct​Segment​Reference​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100023"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Combination​Segment​Reference​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100024"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Conceptual​Volume​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100025"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Segmented​RTAccessory​Device​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100026"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Segment​Characteristics​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100027"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Related​Segment​Characteristics​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100028"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Segment​Characteristics​Precedence(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("30100029"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTSegment​Annotation​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010002A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Segment​Annotation​Category​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010002B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Segment​Annotation​Type​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010002C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString Device​Label(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("3010002D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Device​Type​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010002E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Patient​Equipment​Relationship​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100030"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier Referenced​Fiducials​UID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("30100031"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Patient​Treatment​Orientation​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100032"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static ShortString User​Content​Label(params String[] data)
+        {
+            var element = (new ShortString());
+            element.Tag = (new Tag("30100033"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString User​Content​Long​Label(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("30100034"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static ShortString Entity​Label(params String[] data)
+        {
+            var element = (new ShortString());
+            element.Tag = (new Tag("30100035"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString Entity​Name(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("30100036"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static ShortText Entity​Description(params String[] data)
+        {
+            var element = (new ShortText());
+            element.Tag = (new Tag("30100037"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString Entity​Long​Label(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("30100038"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Device​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("30100039"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort RTTreatment​Phase​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("3010003A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier RTTreatment​Phase​UID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("3010003B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort RTPrescription​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("3010003C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort RTSegment​Annotation​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("3010003D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Basis​RTTreatment​Phase​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("3010003E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Related​RTTreatment​Phase​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("3010003F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Referenced​RTTreatment​Phase​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("30100040"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Referenced​RTPrescription​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("30100041"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Referenced​Parent​RTPrescription​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("30100042"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static ShortText Manufacturer​Device​Identifier(params String[] data)
+        {
+            var element = (new ShortText());
+            element.Tag = (new Tag("30100043"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Instance​Level​Referenced​Performed​Procedure​Step​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100044"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString RTTreatment​Phase​Intent​Presence​Flag(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("30100045"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Radiotherapy​Treatment​Type(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("30100046"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Teletherapy​Radiation​Type(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("30100047"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Brachytherapy​Source​Type(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("30100048"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Referenced​RTTreatment​Phase​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100049"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Referenced​Direct​Segment​Instance​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010004A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Intended​RTTreatment​Phase​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010004B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Date Intended​Phase​Start​Date(params System.DateTime?[] data)
+        {
+            var element = (new Date());
+            element.Tag = (new Tag("3010004C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Date Intended​Phase​End​Date(params System.DateTime?[] data)
+        {
+            var element = (new Date());
+            element.Tag = (new Tag("3010004D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTTreatment​Phase​Interval​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010004E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Temporal​Relationship​Interval​Anchor(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("3010004F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble Minimum​Number​Of​Interval​Days(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("30100050"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble Maximum​Number​Of​Interval​Days(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("30100051"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier Pertinent​SOPClasses​In​Study(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("30100052"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier Pertinent​SOPClasses​In​Series(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("30100053"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString RTPrescription​Label(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("30100054"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTPhysician​Intent​Predecessor​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100055"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString RTTreatment​Approach​Label(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("30100056"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTPhysician​Intent​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100057"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort RTPhysician​Intent​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("30100058"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString RTTreatment​Intent​Type(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("30100059"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText RTPhysician​Intent​Narrative(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("3010005A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTProtocol​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010005B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static ShortText Reason​For​Superseding(params String[] data)
+        {
+            var element = (new ShortText());
+            element.Tag = (new Tag("3010005C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTDiagnosis​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010005D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Referenced​RTPhysician​Intent​Index(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("3010005E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTPhysician​Intent​Input​Instance​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010005F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTAnatomic​Prescription​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100060"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText Prior​Treatment​Dose​Description(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("30100061"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Prior​Treatment​Reference​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100062"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Dosimetric​Objective​Evaluation​Scope(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("30100063"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Therapeutic​Role​Category​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100064"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Therapeutic​Role​Type​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100065"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Conceptual​Volume​Optimization​Precedence(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("30100066"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Conceptual​Volume​Category​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100067"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Conceptual​Volume​Blocking​Constraint(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("30100068"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Conceptual​Volume​Type​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100069"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Conceptual​Volume​Type​Modifier​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010006A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTPrescription​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010006B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Dosimetric​Objective​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010006C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Dosimetric​Objective​Type​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("3010006D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier Dosimetric​Objective​UID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("3010006E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UniqueIdentifier Referenced​Dosimetric​Objective​UID(params String[] data)
+        {
+            var element = (new UniqueIdentifier());
+            element.Tag = (new Tag("3010006F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Dosimetric​Objective​Parameter​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100070"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Referenced​Dosimetric​Objectives​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100071"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Absolute​Dosimetric​Objective​Flag(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("30100073"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble Dosimetric​Objective​Weight(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("30100074"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Dosimetric​Objective​Purpose(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("30100075"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Planning​Input​Information​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100076"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongString Treatment​Site(params String[] data)
+        {
+            var element = (new LongString());
+            element.Tag = (new Tag("30100077"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Treatment​Site​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100078"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Fraction​Pattern​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100079"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText Treatment​Technique​Notes(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("3010007A"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText Prescription​Notes(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("3010007B"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static IntegerString Number​Of​Interval​Fractions(params Int32[] data)
+        {
+            var element = (new IntegerString());
+            element.Tag = (new Tag("3010007C"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Number​Of​Fractions(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("3010007D"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnsignedShort Intended​Delivery​Duration(params UInt16[] data)
+        {
+            var element = (new UnsignedShort());
+            element.Tag = (new Tag("3010007E"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static UnlimitedText Fractionation​Notes(params String[] data)
+        {
+            var element = (new UnlimitedText());
+            element.Tag = (new Tag("3010007F"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence RTTreatment​Technique​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100080"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Prescription​Notes​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100081"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Fraction​Based​Relationship​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100082"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static CodeString Fraction​Based​Relationship​Interval​Anchor(params String[] data)
+        {
+            var element = (new CodeString());
+            element.Tag = (new Tag("30100083"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static FloatingPointDouble Minimum​Hours​Between​Fractions(params Double[] data)
+        {
+            var element = (new FloatingPointDouble());
+            element.Tag = (new Tag("30100084"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Time Intended​Fraction​Start​Time(params System.DateTime?[] data)
+        {
+            var element = (new Time());
+            element.Tag = (new Tag("30100085"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static LongText Intended​Start​Day​Of​Week(params String[] data)
+        {
+            var element = (new LongText());
+            element.Tag = (new Tag("30100086"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Weekday​Fraction​Pattern​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100087"));
+            element.Data_ = (data?.ToList());
+            return element;
+        }
+
+        public static Sequence Delivery​Time​Structure​Code​Sequence(params DICOMObject[] data)
+        {
+            var element = (new Sequence());
+            element.Tag = (new Tag("30100088"));
             element.Data_ = (data?.ToList());
             return element;
         }
@@ -33934,9 +35635,9 @@ namespace EvilDICOM.Core
             return element;
         }
 
-        public static T Pixel​Data<T>(params Byte[] data) where T:AbstractElement<byte>, new()
+        public static OtherByteString Pixel​Data(params Byte[] data)
         {
-            var element = (new T());
+            var element = (new OtherByteString());
             element.Tag = (new Tag("7FE00010"));
             element.Data_ = (data?.ToList());
             return element;
