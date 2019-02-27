@@ -247,6 +247,28 @@ namespace EvilDICOM.RT
             }
         }
 
+        public void ConvertAbsToRel(double totalDose)
+        {
+            DoseValues = DoseValues.Select(d => d/totalDose).ToList();
+            var _16b = 1 / Math.Pow(2, 16);
+            _doseObject.Dose​Grid​Scaling.Data = _16b;
+            _doseObject.Dose​Units.Data = "RELATIVE";
+            _doseObject.Dose​Type.Data = "PHYSICAL";
+
+            using (var stream = new MemoryStream())
+            {
+                var binWriter = new BinaryWriter(stream);
+                foreach (var d in DoseValues)
+                {
+                    var integ = (int)(d / _16b);
+                    var bytes = BitConverter.GetBytes(integ);
+                    binWriter.Write(integ);
+                }
+                var ows = new OtherWordString(TagHelper.Pixel​Data, stream.ToArray());
+                _doseObject.ToDICOMObject().Replace(ows);
+            }
+        }
+
 
         public DICOMObject ToDICOM()
         {

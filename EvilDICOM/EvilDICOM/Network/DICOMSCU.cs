@@ -30,7 +30,14 @@ namespace EvilDICOM.Network
         /// <returns>true if message send was success</returns>
         public bool SendMessage(AbstractDIMSERequest dimse, Entity ae)
         {
-            using (var client = new TcpClient())
+            IPAddress ipAddress;
+            if (!IPAddress.TryParse(this.ApplicationEntity.IpAddress, out ipAddress))
+            {
+                Logger.Log($"Could not parse IP address {this.ApplicationEntity.IpAddress}");
+            }
+            IPEndPoint ipLocalEndPoint = new IPEndPoint(ipAddress, this.ApplicationEntity.Port);
+
+            using (var client = new TcpClient(ipLocalEndPoint))
             {
                 try
                 {
