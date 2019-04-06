@@ -30,6 +30,34 @@ namespace EvilDICOM.Network
         /// <returns>true if message send was success</returns>
         public bool SendMessage(AbstractDIMSERequest dimse, Entity ae)
         {
+            using (var client = new TcpClient())
+            {
+                try
+                {
+                    client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
+                    var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
+                    PDataMessenger.Send(dimse, assoc);
+                    assoc.Listen();
+                    return true;
+                }
+                catch (Exception e)
+                {
+                    Logger.Log($"Could not connect to {ae.AeTitle} @{ae.IpAddress}:{ae.Port}", LogPriority.ERROR);
+                    Logger.Log($"{e.ToString()}", LogPriority.ERROR);
+                    return false;
+                }
+            }
+        }
+
+        /// <summary>
+        /// Sends a message to an entity and guarantees the message will be sent on a 
+        /// specific port (set by the entity settings)
+        /// </summary>
+        /// <param name="dimse">the message to send</param>
+        /// <param name="ae">the entity to send the message</param>
+        /// <returns>true if message send was success</returns>
+        public bool SendMessageForcePort(AbstractDIMSERequest dimse, Entity ae)
+        {
             IPAddress ipAddress;
             if (!IPAddress.TryParse(this.ApplicationEntity.IpAddress, out ipAddress))
             {
