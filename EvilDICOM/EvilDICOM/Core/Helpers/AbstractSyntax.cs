@@ -52,6 +52,10 @@ namespace EvilDICOM.Core.Helpers
             X_RayAngiographicImageStorage,
             VARIAN_MOTION_MANAGEMENT_PROTOCOL,
             RTImageStorage,
+            PositronEmissionTomographyImageStorage,
+            EnhancedPETImageStorage,
+            SpectaclePrescriptionReportStorage,
+            MRSpectroscopyStorage,
             RTIonBeamsTreatmentRecordStorage,
             RTIonPlanStorage
         };
