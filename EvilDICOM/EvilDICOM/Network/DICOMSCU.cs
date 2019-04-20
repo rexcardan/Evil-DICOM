@@ -18,6 +18,8 @@ namespace EvilDICOM.Network
 {
     public class DICOMSCU : DICOMServiceClass
     {
+        public int MsTimeout { get; set; } = 5000;
+
         public DICOMSCU(Entity ae) : base(ae)
         {
         }
@@ -102,7 +104,7 @@ namespace EvilDICOM.Network
         public T GetResponse<T, U>(U request, Entity e, ref ushort msgId) where U : AbstractDIMSERequest where T : AbstractDIMSEResponse
         {
             System.DateTime lastContact = System.DateTime.Now;
-            int msWait = 2000;
+            int msWait = MsTimeout;
 
             var mr = new ManualResetEvent(false);
             T resp = null;
@@ -126,7 +128,7 @@ namespace EvilDICOM.Network
         public IEnumerable<T> GetResponses<T, U>(U request, Entity e, ref ushort msgId) where U : AbstractDIMSERequest where T : AbstractDIMSEResponse
         {
             System.DateTime lastContact = System.DateTime.Now;
-            int msWait = 4000;
+            int msWait = MsTimeout;
 
             var mr = new ManualResetEvent(false);
 
@@ -154,8 +156,10 @@ namespace EvilDICOM.Network
         /// <param name="ae">the entity to send the request</param>
         /// <param name="msTimeout">how long to wait in milliseconds before a timeout</param>
         /// <returns>true if success, false if failure</returns>
-        public bool Ping(Entity ae, int msTimeout = 3000)
+        public bool Ping(Entity ae, int msTimeout = 0)
         {
+            msTimeout = (msTimeout == 0) ? MsTimeout : msTimeout;
+
             var responseSuccess = false;
             var ar = new AutoResetEvent(false);
             DIMSEService.CEchoResponseReceived += (res, asc) =>
