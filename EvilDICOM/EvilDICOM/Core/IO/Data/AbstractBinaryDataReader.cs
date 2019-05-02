@@ -7,7 +7,7 @@ using EvilDICOM.Core.Element;
 
 namespace EvilDICOM.Core.IO.Data
 {
-    public abstract class AbstractBinaryDataReader
+  public abstract class AbstractBinaryDataReader
     {
         private static bool CheckForNullData(byte[] data)
         {
@@ -44,11 +44,25 @@ namespace EvilDICOM.Core.IO.Data
             return MultiplicityReader.ReadMultipleBinary(data, 4, readSingleFunc);
         }
 
+        public static long[] ReadSignedVeryLong(byte[] data, Func<byte[], long> readSingleFunc)
+        {
+            if (CheckForNullData(data))
+                return null;
+            return MultiplicityReader.ReadMultipleBinary(data, 8, readSingleFunc);
+        }
+
         public static uint[] ReadUnsignedLong(byte[] data, Func<byte[], uint> readSingleFunc)
         {
             if (CheckForNullData(data))
                 return null;
             return MultiplicityReader.ReadMultipleBinary(data, 4, readSingleFunc);
+        }
+
+        public static ulong[] ReadUnsignedVeryLong(byte[] data, Func<byte[], ulong> readSingleFunc)
+        {
+            if (CheckForNullData(data))
+                return null;
+            return MultiplicityReader.ReadMultipleBinary(data, 8, readSingleFunc);
         }
 
         public static short[] ReadSignedShort(byte[] data, Func<byte[], short> readSingleFunc)

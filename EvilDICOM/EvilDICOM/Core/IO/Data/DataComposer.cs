@@ -34,9 +34,15 @@ namespace EvilDICOM.Core.IO.Data
                 case VR.OtherWordString:
                     var ows = el as OtherWordString;
                     return ows.DataContainer.MultipicityValue.ToArray();
+                case VR.Other64BitVeryLongString:
+                    var ovs = el as Other64BitVeryLong;
+                    return ovs.DataContainer.MultipicityValue.ToArray();
                 case VR.SignedLong:
                     var sl = el as SignedLong;
                     return LittleEndianWriter.WriteSignedLong(sl.DataContainer);
+                case VR.Signed64BitVeryLong:
+                    var sv = el as Signed64bitVeryLong;
+                    return LittleEndianWriter.WriteSignedVeryLong(sv.DataContainer);
                 case VR.SignedShort:
                     var sis = el as SignedShort;
                     return LittleEndianWriter.WriteSignedShort(sis.DataContainer);
@@ -46,6 +52,9 @@ namespace EvilDICOM.Core.IO.Data
                 case VR.UnsignedLong:
                     var ul = el as UnsignedLong;
                     return LittleEndianWriter.WriteUnsignedLong(ul.DataContainer);
+                case VR.Unsigned64BitVeryLong:
+                    var uv = el as Unsigned64bitVeryLong;
+                    return LittleEndianWriter.WriteUnsignedVeryLong(uv.DataContainer);
                 case VR.UnsignedShort:
                     var ush = el as UnsignedShort;
                     return LittleEndianWriter.WriteUnsignedShort(ush.DataContainer);
@@ -80,12 +89,18 @@ namespace EvilDICOM.Core.IO.Data
                 case VR.OtherLongString:
                     var ols = el as OtherLongString;
                     return ols.DataContainer.MultipicityValue.ToArray();
+                case VR.Other64BitVeryLongString:
+                    var ovs = el as Other64BitVeryLong;
+                    return ovs.DataContainer.MultipicityValue.ToArray();
                 case VR.OtherWordString:
                     var ows = el as OtherWordString;
                     return ows.DataContainer.MultipicityValue.ToArray();
                 case VR.SignedLong:
                     var sl = el as SignedLong;
                     return BigEndianWriter.WriteSignedLong(sl.DataContainer);
+                case VR.Signed64BitVeryLong:
+                    var sv = el as Signed64bitVeryLong;
+                    return BigEndianWriter.WriteSignedVeryLong(sv.DataContainer);
                 case VR.SignedShort:
                     var sis = el as SignedShort;
                     return BigEndianWriter.WriteSignedShort(sis.DataContainer);
@@ -95,6 +110,9 @@ namespace EvilDICOM.Core.IO.Data
                 case VR.UnsignedLong:
                     var ul = el as UnsignedLong;
                     return BigEndianWriter.WriteUnsignedLong(ul.DataContainer);
+                case VR.Unsigned64BitVeryLong:
+                    var uv = el as Unsigned64bitVeryLong;
+                    return BigEndianWriter.WriteUnsignedVeryLong(uv.DataContainer);
                 case VR.UnsignedShort:
                     var ush = el as UnsignedShort;
                     return BigEndianWriter.WriteUnsignedShort(ush.DataContainer);

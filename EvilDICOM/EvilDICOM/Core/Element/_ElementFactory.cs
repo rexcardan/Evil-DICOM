@@ -37,10 +37,14 @@ namespace EvilDICOM.Core.Element
                         return new FloatingPointSingle(tag, BigEndianReader.ReadSinglePrecision(data as byte[]));
                     case VR.SignedLong:
                         return new SignedLong(tag, BigEndianReader.ReadSignedLong(data as byte[]));
+                    case VR.Signed64BitVeryLong:
+                        return new Signed64bitVeryLong(tag, BigEndianReader.ReadSignedVeryLong(data as byte[]));
                     case VR.SignedShort:
                         return new SignedShort(tag, BigEndianReader.ReadSignedShort(data as byte[]));
                     case VR.UnsignedLong:
                         return new UnsignedLong(tag, BigEndianReader.ReadUnsignedLong(data as byte[]));
+                    case VR.Unsigned64BitVeryLong:
+                        return new Unsigned64bitVeryLong(tag, BigEndianReader.ReadUnsignedVeryLong(data as byte[]));
                     case VR.UnsignedShort:
                         return new UnsignedShort(tag, BigEndianReader.ReadUnsignedShort(data as byte[]));
                 }
@@ -55,10 +59,14 @@ namespace EvilDICOM.Core.Element
                         return new FloatingPointSingle(tag, LittleEndianReader.ReadSinglePrecision(data as byte[]));
                     case VR.SignedLong:
                         return new SignedLong(tag, LittleEndianReader.ReadSignedLong(data as byte[]));
+                    case VR.Signed64BitVeryLong:
+                        return new Signed64bitVeryLong(tag, LittleEndianReader.ReadSignedVeryLong(data as byte[]));
                     case VR.SignedShort:
                         return new SignedShort(tag, LittleEndianReader.ReadSignedShort(data as byte[]));
                     case VR.UnsignedLong:
                         return new UnsignedLong(tag, LittleEndianReader.ReadUnsignedLong(data as byte[]));
+                    case VR.Unsigned64BitVeryLong:
+                        return new Unsigned64bitVeryLong(tag, LittleEndianReader.ReadUnsignedVeryLong(data as byte[]));
                     case VR.UnsignedShort:
                         return new UnsignedShort(tag, LittleEndianReader.ReadUnsignedShort(data as byte[]));
                 }
@@ -98,6 +106,8 @@ namespace EvilDICOM.Core.Element
                     return new OtherDoubleString(tag, data as byte[]);
                 case VR.OtherLongString:
                     return new OtherLongString(tag, data as byte[]);
+                case VR.Other64BitVeryLongString:
+                    return new Other64BitVeryLong(tag, data as byte[]);
                 default:
                     var unk = new Unknown(tag, data as byte[]);
                     unk.TransferSyntax = syntax;

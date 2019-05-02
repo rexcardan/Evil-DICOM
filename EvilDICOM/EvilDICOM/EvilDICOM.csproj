@@ -87,6 +87,7 @@
     <Compile Include="Core\Element\IntegerString.cs" />
     <Compile Include="Core\Element\LongString.cs" />
     <Compile Include="Core\Element\LongText.cs" />
+    <Compile Include="Core\Element\Other64BitVeryLong.cs" />
     <Compile Include="Core\Element\OtherByteString.cs" />
     <Compile Include="Core\Element\OtherLongString.cs" />
     <Compile Include="Core\Element\OtherDoubleString.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Core\Element\Sequence.cs" />
     <Compile Include="Core\Element\ShortString.cs" />
     <Compile Include="Core\Element\ShortText.cs" />
+    <Compile Include="Core\Element\Signed64bitVeryLong.cs" />
     <Compile Include="Core\Element\SignedLong.cs" />
     <Compile Include="Core\Element\SignedShort.cs" />
     <Compile Include="Core\Element\Tag.cs" />
@@ -105,6 +107,7 @@
     <Compile Include="Core\Element\Unknown.cs" />
     <Compile Include="Core\Element\UnlimitedCharacter.cs" />
     <Compile Include="Core\Element\UnlimitedText.cs" />
+    <Compile Include="Core\Element\Unsigned64bitVeryLong.cs" />
     <Compile Include="Core\Element\UnsignedLong.cs" />
     <Compile Include="Core\Element\UnsignedShort.cs" />
     <Compile Include="Core\Element\_ElementFactory.cs" />

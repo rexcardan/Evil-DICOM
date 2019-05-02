@@ -3,9 +3,9 @@ using EvilDICOM.Core.Enums;
 
 namespace EvilDICOM.Core.Helpers
 {
-    internal class SOPClassDictionary
+    public class SOPClassDictionary
     {
-        internal static Dictionary<string, SOPClass> Initialize()
+        public static Dictionary<string, SOPClass> Initialize()
         {
             var dict = (new Dictionary<string, SOPClass>());
             dict.Add(SOPClassUID.ComputedRadiographyImageStorage, SOPClass.ComputedRadiographyImageStorage);
@@ -118,9 +118,12 @@ namespace EvilDICOM.Core.Helpers
             dict.Add(SOPClassUID.AcquisitionContextSRStorage, SOPClass.AcquisitionContextSRStorage);
             dict.Add(SOPClassUID.SimplifiedAdultEchoSRStorage, SOPClass.SimplifiedAdultEchoSRStorage);
             dict.Add(SOPClassUID.PatientRadiationDoseSRStorage, SOPClass.PatientRadiationDoseSRStorage);
+            dict.Add(SOPClassUID.PlannedImagingAgentAdministrationSRStorage, SOPClass.PlannedImagingAgentAdministrationSRStorage);
+            dict.Add(SOPClassUID.PerformedImagingAgentAdministrationSRStorage, SOPClass.PerformedImagingAgentAdministrationSRStorage);
             dict.Add(SOPClassUID.ContentAssessmentResultsStorage, SOPClass.ContentAssessmentResultsStorage);
             dict.Add(SOPClassUID.EncapsulatedPDFStorage, SOPClass.EncapsulatedPDFStorage);
             dict.Add(SOPClassUID.EncapsulatedCDAStorage, SOPClass.EncapsulatedCDAStorage);
+            dict.Add(SOPClassUID.EncapsulatedSTLStorage, SOPClass.EncapsulatedSTLStorage);
             dict.Add(SOPClassUID.PositronEmissionTomographyImageStorage, SOPClass.PositronEmissionTomographyImageStorage);
             dict.Add(SOPClassUID.EnhancedPETImageStorage, SOPClass.EnhancedPETImageStorage);
             dict.Add(SOPClassUID.LegacyConvertedEnhancedPETImageStorage, SOPClass.LegacyConvertedEnhancedPETImageStorage);
@@ -135,6 +138,8 @@ namespace EvilDICOM.Core.Helpers
             dict.Add(SOPClassUID.RTTreatmentSummaryRecordStorage, SOPClass.RTTreatmentSummaryRecordStorage);
             dict.Add(SOPClassUID.RTIonPlanStorage, SOPClass.RTIonPlanStorage);
             dict.Add(SOPClassUID.RTIonBeamsTreatmentRecordStorage, SOPClass.RTIonBeamsTreatmentRecordStorage);
+            dict.Add(SOPClassUID.RTPhysicianIntentStorage, SOPClass.RTPhysicianIntentStorage);
+            dict.Add(SOPClassUID.RTSegmentAnnotationStorage, SOPClass.RTSegmentAnnotationStorage);
             dict.Add(SOPClassUID.RTBeamsDeliveryInstructionStorage, SOPClass.RTBeamsDeliveryInstructionStorage);
             dict.Add(SOPClassUID.RTBrachyApplicationSetupDeliveryInstructionStorage, SOPClass.RTBrachyApplicationSetupDeliveryInstructionStorage);
             return dict;

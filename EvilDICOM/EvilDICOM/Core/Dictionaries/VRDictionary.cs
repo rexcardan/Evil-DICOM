@@ -87,6 +87,14 @@ namespace EvilDICOM.Core.Dictionaries
                     return VR.Sequence;
                 case "UN":
                     return VR.Unknown;
+
+                case "OV":
+                    return VR.Other64BitVeryLongString;
+                case "SV":
+                    return VR.Signed64BitVeryLong;
+                case "UV":
+                    return VR.Unsigned64BitVeryLong;
+
                 default:
                     return VR.Null;
             }
@@ -163,6 +171,13 @@ namespace EvilDICOM.Core.Dictionaries
                     return "SQ";
                 case VR.Unknown:
                     return "UN";
+
+                case VR.Other64BitVeryLongString:
+                    return "OV";
+                case VR.Signed64BitVeryLong:
+                    return "SV";
+                case VR.Unsigned64BitVeryLong:
+                    return "UV";
                 default:
                     return string.Empty;
             }
@@ -226,8 +241,14 @@ namespace EvilDICOM.Core.Dictionaries
                 case VR.OtherByteString:
                 case VR.OtherDoubleString:
                 case VR.OtherLongString:
+                case VR.Other64BitVeryLongString:
                 case VR.OtherWordString:
+                case VR.Signed64BitVeryLong:
+                case VR.Unsigned64BitVeryLong:
                 case VR.OtherFloatString:
+                case VR.UniversalResourceId:
+                case VR.UnlimitedCharacter:
+                case VR.UnlimitedText:
                 case VR.Sequence:
                 case VR.Unknown:
                     return VREncoding.ExplicitLong;

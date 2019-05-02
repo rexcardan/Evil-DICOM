@@ -48,6 +48,16 @@ namespace EvilDICOM.Core.IO.Data
             return ReadUnsignedShort(data, ReadUnsignedShortSingle);
         }
 
+        public static long[] ReadSignedVeryLong(byte[] data)
+        {
+            return ReadSignedVeryLong(data, ReadSignedVeryLongSingle);
+        }
+
+        public static ulong[] ReadUnsignedVeryLong(byte[] data)
+        {
+            return ReadUnsignedVeryLong(data, ReadUnsignedVeryLongSingle);
+        }
+
         #region SINGLE READERS
 
         public static Tag ReadTagSingle(byte[] data)
@@ -83,6 +93,16 @@ namespace EvilDICOM.Core.IO.Data
         public static ushort ReadUnsignedShortSingle(byte[] data)
         {
             return BitConverter.ToUInt16(data, 0);
+        }
+
+        public static long ReadSignedVeryLongSingle(byte[] data)
+        {
+            return BitConverter.ToInt64(data, 0);
+        }
+
+        public static ulong ReadUnsignedVeryLongSingle(byte[] data)
+        {
+            return BitConverter.ToUInt64(data, 0);
         }
 
         #endregion

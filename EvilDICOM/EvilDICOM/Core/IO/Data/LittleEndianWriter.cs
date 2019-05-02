@@ -36,6 +36,16 @@ namespace EvilDICOM.Core.IO.Data
             return MultiplicityComposer.ComposeMultipleBinary(data, WriteUnsignedLongSingle);
         }
 
+        public static byte[] WriteSignedVeryLong(DICOMData<long> data)
+        {
+            return MultiplicityComposer.ComposeMultipleBinary(data, WriteSignedVeryLongSingle);
+        }
+
+        public static byte[] WriteUnsignedVeryLong(DICOMData<ulong> data)
+        {
+            return MultiplicityComposer.ComposeMultipleBinary(data, WriteUnsignedVeryLongSingle);
+        }
+
         public static byte[] WriteSignedShort(DICOMData<short> data)
         {
             return MultiplicityComposer.ComposeMultipleBinary(data, WriteSignedShortSingle);
@@ -61,6 +71,16 @@ namespace EvilDICOM.Core.IO.Data
         }
 
         public static byte[] WriteDoublePrecisionSingle(double data)
+        {
+            return BitConverter.GetBytes(data);
+        }
+
+        public static byte[] WriteSignedVeryLongSingle(long data)
+        {
+            return BitConverter.GetBytes(data);
+        }
+
+        public static byte[] WriteUnsignedVeryLongSingle(ulong data)
         {
             return BitConverter.GetBytes(data);
         }

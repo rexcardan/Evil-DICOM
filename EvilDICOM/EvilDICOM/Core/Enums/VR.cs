@@ -35,6 +35,9 @@
         Unknown,
         UniversalResourceId,
         Null,
+        Other64BitVeryLongString,
+        Signed64BitVeryLong,
+        Unsigned64BitVeryLong,
         OtherDoubleString,
         OtherLongString
     }
