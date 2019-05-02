@@ -1500,6 +1500,27 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence Anatomic​Regions​In​StudyC​ode​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00080063"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Anatomic​Regions​In​StudyC​ode​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00080063").Select(d => d as Sequence).ToList();
+            }
+        }
+
         public CodeString Conversion​Type
         {
             get
@@ -1941,6 +1962,48 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence Coding​Scheme​Resources​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00080109"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Coding​Scheme​Resources​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00080109").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString Coding​Scheme​URL​Type
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("0008010A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Coding​Scheme​URL​Type_
+        {
+            get
+            {
+                return _dicom.FindAll("0008010A").Select(d => d as CodeString).ToList();
+            }
+        }
+
         public CodeString Context​Group​Extension​Flag
         {
             get
@@ -2001,6 +2064,27 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("0008010D").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public UniversalResourceId Coding​Scheme​URL
+        {
+            get
+            {
+                return (UniversalResourceId)(_dicom.FindFirst("0008010E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniversalResourceId> Coding​Scheme​URL_
+        {
+            get
+            {
+                return _dicom.FindAll("0008010E").Select(d => d as UniversalResourceId).ToList();
             }
         }
 
@@ -2886,6 +2970,27 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence Institutional​Department​Type​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00081041"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Institutional​Department​Type​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00081041").Select(d => d as Sequence).ToList();
+            }
+        }
+
         public PersonName Physicians​Of​Record
         {
             get
@@ -3429,6 +3534,27 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("00081155").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public Sequence Definition​Source​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00081156"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Definition​Source​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00081156").Select(d => d as Sequence).ToList();
             }
         }
 
@@ -6831,6 +6957,48 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("00120051").Select(d => d as ShortText).ToList();
+            }
+        }
+
+        public FloatingPointDouble Longitudinal​Temporal​Offset​From​Event
+        {
+            get
+            {
+                return (FloatingPointDouble)(_dicom.FindFirst("00120052"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<FloatingPointDouble> Longitudinal​Temporal​Offset​From​Event_
+        {
+            get
+            {
+                return _dicom.FindAll("00120052").Select(d => d as FloatingPointDouble).ToList();
+            }
+        }
+
+        public CodeString Longitudinal​Temporal​Event​Type
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00120053"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Longitudinal​Temporal​Event​Type_
+        {
+            get
+            {
+                return _dicom.FindAll("00120053").Select(d => d as CodeString).ToList();
             }
         }
 
@@ -11139,6 +11307,2211 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public DecimalString White​Point​
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160001"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> White​Point​_
+        {
+            get
+            {
+                return _dicom.FindAll("00160001").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Primary​Chromaticities
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160002"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Primary​Chromaticities_
+        {
+            get
+            {
+                return _dicom.FindAll("00160002").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public UnlimitedText Battery​Level
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("00160003"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Battery​Level_
+        {
+            get
+            {
+                return _dicom.FindAll("00160003").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public DecimalString Exposure​Time​In​Seconds
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160004"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Exposure​Time​In​Seconds_
+        {
+            get
+            {
+                return _dicom.FindAll("00160004").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString FNumber
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160005"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> FNumber_
+        {
+            get
+            {
+                return _dicom.FindAll("00160005").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public IntegerString OECF​Rows
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("00160006"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> OECF​Rows_
+        {
+            get
+            {
+                return _dicom.FindAll("00160006").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public IntegerString OECF​Columns
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("00160007"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> OECF​Columns_
+        {
+            get
+            {
+                return _dicom.FindAll("00160007").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public UnlimitedCharacter OECF​Column​Names
+        {
+            get
+            {
+                return (UnlimitedCharacter)(_dicom.FindFirst("00160008"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedCharacter> OECF​Column​Names_
+        {
+            get
+            {
+                return _dicom.FindAll("00160008").Select(d => d as UnlimitedCharacter).ToList();
+            }
+        }
+
+        public DecimalString OECF​Values
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160009"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> OECF​Values_
+        {
+            get
+            {
+                return _dicom.FindAll("00160009").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public IntegerString Spatial​Frequency​Response​Rows
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("0016000A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> Spatial​Frequency​Response​Rows_
+        {
+            get
+            {
+                return _dicom.FindAll("0016000A").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public IntegerString Spatial​Frequency​Response​Columns
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("0016000B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> Spatial​Frequency​Response​Columns_
+        {
+            get
+            {
+                return _dicom.FindAll("0016000B").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public UnlimitedCharacter Spatial​Frequency​Response​Column​Names
+        {
+            get
+            {
+                return (UnlimitedCharacter)(_dicom.FindFirst("0016000C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedCharacter> Spatial​Frequency​Response​Column​Names_
+        {
+            get
+            {
+                return _dicom.FindAll("0016000C").Select(d => d as UnlimitedCharacter).ToList();
+            }
+        }
+
+        public DecimalString Spatial​Frequency​Response​Values
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("0016000D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Spatial​Frequency​Response​Values_
+        {
+            get
+            {
+                return _dicom.FindAll("0016000D").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public IntegerString Color​Filter​Array​Pattern​Rows
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("0016000E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> Color​Filter​Array​Pattern​Rows_
+        {
+            get
+            {
+                return _dicom.FindAll("0016000E").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public IntegerString Color​Filter​Array​Pattern​Columns
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("0016000F"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> Color​Filter​Array​Pattern​Columns_
+        {
+            get
+            {
+                return _dicom.FindAll("0016000F").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public DecimalString Color​Filter​Array​Pattern​Values
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160010"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Color​Filter​Array​Pattern​Values_
+        {
+            get
+            {
+                return _dicom.FindAll("00160010").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public UnsignedShort Flash​Firing​Status
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160011"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Flash​Firing​Status_
+        {
+            get
+            {
+                return _dicom.FindAll("00160011").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Flash​Return​Status
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160012"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Flash​Return​Status_
+        {
+            get
+            {
+                return _dicom.FindAll("00160012").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Flash​Mode
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160013"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Flash​Mode_
+        {
+            get
+            {
+                return _dicom.FindAll("00160013").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Flash​Function​Present
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160014"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Flash​Function​Present_
+        {
+            get
+            {
+                return _dicom.FindAll("00160014").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Flash​Red​Eye​Mode
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160015"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Flash​Red​Eye​Mode_
+        {
+            get
+            {
+                return _dicom.FindAll("00160015").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Exposure​Program
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160016"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Exposure​Program_
+        {
+            get
+            {
+                return _dicom.FindAll("00160016").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnlimitedText Spectral​Sensitivity
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("00160017"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Spectral​Sensitivity_
+        {
+            get
+            {
+                return _dicom.FindAll("00160017").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public IntegerString Photographic​Sensitivity
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("00160018"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> Photographic​Sensitivity_
+        {
+            get
+            {
+                return _dicom.FindAll("00160018").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public IntegerString Self​Timer​Mode
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("00160019"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> Self​Timer​Mode_
+        {
+            get
+            {
+                return _dicom.FindAll("00160019").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public UnsignedShort Sensitivity​Type
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("0016001A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Sensitivity​Type_
+        {
+            get
+            {
+                return _dicom.FindAll("0016001A").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public IntegerString Standard​Output​Sensitivity
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("0016001B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> Standard​Output​Sensitivity_
+        {
+            get
+            {
+                return _dicom.FindAll("0016001B").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public IntegerString Recommended​Exposure​Index
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("0016001C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> Recommended​Exposure​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("0016001C").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public IntegerString ISO​Speed​
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("0016001D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> ISO​Speed​_
+        {
+            get
+            {
+                return _dicom.FindAll("0016001D").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public IntegerString ISO​Speed​Latitude​yyy
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("0016001E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> ISO​Speed​Latitude​yyy_
+        {
+            get
+            {
+                return _dicom.FindAll("0016001E").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public IntegerString ISO​Speed​Latitude​zzz
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("0016001F"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> ISO​Speed​Latitude​zzz_
+        {
+            get
+            {
+                return _dicom.FindAll("0016001F").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public UnlimitedText EXIF​Version
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("00160020"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> EXIF​Version_
+        {
+            get
+            {
+                return _dicom.FindAll("00160020").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public DecimalString Shutter​Speed​Value
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160021"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Shutter​Speed​Value_
+        {
+            get
+            {
+                return _dicom.FindAll("00160021").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Aperture​Value
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160022"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Aperture​Value_
+        {
+            get
+            {
+                return _dicom.FindAll("00160022").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Brightness​Value
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160023"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Brightness​Value_
+        {
+            get
+            {
+                return _dicom.FindAll("00160023").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Exposure​Bias​Value
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160024"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Exposure​Bias​Value_
+        {
+            get
+            {
+                return _dicom.FindAll("00160024").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Max​Aperture​Value
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160025"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Max​Aperture​Value_
+        {
+            get
+            {
+                return _dicom.FindAll("00160025").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Subject​Distance
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160026"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Subject​Distance_
+        {
+            get
+            {
+                return _dicom.FindAll("00160026").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public UnsignedShort Metering​Mode
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160027"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Metering​Mode_
+        {
+            get
+            {
+                return _dicom.FindAll("00160027").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Light​Source
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160028"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Light​Source_
+        {
+            get
+            {
+                return _dicom.FindAll("00160028").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public DecimalString Focal​Length
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160029"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Focal​Length_
+        {
+            get
+            {
+                return _dicom.FindAll("00160029").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public IntegerString Subject​Area
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("0016002A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> Subject​Area_
+        {
+            get
+            {
+                return _dicom.FindAll("0016002A").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public OtherByteString Maker​Note
+        {
+            get
+            {
+                return (OtherByteString)(_dicom.FindFirst("0016002B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<OtherByteString> Maker​Note_
+        {
+            get
+            {
+                return _dicom.FindAll("0016002B").Select(d => d as OtherByteString).ToList();
+            }
+        }
+
+        public DecimalString Temperature
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160030"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Temperature_
+        {
+            get
+            {
+                return _dicom.FindAll("00160030").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Humidity
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160031"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Humidity_
+        {
+            get
+            {
+                return _dicom.FindAll("00160031").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Pressure
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160032"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Pressure_
+        {
+            get
+            {
+                return _dicom.FindAll("00160032").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Water​Depth
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160033"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Water​Depth_
+        {
+            get
+            {
+                return _dicom.FindAll("00160033").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Acceleration
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160034"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Acceleration_
+        {
+            get
+            {
+                return _dicom.FindAll("00160034").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Camera​Elevation​Angle
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160035"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Camera​Elevation​Angle_
+        {
+            get
+            {
+                return _dicom.FindAll("00160035").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Flash​Energy
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160036"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Flash​Energy_
+        {
+            get
+            {
+                return _dicom.FindAll("00160036").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public IntegerString Subject​Location
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("00160037"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> Subject​Location_
+        {
+            get
+            {
+                return _dicom.FindAll("00160037").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public DecimalString Photographic​Exposure​Index
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160038"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Photographic​Exposure​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("00160038").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public UnsignedShort Sensing​Method
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160039"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Sensing​Method_
+        {
+            get
+            {
+                return _dicom.FindAll("00160039").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort File​Source
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("0016003A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> File​Source_
+        {
+            get
+            {
+                return _dicom.FindAll("0016003A").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Scene​Type
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("0016003B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Scene​Type_
+        {
+            get
+            {
+                return _dicom.FindAll("0016003B").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Custom​Rendered
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160041"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Custom​Rendered_
+        {
+            get
+            {
+                return _dicom.FindAll("00160041").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Exposure​Mode
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160042"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Exposure​Mode_
+        {
+            get
+            {
+                return _dicom.FindAll("00160042").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort White​Balance
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160043"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> White​Balance_
+        {
+            get
+            {
+                return _dicom.FindAll("00160043").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public DecimalString Digital​Zoom​Ratio
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160044"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Digital​Zoom​Ratio_
+        {
+            get
+            {
+                return _dicom.FindAll("00160044").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public IntegerString Focal​Length​In​35mm​Film
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("00160045"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> Focal​Length​In​35mm​Film_
+        {
+            get
+            {
+                return _dicom.FindAll("00160045").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public UnsignedShort Scene​Capture​Type
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160046"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Scene​Capture​Type_
+        {
+            get
+            {
+                return _dicom.FindAll("00160046").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Gain​Control
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160047"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Gain​Control_
+        {
+            get
+            {
+                return _dicom.FindAll("00160047").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Contrast
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160048"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Contrast_
+        {
+            get
+            {
+                return _dicom.FindAll("00160048").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Saturation
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160049"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Saturation_
+        {
+            get
+            {
+                return _dicom.FindAll("00160049").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Sharpness
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("0016004A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Sharpness_
+        {
+            get
+            {
+                return _dicom.FindAll("0016004A").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public OtherByteString Device​Setting​Description
+        {
+            get
+            {
+                return (OtherByteString)(_dicom.FindFirst("0016004B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<OtherByteString> Device​Setting​Description_
+        {
+            get
+            {
+                return _dicom.FindAll("0016004B").Select(d => d as OtherByteString).ToList();
+            }
+        }
+
+        public UnsignedShort Subject​Distance​Range
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("0016004C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Subject​Distance​Range_
+        {
+            get
+            {
+                return _dicom.FindAll("0016004C").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnlimitedText Camera​Owner​Name
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("0016004D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Camera​Owner​Name_
+        {
+            get
+            {
+                return _dicom.FindAll("0016004D").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public DecimalString Lens​Specification
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("0016004E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Lens​Specification_
+        {
+            get
+            {
+                return _dicom.FindAll("0016004E").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public UnlimitedText Lens​Make
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("0016004F"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Lens​Make_
+        {
+            get
+            {
+                return _dicom.FindAll("0016004F").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public UnlimitedText Lens​Model
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("00160050"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Lens​Model_
+        {
+            get
+            {
+                return _dicom.FindAll("00160050").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public UnlimitedText Lens​Serial​Number
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("00160051"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Lens​Serial​Number_
+        {
+            get
+            {
+                return _dicom.FindAll("00160051").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public CodeString Interoperability​Index
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00160061"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Interoperability​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("00160061").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public OtherByteString Interoperability​Version
+        {
+            get
+            {
+                return (OtherByteString)(_dicom.FindFirst("00160062"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<OtherByteString> Interoperability​Version_
+        {
+            get
+            {
+                return _dicom.FindAll("00160062").Select(d => d as OtherByteString).ToList();
+            }
+        }
+
+        public OtherByteString GPS​Version​ID
+        {
+            get
+            {
+                return (OtherByteString)(_dicom.FindFirst("00160070"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<OtherByteString> GPS​Version​ID_
+        {
+            get
+            {
+                return _dicom.FindAll("00160070").Select(d => d as OtherByteString).ToList();
+            }
+        }
+
+        public CodeString GPS​Latitude​Ref
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00160071"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> GPS​Latitude​Ref_
+        {
+            get
+            {
+                return _dicom.FindAll("00160071").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public DecimalString GPS​Latitude​
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160072"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> GPS​Latitude​_
+        {
+            get
+            {
+                return _dicom.FindAll("00160072").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public CodeString GPS​Longitude​​Ref
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00160073"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> GPS​Longitude​​Ref_
+        {
+            get
+            {
+                return _dicom.FindAll("00160073").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public DecimalString GPS​Longitude
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160074"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> GPS​Longitude_
+        {
+            get
+            {
+                return _dicom.FindAll("00160074").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public UnsignedShort GPS​Altitude​Ref
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00160075"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> GPS​Altitude​Ref_
+        {
+            get
+            {
+                return _dicom.FindAll("00160075").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public DecimalString GPS​Altitude​
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160076"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> GPS​Altitude​_
+        {
+            get
+            {
+                return _dicom.FindAll("00160076").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public Element.DateTime GPS​Time​Stamp
+        {
+            get
+            {
+                return (Element.DateTime)(_dicom.FindFirst("00160077"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Element.DateTime> GPS​Time​Stamp_
+        {
+            get
+            {
+                return _dicom.FindAll("00160077").Select(d => d as Element.DateTime).ToList();
+            }
+        }
+
+        public UnlimitedText GPS​Satellites
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("00160078"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> GPS​Satellites_
+        {
+            get
+            {
+                return _dicom.FindAll("00160078").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public CodeString GPS​Status
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00160079"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> GPS​Status_
+        {
+            get
+            {
+                return _dicom.FindAll("00160079").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public CodeString GPS​Measure​​Mode
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("0016007A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> GPS​Measure​​Mode_
+        {
+            get
+            {
+                return _dicom.FindAll("0016007A").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public DecimalString GPS​DOP
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("0016007B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> GPS​DOP_
+        {
+            get
+            {
+                return _dicom.FindAll("0016007B").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public CodeString GPS​Speed​Ref
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("0016007C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> GPS​Speed​Ref_
+        {
+            get
+            {
+                return _dicom.FindAll("0016007C").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public DecimalString GPS​Speed​
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("0016007D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> GPS​Speed​_
+        {
+            get
+            {
+                return _dicom.FindAll("0016007D").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public CodeString GPS​Track​​Ref
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("0016007E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> GPS​Track​​Ref_
+        {
+            get
+            {
+                return _dicom.FindAll("0016007E").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public DecimalString GPS​Track
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("0016007F"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> GPS​Track_
+        {
+            get
+            {
+                return _dicom.FindAll("0016007F").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public CodeString GPS​Img​Direction​Ref
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00160080"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> GPS​Img​Direction​Ref_
+        {
+            get
+            {
+                return _dicom.FindAll("00160080").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public DecimalString GPS​Img​Direction
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160081"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> GPS​Img​Direction_
+        {
+            get
+            {
+                return _dicom.FindAll("00160081").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public UnlimitedText GPS​Map​​Datum
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("00160082"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> GPS​Map​​Datum_
+        {
+            get
+            {
+                return _dicom.FindAll("00160082").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public CodeString GPS​Dest​Latitude​Ref
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00160083"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> GPS​Dest​Latitude​Ref_
+        {
+            get
+            {
+                return _dicom.FindAll("00160083").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public DecimalString GPS​Dest​Latitude
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160084"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> GPS​Dest​Latitude_
+        {
+            get
+            {
+                return _dicom.FindAll("00160084").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public CodeString GPS​Dest​Longitude​Ref
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00160085"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> GPS​Dest​Longitude​Ref_
+        {
+            get
+            {
+                return _dicom.FindAll("00160085").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public DecimalString GPS​Dest​​Longitude
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160086"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> GPS​Dest​​Longitude_
+        {
+            get
+            {
+                return _dicom.FindAll("00160086").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public CodeString GPS​Dest​Bearing​Ref
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00160087"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> GPS​Dest​Bearing​Ref_
+        {
+            get
+            {
+                return _dicom.FindAll("00160087").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public DecimalString GPS​Dest​Bearing
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00160088"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> GPS​Dest​Bearing_
+        {
+            get
+            {
+                return _dicom.FindAll("00160088").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public CodeString GPS​Dest​Distance​Ref
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00160089"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> GPS​Dest​Distance​Ref_
+        {
+            get
+            {
+                return _dicom.FindAll("00160089").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public DecimalString GPS​Dest​Distance
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("0016008A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> GPS​Dest​Distance_
+        {
+            get
+            {
+                return _dicom.FindAll("0016008A").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public OtherByteString GPS​Processing​Method
+        {
+            get
+            {
+                return (OtherByteString)(_dicom.FindFirst("0016008B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<OtherByteString> GPS​Processing​Method_
+        {
+            get
+            {
+                return _dicom.FindAll("0016008B").Select(d => d as OtherByteString).ToList();
+            }
+        }
+
+        public OtherByteString GPS​Area​Information
+        {
+            get
+            {
+                return (OtherByteString)(_dicom.FindFirst("0016008C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<OtherByteString> GPS​Area​Information_
+        {
+            get
+            {
+                return _dicom.FindAll("0016008C").Select(d => d as OtherByteString).ToList();
+            }
+        }
+
+        public Element.DateTime GPS​Date​Stamp
+        {
+            get
+            {
+                return (Element.DateTime)(_dicom.FindFirst("0016008D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Element.DateTime> GPS​Date​Stamp_
+        {
+            get
+            {
+                return _dicom.FindAll("0016008D").Select(d => d as Element.DateTime).ToList();
+            }
+        }
+
+        public IntegerString GPS​Differential
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("0016008E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> GPS​Differential_
+        {
+            get
+            {
+                return _dicom.FindAll("0016008E").Select(d => d as IntegerString).ToList();
+            }
+        }
+
         public LongString Contrast​Bolus​Agent
         {
             get
@@ -14646,6 +17019,27 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public DecimalString Compression​​Pressure
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("001811A3"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Compression​​Pressure_
+        {
+            get
+            {
+                return _dicom.FindAll("001811A3").Select(d => d as DecimalString).ToList();
+            }
+        }
+
         public LongString Paddle​Description
         {
             get
@@ -14664,6 +17058,27 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("001811A4").Select(d => d as LongString).ToList();
+            }
+        }
+
+        public DecimalString Compression​​Contact​​Area
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("001811A5"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Compression​​Contact​​Area_
+        {
+            get
+            {
+                return _dicom.FindAll("001811A5").Select(d => d as DecimalString).ToList();
             }
         }
 
@@ -22836,7 +25251,7 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public Sequence CTX​Ray​Details​Sequence
+        public Sequence CT​X​Ray​Details​Sequence
         {
             get
             {
@@ -22849,7 +25264,7 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public List<Sequence> CTX​Ray​Details​Sequence_
+        public List<Sequence> CT​X​Ray​Details​Sequence_
         {
             get
             {
@@ -23316,6 +25731,762 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("00189360").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString Multienergy​CT​Acquisition
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00189361"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Multienergy​CT​Acquisition_
+        {
+            get
+            {
+                return _dicom.FindAll("00189361").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public Sequence Multienergy​CT​Acquisition​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00189362"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Multienergy​CT​Acquisition​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00189362").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Multienergy​CT​Processing​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00189363"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Multienergy​CT​Processing​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00189363").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Multienergy​CT​Characteristics​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00189364"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Multienergy​CT​Characteristics​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00189364").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Multienergy​CT​XRay​Source​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00189365"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Multienergy​CT​XRay​Source​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00189365").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UnsignedShort XRay​Source​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00189366"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> XRay​Source​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("00189366").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnlimitedCharacter XRay​Source​ID
+        {
+            get
+            {
+                return (UnlimitedCharacter)(_dicom.FindFirst("00189367"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedCharacter> XRay​Source​ID_
+        {
+            get
+            {
+                return _dicom.FindAll("00189367").Select(d => d as UnlimitedCharacter).ToList();
+            }
+        }
+
+        public CodeString Multienergy​Source​Technique
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00189368"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Multienergy​Source​Technique_
+        {
+            get
+            {
+                return _dicom.FindAll("00189368").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public Element.DateTime Source​Start​Date​Time
+        {
+            get
+            {
+                return (Element.DateTime)(_dicom.FindFirst("00189369"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Element.DateTime> Source​Start​Date​Time_
+        {
+            get
+            {
+                return _dicom.FindAll("00189369").Select(d => d as Element.DateTime).ToList();
+            }
+        }
+
+        public Element.DateTime Source​End​Date​Time
+        {
+            get
+            {
+                return (Element.DateTime)(_dicom.FindFirst("0018936A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Element.DateTime> Source​End​Date​Time_
+        {
+            get
+            {
+                return _dicom.FindAll("0018936A").Select(d => d as Element.DateTime).ToList();
+            }
+        }
+
+        public UnsignedShort Switching​Phase​Number
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("0018936B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Switching​Phase​Number_
+        {
+            get
+            {
+                return _dicom.FindAll("0018936B").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public DecimalString Switching​Phase​Nominal​Duration
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("0018936C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Switching​Phase​Nominal​Duration_
+        {
+            get
+            {
+                return _dicom.FindAll("0018936C").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Switching​Phase​Transition​Duration
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("0018936D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Switching​Phase​Transition​Duration_
+        {
+            get
+            {
+                return _dicom.FindAll("0018936D").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Effective​Bin​Energy
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("0018936E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Effective​Bin​Energy_
+        {
+            get
+            {
+                return _dicom.FindAll("0018936E").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public Sequence Multienergy​CT​XRay​Detector​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("0018936F"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Multienergy​CT​XRay​Detector​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("0018936F").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UnsignedShort XRay​Detector​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00189370"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> XRay​Detector​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("00189370").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnlimitedCharacter XRay​Detector​ID
+        {
+            get
+            {
+                return (UnlimitedCharacter)(_dicom.FindFirst("00189371"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedCharacter> XRay​Detector​ID_
+        {
+            get
+            {
+                return _dicom.FindAll("00189371").Select(d => d as UnlimitedCharacter).ToList();
+            }
+        }
+
+        public CodeString Multienergy​Detector​Type
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00189372"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Multienergy​Detector​Type_
+        {
+            get
+            {
+                return _dicom.FindAll("00189372").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public ShortText XRay​Detector​Label
+        {
+            get
+            {
+                return (ShortText)(_dicom.FindFirst("00189373"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<ShortText> XRay​Detector​Label_
+        {
+            get
+            {
+                return _dicom.FindAll("00189373").Select(d => d as ShortText).ToList();
+            }
+        }
+
+        public DecimalString Nominal​Max​Energy
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00189374"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Nominal​Max​Energy_
+        {
+            get
+            {
+                return _dicom.FindAll("00189374").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Nominal​Min​Energy
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00189375"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Nominal​Min​Energy_
+        {
+            get
+            {
+                return _dicom.FindAll("00189375").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​XRay​Detector​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00189376"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Referenced​XRay​Detector​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("00189376").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​XRay​Source​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00189377"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Referenced​XRay​Source​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("00189377").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​Path​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("00189378"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Referenced​Path​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("00189378").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public Sequence Multienergy​CT​Path​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00189379"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Multienergy​CT​Path​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00189379").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UnsignedShort Multienergy​CT​Path​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("0018937A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Multienergy​CT​Path​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("0018937A").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnlimitedText Multienergy​Acquisition​Description
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("0018937B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Multienergy​Acquisition​Description_
+        {
+            get
+            {
+                return _dicom.FindAll("0018937B").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public FloatingPointDouble Monoenergetic​Energy​Equivalent
+        {
+            get
+            {
+                return (FloatingPointDouble)(_dicom.FindFirst("0018937C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<FloatingPointDouble> Monoenergetic​Energy​Equivalent_
+        {
+            get
+            {
+                return _dicom.FindAll("0018937C").Select(d => d as FloatingPointDouble).ToList();
+            }
+        }
+
+        public Sequence Material​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("0018937D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Material​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("0018937D").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString Decomposition​Method
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("0018937E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Decomposition​Method_
+        {
+            get
+            {
+                return _dicom.FindAll("0018937E").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public UnlimitedText Decomposition​Description
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("0018937F"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Decomposition​Description_
+        {
+            get
+            {
+                return _dicom.FindAll("0018937F").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public Sequence Decomposition​Algorithm​Identification​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00189380"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Decomposition​Algorithm​Identification​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00189380").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Decomposition​Material​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00189381"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Decomposition​Material​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00189381").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Material​Attenuation​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00189382"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Material​Attenuation​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00189382").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public DecimalString Photon​Energy
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00189383"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Photon​Energy_
+        {
+            get
+            {
+                return _dicom.FindAll("00189383").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString XRay​Mass​Attenuation​Coefficient
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("00189384"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> XRay​Mass​Attenuation​Coefficient_
+        {
+            get
+            {
+                return _dicom.FindAll("00189384").Select(d => d as DecimalString).ToList();
             }
         }
 
@@ -31866,6 +35037,27 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence Source​Of​Corneal​Size​Data​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00221036"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Source​Of​Corneal​Size​Data​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00221036").Select(d => d as Sequence).ToList();
+            }
+        }
+
         public FloatingPointSingle Target​Refraction
         {
             get
@@ -31947,6 +35139,153 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("00221044").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Surgically​Induced​Astigmatism​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00221045"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Surgically​Induced​Astigmatism​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00221045").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString Type​Of​Optical​Correction
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00221046"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Type​Of​Optical​Correction_
+        {
+            get
+            {
+                return _dicom.FindAll("00221046").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public Sequence Toric​IOL​Power​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00221047"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Toric​IOL​Power​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00221047").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence PredictedT​oric​Error​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00221048"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> PredictedT​oric​Error​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00221048").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString Pre​Selected​For​Implantation
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00221049"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Pre​Selected​For​Implantation_
+        {
+            get
+            {
+                return _dicom.FindAll("00221049").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public Sequence Toric​IOL​Power​For​Exact​Emmetropia​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("0022104A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Toric​IOL​Power​For​Exact​Emmetropia​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("0022104A").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Toric​IOL​Power​For​Exact​Target​Refraction​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("0022104B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Toric​IOL​Power​For​Exact​Target​Refraction​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("0022104B").Select(d => d as Sequence).ToList();
             }
         }
 
@@ -32388,6 +35727,69 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("00221128").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Calculation​Comment​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("0022112A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Calculation​Comment​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("0022112A").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString Calculation​Comment​Type
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("0022112B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Calculation​Comment​Type_
+        {
+            get
+            {
+                return _dicom.FindAll("0022112B").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public LongText Calculation​Comment
+        {
+            get
+            {
+                return (LongText)(_dicom.FindFirst("0022112C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<LongText> Calculation​Comment_
+        {
+            get
+            {
+                return _dicom.FindAll("0022112C").Select(d => d as LongText).ToList();
             }
         }
 
@@ -41799,6 +45201,48 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public UnlimitedText Reason​For​Visit
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("00321066"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Reason​For​Visit_
+        {
+            get
+            {
+                return _dicom.FindAll("00321066").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public Sequence Reason​For​Visit​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00321067"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Reason​For​Visit​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00321067").Select(d => d as Sequence).ToList();
+            }
+        }
+
         public LongString Requested​Contrast​Agent
         {
             get
@@ -45180,6 +48624,27 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence Whole​Slide​Microscopy​Image​Frame​Type​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00400710"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Whole​Slide​Microscopy​Image​Frame​Type​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00400710").Select(d => d as Sequence).ToList();
+            }
+        }
+
         public Sequence Image​Center​Point​Coordinates​Sequence
         {
             get
@@ -46164,6 +49629,27 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("00404007").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Element.DateTime Scheduled​Procedure​Step​Expiration​Date​Time
+        {
+            get
+            {
+                return (Element.DateTime)(_dicom.FindFirst("00404008"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Element.DateTime> Scheduled​Procedure​Step​Expiration​Date​Time_
+        {
+            get
+            {
+                return _dicom.FindAll("00404008").Select(d => d as Element.DateTime).ToList();
             }
         }
 
@@ -50031,6 +53517,27 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public UnsignedLong Encapsulated​Document​Length
+        {
+            get
+            {
+                return (UnsignedLong)(_dicom.FindFirst("00420015"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedLong> Encapsulated​Document​Length_
+        {
+            get
+            {
+                return _dicom.FindAll("00420015").Select(d => d as UnsignedLong).ToList();
+            }
+        }
+
         public ShortText Product​Package​Identifier
         {
             get
@@ -50322,6 +53829,237 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("00440019").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Approval​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00440100"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Approval​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00440100").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Assertion​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00440101"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Assertion​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00440101").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UniqueIdentifier Assertion​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("00440102"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> Assertion​UID_
+        {
+            get
+            {
+                return _dicom.FindAll("00440102").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public Sequence Asserter​Identification​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00440103"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Asserter​Identification​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00440103").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Element.DateTime Assertion​DateTime
+        {
+            get
+            {
+                return (Element.DateTime)(_dicom.FindFirst("00440104"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Element.DateTime> Assertion​DateTime_
+        {
+            get
+            {
+                return _dicom.FindAll("00440104").Select(d => d as Element.DateTime).ToList();
+            }
+        }
+
+        public Element.DateTime Assertion​Expiration​DateTime
+        {
+            get
+            {
+                return (Element.DateTime)(_dicom.FindFirst("00440105"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Element.DateTime> Assertion​Expiration​DateTime_
+        {
+            get
+            {
+                return _dicom.FindAll("00440105").Select(d => d as Element.DateTime).ToList();
+            }
+        }
+
+        public UnlimitedText Assertion​Comments
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("00440106"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Assertion​Comments_
+        {
+            get
+            {
+                return _dicom.FindAll("00440106").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public Sequence Related​Assertion​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00440107"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Related​Assertion​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00440107").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UniqueIdentifier Referenced​Assertion​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("00440108"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> Referenced​Assertion​UID_
+        {
+            get
+            {
+                return _dicom.FindAll("00440108").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public Sequence Approval​Subject​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00440109"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Approval​Subject​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00440109").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Organizational​Role​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("0044010A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Organizational​Role​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("0044010A").Select(d => d as Sequence).ToList();
             }
         }
 
@@ -50637,6 +54375,27 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("00460046").Select(d => d as FloatingPointDouble).ToList();
+            }
+        }
+
+        public Sequence Corneal​Size​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00460047"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Corneal​Size​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00460047").Select(d => d as Sequence).ToList();
             }
         }
 
@@ -51120,6 +54879,195 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("00460106").Select(d => d as FloatingPointDouble).ToList();
+            }
+        }
+
+        public Sequence Cornea​Measurements​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00460110"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Cornea​Measurements​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00460110").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Sourc​eOf​Cornea​Measurement​Data​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00460111"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Sourc​eOf​Cornea​Measurement​Data​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00460111").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Steep​Corneal​Axis​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00460112"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Steep​Corneal​Axis​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00460112").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Flat​Corneal​Axis​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00460113"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Flat​Corneal​Axis​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00460113").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public FloatingPointDouble Corneal​Power
+        {
+            get
+            {
+                return (FloatingPointDouble)(_dicom.FindFirst("00460114"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<FloatingPointDouble> Corneal​Power_
+        {
+            get
+            {
+                return _dicom.FindAll("00460114").Select(d => d as FloatingPointDouble).ToList();
+            }
+        }
+
+        public FloatingPointDouble Corneal​Axis
+        {
+            get
+            {
+                return (FloatingPointDouble)(_dicom.FindFirst("00460115"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<FloatingPointDouble> Corneal​Axis_
+        {
+            get
+            {
+                return _dicom.FindAll("00460115").Select(d => d as FloatingPointDouble).ToList();
+            }
+        }
+
+        public Sequence Cornea​Measurement​Method​CodeS​equence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00460116"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Cornea​Measurement​Method​CodeS​equence_
+        {
+            get
+            {
+                return _dicom.FindAll("00460116").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public FloatingPointSingle Refractive​Index​Of​Cornea
+        {
+            get
+            {
+                return (FloatingPointSingle)(_dicom.FindFirst("00460117"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<FloatingPointSingle> Refractive​Index​Of​Cornea_
+        {
+            get
+            {
+                return _dicom.FindAll("00460117").Select(d => d as FloatingPointSingle).ToList();
+            }
+        }
+
+        public FloatingPointSingle Refractive​Index​Of​Aqueous​Humor
+        {
+            get
+            {
+                return (FloatingPointSingle)(_dicom.FindFirst("00460118"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<FloatingPointSingle> Refractive​Index​Of​Aqueous​Humor_
+        {
+            get
+            {
+                return _dicom.FindAll("00460118").Select(d => d as FloatingPointSingle).ToList();
             }
         }
 
@@ -52635,6 +56583,48 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public UnsignedLong Number​Of​Optical​Paths
+        {
+            get
+            {
+                return (UnsignedLong)(_dicom.FindFirst("00480302"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedLong> Number​Of​Optical​Paths_
+        {
+            get
+            {
+                return _dicom.FindAll("00480302").Select(d => d as UnsignedLong).ToList();
+            }
+        }
+
+        public UnsignedLong Total​Pixel​Matrix​Focal​Planes
+        {
+            get
+            {
+                return (UnsignedLong)(_dicom.FindFirst("00480303"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedLong> Total​Pixel​Matrix​Focal​Planes_
+        {
+            get
+            {
+                return _dicom.FindAll("00480303").Select(d => d as UnsignedLong).ToList();
+            }
+        }
+
         public CodeString Calibration​Image
         {
             get
@@ -52968,6 +56958,27 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("00500020").Select(d => d as LongString).ToList();
+            }
+        }
+
+        public ShortText Long​Device​Description
+        {
+            get
+            {
+                return (ShortText)(_dicom.FindFirst("00500021"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<ShortText> Long​Device​Description_
+        {
+            get
+            {
+                return _dicom.FindAll("00500021").Select(d => d as ShortText).ToList();
             }
         }
 
@@ -55740,6 +59751,27 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("00620012").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString Segments​Overlap
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00620013"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Segments​Overlap_
+        {
+            get
+            {
+                return _dicom.FindAll("00620013").Select(d => d as CodeString).ToList();
             }
         }
 
@@ -58830,6 +62862,69 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public CodeString Model​Modification
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00687001"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Model​Modification_
+        {
+            get
+            {
+                return _dicom.FindAll("00687001").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public CodeString Model​Mirroring
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("00687002"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Model​Mirroring_
+        {
+            get
+            {
+                return _dicom.FindAll("00687002").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public Sequence Model​Usage​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00687003"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Model​Usage​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00687003").Select(d => d as Sequence).ToList();
+            }
+        }
+
         public Sequence Graphic​Annotation​Sequence
         {
             get
@@ -60927,6 +65022,27 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("0070031A").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public UniqueIdentifier Referenced​Fiducial​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("0070031B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> Referenced​Fiducial​UID_
+        {
+            get
+            {
+                return _dicom.FindAll("0070031B").Select(d => d as UniqueIdentifier).ToList();
             }
         }
 
@@ -65403,6 +69519,27 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence Procedure​Step​Progress​Parameters​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("00741007"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Procedure​Step​Progress​Parameters​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("00741007").Select(d => d as Sequence).ToList();
+            }
+        }
+
         public Sequence Procedure​Step​Communications​URI​Sequence
         {
             get
@@ -68112,7 +72249,7 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public Sequence Structured​Contraint​Observation​Sequence
+        public Sequence Structured​Constraint​Observation​Sequence
         {
             get
             {
@@ -68125,7 +72262,7 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
-        public List<Sequence> Structured​Contraint​Observation​Sequence_
+        public List<Sequence> Structured​Constraint​Observation​Sequence_
         {
             get
             {
@@ -69078,6 +73215,48 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public Sequence Nonconforming​Modified​Attributes​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("04000551"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Nonconforming​Modified​Attributes​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("04000551").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public OtherByteString Nonconforming​Data​Element​Value
+        {
+            get
+            {
+                return (OtherByteString)(_dicom.FindFirst("04000552"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<OtherByteString> Nonconforming​Data​Element​Value_
+        {
+            get
+            {
+                return _dicom.FindAll("04000552").Select(d => d as OtherByteString).ToList();
+            }
+        }
+
         public Sequence Original​Attributes​Sequence
         {
             get
@@ -69180,6 +73359,27 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("04000565").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public CodeString Instance​Origin​Status
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("04000600"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Instance​Origin​Status_
+        {
+            get
+            {
+                return _dicom.FindAll("04000600").Select(d => d as CodeString).ToList();
             }
         }
 
@@ -73233,6 +77433,27 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("30060036").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public Sequence ROI​Derivation​Algorithm​Identification​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30060037"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> ROI​Derivation​Algorithm​Identification​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30060037").Select(d => d as Sequence).ToList();
             }
         }
 
@@ -77331,6 +81552,48 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public CodeString Depth​Value​Averaging​Flag
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("300A0093"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Depth​Value​Averaging​Flag_
+        {
+            get
+            {
+                return _dicom.FindAll("300A0093").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public DecimalString Beam​Dose​Point​Source​To​External​Contour​Distance
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("300A0094"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Beam​Dose​Point​Source​To​External​Contour​Distance_
+        {
+            get
+            {
+                return _dicom.FindAll("300A0094").Select(d => d as DecimalString).ToList();
+            }
+        }
+
         public IntegerString Number​Of​Brachy​Application​Setups
         {
             get
@@ -81174,6 +85437,90 @@ namespace EvilDICOM.Core.Selection
             }
         }
 
+        public DecimalString Channel​Effective​Length
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("300A0271"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Channel​Effective​Length_
+        {
+            get
+            {
+                return _dicom.FindAll("300A0271").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public DecimalString Channel​Inner​Length
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("300A0272"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Channel​Inner​Length_
+        {
+            get
+            {
+                return _dicom.FindAll("300A0272").Select(d => d as DecimalString).ToList();
+            }
+        }
+
+        public ShortString Afterloader​Channel​ID
+        {
+            get
+            {
+                return (ShortString)(_dicom.FindFirst("300A0273"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<ShortString> Afterloader​Channel​ID_
+        {
+            get
+            {
+                return _dicom.FindAll("300A0273").Select(d => d as ShortString).ToList();
+            }
+        }
+
+        public DecimalString Source​Applicator​Tip​Length
+        {
+            get
+            {
+                return (DecimalString)(_dicom.FindFirst("300A0274"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<DecimalString> Source​Applicator​Tip​Length_
+        {
+            get
+            {
+                return _dicom.FindAll("300A0274").Select(d => d as DecimalString).ToList();
+            }
+        }
+
         public Sequence Channel​Sequence
         {
             get
@@ -84951,6 +89298,2820 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("300E0008").Select(d => d as PersonName).ToList();
+            }
+        }
+
+        public Sequence Radiobiological​Dose​Effect​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100001"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Radiobiological​Dose​Effect​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100001").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString Radiobiological​Dose​Effect​Flag
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("30100002"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Radiobiological​Dose​Effect​Flag_
+        {
+            get
+            {
+                return _dicom.FindAll("30100002").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public Sequence Effective​Dose​Calculation​Method​Category​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100003"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Effective​Dose​Calculation​Method​Category​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100003").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Effective​Dose​Calculation​Method​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100004"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Effective​Dose​Calculation​Method​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100004").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public LongString Effective​Dose​Calculation​Method​Description
+        {
+            get
+            {
+                return (LongString)(_dicom.FindFirst("30100005"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<LongString> Effective​Dose​Calculation​Method​Description_
+        {
+            get
+            {
+                return _dicom.FindAll("30100005").Select(d => d as LongString).ToList();
+            }
+        }
+
+        public UniqueIdentifier Conceptual​Volume​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("30100006"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> Conceptual​Volume​UID_
+        {
+            get
+            {
+                return _dicom.FindAll("30100006").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public Sequence Originating​SOPInstance​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100007"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Originating​SOPInstance​Reference​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100007").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Constituent​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100008"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Constituent​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100008").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Equivalent​Conceptual​Volume​Instance​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100009"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Equivalent​Conceptual​Volume​Instance​Reference​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100009").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Equivalent​Conceptual​Volumes​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010000A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Equivalent​Conceptual​Volumes​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010000A").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UniqueIdentifier Referenced​Conceptual​Volume​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("3010000B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> Referenced​Conceptual​Volume​UID_
+        {
+            get
+            {
+                return _dicom.FindAll("3010000B").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public UnlimitedText Conceptual​Volume​Combination​Expression
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("3010000C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Conceptual​Volume​Combination​Expression_
+        {
+            get
+            {
+                return _dicom.FindAll("3010000C").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public UnsignedShort Conceptual​Volume​Constituent​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("3010000D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Conceptual​Volume​Constituent​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("3010000D").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public CodeString Conceptual​Volume​Combination​Flag
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("3010000E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Conceptual​Volume​Combination​Flag_
+        {
+            get
+            {
+                return _dicom.FindAll("3010000E").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public ShortText Conceptual​Volume​Combination​Description
+        {
+            get
+            {
+                return (ShortText)(_dicom.FindFirst("3010000F"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<ShortText> Conceptual​Volume​Combination​Description_
+        {
+            get
+            {
+                return _dicom.FindAll("3010000F").Select(d => d as ShortText).ToList();
+            }
+        }
+
+        public CodeString Conceptual​Volume​Segmentation​Defined​Flag
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("30100010"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Conceptual​Volume​Segmentation​Defined​Flag_
+        {
+            get
+            {
+                return _dicom.FindAll("30100010").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Segmentation​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100011"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Segmentation​Reference​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100011").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Constituent​Segmentation​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100012"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Constituent​Segmentation​Reference​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100012").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UniqueIdentifier Constituent​Conceptual​Volume​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("30100013"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> Constituent​Conceptual​Volume​UID_
+        {
+            get
+            {
+                return _dicom.FindAll("30100013").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public Sequence Derivation​Conceptual​Volume​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100014"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Derivation​Conceptual​Volume​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100014").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UniqueIdentifier Source​Conceptual​Volume​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("30100015"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> Source​Conceptual​Volume​UID_
+        {
+            get
+            {
+                return _dicom.FindAll("30100015").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Derivation​Algorithm​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100016"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Derivation​Algorithm​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100016").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public ShortText Conceptual​Volume​Description
+        {
+            get
+            {
+                return (ShortText)(_dicom.FindFirst("30100017"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<ShortText> Conceptual​Volume​Description_
+        {
+            get
+            {
+                return _dicom.FindAll("30100017").Select(d => d as ShortText).ToList();
+            }
+        }
+
+        public Sequence Source​Conceptual​Volume​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100018"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Source​Conceptual​Volume​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100018").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Author​Identification​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100019"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Author​Identification​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100019").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public LongString Manufacturer​Model​Version
+        {
+            get
+            {
+                return (LongString)(_dicom.FindFirst("3010001A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<LongString> Manufacturer​Model​Version_
+        {
+            get
+            {
+                return _dicom.FindAll("3010001A").Select(d => d as LongString).ToList();
+            }
+        }
+
+        public UnlimitedCharacter Device​Alternate​Identifier
+        {
+            get
+            {
+                return (UnlimitedCharacter)(_dicom.FindFirst("3010001B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedCharacter> Device​Alternate​Identifier_
+        {
+            get
+            {
+                return _dicom.FindAll("3010001B").Select(d => d as UnlimitedCharacter).ToList();
+            }
+        }
+
+        public CodeString Device​Alternate​Identifier​Type
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("3010001C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Device​Alternate​Identifier​Type_
+        {
+            get
+            {
+                return _dicom.FindAll("3010001C").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public LongText Device​Alternate​Identifier​Format
+        {
+            get
+            {
+                return (LongText)(_dicom.FindFirst("3010001D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<LongText> Device​Alternate​Identifier​Format_
+        {
+            get
+            {
+                return _dicom.FindAll("3010001D").Select(d => d as LongText).ToList();
+            }
+        }
+
+        public LongString Segmentation​Creation​Template​Label
+        {
+            get
+            {
+                return (LongString)(_dicom.FindFirst("3010001E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<LongString> Segmentation​Creation​Template​Label_
+        {
+            get
+            {
+                return _dicom.FindAll("3010001E").Select(d => d as LongString).ToList();
+            }
+        }
+
+        public UniqueIdentifier Segmentation​Template​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("3010001F"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> Segmentation​Template​UID_
+        {
+            get
+            {
+                return _dicom.FindAll("3010001F").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​Segment​Reference​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("30100020"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Referenced​Segment​Reference​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("30100020").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public Sequence Segment​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100021"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Segment​Reference​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100021").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UnsignedShort Segment​Reference​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("30100022"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Segment​Reference​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("30100022").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public Sequence Direct​Segment​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100023"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Direct​Segment​Reference​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100023").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Combination​Segment​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100024"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Combination​Segment​Reference​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100024").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100025"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100025").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Segmented​RTAccessory​Device​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100026"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Segmented​RTAccessory​Device​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100026").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Segment​Characteristics​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100027"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Segment​Characteristics​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100027").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Related​Segment​Characteristics​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100028"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Related​Segment​Characteristics​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100028").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UnsignedShort Segment​Characteristics​Precedence
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("30100029"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Segment​Characteristics​Precedence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100029").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public Sequence RTSegment​Annotation​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010002A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> RTSegment​Annotation​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010002A").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Segment​Annotation​Category​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010002B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Segment​Annotation​Category​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010002B").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Segment​Annotation​Type​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010002C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Segment​Annotation​Type​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010002C").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public LongString Device​Label
+        {
+            get
+            {
+                return (LongString)(_dicom.FindFirst("3010002D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<LongString> Device​Label_
+        {
+            get
+            {
+                return _dicom.FindAll("3010002D").Select(d => d as LongString).ToList();
+            }
+        }
+
+        public Sequence Device​Type​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010002E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Device​Type​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010002E").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Patient​Equipment​Relationship​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100030"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Patient​Equipment​Relationship​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100030").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UniqueIdentifier Referenced​Fiducials​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("30100031"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> Referenced​Fiducials​UID_
+        {
+            get
+            {
+                return _dicom.FindAll("30100031").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public Sequence Patient​Treatment​Orientation​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100032"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Patient​Treatment​Orientation​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100032").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public ShortString User​Content​Label
+        {
+            get
+            {
+                return (ShortString)(_dicom.FindFirst("30100033"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<ShortString> User​Content​Label_
+        {
+            get
+            {
+                return _dicom.FindAll("30100033").Select(d => d as ShortString).ToList();
+            }
+        }
+
+        public LongString User​Content​Long​Label
+        {
+            get
+            {
+                return (LongString)(_dicom.FindFirst("30100034"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<LongString> User​Content​Long​Label_
+        {
+            get
+            {
+                return _dicom.FindAll("30100034").Select(d => d as LongString).ToList();
+            }
+        }
+
+        public ShortString Entity​Label
+        {
+            get
+            {
+                return (ShortString)(_dicom.FindFirst("30100035"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<ShortString> Entity​Label_
+        {
+            get
+            {
+                return _dicom.FindAll("30100035").Select(d => d as ShortString).ToList();
+            }
+        }
+
+        public LongString Entity​Name
+        {
+            get
+            {
+                return (LongString)(_dicom.FindFirst("30100036"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<LongString> Entity​Name_
+        {
+            get
+            {
+                return _dicom.FindAll("30100036").Select(d => d as LongString).ToList();
+            }
+        }
+
+        public ShortText Entity​Description
+        {
+            get
+            {
+                return (ShortText)(_dicom.FindFirst("30100037"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<ShortText> Entity​Description_
+        {
+            get
+            {
+                return _dicom.FindAll("30100037").Select(d => d as ShortText).ToList();
+            }
+        }
+
+        public LongString Entity​Long​Label
+        {
+            get
+            {
+                return (LongString)(_dicom.FindFirst("30100038"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<LongString> Entity​Long​Label_
+        {
+            get
+            {
+                return _dicom.FindAll("30100038").Select(d => d as LongString).ToList();
+            }
+        }
+
+        public UnsignedShort Device​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("30100039"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Device​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("30100039").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort RTTreatment​Phase​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("3010003A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> RTTreatment​Phase​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("3010003A").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UniqueIdentifier RTTreatment​Phase​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("3010003B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> RTTreatment​Phase​UID_
+        {
+            get
+            {
+                return _dicom.FindAll("3010003B").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public UnsignedShort RTPrescription​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("3010003C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> RTPrescription​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("3010003C").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort RTSegment​Annotation​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("3010003D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> RTSegment​Annotation​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("3010003D").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Basis​RTTreatment​Phase​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("3010003E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Basis​RTTreatment​Phase​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("3010003E").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Related​RTTreatment​Phase​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("3010003F"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Related​RTTreatment​Phase​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("3010003F").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​RTTreatment​Phase​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("30100040"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Referenced​RTTreatment​Phase​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("30100040").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​RTPrescription​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("30100041"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Referenced​RTPrescription​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("30100041").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​Parent​RTPrescription​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("30100042"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Referenced​Parent​RTPrescription​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("30100042").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public ShortText Manufacturer​Device​Identifier
+        {
+            get
+            {
+                return (ShortText)(_dicom.FindFirst("30100043"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<ShortText> Manufacturer​Device​Identifier_
+        {
+            get
+            {
+                return _dicom.FindAll("30100043").Select(d => d as ShortText).ToList();
+            }
+        }
+
+        public Sequence Instance​Level​Referenced​Performed​Procedure​Step​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100044"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Instance​Level​Referenced​Performed​Procedure​Step​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100044").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString RTTreatment​Phase​Intent​Presence​Flag
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("30100045"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> RTTreatment​Phase​Intent​Presence​Flag_
+        {
+            get
+            {
+                return _dicom.FindAll("30100045").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public CodeString Radiotherapy​Treatment​Type
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("30100046"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Radiotherapy​Treatment​Type_
+        {
+            get
+            {
+                return _dicom.FindAll("30100046").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public CodeString Teletherapy​Radiation​Type
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("30100047"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Teletherapy​Radiation​Type_
+        {
+            get
+            {
+                return _dicom.FindAll("30100047").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public CodeString Brachytherapy​Source​Type
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("30100048"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Brachytherapy​Source​Type_
+        {
+            get
+            {
+                return _dicom.FindAll("30100048").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public Sequence Referenced​RTTreatment​Phase​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100049"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Referenced​RTTreatment​Phase​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100049").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Referenced​Direct​Segment​Instance​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010004A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Referenced​Direct​Segment​Instance​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010004A").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Intended​RTTreatment​Phase​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010004B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Intended​RTTreatment​Phase​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010004B").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Date Intended​Phase​Start​Date
+        {
+            get
+            {
+                return (Date)(_dicom.FindFirst("3010004C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Date> Intended​Phase​Start​Date_
+        {
+            get
+            {
+                return _dicom.FindAll("3010004C").Select(d => d as Date).ToList();
+            }
+        }
+
+        public Date Intended​Phase​End​Date
+        {
+            get
+            {
+                return (Date)(_dicom.FindFirst("3010004D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Date> Intended​Phase​End​Date_
+        {
+            get
+            {
+                return _dicom.FindAll("3010004D").Select(d => d as Date).ToList();
+            }
+        }
+
+        public Sequence RTTreatment​Phase​Interval​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010004E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> RTTreatment​Phase​Interval​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010004E").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString Temporal​Relationship​Interval​Anchor
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("3010004F"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Temporal​Relationship​Interval​Anchor_
+        {
+            get
+            {
+                return _dicom.FindAll("3010004F").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public FloatingPointDouble Minimum​Number​Of​Interval​Days
+        {
+            get
+            {
+                return (FloatingPointDouble)(_dicom.FindFirst("30100050"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<FloatingPointDouble> Minimum​Number​Of​Interval​Days_
+        {
+            get
+            {
+                return _dicom.FindAll("30100050").Select(d => d as FloatingPointDouble).ToList();
+            }
+        }
+
+        public FloatingPointDouble Maximum​Number​Of​Interval​Days
+        {
+            get
+            {
+                return (FloatingPointDouble)(_dicom.FindFirst("30100051"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<FloatingPointDouble> Maximum​Number​Of​Interval​Days_
+        {
+            get
+            {
+                return _dicom.FindAll("30100051").Select(d => d as FloatingPointDouble).ToList();
+            }
+        }
+
+        public UniqueIdentifier Pertinent​SOPClasses​In​Study
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("30100052"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> Pertinent​SOPClasses​In​Study_
+        {
+            get
+            {
+                return _dicom.FindAll("30100052").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public UniqueIdentifier Pertinent​SOPClasses​In​Series
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("30100053"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> Pertinent​SOPClasses​In​Series_
+        {
+            get
+            {
+                return _dicom.FindAll("30100053").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public LongString RTPrescription​Label
+        {
+            get
+            {
+                return (LongString)(_dicom.FindFirst("30100054"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<LongString> RTPrescription​Label_
+        {
+            get
+            {
+                return _dicom.FindAll("30100054").Select(d => d as LongString).ToList();
+            }
+        }
+
+        public Sequence RTPhysician​Intent​Predecessor​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100055"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> RTPhysician​Intent​Predecessor​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100055").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public LongString RTTreatment​Approach​Label
+        {
+            get
+            {
+                return (LongString)(_dicom.FindFirst("30100056"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<LongString> RTTreatment​Approach​Label_
+        {
+            get
+            {
+                return _dicom.FindAll("30100056").Select(d => d as LongString).ToList();
+            }
+        }
+
+        public Sequence RTPhysician​Intent​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100057"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> RTPhysician​Intent​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100057").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UnsignedShort RTPhysician​Intent​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("30100058"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> RTPhysician​Intent​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("30100058").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public CodeString RTTreatment​Intent​Type
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("30100059"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> RTTreatment​Intent​Type_
+        {
+            get
+            {
+                return _dicom.FindAll("30100059").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public UnlimitedText RTPhysician​Intent​Narrative
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("3010005A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> RTPhysician​Intent​Narrative_
+        {
+            get
+            {
+                return _dicom.FindAll("3010005A").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public Sequence RTProtocol​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010005B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> RTProtocol​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010005B").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public ShortText Reason​For​Superseding
+        {
+            get
+            {
+                return (ShortText)(_dicom.FindFirst("3010005C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<ShortText> Reason​For​Superseding_
+        {
+            get
+            {
+                return _dicom.FindAll("3010005C").Select(d => d as ShortText).ToList();
+            }
+        }
+
+        public Sequence RTDiagnosis​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010005D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> RTDiagnosis​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010005D").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UnsignedShort Referenced​RTPhysician​Intent​Index
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("3010005E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Referenced​RTPhysician​Intent​Index_
+        {
+            get
+            {
+                return _dicom.FindAll("3010005E").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public Sequence RTPhysician​Intent​Input​Instance​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010005F"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> RTPhysician​Intent​Input​Instance​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010005F").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence RTAnatomic​Prescription​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100060"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> RTAnatomic​Prescription​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100060").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UnlimitedText Prior​Treatment​Dose​Description
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("30100061"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Prior​Treatment​Dose​Description_
+        {
+            get
+            {
+                return _dicom.FindAll("30100061").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public Sequence Prior​Treatment​Reference​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100062"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Prior​Treatment​Reference​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100062").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString Dosimetric​Objective​Evaluation​Scope
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("30100063"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Dosimetric​Objective​Evaluation​Scope_
+        {
+            get
+            {
+                return _dicom.FindAll("30100063").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public Sequence Therapeutic​Role​Category​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100064"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Therapeutic​Role​Category​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100064").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Therapeutic​Role​Type​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100065"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Therapeutic​Role​Type​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100065").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UnsignedShort Conceptual​Volume​Optimization​Precedence
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("30100066"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Conceptual​Volume​Optimization​Precedence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100066").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Category​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100067"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Category​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100067").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString Conceptual​Volume​Blocking​Constraint
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("30100068"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Conceptual​Volume​Blocking​Constraint_
+        {
+            get
+            {
+                return _dicom.FindAll("30100068").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Type​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100069"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Type​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100069").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Conceptual​Volume​Type​Modifier​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010006A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Conceptual​Volume​Type​Modifier​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010006A").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence RTPrescription​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010006B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> RTPrescription​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010006B").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Dosimetric​Objective​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010006C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Dosimetric​Objective​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010006C").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Dosimetric​Objective​Type​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("3010006D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Dosimetric​Objective​Type​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("3010006D").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UniqueIdentifier Dosimetric​Objective​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("3010006E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> Dosimetric​Objective​UID_
+        {
+            get
+            {
+                return _dicom.FindAll("3010006E").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public UniqueIdentifier Referenced​Dosimetric​Objective​UID
+        {
+            get
+            {
+                return (UniqueIdentifier)(_dicom.FindFirst("3010006F"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UniqueIdentifier> Referenced​Dosimetric​Objective​UID_
+        {
+            get
+            {
+                return _dicom.FindAll("3010006F").Select(d => d as UniqueIdentifier).ToList();
+            }
+        }
+
+        public Sequence Dosimetric​Objective​Parameter​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100070"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Dosimetric​Objective​Parameter​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100070").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Referenced​Dosimetric​Objectives​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100071"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Referenced​Dosimetric​Objectives​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100071").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString Absolute​Dosimetric​Objective​Flag
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("30100073"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Absolute​Dosimetric​Objective​Flag_
+        {
+            get
+            {
+                return _dicom.FindAll("30100073").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public FloatingPointDouble Dosimetric​Objective​Weight
+        {
+            get
+            {
+                return (FloatingPointDouble)(_dicom.FindFirst("30100074"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<FloatingPointDouble> Dosimetric​Objective​Weight_
+        {
+            get
+            {
+                return _dicom.FindAll("30100074").Select(d => d as FloatingPointDouble).ToList();
+            }
+        }
+
+        public CodeString Dosimetric​Objective​Purpose
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("30100075"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Dosimetric​Objective​Purpose_
+        {
+            get
+            {
+                return _dicom.FindAll("30100075").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public Sequence Planning​Input​Information​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100076"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Planning​Input​Information​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100076").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public LongString Treatment​Site
+        {
+            get
+            {
+                return (LongString)(_dicom.FindFirst("30100077"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<LongString> Treatment​Site_
+        {
+            get
+            {
+                return _dicom.FindAll("30100077").Select(d => d as LongString).ToList();
+            }
+        }
+
+        public Sequence Treatment​Site​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100078"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Treatment​Site​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100078").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Fraction​Pattern​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100079"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Fraction​Pattern​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100079").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public UnlimitedText Treatment​Technique​Notes
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("3010007A"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Treatment​Technique​Notes_
+        {
+            get
+            {
+                return _dicom.FindAll("3010007A").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public UnlimitedText Prescription​Notes
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("3010007B"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Prescription​Notes_
+        {
+            get
+            {
+                return _dicom.FindAll("3010007B").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public IntegerString Number​Of​Interval​Fractions
+        {
+            get
+            {
+                return (IntegerString)(_dicom.FindFirst("3010007C"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<IntegerString> Number​Of​Interval​Fractions_
+        {
+            get
+            {
+                return _dicom.FindAll("3010007C").Select(d => d as IntegerString).ToList();
+            }
+        }
+
+        public UnsignedShort Number​Of​Fractions
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("3010007D"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Number​Of​Fractions_
+        {
+            get
+            {
+                return _dicom.FindAll("3010007D").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnsignedShort Intended​Delivery​Duration
+        {
+            get
+            {
+                return (UnsignedShort)(_dicom.FindFirst("3010007E"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnsignedShort> Intended​Delivery​Duration_
+        {
+            get
+            {
+                return _dicom.FindAll("3010007E").Select(d => d as UnsignedShort).ToList();
+            }
+        }
+
+        public UnlimitedText Fractionation​Notes
+        {
+            get
+            {
+                return (UnlimitedText)(_dicom.FindFirst("3010007F"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<UnlimitedText> Fractionation​Notes_
+        {
+            get
+            {
+                return _dicom.FindAll("3010007F").Select(d => d as UnlimitedText).ToList();
+            }
+        }
+
+        public Sequence RTTreatment​Technique​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100080"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> RTTreatment​Technique​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100080").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Prescription​Notes​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100081"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Prescription​Notes​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100081").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Fraction​Based​Relationship​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100082"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Fraction​Based​Relationship​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100082").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public CodeString Fraction​Based​Relationship​Interval​Anchor
+        {
+            get
+            {
+                return (CodeString)(_dicom.FindFirst("30100083"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<CodeString> Fraction​Based​Relationship​Interval​Anchor_
+        {
+            get
+            {
+                return _dicom.FindAll("30100083").Select(d => d as CodeString).ToList();
+            }
+        }
+
+        public FloatingPointDouble Minimum​Hours​Between​Fractions
+        {
+            get
+            {
+                return (FloatingPointDouble)(_dicom.FindFirst("30100084"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<FloatingPointDouble> Minimum​Hours​Between​Fractions_
+        {
+            get
+            {
+                return _dicom.FindAll("30100084").Select(d => d as FloatingPointDouble).ToList();
+            }
+        }
+
+        public Time Intended​Fraction​Start​Time
+        {
+            get
+            {
+                return (Time)(_dicom.FindFirst("30100085"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Time> Intended​Fraction​Start​Time_
+        {
+            get
+            {
+                return _dicom.FindAll("30100085").Select(d => d as Time).ToList();
+            }
+        }
+
+        public LongText Intended​Start​Day​Of​Week
+        {
+            get
+            {
+                return (LongText)(_dicom.FindFirst("30100086"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<LongText> Intended​Start​Day​Of​Week_
+        {
+            get
+            {
+                return _dicom.FindAll("30100086").Select(d => d as LongText).ToList();
+            }
+        }
+
+        public Sequence Weekday​Fraction​Pattern​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100087"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Weekday​Fraction​Pattern​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100087").Select(d => d as Sequence).ToList();
+            }
+        }
+
+        public Sequence Delivery​Time​Structure​Code​Sequence
+        {
+            get
+            {
+                return (Sequence)(_dicom.FindFirst("30100088"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Sequence> Delivery​Time​Structure​Code​Sequence_
+        {
+            get
+            {
+                return _dicom.FindAll("30100088").Select(d => d as Sequence).ToList();
             }
         }
 
@@ -89025,6 +96186,48 @@ namespace EvilDICOM.Core.Selection
             get
             {
                 return _dicom.FindAll("60xx4000").Select(d => d as LongText).ToList();
+            }
+        }
+
+        public Other64BitVeryLong Extended​Offset​Table
+        {
+            get
+            {
+                return (Other64BitVeryLong)(_dicom.FindFirst("7FE00001"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Other64BitVeryLong> Extended​Offset​Table_
+        {
+            get
+            {
+                return _dicom.FindAll("7FE00001").Select(d => d as Other64BitVeryLong).ToList();
+            }
+        }
+
+        public Other64BitVeryLong Extended​Offset​Table​Lengths
+        {
+            get
+            {
+                return (Other64BitVeryLong)(_dicom.FindFirst("7FE00002"));
+            }
+
+            set
+            {
+                _dicom.ReplaceOrAdd(value);
+            }
+        }
+
+        public List<Other64BitVeryLong> Extended​Offset​Table​Lengths_
+        {
+            get
+            {
+                return _dicom.FindAll("7FE00002").Select(d => d as Other64BitVeryLong).ToList();
             }
         }
 
