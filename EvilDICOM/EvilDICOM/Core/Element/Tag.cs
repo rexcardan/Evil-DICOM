@@ -16,36 +16,37 @@ namespace EvilDICOM.Core.Element
     {
         public Tag(string group, string element)
         {
-            Group = DataRestriction.EnforceLengthRestriction(4, group);
-            Element = DataRestriction.EnforceLengthRestriction(4, element);
+            var grp = DataRestriction.EnforceLengthRestriction(4, group);
+            var el = DataRestriction.EnforceLengthRestriction(4, element);
+            CompleteID = string.Join(string.Empty, new[] { grp, el });
         }
 
         public Tag(string completeID)
         {
-            CompleteID = DataRestriction.EnforceLengthRestriction(8, completeID);
+            CompleteID = completeID;
         }
 
         /// <summary>
         ///     The group id of the element
         /// </summary>
-        public string Group { get; set; }
+        public string Group { get { return CompleteID.Substring(0, 4); } }
 
         /// <summary>
         ///     The element id of the element
         /// </summary>
-        public string Element { get; set; }
+        public string Element { get { return CompleteID.Substring(4, 4); } }
 
+        private string _completeId;
         /// <summary>
         ///     The complete id, containing both the group id GGGG and the element id EEEE as GGGGEEEE
         /// </summary>
         public string CompleteID
         {
-            get { return Group + Element; }
+            get { return _completeId; }
             set
             {
                 var completeID = DataRestriction.EnforceLengthRestriction(8, value);
-                Group = completeID.Substring(0, 4);
-                Element = completeID.Substring(4, 4);
+                _completeId = value;
             }
         }
 
