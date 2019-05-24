@@ -11,6 +11,8 @@ using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Messaging;
 using EvilDICOM.Network.SCUOps;
 using EvilDICOM.Core.Enums;
+using EvilDICOM.Network.Helpers;
+using System.Linq;
 
 #endregion
 
@@ -18,7 +20,8 @@ namespace EvilDICOM.Network
 {
     public class DICOMSCU : DICOMServiceClass
     {
-        public int MsTimeout { get; set; } = 5000;
+        public int IdleTimeout { get; set; } = 30000; // 30 sec
+        public int ConnectionTimeout { get; set; } = 3000; // 3 sec
 
         public DICOMSCU(Entity ae) : base(ae)
         {
@@ -36,10 +39,15 @@ namespace EvilDICOM.Network
             {
                 try
                 {
-                    client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
+                    var connectionResult = client.BeginConnect(IPAddress.Parse(ae.IpAddress), ae.Port, null, null);
+                    var completed = connectionResult.AsyncWaitHandle.WaitOne(TimeSpan.FromMilliseconds(ConnectionTimeout));
+                    if (completed && !client.Client.Connected)
+                    {
+                        throw new TimeoutException($"Couldn't connect to {IPAddress.Parse(ae.IpAddress)}:{ae.Port} within {ConnectionTimeout} ms!");
+                    }
                     var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
                     PDataMessenger.Send(dimse, assoc);
-                    assoc.Listen();
+                    assoc.Listen(TimeSpan.FromMilliseconds(IdleTimeout));
                     return true;
                 }
                 catch (Exception e)
@@ -60,24 +68,26 @@ namespace EvilDICOM.Network
         /// <returns>true if message send was success</returns>
         public bool SendMessageForcePort(AbstractDIMSERequest dimse, Entity ae)
         {
-            IPAddress ipAddress;
-            if (!IPAddress.TryParse(this.ApplicationEntity.IpAddress, out ipAddress))
-            {
-                Logger.Log($"Could not parse IP address {this.ApplicationEntity.IpAddress}");
-            }
-            IPEndPoint ipLocalEndPoint = new IPEndPoint(ipAddress, this.ApplicationEntity.Port);
+            var (ipLocalEndPoint, success) = 
+                IpHelper.VerifyIPAddress(this.ApplicationEntity.IpAddress, this.ApplicationEntity.Port);
+            if (!success) { return false; }
 
             using (var client = new TcpClient(ipLocalEndPoint))
             {
                 try
                 {
-                    client.ConnectAsync(IPAddress.Parse(ae.IpAddress), ae.Port).Wait();
+                    var connectionResult = client.BeginConnect(IPAddress.Parse(ae.IpAddress), ae.Port, null, null);
+                    success = connectionResult.AsyncWaitHandle.WaitOne(TimeSpan.FromMilliseconds(ConnectionTimeout));
+                    if (!success)
+                    {
+                        throw new TimeoutException($"Couldn't connect to {IPAddress.Parse(ae.IpAddress)}:{ae.Port} within {ConnectionTimeout} ms!");
+                    }
                     var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
                     PDataMessenger.Send(dimse, assoc);
                     assoc.Listen();
                     return true;
                 }
-                catch(Exception e)
+                catch (Exception e)
                 {
                     Logger.Log($"Could not connect to {ae.AeTitle} @{ae.IpAddress}:{ae.Port}", LogPriority.ERROR);
                     Logger.Log($"{e.ToString()}", LogPriority.ERROR);
@@ -103,38 +113,19 @@ namespace EvilDICOM.Network
 
         public T GetResponse<T, U>(U request, Entity e, ref ushort msgId) where U : AbstractDIMSERequest where T : AbstractDIMSEResponse
         {
-            System.DateTime lastContact = System.DateTime.Now;
-            int msWait = MsTimeout;
-
-            var mr = new ManualResetEvent(false);
-            T resp = null;
-            var cr = new Services.DIMSEService.DIMSEResponseHandler<T>((res, asc) =>
-            {
-                lastContact = System.DateTime.Now;
-                resp = res;
-                if (res.Status != (ushort)Status.PENDING)
-                    mr.Set();
-                else { mr.Reset(); }
-            });
-
-            DIMSEService.Subscribe(cr);
-            SendMessage(request, e);
-            mr.WaitOne(msWait);
-            DIMSEService.Unsubscribe(cr);
-            msgId += 2;
-            return resp;
+            return GetResponses<T,U>(request, e, ref msgId).FirstOrDefault();
         }
 
         public IEnumerable<T> GetResponses<T, U>(U request, Entity e, ref ushort msgId) where U : AbstractDIMSERequest where T : AbstractDIMSEResponse
         {
             System.DateTime lastContact = System.DateTime.Now;
-            int msWait = MsTimeout;
+            int msWait = IdleTimeout;
 
             var mr = new ManualResetEvent(false);
-
             List<T> responses = new List<T>();
             var cr = new Services.DIMSEService.DIMSEResponseHandler<T>((res, asc) =>
             {
+                asc.IdleClock.Restart();
                 lastContact = System.DateTime.Now;
                 responses.Add(res);
                 if (res.Status != (ushort)Status.PENDING)
@@ -143,10 +134,19 @@ namespace EvilDICOM.Network
             });
 
             DIMSEService.Subscribe(cr);
-            SendMessage(request, e);
-            mr.WaitOne(msWait); //Max wait for timeout
+
+            bool clientConnected;
+            //Only wait if message is successful
+            if (clientConnected = SendMessage(request, e))
+            {
+                //Wait for final response
+                mr.WaitOne(msWait);
+            }
             DIMSEService.Unsubscribe(cr);
             msgId += 2;
+
+            if (!clientConnected) { throw new Exception($"Could not connect to remote endpoint {e}"); }
+
             return responses;
         }
 
@@ -158,7 +158,7 @@ namespace EvilDICOM.Network
         /// <returns>true if success, false if failure</returns>
         public bool Ping(Entity ae, int msTimeout = 0)
         {
-            msTimeout = (msTimeout == 0) ? MsTimeout : msTimeout;
+            msTimeout = (msTimeout == 0) ? IdleTimeout : msTimeout;
 
             var responseSuccess = false;
             var ar = new AutoResetEvent(false);
@@ -170,20 +170,6 @@ namespace EvilDICOM.Network
             SendMessage(new CEchoRequest(), ae);
             ar.WaitOne(msTimeout); //Give it 3 seconds
             return responseSuccess;
-        }
-
-        public CStoreRequest GenerateCStoreRequest(Core.DICOMObject toSend, ushort messageId = 1)
-        {
-            var sel = toSend.GetSelector();
-            var cStoreReq = new CStoreRequest();
-            cStoreReq.AffectedSOPClassUID = sel.SOPClassUID.Data;
-            cStoreReq.Priority = 1;
-            cStoreReq.Data = toSend;
-            cStoreReq.MessageID = messageId;
-            cStoreReq.AffectedSOPInstanceUID = sel.SOPInstanceUID.Data;
-            cStoreReq.MoveOrigAETitle = ApplicationEntity.AeTitle;
-            cStoreReq.MoveOrigMessageID = messageId;
-            return cStoreReq;
         }
 
         /// <summary>

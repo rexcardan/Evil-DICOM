@@ -38,8 +38,9 @@ namespace EvilDICOM.Network.Services
             asc.Logger.Log("<-- DIMSE" + req.GetLogString());
             req.LogData(asc);
             asc.LastActive = DateTime.Now;
+            asc.IdleClock.Restart();
             asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
-            var resp = new CFindResponse(req);
+            var resp = new CFindResponse(req, Status.SUCCESS);
             dms.RaiseDIMSERequestReceived(req, asc);
             var results = RetrieveResults(req);
 

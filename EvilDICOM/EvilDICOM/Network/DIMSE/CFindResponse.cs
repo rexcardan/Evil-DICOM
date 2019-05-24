@@ -4,6 +4,7 @@ using EvilDICOM.Core;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.IO.Writing;
 using EvilDICOM.Network.DIMSE.IOD;
+using EvilDICOM.Network.Enums;
 using System.Collections.Generic;
 using System.Linq;
 using C = EvilDICOM.Network.Enums.CommandField;
@@ -24,11 +25,12 @@ namespace EvilDICOM.Network.DIMSE
         /// Creates a base C-Find response but more data needs to be supplied. See CFindService response methods
         /// </summary>
         /// <param name="req"></param>
-        public CFindResponse(CFindRequest req)
+        public CFindResponse(CFindRequest req, Status status)
         {
             AffectedSOPClassUID = req.AffectedSOPClassUID;
             CommandField = (ushort)C.C_FIND_RP;
             MessageIDBeingRespondedTo = req.MessageID;
+            Status = (ushort)status;
         }
 
         public T GetIOD<T>() where T : AbstractDIMSEIOD

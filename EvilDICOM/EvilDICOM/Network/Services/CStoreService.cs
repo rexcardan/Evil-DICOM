@@ -29,6 +29,7 @@ namespace EvilDICOM.Network.Services
             asc.Logger.Log("<-- DIMSE" + req.GetLogString());
             req.LogData(asc);
             asc.LastActive = DateTime.Now;
+            asc.IdleClock.Restart();
             var resp = new CStoreResponse(req, Status.SUCCESS);
             var syntax = req.Data.FindFirst(TagHelper.SOP​Class​UID);
             dms.RaiseDIMSERequestReceived(req, asc);

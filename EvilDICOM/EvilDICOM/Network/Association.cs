@@ -8,6 +8,7 @@ using System.IO;
 using System.Linq;
 using System.Net;
 using System.Net.Sockets;
+using System.Threading.Tasks;
 using EvilDICOM.Core.Logging;
 using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.Enums;
@@ -93,9 +94,11 @@ namespace EvilDICOM.Network
         public void Listen(TimeSpan? maxWaitTime = null)
         {
             maxWaitTime = maxWaitTime ?? TimeSpan.FromSeconds(25);
-            var clock = new Stopwatch();
-            clock.Start();
-            while (State != NetworkState.CLOSING_ASSOCIATION && clock.Elapsed < maxWaitTime)
+            IdleClock = IdleClock ?? new Stopwatch();
+            IdleClock.Reset();
+            IdleClock.Start();
+
+            while (State != NetworkState.CLOSING_ASSOCIATION && IdleClock.Elapsed < maxWaitTime)
             {
                 if (_abortRequested)
                 {
@@ -112,17 +115,18 @@ namespace EvilDICOM.Network
                 if (State != NetworkState.CLOSING_ASSOCIATION &&
                    State != NetworkState.TRANSPORT_CONNECTION_OPEN)
                 {
-                    var message = Read();
+                    var message = Read(maxWaitTime.Value.TotalMilliseconds - IdleClock.ElapsedMilliseconds);
+
                     if (message != null)
                     {
-                        clock.Restart();
+                        IdleClock.Restart();
                         Process(message);
                         Stream.Flush();
-                        clock.Restart();
+                        IdleClock.Restart();
                     }
                 }
 
-                if(State == NetworkState.TRANSPORT_CONNECTION_OPEN && !OutboundMessages.IsEmpty)
+                if (State == NetworkState.TRANSPORT_CONNECTION_OPEN && !OutboundMessages.IsEmpty)
                 {
                     while (OutboundMessages.Any())
                         if (State == NetworkState.TRANSPORT_CONNECTION_OPEN)
@@ -162,18 +166,22 @@ namespace EvilDICOM.Network
             State = NetworkState.CLOSING_ASSOCIATION;
         }
 
-        public IMessage Read()
+        public IMessage Read(double msToWait)
         {
-            try
-            {
-                var message = PDUReader.Read(Reader);
-                return message;
-            }
-            catch (Exception e)
-            {
-                Logger.Log(e.Message);
-                return null;
-            }
+            IMessage message = null;
+           // message = PDUReader.Read(Reader);
+            Task.Run(() =>
+             {
+                 try
+                 {
+                     message = PDUReader.Read(Reader);
+                 }
+                 catch (Exception e)
+                 {
+                     Logger.Log(e.Message);
+                 }
+             }).Wait(TimeSpan.FromMilliseconds(msToWait));
+            return message;
         }
 
         public void Process(IMessage message)
@@ -239,6 +247,8 @@ namespace EvilDICOM.Network
         ///     The port of the foreign service class
         /// </summary>
         public int Port { get; set; }
+
+        public Stopwatch IdleClock { get; private set; }
 
         #endregion
 

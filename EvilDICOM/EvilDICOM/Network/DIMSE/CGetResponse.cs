@@ -3,6 +3,7 @@ using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Selection;
+using EvilDICOM.Network.Enums;
 using C = EvilDICOM.Network.Enums.CommandField;
 
 namespace EvilDICOM.Network.DIMSE
@@ -12,6 +13,18 @@ namespace EvilDICOM.Network.DIMSE
         public CGetResponse()
         {
             CommandField = (ushort)C.C_GET_RP;
+        }
+
+        /// <summary>
+        /// Creates a base C-Find response but more data needs to be supplied. See CFindService response methods
+        /// </summary>
+        /// <param name="req"></param>
+        public CGetResponse(CGetRequest req, Status status)
+        {
+            AffectedSOPClassUID = req.AffectedSOPClassUID;
+            CommandField = (ushort)C.C_GET_RP;
+            MessageIDBeingRespondedTo = req.MessageID;
+            Status = (ushort)status;
         }
 
         public CGetResponse(DICOMObject d)
