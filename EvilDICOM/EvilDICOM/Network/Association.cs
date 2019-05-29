@@ -9,6 +9,7 @@ using System.Linq;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
+using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Logging;
 using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.Enums;
@@ -119,10 +120,18 @@ namespace EvilDICOM.Network
 
                     if (message != null)
                     {
-                        IdleClock.Restart();
-                        Process(message);
-                        Stream.Flush();
-                        IdleClock.Restart();
+                        try
+                        {
+                            IdleClock.Restart();
+                            Process(message);
+                            Stream.Flush();
+                            IdleClock.Restart();
+                        }
+                        catch (IOException e)
+                        {
+                            Logger.Log($"Network connection was lost. {e.Message}", LogPriority.ERROR);
+                            break;//Connection was lost
+                        }
                     }
                 }
 
