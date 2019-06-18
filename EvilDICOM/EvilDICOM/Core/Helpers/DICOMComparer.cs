@@ -30,12 +30,12 @@ namespace EvilDICOM.Core.Helpers
                         }
                         for (int k = 0; k < count; k++)
                         {
-                            var a = ((dynamic)dcm1El).Data_[k];
-                            var b = ((dynamic)dcm2El).Data_[k];
+                            var a = dcm1El.DData_[k];
+                            var b = dcm2El.DData_[k];
 
                             if (a is DICOMObject)
                             {
-                                results.AddRange(CompareObjects(a, b, $"{priorSequencePath}{dcm1El.Tag}>>"));
+                                results.AddRange(CompareObjects((DICOMObject)a, (DICOMObject)b, $"{priorSequencePath}{dcm1El.Tag}>>"));
                             }
                             else if (a is string && b is string)
                             {

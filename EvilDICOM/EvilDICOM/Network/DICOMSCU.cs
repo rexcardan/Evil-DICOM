@@ -113,7 +113,7 @@ namespace EvilDICOM.Network
 
         public T GetResponse<T, U>(U request, Entity e, ref ushort msgId) where U : AbstractDIMSERequest where T : AbstractDIMSEResponse
         {
-            return GetResponses<T,U>(request, e, ref msgId).FirstOrDefault();
+            return GetResponses<T, U>(request, e, ref msgId).FirstOrDefault();
         }
 
         public IEnumerable<T> GetResponses<T, U>(U request, Entity e, ref ushort msgId) where U : AbstractDIMSERequest where T : AbstractDIMSEResponse

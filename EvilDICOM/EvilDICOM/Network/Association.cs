@@ -137,7 +137,7 @@ namespace EvilDICOM.Network
 
                 if (State == NetworkState.TRANSPORT_CONNECTION_OPEN && !OutboundMessages.IsEmpty)
                 {
-                    while (OutboundMessages.Any())
+                    while (!OutboundMessages.IsEmpty)
                         if (State == NetworkState.TRANSPORT_CONNECTION_OPEN)
                         {
                             AbstractDIMSEBase dimse;

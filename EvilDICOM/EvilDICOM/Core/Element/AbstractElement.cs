@@ -112,7 +112,7 @@ namespace EvilDICOM.Core.Element
         /// The dynamic data in the element stored in a list of type T
         /// </summary>
         /// <value>The d data_.</value>
-        public ICollection DData_
+        public IList DData_
         {
             get { return DataContainer.MultipicityValue; }
             set { DataContainer.MultipicityValue = (List<T>) value; }
