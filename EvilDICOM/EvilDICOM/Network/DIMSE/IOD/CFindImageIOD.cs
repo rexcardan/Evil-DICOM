@@ -20,6 +20,9 @@ namespace EvilDICOM.Network.DIMSE.IOD
             PatientsName = DF.Patient​Name();
             StudyInstanceUID = string.Empty;
             SeriesInstanceUID = string.Empty;
+            AcquisitionDate = null;
+            ContentDate = null;
+            Modality = string.Empty;
         }
 
         public CFindImageIOD(DICOMObject dcm) : base(dcm)
@@ -66,5 +69,24 @@ namespace EvilDICOM.Network.DIMSE.IOD
             get { return _sel.SOP​Instance​UID != null ? _sel.SOP​Instance​UID.Data : null; }
             set { _sel.Forge(DF.SOP​Instance​UID(value)); }
         }
+        
+        public S.DateTime? AcquisitionDate
+        {
+          get { return _sel.AcquisitionDate != null ? _sel.AcquisitionDate.Data : null; }
+          set { _sel.Forge(DF.AcquisitionDate(value)); }
+        }
+
+        public S.DateTime? Content​Date
+        {
+          get { return _sel.Content​Date != null ? _sel.Content​Date.Data : null; }
+          set { _sel.Forge(DF.Content​Date(value)); }
+        }
+
+        public string Modality
+        {
+          get { return _sel.Modality != null ? _sel.Modality.Data : null; }
+          set { _sel.Forge(DF.Modality(value)); }
+        }
+        
     }
 }
