@@ -33,7 +33,7 @@ namespace EvilDICOM.Core.IO.Reading
             DICOMObject d;
             //Skip tag
             dr.Skip(4);
-            var length = LengthReader.ReadLittleEndian(VR.Null, dr);
+            var length = LengthReader.ReadBigEndian(VR.Null, dr);
             if (LengthReader.IsIndefinite(length))
                 d = ReadIndefiniteBigEndian(dr, syntax, enc);
             else
