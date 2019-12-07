@@ -26,6 +26,7 @@ namespace EvilDICOM.Network.DIMSE.IOD
         public List<IDICOMElement> Elements
         {
             get { return _sel.ToDICOMObject().Elements; }
+            set { _sel = new DICOMSelector(new DICOMObject(value)); }
         }
     }
 }

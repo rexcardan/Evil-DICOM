@@ -18,7 +18,7 @@ namespace EvilDICOM.Network.DIMSE
         public CFindResponse(DICOMObject d)
             : base(d)
         {
-            CommandField = (ushort) C.C_FIND_RP;
+            CommandField = (ushort)C.C_FIND_RP;
         }
 
         /// <summary>
@@ -33,18 +33,27 @@ namespace EvilDICOM.Network.DIMSE
             Status = (ushort)status;
         }
 
-        public T GetIOD<T>() where T : AbstractDIMSEIOD
+
+        public T GetIOD<T>() where T : CFindInstanceIOD
         {
             if (Data != null)
             {
                 if (typeof(T) == typeof(CFindImageIOD))
                     return new CFindImageIOD(new DICOMObject(Data.Elements)) as T;
-                if (typeof(T) == typeof(CFindStudyIOD))
-                    return new CFindStudyIOD(new DICOMObject(Data.Elements)) as T;
-                if (typeof(T) == typeof(CFindSeriesIOD))
-                    return new CFindSeriesIOD(new DICOMObject(Data.Elements)) as T;
                 if (typeof(T) == typeof(CFindPlanIOD))
                     return new CFindPlanIOD(new DICOMObject(Data.Elements)) as T;
+                if (typeof(T) == typeof(CFindDoseIOD))
+                    return new CFindDoseIOD(new DICOMObject(Data.Elements)) as T;
+                if (typeof(T) == typeof(CFindRTImageIOD))
+                    return new CFindRTImageIOD(new DICOMObject(Data.Elements)) as T;
+                if (typeof(T) == typeof(CFindRTBeamsRecord))
+                    return new CFindTreatmentRecordIOD(new DICOMObject(Data.Elements)) as T;
+                if (typeof(T) == typeof(CFindTreatmentRecordIOD))
+                    return new CFindTreatmentRecordIOD(new DICOMObject(Data.Elements)) as T;
+                if (typeof(T) == typeof(CFindIonBeamsRecord))
+                    return new CFindTreatmentRecordIOD(new DICOMObject(Data.Elements)) as T;
+
+                return new CFindInstanceIOD(new DICOMObject(Data.Elements)) as T;
             }
             return null;
         }

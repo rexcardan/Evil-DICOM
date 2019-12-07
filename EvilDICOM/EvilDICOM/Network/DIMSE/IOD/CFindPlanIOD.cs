@@ -8,8 +8,19 @@ using DF = EvilDICOM.Core.DICOMForge;
 
 namespace EvilDICOM.Network.DIMSE.IOD
 {
-    public class CFindPlanIOD : CFindImageIOD
+    public class CFindPlanIOD : CFindInstanceIOD
     {
+        public CFindPlanIOD() : base()
+        {
+            PlanLabel = string.Empty;
+            PlanDescription = string.Empty;
+            PlanDate = null;
+            PlanTime = null;
+            NumberOfBeams = 0;
+            ApprovalStatus = string.Empty;
+            ReferencedPlan = null;
+        }
+
         public CFindPlanIOD(DICOMObject dcm) : base(dcm)
         {
         }
@@ -18,6 +29,12 @@ namespace EvilDICOM.Network.DIMSE.IOD
         {
             get { return _sel.RTPlanLabel != null ? _sel.RTPlanLabel.Data : null; }
             set { _sel.Forge(DF.RTPlanLabel(value)); }
+        }
+
+        public string PlanDescription
+        {
+            get { return _sel.RTPlanDescription != null ? _sel.RTPlanDescription.Data : null; }
+            set { _sel.Forge(DF.RTPlanDescription(value)); }
         }
 
         public DateTime? PlanDate
@@ -42,6 +59,32 @@ namespace EvilDICOM.Network.DIMSE.IOD
         {
             get { return _sel.ApprovalStatus != null ? _sel.ApprovalStatus.Data : null; }
             set { _sel.Forge(DF.ApprovalStatus(value)); }
+        }
+
+        public (string sopClassUID, string sopInstanceUID, string planRelationship)? ReferencedPlan
+        {
+            get
+            {
+                return _sel.ReferencedRTPlanSequence != null ?
+                  (_sel.ReferencedRTPlanSequence.Select(seq => seq.ReferencedSOPClassUID.Data),
+                  _sel.ReferencedRTPlanSequence.Select(seq => seq.ReferencedSOPInstanceUID.Data),
+                  _sel.ReferencedRTPlanSequence.Select(seq => seq.RTPlanRelationship.Data))
+                  : (string.Empty, string.Empty, string.Empty);
+            }
+            set
+            {
+                if (value.HasValue)
+                {
+                    _sel.Forge(DF.ReferencedRTPlanSequence(new DICOMObject(
+                         DF.ReferencedSOPClassUID(value.Value.sopClassUID),
+                         DF.ReferencedSOPInstanceUID(value.Value.sopInstanceUID),
+                         DF.RTPlanRelationship(value.Value.planRelationship))));
+                }
+                else
+                {
+                    _sel.Forge(DF.ReferencedRTPlanSequence(new DICOMObject[0]));
+                }
+            }
         }
     }
 }

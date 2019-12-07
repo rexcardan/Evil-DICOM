@@ -31,15 +31,12 @@ namespace EvilDICOM.Network.SCUOps
         /// <param name="toAETite">the entity title which will receive the image</param>
         /// <param name="msgId">the message id</param>
         /// <returns>the move response</returns>
-        public CMoveResponse SendCMove(CFindImageIOD iod, string toAETite, ref ushort msgId)
+        public CMoveResponse SendCMove(CFindInstanceIOD iod, string toAETite, ref ushort msgId)
         {
             var result = new CMoveIOD
             {
                 QueryLevel = QueryLevel.IMAGE,
-                SOPInstanceUID = iod.SOPInstanceUID,
-                PatientId = iod.PatientId,
-                StudyInstanceUID = iod.StudyInstanceUID,
-                SeriesInstanceUID = iod.SeriesInstanceUID
+                SOPInstanceUID = iod.SOPInstanceUID
             };
             var request = new CMoveRequest(result, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
             return _scu.GetResponse<CMoveResponse, CMoveRequest>(request, callingEntity, ref msgId);
@@ -50,8 +47,6 @@ namespace EvilDICOM.Network.SCUOps
             var result = new CMoveIOD
             {
                 QueryLevel = QueryLevel.SERIES,
-                PatientId = iod.PatientId,
-                StudyInstanceUID = iod.StudyInstanceUID,
                 SeriesInstanceUID = iod.SeriesInstanceUID
             };
             var request = new CMoveRequest(result, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
@@ -69,7 +64,6 @@ namespace EvilDICOM.Network.SCUOps
             var result = new CMoveIOD
             {
                 QueryLevel = QueryLevel.STUDY,
-                PatientId = iod.PatientId,
                 StudyInstanceUID = iod.StudyInstanceUID,
             };
             var request = new CMoveRequest(result, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);

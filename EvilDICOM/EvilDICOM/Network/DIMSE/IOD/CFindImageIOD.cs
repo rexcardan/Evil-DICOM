@@ -10,61 +10,65 @@ using DF = EvilDICOM.Core.DICOMForge;
 
 namespace EvilDICOM.Network.DIMSE.IOD
 {
-    public class CFindImageIOD : AbstractDIMSEIOD
+    public class CFindImageIOD : CFindInstanceIOD
     {
-        public CFindImageIOD()
+        public CFindImageIOD() : base()
         {
-            QueryLevel = QueryLevel.IMAGE;
-            SOPInstanceUID = string.Empty;
-            PatientId = string.Empty;
-            PatientsName = DF.Patient​Name();
-            StudyInstanceUID = string.Empty;
-            SeriesInstanceUID = string.Empty;
+            AcquisitionDate = null;
+            AcquisitionTime = null;
+            ContentDate = null;
+            ImageType = string.Empty;
+            InstanceNumber = null;
         }
 
         public CFindImageIOD(DICOMObject dcm) : base(dcm)
         {
         }
 
-        public QueryLevel QueryLevel
+        public int? InstanceNumber
         {
-            get
+            get { return _sel.InstanceNumber != null ? _sel.InstanceNumber.Data : int.MinValue; }
+            set
             {
-                if (_sel.Query​Retrieve​Level == null)
-                    _sel.Query​Retrieve​Level.Data = QueryLevel.PATIENT.ToString();
-                return (QueryLevel) S.Enum.Parse(typeof(QueryLevel), _sel.Query​Retrieve​Level.Data);
+                var convertedValue = value.HasValue ? new int[value.Value] : new int[0];
+                _sel.Forge(DF.InstanceNumber(convertedValue));
             }
-            set { _sel.Forge(DF.Query​Retrieve​Level(value.ToString())); }
         }
 
-        public PersonName PatientsName
+        public string ImageType
         {
-            get { return _sel.Patient​Name != null ? _sel.Patient​Name : null; }
-            set { _sel.Patient​Name = value; }
+            get { return _sel.ImageType != null ? _sel.ImageType.Data : string.Empty; }
+            set { _sel.Forge(DF.ImageType(value)); }
         }
 
-        public string PatientId
+        public S.DateTime? AcquisitionDate
         {
-            get { return _sel.Patient​ID != null ? _sel.Patient​ID.Data : null; }
-            set { _sel.Forge(DF.Patient​ID(value)); }
+            get { return _sel.AcquisitionDate != null ? _sel.AcquisitionDate.Data : null; }
+            set { _sel.Forge(DF.AcquisitionDate(value)); }
         }
 
-        public string StudyInstanceUID
+        public S.DateTime? AcquisitionTime
         {
-            get { return _sel.Study​Instance​UID != null ? _sel.Study​Instance​UID.Data : null; }
-            set { _sel.Forge(DF.Study​Instance​UID(value)); }
+            get { return _sel.AcquisitionTime != null ? _sel.AcquisitionTime.Data : null; }
+            set { _sel.Forge(DF.AcquisitionTime(value)); }
         }
 
-        public string SeriesInstanceUID
+        public S.DateTime? Content​Date
         {
-            get { return _sel.Series​Instance​UID != null ? _sel.Series​Instance​UID.Data : null; }
-            set { _sel.Forge(DF.Series​Instance​UID(value)); }
+            get { return _sel.Content​Date != null ? _sel.Content​Date.Data : null; }
+            set { _sel.Forge(DF.Content​Date(value)); }
         }
 
-        public string SOPInstanceUID
+        public S.DateTime? ContentTime
         {
-            get { return _sel.SOP​Instance​UID != null ? _sel.SOP​Instance​UID.Data : null; }
-            set { _sel.Forge(DF.SOP​Instance​UID(value)); }
+            get { return _sel.ContentTime != null ? _sel.ContentTime.Data : null; }
+            set { _sel.Forge(DF.ContentTime(value)); }
+        }
+
+        public string ApprovalStatus
+        {
+            get { return _sel.ApprovalStatus != null ? _sel.ApprovalStatus.Data : string.Empty; }
+            set { _sel.Forge(DF.ApprovalStatus(value)); }
         }
     }
 }
