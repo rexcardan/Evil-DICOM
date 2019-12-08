@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using EvilDICOM.Network.PDUs.Items;
 using System;
 using System.Diagnostics;
+using System.Text;
 
 #endregion
 
@@ -22,6 +23,11 @@ namespace EvilDICOM.Network
         public DICOMSCP(Entity ae) : base(ae)
         {
             _server = new TcpListener(IPAddress.Parse(ApplicationEntity.IpAddress), ApplicationEntity.Port);
+#if NETCOREAPP
+
+            System.Text.EncodingProvider provider = System.Text.CodePagesEncodingProvider.Instance;
+            Encoding.RegisterProvider(provider);
+#endif
         }
 
         public bool IsListening

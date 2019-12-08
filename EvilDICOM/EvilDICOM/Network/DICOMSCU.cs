@@ -13,6 +13,7 @@ using EvilDICOM.Network.SCUOps;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Network.Helpers;
 using System.Linq;
+using System.Text;
 
 #endregion
 
@@ -25,6 +26,11 @@ namespace EvilDICOM.Network
 
         public DICOMSCU(Entity ae) : base(ae)
         {
+#if NETCOREAPP
+
+            System.Text.EncodingProvider provider = System.Text.CodePagesEncodingProvider.Instance;
+            Encoding.RegisterProvider(provider);
+#endif
         }
 
         /// <summary>
