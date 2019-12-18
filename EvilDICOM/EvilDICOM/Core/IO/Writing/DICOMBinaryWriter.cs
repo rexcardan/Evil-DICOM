@@ -12,18 +12,26 @@ namespace EvilDICOM.Core.IO.Writing
     {
         private readonly BinaryWriter _writer;
 
+        protected DICOMBinaryWriter()
+        {
+#if NETCOREAPP
+
+            System.Text.EncodingProvider provider = System.Text.CodePagesEncodingProvider.Instance;
+            Encoding.RegisterProvider(provider);
+#endif
+        }
         /// <summary>
         ///     Constructs a new writer from a file path.
         /// </summary>
         /// <param name="filePath">path to the file to be written</param>
-        public DICOMBinaryWriter(string filePath)
+        public DICOMBinaryWriter(string filePath):base()
         {
             _writer = new BinaryWriter(
                 File.Open(filePath, FileMode.Create),
                 Encoding.UTF8);
         }
 
-        public DICOMBinaryWriter(Stream stream)
+        public DICOMBinaryWriter(Stream stream) : base()
         {
             _writer = new BinaryWriter(stream, Encoding.UTF8);
         }

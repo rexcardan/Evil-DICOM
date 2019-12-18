@@ -22,13 +22,18 @@ namespace EvilDICOM.Core.IO.Reading
         //Constructor for inherited classes
         protected DICOMBinaryReader()
         {
+#if NETCOREAPP
+
+            System.Text.EncodingProvider provider = System.Text.CodePagesEncodingProvider.Instance;
+            Encoding.RegisterProvider(provider);
+#endif
         }
 
         /// <summary>
         ///     Constructs a new reader from a file path.
         /// </summary>
         /// <param name="filePath">path to the file to be read</param>
-        public DICOMBinaryReader(string filePath)
+        public DICOMBinaryReader(string filePath):base()
         {
             _binaryReader = new BinaryReader(
                 new FileStream(filePath, FileMode.Open, FileAccess.Read),
@@ -39,7 +44,7 @@ namespace EvilDICOM.Core.IO.Reading
         ///     Constructs a new reader from a byte array.
         /// </summary>
         /// <param name="byteStream">the byte array to be read</param>
-        public DICOMBinaryReader(byte[] byteStream)
+        public DICOMBinaryReader(byte[] byteStream):base()
         {
             _binaryReader = new BinaryReader(new MemoryStream(byteStream),
                 Encoding.UTF8);

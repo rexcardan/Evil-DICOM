@@ -57,26 +57,7 @@ namespace EvilDICOM.Core.IO.Reading
             return el;
         }
 
-        /// <summary>
-        /// This method helps read non-compliant files. Sometimes, an supposed implicit is encoded explicitly. We'll check here
-        /// Returns true if element is actually encoded explicitly (VR is written as starting characters).
-        /// </summary>
-        /// <param name="tag">the read tag</param>
-        /// <param name="dr">the binary reader which is reading the DICOM object</param>
-        /// <param name="vr">the determined VR from the tag</param>
-        /// <returns></returns>
-        private static bool CheckForExplicitness(Tag tag, DICOMBinaryReader dr, ref VR vr)
-        {
-            if (VRReader.PeekVR(dr) != VR.Null)
-            {
-                vr = VRReader.ReadVR(dr);
-                Logging.EvilLogger.Instance.Log(
-                    $"{tag} was expectd to be implicit LE but is explicit LE. Attempting to read...");
-                return true;
-            }
-            //Implicilty encoded - All is well
-            return false;
-        }
+
 
         /// <summary>
         ///     Reads and returns the next DICOM element starting at the current location in the DICOM binary reader
