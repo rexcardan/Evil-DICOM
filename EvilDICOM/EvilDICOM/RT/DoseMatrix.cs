@@ -6,6 +6,7 @@ using System.IO;
 using System.Linq;
 using EvilDICOM.Core;
 using EvilDICOM.Core.Element;
+using EvilDICOM.Core.Extensions;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.IO.Data;
 using EvilDICOM.Core.IO.Reading;
@@ -15,17 +16,17 @@ using EvilDICOM.Core.Selection;
 
 namespace EvilDICOM.RT
 {
-    public class DoseMatrix
+    public class RTDose
     {
         private readonly DICOMSelector _doseObject;
 
-        public DoseMatrix(DICOMObject dcm)
+        public RTDose(DICOMObject dcm)
         {
             _doseObject = new DICOMSelector(dcm);
             ValueSizeInBytes = _doseObject.Bits​Stored.Data / 8;
             DoseValues = new List<double>();
             Scaling = _doseObject.Dose​Grid​Scaling.Data;
-            using (var stream = _doseObject.ToDICOMObject().PixelStream)
+            using (var stream = _doseObject.ToDICOMObject().GetPixelStream())
             {
                 var binReader = new BinaryReader(stream);
                 if (ValueSizeInBytes == 4)
@@ -130,9 +131,9 @@ namespace EvilDICOM.RT
 
         public double Scaling { get; set; }
 
-        public static DoseMatrix Load(string dcmFile)
+        public static RTDose Load(string dcmFile)
         {
-            return new DoseMatrix(DICOMFileReader.Read(dcmFile));
+            return new RTDose(DICOMFileReader.Read(dcmFile));
         }
 
         /// <summary>
@@ -249,7 +250,7 @@ namespace EvilDICOM.RT
 
         public void ConvertAbsToRel(double totalDose)
         {
-            DoseValues = DoseValues.Select(d => d/totalDose).ToList();
+            DoseValues = DoseValues.Select(d => d / totalDose).ToList();
             var _16b = 1 / Math.Pow(2, 16);
             _doseObject.Dose​Grid​Scaling.Data = _16b;
             _doseObject.Dose​Units.Data = "RELATIVE";
@@ -277,7 +278,7 @@ namespace EvilDICOM.RT
             {
                 _doseObject.Bits​Stored.Data = (ushort)(ValueSizeInBytes * 8);
                 _doseObject.Dose​Grid​Scaling.Data = Scaling;
-                using (var stream = _doseObject.ToDICOMObject().PixelStream)
+                using (var stream = _doseObject.ToDICOMObject().GetPixelStream())
                 {
                     var bw = new BinaryWriter(stream);
 

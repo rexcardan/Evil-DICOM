@@ -4,6 +4,7 @@ using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.IO.Data;
 using EvilDICOM.Core.IO.Reading;
+using System.Linq;
 
 #endregion
 
@@ -122,7 +123,7 @@ namespace EvilDICOM.Core.Element
         /// <param name="data">the string data as an object (fresh from the DICOM reader)</param>
         /// <param name="vr">the VR of the element to be generated</param>
         /// <returns>a concrete DICOM element that uses the interface IDICOMElement</returns>
-        private static IDICOMElement ReadString(VR vr, Tag tag, object data, StringEncoding enc)
+        public static IDICOMElement ReadString(VR vr, Tag tag, object data, StringEncoding enc)
         {
             switch (vr)
             {
@@ -133,9 +134,30 @@ namespace EvilDICOM.Core.Element
                 case VR.CodeString:
                     return new CodeString() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[], enc) };
                 case VR.Date:
-                    return new Date(tag, DICOMString.Read(data as byte[], enc));
+                    var dateData = DICOMString.Read(data as byte[], enc);
+                    if (dateData.Any(b => b == '-')) // Range ('-')
+                    {
+                        var parts = dateData.Split('-');
+                        var dates = parts.Select(p => StringDataParser.ParseDate(p)).OrderBy(p => p).ToArray();
+                        return new Date(tag, dates) { IsRange = true };
+                    }
+                    else
+                    {
+                        return new Date(tag, dateData);
+                    }
                 case VR.DateTime:
-                    return new DateTime(tag, DICOMString.Read(data as byte[], enc));
+                    var dateTimeData = DICOMString.Read(data as byte[], enc);
+                    if (dateTimeData.Any(b => b == '-')) // Range ('-')
+                    {
+                        var parts = dateTimeData.Split('-');
+                        var dates = parts.Select(p => StringDataParser.ParseDateTime(p)).OrderBy(p => p).ToArray();
+                        return new DateTime(tag, dates) { IsRange = true };
+                    }
+                    else
+                    {
+                        return new DateTime(tag, dateTimeData);
+                    }
+
                 case VR.DecimalString:
                     return new DecimalString(tag, DICOMString.Read(data as byte[], enc));
                 case VR.IntegerString:
@@ -151,7 +173,17 @@ namespace EvilDICOM.Core.Element
                 case VR.ShortText:
                     return new ShortText(tag, DICOMString.Read(data as byte[], enc));
                 case VR.Time:
-                    return new Time(tag, DICOMString.Read(data as byte[], enc));
+                    var timeData = DICOMString.Read(data as byte[], enc);
+                    if (timeData.Any(b => b == '-')) // Range ('-')
+                    {
+                        var parts = timeData.Split('-');
+                        var dates = parts.Select(p => StringDataParser.ParseTime(p)).OrderBy(p => p).ToArray();
+                        return new Time(tag, dates) { IsRange = true };
+                    }
+                    else
+                    {
+                        return new Time(tag, timeData);
+                    }
                 case VR.UnlimitedCharacter:
                     return new UnlimitedCharacter() { Tag = tag, Data_ = DICOMString.ReadMultiple(data as byte[], enc) };
                 case VR.UnlimitedText:

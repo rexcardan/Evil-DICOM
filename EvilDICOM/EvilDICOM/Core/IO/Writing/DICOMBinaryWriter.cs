@@ -19,19 +19,20 @@ namespace EvilDICOM.Core.IO.Writing
             System.Text.EncodingProvider provider = System.Text.CodePagesEncodingProvider.Instance;
             Encoding.RegisterProvider(provider);
 #endif
+
         }
         /// <summary>
         ///     Constructs a new writer from a file path.
         /// </summary>
         /// <param name="filePath">path to the file to be written</param>
-        public DICOMBinaryWriter(string filePath):base()
+        public DICOMBinaryWriter(string filePath) : this()
         {
             _writer = new BinaryWriter(
                 File.Open(filePath, FileMode.Create),
                 Encoding.UTF8);
         }
 
-        public DICOMBinaryWriter(Stream stream) : base()
+        public DICOMBinaryWriter(Stream stream) : this()
         {
             _writer = new BinaryWriter(stream, Encoding.UTF8);
         }

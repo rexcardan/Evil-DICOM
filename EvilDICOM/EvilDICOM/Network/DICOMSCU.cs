@@ -14,6 +14,8 @@ using EvilDICOM.Core.Enums;
 using EvilDICOM.Network.Helpers;
 using System.Linq;
 using System.Text;
+using Evil_DICOM.Network.Messaging;
+using static EvilDICOM.Network.Services.AssociationService;
 
 #endregion
 
@@ -21,7 +23,8 @@ namespace EvilDICOM.Network
 {
     public class DICOMSCU : DICOMServiceClass
     {
-        public int IdleTimeout { get; set; } = 30000; // 30 sec
+
+        public int IdleTimeout { get; set; } = 60000; // 60 sec
         public int ConnectionTimeout { get; set; } = 3000; // 3 sec
 
         public DICOMSCU(Entity ae) : base(ae)
@@ -39,28 +42,43 @@ namespace EvilDICOM.Network
         /// <param name="dimse">the message to send</param>
         /// <param name="ae">the entity to send the message</param>
         /// <returns>true if message send was success</returns>
-        public bool SendMessage(AbstractDIMSERequest dimse, Entity ae)
+        public SendStatus SendMessage(AbstractDIMSERequest dimse, Entity ae)
         {
             using (var client = new TcpClient())
             {
+                var status = new SendStatus();
                 try
                 {
                     var connectionResult = client.BeginConnect(IPAddress.Parse(ae.IpAddress), ae.Port, null, null);
                     var completed = connectionResult.AsyncWaitHandle.WaitOne(TimeSpan.FromMilliseconds(ConnectionTimeout));
+
                     if (completed && !client.Client.Connected)
                     {
-                        throw new TimeoutException($"Couldn't connect to {IPAddress.Parse(ae.IpAddress)}:{ae.Port} within {ConnectionTimeout} ms!");
+                        status.DidConnect = false;
+                        return status;
                     }
+
+                    //Connected. Attempt association
+                    status.DidConnect = true;
                     var assoc = new Association(this, client) { AeTitle = ae.AeTitle };
+
+                    AssociationRejectedHandler rejectedHandler = (rej, asc) =>
+                    {
+                        status.WasRejected = true;
+                        status.Reason = Enum.GetName(typeof(RejectReason_SCU), rej.Reason);
+                    };
+
+                    this.AssociationService.AssociationRejectionReceived += rejectedHandler;
                     PDataMessenger.Send(dimse, assoc);
                     assoc.Listen(TimeSpan.FromMilliseconds(IdleTimeout));
-                    return true;
+                    this.AssociationService.AssociationRejectionReceived -= rejectedHandler;
+                    return status;
                 }
                 catch (Exception e)
                 {
                     Logger.Log($"Could not connect to {ae.AeTitle} @{ae.IpAddress}:{ae.Port}", LogPriority.ERROR);
                     Logger.Log($"{e.ToString()}", LogPriority.ERROR);
-                    return false;
+                    return status;
                 }
             }
         }
@@ -74,7 +92,7 @@ namespace EvilDICOM.Network
         /// <returns>true if message send was success</returns>
         public bool SendMessageForcePort(AbstractDIMSERequest dimse, Entity ae)
         {
-            var (ipLocalEndPoint, success) = 
+            var (ipLocalEndPoint, success) =
                 IpHelper.VerifyIPAddress(this.ApplicationEntity.IpAddress, this.ApplicationEntity.Port);
             if (!success) { return false; }
 
@@ -119,7 +137,7 @@ namespace EvilDICOM.Network
 
         public T GetResponse<T, U>(U request, Entity e, ref ushort msgId) where U : AbstractDIMSERequest where T : AbstractDIMSEResponse
         {
-            return GetResponses<T, U>(request, e, ref msgId).FirstOrDefault();
+            return GetResponses<T, U>(request, e, ref msgId).LastOrDefault();
         }
 
         public IEnumerable<T> GetResponses<T, U>(U request, Entity e, ref ushort msgId) where U : AbstractDIMSERequest where T : AbstractDIMSEResponse
@@ -136,14 +154,18 @@ namespace EvilDICOM.Network
                 responses.Add(res);
                 if (res.Status != (ushort)Status.PENDING)
                     mr.Set();
-                else { mr.Reset(); }
+                else
+                {
+                    mr.Reset();
+                }
             });
 
             DIMSEService.Subscribe(cr);
 
             bool clientConnected;
             //Only wait if message is successful
-            if (clientConnected = SendMessage(request, e))
+            var sendStatus = SendMessage(request, e);
+            if (clientConnected = sendStatus.WasAccepted)
             {
                 //Wait for final response
                 mr.WaitOne(msWait);
@@ -151,8 +173,8 @@ namespace EvilDICOM.Network
             DIMSEService.Unsubscribe(cr);
             msgId += 2;
 
-            if (!clientConnected) { throw new Exception($"Could not connect to remote endpoint {e}"); }
-
+            if (!sendStatus.DidConnect) { throw new Exception($"Could not connect to remote endpoint {e}"); }
+            if (sendStatus.WasRejected) { throw new Exception($"Connected, but association refused by {e} : {sendStatus.Reason}"); }
             return responses;
         }
 

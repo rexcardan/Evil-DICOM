@@ -1,5 +1,6 @@
 ﻿#region
 
+using Evil_DICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.IO.Data;
 
@@ -10,7 +11,7 @@ namespace EvilDICOM.Core.Element
     /// <summary>
     ///     Encapsulates the Time VR type
     /// </summary>
-    public class Time : AbstractElement<System.DateTime?>
+    public class Time : RangeableDateTime
     {
         public Time()
         {
@@ -24,6 +25,11 @@ namespace EvilDICOM.Core.Element
         }
 
         public Time(Tag tag, System.DateTime? time) : base(tag, time)
+        {
+            VR = VR.Time;
+        }
+
+        public Time(Tag tag, System.DateTime?[] times) : base(tag, times)
         {
             VR = VR.Time;
         }

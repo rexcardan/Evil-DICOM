@@ -33,7 +33,7 @@ namespace EvilDICOM.Core.IO.Reading
         ///     Constructs a new reader from a file path.
         /// </summary>
         /// <param name="filePath">path to the file to be read</param>
-        public DICOMBinaryReader(string filePath):base()
+        public DICOMBinaryReader(string filePath) : this()
         {
             _binaryReader = new BinaryReader(
                 new FileStream(filePath, FileMode.Open, FileAccess.Read),
@@ -44,7 +44,7 @@ namespace EvilDICOM.Core.IO.Reading
         ///     Constructs a new reader from a byte array.
         /// </summary>
         /// <param name="byteStream">the byte array to be read</param>
-        public DICOMBinaryReader(byte[] byteStream):base()
+        public DICOMBinaryReader(byte[] byteStream) : this()
         {
             _binaryReader = new BinaryReader(new MemoryStream(byteStream),
                 Encoding.UTF8);
@@ -172,7 +172,7 @@ namespace EvilDICOM.Core.IO.Reading
                 if (candidate == bytePattern[index++])
                 {
                     if (index == bytePattern.Length)
-                        return (int) (StreamPosition - bytePattern.Length);
+                        return (int)(StreamPosition - bytePattern.Length);
                 }
                 else
                 {

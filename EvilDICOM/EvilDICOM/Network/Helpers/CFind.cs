@@ -30,6 +30,14 @@ namespace EvilDICOM.Network.Helpers
             return new CFindRequest(iod, Root.STUDY);
         }
 
+        public static CFindRequest CreateQuery(CFindRequestIOD iodQuery)
+        {
+            if (iodQuery is CFindPatientIOD)
+                return new CFindRequest(iodQuery, Root.PATIENT);
+            else
+                return new CFindRequest(iodQuery, Root.STUDY);
+        }
+
         public static CFindRequest CreateImageQuery(CFindSeriesIOD ser)
         {
             var iod = new CFindSeriesIOD();
@@ -62,7 +70,7 @@ namespace EvilDICOM.Network.Helpers
                 default:
                     break;
             }
-           
+
             return new CFindRequest(iod, Root.STUDY);
         }
 
@@ -70,7 +78,7 @@ namespace EvilDICOM.Network.Helpers
         {
             var iod = new CFindPatientIOD();
             iod.PatientsName = DF.PatientName(patientName);
-            iod.PatientBirthDate= dob;
+            iod.PatientBirthDate = dob;
             iod.PatientId = patientId;
             return new CFindRequest(iod, Root.PATIENT);
         }

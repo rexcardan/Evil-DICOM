@@ -1,5 +1,9 @@
 ﻿#region
 
+using EvilDICOM.Core.Element;
+using EvilDICOM.Core.Helpers;
+using EvilDICOM.Core.Image;
+using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
@@ -41,10 +45,33 @@ namespace EvilDICOM.Core.Extensions
             dcm.Elements
                 .Where(e => e.Tag.Group == _metaGroup)
                 .ToList()
-                .ForEach(e=>
+                .ForEach(e =>
                 {
                     dcm.Elements.Remove(e);
                 });
         }
+
+        #region IMAGE PROPERTIES
+
+        /// <summary>
+        ///     Grabs the pixel data bytes and sends it as a stream. Returns null if no pixel data element is found.
+        /// </summary>
+        public static PixelStream GetPixelStream(this DICOMObject dcm)
+        {
+
+            var pixelData = dcm.FindFirst(TagHelper.Pixel​Data) as AbstractElement<byte>;
+            if (pixelData != null)
+                return new PixelStream(pixelData.DataContainer.MultipicityValue.ToArray());
+            return null;
+        }
+
+        public static void SetPixelStream(this DICOMObject dcm, IEnumerable<byte> value)
+        {
+            var pixelData = dcm.FindFirst(TagHelper.Pixel​Data) as AbstractElement<byte>;
+            if (pixelData != null)
+                pixelData.Data_ = value.ToArray().ToList();
+        }
+
+        #endregion
     }
 }
