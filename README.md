@@ -29,6 +29,25 @@ http://rexcardan.github.io/Evil-DICOM/
 |	Examples | [Example Operations](http://rexcardan.github.io/Evil-DICOM/articles/operations.html) |
 |	Online API | [API Documentation](http://rexcardan.github.io/Evil-DICOM/api/index.html) |
 
+### Evil-DICOM used and featured in publications
+
+1. Mayo, C., et al., Demonstration of a software design and statistical analysis methodology with application to patient outcomes data sets. Medical physics, 2013. 40(11): p. 111718.
+
+2. Vickress, J., R. Barnett, and S. Yartsev, Data Inventory for Cancer Patients Receiving Radiotherapy for Outcome Analysis and Modeling. Biomedical Data Mining, 2014. 3(105): p. 2.
+
+3. Saalfeld, P., et al., Touchless measurement of medical image data for interventional support. Mensch und Computer 2017-Tagungsband, 2017.
+
+4. Miras, H., et al., Monte Carlo verification of radiotherapy treatments with CloudMC. Radiation Oncology, 2018. 13(1): p. 99.
+
+5. Patrick Saalfeld, D.K. and C.H. Bernhard Preim, Image Data for Interventional Support. Mensch und Computer 2017-Tagungsband: Spielend einfach interagieren, 2018. 17: p. 83.
+
+6. Pyyry, E.J. and W. Keranen, Varian APIs: A handbook for programming in the Varian oncology software ecosystem. 2018.
+
+7. Saalfeld, P., J. Patzschke, and B. Preim, An immersive system for exploring and measuring medical image data. Mensch und Computer 2017-Tagungsband: Spielend einfach interagieren, 2018. 17: p. 73.
+
+8. Alkhimova, S. and V. Kuleshov, Analysis of turning angle in scope of brain tissue segmentation with CUSUM filter. 2019.
+
+9. Alkhimova, S. and S. Sliusar, Analysis of effectiveness of thresholding in perfusion ROI detection on T2-weighted MR images with abnormal brain anatomy. arXiv preprint arXiv:1912.05469, 2019.
 ***
 
 Supported by JetBrains' ReSharper

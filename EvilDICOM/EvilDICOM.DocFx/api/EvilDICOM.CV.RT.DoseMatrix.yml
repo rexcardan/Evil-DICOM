@@ -36,9 +36,7 @@ items:
     content: 'public class DoseMatrix : Matrix, IDisposable'
     content.vb: >-
       Public Class DoseMatrix
-
           Inherits Matrix
-
           Implements IDisposable
   inheritance:
   - System.Object

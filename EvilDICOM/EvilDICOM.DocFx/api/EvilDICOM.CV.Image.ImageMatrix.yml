@@ -33,9 +33,7 @@ items:
     content: 'public class ImageMatrix : Matrix, IDisposable'
     content.vb: >-
       Public Class ImageMatrix
-
           Inherits Matrix
-
           Implements IDisposable
   inheritance:
   - System.Object
