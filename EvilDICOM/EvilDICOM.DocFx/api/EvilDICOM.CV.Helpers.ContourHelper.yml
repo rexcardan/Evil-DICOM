@@ -1,0 +1,580 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.Helpers.ContourHelper
+  commentId: T:EvilDICOM.CV.Helpers.ContourHelper
+  id: ContourHelper
+  parent: EvilDICOM.CV.Helpers
+  children:
+  - EvilDICOM.CV.Helpers.ContourHelper.GetMaskAtZ(System.Collections.Generic.IEnumerable{EvilDICOM.CV.RT.Meta.SliceContourMeta},System.Single,OpenCvSharp.Mat,OpenCvSharp.Mat,System.Double)
+  - EvilDICOM.CV.Helpers.ContourHelper.OrganizeIntoChildren(EvilDICOM.CV.RT.Meta.SliceContourMeta,System.Collections.Generic.IEnumerable{EvilDICOM.CV.RT.Meta.SliceContourMeta})
+  langs:
+  - csharp
+  - vb
+  name: ContourHelper
+  nameWithType: ContourHelper
+  fullName: EvilDICOM.CV.Helpers.ContourHelper
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Helpers/ContourHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ContourHelper
+    path: ../EvilDICOM.CV/Helpers/ContourHelper.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Helpers
+  syntax:
+    content: public static class ContourHelper
+    content.vb: Public Module ContourHelper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: EvilDICOM.CV.Helpers.ContourHelper.OrganizeIntoChildren(EvilDICOM.CV.RT.Meta.SliceContourMeta,System.Collections.Generic.IEnumerable{EvilDICOM.CV.RT.Meta.SliceContourMeta})
+  commentId: M:EvilDICOM.CV.Helpers.ContourHelper.OrganizeIntoChildren(EvilDICOM.CV.RT.Meta.SliceContourMeta,System.Collections.Generic.IEnumerable{EvilDICOM.CV.RT.Meta.SliceContourMeta})
+  id: OrganizeIntoChildren(EvilDICOM.CV.RT.Meta.SliceContourMeta,System.Collections.Generic.IEnumerable{EvilDICOM.CV.RT.Meta.SliceContourMeta})
+  parent: EvilDICOM.CV.Helpers.ContourHelper
+  langs:
+  - csharp
+  - vb
+  name: OrganizeIntoChildren(SliceContourMeta, IEnumerable<SliceContourMeta>)
+  nameWithType: ContourHelper.OrganizeIntoChildren(SliceContourMeta, IEnumerable<SliceContourMeta>)
+  fullName: EvilDICOM.CV.Helpers.ContourHelper.OrganizeIntoChildren(EvilDICOM.CV.RT.Meta.SliceContourMeta, System.Collections.Generic.IEnumerable<EvilDICOM.CV.RT.Meta.SliceContourMeta>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Helpers/ContourHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: OrganizeIntoChildren
+    path: ../EvilDICOM.CV/Helpers/ContourHelper.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Helpers
+  summary: "\nRecursive method that takes the largest contour and an array of smaller contours to\nplace smaller contours which are inside the largest contour into the child list\nfor area calculations\n"
+  example: []
+  syntax:
+    content: public static void OrganizeIntoChildren(SliceContourMeta largerContour, IEnumerable<SliceContourMeta> smallerContours)
+    parameters:
+    - id: largerContour
+      type: EvilDICOM.CV.RT.Meta.SliceContourMeta
+      description: the large contour possibly containing smaller contours
+    - id: smallerContours
+      type: System.Collections.Generic.IEnumerable{EvilDICOM.CV.RT.Meta.SliceContourMeta}
+      description: the list of smaller contours
+    content.vb: Public Shared Sub OrganizeIntoChildren(largerContour As SliceContourMeta, smallerContours As IEnumerable(Of SliceContourMeta))
+  overload: EvilDICOM.CV.Helpers.ContourHelper.OrganizeIntoChildren*
+  nameWithType.vb: ContourHelper.OrganizeIntoChildren(SliceContourMeta, IEnumerable(Of SliceContourMeta))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.CV.Helpers.ContourHelper.OrganizeIntoChildren(EvilDICOM.CV.RT.Meta.SliceContourMeta, System.Collections.Generic.IEnumerable(Of EvilDICOM.CV.RT.Meta.SliceContourMeta))
+  name.vb: OrganizeIntoChildren(SliceContourMeta, IEnumerable(Of SliceContourMeta))
+- uid: EvilDICOM.CV.Helpers.ContourHelper.GetMaskAtZ(System.Collections.Generic.IEnumerable{EvilDICOM.CV.RT.Meta.SliceContourMeta},System.Single,OpenCvSharp.Mat,OpenCvSharp.Mat,System.Double)
+  commentId: M:EvilDICOM.CV.Helpers.ContourHelper.GetMaskAtZ(System.Collections.Generic.IEnumerable{EvilDICOM.CV.RT.Meta.SliceContourMeta},System.Single,OpenCvSharp.Mat,OpenCvSharp.Mat,System.Double)
+  id: GetMaskAtZ(System.Collections.Generic.IEnumerable{EvilDICOM.CV.RT.Meta.SliceContourMeta},System.Single,OpenCvSharp.Mat,OpenCvSharp.Mat,System.Double)
+  isExtensionMethod: true
+  parent: EvilDICOM.CV.Helpers.ContourHelper
+  langs:
+  - csharp
+  - vb
+  name: GetMaskAtZ(IEnumerable<SliceContourMeta>, Single, Mat, Mat, Double)
+  nameWithType: ContourHelper.GetMaskAtZ(IEnumerable<SliceContourMeta>, Single, Mat, Mat, Double)
+  fullName: EvilDICOM.CV.Helpers.ContourHelper.GetMaskAtZ(System.Collections.Generic.IEnumerable<EvilDICOM.CV.RT.Meta.SliceContourMeta>, System.Single, OpenCvSharp.Mat, OpenCvSharp.Mat, System.Double)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Helpers/ContourHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetMaskAtZ
+    path: ../EvilDICOM.CV/Helpers/ContourHelper.cs
+    startLine: 39
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Helpers
+  summary: "\nGets the contours on a slice z. Interpolates if contours don&apos;t exist\n"
+  example: []
+  syntax:
+    content: public static Mat GetMaskAtZ(this IEnumerable<SliceContourMeta> contours, float z, Mat zSlice, Mat imageToPatientTx, double scale)
+    parameters:
+    - id: contours
+      type: System.Collections.Generic.IEnumerable{EvilDICOM.CV.RT.Meta.SliceContourMeta}
+    - id: z
+      type: System.Single
+      description: z position of contours
+    - id: zSlice
+      type: OpenCvSharp.Mat
+    - id: imageToPatientTx
+      type: OpenCvSharp.Mat
+    - id: scale
+      type: System.Double
+    return:
+      type: OpenCvSharp.Mat
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetMaskAtZ(contours As IEnumerable(Of SliceContourMeta), z As Single, zSlice As Mat, imageToPatientTx As Mat, scale As Double) As Mat
+  overload: EvilDICOM.CV.Helpers.ContourHelper.GetMaskAtZ*
+  nameWithType.vb: ContourHelper.GetMaskAtZ(IEnumerable(Of SliceContourMeta), Single, Mat, Mat, Double)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.CV.Helpers.ContourHelper.GetMaskAtZ(System.Collections.Generic.IEnumerable(Of EvilDICOM.CV.RT.Meta.SliceContourMeta), System.Single, OpenCvSharp.Mat, OpenCvSharp.Mat, System.Double)
+  name.vb: GetMaskAtZ(IEnumerable(Of SliceContourMeta), Single, Mat, Mat, Double)
+references:
+- uid: EvilDICOM.CV.Helpers
+  commentId: N:EvilDICOM.CV.Helpers
+  name: EvilDICOM.CV.Helpers
+  nameWithType: EvilDICOM.CV.Helpers
+  fullName: EvilDICOM.CV.Helpers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.Helpers.ContourHelper.OrganizeIntoChildren*
+  commentId: Overload:EvilDICOM.CV.Helpers.ContourHelper.OrganizeIntoChildren
+  name: OrganizeIntoChildren
+  nameWithType: ContourHelper.OrganizeIntoChildren
+  fullName: EvilDICOM.CV.Helpers.ContourHelper.OrganizeIntoChildren
+- uid: EvilDICOM.CV.RT.Meta.SliceContourMeta
+  commentId: T:EvilDICOM.CV.RT.Meta.SliceContourMeta
+  parent: EvilDICOM.CV.RT.Meta
+  name: SliceContourMeta
+  nameWithType: SliceContourMeta
+  fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta
+- uid: System.Collections.Generic.IEnumerable{EvilDICOM.CV.RT.Meta.SliceContourMeta}
+  commentId: T:System.Collections.Generic.IEnumerable{EvilDICOM.CV.RT.Meta.SliceContourMeta}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<SliceContourMeta>
+  nameWithType: IEnumerable<SliceContourMeta>
+  fullName: System.Collections.Generic.IEnumerable<EvilDICOM.CV.RT.Meta.SliceContourMeta>
+  nameWithType.vb: IEnumerable(Of SliceContourMeta)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of EvilDICOM.CV.RT.Meta.SliceContourMeta)
+  name.vb: IEnumerable(Of SliceContourMeta)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.CV.RT.Meta.SliceContourMeta
+    name: SliceContourMeta
+    nameWithType: SliceContourMeta
+    fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.CV.RT.Meta.SliceContourMeta
+    name: SliceContourMeta
+    nameWithType: SliceContourMeta
+    fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.RT.Meta
+  commentId: N:EvilDICOM.CV.RT.Meta
+  name: EvilDICOM.CV.RT.Meta
+  nameWithType: EvilDICOM.CV.RT.Meta
+  fullName: EvilDICOM.CV.RT.Meta
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: EvilDICOM.CV.Helpers.ContourHelper.GetMaskAtZ*
+  commentId: Overload:EvilDICOM.CV.Helpers.ContourHelper.GetMaskAtZ
+  name: GetMaskAtZ
+  nameWithType: ContourHelper.GetMaskAtZ
+  fullName: EvilDICOM.CV.Helpers.ContourHelper.GetMaskAtZ
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: OpenCvSharp.Mat
+  commentId: T:OpenCvSharp.Mat
+  parent: OpenCvSharp
+  isExternal: true
+  name: Mat
+  nameWithType: Mat
+  fullName: OpenCvSharp.Mat
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: OpenCvSharp
+  commentId: N:OpenCvSharp
+  isExternal: true
+  name: OpenCvSharp
+  nameWithType: OpenCvSharp
+  fullName: OpenCvSharp

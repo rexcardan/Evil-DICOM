@@ -1,0 +1,677 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Processors.PDataProcessor
+  commentId: T:EvilDICOM.Network.Processors.PDataProcessor
+  id: PDataProcessor
+  parent: EvilDICOM.Network.Processors
+  children:
+  - EvilDICOM.Network.Processors.PDataProcessor.GetCommandObject(System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF})
+  - EvilDICOM.Network.Processors.PDataProcessor.GetDataObject(System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF},EvilDICOM.Core.Enums.TransferSyntax)
+  - EvilDICOM.Network.Processors.PDataProcessor.Process(EvilDICOM.Network.Interfaces.IMessage,EvilDICOM.Network.Association)
+  - EvilDICOM.Network.Processors.PDataProcessor.ReadPDataTFs(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  langs:
+  - csharp
+  - vb
+  name: PDataProcessor
+  nameWithType: PDataProcessor
+  fullName: EvilDICOM.Network.Processors.PDataProcessor
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Processors/PDataProcessor.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PDataProcessor
+    path: ../EvilDICOM/Network/Processors/PDataProcessor.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Processors
+  syntax:
+    content: public class PDataProcessor
+    content.vb: Public Class PDataProcessor
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Processors.PDataProcessor.Process(EvilDICOM.Network.Interfaces.IMessage,EvilDICOM.Network.Association)
+  commentId: M:EvilDICOM.Network.Processors.PDataProcessor.Process(EvilDICOM.Network.Interfaces.IMessage,EvilDICOM.Network.Association)
+  id: Process(EvilDICOM.Network.Interfaces.IMessage,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Processors.PDataProcessor
+  langs:
+  - csharp
+  - vb
+  name: Process(IMessage, Association)
+  nameWithType: PDataProcessor.Process(IMessage, Association)
+  fullName: EvilDICOM.Network.Processors.PDataProcessor.Process(EvilDICOM.Network.Interfaces.IMessage, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Processors/PDataProcessor.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Process
+    path: ../EvilDICOM/Network/Processors/PDataProcessor.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Processors
+  syntax:
+    content: public static AbstractDIMSE Process(IMessage message, Association asc)
+    parameters:
+    - id: message
+      type: EvilDICOM.Network.Interfaces.IMessage
+    - id: asc
+      type: EvilDICOM.Network.Association
+    return:
+      type: EvilDICOM.Network.DIMSE.AbstractDIMSE
+    content.vb: Public Shared Function Process(message As IMessage, asc As Association) As AbstractDIMSE
+  overload: EvilDICOM.Network.Processors.PDataProcessor.Process*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Processors.PDataProcessor.ReadPDataTFs(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  commentId: M:EvilDICOM.Network.Processors.PDataProcessor.ReadPDataTFs(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  id: ReadPDataTFs(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  parent: EvilDICOM.Network.Processors.PDataProcessor
+  langs:
+  - csharp
+  - vb
+  name: ReadPDataTFs(NetworkBinaryReader)
+  nameWithType: PDataProcessor.ReadPDataTFs(NetworkBinaryReader)
+  fullName: EvilDICOM.Network.Processors.PDataProcessor.ReadPDataTFs(EvilDICOM.Network.Readers.NetworkBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Processors/PDataProcessor.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadPDataTFs
+    path: ../EvilDICOM/Network/Processors/PDataProcessor.cs
+    startLine: 51
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Processors
+  syntax:
+    content: public static List<PDataTF> ReadPDataTFs(NetworkBinaryReader dr)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Network.Readers.NetworkBinaryReader
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF}
+    content.vb: Public Shared Function ReadPDataTFs(dr As NetworkBinaryReader) As List(Of PDataTF)
+  overload: EvilDICOM.Network.Processors.PDataProcessor.ReadPDataTFs*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Processors.PDataProcessor.GetCommandObject(System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF})
+  commentId: M:EvilDICOM.Network.Processors.PDataProcessor.GetCommandObject(System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF})
+  id: GetCommandObject(System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF})
+  parent: EvilDICOM.Network.Processors.PDataProcessor
+  langs:
+  - csharp
+  - vb
+  name: GetCommandObject(List<PDataTF>)
+  nameWithType: PDataProcessor.GetCommandObject(List<PDataTF>)
+  fullName: EvilDICOM.Network.Processors.PDataProcessor.GetCommandObject(System.Collections.Generic.List<EvilDICOM.Network.PDUs.PDataTF>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Processors/PDataProcessor.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetCommandObject
+    path: ../EvilDICOM/Network/Processors/PDataProcessor.cs
+    startLine: 101
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Processors
+  syntax:
+    content: public static DICOMObject GetCommandObject(List<PDataTF> pDatas)
+    parameters:
+    - id: pDatas
+      type: System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF}
+    return:
+      type: EvilDICOM.Core.DICOMObject
+    content.vb: Public Shared Function GetCommandObject(pDatas As List(Of PDataTF)) As DICOMObject
+  overload: EvilDICOM.Network.Processors.PDataProcessor.GetCommandObject*
+  nameWithType.vb: PDataProcessor.GetCommandObject(List(Of PDataTF))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Network.Processors.PDataProcessor.GetCommandObject(System.Collections.Generic.List(Of EvilDICOM.Network.PDUs.PDataTF))
+  name.vb: GetCommandObject(List(Of PDataTF))
+- uid: EvilDICOM.Network.Processors.PDataProcessor.GetDataObject(System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF},EvilDICOM.Core.Enums.TransferSyntax)
+  commentId: M:EvilDICOM.Network.Processors.PDataProcessor.GetDataObject(System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF},EvilDICOM.Core.Enums.TransferSyntax)
+  id: GetDataObject(System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF},EvilDICOM.Core.Enums.TransferSyntax)
+  parent: EvilDICOM.Network.Processors.PDataProcessor
+  langs:
+  - csharp
+  - vb
+  name: GetDataObject(List<PDataTF>, TransferSyntax)
+  nameWithType: PDataProcessor.GetDataObject(List<PDataTF>, TransferSyntax)
+  fullName: EvilDICOM.Network.Processors.PDataProcessor.GetDataObject(System.Collections.Generic.List<EvilDICOM.Network.PDUs.PDataTF>, EvilDICOM.Core.Enums.TransferSyntax)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Processors/PDataProcessor.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetDataObject
+    path: ../EvilDICOM/Network/Processors/PDataProcessor.cs
+    startLine: 107
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Processors
+  syntax:
+    content: public static DICOMObject GetDataObject(List<PDataTF> pDatas, TransferSyntax syntax)
+    parameters:
+    - id: pDatas
+      type: System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF}
+    - id: syntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+    return:
+      type: EvilDICOM.Core.DICOMObject
+    content.vb: Public Shared Function GetDataObject(pDatas As List(Of PDataTF), syntax As TransferSyntax) As DICOMObject
+  overload: EvilDICOM.Network.Processors.PDataProcessor.GetDataObject*
+  nameWithType.vb: PDataProcessor.GetDataObject(List(Of PDataTF), TransferSyntax)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Network.Processors.PDataProcessor.GetDataObject(System.Collections.Generic.List(Of EvilDICOM.Network.PDUs.PDataTF), EvilDICOM.Core.Enums.TransferSyntax)
+  name.vb: GetDataObject(List(Of PDataTF), TransferSyntax)
+references:
+- uid: EvilDICOM.Network.Processors
+  commentId: N:EvilDICOM.Network.Processors
+  name: EvilDICOM.Network.Processors
+  nameWithType: EvilDICOM.Network.Processors
+  fullName: EvilDICOM.Network.Processors
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Network.Processors.PDataProcessor.Process*
+  commentId: Overload:EvilDICOM.Network.Processors.PDataProcessor.Process
+  name: Process
+  nameWithType: PDataProcessor.Process
+  fullName: EvilDICOM.Network.Processors.PDataProcessor.Process
+- uid: EvilDICOM.Network.Interfaces.IMessage
+  commentId: T:EvilDICOM.Network.Interfaces.IMessage
+  parent: EvilDICOM.Network.Interfaces
+  name: IMessage
+  nameWithType: IMessage
+  fullName: EvilDICOM.Network.Interfaces.IMessage
+- uid: EvilDICOM.Network.Association
+  commentId: T:EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  name: Association
+  nameWithType: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSE
+  commentId: T:EvilDICOM.Network.DIMSE.AbstractDIMSE
+  parent: EvilDICOM.Network.DIMSE
+  name: AbstractDIMSE
+  nameWithType: AbstractDIMSE
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSE
+- uid: EvilDICOM.Network.Interfaces
+  commentId: N:EvilDICOM.Network.Interfaces
+  name: EvilDICOM.Network.Interfaces
+  nameWithType: EvilDICOM.Network.Interfaces
+  fullName: EvilDICOM.Network.Interfaces
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+- uid: EvilDICOM.Network.DIMSE
+  commentId: N:EvilDICOM.Network.DIMSE
+  name: EvilDICOM.Network.DIMSE
+  nameWithType: EvilDICOM.Network.DIMSE
+  fullName: EvilDICOM.Network.DIMSE
+- uid: EvilDICOM.Network.Processors.PDataProcessor.ReadPDataTFs*
+  commentId: Overload:EvilDICOM.Network.Processors.PDataProcessor.ReadPDataTFs
+  name: ReadPDataTFs
+  nameWithType: PDataProcessor.ReadPDataTFs
+  fullName: EvilDICOM.Network.Processors.PDataProcessor.ReadPDataTFs
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader
+  commentId: T:EvilDICOM.Network.Readers.NetworkBinaryReader
+  parent: EvilDICOM.Network.Readers
+  name: NetworkBinaryReader
+  nameWithType: NetworkBinaryReader
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader
+- uid: System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF}
+  commentId: T:System.Collections.Generic.List{EvilDICOM.Network.PDUs.PDataTF}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<PDataTF>
+  nameWithType: List<PDataTF>
+  fullName: System.Collections.Generic.List<EvilDICOM.Network.PDUs.PDataTF>
+  nameWithType.vb: List(Of PDataTF)
+  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.Network.PDUs.PDataTF)
+  name.vb: List(Of PDataTF)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.PDUs.PDataTF
+    name: PDataTF
+    nameWithType: PDataTF
+    fullName: EvilDICOM.Network.PDUs.PDataTF
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.PDUs.PDataTF
+    name: PDataTF
+    nameWithType: PDataTF
+    fullName: EvilDICOM.Network.PDUs.PDataTF
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Readers
+  commentId: N:EvilDICOM.Network.Readers
+  name: EvilDICOM.Network.Readers
+  nameWithType: EvilDICOM.Network.Readers
+  fullName: EvilDICOM.Network.Readers
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: EvilDICOM.Network.Processors.PDataProcessor.GetCommandObject*
+  commentId: Overload:EvilDICOM.Network.Processors.PDataProcessor.GetCommandObject
+  name: GetCommandObject
+  nameWithType: PDataProcessor.GetCommandObject
+  fullName: EvilDICOM.Network.Processors.PDataProcessor.GetCommandObject
+- uid: EvilDICOM.Core.DICOMObject
+  commentId: T:EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  name: DICOMObject
+  nameWithType: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: EvilDICOM.Network.Processors.PDataProcessor.GetDataObject*
+  commentId: Overload:EvilDICOM.Network.Processors.PDataProcessor.GetDataObject
+  name: GetDataObject
+  nameWithType: PDataProcessor.GetDataObject
+  fullName: EvilDICOM.Network.Processors.PDataProcessor.GetDataObject
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  commentId: T:EvilDICOM.Core.Enums.TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  name: TransferSyntax
+  nameWithType: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums

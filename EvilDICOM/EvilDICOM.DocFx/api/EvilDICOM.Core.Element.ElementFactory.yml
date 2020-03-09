@@ -1,0 +1,496 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Element.ElementFactory
+  commentId: T:EvilDICOM.Core.Element.ElementFactory
+  id: ElementFactory
+  parent: EvilDICOM.Core.Element
+  children:
+  - EvilDICOM.Core.Element.ElementFactory.GenerateElement(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Enums.VR,System.Object,EvilDICOM.Core.Enums.TransferSyntax,EvilDICOM.Core.Enums.StringEncoding)
+  - EvilDICOM.Core.Element.ElementFactory.ReadString(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.Element.Tag,System.Object,EvilDICOM.Core.Enums.StringEncoding)
+  langs:
+  - csharp
+  - vb
+  name: ElementFactory
+  nameWithType: ElementFactory
+  fullName: EvilDICOM.Core.Element.ElementFactory
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/_ElementFactory.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ElementFactory
+    path: ../EvilDICOM/Core/Element/_ElementFactory.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nResponsible for building concrete elements from element pieces\n"
+  example: []
+  syntax:
+    content: public class ElementFactory
+    content.vb: Public Class ElementFactory
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Element.ElementFactory.GenerateElement(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Enums.VR,System.Object,EvilDICOM.Core.Enums.TransferSyntax,EvilDICOM.Core.Enums.StringEncoding)
+  commentId: M:EvilDICOM.Core.Element.ElementFactory.GenerateElement(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Enums.VR,System.Object,EvilDICOM.Core.Enums.TransferSyntax,EvilDICOM.Core.Enums.StringEncoding)
+  id: GenerateElement(EvilDICOM.Core.Element.Tag,EvilDICOM.Core.Enums.VR,System.Object,EvilDICOM.Core.Enums.TransferSyntax,EvilDICOM.Core.Enums.StringEncoding)
+  parent: EvilDICOM.Core.Element.ElementFactory
+  langs:
+  - csharp
+  - vb
+  name: GenerateElement(Tag, VR, Object, TransferSyntax, StringEncoding)
+  nameWithType: ElementFactory.GenerateElement(Tag, VR, Object, TransferSyntax, StringEncoding)
+  fullName: EvilDICOM.Core.Element.ElementFactory.GenerateElement(EvilDICOM.Core.Element.Tag, EvilDICOM.Core.Enums.VR, System.Object, EvilDICOM.Core.Enums.TransferSyntax, EvilDICOM.Core.Enums.StringEncoding)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/_ElementFactory.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GenerateElement
+    path: ../EvilDICOM/Core/Element/_ElementFactory.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nGenerates a concrete element class from the VR, tag, data and syntax. Also directs the appropriate data\ninterpretation.\n"
+  example: []
+  syntax:
+    content: public static IDICOMElement GenerateElement(Tag tag, VR vr, object data, TransferSyntax syntax, StringEncoding enc)
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+      description: the tag of the element to be generated
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+      description: the VR of the element to be generated
+    - id: data
+      type: System.Object
+      description: the raw data to be procesed (byte array)
+    - id: syntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+      description: the transfer syntax by which to interepret the data
+    - id: enc
+      type: EvilDICOM.Core.Enums.StringEncoding
+    return:
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: a concrete DICOM element that uses the interface IDICOMElement
+    content.vb: Public Shared Function GenerateElement(tag As Tag, vr As VR, data As Object, syntax As TransferSyntax, enc As StringEncoding) As IDICOMElement
+  overload: EvilDICOM.Core.Element.ElementFactory.GenerateElement*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Element.ElementFactory.ReadString(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.Element.Tag,System.Object,EvilDICOM.Core.Enums.StringEncoding)
+  commentId: M:EvilDICOM.Core.Element.ElementFactory.ReadString(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.Element.Tag,System.Object,EvilDICOM.Core.Enums.StringEncoding)
+  id: ReadString(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.Element.Tag,System.Object,EvilDICOM.Core.Enums.StringEncoding)
+  parent: EvilDICOM.Core.Element.ElementFactory
+  langs:
+  - csharp
+  - vb
+  name: ReadString(VR, Tag, Object, StringEncoding)
+  nameWithType: ElementFactory.ReadString(VR, Tag, Object, StringEncoding)
+  fullName: EvilDICOM.Core.Element.ElementFactory.ReadString(EvilDICOM.Core.Enums.VR, EvilDICOM.Core.Element.Tag, System.Object, EvilDICOM.Core.Enums.StringEncoding)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Element/_ElementFactory.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadString
+    path: ../EvilDICOM/Core/Element/_ElementFactory.cs
+    startLine: 125
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Element
+  summary: "\nReads string data and creates the appropriate DICOM element\n"
+  example: []
+  syntax:
+    content: public static IDICOMElement ReadString(VR vr, Tag tag, object data, StringEncoding enc)
+    parameters:
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+      description: the VR of the element to be generated
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+    - id: data
+      type: System.Object
+      description: the string data as an object (fresh from the DICOM reader)
+    - id: enc
+      type: EvilDICOM.Core.Enums.StringEncoding
+    return:
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+      description: a concrete DICOM element that uses the interface IDICOMElement
+    content.vb: Public Shared Function ReadString(vr As VR, tag As Tag, data As Object, enc As StringEncoding) As IDICOMElement
+  overload: EvilDICOM.Core.Element.ElementFactory.ReadString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Core.Element.ElementFactory.GenerateElement*
+  commentId: Overload:EvilDICOM.Core.Element.ElementFactory.GenerateElement
+  name: GenerateElement
+  nameWithType: ElementFactory.GenerateElement
+  fullName: EvilDICOM.Core.Element.ElementFactory.GenerateElement
+- uid: EvilDICOM.Core.Element.Tag
+  commentId: T:EvilDICOM.Core.Element.Tag
+  parent: EvilDICOM.Core.Element
+  name: Tag
+  nameWithType: Tag
+  fullName: EvilDICOM.Core.Element.Tag
+- uid: EvilDICOM.Core.Enums.VR
+  commentId: T:EvilDICOM.Core.Enums.VR
+  parent: EvilDICOM.Core.Enums
+  name: VR
+  nameWithType: VR
+  fullName: EvilDICOM.Core.Enums.VR
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  commentId: T:EvilDICOM.Core.Enums.TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  name: TransferSyntax
+  nameWithType: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax
+- uid: EvilDICOM.Core.Enums.StringEncoding
+  commentId: T:EvilDICOM.Core.Enums.StringEncoding
+  parent: EvilDICOM.Core.Enums
+  name: StringEncoding
+  nameWithType: StringEncoding
+  fullName: EvilDICOM.Core.Enums.StringEncoding
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  commentId: T:EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  name: IDICOMElement
+  nameWithType: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Core.Element.ElementFactory.ReadString*
+  commentId: Overload:EvilDICOM.Core.Element.ElementFactory.ReadString
+  name: ReadString
+  nameWithType: ElementFactory.ReadString
+  fullName: EvilDICOM.Core.Element.ElementFactory.ReadString

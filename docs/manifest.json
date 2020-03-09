@@ -4,12 +4,4638 @@
   "xrefmap": "xrefmap.yml",
   "files": [
     {
-      "type": "Conceptual",
-      "source_relative_path": "articles/anonymization.md",
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.AnonymizationQueue.ProgressUpdatedHandler.yml",
       "output": {
         ".html": {
-          "relative_path": "articles/anonymization.html",
-          "hash": "+DgytuE0NpB8624giHrOGQ=="
+          "relative_path": "api/EvilDICOM.Anonymization.AnonymizationQueue.ProgressUpdatedHandler.html",
+          "hash": "vNHfEEFg4Xm7duKJyRgDmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.AnonymizationQueue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.AnonymizationQueue.html",
+          "hash": "4VfIo0g0vHZnUfDMEFjTUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Anonymizers.DICOMFileType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Anonymizers.DICOMFileType.html",
+          "hash": "PZE72/R7wS54iooDveAzpw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Anonymizers.DICOMStudy.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Anonymizers.DICOMStudy.html",
+          "hash": "DZvJeTAk21gDmoPAIl3YXA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Anonymizers.DateAnonymizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Anonymizers.DateAnonymizer.html",
+          "hash": "tmnXHvyK2MWsLDeca3v5rA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Anonymizers.NameAnonymizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Anonymizers.NameAnonymizer.html",
+          "hash": "RCnsz7QmyKTr141STAC+Dw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Anonymizers.PatientIdAnonymizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Anonymizers.PatientIdAnonymizer.html",
+          "hash": "f6hrsGeDPUNmRKNiLbNkLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Anonymizers.PrivateTagAnonymizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Anonymizers.PrivateTagAnonymizer.html",
+          "hash": "xuJMfm+BOzYeNiMTvEMgLg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Anonymizers.ProfileAnonymizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Anonymizers.ProfileAnonymizer.html",
+          "hash": "ya3LktMfaF6pYcWhgl8pPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.html",
+          "hash": "uHDIJhnke8Q0z7Lox3WKDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Anonymizers.UIDAnonymizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Anonymizers.UIDAnonymizer.html",
+          "hash": "BAv5LpZ/Aflvg+LRVUeouQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Anonymizers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Anonymizers.html",
+          "hash": "BUgv3CcdcPMMcTEQ7TLFcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Helpers.DateHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Helpers.DateHelper.html",
+          "hash": "WEiZ1aJYPY7jyMoRLtN5Vw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Helpers.html",
+          "hash": "ypUGxdxtOmXwQqaINB7DJA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.IAnonymizer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.IAnonymizer.html",
+          "hash": "ltKxNMm3VCouj4HVclLDoQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Settings.AnonymizationSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Settings.AnonymizationSettings.html",
+          "hash": "Y3hG/uuzCdLIlez/7WjwMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Settings.DateSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Settings.DateSettings.html",
+          "hash": "7upd49Q48asbsTKXAObVYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.Settings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.Settings.html",
+          "hash": "gPyKYgSaICF8KgwKsMXIzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Anonymization.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Anonymization.html",
+          "hash": "inSCL6ViB9/fzjOpbay/Fw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Drawing.Renderers.FieldRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Drawing.Renderers.FieldRenderer.html",
+          "hash": "LdS4koYUepVSR0uy6tVUdw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Drawing.Renderers.GraticuleRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Drawing.Renderers.GraticuleRenderer.html",
+          "hash": "cBAGZUj5Vg4KFAeOGTvRug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Drawing.Renderers.SliceRenderer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Drawing.Renderers.SliceRenderer.html",
+          "hash": "iqPT/Z/B2h1c/l9QBGFlcw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Drawing.Renderers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Drawing.Renderers.html",
+          "hash": "1ZpViKy3Bzhqu+9hKWqv/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Drawing.StructureLook.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Drawing.StructureLook.html",
+          "hash": "7F19GWqzq5uje8zy5PNMyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Drawing.StructureLooks.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Drawing.StructureLooks.html",
+          "hash": "A8g/V0jbn1fNTj8vyD/uyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Drawing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Drawing.html",
+          "hash": "NoSG1cXVnI9TAbAmlg4I4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Extensions.ArrayExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Extensions.ArrayExtensions.html",
+          "hash": "w+7qeS+oYVdi40avMZ40IA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Extensions.DVHDataExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Extensions.DVHDataExtensions.html",
+          "hash": "aVJNnILH9MyEXupmmSDOuQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Extensions.DoseMatrixExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Extensions.DoseMatrixExtensions.html",
+          "hash": "fqFmYC1DmKQEh7gf0sUqdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Extensions.MatExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Extensions.MatExtensions.html",
+          "hash": "fG8DvLoxyFFLX5Q5syf3QA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Extensions.MatrixExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Extensions.MatrixExtensions.html",
+          "hash": "xF26XAdMRyK8g0kygUn7nA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Extensions.StructureExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Extensions.StructureExtensions.html",
+          "hash": "2vEt3DF1RllpFN09vpwPiw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Extensions.html",
+          "hash": "QtpmLqvUxsQKc6Lbt+6MIw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.html",
+          "hash": "5dtEs2d7uNvRolzpXqKtew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Geometry.Isosurfaces.Tables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Geometry.Isosurfaces.Tables.html",
+          "hash": "846oztEjbiAI3MbOYOS1+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Geometry.Isosurfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Geometry.Isosurfaces.html",
+          "hash": "gwwxob7XtgAVKC6Htnv40g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Geometry.Mesh.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Geometry.Mesh.html",
+          "hash": "X33oEzOjvOD5VPQ7RjoS7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Geometry.ObjFileWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Geometry.ObjFileWriter.html",
+          "hash": "v5XrtfgkV0bbFEvDfoCWww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Geometry.Triangle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Geometry.Triangle.html",
+          "hash": "lLdcZ8Mv39FKJsNarVxf2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Geometry.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Geometry.html",
+          "hash": "0UEdifC/wVz699NinUnL3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Helpers.ContourHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Helpers.ContourHelper.html",
+          "hash": "7za22qvb9wg+5mHgQD77iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Helpers.FloatMat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Helpers.FloatMat.html",
+          "hash": "Du7S7SAmHQXz61pdHYBaRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Helpers.IndexCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Helpers.IndexCalculator.html",
+          "hash": "5+ecY/7HcXYneMzZm3et9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Helpers.MatMaker.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Helpers.MatMaker.html",
+          "hash": "WmW7KB7srnQj8/fWQzAhBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Helpers.MathHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Helpers.MathHelper.html",
+          "hash": "5OTXrydU+OJ9jh9n5slyAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Helpers.Plane.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Helpers.Plane.html",
+          "hash": "HA1TmmBZRK9EWvN/g9yicw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Helpers.Transform.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Helpers.Transform.html",
+          "hash": "5Rq+GoHW1iWRaZRkOjFgyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Helpers.VolumeCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Helpers.VolumeCalculator.html",
+          "hash": "ko+j4PCzlxPuKNRlKjQGPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Helpers.WindowLevelPreset.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Helpers.WindowLevelPreset.html",
+          "hash": "9/2q9nGCVqNWNkp6iRHITA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Helpers.WindowLevelPresets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Helpers.WindowLevelPresets.html",
+          "hash": "DPw17Jb6L3rPg+s4+PnFmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Helpers.html",
+          "hash": "lRih3+Ohf5gri22ZxYKwCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.IO.DICOM2Beam.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.IO.DICOM2Beam.html",
+          "hash": "1a2oh22pVZNBffwVg4uurw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.IO.DICOM2DRR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.IO.DICOM2DRR.html",
+          "hash": "my+61z3x35biJ73VZbxKvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.IO.DICOM2DoseMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.IO.DICOM2DoseMatrix.html",
+          "hash": "2TlShLCDpTxJhHY0D8aU4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.IO.DICOM2ImageMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.IO.DICOM2ImageMatrix.html",
+          "hash": "hfH2gHpPmSOuovmCswvZqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.IO.DICOM2Matrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.IO.DICOM2Matrix.html",
+          "hash": "dAqxGIdYrHPT3jrRsne7ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.IO.DICOM2Plan.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.IO.DICOM2Plan.html",
+          "hash": "1ii1cpr/7ELws+vo4ZBg9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.IO.DICOM2StructureSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.IO.DICOM2StructureSet.html",
+          "hash": "EdGcQF8ctFQZDWpQMNGKxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.IO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.IO.html",
+          "hash": "T/Gu42kd+EavJYqgjksleg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Image.Bounds.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Image.Bounds.html",
+          "hash": "Gc7kuCN/AZQRHFTUiSSJpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Image.ImageContours.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Image.ImageContours.html",
+          "hash": "bixkP205EywQSMF0IfFNtA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Image.ImageMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Image.ImageMatrix.html",
+          "hash": "fazEDQ7TOsYC+tlZJ/Jkbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Image.Matrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Image.Matrix.html",
+          "hash": "u7aAVylTwzXTKQpBDL+XHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Image.MatrixHistogram.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Image.MatrixHistogram.html",
+          "hash": "kljL/a45HirZJHdkFCWzjA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Image.Ops.Cropper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Image.Ops.Cropper.html",
+          "hash": "c1GaANrp5JAAP/AsEj+QHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Image.Ops.Resampler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Image.Ops.Resampler.html",
+          "hash": "15qToVnOW4eugjhBojaohQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Image.Ops.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Image.Ops.html",
+          "hash": "5vMvSVsAU8ZxbXthi2qUJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Image.Slicer3D.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Image.Slicer3D.html",
+          "hash": "TV+kYZzluoseDvqxfZ6NRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Image.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Image.html",
+          "hash": "DRv+NNNyDXe5EXPKp75KWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Interfaces.IMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Interfaces.IMatrix.html",
+          "hash": "yYNNONzN+QKn28FJzMRq8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.Interfaces.html",
+          "hash": "BhAu49WV+FRFSaaCGRMl9w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.DRR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.DRR.html",
+          "hash": "nQbPADfTSOu9w2cIoyH9MA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.DVH.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.DVH.html",
+          "hash": "mXPsM/f4Wb2gCpEh4BHMRQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.DVHCalculator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.DVHCalculator.html",
+          "hash": "lzAf6Aoq6sR9Khay4aeAMQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.DoseMatrix.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.DoseMatrix.html",
+          "hash": "yJq7m5dc8xZd+XpD7ODPtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.IsodoseLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.IsodoseLevel.html",
+          "hash": "+x+uCWuI1nunHu3jHK5sXg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.Meta.ApprovalMeta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.Meta.ApprovalMeta.html",
+          "hash": "Vime17utdmtoGvU5TNReRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.Meta.BeamMeta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.Meta.BeamMeta.html",
+          "hash": "8oC0sQhtEa76dscDp9SH/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.Meta.CalculationOptionMeta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.Meta.CalculationOptionMeta.html",
+          "hash": "TeQksiMZw2CcLUW3O1eadg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.Meta.PlanMeta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.Meta.PlanMeta.html",
+          "hash": "IONkjMJrjaqe435YrgP5QQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.Meta.ReferencePointMeta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.Meta.ReferencePointMeta.html",
+          "hash": "yY7YnG2uw8j23yq9vhzD0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.Meta.SliceContourMeta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.Meta.SliceContourMeta.html",
+          "hash": "PuVkcxw51Kr0ZM9fHYzJHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.Meta.StructureMeta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.Meta.StructureMeta.html",
+          "hash": "WikSRjj9h4B8jY5Q9IRuIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.Meta.StructureSetMeta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.Meta.StructureSetMeta.html",
+          "hash": "zgunr6T5S0DdC6GMruhtrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.Meta.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.Meta.html",
+          "hash": "MtVPCsV4efByiytaU0kIVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.TargetIndices.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.TargetIndices.html",
+          "hash": "nEtrsHVBlZP7mflmPajY6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.CV.RT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.CV.RT.html",
+          "hash": "LsoG1XKS/olIg02eE0Qb3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.DICOMData-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.DICOMData-1.html",
+          "hash": "XeWK7bVWZisJTXo1fgp6zA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.DICOMForge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.DICOMForge.html",
+          "hash": "hqzR+i4Dz/PkiN9RaVENmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.DICOMObject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.DICOMObject.html",
+          "hash": "RZHNSiU2XCYqGtjaD7aPOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.DICOMObjectWrapper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.DICOMObjectWrapper.html",
+          "hash": "rnMtaAURuuaHDg6G4qn1Ww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Dictionaries.EncodingDictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Dictionaries.EncodingDictionary.html",
+          "hash": "mzaiuh47WXmwBbF/yDzoTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Dictionaries.TagDictionary.TagInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Dictionaries.TagDictionary.TagInfo.html",
+          "hash": "+uwMFF1WyhgfzNRIReAiqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Dictionaries.TagDictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Dictionaries.TagDictionary.html",
+          "hash": "5P6UDsCp07aJdF0HnZPBog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Dictionaries.VRDictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Dictionaries.VRDictionary.html",
+          "hash": "hZY9CrPmCXSoJ22DdSNMvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Dictionaries.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Dictionaries.html",
+          "hash": "DckVeLfZyUyCT/zMEvI2lA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.AbstractElement-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.AbstractElement-1.html",
+          "hash": "Trl83+lJm5eEV+c0Dsl3SQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.Age.Unit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.Age.Unit.html",
+          "hash": "srCO40C7h8/OrtNJ0upcxQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.Age.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.Age.html",
+          "hash": "GUHo/q1xIlNmrBK5CvEVSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.AgeString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.AgeString.html",
+          "hash": "RxzTx3UgT/SAywtRdJOoug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.ApplicationEntity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.ApplicationEntity.html",
+          "hash": "V8OGmX2FohN4z3NxGISQBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.AttributeTag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.AttributeTag.html",
+          "hash": "FgOjQOzRaHiuzT04m8CFvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.CodeString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.CodeString.html",
+          "hash": "DAd4xSdzgr0zcNCUpjL4Lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.Date.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.Date.html",
+          "hash": "1xLThmawVXpmtodH8z4E7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.DateTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.DateTime.html",
+          "hash": "1DMUB4Sby3VW1hUjzPTN4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.DecimalString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.DecimalString.html",
+          "hash": "27nIMK3gxiQPu3HEV89+/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.ElementFactory.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.ElementFactory.html",
+          "hash": "RPFbUyyz2v7yn43epu2nLQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.FloatingPointDouble.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.FloatingPointDouble.html",
+          "hash": "WBTJyi5aM26z2Xz0Z1/kyA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.FloatingPointSingle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.FloatingPointSingle.html",
+          "hash": "xbEKYui2C6iX/+MLkhTyyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.IntegerString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.IntegerString.html",
+          "hash": "3+K4BMc6cWOZQD/+NQRjLA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.LongString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.LongString.html",
+          "hash": "xPmkdHi3TB/trlYRRE4zhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.LongText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.LongText.html",
+          "hash": "QjRE40gI2LiwXfCg6uYbPw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.Other64BitVeryLong.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.Other64BitVeryLong.html",
+          "hash": "+JO1FzC9BX2MaA4x5crb0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.OtherByteString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.OtherByteString.html",
+          "hash": "LL6DAXjNsZjPlUqdfexnBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.OtherDoubleString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.OtherDoubleString.html",
+          "hash": "t6o5oY1EIoZVJmn7GDxgZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.OtherFloatString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.OtherFloatString.html",
+          "hash": "r9R/Fau8KSCCcL/ejOGQ7g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.OtherLongString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.OtherLongString.html",
+          "hash": "Mzgyz6yM5RPGiMaLirWhOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.OtherWordString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.OtherWordString.html",
+          "hash": "VwC+gHqW1G/hUnOda7+/zQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.PersonName.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.PersonName.html",
+          "hash": "dqZqip1JgOsEPL+n53UWxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.RangeableDateTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.RangeableDateTime.html",
+          "hash": "H2bv/xk5pN7ykoJ5B0y3JA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.Sequence.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.Sequence.html",
+          "hash": "48GKd9OBQoXNoEoYbwveaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.ShortString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.ShortString.html",
+          "hash": "SRIM0wQ7yNwZHxW1yCBoDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.ShortText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.ShortText.html",
+          "hash": "30yo2c26ckOR2oxk5EquFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.Signed64bitVeryLong.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.Signed64bitVeryLong.html",
+          "hash": "2lMl8nmg4UdqwEbrBx6W/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.SignedLong.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.SignedLong.html",
+          "hash": "kgVzEUh3iW26j+z/G0+l1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.SignedShort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.SignedShort.html",
+          "hash": "lknTC9nbX+gUiDfe0ky0Pw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.Tag.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.Tag.html",
+          "hash": "dTPJQHqiDE+/d3V7JMi9sw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.Time.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.Time.html",
+          "hash": "5v6d+uw1mS3CEvnzNssebQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.UniqueIdentifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.UniqueIdentifier.html",
+          "hash": "iUC3+mR2LgKRuatrxVGX7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.UniversalResourceId.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.UniversalResourceId.html",
+          "hash": "TE1T8KwxpN/zP9SUjMoKcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.Unknown.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.Unknown.html",
+          "hash": "aF8r0jcCm869qvJ5h3PBhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.UnlimitedCharacter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.UnlimitedCharacter.html",
+          "hash": "VZN/WjeBn4FTEXTROq/k0Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.UnlimitedText.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.UnlimitedText.html",
+          "hash": "ijF2b63DDGwOvdaQw0u6SA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.Unsigned64bitVeryLong.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.Unsigned64bitVeryLong.html",
+          "hash": "GaM8jMHDitvUIRP0sWv6+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.UnsignedLong.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.UnsignedLong.html",
+          "hash": "REbFhEKiEHm2H+h8KDiEUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.UnsignedShort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.UnsignedShort.html",
+          "hash": "6D1nOBZqQueseltQY45fBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Element.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Element.html",
+          "hash": "PKfydegH2zwt9GOPFtiIBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Enums.LogPriority.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Enums.LogPriority.html",
+          "hash": "GrYcm8W/S9ET4sgoWyddsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Enums.Orientation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Enums.Orientation.html",
+          "hash": "VEPcaTaEYT7LuHN5i5llkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Enums.Priority.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Enums.Priority.html",
+          "hash": "JFVOtKFKKVTwKaCo+xcQ3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Enums.SOPClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Enums.SOPClass.html",
+          "hash": "xI0gUBAv9+iUasxWeuQtkA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Enums.StringEncoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Enums.StringEncoding.html",
+          "hash": "qX0FXwjxpOVplTjtx5/08A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Enums.TransferSyntax.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Enums.TransferSyntax.html",
+          "hash": "HRiSxo5kEiG4iEBRK8vO4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Enums.VR.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Enums.VR.html",
+          "hash": "LMy9HHuVK+8uD0N4qBcC/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Enums.VREncoding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Enums.VREncoding.html",
+          "hash": "oswf7TmL4cMewdw2b6uJkg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Enums.html",
+          "hash": "aS01OzOyFTGmVfZSiAw97Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Extensions.ByteExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Extensions.ByteExtensions.html",
+          "hash": "46YBtL7xaiDcSKswPaUT3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Extensions.DICOMObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Extensions.DICOMObjectExtensions.html",
+          "hash": "s7O7iKaQ/em41ERRRQhSQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Extensions.IDICOMElementExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Extensions.IDICOMElementExtensions.html",
+          "hash": "Q48xf923oF92p7id5IqoEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Extensions.IDICOMElementListExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Extensions.IDICOMElementListExtensions.html",
+          "hash": "aq+Y1V/gzwCbu5RYle2Xag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Extensions.PixelExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Extensions.PixelExtensions.html",
+          "hash": "StTJ8igklD/7DxI6W/VOcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Extensions.StringExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Extensions.StringExtensions.html",
+          "hash": "kg9UGllA9JQd4oq+RT/MHw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Extensions.html",
+          "hash": "5YQdV3mtlARJP/mhRZAHfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.AbstractSyntax.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.AbstractSyntax.html",
+          "hash": "Od89jJeojd2q425nlyeqKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.ArrayHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.ArrayHelper.html",
+          "hash": "S+9gr4KXU5mi55mGtFn5dw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.ByteHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.ByteHelper.html",
+          "hash": "aCUbduhBtGe154FdzqSzHQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.Constants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.Constants.html",
+          "hash": "yGsB07ikz2k+d7Xiy+z7/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.DICOMComparer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.DICOMComparer.html",
+          "hash": "63NT/Dh24L1h/lLdAn0n1Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.DoubleHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.DoubleHelper.html",
+          "hash": "kHu4DSpsV8aN/U9o/7zYvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.EnumHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.EnumHelper.html",
+          "hash": "lMGeJrr7Tx8HCKCekDb2VQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.ExceptionHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.ExceptionHelper.html",
+          "hash": "VOsbwRbf7rUf8yyx7v/+Cw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.ISO3166Helper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.ISO3166Helper.html",
+          "hash": "Nedeqcz8zJxkev4dnlpxhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.IndexHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.IndexHelper.html",
+          "hash": "e/kn6Hi1YAusdY2w2a0L9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.PatientPosition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.PatientPosition.html",
+          "hash": "8AgVPXzlGQraXZy/hqJnbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.PersonNameHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.PersonNameHelper.html",
+          "hash": "SXv68NXO8cew5n/Wdv0ZbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.SOPClassDictionary.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.SOPClassDictionary.html",
+          "hash": "T+kecl22i5oEv9y/dU+PjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.SOPClassHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.SOPClassHelper.html",
+          "hash": "ghSm2Uab3GrY9Z7+eRCEFA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.SOPClassUID.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.SOPClassUID.html",
+          "hash": "uo+7EnVMwQzuzY1shcH4JQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.TagHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.TagHelper.html",
+          "hash": "WOtqNaZnmJ6MD7t7ns+PDA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.TagSorter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.TagSorter.html",
+          "hash": "cwNwb7G8VrQGyJ0MHVfQZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.TransferSyntaxHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.TransferSyntaxHelper.html",
+          "hash": "P0+XBUpq14zRmLHDwXs0Ow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.Tryer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.Tryer.html",
+          "hash": "Rzzl8IFSKHi/tO/5IyKG/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.UIDHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.UIDHelper.html",
+          "hash": "oSqDM8Dkj+tht3gIb+W+Ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.Vector3.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.Vector3.html",
+          "hash": "QDmubIpSm81mnrQy+DbQEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Helpers.html",
+          "hash": "6Fzt/jDcrh0n4z38CjkWjQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.html",
+          "hash": "wc6sCyb9sFhbHYHub/beRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.BigEndianReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.BigEndianReader.html",
+          "hash": "0VcCs6Bm1iqutKZta8G9dA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.BigEndianWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.BigEndianWriter.html",
+          "hash": "DbefyYYL0uDRn9xJlcp/Yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.DICOMString.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.DICOMString.html",
+          "hash": "et3o+5Fgv1qgg6qFmGUx8Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.DataComposer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.DataComposer.html",
+          "hash": "iGn9uXHDQ4kZxJLhC8uryw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.DataPadder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.DataPadder.html",
+          "hash": "XUiH1DDPd57xaRzYOVE71Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.DataRestriction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.DataRestriction.html",
+          "hash": "FZOMhVk/WykR5SeEPKRjmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.LittleEndianReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.LittleEndianReader.html",
+          "hash": "K2cKsFuQMfxtd+ovj4B5VQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.LittleEndianWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.LittleEndianWriter.html",
+          "hash": "0xn29ozVWS5HGh1wdc4bIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.MultiplicityComposer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.MultiplicityComposer.html",
+          "hash": "fOKRCRZf+coULuU0cipGEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.MultiplicityReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.MultiplicityReader.html",
+          "hash": "54TA2bsLIwd1xgo2rYsMGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.StringDataComposer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.StringDataComposer.html",
+          "hash": "nJuZWNZA7XTuXOPkvSc2mQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.StringDataParser.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.StringDataParser.html",
+          "hash": "Sij3wV4wLErRw2+Kd+7Jcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Data.html",
+          "hash": "REXKXxcx8o7bRBOGJ4uihw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Reading.DICOMBinaryReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Reading.DICOMBinaryReader.html",
+          "hash": "S2aO1BURQdtslEckIol9qQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Reading.DICOMElementReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Reading.DICOMElementReader.html",
+          "hash": "nomyAbQ2nqIPtT+8/u+E2A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Reading.DICOMFileReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Reading.DICOMFileReader.html",
+          "hash": "MuOox11jaY/Wk1rT3I13hw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Reading.DICOMObjectReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Reading.DICOMObjectReader.html",
+          "hash": "HYisg7mxSko1qix3UsU3tg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Reading.DICOMPreambleReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Reading.DICOMPreambleReader.html",
+          "hash": "EMZScLjSKVle2hA2TLQD/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Reading.DataReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Reading.DataReader.html",
+          "hash": "MWBCDZish8sCjoALvzT3Xg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Reading.LengthReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Reading.LengthReader.html",
+          "hash": "vMhG+T3eOPPdFvB9Av3CCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Reading.SequenceItemReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Reading.SequenceItemReader.html",
+          "hash": "X2ADfhWsusdTC/ETHc4x/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Reading.SequenceReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Reading.SequenceReader.html",
+          "hash": "XzA2cag8BcfFmQ2Tn167IA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Reading.SliceReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Reading.SliceReader.html",
+          "hash": "JKFUBN2+UwWca8/EdO/hDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Reading.TagReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Reading.TagReader.html",
+          "hash": "cbib7XBNWvpXo/55t3oLBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Reading.VRReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Reading.VRReader.html",
+          "hash": "ZOSd0SW8N5sZifBk5u8kww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Reading.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Reading.html",
+          "hash": "Qd6V5qf68eSfOWDfhcFMvg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMBinaryWriter.html",
+          "hash": "r8Z3I4pCwDXH3yeOlxlrPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMElementWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMElementWriter.html",
+          "hash": "BRUzAzIVAA9uApfS/yFP9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMFileWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMFileWriter.html",
+          "hash": "g8IJxD5dwv69IpTu3J+m8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMIOSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMIOSettings.html",
+          "hash": "FzdwHxWdtD01xQZwpRgJQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMObjectWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMObjectWriter.html",
+          "hash": "tFfcaZMuxNI3K6+i7WtrUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMPreambleWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMPreambleWriter.html",
+          "hash": "5nab6Lw6CMyKOJFvjaBC0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMTagWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.DICOMTagWriter.html",
+          "hash": "+NSefUgglOIlHo7xvlh1vQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.DataWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.DataWriter.html",
+          "hash": "ZTcP24ZoqA4cq8PIs4x1aQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.GroupWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.GroupWriter.html",
+          "hash": "YlDK/gVXI07t4F8PGHdm6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.LengthWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.LengthWriter.html",
+          "hash": "MWjLvoPnBy50ziGPm/AlKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.SequenceItemWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.SequenceItemWriter.html",
+          "hash": "iBqu9VNru871Cf2It3oJIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.SequenceWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.SequenceWriter.html",
+          "hash": "s+Yr9hmi0UP1QTItkPIg1w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.VRWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.VRWriter.html",
+          "hash": "2K1WVHEcRPplD3P13y4RFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.IO.Writing.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.IO.Writing.html",
+          "hash": "sPcgZxHSyxNL+i3srchcyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Image.PixelSlicer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Image.PixelSlicer.html",
+          "hash": "/9+MWJvHvp0CxvACfrY5iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Image.PixelStream.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Image.PixelStream.html",
+          "hash": "EreIjCqtNpYE3+YR9cfc3g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Image.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Image.html",
+          "hash": "ViuLNiaUNJyDSEhwIpZuCg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Interfaces.IDICOMBinaryReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Interfaces.IDICOMBinaryReader.html",
+          "hash": "OpmxoxUIXf23r7DLrOobfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Interfaces.IDICOMElement.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Interfaces.IDICOMElement.html",
+          "hash": "B+b+u5lstO/8jX6Ywln8Dg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Interfaces.IEncoderDecoder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Interfaces.IEncoderDecoder.html",
+          "hash": "igZFUduHcckZBw/3RWiw2g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Interfaces.IIOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Interfaces.IIOD.html",
+          "hash": "kLWns+siRyIlArTd0jp9ig=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Interfaces.html",
+          "hash": "AIzg+Yw/VCw4sjajvg2gKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Logging.EvilLogger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Logging.EvilLogger.html",
+          "hash": "UCWruDSwMYPNd+S6IF6epw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Logging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Logging.html",
+          "hash": "PPQuJCUtcr3FI6NI/CgmZg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Modules.FileMetadata.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Modules.FileMetadata.html",
+          "hash": "xdNmyYHbM3MF7NOVZL1jsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Modules.Patient.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Modules.Patient.html",
+          "hash": "XnA0tiQE6CeHgnP7pdVrwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Modules.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Modules.html",
+          "hash": "GOPrDHg57EqyAfUtn7jcTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Selection.DICOMSelector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Selection.DICOMSelector.html",
+          "hash": "O9QvAgVARTH03uSLdfMFAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Selection.ListExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Selection.ListExtensions.html",
+          "hash": "QaPlKfWC4tdCTFebVV1NmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Selection.SequenceSelector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Selection.SequenceSelector.html",
+          "hash": "29BHYbuNXw/7ipSBNrTjow=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Selection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Selection.html",
+          "hash": "v9LNW5RdY2/u0H1ziDc+9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.html",
+          "hash": "Lpl9IkUSrrA5BMV0v/apog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Association.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Association.html",
+          "hash": "5maaQWCTQRaNZcLUajYCWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Associations.PDUs.Abort.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Associations.PDUs.Abort.html",
+          "hash": "FWX0ycrmOOlqaVc6PuCW7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Associations.PDUs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Associations.PDUs.html",
+          "hash": "VML98/cuhpEcyEXNo784Kw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DICOMSCP.StopHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DICOMSCP.StopHandler.html",
+          "hash": "lVfJmG0zQLWExTfy+oBPIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DICOMSCP.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DICOMSCP.html",
+          "hash": "z04DwhiTRB34T9EwQEBZww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DICOMSCU.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DICOMSCU.html",
+          "hash": "lDL6Vf1FiX4tgzQzVEkB0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DICOMServiceClass.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DICOMServiceClass.html",
+          "hash": "LjUG6gtWFguP4Vkv6DTlPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.AbstractDIMSE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.AbstractDIMSE.html",
+          "hash": "YC/fYKVLeT4tqXRt4KtQKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.AbstractDIMSEBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.AbstractDIMSEBase.html",
+          "hash": "I3cuJHEzOB4cCzfEpGAB+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.AbstractDIMSERequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.AbstractDIMSERequest.html",
+          "hash": "wzQxzUrQtGRR22aaMLJu5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.AbstractDIMSEResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.AbstractDIMSEResponse.html",
+          "hash": "FbbNwmXqb43CqLAn6FWBfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest.html",
+          "hash": "YNPsJD8TgXu16YK4ry10iQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.Actions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.Actions.html",
+          "hash": "DqtkRdATIN7eKmoj4S1cGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.CCancel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.CCancel.html",
+          "hash": "vDkvikuXhSwNVhz5hsJIQQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.CEchoRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.CEchoRequest.html",
+          "hash": "M+OTo5GKH+4m02U5fynDUw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.CEchoResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.CEchoResponse.html",
+          "hash": "fxPxIUWzpxaBT8SD+ErX7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.CFindRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.CFindRequest.html",
+          "hash": "/QXgngOE89c1CNJ0rqYmvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.CFindResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.CFindResponse.html",
+          "hash": "UzsSVJW1ItvRDrmCtpTQNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.CGetRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.CGetRequest.html",
+          "hash": "Vrv93UYYwd+Fa6lLCxAQpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.CGetResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.CGetResponse.html",
+          "hash": "i+0xvKxP2r+Nvkaub+R4Yg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.CMoveRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.CMoveRequest.html",
+          "hash": "SZyl8RmXtpsAnCvfMxrgQA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.CMoveResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.CMoveResponse.html",
+          "hash": "gIrHmCIN2X2KyJPF+g9diA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.CStoreRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.CStoreRequest.html",
+          "hash": "dvpvDWWlZANFuwR1jrEzrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.CStoreResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.CStoreResponse.html",
+          "hash": "m0wL79i1+dlHEUCCGL1uCA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.AbstractDIMSEIOD.html",
+          "hash": "k5I1BB20DC4GagHHJBCafA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindDoseIOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindDoseIOD.html",
+          "hash": "yl47j0myJHus6YOc7fOH0w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindImageIOD.html",
+          "hash": "FEtZtF7U2G2PoovMlAo1Sg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindInstanceIOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindInstanceIOD.html",
+          "hash": "qTdsCcDf92hMh27Eul1TRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindIonBeamsRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindIonBeamsRecord.html",
+          "hash": "FXGigaEiHR8pDEtrULDUHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindPatientIOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindPatientIOD.html",
+          "hash": "kMgTAbkRcSgtlPiS2OOAzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindPlanIOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindPlanIOD.html",
+          "hash": "6s9N8opRcWg/KmcBoeAU5A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindRTBeamsRecord.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindRTBeamsRecord.html",
+          "hash": "N7UCA7LLHSRIVE0U+yebKQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindRTImageIOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindRTImageIOD.html",
+          "hash": "OtaRBoL7WLk6pOiseIn0GA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindRequestIOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindRequestIOD.html",
+          "hash": "6PCzms2SpeeFvCrZndWgkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD.html",
+          "hash": "+cbVw8D/bLRRBlFbDBdN+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD.html",
+          "hash": "squHhIEjt7PuYPAbnGLyGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindTreatmentRecordIOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CFindTreatmentRecordIOD.html",
+          "hash": "T5AvQdMaZW9IhuyXsq6IeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CMoveIOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.CMoveIOD.html",
+          "hash": "TU/8oQPKFz+COcbUS71AWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.IOD.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.IOD.html",
+          "hash": "rPya1X/zzlUp0HUbQQeCaQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.NActionRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.NActionRequest.html",
+          "hash": "N2nPCa/mb86REbTWG2dtAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.NActionResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.NActionResponse.html",
+          "hash": "ickZRXiucdaqwQuRs96D9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.NEventReportRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.NEventReportRequest.html",
+          "hash": "SaKm1KgQ0NuwwwvlpGv6OA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.NEventReportResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.NEventReportResponse.html",
+          "hash": "N/ckiVUXk2RffT9MhZFPVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.ReqAbstractDIMSEBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.ReqAbstractDIMSEBase.html",
+          "hash": "NJMrDZ3YCnBRNvUT0lOeOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.DIMSE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.DIMSE.html",
+          "hash": "mXcLMqIHCsjKHmJ3BOldGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Entity.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Entity.html",
+          "hash": "05EvwOYN5/MFboAha5h8yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.AbortReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.AbortReason.html",
+          "hash": "qLCLy3w/kStnP8TqeqYO+w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.AbortSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.AbortSource.html",
+          "hash": "fIj2CQx5uXxWHLM0oGEqew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.CommandDataSetType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.CommandDataSetType.html",
+          "hash": "ZmUr6icRKDU43ofkHdwiSg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.CommandField.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.CommandField.html",
+          "hash": "tKOz+AEnC88T4XC/C0GIgQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.ItemType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.ItemType.html",
+          "hash": "LS5bLooLnP7NkKRCrDZb0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.MessageType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.MessageType.html",
+          "hash": "uoEKq8X/AUi+KQIwsLZNSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.NetworkState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.NetworkState.html",
+          "hash": "N45mC6BiEu5+A4ETYf7MPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.PDUType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.PDUType.html",
+          "hash": "0AxCGjOrI2mgJkCAv0UYkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.PresentationContextReason.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.PresentationContextReason.html",
+          "hash": "xP14h0SAwYMf8pojtYZeOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.QueryLevel.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.QueryLevel.html",
+          "hash": "rIm1YUbWMk80JrtPr4jVYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.RejectReason_SCP_ASCE.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.RejectReason_SCP_ASCE.html",
+          "hash": "JZzSAhX4zRSfef6PpmoedQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.html",
+          "hash": "/NKKrqpHAvWFkz1tuqicYA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.RejectReason_SCU.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.RejectReason_SCU.html",
+          "hash": "Bim3lGK1uC0l8zALZmYcmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.RejectResult.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.RejectResult.html",
+          "hash": "NhnZd07K3IAy4kEmGamadw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.RejectSource.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.RejectSource.html",
+          "hash": "AovJw3FSL6nhXLZwBbaBbg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.Root.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.Root.html",
+          "hash": "0b+7mVmuVbGZ2Ljj8bBe3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.Status.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.Status.html",
+          "hash": "Bxc8V/HVdVd2JVhDguTC1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Enums.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Enums.html",
+          "hash": "yEu7yIwFb3700/dEFRZLYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Extensions.AssociationExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Extensions.AssociationExtensions.html",
+          "hash": "bz3IGFYTfWTuqtI0onEDlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Extensions.DIMSEExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Extensions.DIMSEExtensions.html",
+          "hash": "T07+GlZV7UAgJ9Vh/059EQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Extensions.IIODExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Extensions.IIODExtensions.html",
+          "hash": "TiF+So6eF08j1Lp/+Np0cQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Extensions.html",
+          "hash": "JTyiBhHdVyDlw0OfGuZMwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Helpers.CFind.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Helpers.CFind.html",
+          "hash": "BtR3Z1U+qzejzWrOepPcfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Helpers.FileWriterSCP.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Helpers.FileWriterSCP.html",
+          "hash": "DKLkMobJhXDlDJDZ3Wz0og=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Helpers.IpHelper.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Helpers.IpHelper.html",
+          "hash": "hflCVaac2lJqR6lwm94vEA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Helpers.Modality.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Helpers.Modality.html",
+          "hash": "G6JxCkiiJk3bLiA534fzsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Helpers.html",
+          "hash": "4hKDtpquwfrWN/VTsW0TWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Interfaces.IMessage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Interfaces.IMessage.html",
+          "hash": "pt+Ehl3FZAug72G4QYiiPQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Interfaces.IPDU.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Interfaces.IPDU.html",
+          "hash": "WxmQOwrZubwjID41Cl6OYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Interfaces.html",
+          "hash": "9QsM7bLYlFlwUQ4cwRT1IQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Messaging.AssociationMessenger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Messaging.AssociationMessenger.html",
+          "hash": "B0B4hWiBfadN3/3pQcnX3Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Messaging.Message-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Messaging.Message-1.html",
+          "hash": "17P8BPC0tt1l4AAtlaxOMg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Messaging.PDataMessenger.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Messaging.PDataMessenger.html",
+          "hash": "oYzTWbHWHf8R8l4csSSCCQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Messaging.SendStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Messaging.SendStatus.html",
+          "hash": "1MrE3ZMdWPTwLmBEDHresQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Messaging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Messaging.html",
+          "hash": "P4HxOnDOzBxuad/ZCLF7Qw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.Accept.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.Accept.html",
+          "hash": "+fEL2uOUj41VBXaRqaDW5g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.Items.AsyncOperations.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.Items.AsyncOperations.html",
+          "hash": "P+UvMkjImQBIimDTNO7a6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.Items.ItemReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.Items.ItemReader.html",
+          "hash": "4VtsBeKDfy6O/T2u3E+oaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.Items.ItemWriter.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.Items.ItemWriter.html",
+          "hash": "63znpt9DxfqifGgs3w7NxA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.Items.PDVItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.Items.PDVItem.html",
+          "hash": "x8ABWNWfsBhG+u0P+pZEFQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.Items.PDVItemFragment.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.Items.PDVItemFragment.html",
+          "hash": "0cTQJ4aF/2oIAHSPsO9ZMA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.Items.PresentationContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.Items.PresentationContext.html",
+          "hash": "ON3SqPQm5memAzZcMvSyUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.Items.UserInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.Items.UserInfo.html",
+          "hash": "5afoOQUGyH6OGcqvDJ1LmA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.Items.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.Items.html",
+          "hash": "xbmT0qUnTnHF2kB/hU+qvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.PDataTF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.PDataTF.html",
+          "hash": "8OaNYMz4cQpRyHzvBDTxmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.Reject.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.Reject.html",
+          "hash": "1X0u7Po8YHVjp45Hi+IUqQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.ReleaseRequest.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.ReleaseRequest.html",
+          "hash": "/25/Ll2zYgUPNkn32cLizw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.ReleaseResponse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.ReleaseResponse.html",
+          "hash": "wd6qsicoPZWMcjJKRypxBg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.Request.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.Request.html",
+          "hash": "VvkHWmZrt+RleGxl6DHitg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.PDUs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.PDUs.html",
+          "hash": "ueJrU2Hish0p4gadC4hHeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Processors.DIMSEProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Processors.DIMSEProcessor.html",
+          "hash": "Yh8kpgwlRRj2U0/CK4Bl1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Processors.PDUProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Processors.PDUProcessor.html",
+          "hash": "FqGYaJ9yh9H5kyqJExnj1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Processors.PDataProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Processors.PDataProcessor.html",
+          "hash": "Vt8Xzl87c/RDvndljqwqOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Processors.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Processors.html",
+          "hash": "o+rmQ+t/ClN5u89V/tANwQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Readers.DIMSEReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Readers.DIMSEReader.html",
+          "hash": "r7WRUMDfTQRrB/mKMx6SZA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Readers.NetworkBinaryReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Readers.NetworkBinaryReader.html",
+          "hash": "bI4lTGhkL0QCyJ6RvK2dKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Readers.PDUReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Readers.PDUReader.html",
+          "hash": "NDpe9VZp4Drsr6+cNageog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Readers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Readers.html",
+          "hash": "8iopVm91hAjOQM4gXUy1XQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.SCUOps.CFinder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.SCUOps.CFinder.html",
+          "hash": "c46kQE6dN/MyPVITUngBDg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.SCUOps.CMover.ProgressUpdatedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.SCUOps.CMover.ProgressUpdatedHandler.html",
+          "hash": "AFOe7upyrgm8qCzUsHvkWw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.SCUOps.CMover.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.SCUOps.CMover.html",
+          "hash": "L6s7JQ/QTdhem79LN416XA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.SCUOps.CStorer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.SCUOps.CStorer.html",
+          "hash": "TIyz7tTVFoRxsYDF/CuY9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.SCUOps.StorageVerifier.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.SCUOps.StorageVerifier.html",
+          "hash": "FAbMuWWj07hi+Dpw51xLhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.SCUOps.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.SCUOps.html",
+          "hash": "2ghcALxr/jROPkGC8QsNeQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.AssociationService.AbortRequestHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.AssociationService.AbortRequestHandler.html",
+          "hash": "gUh3F6llHaEh3YS6ceIEhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.AssociationService.AssociationAcceptedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.AssociationService.AssociationAcceptedHandler.html",
+          "hash": "lxhyEHMnkL/1vBMKbUkW/A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.AssociationService.AssociationRejectedHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.AssociationService.AssociationRejectedHandler.html",
+          "hash": "nmmTWS14QWwGblm0jU6K8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.AssociationService.AssociationRequestHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.AssociationService.AssociationRequestHandler.html",
+          "hash": "M7zaYIrylkFl4UKcAQGS0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.AssociationService.ReleaseRequestHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.AssociationService.ReleaseRequestHandler.html",
+          "hash": "EuUmbDku/7+N143mG56/Jw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.AssociationService.ReleaseResponseHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.AssociationService.ReleaseResponseHandler.html",
+          "hash": "8Lr0Xrov65urR4+8Gh+rQw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.AssociationService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.AssociationService.html",
+          "hash": "vgCBsEFhd7qJlvmuPL0+Jw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.CFindService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.CFindService.html",
+          "hash": "lb4pK1uuopWARuDWcDXaqg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.CStoreService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.CStoreService.html",
+          "hash": "ZNU4AzSsdTKnbed4q0ZOkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler-1.html",
+          "hash": "j6diUEAfk8O7gpVmTLKUBA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler-1.html",
+          "hash": "rSXPTgKjj8QKFaZb495BhA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.DIMSEService.LogHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.DIMSEService.LogHandler.html",
+          "hash": "J+3YmdHivsdsOQJHDpYiXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.DIMSEService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.DIMSEService.html",
+          "hash": "7PvIBNv+YyhT6MGozs/q9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.Interfaces.IFindService-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.Interfaces.IFindService-1.html",
+          "hash": "ukhS8/PpmWOURv/wl08JAg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.Interfaces.html",
+          "hash": "Yz1gOgEIDGrIGxQrZPD17A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.NActionService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.NActionService.html",
+          "hash": "iFs3P67gqwq+7MxCFnwKfQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.NEventReportService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.NEventReportService.html",
+          "hash": "2qE0jPtMIZZs6W3bsYOevQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.StorageCommitmentService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.StorageCommitmentService.html",
+          "hash": "HUT6FidfnLVI17yEZ9pWcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.Services.html",
+          "hash": "xwsqdGhdVdILlshPIvVqYQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Network.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Network.html",
+          "hash": "dd490fhLNzJJa/tFLmaasA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.Data.DVH.DVHData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.Data.DVH.DVHData.html",
+          "hash": "9vS4YE4krwmfevK/c5ZKGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.Data.DVH.DVHPoint.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.Data.DVH.DVHPoint.html",
+          "hash": "gfZZB+fj94SMW0jN6LNPmQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.Data.DVH.Dose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.Data.DVH.Dose.html",
+          "hash": "5ffJrtzc0gTCzSeIEEQZhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.Data.DVH.Volume.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.Data.DVH.Volume.html",
+          "hash": "g2TvtpTFIKeH/AQFTp84vQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.Data.DVH.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.Data.DVH.html",
+          "hash": "35bRGpPPBSNNOtz6wGEfMw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.Data.DoseSumType.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.Data.DoseSumType.html",
+          "hash": "/a57AIYF3uDCWkaVlgFEPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.Data.DoseUnit.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.Data.DoseUnit.html",
+          "hash": "y7mkZ+S2EqDY71j/K5KUpQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.Data.PlanStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.Data.PlanStatus.html",
+          "hash": "H4Har0kFm2E7EkelaaWkUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.Data.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.Data.html",
+          "hash": "/JGNhpCI4gukpgA2ZtHCOg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.DoseValue.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.DoseValue.html",
+          "hash": "TBHYhYD4Xfq+NQgZNDwPsw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.Extensions.DICOMRTObjectExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.Extensions.DICOMRTObjectExtensions.html",
+          "hash": "bQaClsjDmlMAwQQLC8ng4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.Extensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.Extensions.html",
+          "hash": "wSLNZahpX0RwjS09wNy/eA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.RTDose.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.RTDose.html",
+          "hash": "NSz3X1INDBlUOWnt71hmOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.RT.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.RT.html",
+          "hash": "pjtPv1091ibWLSZnN7cCkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Evil_DICOM.Core.Element.RangeableDateTime.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Evil_DICOM.Core.Element.RangeableDateTime.html",
+          "hash": "H2bv/xk5pN7ykoJ5B0y3JA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/Evil_DICOM.Core.Element.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Evil_DICOM.Core.Element.html",
+          "hash": "hiH3K6omtUf1CqJhMSz4vQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/Evil_DICOM.Core.Helpers.Tryer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Evil_DICOM.Core.Helpers.Tryer.html",
+          "hash": "Rzzl8IFSKHi/tO/5IyKG/g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Evil_DICOM.Core.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Evil_DICOM.Core.Helpers.html",
+          "hash": "3mKS9si6GQf1iVs8GR7Yjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Evil_DICOM.Network.Messaging.SendStatus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Evil_DICOM.Network.Messaging.SendStatus.html",
+          "hash": "1MrE3ZMdWPTwLmBEDHresQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "DuplicateUids"
+      ],
+      "type": "ManagedReference",
+      "source_relative_path": "api/Evil_DICOM.Network.Messaging.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Evil_DICOM.Network.Messaging.html",
+          "hash": "sypnFq2V2g0g68KxyG2XGw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "peYwGpaD2DpfSmgV/XyCRQ=="
         }
       },
       "is_incremental": false,
@@ -17,14 +4643,26 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "articles/examples.md",
+      "source_relative_path": "articles/anonymization.md",
       "output": {
         ".html": {
-          "relative_path": "articles/examples.html",
-          "hash": "V4/FW/IKW9jjF8HXc5etmw=="
+          "relative_path": "articles/anonymization.html",
+          "hash": "fSpSIEfACkkZphe6qLmujQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "articles/dvhCalculation.md",
+      "output": {
+        ".html": {
+          "relative_path": "articles/dvhCalculation.html",
+          "hash": "YOhOuHeRgxs/r7f6AjyHyg=="
+        }
+      },
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -33,10 +4671,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/helpers.html",
-          "hash": "0Ug9Q45RS5Cvx4Dhz4KQiw=="
+          "hash": "gR3T+qOJzq7XS9x4cSRejA=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -48,7 +4686,7 @@
           "hash": "H0byRSn/2AlmT/fr1TO2Jw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -57,10 +4695,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/networking.html",
-          "hash": "QBaDJlL37eV/btsFqsWbLw=="
+          "hash": "TAO8NVJS6KPrKyNOJeVzOQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -69,10 +4707,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/operations.html",
-          "hash": "fu3pX+bYFJiZySSGbCY3VQ=="
+          "hash": "PeZ9xZpqCP735QkTSql88w=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -81,10 +4719,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/selection.html",
-          "hash": "gtVj0w3MSUEyylU/7yxT3g=="
+          "hash": "Z4eqlP4dVN6xBiTx/OFBmw=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -93,10 +4731,10 @@
       "output": {
         ".html": {
           "relative_path": "articles/structure.html",
-          "hash": "iTuUi/ODa7CiS/TA2FfZ1w=="
+          "hash": "7y60KXqHxF1RhK0wN62iOQ=="
         }
       },
-      "is_incremental": false,
+      "is_incremental": true,
       "version": ""
     },
     {
@@ -105,7 +4743,7 @@
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "UmuD7guaPNYRji4oK7LaBA=="
+          "hash": "GtO8sEwhttM/jlaImwG8lQ=="
         }
       },
       "is_incremental": false,
@@ -150,7 +4788,22 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "CTtQH0LzeBelfqDPKKB3rw=="
+          "hash": "wmKiQbDoCId8MgBXIAHOOA=="
+        }
+      },
+      "is_incremental": true,
+      "version": ""
+    },
+    {
+      "log_codes": [
+        "InvalidFileLink"
+      ],
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "9KSuQWMz9InGJiUM+iSRlQ=="
         }
       },
       "is_incremental": false,
@@ -160,19 +4813,23 @@
   "incremental_info": [
     {
       "status": {
-        "can_incremental": false,
-        "details": "Disable incremental build by force rebuild option.",
+        "can_incremental": true,
         "incrementalPhase": "build",
         "total_file_count": 0,
-        "skipped_file_count": 0,
-        "full_build_reason_code": "ForceRebuild"
+        "skipped_file_count": 0
       },
       "processors": {
         "ConceptualDocumentProcessor": {
-          "can_incremental": false,
+          "can_incremental": true,
           "incrementalPhase": "build",
           "total_file_count": 9,
-          "skipped_file_count": 0
+          "skipped_file_count": 9
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": true,
+          "incrementalPhase": "build",
+          "total_file_count": 384,
+          "skipped_file_count": 360
         },
         "ResourceDocumentProcessor": {
           "can_incremental": false,
@@ -192,8 +4849,8 @@
     },
     {
       "status": {
-        "can_incremental": false,
-        "details": "Cannot support incremental post processing, the reason is: it's disabled.",
+        "can_incremental": true,
+        "details": "Can support incremental post processing.",
         "incrementalPhase": "postProcessing",
         "total_file_count": 0,
         "skipped_file_count": 0

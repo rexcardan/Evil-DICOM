@@ -1,0 +1,67 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Services.AssociationService.AssociationRejectedHandler
+  commentId: T:EvilDICOM.Network.Services.AssociationService.AssociationRejectedHandler
+  id: AssociationService.AssociationRejectedHandler
+  parent: EvilDICOM.Network.Services
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: AssociationService.AssociationRejectedHandler
+  nameWithType: AssociationService.AssociationRejectedHandler
+  fullName: EvilDICOM.Network.Services.AssociationService.AssociationRejectedHandler
+  type: Delegate
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/AssociationService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AssociationRejectedHandler
+    path: ../EvilDICOM/Network/Services/AssociationService.cs
+    startLine: 106
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public delegate void AssociationRejectedHandler(Reject rej, Association asc);
+    parameters:
+    - id: rej
+      type: EvilDICOM.Network.PDUs.Reject
+    - id: asc
+      type: EvilDICOM.Network.Association
+    content.vb: Public Delegate Sub AssociationRejectedHandler(rej As Reject, asc As Association)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: EvilDICOM.Network.Services
+  commentId: N:EvilDICOM.Network.Services
+  name: EvilDICOM.Network.Services
+  nameWithType: EvilDICOM.Network.Services
+  fullName: EvilDICOM.Network.Services
+- uid: EvilDICOM.Network.PDUs.Reject
+  commentId: T:EvilDICOM.Network.PDUs.Reject
+  parent: EvilDICOM.Network.PDUs
+  name: Reject
+  nameWithType: Reject
+  fullName: EvilDICOM.Network.PDUs.Reject
+- uid: EvilDICOM.Network.Association
+  commentId: T:EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  name: Association
+  nameWithType: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.PDUs
+  commentId: N:EvilDICOM.Network.PDUs
+  name: EvilDICOM.Network.PDUs
+  nameWithType: EvilDICOM.Network.PDUs
+  fullName: EvilDICOM.Network.PDUs
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network

@@ -1,0 +1,2528 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.RT.DoseMatrix
+  commentId: T:EvilDICOM.CV.RT.DoseMatrix
+  id: DoseMatrix
+  parent: EvilDICOM.CV.RT
+  children:
+  - EvilDICOM.CV.RT.DoseMatrix.CalcDVH
+  - EvilDICOM.CV.RT.DoseMatrix.Clone
+  - EvilDICOM.CV.RT.DoseMatrix.ConvertUnits(EvilDICOM.RT.Data.DoseUnit)
+  - EvilDICOM.CV.RT.DoseMatrix.DoseUnit
+  - EvilDICOM.CV.RT.DoseMatrix.MaxDose
+  - EvilDICOM.CV.RT.DoseMatrix.MaxDoseSlice
+  - EvilDICOM.CV.RT.DoseMatrix.PlanUID
+  - EvilDICOM.CV.RT.DoseMatrix.PrescriptionDoseGy
+  - EvilDICOM.CV.RT.DoseMatrix.SumType
+  langs:
+  - csharp
+  - vb
+  name: DoseMatrix
+  nameWithType: DoseMatrix
+  fullName: EvilDICOM.CV.RT.DoseMatrix
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DoseMatrix
+    path: ../EvilDICOM.CV/RT/DoseMatrix.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  syntax:
+    content: 'public class DoseMatrix : Matrix, IDisposable'
+    content.vb: >-
+      Public Class DoseMatrix
+
+          Inherits Matrix
+
+          Implements IDisposable
+  inheritance:
+  - System.Object
+  - EvilDICOM.CV.Image.Matrix
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - EvilDICOM.CV.Image.Matrix.XRes
+  - EvilDICOM.CV.Image.Matrix.YRes
+  - EvilDICOM.CV.Image.Matrix.ZRes
+  - EvilDICOM.CV.Image.Matrix.GetZPlaneBySlice(System.Int32)
+  - EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
+  - EvilDICOM.CV.Image.Matrix.CalculateZeroBoundaryVolumeCC
+  - EvilDICOM.CV.Image.Matrix.ExcludeOutsideStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+  - EvilDICOM.CV.Image.Matrix.MaskToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+  - EvilDICOM.CV.Image.Matrix.GetXPlaneBySlice(System.Int32)
+  - EvilDICOM.CV.Image.Matrix.GetYPlaneBySlice(System.Int32)
+  - EvilDICOM.CV.Image.Matrix.GetZPlane(System.Double)
+  - EvilDICOM.CV.Image.Matrix.GetXPlane(System.Double)
+  - EvilDICOM.CV.Image.Matrix.GetYPlane(System.Double)
+  - EvilDICOM.CV.Image.Matrix.BytesAllocated
+  - EvilDICOM.CV.Image.Matrix.ImageOrientation
+  - EvilDICOM.CV.Image.Matrix.XMax
+  - EvilDICOM.CV.Image.Matrix.YMax
+  - EvilDICOM.CV.Image.Matrix.ZMax
+  - EvilDICOM.CV.Image.Matrix.XMin
+  - EvilDICOM.CV.Image.Matrix.YMin
+  - EvilDICOM.CV.Image.Matrix.ZMin
+  - EvilDICOM.CV.Image.Matrix.DimensionX
+  - EvilDICOM.CV.Image.Matrix.DimensionY
+  - EvilDICOM.CV.Image.Matrix.DimensionZ
+  - EvilDICOM.CV.Image.Matrix.Origin
+  - EvilDICOM.CV.Image.Matrix.PatientTransformMatrix
+  - EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.CV.Image.Matrix.GetPointValue(System.Double,System.Double,System.Double)
+  - EvilDICOM.CV.Image.Matrix.GetValueByIndex(System.Int32,System.Int32,System.Int32)
+  - EvilDICOM.CV.Image.Matrix.CropMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta,System.Double)
+  - EvilDICOM.CV.Image.Matrix.ResampleMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+  - EvilDICOM.CV.Image.Matrix.PadZ(System.Int32)
+  - EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.CV.Image.Matrix.CalculatePatientTransformMatrix
+  - EvilDICOM.CV.Image.Matrix.GetImageGridPointsPatientCoordinates
+  - EvilDICOM.CV.Image.Matrix.VolumeCC
+  - EvilDICOM.CV.Image.Matrix.ConvertIsodoseLevelToMesh(System.Double)
+  - EvilDICOM.CV.Image.Matrix.CalcHistogram(System.Int32)
+  - EvilDICOM.CV.Image.Matrix.Resample(System.Double,System.Double,System.Double)
+  - EvilDICOM.CV.Image.Matrix.MinMaxVal
+  - EvilDICOM.CV.Image.Matrix.EmptyClone
+  - EvilDICOM.CV.Image.Matrix.Dispose
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - EvilDICOM.CV.RT.DoseMatrix.EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage(EvilDICOM.CV.Image.ImageMatrix)
+  - EvilDICOM.CV.Image.Matrix.EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.RT.IsodoseLevel[])
+  - EvilDICOM.CV.Image.Matrix.EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(System.Double)
+  - EvilDICOM.CV.Image.Matrix.EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices
+  - EvilDICOM.CV.Image.Matrix.EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.CV.RT.DoseMatrix.MaxDose
+  commentId: P:EvilDICOM.CV.RT.DoseMatrix.MaxDose
+  id: MaxDose
+  parent: EvilDICOM.CV.RT.DoseMatrix
+  langs:
+  - csharp
+  - vb
+  name: MaxDose
+  nameWithType: DoseMatrix.MaxDose
+  fullName: EvilDICOM.CV.RT.DoseMatrix.MaxDose
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MaxDose
+    path: ../EvilDICOM.CV/RT/DoseMatrix.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  syntax:
+    content: public float MaxDose { get; set; }
+    parameters: []
+    return:
+      type: System.Single
+    content.vb: Public Property MaxDose As Single
+  overload: EvilDICOM.CV.RT.DoseMatrix.MaxDose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.DoseMatrix.MaxDoseSlice
+  commentId: P:EvilDICOM.CV.RT.DoseMatrix.MaxDoseSlice
+  id: MaxDoseSlice
+  parent: EvilDICOM.CV.RT.DoseMatrix
+  langs:
+  - csharp
+  - vb
+  name: MaxDoseSlice
+  nameWithType: DoseMatrix.MaxDoseSlice
+  fullName: EvilDICOM.CV.RT.DoseMatrix.MaxDoseSlice
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MaxDoseSlice
+    path: ../EvilDICOM.CV/RT/DoseMatrix.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  syntax:
+    content: public int MaxDoseSlice { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property MaxDoseSlice As Integer
+  overload: EvilDICOM.CV.RT.DoseMatrix.MaxDoseSlice*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.DoseMatrix.PlanUID
+  commentId: P:EvilDICOM.CV.RT.DoseMatrix.PlanUID
+  id: PlanUID
+  parent: EvilDICOM.CV.RT.DoseMatrix
+  langs:
+  - csharp
+  - vb
+  name: PlanUID
+  nameWithType: DoseMatrix.PlanUID
+  fullName: EvilDICOM.CV.RT.DoseMatrix.PlanUID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PlanUID
+    path: ../EvilDICOM.CV/RT/DoseMatrix.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  syntax:
+    content: public string PlanUID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property PlanUID As String
+  overload: EvilDICOM.CV.RT.DoseMatrix.PlanUID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.DoseMatrix.SumType
+  commentId: P:EvilDICOM.CV.RT.DoseMatrix.SumType
+  id: SumType
+  parent: EvilDICOM.CV.RT.DoseMatrix
+  langs:
+  - csharp
+  - vb
+  name: SumType
+  nameWithType: DoseMatrix.SumType
+  fullName: EvilDICOM.CV.RT.DoseMatrix.SumType
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SumType
+    path: ../EvilDICOM.CV/RT/DoseMatrix.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  syntax:
+    content: public DoseSumType SumType { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.RT.Data.DoseSumType
+    content.vb: Public Property SumType As DoseSumType
+  overload: EvilDICOM.CV.RT.DoseMatrix.SumType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.DoseMatrix.DoseUnit
+  commentId: P:EvilDICOM.CV.RT.DoseMatrix.DoseUnit
+  id: DoseUnit
+  parent: EvilDICOM.CV.RT.DoseMatrix
+  langs:
+  - csharp
+  - vb
+  name: DoseUnit
+  nameWithType: DoseMatrix.DoseUnit
+  fullName: EvilDICOM.CV.RT.DoseMatrix.DoseUnit
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DoseUnit
+    path: ../EvilDICOM.CV/RT/DoseMatrix.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  syntax:
+    content: public DoseUnit DoseUnit { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.RT.Data.DoseUnit
+    content.vb: Public Property DoseUnit As DoseUnit
+  overload: EvilDICOM.CV.RT.DoseMatrix.DoseUnit*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.DoseMatrix.PrescriptionDoseGy
+  commentId: P:EvilDICOM.CV.RT.DoseMatrix.PrescriptionDoseGy
+  id: PrescriptionDoseGy
+  parent: EvilDICOM.CV.RT.DoseMatrix
+  langs:
+  - csharp
+  - vb
+  name: PrescriptionDoseGy
+  nameWithType: DoseMatrix.PrescriptionDoseGy
+  fullName: EvilDICOM.CV.RT.DoseMatrix.PrescriptionDoseGy
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PrescriptionDoseGy
+    path: ../EvilDICOM.CV/RT/DoseMatrix.cs
+    startLine: 29
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  syntax:
+    content: public double? PrescriptionDoseGy { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property PrescriptionDoseGy As Double?
+  overload: EvilDICOM.CV.RT.DoseMatrix.PrescriptionDoseGy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.DoseMatrix.ConvertUnits(EvilDICOM.RT.Data.DoseUnit)
+  commentId: M:EvilDICOM.CV.RT.DoseMatrix.ConvertUnits(EvilDICOM.RT.Data.DoseUnit)
+  id: ConvertUnits(EvilDICOM.RT.Data.DoseUnit)
+  parent: EvilDICOM.CV.RT.DoseMatrix
+  langs:
+  - csharp
+  - vb
+  name: ConvertUnits(DoseUnit)
+  nameWithType: DoseMatrix.ConvertUnits(DoseUnit)
+  fullName: EvilDICOM.CV.RT.DoseMatrix.ConvertUnits(EvilDICOM.RT.Data.DoseUnit)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ConvertUnits
+    path: ../EvilDICOM.CV/RT/DoseMatrix.cs
+    startLine: 31
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  syntax:
+    content: public void ConvertUnits(DoseUnit desiredUnits)
+    parameters:
+    - id: desiredUnits
+      type: EvilDICOM.RT.Data.DoseUnit
+    content.vb: Public Sub ConvertUnits(desiredUnits As DoseUnit)
+  overload: EvilDICOM.CV.RT.DoseMatrix.ConvertUnits*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.DoseMatrix.CalcDVH
+  commentId: M:EvilDICOM.CV.RT.DoseMatrix.CalcDVH
+  id: CalcDVH
+  parent: EvilDICOM.CV.RT.DoseMatrix
+  langs:
+  - csharp
+  - vb
+  name: CalcDVH()
+  nameWithType: DoseMatrix.CalcDVH()
+  fullName: EvilDICOM.CV.RT.DoseMatrix.CalcDVH()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CalcDVH
+    path: ../EvilDICOM.CV/RT/DoseMatrix.cs
+    startLine: 72
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  summary: "\nZeros all voxels outside of structure contours\n"
+  example: []
+  syntax:
+    content: public DVH CalcDVH()
+    return:
+      type: EvilDICOM.CV.RT.DVH
+    content.vb: Public Function CalcDVH As DVH
+  overload: EvilDICOM.CV.RT.DoseMatrix.CalcDVH*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.DoseMatrix.Clone
+  commentId: M:EvilDICOM.CV.RT.DoseMatrix.Clone
+  id: Clone
+  parent: EvilDICOM.CV.RT.DoseMatrix
+  langs:
+  - csharp
+  - vb
+  name: Clone()
+  nameWithType: DoseMatrix.Clone()
+  fullName: EvilDICOM.CV.RT.DoseMatrix.Clone()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Clone
+    path: ../EvilDICOM.CV/RT/DoseMatrix.cs
+    startLine: 89
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  syntax:
+    content: public DoseMatrix Clone()
+    return:
+      type: EvilDICOM.CV.RT.DoseMatrix
+    content.vb: Public Function Clone As DoseMatrix
+  overload: EvilDICOM.CV.RT.DoseMatrix.Clone*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.CV.RT
+  commentId: N:EvilDICOM.CV.RT
+  name: EvilDICOM.CV.RT
+  nameWithType: EvilDICOM.CV.RT
+  fullName: EvilDICOM.CV.RT
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.CV.Image.Matrix
+  commentId: T:EvilDICOM.CV.Image.Matrix
+  parent: EvilDICOM.CV.Image
+  name: Matrix
+  nameWithType: Matrix
+  fullName: EvilDICOM.CV.Image.Matrix
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: EvilDICOM.CV.Image.Matrix.XRes
+  commentId: P:EvilDICOM.CV.Image.Matrix.XRes
+  parent: EvilDICOM.CV.Image.Matrix
+  name: XRes
+  nameWithType: Matrix.XRes
+  fullName: EvilDICOM.CV.Image.Matrix.XRes
+- uid: EvilDICOM.CV.Image.Matrix.YRes
+  commentId: P:EvilDICOM.CV.Image.Matrix.YRes
+  parent: EvilDICOM.CV.Image.Matrix
+  name: YRes
+  nameWithType: Matrix.YRes
+  fullName: EvilDICOM.CV.Image.Matrix.YRes
+- uid: EvilDICOM.CV.Image.Matrix.ZRes
+  commentId: P:EvilDICOM.CV.Image.Matrix.ZRes
+  parent: EvilDICOM.CV.Image.Matrix
+  name: ZRes
+  nameWithType: Matrix.ZRes
+  fullName: EvilDICOM.CV.Image.Matrix.ZRes
+- uid: EvilDICOM.CV.Image.Matrix.GetZPlaneBySlice(System.Int32)
+  commentId: M:EvilDICOM.CV.Image.Matrix.GetZPlaneBySlice(System.Int32)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: GetZPlaneBySlice(Int32)
+  nameWithType: Matrix.GetZPlaneBySlice(Int32)
+  fullName: EvilDICOM.CV.Image.Matrix.GetZPlaneBySlice(System.Int32)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.GetZPlaneBySlice(System.Int32)
+    name: GetZPlaneBySlice
+    nameWithType: Matrix.GetZPlaneBySlice
+    fullName: EvilDICOM.CV.Image.Matrix.GetZPlaneBySlice
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.GetZPlaneBySlice(System.Int32)
+    name: GetZPlaneBySlice
+    nameWithType: Matrix.GetZPlaneBySlice
+    fullName: EvilDICOM.CV.Image.Matrix.GetZPlaneBySlice
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
+  commentId: M:EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: SetZPlaneBySlice(Mat, Int32)
+  nameWithType: Matrix.SetZPlaneBySlice(Mat, Int32)
+  fullName: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat, System.Int32)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
+    name: SetZPlaneBySlice
+    nameWithType: Matrix.SetZPlaneBySlice
+    fullName: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: OpenCvSharp.Mat
+    name: Mat
+    nameWithType: Mat
+    fullName: OpenCvSharp.Mat
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
+    name: SetZPlaneBySlice
+    nameWithType: Matrix.SetZPlaneBySlice
+    fullName: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: OpenCvSharp.Mat
+    name: Mat
+    nameWithType: Mat
+    fullName: OpenCvSharp.Mat
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.CalculateZeroBoundaryVolumeCC
+  commentId: M:EvilDICOM.CV.Image.Matrix.CalculateZeroBoundaryVolumeCC
+  parent: EvilDICOM.CV.Image.Matrix
+  name: CalculateZeroBoundaryVolumeCC()
+  nameWithType: Matrix.CalculateZeroBoundaryVolumeCC()
+  fullName: EvilDICOM.CV.Image.Matrix.CalculateZeroBoundaryVolumeCC()
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.CalculateZeroBoundaryVolumeCC
+    name: CalculateZeroBoundaryVolumeCC
+    nameWithType: Matrix.CalculateZeroBoundaryVolumeCC
+    fullName: EvilDICOM.CV.Image.Matrix.CalculateZeroBoundaryVolumeCC
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.CalculateZeroBoundaryVolumeCC
+    name: CalculateZeroBoundaryVolumeCC
+    nameWithType: Matrix.CalculateZeroBoundaryVolumeCC
+    fullName: EvilDICOM.CV.Image.Matrix.CalculateZeroBoundaryVolumeCC
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.ExcludeOutsideStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+  commentId: M:EvilDICOM.CV.Image.Matrix.ExcludeOutsideStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+  parent: EvilDICOM.CV.Image.Matrix
+  name: ExcludeOutsideStructure(StructureMeta)
+  nameWithType: Matrix.ExcludeOutsideStructure(StructureMeta)
+  fullName: EvilDICOM.CV.Image.Matrix.ExcludeOutsideStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.ExcludeOutsideStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+    name: ExcludeOutsideStructure
+    nameWithType: Matrix.ExcludeOutsideStructure
+    fullName: EvilDICOM.CV.Image.Matrix.ExcludeOutsideStructure
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.Meta.StructureMeta
+    name: StructureMeta
+    nameWithType: StructureMeta
+    fullName: EvilDICOM.CV.RT.Meta.StructureMeta
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.ExcludeOutsideStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+    name: ExcludeOutsideStructure
+    nameWithType: Matrix.ExcludeOutsideStructure
+    fullName: EvilDICOM.CV.Image.Matrix.ExcludeOutsideStructure
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.Meta.StructureMeta
+    name: StructureMeta
+    nameWithType: StructureMeta
+    fullName: EvilDICOM.CV.RT.Meta.StructureMeta
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.MaskToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+  commentId: M:EvilDICOM.CV.Image.Matrix.MaskToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+  parent: EvilDICOM.CV.Image.Matrix
+  name: MaskToStructure(StructureMeta)
+  nameWithType: Matrix.MaskToStructure(StructureMeta)
+  fullName: EvilDICOM.CV.Image.Matrix.MaskToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.MaskToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+    name: MaskToStructure
+    nameWithType: Matrix.MaskToStructure
+    fullName: EvilDICOM.CV.Image.Matrix.MaskToStructure
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.Meta.StructureMeta
+    name: StructureMeta
+    nameWithType: StructureMeta
+    fullName: EvilDICOM.CV.RT.Meta.StructureMeta
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.MaskToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+    name: MaskToStructure
+    nameWithType: Matrix.MaskToStructure
+    fullName: EvilDICOM.CV.Image.Matrix.MaskToStructure
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.Meta.StructureMeta
+    name: StructureMeta
+    nameWithType: StructureMeta
+    fullName: EvilDICOM.CV.RT.Meta.StructureMeta
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.GetXPlaneBySlice(System.Int32)
+  commentId: M:EvilDICOM.CV.Image.Matrix.GetXPlaneBySlice(System.Int32)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: GetXPlaneBySlice(Int32)
+  nameWithType: Matrix.GetXPlaneBySlice(Int32)
+  fullName: EvilDICOM.CV.Image.Matrix.GetXPlaneBySlice(System.Int32)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.GetXPlaneBySlice(System.Int32)
+    name: GetXPlaneBySlice
+    nameWithType: Matrix.GetXPlaneBySlice
+    fullName: EvilDICOM.CV.Image.Matrix.GetXPlaneBySlice
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.GetXPlaneBySlice(System.Int32)
+    name: GetXPlaneBySlice
+    nameWithType: Matrix.GetXPlaneBySlice
+    fullName: EvilDICOM.CV.Image.Matrix.GetXPlaneBySlice
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.GetYPlaneBySlice(System.Int32)
+  commentId: M:EvilDICOM.CV.Image.Matrix.GetYPlaneBySlice(System.Int32)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: GetYPlaneBySlice(Int32)
+  nameWithType: Matrix.GetYPlaneBySlice(Int32)
+  fullName: EvilDICOM.CV.Image.Matrix.GetYPlaneBySlice(System.Int32)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.GetYPlaneBySlice(System.Int32)
+    name: GetYPlaneBySlice
+    nameWithType: Matrix.GetYPlaneBySlice
+    fullName: EvilDICOM.CV.Image.Matrix.GetYPlaneBySlice
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.GetYPlaneBySlice(System.Int32)
+    name: GetYPlaneBySlice
+    nameWithType: Matrix.GetYPlaneBySlice
+    fullName: EvilDICOM.CV.Image.Matrix.GetYPlaneBySlice
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.GetZPlane(System.Double)
+  commentId: M:EvilDICOM.CV.Image.Matrix.GetZPlane(System.Double)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: GetZPlane(Double)
+  nameWithType: Matrix.GetZPlane(Double)
+  fullName: EvilDICOM.CV.Image.Matrix.GetZPlane(System.Double)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.GetZPlane(System.Double)
+    name: GetZPlane
+    nameWithType: Matrix.GetZPlane
+    fullName: EvilDICOM.CV.Image.Matrix.GetZPlane
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.GetZPlane(System.Double)
+    name: GetZPlane
+    nameWithType: Matrix.GetZPlane
+    fullName: EvilDICOM.CV.Image.Matrix.GetZPlane
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.GetXPlane(System.Double)
+  commentId: M:EvilDICOM.CV.Image.Matrix.GetXPlane(System.Double)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: GetXPlane(Double)
+  nameWithType: Matrix.GetXPlane(Double)
+  fullName: EvilDICOM.CV.Image.Matrix.GetXPlane(System.Double)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.GetXPlane(System.Double)
+    name: GetXPlane
+    nameWithType: Matrix.GetXPlane
+    fullName: EvilDICOM.CV.Image.Matrix.GetXPlane
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.GetXPlane(System.Double)
+    name: GetXPlane
+    nameWithType: Matrix.GetXPlane
+    fullName: EvilDICOM.CV.Image.Matrix.GetXPlane
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.GetYPlane(System.Double)
+  commentId: M:EvilDICOM.CV.Image.Matrix.GetYPlane(System.Double)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: GetYPlane(Double)
+  nameWithType: Matrix.GetYPlane(Double)
+  fullName: EvilDICOM.CV.Image.Matrix.GetYPlane(System.Double)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.GetYPlane(System.Double)
+    name: GetYPlane
+    nameWithType: Matrix.GetYPlane
+    fullName: EvilDICOM.CV.Image.Matrix.GetYPlane
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.GetYPlane(System.Double)
+    name: GetYPlane
+    nameWithType: Matrix.GetYPlane
+    fullName: EvilDICOM.CV.Image.Matrix.GetYPlane
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.BytesAllocated
+  commentId: P:EvilDICOM.CV.Image.Matrix.BytesAllocated
+  parent: EvilDICOM.CV.Image.Matrix
+  name: BytesAllocated
+  nameWithType: Matrix.BytesAllocated
+  fullName: EvilDICOM.CV.Image.Matrix.BytesAllocated
+- uid: EvilDICOM.CV.Image.Matrix.ImageOrientation
+  commentId: P:EvilDICOM.CV.Image.Matrix.ImageOrientation
+  parent: EvilDICOM.CV.Image.Matrix
+  name: ImageOrientation
+  nameWithType: Matrix.ImageOrientation
+  fullName: EvilDICOM.CV.Image.Matrix.ImageOrientation
+- uid: EvilDICOM.CV.Image.Matrix.XMax
+  commentId: P:EvilDICOM.CV.Image.Matrix.XMax
+  parent: EvilDICOM.CV.Image.Matrix
+  name: XMax
+  nameWithType: Matrix.XMax
+  fullName: EvilDICOM.CV.Image.Matrix.XMax
+- uid: EvilDICOM.CV.Image.Matrix.YMax
+  commentId: P:EvilDICOM.CV.Image.Matrix.YMax
+  parent: EvilDICOM.CV.Image.Matrix
+  name: YMax
+  nameWithType: Matrix.YMax
+  fullName: EvilDICOM.CV.Image.Matrix.YMax
+- uid: EvilDICOM.CV.Image.Matrix.ZMax
+  commentId: P:EvilDICOM.CV.Image.Matrix.ZMax
+  parent: EvilDICOM.CV.Image.Matrix
+  name: ZMax
+  nameWithType: Matrix.ZMax
+  fullName: EvilDICOM.CV.Image.Matrix.ZMax
+- uid: EvilDICOM.CV.Image.Matrix.XMin
+  commentId: P:EvilDICOM.CV.Image.Matrix.XMin
+  parent: EvilDICOM.CV.Image.Matrix
+  name: XMin
+  nameWithType: Matrix.XMin
+  fullName: EvilDICOM.CV.Image.Matrix.XMin
+- uid: EvilDICOM.CV.Image.Matrix.YMin
+  commentId: P:EvilDICOM.CV.Image.Matrix.YMin
+  parent: EvilDICOM.CV.Image.Matrix
+  name: YMin
+  nameWithType: Matrix.YMin
+  fullName: EvilDICOM.CV.Image.Matrix.YMin
+- uid: EvilDICOM.CV.Image.Matrix.ZMin
+  commentId: P:EvilDICOM.CV.Image.Matrix.ZMin
+  parent: EvilDICOM.CV.Image.Matrix
+  name: ZMin
+  nameWithType: Matrix.ZMin
+  fullName: EvilDICOM.CV.Image.Matrix.ZMin
+- uid: EvilDICOM.CV.Image.Matrix.DimensionX
+  commentId: P:EvilDICOM.CV.Image.Matrix.DimensionX
+  parent: EvilDICOM.CV.Image.Matrix
+  name: DimensionX
+  nameWithType: Matrix.DimensionX
+  fullName: EvilDICOM.CV.Image.Matrix.DimensionX
+- uid: EvilDICOM.CV.Image.Matrix.DimensionY
+  commentId: P:EvilDICOM.CV.Image.Matrix.DimensionY
+  parent: EvilDICOM.CV.Image.Matrix
+  name: DimensionY
+  nameWithType: Matrix.DimensionY
+  fullName: EvilDICOM.CV.Image.Matrix.DimensionY
+- uid: EvilDICOM.CV.Image.Matrix.DimensionZ
+  commentId: P:EvilDICOM.CV.Image.Matrix.DimensionZ
+  parent: EvilDICOM.CV.Image.Matrix
+  name: DimensionZ
+  nameWithType: Matrix.DimensionZ
+  fullName: EvilDICOM.CV.Image.Matrix.DimensionZ
+- uid: EvilDICOM.CV.Image.Matrix.Origin
+  commentId: P:EvilDICOM.CV.Image.Matrix.Origin
+  parent: EvilDICOM.CV.Image.Matrix
+  name: Origin
+  nameWithType: Matrix.Origin
+  fullName: EvilDICOM.CV.Image.Matrix.Origin
+- uid: EvilDICOM.CV.Image.Matrix.PatientTransformMatrix
+  commentId: P:EvilDICOM.CV.Image.Matrix.PatientTransformMatrix
+  parent: EvilDICOM.CV.Image.Matrix
+  name: PatientTransformMatrix
+  nameWithType: Matrix.PatientTransformMatrix
+  fullName: EvilDICOM.CV.Image.Matrix.PatientTransformMatrix
+- uid: EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+  commentId: M:EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: IsInBounds(Vector3)
+  nameWithType: Matrix.IsInBounds(Vector3)
+  fullName: EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+    name: IsInBounds
+    nameWithType: Matrix.IsInBounds
+    fullName: EvilDICOM.CV.Image.Matrix.IsInBounds
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.Helpers.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: EvilDICOM.Core.Helpers.Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+    name: IsInBounds
+    nameWithType: Matrix.IsInBounds
+    fullName: EvilDICOM.CV.Image.Matrix.IsInBounds
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.Helpers.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: EvilDICOM.Core.Helpers.Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.GetPointValue(System.Double,System.Double,System.Double)
+  commentId: M:EvilDICOM.CV.Image.Matrix.GetPointValue(System.Double,System.Double,System.Double)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: GetPointValue(Double, Double, Double)
+  nameWithType: Matrix.GetPointValue(Double, Double, Double)
+  fullName: EvilDICOM.CV.Image.Matrix.GetPointValue(System.Double, System.Double, System.Double)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.GetPointValue(System.Double,System.Double,System.Double)
+    name: GetPointValue
+    nameWithType: Matrix.GetPointValue
+    fullName: EvilDICOM.CV.Image.Matrix.GetPointValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.GetPointValue(System.Double,System.Double,System.Double)
+    name: GetPointValue
+    nameWithType: Matrix.GetPointValue
+    fullName: EvilDICOM.CV.Image.Matrix.GetPointValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.GetValueByIndex(System.Int32,System.Int32,System.Int32)
+  commentId: M:EvilDICOM.CV.Image.Matrix.GetValueByIndex(System.Int32,System.Int32,System.Int32)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: GetValueByIndex(Int32, Int32, Int32)
+  nameWithType: Matrix.GetValueByIndex(Int32, Int32, Int32)
+  fullName: EvilDICOM.CV.Image.Matrix.GetValueByIndex(System.Int32, System.Int32, System.Int32)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.GetValueByIndex(System.Int32,System.Int32,System.Int32)
+    name: GetValueByIndex
+    nameWithType: Matrix.GetValueByIndex
+    fullName: EvilDICOM.CV.Image.Matrix.GetValueByIndex
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.GetValueByIndex(System.Int32,System.Int32,System.Int32)
+    name: GetValueByIndex
+    nameWithType: Matrix.GetValueByIndex
+    fullName: EvilDICOM.CV.Image.Matrix.GetValueByIndex
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.CropMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta,System.Double)
+  commentId: M:EvilDICOM.CV.Image.Matrix.CropMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta,System.Double)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: CropMatrixToStructure(StructureMeta, Double)
+  nameWithType: Matrix.CropMatrixToStructure(StructureMeta, Double)
+  fullName: EvilDICOM.CV.Image.Matrix.CropMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta, System.Double)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.CropMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta,System.Double)
+    name: CropMatrixToStructure
+    nameWithType: Matrix.CropMatrixToStructure
+    fullName: EvilDICOM.CV.Image.Matrix.CropMatrixToStructure
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.Meta.StructureMeta
+    name: StructureMeta
+    nameWithType: StructureMeta
+    fullName: EvilDICOM.CV.RT.Meta.StructureMeta
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.CropMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta,System.Double)
+    name: CropMatrixToStructure
+    nameWithType: Matrix.CropMatrixToStructure
+    fullName: EvilDICOM.CV.Image.Matrix.CropMatrixToStructure
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.Meta.StructureMeta
+    name: StructureMeta
+    nameWithType: StructureMeta
+    fullName: EvilDICOM.CV.RT.Meta.StructureMeta
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.ResampleMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+  commentId: M:EvilDICOM.CV.Image.Matrix.ResampleMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+  parent: EvilDICOM.CV.Image.Matrix
+  name: ResampleMatrixToStructure(StructureMeta)
+  nameWithType: Matrix.ResampleMatrixToStructure(StructureMeta)
+  fullName: EvilDICOM.CV.Image.Matrix.ResampleMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.ResampleMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+    name: ResampleMatrixToStructure
+    nameWithType: Matrix.ResampleMatrixToStructure
+    fullName: EvilDICOM.CV.Image.Matrix.ResampleMatrixToStructure
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.Meta.StructureMeta
+    name: StructureMeta
+    nameWithType: StructureMeta
+    fullName: EvilDICOM.CV.RT.Meta.StructureMeta
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.ResampleMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
+    name: ResampleMatrixToStructure
+    nameWithType: Matrix.ResampleMatrixToStructure
+    fullName: EvilDICOM.CV.Image.Matrix.ResampleMatrixToStructure
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.Meta.StructureMeta
+    name: StructureMeta
+    nameWithType: StructureMeta
+    fullName: EvilDICOM.CV.RT.Meta.StructureMeta
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.PadZ(System.Int32)
+  commentId: M:EvilDICOM.CV.Image.Matrix.PadZ(System.Int32)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: PadZ(Int32)
+  nameWithType: Matrix.PadZ(Int32)
+  fullName: EvilDICOM.CV.Image.Matrix.PadZ(System.Int32)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.PadZ(System.Int32)
+    name: PadZ
+    nameWithType: Matrix.PadZ
+    fullName: EvilDICOM.CV.Image.Matrix.PadZ
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.PadZ(System.Int32)
+    name: PadZ
+    nameWithType: Matrix.PadZ
+    fullName: EvilDICOM.CV.Image.Matrix.PadZ
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
+  commentId: M:EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: GetPointValue(Vector3)
+  nameWithType: Matrix.GetPointValue(Vector3)
+  fullName: EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
+    name: GetPointValue
+    nameWithType: Matrix.GetPointValue
+    fullName: EvilDICOM.CV.Image.Matrix.GetPointValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.Helpers.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: EvilDICOM.Core.Helpers.Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
+    name: GetPointValue
+    nameWithType: Matrix.GetPointValue
+    fullName: EvilDICOM.CV.Image.Matrix.GetPointValue
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.Helpers.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: EvilDICOM.Core.Helpers.Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
+  commentId: M:EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: ImageToPatientTx(Vector3)
+  nameWithType: Matrix.ImageToPatientTx(Vector3)
+  fullName: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
+    name: ImageToPatientTx
+    nameWithType: Matrix.ImageToPatientTx
+    fullName: EvilDICOM.CV.Image.Matrix.ImageToPatientTx
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.Helpers.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: EvilDICOM.Core.Helpers.Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
+    name: ImageToPatientTx
+    nameWithType: Matrix.ImageToPatientTx
+    fullName: EvilDICOM.CV.Image.Matrix.ImageToPatientTx
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.Helpers.Vector3
+    name: Vector3
+    nameWithType: Vector3
+    fullName: EvilDICOM.Core.Helpers.Vector3
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.CalculatePatientTransformMatrix
+  commentId: M:EvilDICOM.CV.Image.Matrix.CalculatePatientTransformMatrix
+  parent: EvilDICOM.CV.Image.Matrix
+  name: CalculatePatientTransformMatrix()
+  nameWithType: Matrix.CalculatePatientTransformMatrix()
+  fullName: EvilDICOM.CV.Image.Matrix.CalculatePatientTransformMatrix()
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.CalculatePatientTransformMatrix
+    name: CalculatePatientTransformMatrix
+    nameWithType: Matrix.CalculatePatientTransformMatrix
+    fullName: EvilDICOM.CV.Image.Matrix.CalculatePatientTransformMatrix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.CalculatePatientTransformMatrix
+    name: CalculatePatientTransformMatrix
+    nameWithType: Matrix.CalculatePatientTransformMatrix
+    fullName: EvilDICOM.CV.Image.Matrix.CalculatePatientTransformMatrix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.GetImageGridPointsPatientCoordinates
+  commentId: M:EvilDICOM.CV.Image.Matrix.GetImageGridPointsPatientCoordinates
+  parent: EvilDICOM.CV.Image.Matrix
+  name: GetImageGridPointsPatientCoordinates()
+  nameWithType: Matrix.GetImageGridPointsPatientCoordinates()
+  fullName: EvilDICOM.CV.Image.Matrix.GetImageGridPointsPatientCoordinates()
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.GetImageGridPointsPatientCoordinates
+    name: GetImageGridPointsPatientCoordinates
+    nameWithType: Matrix.GetImageGridPointsPatientCoordinates
+    fullName: EvilDICOM.CV.Image.Matrix.GetImageGridPointsPatientCoordinates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.GetImageGridPointsPatientCoordinates
+    name: GetImageGridPointsPatientCoordinates
+    nameWithType: Matrix.GetImageGridPointsPatientCoordinates
+    fullName: EvilDICOM.CV.Image.Matrix.GetImageGridPointsPatientCoordinates
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.VolumeCC
+  commentId: M:EvilDICOM.CV.Image.Matrix.VolumeCC
+  parent: EvilDICOM.CV.Image.Matrix
+  name: VolumeCC()
+  nameWithType: Matrix.VolumeCC()
+  fullName: EvilDICOM.CV.Image.Matrix.VolumeCC()
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.VolumeCC
+    name: VolumeCC
+    nameWithType: Matrix.VolumeCC
+    fullName: EvilDICOM.CV.Image.Matrix.VolumeCC
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.VolumeCC
+    name: VolumeCC
+    nameWithType: Matrix.VolumeCC
+    fullName: EvilDICOM.CV.Image.Matrix.VolumeCC
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.ConvertIsodoseLevelToMesh(System.Double)
+  commentId: M:EvilDICOM.CV.Image.Matrix.ConvertIsodoseLevelToMesh(System.Double)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: ConvertIsodoseLevelToMesh(Double)
+  nameWithType: Matrix.ConvertIsodoseLevelToMesh(Double)
+  fullName: EvilDICOM.CV.Image.Matrix.ConvertIsodoseLevelToMesh(System.Double)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.ConvertIsodoseLevelToMesh(System.Double)
+    name: ConvertIsodoseLevelToMesh
+    nameWithType: Matrix.ConvertIsodoseLevelToMesh
+    fullName: EvilDICOM.CV.Image.Matrix.ConvertIsodoseLevelToMesh
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.ConvertIsodoseLevelToMesh(System.Double)
+    name: ConvertIsodoseLevelToMesh
+    nameWithType: Matrix.ConvertIsodoseLevelToMesh
+    fullName: EvilDICOM.CV.Image.Matrix.ConvertIsodoseLevelToMesh
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.CalcHistogram(System.Int32)
+  commentId: M:EvilDICOM.CV.Image.Matrix.CalcHistogram(System.Int32)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: CalcHistogram(Int32)
+  nameWithType: Matrix.CalcHistogram(Int32)
+  fullName: EvilDICOM.CV.Image.Matrix.CalcHistogram(System.Int32)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.CalcHistogram(System.Int32)
+    name: CalcHistogram
+    nameWithType: Matrix.CalcHistogram
+    fullName: EvilDICOM.CV.Image.Matrix.CalcHistogram
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.CalcHistogram(System.Int32)
+    name: CalcHistogram
+    nameWithType: Matrix.CalcHistogram
+    fullName: EvilDICOM.CV.Image.Matrix.CalcHistogram
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.Resample(System.Double,System.Double,System.Double)
+  commentId: M:EvilDICOM.CV.Image.Matrix.Resample(System.Double,System.Double,System.Double)
+  parent: EvilDICOM.CV.Image.Matrix
+  isExternal: true
+  name: Resample(Double, Double, Double)
+  nameWithType: Matrix.Resample(Double, Double, Double)
+  fullName: EvilDICOM.CV.Image.Matrix.Resample(System.Double, System.Double, System.Double)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.Resample(System.Double,System.Double,System.Double)
+    name: Resample
+    nameWithType: Matrix.Resample
+    fullName: EvilDICOM.CV.Image.Matrix.Resample
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.Resample(System.Double,System.Double,System.Double)
+    name: Resample
+    nameWithType: Matrix.Resample
+    fullName: EvilDICOM.CV.Image.Matrix.Resample
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.MinMaxVal
+  commentId: M:EvilDICOM.CV.Image.Matrix.MinMaxVal
+  parent: EvilDICOM.CV.Image.Matrix
+  name: MinMaxVal()
+  nameWithType: Matrix.MinMaxVal()
+  fullName: EvilDICOM.CV.Image.Matrix.MinMaxVal()
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.MinMaxVal
+    name: MinMaxVal
+    nameWithType: Matrix.MinMaxVal
+    fullName: EvilDICOM.CV.Image.Matrix.MinMaxVal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.MinMaxVal
+    name: MinMaxVal
+    nameWithType: Matrix.MinMaxVal
+    fullName: EvilDICOM.CV.Image.Matrix.MinMaxVal
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.EmptyClone
+  commentId: M:EvilDICOM.CV.Image.Matrix.EmptyClone
+  parent: EvilDICOM.CV.Image.Matrix
+  name: EmptyClone()
+  nameWithType: Matrix.EmptyClone()
+  fullName: EvilDICOM.CV.Image.Matrix.EmptyClone()
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.EmptyClone
+    name: EmptyClone
+    nameWithType: Matrix.EmptyClone
+    fullName: EvilDICOM.CV.Image.Matrix.EmptyClone
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.EmptyClone
+    name: EmptyClone
+    nameWithType: Matrix.EmptyClone
+    fullName: EvilDICOM.CV.Image.Matrix.EmptyClone
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.Dispose
+  commentId: M:EvilDICOM.CV.Image.Matrix.Dispose
+  parent: EvilDICOM.CV.Image.Matrix
+  name: Dispose()
+  nameWithType: Matrix.Dispose()
+  fullName: EvilDICOM.CV.Image.Matrix.Dispose()
+  spec.csharp:
+  - uid: EvilDICOM.CV.Image.Matrix.Dispose
+    name: Dispose
+    nameWithType: Matrix.Dispose
+    fullName: EvilDICOM.CV.Image.Matrix.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Image.Matrix.Dispose
+    name: Dispose
+    nameWithType: Matrix.Dispose
+    fullName: EvilDICOM.CV.Image.Matrix.Dispose
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.RT.DoseMatrix.EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage(EvilDICOM.CV.Image.ImageMatrix)
+  commentId: M:EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage(EvilDICOM.CV.RT.DoseMatrix,EvilDICOM.CV.Image.ImageMatrix)
+  parent: EvilDICOM.CV.Extensions.DoseMatrixExtensions
+  definition: EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage(EvilDICOM.CV.RT.DoseMatrix,EvilDICOM.CV.Image.ImageMatrix)
+  name: ResampleToImage(ImageMatrix)
+  nameWithType: DoseMatrixExtensions.ResampleToImage(ImageMatrix)
+  fullName: EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage(EvilDICOM.CV.Image.ImageMatrix)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage(EvilDICOM.CV.Image.ImageMatrix)
+    name: ResampleToImage
+    nameWithType: DoseMatrixExtensions.ResampleToImage
+    fullName: EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.Image.ImageMatrix
+    name: ImageMatrix
+    nameWithType: ImageMatrix
+    fullName: EvilDICOM.CV.Image.ImageMatrix
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage(EvilDICOM.CV.Image.ImageMatrix)
+    name: ResampleToImage
+    nameWithType: DoseMatrixExtensions.ResampleToImage
+    fullName: EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.Image.ImageMatrix
+    name: ImageMatrix
+    nameWithType: ImageMatrix
+    fullName: EvilDICOM.CV.Image.ImageMatrix
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.RT.IsodoseLevel[])
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.Image.Matrix,EvilDICOM.CV.RT.IsodoseLevel[])
+  parent: EvilDICOM.CV.Extensions.MatrixExtensions
+  definition: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.Image.Matrix,EvilDICOM.CV.RT.IsodoseLevel[])
+  name: Find2DIsodoseLines(IsodoseLevel[])
+  nameWithType: MatrixExtensions.Find2DIsodoseLines(IsodoseLevel[])
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.RT.IsodoseLevel[])
+  nameWithType.vb: MatrixExtensions.Find2DIsodoseLines(IsodoseLevel())
+  fullName.vb: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.RT.IsodoseLevel())
+  name.vb: Find2DIsodoseLines(IsodoseLevel())
+  spec.csharp:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.RT.IsodoseLevel[])
+    name: Find2DIsodoseLines
+    nameWithType: MatrixExtensions.Find2DIsodoseLines
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.IsodoseLevel
+    name: IsodoseLevel
+    nameWithType: IsodoseLevel
+    fullName: EvilDICOM.CV.RT.IsodoseLevel
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.RT.IsodoseLevel[])
+    name: Find2DIsodoseLines
+    nameWithType: MatrixExtensions.Find2DIsodoseLines
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.IsodoseLevel
+    name: IsodoseLevel
+    nameWithType: IsodoseLevel
+    fullName: EvilDICOM.CV.RT.IsodoseLevel
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(System.Double)
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(EvilDICOM.CV.Image.Matrix,System.Double)
+  parent: EvilDICOM.CV.Extensions.MatrixExtensions
+  definition: EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(EvilDICOM.CV.Image.Matrix,System.Double)
+  name: FindStructureContour(Double)
+  nameWithType: MatrixExtensions.FindStructureContour(Double)
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(System.Double)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(System.Double)
+    name: FindStructureContour
+    nameWithType: MatrixExtensions.FindStructureContour
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(System.Double)
+    name: FindStructureContour
+    nameWithType: MatrixExtensions.FindStructureContour
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices(EvilDICOM.CV.Image.Matrix)
+  parent: EvilDICOM.CV.Extensions.MatrixExtensions
+  definition: EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices(EvilDICOM.CV.Image.Matrix)
+  name: ShowAllSlices()
+  nameWithType: MatrixExtensions.ShowAllSlices()
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices()
+  spec.csharp:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices
+    name: ShowAllSlices
+    nameWithType: MatrixExtensions.ShowAllSlices
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices
+    name: ShowAllSlices
+    nameWithType: MatrixExtensions.ShowAllSlices
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Image.Matrix.EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix(EvilDICOM.CV.Image.Matrix)
+  parent: EvilDICOM.CV.Extensions.MatrixExtensions
+  definition: EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix(EvilDICOM.CV.Image.Matrix)
+  name: ShowSDFMatrix()
+  nameWithType: MatrixExtensions.ShowSDFMatrix()
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix()
+  spec.csharp:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix
+    name: ShowSDFMatrix
+    nameWithType: MatrixExtensions.ShowSDFMatrix
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix
+    name: ShowSDFMatrix
+    nameWithType: MatrixExtensions.ShowSDFMatrix
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.Image
+  commentId: N:EvilDICOM.CV.Image
+  name: EvilDICOM.CV.Image
+  nameWithType: EvilDICOM.CV.Image
+  fullName: EvilDICOM.CV.Image
+- uid: EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage(EvilDICOM.CV.RT.DoseMatrix,EvilDICOM.CV.Image.ImageMatrix)
+  commentId: M:EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage(EvilDICOM.CV.RT.DoseMatrix,EvilDICOM.CV.Image.ImageMatrix)
+  name: ResampleToImage(DoseMatrix, ImageMatrix)
+  nameWithType: DoseMatrixExtensions.ResampleToImage(DoseMatrix, ImageMatrix)
+  fullName: EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage(EvilDICOM.CV.RT.DoseMatrix, EvilDICOM.CV.Image.ImageMatrix)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage(EvilDICOM.CV.RT.DoseMatrix,EvilDICOM.CV.Image.ImageMatrix)
+    name: ResampleToImage
+    nameWithType: DoseMatrixExtensions.ResampleToImage
+    fullName: EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.DoseMatrix
+    name: DoseMatrix
+    nameWithType: DoseMatrix
+    fullName: EvilDICOM.CV.RT.DoseMatrix
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.CV.Image.ImageMatrix
+    name: ImageMatrix
+    nameWithType: ImageMatrix
+    fullName: EvilDICOM.CV.Image.ImageMatrix
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage(EvilDICOM.CV.RT.DoseMatrix,EvilDICOM.CV.Image.ImageMatrix)
+    name: ResampleToImage
+    nameWithType: DoseMatrixExtensions.ResampleToImage
+    fullName: EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.DoseMatrix
+    name: DoseMatrix
+    nameWithType: DoseMatrix
+    fullName: EvilDICOM.CV.RT.DoseMatrix
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.CV.Image.ImageMatrix
+    name: ImageMatrix
+    nameWithType: ImageMatrix
+    fullName: EvilDICOM.CV.Image.ImageMatrix
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Extensions.DoseMatrixExtensions
+  commentId: T:EvilDICOM.CV.Extensions.DoseMatrixExtensions
+  parent: EvilDICOM.CV.Extensions
+  name: DoseMatrixExtensions
+  nameWithType: DoseMatrixExtensions
+  fullName: EvilDICOM.CV.Extensions.DoseMatrixExtensions
+- uid: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.Image.Matrix,EvilDICOM.CV.RT.IsodoseLevel[])
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.Image.Matrix,EvilDICOM.CV.RT.IsodoseLevel[])
+  name: Find2DIsodoseLines(Matrix, IsodoseLevel[])
+  nameWithType: MatrixExtensions.Find2DIsodoseLines(Matrix, IsodoseLevel[])
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.Image.Matrix, EvilDICOM.CV.RT.IsodoseLevel[])
+  nameWithType.vb: MatrixExtensions.Find2DIsodoseLines(Matrix, IsodoseLevel())
+  fullName.vb: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.Image.Matrix, EvilDICOM.CV.RT.IsodoseLevel())
+  name.vb: Find2DIsodoseLines(Matrix, IsodoseLevel())
+  spec.csharp:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.Image.Matrix,EvilDICOM.CV.RT.IsodoseLevel[])
+    name: Find2DIsodoseLines
+    nameWithType: MatrixExtensions.Find2DIsodoseLines
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.Image.Matrix
+    name: Matrix
+    nameWithType: Matrix
+    fullName: EvilDICOM.CV.Image.Matrix
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.CV.RT.IsodoseLevel
+    name: IsodoseLevel
+    nameWithType: IsodoseLevel
+    fullName: EvilDICOM.CV.RT.IsodoseLevel
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.Image.Matrix,EvilDICOM.CV.RT.IsodoseLevel[])
+    name: Find2DIsodoseLines
+    nameWithType: MatrixExtensions.Find2DIsodoseLines
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.Image.Matrix
+    name: Matrix
+    nameWithType: Matrix
+    fullName: EvilDICOM.CV.Image.Matrix
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.CV.RT.IsodoseLevel
+    name: IsodoseLevel
+    nameWithType: IsodoseLevel
+    fullName: EvilDICOM.CV.RT.IsodoseLevel
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Extensions.MatrixExtensions
+  commentId: T:EvilDICOM.CV.Extensions.MatrixExtensions
+  parent: EvilDICOM.CV.Extensions
+  name: MatrixExtensions
+  nameWithType: MatrixExtensions
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions
+- uid: EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(EvilDICOM.CV.Image.Matrix,System.Double)
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(EvilDICOM.CV.Image.Matrix,System.Double)
+  isExternal: true
+  name: FindStructureContour(Matrix, Double)
+  nameWithType: MatrixExtensions.FindStructureContour(Matrix, Double)
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(EvilDICOM.CV.Image.Matrix, System.Double)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(EvilDICOM.CV.Image.Matrix,System.Double)
+    name: FindStructureContour
+    nameWithType: MatrixExtensions.FindStructureContour
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.Image.Matrix
+    name: Matrix
+    nameWithType: Matrix
+    fullName: EvilDICOM.CV.Image.Matrix
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(EvilDICOM.CV.Image.Matrix,System.Double)
+    name: FindStructureContour
+    nameWithType: MatrixExtensions.FindStructureContour
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.Image.Matrix
+    name: Matrix
+    nameWithType: Matrix
+    fullName: EvilDICOM.CV.Image.Matrix
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices(EvilDICOM.CV.Image.Matrix)
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices(EvilDICOM.CV.Image.Matrix)
+  name: ShowAllSlices(Matrix)
+  nameWithType: MatrixExtensions.ShowAllSlices(Matrix)
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices(EvilDICOM.CV.Image.Matrix)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices(EvilDICOM.CV.Image.Matrix)
+    name: ShowAllSlices
+    nameWithType: MatrixExtensions.ShowAllSlices
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.Image.Matrix
+    name: Matrix
+    nameWithType: Matrix
+    fullName: EvilDICOM.CV.Image.Matrix
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices(EvilDICOM.CV.Image.Matrix)
+    name: ShowAllSlices
+    nameWithType: MatrixExtensions.ShowAllSlices
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.Image.Matrix
+    name: Matrix
+    nameWithType: Matrix
+    fullName: EvilDICOM.CV.Image.Matrix
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix(EvilDICOM.CV.Image.Matrix)
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix(EvilDICOM.CV.Image.Matrix)
+  name: ShowSDFMatrix(Matrix)
+  nameWithType: MatrixExtensions.ShowSDFMatrix(Matrix)
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix(EvilDICOM.CV.Image.Matrix)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix(EvilDICOM.CV.Image.Matrix)
+    name: ShowSDFMatrix
+    nameWithType: MatrixExtensions.ShowSDFMatrix
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.Image.Matrix
+    name: Matrix
+    nameWithType: Matrix
+    fullName: EvilDICOM.CV.Image.Matrix
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix(EvilDICOM.CV.Image.Matrix)
+    name: ShowSDFMatrix
+    nameWithType: MatrixExtensions.ShowSDFMatrix
+    fullName: EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.Image.Matrix
+    name: Matrix
+    nameWithType: Matrix
+    fullName: EvilDICOM.CV.Image.Matrix
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Extensions
+  commentId: N:EvilDICOM.CV.Extensions
+  name: EvilDICOM.CV.Extensions
+  nameWithType: EvilDICOM.CV.Extensions
+  fullName: EvilDICOM.CV.Extensions
+- uid: EvilDICOM.CV.RT.DoseMatrix.MaxDose*
+  commentId: Overload:EvilDICOM.CV.RT.DoseMatrix.MaxDose
+  name: MaxDose
+  nameWithType: DoseMatrix.MaxDose
+  fullName: EvilDICOM.CV.RT.DoseMatrix.MaxDose
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: EvilDICOM.CV.RT.DoseMatrix.MaxDoseSlice*
+  commentId: Overload:EvilDICOM.CV.RT.DoseMatrix.MaxDoseSlice
+  name: MaxDoseSlice
+  nameWithType: DoseMatrix.MaxDoseSlice
+  fullName: EvilDICOM.CV.RT.DoseMatrix.MaxDoseSlice
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.CV.RT.DoseMatrix.PlanUID*
+  commentId: Overload:EvilDICOM.CV.RT.DoseMatrix.PlanUID
+  name: PlanUID
+  nameWithType: DoseMatrix.PlanUID
+  fullName: EvilDICOM.CV.RT.DoseMatrix.PlanUID
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.CV.RT.DoseMatrix.SumType*
+  commentId: Overload:EvilDICOM.CV.RT.DoseMatrix.SumType
+  name: SumType
+  nameWithType: DoseMatrix.SumType
+  fullName: EvilDICOM.CV.RT.DoseMatrix.SumType
+- uid: EvilDICOM.RT.Data.DoseSumType
+  commentId: T:EvilDICOM.RT.Data.DoseSumType
+  parent: EvilDICOM.RT.Data
+  name: DoseSumType
+  nameWithType: DoseSumType
+  fullName: EvilDICOM.RT.Data.DoseSumType
+- uid: EvilDICOM.RT.Data
+  commentId: N:EvilDICOM.RT.Data
+  name: EvilDICOM.RT.Data
+  nameWithType: EvilDICOM.RT.Data
+  fullName: EvilDICOM.RT.Data
+- uid: EvilDICOM.CV.RT.DoseMatrix.DoseUnit*
+  commentId: Overload:EvilDICOM.CV.RT.DoseMatrix.DoseUnit
+  name: DoseUnit
+  nameWithType: DoseMatrix.DoseUnit
+  fullName: EvilDICOM.CV.RT.DoseMatrix.DoseUnit
+- uid: EvilDICOM.RT.Data.DoseUnit
+  commentId: T:EvilDICOM.RT.Data.DoseUnit
+  parent: EvilDICOM.RT.Data
+  name: DoseUnit
+  nameWithType: DoseUnit
+  fullName: EvilDICOM.RT.Data.DoseUnit
+- uid: EvilDICOM.CV.RT.DoseMatrix.PrescriptionDoseGy*
+  commentId: Overload:EvilDICOM.CV.RT.DoseMatrix.PrescriptionDoseGy
+  name: PrescriptionDoseGy
+  nameWithType: DoseMatrix.PrescriptionDoseGy
+  fullName: EvilDICOM.CV.RT.DoseMatrix.PrescriptionDoseGy
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Double>
+  nameWithType: Nullable<Double>
+  fullName: System.Nullable<System.Double>
+  nameWithType.vb: Nullable(Of Double)
+  fullName.vb: System.Nullable(Of System.Double)
+  name.vb: Nullable(Of Double)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.RT.DoseMatrix.ConvertUnits*
+  commentId: Overload:EvilDICOM.CV.RT.DoseMatrix.ConvertUnits
+  name: ConvertUnits
+  nameWithType: DoseMatrix.ConvertUnits
+  fullName: EvilDICOM.CV.RT.DoseMatrix.ConvertUnits
+- uid: EvilDICOM.CV.RT.DoseMatrix.CalcDVH*
+  commentId: Overload:EvilDICOM.CV.RT.DoseMatrix.CalcDVH
+  name: CalcDVH
+  nameWithType: DoseMatrix.CalcDVH
+  fullName: EvilDICOM.CV.RT.DoseMatrix.CalcDVH
+- uid: EvilDICOM.CV.RT.DVH
+  commentId: T:EvilDICOM.CV.RT.DVH
+  parent: EvilDICOM.CV.RT
+  name: DVH
+  nameWithType: DVH
+  fullName: EvilDICOM.CV.RT.DVH
+- uid: EvilDICOM.CV.RT.DoseMatrix.Clone*
+  commentId: Overload:EvilDICOM.CV.RT.DoseMatrix.Clone
+  name: Clone
+  nameWithType: DoseMatrix.Clone
+  fullName: EvilDICOM.CV.RT.DoseMatrix.Clone
+- uid: EvilDICOM.CV.RT.DoseMatrix
+  commentId: T:EvilDICOM.CV.RT.DoseMatrix
+  parent: EvilDICOM.CV.RT
+  name: DoseMatrix
+  nameWithType: DoseMatrix
+  fullName: EvilDICOM.CV.RT.DoseMatrix

@@ -1,0 +1,510 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  commentId: T:EvilDICOM.Core.Enums.TransferSyntax
+  id: TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  children:
+  - EvilDICOM.Core.Enums.TransferSyntax.EXPLICIT_VR_BIG_ENDIAN
+  - EvilDICOM.Core.Enums.TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN
+  - EvilDICOM.Core.Enums.TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN
+  - EvilDICOM.Core.Enums.TransferSyntax.JPEG_2000
+  - EvilDICOM.Core.Enums.TransferSyntax.JPEG_2000_LOSSLESS
+  - EvilDICOM.Core.Enums.TransferSyntax.JPEG_BASELINE
+  - EvilDICOM.Core.Enums.TransferSyntax.JPEG_EXTENDED
+  - EvilDICOM.Core.Enums.TransferSyntax.JPEG_LOSSLESS_14
+  - EvilDICOM.Core.Enums.TransferSyntax.JPEG_LOSSLESS_14_S1
+  - EvilDICOM.Core.Enums.TransferSyntax.JPEG_LOSSLESS_15
+  - EvilDICOM.Core.Enums.TransferSyntax.JPEG_LS_LOSSLESS
+  - EvilDICOM.Core.Enums.TransferSyntax.JPEG_LS_NEAR_LOSSLESS
+  - EvilDICOM.Core.Enums.TransferSyntax.JPEG_PROGRESSIVE
+  - EvilDICOM.Core.Enums.TransferSyntax.RLE_LOSSLESS
+  langs:
+  - csharp
+  - vb
+  name: TransferSyntax
+  nameWithType: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: TransferSyntax
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  summary: "\nAn enum representing the transfer syntax of a given DICOM file.\n"
+  example: []
+  syntax:
+    content: public enum TransferSyntax
+    content.vb: Public Enum TransferSyntax
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Core.Enums.TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN
+  id: IMPLICIT_VR_LITTLE_ENDIAN
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: IMPLICIT_VR_LITTLE_ENDIAN
+  nameWithType: TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IMPLICIT_VR_LITTLE_ENDIAN
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: IMPLICIT_VR_LITTLE_ENDIAN = 0
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN
+  id: EXPLICIT_VR_LITTLE_ENDIAN
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: EXPLICIT_VR_LITTLE_ENDIAN
+  nameWithType: TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: EXPLICIT_VR_LITTLE_ENDIAN
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: EXPLICIT_VR_LITTLE_ENDIAN = 1
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.TransferSyntax.EXPLICIT_VR_BIG_ENDIAN
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.EXPLICIT_VR_BIG_ENDIAN
+  id: EXPLICIT_VR_BIG_ENDIAN
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: EXPLICIT_VR_BIG_ENDIAN
+  nameWithType: TransferSyntax.EXPLICIT_VR_BIG_ENDIAN
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.EXPLICIT_VR_BIG_ENDIAN
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: EXPLICIT_VR_BIG_ENDIAN
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: EXPLICIT_VR_BIG_ENDIAN = 2
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.TransferSyntax.RLE_LOSSLESS
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.RLE_LOSSLESS
+  id: RLE_LOSSLESS
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: RLE_LOSSLESS
+  nameWithType: TransferSyntax.RLE_LOSSLESS
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.RLE_LOSSLESS
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RLE_LOSSLESS
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: RLE_LOSSLESS = 3
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.TransferSyntax.JPEG_BASELINE
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.JPEG_BASELINE
+  id: JPEG_BASELINE
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: JPEG_BASELINE
+  nameWithType: TransferSyntax.JPEG_BASELINE
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.JPEG_BASELINE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: JPEG_BASELINE
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: JPEG_BASELINE = 4
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.TransferSyntax.JPEG_EXTENDED
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.JPEG_EXTENDED
+  id: JPEG_EXTENDED
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: JPEG_EXTENDED
+  nameWithType: TransferSyntax.JPEG_EXTENDED
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.JPEG_EXTENDED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: JPEG_EXTENDED
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: JPEG_EXTENDED = 5
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.TransferSyntax.JPEG_PROGRESSIVE
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.JPEG_PROGRESSIVE
+  id: JPEG_PROGRESSIVE
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: JPEG_PROGRESSIVE
+  nameWithType: TransferSyntax.JPEG_PROGRESSIVE
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.JPEG_PROGRESSIVE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: JPEG_PROGRESSIVE
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: JPEG_PROGRESSIVE = 6
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.TransferSyntax.JPEG_LOSSLESS_14
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.JPEG_LOSSLESS_14
+  id: JPEG_LOSSLESS_14
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: JPEG_LOSSLESS_14
+  nameWithType: TransferSyntax.JPEG_LOSSLESS_14
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.JPEG_LOSSLESS_14
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: JPEG_LOSSLESS_14
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: JPEG_LOSSLESS_14 = 7
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.TransferSyntax.JPEG_LOSSLESS_15
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.JPEG_LOSSLESS_15
+  id: JPEG_LOSSLESS_15
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: JPEG_LOSSLESS_15
+  nameWithType: TransferSyntax.JPEG_LOSSLESS_15
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.JPEG_LOSSLESS_15
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: JPEG_LOSSLESS_15
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: JPEG_LOSSLESS_15 = 8
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.TransferSyntax.JPEG_LOSSLESS_14_S1
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.JPEG_LOSSLESS_14_S1
+  id: JPEG_LOSSLESS_14_S1
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: JPEG_LOSSLESS_14_S1
+  nameWithType: TransferSyntax.JPEG_LOSSLESS_14_S1
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.JPEG_LOSSLESS_14_S1
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: JPEG_LOSSLESS_14_S1
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: JPEG_LOSSLESS_14_S1 = 9
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.TransferSyntax.JPEG_LS_LOSSLESS
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.JPEG_LS_LOSSLESS
+  id: JPEG_LS_LOSSLESS
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: JPEG_LS_LOSSLESS
+  nameWithType: TransferSyntax.JPEG_LS_LOSSLESS
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.JPEG_LS_LOSSLESS
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: JPEG_LS_LOSSLESS
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: JPEG_LS_LOSSLESS = 10
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.TransferSyntax.JPEG_LS_NEAR_LOSSLESS
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.JPEG_LS_NEAR_LOSSLESS
+  id: JPEG_LS_NEAR_LOSSLESS
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: JPEG_LS_NEAR_LOSSLESS
+  nameWithType: TransferSyntax.JPEG_LS_NEAR_LOSSLESS
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.JPEG_LS_NEAR_LOSSLESS
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: JPEG_LS_NEAR_LOSSLESS
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: JPEG_LS_NEAR_LOSSLESS = 11
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.TransferSyntax.JPEG_2000_LOSSLESS
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.JPEG_2000_LOSSLESS
+  id: JPEG_2000_LOSSLESS
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: JPEG_2000_LOSSLESS
+  nameWithType: TransferSyntax.JPEG_2000_LOSSLESS
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.JPEG_2000_LOSSLESS
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: JPEG_2000_LOSSLESS
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: JPEG_2000_LOSSLESS = 12
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.TransferSyntax.JPEG_2000
+  commentId: F:EvilDICOM.Core.Enums.TransferSyntax.JPEG_2000
+  id: JPEG_2000
+  parent: EvilDICOM.Core.Enums.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: JPEG_2000
+  nameWithType: TransferSyntax.JPEG_2000
+  fullName: EvilDICOM.Core.Enums.TransferSyntax.JPEG_2000
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/TransferSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: JPEG_2000
+    path: ../EvilDICOM/Core/Enums/TransferSyntax.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: JPEG_2000 = 13
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  commentId: T:EvilDICOM.Core.Enums.TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  name: TransferSyntax
+  nameWithType: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax

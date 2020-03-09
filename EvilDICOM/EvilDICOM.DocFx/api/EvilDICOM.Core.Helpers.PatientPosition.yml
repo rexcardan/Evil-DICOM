@@ -1,0 +1,996 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Helpers.PatientPosition
+  commentId: T:EvilDICOM.Core.Helpers.PatientPosition
+  id: PatientPosition
+  parent: EvilDICOM.Core.Helpers
+  children:
+  - EvilDICOM.Core.Helpers.PatientPosition.AnteriorFirstDecubitusLeft
+  - EvilDICOM.Core.Helpers.PatientPosition.AnteriorFirstDecubitusRight
+  - EvilDICOM.Core.Helpers.PatientPosition.FeetFirstDecubitusLeft
+  - EvilDICOM.Core.Helpers.PatientPosition.FeetFirstDecubitusRight
+  - EvilDICOM.Core.Helpers.PatientPosition.FeetFirstProne
+  - EvilDICOM.Core.Helpers.PatientPosition.FeetFirstSupine
+  - EvilDICOM.Core.Helpers.PatientPosition.FromAbbreviation(System.String)
+  - EvilDICOM.Core.Helpers.PatientPosition.HeadFirstDecubitusLeft
+  - EvilDICOM.Core.Helpers.PatientPosition.HeadFirstDecubitusRight
+  - EvilDICOM.Core.Helpers.PatientPosition.HeadFirstProne
+  - EvilDICOM.Core.Helpers.PatientPosition.HeadFirstSupine
+  - EvilDICOM.Core.Helpers.PatientPosition.LeftFirstProne
+  - EvilDICOM.Core.Helpers.PatientPosition.Orientation
+  - EvilDICOM.Core.Helpers.PatientPosition.PosteriorFirstDecubitusLeft
+  - EvilDICOM.Core.Helpers.PatientPosition.PosteriorFirstDecubitusRight
+  - EvilDICOM.Core.Helpers.PatientPosition.RightFirstProne
+  - EvilDICOM.Core.Helpers.PatientPosition.ToString
+  langs:
+  - csharp
+  - vb
+  name: PatientPosition
+  nameWithType: PatientPosition
+  fullName: EvilDICOM.Core.Helpers.PatientPosition
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PatientPosition
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public sealed class PatientPosition
+    content.vb: Public NotInheritable Class PatientPosition
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - sealed
+  - class
+  modifiers.vb:
+  - Public
+  - NotInheritable
+  - Class
+- uid: EvilDICOM.Core.Helpers.PatientPosition.FromAbbreviation(System.String)
+  commentId: M:EvilDICOM.Core.Helpers.PatientPosition.FromAbbreviation(System.String)
+  id: FromAbbreviation(System.String)
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: FromAbbreviation(String)
+  nameWithType: PatientPosition.FromAbbreviation(String)
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.FromAbbreviation(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FromAbbreviation
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static PatientPosition FromAbbreviation(string abbr)
+    parameters:
+    - id: abbr
+      type: System.String
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared Function FromAbbreviation(abbr As String) As PatientPosition
+  overload: EvilDICOM.Core.Helpers.PatientPosition.FromAbbreviation*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.PatientPosition.HeadFirstProne
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.HeadFirstProne
+  id: HeadFirstProne
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: HeadFirstProne
+  nameWithType: PatientPosition.HeadFirstProne
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.HeadFirstProne
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HeadFirstProne
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 33
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition HeadFirstProne
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly HeadFirstProne As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.HeadFirstSupine
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.HeadFirstSupine
+  id: HeadFirstSupine
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: HeadFirstSupine
+  nameWithType: PatientPosition.HeadFirstSupine
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.HeadFirstSupine
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HeadFirstSupine
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 34
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition HeadFirstSupine
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly HeadFirstSupine As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.HeadFirstDecubitusRight
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.HeadFirstDecubitusRight
+  id: HeadFirstDecubitusRight
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: HeadFirstDecubitusRight
+  nameWithType: PatientPosition.HeadFirstDecubitusRight
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.HeadFirstDecubitusRight
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HeadFirstDecubitusRight
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 35
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition HeadFirstDecubitusRight
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly HeadFirstDecubitusRight As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.HeadFirstDecubitusLeft
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.HeadFirstDecubitusLeft
+  id: HeadFirstDecubitusLeft
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: HeadFirstDecubitusLeft
+  nameWithType: PatientPosition.HeadFirstDecubitusLeft
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.HeadFirstDecubitusLeft
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HeadFirstDecubitusLeft
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 36
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition HeadFirstDecubitusLeft
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly HeadFirstDecubitusLeft As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.FeetFirstDecubitusRight
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.FeetFirstDecubitusRight
+  id: FeetFirstDecubitusRight
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: FeetFirstDecubitusRight
+  nameWithType: PatientPosition.FeetFirstDecubitusRight
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.FeetFirstDecubitusRight
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FeetFirstDecubitusRight
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 37
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition FeetFirstDecubitusRight
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly FeetFirstDecubitusRight As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.FeetFirstDecubitusLeft
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.FeetFirstDecubitusLeft
+  id: FeetFirstDecubitusLeft
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: FeetFirstDecubitusLeft
+  nameWithType: PatientPosition.FeetFirstDecubitusLeft
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.FeetFirstDecubitusLeft
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FeetFirstDecubitusLeft
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 38
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition FeetFirstDecubitusLeft
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly FeetFirstDecubitusLeft As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.FeetFirstProne
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.FeetFirstProne
+  id: FeetFirstProne
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: FeetFirstProne
+  nameWithType: PatientPosition.FeetFirstProne
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.FeetFirstProne
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FeetFirstProne
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 39
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition FeetFirstProne
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly FeetFirstProne As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.FeetFirstSupine
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.FeetFirstSupine
+  id: FeetFirstSupine
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: FeetFirstSupine
+  nameWithType: PatientPosition.FeetFirstSupine
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.FeetFirstSupine
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FeetFirstSupine
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 40
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition FeetFirstSupine
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly FeetFirstSupine As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.LeftFirstProne
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.LeftFirstProne
+  id: LeftFirstProne
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: LeftFirstProne
+  nameWithType: PatientPosition.LeftFirstProne
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.LeftFirstProne
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: LeftFirstProne
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 41
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition LeftFirstProne
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly LeftFirstProne As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.RightFirstProne
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.RightFirstProne
+  id: RightFirstProne
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: RightFirstProne
+  nameWithType: PatientPosition.RightFirstProne
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.RightFirstProne
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RightFirstProne
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 42
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition RightFirstProne
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly RightFirstProne As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.AnteriorFirstDecubitusRight
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.AnteriorFirstDecubitusRight
+  id: AnteriorFirstDecubitusRight
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: AnteriorFirstDecubitusRight
+  nameWithType: PatientPosition.AnteriorFirstDecubitusRight
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.AnteriorFirstDecubitusRight
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AnteriorFirstDecubitusRight
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 43
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition AnteriorFirstDecubitusRight
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly AnteriorFirstDecubitusRight As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.AnteriorFirstDecubitusLeft
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.AnteriorFirstDecubitusLeft
+  id: AnteriorFirstDecubitusLeft
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: AnteriorFirstDecubitusLeft
+  nameWithType: PatientPosition.AnteriorFirstDecubitusLeft
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.AnteriorFirstDecubitusLeft
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AnteriorFirstDecubitusLeft
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 44
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition AnteriorFirstDecubitusLeft
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly AnteriorFirstDecubitusLeft As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.PosteriorFirstDecubitusRight
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.PosteriorFirstDecubitusRight
+  id: PosteriorFirstDecubitusRight
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: PosteriorFirstDecubitusRight
+  nameWithType: PatientPosition.PosteriorFirstDecubitusRight
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.PosteriorFirstDecubitusRight
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PosteriorFirstDecubitusRight
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 45
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition PosteriorFirstDecubitusRight
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly PosteriorFirstDecubitusRight As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.PosteriorFirstDecubitusLeft
+  commentId: F:EvilDICOM.Core.Helpers.PatientPosition.PosteriorFirstDecubitusLeft
+  id: PosteriorFirstDecubitusLeft
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: PosteriorFirstDecubitusLeft
+  nameWithType: PatientPosition.PosteriorFirstDecubitusLeft
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.PosteriorFirstDecubitusLeft
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PosteriorFirstDecubitusLeft
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 46
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static readonly PatientPosition PosteriorFirstDecubitusLeft
+    return:
+      type: EvilDICOM.Core.Helpers.PatientPosition
+    content.vb: Public Shared ReadOnly PosteriorFirstDecubitusLeft As PatientPosition
+  modifiers.csharp:
+  - public
+  - static
+  - readonly
+  modifiers.vb:
+  - Public
+  - Shared
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.Orientation
+  commentId: P:EvilDICOM.Core.Helpers.PatientPosition.Orientation
+  id: Orientation
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: Orientation
+  nameWithType: PatientPosition.Orientation
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.Orientation
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Orientation
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 54
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public Orientation Orientation { get; }
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+    content.vb: Public ReadOnly Property Orientation As Orientation
+  overload: EvilDICOM.Core.Helpers.PatientPosition.Orientation*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.Core.Helpers.PatientPosition.ToString
+  commentId: M:EvilDICOM.Core.Helpers.PatientPosition.ToString
+  id: ToString
+  parent: EvilDICOM.Core.Helpers.PatientPosition
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: PatientPosition.ToString()
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PatientPosition.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToString
+    path: ../EvilDICOM/Core/Helpers/PatientPosition.cs
+    startLine: 56
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: EvilDICOM.Core.Helpers.PatientPosition.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Core.Helpers.PatientPosition.FromAbbreviation*
+  commentId: Overload:EvilDICOM.Core.Helpers.PatientPosition.FromAbbreviation
+  name: FromAbbreviation
+  nameWithType: PatientPosition.FromAbbreviation
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.FromAbbreviation
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Core.Helpers.PatientPosition
+  commentId: T:EvilDICOM.Core.Helpers.PatientPosition
+  parent: EvilDICOM.Core.Helpers
+  name: PatientPosition
+  nameWithType: PatientPosition
+  fullName: EvilDICOM.Core.Helpers.PatientPosition
+- uid: EvilDICOM.Core.Helpers.PatientPosition.Orientation*
+  commentId: Overload:EvilDICOM.Core.Helpers.PatientPosition.Orientation
+  name: Orientation
+  nameWithType: PatientPosition.Orientation
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.Orientation
+- uid: EvilDICOM.Core.Enums.Orientation
+  commentId: T:EvilDICOM.Core.Enums.Orientation
+  parent: EvilDICOM.Core.Enums
+  name: Orientation
+  nameWithType: Orientation
+  fullName: EvilDICOM.Core.Enums.Orientation
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Helpers.PatientPosition.ToString*
+  commentId: Overload:EvilDICOM.Core.Helpers.PatientPosition.ToString
+  name: ToString
+  nameWithType: PatientPosition.ToString
+  fullName: EvilDICOM.Core.Helpers.PatientPosition.ToString

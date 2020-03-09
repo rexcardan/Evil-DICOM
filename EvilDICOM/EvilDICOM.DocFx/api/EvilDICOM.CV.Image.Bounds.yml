@@ -1,0 +1,617 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.Image.Bounds
+  commentId: T:EvilDICOM.CV.Image.Bounds
+  id: Bounds
+  parent: EvilDICOM.CV.Image
+  children:
+  - EvilDICOM.CV.Image.Bounds.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  - EvilDICOM.CV.Image.Bounds.MaxX
+  - EvilDICOM.CV.Image.Bounds.MaxY
+  - EvilDICOM.CV.Image.Bounds.MaxZ
+  - EvilDICOM.CV.Image.Bounds.MinX
+  - EvilDICOM.CV.Image.Bounds.MinY
+  - EvilDICOM.CV.Image.Bounds.MinZ
+  langs:
+  - csharp
+  - vb
+  name: Bounds
+  nameWithType: Bounds
+  fullName: EvilDICOM.CV.Image.Bounds
+  type: Struct
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/Bounds.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Bounds
+    path: ../EvilDICOM.CV/Image/Bounds.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public struct Bounds
+    content.vb: Public Structure Bounds
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: EvilDICOM.CV.Image.Bounds.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  commentId: M:EvilDICOM.CV.Image.Bounds.#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)
+  id: '#ctor(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)'
+  parent: EvilDICOM.CV.Image.Bounds
+  langs:
+  - csharp
+  - vb
+  name: Bounds(Int32, Int32, Int32, Int32, Int32, Int32)
+  nameWithType: Bounds.Bounds(Int32, Int32, Int32, Int32, Int32, Int32)
+  fullName: EvilDICOM.CV.Image.Bounds.Bounds(System.Int32, System.Int32, System.Int32, System.Int32, System.Int32, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/Bounds.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM.CV/Image/Bounds.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public Bounds(int minX, int maxX, int minY, int maxY, int minZ, int maxZ)
+    parameters:
+    - id: minX
+      type: System.Int32
+    - id: maxX
+      type: System.Int32
+    - id: minY
+      type: System.Int32
+    - id: maxY
+      type: System.Int32
+    - id: minZ
+      type: System.Int32
+    - id: maxZ
+      type: System.Int32
+    content.vb: Public Sub New(minX As Integer, maxX As Integer, minY As Integer, maxY As Integer, minZ As Integer, maxZ As Integer)
+  overload: EvilDICOM.CV.Image.Bounds.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.Image.Bounds.MinX
+  commentId: P:EvilDICOM.CV.Image.Bounds.MinX
+  id: MinX
+  parent: EvilDICOM.CV.Image.Bounds
+  langs:
+  - csharp
+  - vb
+  name: MinX
+  nameWithType: Bounds.MinX
+  fullName: EvilDICOM.CV.Image.Bounds.MinX
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/Bounds.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MinX
+    path: ../EvilDICOM.CV/Image/Bounds.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public int MinX { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MinX As Integer
+  overload: EvilDICOM.CV.Image.Bounds.MinX*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.CV.Image.Bounds.MaxX
+  commentId: P:EvilDICOM.CV.Image.Bounds.MaxX
+  id: MaxX
+  parent: EvilDICOM.CV.Image.Bounds
+  langs:
+  - csharp
+  - vb
+  name: MaxX
+  nameWithType: Bounds.MaxX
+  fullName: EvilDICOM.CV.Image.Bounds.MaxX
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/Bounds.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MaxX
+    path: ../EvilDICOM.CV/Image/Bounds.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public int MaxX { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxX As Integer
+  overload: EvilDICOM.CV.Image.Bounds.MaxX*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.CV.Image.Bounds.MinY
+  commentId: P:EvilDICOM.CV.Image.Bounds.MinY
+  id: MinY
+  parent: EvilDICOM.CV.Image.Bounds
+  langs:
+  - csharp
+  - vb
+  name: MinY
+  nameWithType: Bounds.MinY
+  fullName: EvilDICOM.CV.Image.Bounds.MinY
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/Bounds.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MinY
+    path: ../EvilDICOM.CV/Image/Bounds.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public int MinY { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MinY As Integer
+  overload: EvilDICOM.CV.Image.Bounds.MinY*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.CV.Image.Bounds.MaxY
+  commentId: P:EvilDICOM.CV.Image.Bounds.MaxY
+  id: MaxY
+  parent: EvilDICOM.CV.Image.Bounds
+  langs:
+  - csharp
+  - vb
+  name: MaxY
+  nameWithType: Bounds.MaxY
+  fullName: EvilDICOM.CV.Image.Bounds.MaxY
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/Bounds.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MaxY
+    path: ../EvilDICOM.CV/Image/Bounds.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public int MaxY { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxY As Integer
+  overload: EvilDICOM.CV.Image.Bounds.MaxY*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.CV.Image.Bounds.MinZ
+  commentId: P:EvilDICOM.CV.Image.Bounds.MinZ
+  id: MinZ
+  parent: EvilDICOM.CV.Image.Bounds
+  langs:
+  - csharp
+  - vb
+  name: MinZ
+  nameWithType: Bounds.MinZ
+  fullName: EvilDICOM.CV.Image.Bounds.MinZ
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/Bounds.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MinZ
+    path: ../EvilDICOM.CV/Image/Bounds.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public int MinZ { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MinZ As Integer
+  overload: EvilDICOM.CV.Image.Bounds.MinZ*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.CV.Image.Bounds.MaxZ
+  commentId: P:EvilDICOM.CV.Image.Bounds.MaxZ
+  id: MaxZ
+  parent: EvilDICOM.CV.Image.Bounds
+  langs:
+  - csharp
+  - vb
+  name: MaxZ
+  nameWithType: Bounds.MaxZ
+  fullName: EvilDICOM.CV.Image.Bounds.MaxZ
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/Bounds.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MaxZ
+    path: ../EvilDICOM.CV/Image/Bounds.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public int MaxZ { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxZ As Integer
+  overload: EvilDICOM.CV.Image.Bounds.MaxZ*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: EvilDICOM.CV.Image
+  commentId: N:EvilDICOM.CV.Image
+  name: EvilDICOM.CV.Image
+  nameWithType: EvilDICOM.CV.Image
+  fullName: EvilDICOM.CV.Image
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.Image.Bounds.#ctor*
+  commentId: Overload:EvilDICOM.CV.Image.Bounds.#ctor
+  name: Bounds
+  nameWithType: Bounds.Bounds
+  fullName: EvilDICOM.CV.Image.Bounds.Bounds
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.CV.Image.Bounds.MinX*
+  commentId: Overload:EvilDICOM.CV.Image.Bounds.MinX
+  name: MinX
+  nameWithType: Bounds.MinX
+  fullName: EvilDICOM.CV.Image.Bounds.MinX
+- uid: EvilDICOM.CV.Image.Bounds.MaxX*
+  commentId: Overload:EvilDICOM.CV.Image.Bounds.MaxX
+  name: MaxX
+  nameWithType: Bounds.MaxX
+  fullName: EvilDICOM.CV.Image.Bounds.MaxX
+- uid: EvilDICOM.CV.Image.Bounds.MinY*
+  commentId: Overload:EvilDICOM.CV.Image.Bounds.MinY
+  name: MinY
+  nameWithType: Bounds.MinY
+  fullName: EvilDICOM.CV.Image.Bounds.MinY
+- uid: EvilDICOM.CV.Image.Bounds.MaxY*
+  commentId: Overload:EvilDICOM.CV.Image.Bounds.MaxY
+  name: MaxY
+  nameWithType: Bounds.MaxY
+  fullName: EvilDICOM.CV.Image.Bounds.MaxY
+- uid: EvilDICOM.CV.Image.Bounds.MinZ*
+  commentId: Overload:EvilDICOM.CV.Image.Bounds.MinZ
+  name: MinZ
+  nameWithType: Bounds.MinZ
+  fullName: EvilDICOM.CV.Image.Bounds.MinZ
+- uid: EvilDICOM.CV.Image.Bounds.MaxZ*
+  commentId: Overload:EvilDICOM.CV.Image.Bounds.MaxZ
+  name: MaxZ
+  nameWithType: Bounds.MaxZ
+  fullName: EvilDICOM.CV.Image.Bounds.MaxZ

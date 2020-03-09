@@ -1,0 +1,442 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Enums.ItemType
+  commentId: T:EvilDICOM.Network.Enums.ItemType
+  id: ItemType
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.ItemType.ABSTRACT_SYNTAX
+  - EvilDICOM.Network.Enums.ItemType.APPLICATION_CONTEXT
+  - EvilDICOM.Network.Enums.ItemType.ASYNCHRONOUS_OPERATIONS_WINDOW
+  - EvilDICOM.Network.Enums.ItemType.IMPLEMENTATION_CLASS_UID
+  - EvilDICOM.Network.Enums.ItemType.IMPLEMENTATION_VERSION_NAME
+  - EvilDICOM.Network.Enums.ItemType.MAXIMUM_LENGTH
+  - EvilDICOM.Network.Enums.ItemType.PRESENTATION_CONTEXT_ACCEPT
+  - EvilDICOM.Network.Enums.ItemType.PRESENTATION_CONTEXT_REQUEST
+  - EvilDICOM.Network.Enums.ItemType.SCPSCU_ROLE_SELECTION
+  - EvilDICOM.Network.Enums.ItemType.SOP_CLASS_EXTENDED_NEGOTIATION
+  - EvilDICOM.Network.Enums.ItemType.TRANSFER_SYNTAX
+  - EvilDICOM.Network.Enums.ItemType.USER_INFO
+  langs:
+  - csharp
+  - vb
+  name: ItemType
+  nameWithType: ItemType
+  fullName: EvilDICOM.Network.Enums.ItemType
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/ItemType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ItemType
+    path: ../EvilDICOM/Network/Enums/ItemType.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: public enum ItemType
+    content.vb: Public Enum ItemType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Network.Enums.ItemType.APPLICATION_CONTEXT
+  commentId: F:EvilDICOM.Network.Enums.ItemType.APPLICATION_CONTEXT
+  id: APPLICATION_CONTEXT
+  parent: EvilDICOM.Network.Enums.ItemType
+  langs:
+  - csharp
+  - vb
+  name: APPLICATION_CONTEXT
+  nameWithType: ItemType.APPLICATION_CONTEXT
+  fullName: EvilDICOM.Network.Enums.ItemType.APPLICATION_CONTEXT
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/ItemType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: APPLICATION_CONTEXT
+    path: ../EvilDICOM/Network/Enums/ItemType.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: APPLICATION_CONTEXT = 16
+    return:
+      type: EvilDICOM.Network.Enums.ItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.ItemType.PRESENTATION_CONTEXT_REQUEST
+  commentId: F:EvilDICOM.Network.Enums.ItemType.PRESENTATION_CONTEXT_REQUEST
+  id: PRESENTATION_CONTEXT_REQUEST
+  parent: EvilDICOM.Network.Enums.ItemType
+  langs:
+  - csharp
+  - vb
+  name: PRESENTATION_CONTEXT_REQUEST
+  nameWithType: ItemType.PRESENTATION_CONTEXT_REQUEST
+  fullName: EvilDICOM.Network.Enums.ItemType.PRESENTATION_CONTEXT_REQUEST
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/ItemType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PRESENTATION_CONTEXT_REQUEST
+    path: ../EvilDICOM/Network/Enums/ItemType.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: PRESENTATION_CONTEXT_REQUEST = 32
+    return:
+      type: EvilDICOM.Network.Enums.ItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.ItemType.PRESENTATION_CONTEXT_ACCEPT
+  commentId: F:EvilDICOM.Network.Enums.ItemType.PRESENTATION_CONTEXT_ACCEPT
+  id: PRESENTATION_CONTEXT_ACCEPT
+  parent: EvilDICOM.Network.Enums.ItemType
+  langs:
+  - csharp
+  - vb
+  name: PRESENTATION_CONTEXT_ACCEPT
+  nameWithType: ItemType.PRESENTATION_CONTEXT_ACCEPT
+  fullName: EvilDICOM.Network.Enums.ItemType.PRESENTATION_CONTEXT_ACCEPT
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/ItemType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PRESENTATION_CONTEXT_ACCEPT
+    path: ../EvilDICOM/Network/Enums/ItemType.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: PRESENTATION_CONTEXT_ACCEPT = 33
+    return:
+      type: EvilDICOM.Network.Enums.ItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.ItemType.ABSTRACT_SYNTAX
+  commentId: F:EvilDICOM.Network.Enums.ItemType.ABSTRACT_SYNTAX
+  id: ABSTRACT_SYNTAX
+  parent: EvilDICOM.Network.Enums.ItemType
+  langs:
+  - csharp
+  - vb
+  name: ABSTRACT_SYNTAX
+  nameWithType: ItemType.ABSTRACT_SYNTAX
+  fullName: EvilDICOM.Network.Enums.ItemType.ABSTRACT_SYNTAX
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/ItemType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ABSTRACT_SYNTAX
+    path: ../EvilDICOM/Network/Enums/ItemType.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: ABSTRACT_SYNTAX = 48
+    return:
+      type: EvilDICOM.Network.Enums.ItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.ItemType.TRANSFER_SYNTAX
+  commentId: F:EvilDICOM.Network.Enums.ItemType.TRANSFER_SYNTAX
+  id: TRANSFER_SYNTAX
+  parent: EvilDICOM.Network.Enums.ItemType
+  langs:
+  - csharp
+  - vb
+  name: TRANSFER_SYNTAX
+  nameWithType: ItemType.TRANSFER_SYNTAX
+  fullName: EvilDICOM.Network.Enums.ItemType.TRANSFER_SYNTAX
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/ItemType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: TRANSFER_SYNTAX
+    path: ../EvilDICOM/Network/Enums/ItemType.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: TRANSFER_SYNTAX = 64
+    return:
+      type: EvilDICOM.Network.Enums.ItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.ItemType.USER_INFO
+  commentId: F:EvilDICOM.Network.Enums.ItemType.USER_INFO
+  id: USER_INFO
+  parent: EvilDICOM.Network.Enums.ItemType
+  langs:
+  - csharp
+  - vb
+  name: USER_INFO
+  nameWithType: ItemType.USER_INFO
+  fullName: EvilDICOM.Network.Enums.ItemType.USER_INFO
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/ItemType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: USER_INFO
+    path: ../EvilDICOM/Network/Enums/ItemType.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: USER_INFO = 80
+    return:
+      type: EvilDICOM.Network.Enums.ItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.ItemType.MAXIMUM_LENGTH
+  commentId: F:EvilDICOM.Network.Enums.ItemType.MAXIMUM_LENGTH
+  id: MAXIMUM_LENGTH
+  parent: EvilDICOM.Network.Enums.ItemType
+  langs:
+  - csharp
+  - vb
+  name: MAXIMUM_LENGTH
+  nameWithType: ItemType.MAXIMUM_LENGTH
+  fullName: EvilDICOM.Network.Enums.ItemType.MAXIMUM_LENGTH
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/ItemType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MAXIMUM_LENGTH
+    path: ../EvilDICOM/Network/Enums/ItemType.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: MAXIMUM_LENGTH = 81
+    return:
+      type: EvilDICOM.Network.Enums.ItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.ItemType.IMPLEMENTATION_CLASS_UID
+  commentId: F:EvilDICOM.Network.Enums.ItemType.IMPLEMENTATION_CLASS_UID
+  id: IMPLEMENTATION_CLASS_UID
+  parent: EvilDICOM.Network.Enums.ItemType
+  langs:
+  - csharp
+  - vb
+  name: IMPLEMENTATION_CLASS_UID
+  nameWithType: ItemType.IMPLEMENTATION_CLASS_UID
+  fullName: EvilDICOM.Network.Enums.ItemType.IMPLEMENTATION_CLASS_UID
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/ItemType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IMPLEMENTATION_CLASS_UID
+    path: ../EvilDICOM/Network/Enums/ItemType.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: IMPLEMENTATION_CLASS_UID = 82
+    return:
+      type: EvilDICOM.Network.Enums.ItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.ItemType.ASYNCHRONOUS_OPERATIONS_WINDOW
+  commentId: F:EvilDICOM.Network.Enums.ItemType.ASYNCHRONOUS_OPERATIONS_WINDOW
+  id: ASYNCHRONOUS_OPERATIONS_WINDOW
+  parent: EvilDICOM.Network.Enums.ItemType
+  langs:
+  - csharp
+  - vb
+  name: ASYNCHRONOUS_OPERATIONS_WINDOW
+  nameWithType: ItemType.ASYNCHRONOUS_OPERATIONS_WINDOW
+  fullName: EvilDICOM.Network.Enums.ItemType.ASYNCHRONOUS_OPERATIONS_WINDOW
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/ItemType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ASYNCHRONOUS_OPERATIONS_WINDOW
+    path: ../EvilDICOM/Network/Enums/ItemType.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: ASYNCHRONOUS_OPERATIONS_WINDOW = 83
+    return:
+      type: EvilDICOM.Network.Enums.ItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.ItemType.SCPSCU_ROLE_SELECTION
+  commentId: F:EvilDICOM.Network.Enums.ItemType.SCPSCU_ROLE_SELECTION
+  id: SCPSCU_ROLE_SELECTION
+  parent: EvilDICOM.Network.Enums.ItemType
+  langs:
+  - csharp
+  - vb
+  name: SCPSCU_ROLE_SELECTION
+  nameWithType: ItemType.SCPSCU_ROLE_SELECTION
+  fullName: EvilDICOM.Network.Enums.ItemType.SCPSCU_ROLE_SELECTION
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/ItemType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SCPSCU_ROLE_SELECTION
+    path: ../EvilDICOM/Network/Enums/ItemType.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: SCPSCU_ROLE_SELECTION = 84
+    return:
+      type: EvilDICOM.Network.Enums.ItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.ItemType.IMPLEMENTATION_VERSION_NAME
+  commentId: F:EvilDICOM.Network.Enums.ItemType.IMPLEMENTATION_VERSION_NAME
+  id: IMPLEMENTATION_VERSION_NAME
+  parent: EvilDICOM.Network.Enums.ItemType
+  langs:
+  - csharp
+  - vb
+  name: IMPLEMENTATION_VERSION_NAME
+  nameWithType: ItemType.IMPLEMENTATION_VERSION_NAME
+  fullName: EvilDICOM.Network.Enums.ItemType.IMPLEMENTATION_VERSION_NAME
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/ItemType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IMPLEMENTATION_VERSION_NAME
+    path: ../EvilDICOM/Network/Enums/ItemType.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: IMPLEMENTATION_VERSION_NAME = 85
+    return:
+      type: EvilDICOM.Network.Enums.ItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.ItemType.SOP_CLASS_EXTENDED_NEGOTIATION
+  commentId: F:EvilDICOM.Network.Enums.ItemType.SOP_CLASS_EXTENDED_NEGOTIATION
+  id: SOP_CLASS_EXTENDED_NEGOTIATION
+  parent: EvilDICOM.Network.Enums.ItemType
+  langs:
+  - csharp
+  - vb
+  name: SOP_CLASS_EXTENDED_NEGOTIATION
+  nameWithType: ItemType.SOP_CLASS_EXTENDED_NEGOTIATION
+  fullName: EvilDICOM.Network.Enums.ItemType.SOP_CLASS_EXTENDED_NEGOTIATION
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/ItemType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SOP_CLASS_EXTENDED_NEGOTIATION
+    path: ../EvilDICOM/Network/Enums/ItemType.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: SOP_CLASS_EXTENDED_NEGOTIATION = 86
+    return:
+      type: EvilDICOM.Network.Enums.ItemType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.Enums.ItemType
+  commentId: T:EvilDICOM.Network.Enums.ItemType
+  parent: EvilDICOM.Network.Enums
+  name: ItemType
+  nameWithType: ItemType
+  fullName: EvilDICOM.Network.Enums.ItemType

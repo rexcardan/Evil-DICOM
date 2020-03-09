@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.SCUOps.CMover.ProgressUpdatedHandler
+  commentId: T:EvilDICOM.Network.SCUOps.CMover.ProgressUpdatedHandler
+  id: CMover.ProgressUpdatedHandler
+  parent: EvilDICOM.Network.SCUOps
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: CMover.ProgressUpdatedHandler
+  nameWithType: CMover.ProgressUpdatedHandler
+  fullName: EvilDICOM.Network.SCUOps.CMover.ProgressUpdatedHandler
+  type: Delegate
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ProgressUpdatedHandler
+    path: ../EvilDICOM/Network/SCUOps/CMover.cs
+    startLine: 98
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.SCUOps
+  syntax:
+    content: public delegate void ProgressUpdatedHandler(int completed, int remaining, int failed, int warning);
+    parameters:
+    - id: completed
+      type: System.Int32
+    - id: remaining
+      type: System.Int32
+    - id: failed
+      type: System.Int32
+    - id: warning
+      type: System.Int32
+    content.vb: Public Delegate Sub ProgressUpdatedHandler(completed As Integer, remaining As Integer, failed As Integer, warning As Integer)
+  modifiers.csharp:
+  - public
+  - delegate
+  modifiers.vb:
+  - Public
+  - Delegate
+references:
+- uid: EvilDICOM.Network.SCUOps
+  commentId: N:EvilDICOM.Network.SCUOps
+  name: EvilDICOM.Network.SCUOps
+  nameWithType: EvilDICOM.Network.SCUOps
+  fullName: EvilDICOM.Network.SCUOps
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System

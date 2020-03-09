@@ -1,0 +1,759 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest
+  commentId: T:EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest
+  id: StorageCommitmentRequest
+  parent: EvilDICOM.Network.DIMSE.Actions
+  children:
+  - EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest.#ctor
+  langs:
+  - csharp
+  - vb
+  name: StorageCommitmentRequest
+  nameWithType: StorageCommitmentRequest
+  fullName: EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/Actions/StorageCommitmentRequest.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StorageCommitmentRequest
+    path: ../EvilDICOM/Network/DIMSE/Actions/StorageCommitmentRequest.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.Actions
+  syntax:
+    content: 'public class StorageCommitmentRequest : NActionRequest, IIOD'
+    content.vb: >-
+      Public Class StorageCommitmentRequest
+          Inherits NActionRequest
+          Implements IIOD
+  inheritance:
+  - System.Object
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  - EvilDICOM.Network.DIMSE.AbstractDIMSE
+  - EvilDICOM.Network.DIMSE.AbstractDIMSERequest
+  - EvilDICOM.Network.DIMSE.NActionRequest
+  implements:
+  - EvilDICOM.Core.Interfaces.IIOD
+  inheritedMembers:
+  - EvilDICOM.Network.DIMSE.NActionRequest._requestedSOPClassUID
+  - EvilDICOM.Network.DIMSE.NActionRequest.RequestedSOPClassUID
+  - EvilDICOM.Network.DIMSE.NActionRequest._requestedSOPInstanceUID
+  - EvilDICOM.Network.DIMSE.NActionRequest.RequestedSOPInstanceUID
+  - EvilDICOM.Network.DIMSE.NActionRequest._actionTypeId
+  - EvilDICOM.Network.DIMSE.NActionRequest.ActionTypeID
+  - EvilDICOM.Network.DIMSE.NActionRequest.Elements
+  - EvilDICOM.Network.DIMSE.AbstractDIMSERequest._messageId
+  - EvilDICOM.Network.DIMSE.AbstractDIMSERequest.MessageID
+  - EvilDICOM.Network.DIMSE.AbstractDIMSE.HasData
+  - EvilDICOM.Network.DIMSE.AbstractDIMSE.Data
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase._affectedSOPClassUID
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase._commandField
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase._dataSetType
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase._groupLength
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - EvilDICOM.Network.DIMSE.AbstractDIMSEBase.EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.Association)
+  - EvilDICOM.Core.Interfaces.IIOD.EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest.#ctor
+  commentId: M:EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest
+  langs:
+  - csharp
+  - vb
+  name: StorageCommitmentRequest()
+  nameWithType: StorageCommitmentRequest.StorageCommitmentRequest()
+  fullName: EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest.StorageCommitmentRequest()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DIMSE/Actions/StorageCommitmentRequest.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/Network/DIMSE/Actions/StorageCommitmentRequest.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.DIMSE.Actions
+  syntax:
+    content: public StorageCommitmentRequest()
+    content.vb: Public Sub New
+  overload: EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Network.DIMSE.Actions
+  commentId: N:EvilDICOM.Network.DIMSE.Actions
+  name: EvilDICOM.Network.DIMSE.Actions
+  nameWithType: EvilDICOM.Network.DIMSE.Actions
+  fullName: EvilDICOM.Network.DIMSE.Actions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  commentId: T:EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  parent: EvilDICOM.Network.DIMSE
+  name: AbstractDIMSEBase
+  nameWithType: AbstractDIMSEBase
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSE
+  commentId: T:EvilDICOM.Network.DIMSE.AbstractDIMSE
+  parent: EvilDICOM.Network.DIMSE
+  name: AbstractDIMSE
+  nameWithType: AbstractDIMSE
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSE
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSERequest
+  commentId: T:EvilDICOM.Network.DIMSE.AbstractDIMSERequest
+  parent: EvilDICOM.Network.DIMSE
+  name: AbstractDIMSERequest
+  nameWithType: AbstractDIMSERequest
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSERequest
+- uid: EvilDICOM.Network.DIMSE.NActionRequest
+  commentId: T:EvilDICOM.Network.DIMSE.NActionRequest
+  parent: EvilDICOM.Network.DIMSE
+  name: NActionRequest
+  nameWithType: NActionRequest
+  fullName: EvilDICOM.Network.DIMSE.NActionRequest
+- uid: EvilDICOM.Core.Interfaces.IIOD
+  commentId: T:EvilDICOM.Core.Interfaces.IIOD
+  parent: EvilDICOM.Core.Interfaces
+  name: IIOD
+  nameWithType: IIOD
+  fullName: EvilDICOM.Core.Interfaces.IIOD
+- uid: EvilDICOM.Network.DIMSE.NActionRequest._requestedSOPClassUID
+  commentId: F:EvilDICOM.Network.DIMSE.NActionRequest._requestedSOPClassUID
+  parent: EvilDICOM.Network.DIMSE.NActionRequest
+  name: _requestedSOPClassUID
+  nameWithType: NActionRequest._requestedSOPClassUID
+  fullName: EvilDICOM.Network.DIMSE.NActionRequest._requestedSOPClassUID
+- uid: EvilDICOM.Network.DIMSE.NActionRequest.RequestedSOPClassUID
+  commentId: P:EvilDICOM.Network.DIMSE.NActionRequest.RequestedSOPClassUID
+  parent: EvilDICOM.Network.DIMSE.NActionRequest
+  name: RequestedSOPClassUID
+  nameWithType: NActionRequest.RequestedSOPClassUID
+  fullName: EvilDICOM.Network.DIMSE.NActionRequest.RequestedSOPClassUID
+- uid: EvilDICOM.Network.DIMSE.NActionRequest._requestedSOPInstanceUID
+  commentId: F:EvilDICOM.Network.DIMSE.NActionRequest._requestedSOPInstanceUID
+  parent: EvilDICOM.Network.DIMSE.NActionRequest
+  name: _requestedSOPInstanceUID
+  nameWithType: NActionRequest._requestedSOPInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.NActionRequest._requestedSOPInstanceUID
+- uid: EvilDICOM.Network.DIMSE.NActionRequest.RequestedSOPInstanceUID
+  commentId: P:EvilDICOM.Network.DIMSE.NActionRequest.RequestedSOPInstanceUID
+  parent: EvilDICOM.Network.DIMSE.NActionRequest
+  name: RequestedSOPInstanceUID
+  nameWithType: NActionRequest.RequestedSOPInstanceUID
+  fullName: EvilDICOM.Network.DIMSE.NActionRequest.RequestedSOPInstanceUID
+- uid: EvilDICOM.Network.DIMSE.NActionRequest._actionTypeId
+  commentId: F:EvilDICOM.Network.DIMSE.NActionRequest._actionTypeId
+  parent: EvilDICOM.Network.DIMSE.NActionRequest
+  name: _actionTypeId
+  nameWithType: NActionRequest._actionTypeId
+  fullName: EvilDICOM.Network.DIMSE.NActionRequest._actionTypeId
+- uid: EvilDICOM.Network.DIMSE.NActionRequest.ActionTypeID
+  commentId: P:EvilDICOM.Network.DIMSE.NActionRequest.ActionTypeID
+  parent: EvilDICOM.Network.DIMSE.NActionRequest
+  name: ActionTypeID
+  nameWithType: NActionRequest.ActionTypeID
+  fullName: EvilDICOM.Network.DIMSE.NActionRequest.ActionTypeID
+- uid: EvilDICOM.Network.DIMSE.NActionRequest.Elements
+  commentId: P:EvilDICOM.Network.DIMSE.NActionRequest.Elements
+  parent: EvilDICOM.Network.DIMSE.NActionRequest
+  name: Elements
+  nameWithType: NActionRequest.Elements
+  fullName: EvilDICOM.Network.DIMSE.NActionRequest.Elements
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSERequest._messageId
+  commentId: F:EvilDICOM.Network.DIMSE.AbstractDIMSERequest._messageId
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSERequest
+  name: _messageId
+  nameWithType: AbstractDIMSERequest._messageId
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSERequest._messageId
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSERequest.MessageID
+  commentId: P:EvilDICOM.Network.DIMSE.AbstractDIMSERequest.MessageID
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSERequest
+  name: MessageID
+  nameWithType: AbstractDIMSERequest.MessageID
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSERequest.MessageID
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSE.HasData
+  commentId: P:EvilDICOM.Network.DIMSE.AbstractDIMSE.HasData
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSE
+  name: HasData
+  nameWithType: AbstractDIMSE.HasData
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSE.HasData
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSE.Data
+  commentId: P:EvilDICOM.Network.DIMSE.AbstractDIMSE.Data
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSE
+  name: Data
+  nameWithType: AbstractDIMSE.Data
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSE.Data
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._affectedSOPClassUID
+  commentId: F:EvilDICOM.Network.DIMSE.AbstractDIMSEBase._affectedSOPClassUID
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  name: _affectedSOPClassUID
+  nameWithType: AbstractDIMSEBase._affectedSOPClassUID
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._affectedSOPClassUID
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._commandField
+  commentId: F:EvilDICOM.Network.DIMSE.AbstractDIMSEBase._commandField
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  name: _commandField
+  nameWithType: AbstractDIMSEBase._commandField
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._commandField
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._dataSetType
+  commentId: F:EvilDICOM.Network.DIMSE.AbstractDIMSEBase._dataSetType
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  name: _dataSetType
+  nameWithType: AbstractDIMSEBase._dataSetType
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._dataSetType
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._groupLength
+  commentId: F:EvilDICOM.Network.DIMSE.AbstractDIMSEBase._groupLength
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  name: _groupLength
+  nameWithType: AbstractDIMSEBase._groupLength
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase._groupLength
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID
+  commentId: P:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  name: AffectedSOPClassUID
+  nameWithType: AbstractDIMSEBase.AffectedSOPClassUID
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.AffectedSOPClassUID
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength
+  commentId: P:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  name: GroupLength
+  nameWithType: AbstractDIMSEBase.GroupLength
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.GroupLength
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField
+  commentId: P:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  name: CommandField
+  nameWithType: AbstractDIMSEBase.CommandField
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.CommandField
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType
+  commentId: P:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  name: DataSetType
+  nameWithType: AbstractDIMSEBase.DataSetType
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.DataSetType
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength
+  commentId: M:EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength
+  parent: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  name: SetGroupLength()
+  nameWithType: AbstractDIMSEBase.SetGroupLength()
+  fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength()
+  spec.csharp:
+  - uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength
+    name: SetGroupLength
+    nameWithType: AbstractDIMSEBase.SetGroupLength
+    fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength
+    name: SetGroupLength
+    nameWithType: AbstractDIMSEBase.SetGroupLength
+    fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.SetGroupLength
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase.EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.Association)
+  commentId: M:EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Extensions.DIMSEExtensions
+  definition: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association)
+  name: LogData(Association)
+  nameWithType: DIMSEExtensions.LogData(Association)
+  fullName: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.Association)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.Association)
+    name: LogData
+    nameWithType: DIMSEExtensions.LogData
+    fullName: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.Association)
+    name: LogData
+    nameWithType: DIMSEExtensions.LogData
+    fullName: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Interfaces.IIOD.EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+  commentId: M:EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+  parent: EvilDICOM.Network.Extensions.IIODExtensions
+  definition: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+  name: GetLogString()
+  nameWithType: IIODExtensions.GetLogString()
+  fullName: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString()
+  spec.csharp:
+  - uid: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+    name: GetLogString
+    nameWithType: IIODExtensions.GetLogString
+    fullName: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+    name: GetLogString
+    nameWithType: IIODExtensions.GetLogString
+    fullName: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Network.DIMSE
+  commentId: N:EvilDICOM.Network.DIMSE
+  name: EvilDICOM.Network.DIMSE
+  nameWithType: EvilDICOM.Network.DIMSE
+  fullName: EvilDICOM.Network.DIMSE
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association)
+  commentId: M:EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association)
+  name: LogData(AbstractDIMSEBase, Association)
+  nameWithType: DIMSEExtensions.LogData(AbstractDIMSEBase, Association)
+  fullName: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase, EvilDICOM.Network.Association)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association)
+    name: LogData
+    nameWithType: DIMSEExtensions.LogData
+    fullName: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+    name: AbstractDIMSEBase
+    nameWithType: AbstractDIMSEBase
+    fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData(EvilDICOM.Network.DIMSE.AbstractDIMSEBase,EvilDICOM.Network.Association)
+    name: LogData
+    nameWithType: DIMSEExtensions.LogData
+    fullName: EvilDICOM.Network.Extensions.DIMSEExtensions.LogData
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+    name: AbstractDIMSEBase
+    nameWithType: AbstractDIMSEBase
+    fullName: EvilDICOM.Network.DIMSE.AbstractDIMSEBase
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Extensions.DIMSEExtensions
+  commentId: T:EvilDICOM.Network.Extensions.DIMSEExtensions
+  parent: EvilDICOM.Network.Extensions
+  name: DIMSEExtensions
+  nameWithType: DIMSEExtensions
+  fullName: EvilDICOM.Network.Extensions.DIMSEExtensions
+- uid: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+  commentId: M:EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+  name: GetLogString(IIOD)
+  nameWithType: IIODExtensions.GetLogString(IIOD)
+  fullName: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+    name: GetLogString
+    nameWithType: IIODExtensions.GetLogString
+    fullName: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.Interfaces.IIOD
+    name: IIOD
+    nameWithType: IIOD
+    fullName: EvilDICOM.Core.Interfaces.IIOD
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+    name: GetLogString
+    nameWithType: IIODExtensions.GetLogString
+    fullName: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.Interfaces.IIOD
+    name: IIOD
+    nameWithType: IIOD
+    fullName: EvilDICOM.Core.Interfaces.IIOD
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Extensions.IIODExtensions
+  commentId: T:EvilDICOM.Network.Extensions.IIODExtensions
+  parent: EvilDICOM.Network.Extensions
+  name: IIODExtensions
+  nameWithType: IIODExtensions
+  fullName: EvilDICOM.Network.Extensions.IIODExtensions
+- uid: EvilDICOM.Network.Extensions
+  commentId: N:EvilDICOM.Network.Extensions
+  name: EvilDICOM.Network.Extensions
+  nameWithType: EvilDICOM.Network.Extensions
+  fullName: EvilDICOM.Network.Extensions
+- uid: EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest.#ctor*
+  commentId: Overload:EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest.#ctor
+  name: StorageCommitmentRequest
+  nameWithType: StorageCommitmentRequest.StorageCommitmentRequest
+  fullName: EvilDICOM.Network.DIMSE.Actions.StorageCommitmentRequest.StorageCommitmentRequest

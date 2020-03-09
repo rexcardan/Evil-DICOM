@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Enums.CommandDataSetType
+  commentId: T:EvilDICOM.Network.Enums.CommandDataSetType
+  id: CommandDataSetType
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.CommandDataSetType.EMPTY
+  - EvilDICOM.Network.Enums.CommandDataSetType.HAS_DATA
+  langs:
+  - csharp
+  - vb
+  name: CommandDataSetType
+  nameWithType: CommandDataSetType
+  fullName: EvilDICOM.Network.Enums.CommandDataSetType
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandDataSetType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CommandDataSetType
+    path: ../EvilDICOM/Network/Enums/CommandDataSetType.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: 'public enum CommandDataSetType : ushort'
+    content.vb: Public Enum CommandDataSetType As UShort
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Network.Enums.CommandDataSetType.EMPTY
+  commentId: F:EvilDICOM.Network.Enums.CommandDataSetType.EMPTY
+  id: EMPTY
+  parent: EvilDICOM.Network.Enums.CommandDataSetType
+  langs:
+  - csharp
+  - vb
+  name: EMPTY
+  nameWithType: CommandDataSetType.EMPTY
+  fullName: EvilDICOM.Network.Enums.CommandDataSetType.EMPTY
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandDataSetType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: EMPTY
+    path: ../EvilDICOM/Network/Enums/CommandDataSetType.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: EMPTY = 257
+    return:
+      type: EvilDICOM.Network.Enums.CommandDataSetType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.CommandDataSetType.HAS_DATA
+  commentId: F:EvilDICOM.Network.Enums.CommandDataSetType.HAS_DATA
+  id: HAS_DATA
+  parent: EvilDICOM.Network.Enums.CommandDataSetType
+  langs:
+  - csharp
+  - vb
+  name: HAS_DATA
+  nameWithType: CommandDataSetType.HAS_DATA
+  fullName: EvilDICOM.Network.Enums.CommandDataSetType.HAS_DATA
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/CommandDataSetType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HAS_DATA
+    path: ../EvilDICOM/Network/Enums/CommandDataSetType.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: HAS_DATA = 0
+    return:
+      type: EvilDICOM.Network.Enums.CommandDataSetType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.Enums.CommandDataSetType
+  commentId: T:EvilDICOM.Network.Enums.CommandDataSetType
+  parent: EvilDICOM.Network.Enums
+  name: CommandDataSetType
+  nameWithType: CommandDataSetType
+  fullName: EvilDICOM.Network.Enums.CommandDataSetType

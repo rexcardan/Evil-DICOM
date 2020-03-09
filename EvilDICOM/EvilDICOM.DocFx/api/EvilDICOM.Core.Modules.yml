@@ -1,0 +1,28 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Modules
+  commentId: N:EvilDICOM.Core.Modules
+  id: EvilDICOM.Core.Modules
+  children:
+  - EvilDICOM.Core.Modules.FileMetadata
+  - EvilDICOM.Core.Modules.Patient
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Core.Modules
+  nameWithType: EvilDICOM.Core.Modules
+  fullName: EvilDICOM.Core.Modules
+  type: Namespace
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Core.Modules.FileMetadata
+  commentId: T:EvilDICOM.Core.Modules.FileMetadata
+  name: FileMetadata
+  nameWithType: FileMetadata
+  fullName: EvilDICOM.Core.Modules.FileMetadata
+- uid: EvilDICOM.Core.Modules.Patient
+  commentId: T:EvilDICOM.Core.Modules.Patient
+  name: Patient
+  nameWithType: Patient
+  fullName: EvilDICOM.Core.Modules.Patient

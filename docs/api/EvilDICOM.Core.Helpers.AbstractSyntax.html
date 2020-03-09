@@ -1,0 +1,895 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class AbstractSyntax
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class AbstractSyntax
+   ">
+    <meta name="generator" content="docfx 2.50.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L9" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <h1 id="" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax">Class AbstractSyntax
+              </h1>
+              <div class="markdown level0 summary"></div>
+              <div class="markdown level0 conceptual"></div>
+              <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- API Ad -->
+              <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8634681343664488" data-ad-slot="2969171149"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID</a></div>
+                  <div class="level2"><span class="xref">AbstractSyntax</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.ComputedRadiographyImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.DigitalX_RayImageStorage_ForPresentation</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.DigitalX_RayImageStorage_ForProcessing</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.DigitalMammographyX_RayImageStorage_ForPresentation</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.DigitalMammographyX_RayImageStorage_ForProcessing</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.DigitalIntra_OralX_RayImageStorage_ForPresentation</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.DigitalIntra_OralX_RayImageStorage_ForProcessing</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.CTImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.EnhancedCTImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.LegacyConvertedEnhancedCTImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.UltrasoundMulti_frameImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.MRImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.EnhancedMRImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.MRSpectroscopyStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.EnhancedMRColorImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.LegacyConvertedEnhancedMRImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.UltrasoundImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.EnhancedUSVolumeStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.SecondaryCaptureImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.Multi_frameSingleBitSecondaryCaptureImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.Multi_frameGrayscaleByteSecondaryCaptureImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.Multi_frameGrayscaleWordSecondaryCaptureImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.Multi_frameTrueColorSecondaryCaptureImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID._12_leadECGWaveformStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.GeneralECGWaveformStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.AmbulatoryECGWaveformStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.HemodynamicWaveformStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.CardiacElectrophysiologyWaveformStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.BasicVoiceAudioWaveformStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.GeneralAudioWaveformStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.ArterialPulseWaveformStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RespiratoryWaveformStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.GrayscaleSoftcopyPresentationStateStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.ColorSoftcopyPresentationStateStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.Pseudo_ColorSoftcopyPresentationStateStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.BlendingSoftcopyPresentationStateStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.XAXRFGrayscaleSoftcopyPresentationStateStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.GrayscalePlanarMPRVolumetricPresentationStateStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.CompositingPlanarMPRVolumetricPresentationStateStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.AdvancedBlendingPresentationStateStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.VolumeRenderingVolumetricPresentationStateStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.SegmentedVolumeRenderingVolumetricPresentationStateStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.MultipleVolumeRenderingVolumetricPresentationStateStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.X_RayAngiographicImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.EnhancedXAImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.X_RayRadiofluoroscopicImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.EnhancedXRFImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.X_Ray3DAngiographicImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.X_Ray3DCraniofacialImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.BreastTomosynthesisImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.BreastProjectionX_RayImageStorage_ForPresentation</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.BreastProjectionX_RayImageStorage_ForProcessing</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.IntravascularOpticalCoherenceTomographyImageStorage_ForPresentation</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.IntravascularOpticalCoherenceTomographyImageStorage_ForProcessing</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.NuclearMedicineImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.ParametricMapStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RawDataStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.SpatialRegistrationStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.SpatialFiducialsStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.DeformableSpatialRegistrationStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.SegmentationStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.SurfaceSegmentationStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.TractographyResultsStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RealWorldValueMappingStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.SurfaceScanMeshStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.SurfaceScanPointCloudStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.VLEndoscopicImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.VideoEndoscopicImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.VLMicroscopicImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.VideoMicroscopicImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.VLSlide_CoordinatesMicroscopicImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.VLPhotographicImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.VideoPhotographicImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.OphthalmicPhotography8BitImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.OphthalmicPhotography16BitImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.StereometricRelationshipStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.OphthalmicTomographyImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.WideFieldOphthalmicPhotographyStereographicProjectionImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.WideFieldOphthalmicPhotography3DCoordinatesImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.OphthalmicOpticalCoherenceTomographyEnFaceImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.OphthalmicOpticalCoherenceTomographyB_scanVolumeAnalysisStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.VLWholeSlideMicroscopyImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.LensometryMeasurementsStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.AutorefractionMeasurementsStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.KeratometryMeasurementsStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.SubjectiveRefractionMeasurementsStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.VisualAcuityMeasurementsStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.SpectaclePrescriptionReportStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.OphthalmicAxialMeasurementsStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.IntraocularLensCalculationsStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.MacularGridThicknessandVolumeReport</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.OphthalmicVisualFieldStaticPerimetryMeasurementsStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.OphthalmicThicknessMapStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.CornealTopographyMapStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.BasicTextSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.EnhancedSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.ComprehensiveSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.Comprehensive3DSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.ExtensibleSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.ProcedureLogStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.MammographyCADSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.KeyObjectSelectionStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.ChestCADSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.X_RayRadiationDoseSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RadiopharmaceuticalRadiationDoseSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.ColonCADSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.ImplantationPlanSRDocumentStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.AcquisitionContextSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.SimplifiedAdultEchoSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.PatientRadiationDoseSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.PlannedImagingAgentAdministrationSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.PerformedImagingAgentAdministrationSRStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.ContentAssessmentResultsStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.EncapsulatedPDFStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.EncapsulatedCDAStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.EncapsulatedSTLStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.PositronEmissionTomographyImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.EnhancedPETImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.LegacyConvertedEnhancedPETImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.BasicStructuredDisplayStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.CTPerformedProcedureProtocolStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RTImageStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RTDoseStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RTStructureSetStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RTBeamsTreatmentRecordStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RTPlanStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RTBrachyTreatmentRecordStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RTTreatmentSummaryRecordStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RTIonPlanStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RTIonBeamsTreatmentRecordStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RTPhysicianIntentStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RTSegmentAnnotationStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RTBeamsDeliveryInstructionStorage</a>
+                </div>
+                <div>
+                  <a class="xref" href="EvilDICOM.Core.Helpers.SOPClassUID.html">SOPClassUID.RTBrachyApplicationSetupDeliveryInstructionStorage</a>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:EvilDICOM.Core.Helpers</h6>
+              <h6><strong>Assembly</strong>:EvilDICOM.dll</h6>
+              <h5 id="_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class AbstractSyntax : SOPClassUID</code></pre>
+              </div>
+              <h3 id="fields">Fields
+              </h3>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L36">View Source</a>
+              </span>
+              <h4 id="fields" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax.ALL_RADIOTHERAPY_STORAGE">ALL_RADIOTHERAPY_STORAGE</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static List&lt;string&gt; ALL_RADIOTHERAPY_STORAGE</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L31">View Source</a>
+              </span>
+              <h4 id="fields" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax.MODALITY_WORKLIST_FIND">MODALITY_WORKLIST_FIND</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string MODALITY_WORKLIST_FIND</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L15">View Source</a>
+              </span>
+              <h4 id="fields" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_FIND">PATIENT_FIND</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string PATIENT_FIND</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L17">View Source</a>
+              </span>
+              <h4 id="fields" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_GET">PATIENT_GET</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string PATIENT_GET</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L16">View Source</a>
+              </span>
+              <h4 id="fields" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_MOVE">PATIENT_MOVE</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string PATIENT_MOVE</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L26">View Source</a>
+              </span>
+              <h4 id="fields" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_STUDY_FIND">PATIENT_STUDY_FIND</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string PATIENT_STUDY_FIND</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L28">View Source</a>
+              </span>
+              <h4 id="fields" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_STUDY_MOVE">PATIENT_STUDY_MOVE</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string PATIENT_STUDY_MOVE</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L63">View Source</a>
+              </span>
+              <h4 id="fields" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax.StorageCommitment_Push">StorageCommitment_Push</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string StorageCommitment_Push</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L20">View Source</a>
+              </span>
+              <h4 id="fields" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_FIND">STUDY_FIND</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string STUDY_FIND</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L23">View Source</a>
+              </span>
+              <h4 id="fields" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_GET">STUDY_GET</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string STUDY_GET</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L22">View Source</a>
+              </span>
+              <h4 id="fields" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_MOVE">STUDY_MOVE</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string STUDY_MOVE</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L33">View Source</a>
+              </span>
+              <h4 id="fields" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax.VARIAN_MOTION_MANAGEMENT_PROTOCOL">VARIAN_MOTION_MANAGEMENT_PROTOCOL</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string VARIAN_MOTION_MANAGEMENT_PROTOCOL</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs/#L12">View Source</a>
+              </span>
+              <h4 id="fields" data-uid="EvilDICOM.Core.Helpers.AbstractSyntax.VERIFICATION">VERIFICATION</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static string VERIFICATION</code></pre>
+              </div>
+              <h5 class="fieldValue">Field Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- API Ad -->
+              <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8634681343664488" data-ad-slot="2969171149"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

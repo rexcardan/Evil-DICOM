@@ -1,0 +1,754 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.SCUOps.CMover
+  commentId: T:EvilDICOM.Network.SCUOps.CMover
+  id: CMover
+  parent: EvilDICOM.Network.SCUOps
+  children:
+  - EvilDICOM.Network.SCUOps.CMover.#ctor(EvilDICOM.Network.DICOMSCU,EvilDICOM.Network.Entity)
+  - EvilDICOM.Network.SCUOps.CMover.Dispose
+  - EvilDICOM.Network.SCUOps.CMover.ProgressUpdated
+  - EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindInstanceIOD,System.String,System.UInt16@)
+  - EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD,System.String,System.UInt16@)
+  - EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD,System.String,System.UInt16@)
+  - EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CMoveIOD,System.String,System.UInt16@)
+  langs:
+  - csharp
+  - vb
+  name: CMover
+  nameWithType: CMover
+  fullName: EvilDICOM.Network.SCUOps.CMover
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CMover
+    path: ../EvilDICOM/Network/SCUOps/CMover.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.SCUOps
+  syntax:
+    content: 'public class CMover : IDisposable'
+    content.vb: >-
+      Public Class CMover
+          Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.SCUOps.CMover.#ctor(EvilDICOM.Network.DICOMSCU,EvilDICOM.Network.Entity)
+  commentId: M:EvilDICOM.Network.SCUOps.CMover.#ctor(EvilDICOM.Network.DICOMSCU,EvilDICOM.Network.Entity)
+  id: '#ctor(EvilDICOM.Network.DICOMSCU,EvilDICOM.Network.Entity)'
+  parent: EvilDICOM.Network.SCUOps.CMover
+  langs:
+  - csharp
+  - vb
+  name: CMover(DICOMSCU, Entity)
+  nameWithType: CMover.CMover(DICOMSCU, Entity)
+  fullName: EvilDICOM.Network.SCUOps.CMover.CMover(EvilDICOM.Network.DICOMSCU, EvilDICOM.Network.Entity)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/Network/SCUOps/CMover.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.SCUOps
+  syntax:
+    content: public CMover(DICOMSCU dICOMSCU, Entity callingEntity)
+    parameters:
+    - id: dICOMSCU
+      type: EvilDICOM.Network.DICOMSCU
+    - id: callingEntity
+      type: EvilDICOM.Network.Entity
+    content.vb: Public Sub New(dICOMSCU As DICOMSCU, callingEntity As Entity)
+  overload: EvilDICOM.Network.SCUOps.CMover.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindInstanceIOD,System.String,System.UInt16@)
+  commentId: M:EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindInstanceIOD,System.String,System.UInt16@)
+  id: SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindInstanceIOD,System.String,System.UInt16@)
+  parent: EvilDICOM.Network.SCUOps.CMover
+  langs:
+  - csharp
+  - vb
+  name: SendCMove(CFindInstanceIOD, String, ref UInt16)
+  nameWithType: CMover.SendCMove(CFindInstanceIOD, String, ref UInt16)
+  fullName: EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindInstanceIOD, System.String, ref System.UInt16)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SendCMove
+    path: ../EvilDICOM/Network/SCUOps/CMover.cs
+    startLine: 33
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.SCUOps
+  summary: "\nEmits a CMove operation to an entity which moves an image from the entity to the specified AETitle\n"
+  example: []
+  syntax:
+    content: public CMoveResponse SendCMove(CFindInstanceIOD iod, string toAETite, ref ushort msgId)
+    parameters:
+    - id: iod
+      type: EvilDICOM.Network.DIMSE.IOD.CFindInstanceIOD
+    - id: toAETite
+      type: System.String
+      description: the entity title which will receive the image
+    - id: msgId
+      type: System.UInt16
+      description: the message id
+    return:
+      type: EvilDICOM.Network.DIMSE.CMoveResponse
+      description: the move response
+    content.vb: Public Function SendCMove(iod As CFindInstanceIOD, toAETite As String, ByRef msgId As UShort) As CMoveResponse
+  overload: EvilDICOM.Network.SCUOps.CMover.SendCMove*
+  nameWithType.vb: CMover.SendCMove(CFindInstanceIOD, String, ByRef UInt16)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindInstanceIOD, System.String, ByRef System.UInt16)
+  name.vb: SendCMove(CFindInstanceIOD, String, ByRef UInt16)
+- uid: EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD,System.String,System.UInt16@)
+  commentId: M:EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD,System.String,System.UInt16@)
+  id: SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD,System.String,System.UInt16@)
+  parent: EvilDICOM.Network.SCUOps.CMover
+  langs:
+  - csharp
+  - vb
+  name: SendCMove(CFindSeriesIOD, String, ref UInt16)
+  nameWithType: CMover.SendCMove(CFindSeriesIOD, String, ref UInt16)
+  fullName: EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD, System.String, ref System.UInt16)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SendCMove
+    path: ../EvilDICOM/Network/SCUOps/CMover.cs
+    startLine: 44
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.SCUOps
+  syntax:
+    content: public CMoveResponse SendCMove(CFindSeriesIOD iod, string toAETite, ref ushort msgId)
+    parameters:
+    - id: iod
+      type: EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+    - id: toAETite
+      type: System.String
+    - id: msgId
+      type: System.UInt16
+    return:
+      type: EvilDICOM.Network.DIMSE.CMoveResponse
+    content.vb: Public Function SendCMove(iod As CFindSeriesIOD, toAETite As String, ByRef msgId As UShort) As CMoveResponse
+  overload: EvilDICOM.Network.SCUOps.CMover.SendCMove*
+  nameWithType.vb: CMover.SendCMove(CFindSeriesIOD, String, ByRef UInt16)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD, System.String, ByRef System.UInt16)
+  name.vb: SendCMove(CFindSeriesIOD, String, ByRef UInt16)
+- uid: EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CMoveIOD,System.String,System.UInt16@)
+  commentId: M:EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CMoveIOD,System.String,System.UInt16@)
+  id: SendCMove(EvilDICOM.Network.DIMSE.IOD.CMoveIOD,System.String,System.UInt16@)
+  parent: EvilDICOM.Network.SCUOps.CMover
+  langs:
+  - csharp
+  - vb
+  name: SendCMove(CMoveIOD, String, ref UInt16)
+  nameWithType: CMover.SendCMove(CMoveIOD, String, ref UInt16)
+  fullName: EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CMoveIOD, System.String, ref System.UInt16)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SendCMove
+    path: ../EvilDICOM/Network/SCUOps/CMover.cs
+    startLine: 55
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.SCUOps
+  syntax:
+    content: public CMoveResponse SendCMove(CMoveIOD iod, string toAETite, ref ushort msgId)
+    parameters:
+    - id: iod
+      type: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+    - id: toAETite
+      type: System.String
+    - id: msgId
+      type: System.UInt16
+    return:
+      type: EvilDICOM.Network.DIMSE.CMoveResponse
+    content.vb: Public Function SendCMove(iod As CMoveIOD, toAETite As String, ByRef msgId As UShort) As CMoveResponse
+  overload: EvilDICOM.Network.SCUOps.CMover.SendCMove*
+  nameWithType.vb: CMover.SendCMove(CMoveIOD, String, ByRef UInt16)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CMoveIOD, System.String, ByRef System.UInt16)
+  name.vb: SendCMove(CMoveIOD, String, ByRef UInt16)
+- uid: EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD,System.String,System.UInt16@)
+  commentId: M:EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD,System.String,System.UInt16@)
+  id: SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD,System.String,System.UInt16@)
+  parent: EvilDICOM.Network.SCUOps.CMover
+  langs:
+  - csharp
+  - vb
+  name: SendCMove(CFindStudyIOD, String, ref UInt16)
+  nameWithType: CMover.SendCMove(CFindStudyIOD, String, ref UInt16)
+  fullName: EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD, System.String, ref System.UInt16)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SendCMove
+    path: ../EvilDICOM/Network/SCUOps/CMover.cs
+    startLine: 61
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.SCUOps
+  syntax:
+    content: public CMoveResponse SendCMove(CFindStudyIOD iod, string toAETite, ref ushort msgId)
+    parameters:
+    - id: iod
+      type: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+    - id: toAETite
+      type: System.String
+    - id: msgId
+      type: System.UInt16
+    return:
+      type: EvilDICOM.Network.DIMSE.CMoveResponse
+    content.vb: Public Function SendCMove(iod As CFindStudyIOD, toAETite As String, ByRef msgId As UShort) As CMoveResponse
+  overload: EvilDICOM.Network.SCUOps.CMover.SendCMove*
+  nameWithType.vb: CMover.SendCMove(CFindStudyIOD, String, ByRef UInt16)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Network.SCUOps.CMover.SendCMove(EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD, System.String, ByRef System.UInt16)
+  name.vb: SendCMove(CFindStudyIOD, String, ByRef UInt16)
+- uid: EvilDICOM.Network.SCUOps.CMover.ProgressUpdated
+  commentId: F:EvilDICOM.Network.SCUOps.CMover.ProgressUpdated
+  id: ProgressUpdated
+  parent: EvilDICOM.Network.SCUOps.CMover
+  langs:
+  - csharp
+  - vb
+  name: ProgressUpdated
+  nameWithType: CMover.ProgressUpdated
+  fullName: EvilDICOM.Network.SCUOps.CMover.ProgressUpdated
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ProgressUpdated
+    path: ../EvilDICOM/Network/SCUOps/CMover.cs
+    startLine: 79
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.SCUOps
+  syntax:
+    content: public CMover.ProgressUpdatedHandler ProgressUpdated
+    return:
+      type: EvilDICOM.Network.SCUOps.CMover.ProgressUpdatedHandler
+    content.vb: Public ProgressUpdated As CMover.ProgressUpdatedHandler
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.SCUOps.CMover.Dispose
+  commentId: M:EvilDICOM.Network.SCUOps.CMover.Dispose
+  id: Dispose
+  parent: EvilDICOM.Network.SCUOps.CMover
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: CMover.Dispose()
+  fullName: EvilDICOM.Network.SCUOps.CMover.Dispose()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Dispose
+    path: ../EvilDICOM/Network/SCUOps/CMover.cs
+    startLine: 93
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.SCUOps
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: EvilDICOM.Network.SCUOps.CMover.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Network.SCUOps
+  commentId: N:EvilDICOM.Network.SCUOps
+  name: EvilDICOM.Network.SCUOps
+  nameWithType: EvilDICOM.Network.SCUOps
+  fullName: EvilDICOM.Network.SCUOps
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Network.SCUOps.CMover.#ctor*
+  commentId: Overload:EvilDICOM.Network.SCUOps.CMover.#ctor
+  name: CMover
+  nameWithType: CMover.CMover
+  fullName: EvilDICOM.Network.SCUOps.CMover.CMover
+- uid: EvilDICOM.Network.DICOMSCU
+  commentId: T:EvilDICOM.Network.DICOMSCU
+  parent: EvilDICOM.Network
+  name: DICOMSCU
+  nameWithType: DICOMSCU
+  fullName: EvilDICOM.Network.DICOMSCU
+- uid: EvilDICOM.Network.Entity
+  commentId: T:EvilDICOM.Network.Entity
+  parent: EvilDICOM.Network
+  name: Entity
+  nameWithType: Entity
+  fullName: EvilDICOM.Network.Entity
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+- uid: EvilDICOM.Network.SCUOps.CMover.SendCMove*
+  commentId: Overload:EvilDICOM.Network.SCUOps.CMover.SendCMove
+  name: SendCMove
+  nameWithType: CMover.SendCMove
+  fullName: EvilDICOM.Network.SCUOps.CMover.SendCMove
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindInstanceIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CFindInstanceIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  name: CFindInstanceIOD
+  nameWithType: CFindInstanceIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindInstanceIOD
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16
+- uid: EvilDICOM.Network.DIMSE.CMoveResponse
+  commentId: T:EvilDICOM.Network.DIMSE.CMoveResponse
+  parent: EvilDICOM.Network.DIMSE
+  name: CMoveResponse
+  nameWithType: CMoveResponse
+  fullName: EvilDICOM.Network.DIMSE.CMoveResponse
+- uid: EvilDICOM.Network.DIMSE.IOD
+  commentId: N:EvilDICOM.Network.DIMSE.IOD
+  name: EvilDICOM.Network.DIMSE.IOD
+  nameWithType: EvilDICOM.Network.DIMSE.IOD
+  fullName: EvilDICOM.Network.DIMSE.IOD
+- uid: EvilDICOM.Network.DIMSE
+  commentId: N:EvilDICOM.Network.DIMSE
+  name: EvilDICOM.Network.DIMSE
+  nameWithType: EvilDICOM.Network.DIMSE
+  fullName: EvilDICOM.Network.DIMSE
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  name: CFindSeriesIOD
+  nameWithType: CFindSeriesIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+- uid: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  name: CMoveIOD
+  nameWithType: CMoveIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  name: CFindStudyIOD
+  nameWithType: CFindStudyIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+- uid: EvilDICOM.Network.SCUOps.CMover.ProgressUpdatedHandler
+  commentId: T:EvilDICOM.Network.SCUOps.CMover.ProgressUpdatedHandler
+  parent: EvilDICOM.Network.SCUOps
+  name: CMover.ProgressUpdatedHandler
+  nameWithType: CMover.ProgressUpdatedHandler
+  fullName: EvilDICOM.Network.SCUOps.CMover.ProgressUpdatedHandler
+- uid: EvilDICOM.Network.SCUOps.CMover.Dispose*
+  commentId: Overload:EvilDICOM.Network.SCUOps.CMover.Dispose
+  name: Dispose
+  nameWithType: CMover.Dispose
+  fullName: EvilDICOM.Network.SCUOps.CMover.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

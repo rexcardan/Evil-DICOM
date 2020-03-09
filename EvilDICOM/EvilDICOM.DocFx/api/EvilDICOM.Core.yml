@@ -1,0 +1,78 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  id: EvilDICOM.Core
+  children:
+  - EvilDICOM.Core.DICOMData`1
+  - EvilDICOM.Core.DICOMForge
+  - EvilDICOM.Core.DICOMObject
+  - EvilDICOM.Core.DICOMObjectWrapper
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+  type: Namespace
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Core.DICOMData`1
+  commentId: T:EvilDICOM.Core.DICOMData`1
+  parent: EvilDICOM.Core
+  name: DICOMData<T>
+  nameWithType: DICOMData<T>
+  fullName: EvilDICOM.Core.DICOMData<T>
+  nameWithType.vb: DICOMData(Of T)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T)
+  name.vb: DICOMData(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.DICOMForge
+  commentId: T:EvilDICOM.Core.DICOMForge
+  name: DICOMForge
+  nameWithType: DICOMForge
+  fullName: EvilDICOM.Core.DICOMForge
+- uid: EvilDICOM.Core.DICOMObject
+  commentId: T:EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  name: DICOMObject
+  nameWithType: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core.DICOMObjectWrapper
+  commentId: T:EvilDICOM.Core.DICOMObjectWrapper
+  name: DICOMObjectWrapper
+  nameWithType: DICOMObjectWrapper
+  fullName: EvilDICOM.Core.DICOMObjectWrapper
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core

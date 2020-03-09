@@ -1,0 +1,783 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader
+  commentId: T:EvilDICOM.Network.Readers.NetworkBinaryReader
+  id: NetworkBinaryReader
+  parent: EvilDICOM.Network.Readers
+  children:
+  - EvilDICOM.Network.Readers.NetworkBinaryReader.#ctor(System.IO.BufferedStream)
+  - EvilDICOM.Network.Readers.NetworkBinaryReader._binaryReader
+  - EvilDICOM.Network.Readers.NetworkBinaryReader.GetSubStream(System.Int32)
+  - EvilDICOM.Network.Readers.NetworkBinaryReader.ReadBytes(System.Int32)
+  - EvilDICOM.Network.Readers.NetworkBinaryReader.ReadChars(System.Int32)
+  - EvilDICOM.Network.Readers.NetworkBinaryReader.ReadString(System.Int32)
+  - EvilDICOM.Network.Readers.NetworkBinaryReader.Skip(System.Int32)
+  - EvilDICOM.Network.Readers.NetworkBinaryReader.Take(System.Int32)
+  langs:
+  - csharp
+  - vb
+  name: NetworkBinaryReader
+  nameWithType: NetworkBinaryReader
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: NetworkBinaryReader
+    path: ../EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: public class NetworkBinaryReader
+    content.vb: Public Class NetworkBinaryReader
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader._binaryReader
+  commentId: F:EvilDICOM.Network.Readers.NetworkBinaryReader._binaryReader
+  id: _binaryReader
+  parent: EvilDICOM.Network.Readers.NetworkBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: _binaryReader
+  nameWithType: NetworkBinaryReader._binaryReader
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader._binaryReader
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: _binaryReader
+    path: ../EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: protected BinaryReader _binaryReader
+    return:
+      type: System.IO.BinaryReader
+    content.vb: Protected _binaryReader As BinaryReader
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.#ctor(System.IO.BufferedStream)
+  commentId: M:EvilDICOM.Network.Readers.NetworkBinaryReader.#ctor(System.IO.BufferedStream)
+  id: '#ctor(System.IO.BufferedStream)'
+  parent: EvilDICOM.Network.Readers.NetworkBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: NetworkBinaryReader(BufferedStream)
+  nameWithType: NetworkBinaryReader.NetworkBinaryReader(BufferedStream)
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.NetworkBinaryReader(System.IO.BufferedStream)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  summary: "\nConstructs a DICOM binary reader from a network stream\n"
+  example: []
+  syntax:
+    content: public NetworkBinaryReader(BufferedStream stream)
+    parameters:
+    - id: stream
+      type: System.IO.BufferedStream
+      description: ''
+    content.vb: Public Sub New(stream As BufferedStream)
+  overload: EvilDICOM.Network.Readers.NetworkBinaryReader.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadBytes(System.Int32)
+  commentId: M:EvilDICOM.Network.Readers.NetworkBinaryReader.ReadBytes(System.Int32)
+  id: ReadBytes(System.Int32)
+  parent: EvilDICOM.Network.Readers.NetworkBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: ReadBytes(Int32)
+  nameWithType: NetworkBinaryReader.ReadBytes(Int32)
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadBytes(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadBytes
+    path: ../EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+    startLine: 34
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  summary: "\nReads the specified number of bytes\n"
+  example: []
+  syntax:
+    content: public byte[] ReadBytes(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: the number of bytes to be read
+    return:
+      type: System.Byte[]
+      description: the read bytes
+    content.vb: Public Function ReadBytes(count As Integer) As Byte()
+  overload: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadBytes*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.Take(System.Int32)
+  commentId: M:EvilDICOM.Network.Readers.NetworkBinaryReader.Take(System.Int32)
+  id: Take(System.Int32)
+  parent: EvilDICOM.Network.Readers.NetworkBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: Take(Int32)
+  nameWithType: NetworkBinaryReader.Take(Int32)
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.Take(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Take
+    path: ../EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+    startLine: 51
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  summary: "\nReads the specified number of bytes (shorthand for ReadBytes method).\n"
+  example: []
+  syntax:
+    content: public byte[] Take(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: the number of bytes to be read
+    return:
+      type: System.Byte[]
+      description: the read bytes
+    content.vb: Public Function Take(count As Integer) As Byte()
+  overload: EvilDICOM.Network.Readers.NetworkBinaryReader.Take*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.GetSubStream(System.Int32)
+  commentId: M:EvilDICOM.Network.Readers.NetworkBinaryReader.GetSubStream(System.Int32)
+  id: GetSubStream(System.Int32)
+  parent: EvilDICOM.Network.Readers.NetworkBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: GetSubStream(Int32)
+  nameWithType: NetworkBinaryReader.GetSubStream(Int32)
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.GetSubStream(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetSubStream
+    path: ../EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+    startLine: 61
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  summary: "\nCreates a new stream that is trimmed to the specification length.\n"
+  example: []
+  syntax:
+    content: public DICOMBinaryReader GetSubStream(int substreamLength)
+    parameters:
+    - id: substreamLength
+      type: System.Int32
+      description: the number of bytes to include in the new stream (starting from the current position)
+    return:
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+    content.vb: Public Function GetSubStream(substreamLength As Integer) As DICOMBinaryReader
+  overload: EvilDICOM.Network.Readers.NetworkBinaryReader.GetSubStream*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadChars(System.Int32)
+  commentId: M:EvilDICOM.Network.Readers.NetworkBinaryReader.ReadChars(System.Int32)
+  id: ReadChars(System.Int32)
+  parent: EvilDICOM.Network.Readers.NetworkBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: ReadChars(Int32)
+  nameWithType: NetworkBinaryReader.ReadChars(Int32)
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadChars(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadChars
+    path: ../EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+    startLine: 72
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  summary: "\nReads the specified number of chars\n"
+  example: []
+  syntax:
+    content: public char[] ReadChars(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+      description: the number of chars to be read
+    return:
+      type: System.Char[]
+      description: the read chars
+    content.vb: Public Function ReadChars(count As Integer) As Char()
+  overload: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadChars*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadString(System.Int32)
+  commentId: M:EvilDICOM.Network.Readers.NetworkBinaryReader.ReadString(System.Int32)
+  id: ReadString(System.Int32)
+  parent: EvilDICOM.Network.Readers.NetworkBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: ReadString(Int32)
+  nameWithType: NetworkBinaryReader.ReadString(Int32)
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadString(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadString
+    path: ../EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+    startLine: 83
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  summary: "\nReads the specified number of chars and converts to a string\n"
+  example: []
+  syntax:
+    content: public string ReadString(int length)
+    parameters:
+    - id: length
+      type: System.Int32
+    return:
+      type: System.String
+      description: the read chars
+    content.vb: Public Function ReadString(length As Integer) As String
+  overload: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadString*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.Skip(System.Int32)
+  commentId: M:EvilDICOM.Network.Readers.NetworkBinaryReader.Skip(System.Int32)
+  id: Skip(System.Int32)
+  parent: EvilDICOM.Network.Readers.NetworkBinaryReader
+  langs:
+  - csharp
+  - vb
+  name: Skip(Int32)
+  nameWithType: NetworkBinaryReader.Skip(Int32)
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.Skip(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Skip
+    path: ../EvilDICOM/Network/Readers/NetworkBinaryReader.cs
+    startLine: 89
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Readers
+  syntax:
+    content: public NetworkBinaryReader Skip(int count)
+    parameters:
+    - id: count
+      type: System.Int32
+    return:
+      type: EvilDICOM.Network.Readers.NetworkBinaryReader
+    content.vb: Public Function Skip(count As Integer) As NetworkBinaryReader
+  overload: EvilDICOM.Network.Readers.NetworkBinaryReader.Skip*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Network.Readers
+  commentId: N:EvilDICOM.Network.Readers
+  name: EvilDICOM.Network.Readers
+  nameWithType: EvilDICOM.Network.Readers
+  fullName: EvilDICOM.Network.Readers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.IO.BinaryReader
+  commentId: T:System.IO.BinaryReader
+  parent: System.IO
+  isExternal: true
+  name: BinaryReader
+  nameWithType: BinaryReader
+  fullName: System.IO.BinaryReader
+- uid: System.IO
+  commentId: N:System.IO
+  isExternal: true
+  name: System.IO
+  nameWithType: System.IO
+  fullName: System.IO
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.#ctor*
+  commentId: Overload:EvilDICOM.Network.Readers.NetworkBinaryReader.#ctor
+  name: NetworkBinaryReader
+  nameWithType: NetworkBinaryReader.NetworkBinaryReader
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.NetworkBinaryReader
+- uid: System.IO.BufferedStream
+  commentId: T:System.IO.BufferedStream
+  parent: System.IO
+  isExternal: true
+  name: BufferedStream
+  nameWithType: BufferedStream
+  fullName: System.IO.BufferedStream
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadBytes*
+  commentId: Overload:EvilDICOM.Network.Readers.NetworkBinaryReader.ReadBytes
+  name: ReadBytes
+  nameWithType: NetworkBinaryReader.ReadBytes
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadBytes
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.Take*
+  commentId: Overload:EvilDICOM.Network.Readers.NetworkBinaryReader.Take
+  name: Take
+  nameWithType: NetworkBinaryReader.Take
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.Take
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.GetSubStream*
+  commentId: Overload:EvilDICOM.Network.Readers.NetworkBinaryReader.GetSubStream
+  name: GetSubStream
+  nameWithType: NetworkBinaryReader.GetSubStream
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.GetSubStream
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  commentId: T:EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  parent: EvilDICOM.Core.IO.Reading
+  name: DICOMBinaryReader
+  nameWithType: DICOMBinaryReader
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+- uid: EvilDICOM.Core.IO.Reading
+  commentId: N:EvilDICOM.Core.IO.Reading
+  name: EvilDICOM.Core.IO.Reading
+  nameWithType: EvilDICOM.Core.IO.Reading
+  fullName: EvilDICOM.Core.IO.Reading
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadChars*
+  commentId: Overload:EvilDICOM.Network.Readers.NetworkBinaryReader.ReadChars
+  name: ReadChars
+  nameWithType: NetworkBinaryReader.ReadChars
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadChars
+- uid: System.Char[]
+  isExternal: true
+  name: Char[]
+  nameWithType: Char[]
+  fullName: System.Char[]
+  nameWithType.vb: Char()
+  fullName.vb: System.Char()
+  name.vb: Char()
+  spec.csharp:
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Char
+    name: Char
+    nameWithType: Char
+    fullName: System.Char
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadString*
+  commentId: Overload:EvilDICOM.Network.Readers.NetworkBinaryReader.ReadString
+  name: ReadString
+  nameWithType: NetworkBinaryReader.ReadString
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.ReadString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader.Skip*
+  commentId: Overload:EvilDICOM.Network.Readers.NetworkBinaryReader.Skip
+  name: Skip
+  nameWithType: NetworkBinaryReader.Skip
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader.Skip
+- uid: EvilDICOM.Network.Readers.NetworkBinaryReader
+  commentId: T:EvilDICOM.Network.Readers.NetworkBinaryReader
+  parent: EvilDICOM.Network.Readers
+  name: NetworkBinaryReader
+  nameWithType: NetworkBinaryReader
+  fullName: EvilDICOM.Network.Readers.NetworkBinaryReader

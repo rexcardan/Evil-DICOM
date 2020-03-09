@@ -1,0 +1,830 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.DICOMObjectWrapper
+  commentId: T:EvilDICOM.Core.DICOMObjectWrapper
+  id: DICOMObjectWrapper
+  parent: EvilDICOM.Core
+  children:
+  - EvilDICOM.Core.DICOMObjectWrapper.#ctor
+  - EvilDICOM.Core.DICOMObjectWrapper.#ctor(EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.Core.DICOMObjectWrapper._dcm
+  - EvilDICOM.Core.DICOMObjectWrapper.GetValue``1(EvilDICOM.Core.Element.Tag)
+  - EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)
+  - EvilDICOM.Core.DICOMObjectWrapper.SetValue``1(EvilDICOM.Core.Element.Tag,``0)
+  - EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
+  langs:
+  - csharp
+  - vb
+  name: DICOMObjectWrapper
+  nameWithType: DICOMObjectWrapper
+  fullName: EvilDICOM.Core.DICOMObjectWrapper
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOMObjectWrapper
+    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public abstract class DICOMObjectWrapper
+    content.vb: Public MustInherit Class DICOMObjectWrapper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - abstract
+  - class
+  modifiers.vb:
+  - Public
+  - MustInherit
+  - Class
+- uid: EvilDICOM.Core.DICOMObjectWrapper._dcm
+  commentId: F:EvilDICOM.Core.DICOMObjectWrapper._dcm
+  id: _dcm
+  parent: EvilDICOM.Core.DICOMObjectWrapper
+  langs:
+  - csharp
+  - vb
+  name: _dcm
+  nameWithType: DICOMObjectWrapper._dcm
+  fullName: EvilDICOM.Core.DICOMObjectWrapper._dcm
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: _dcm
+    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: protected DICOMObject _dcm
+    return:
+      type: EvilDICOM.Core.DICOMObject
+    content.vb: Protected _dcm As DICOMObject
+  modifiers.csharp:
+  - protected
+  modifiers.vb:
+  - Protected
+- uid: EvilDICOM.Core.DICOMObjectWrapper.#ctor
+  commentId: M:EvilDICOM.Core.DICOMObjectWrapper.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Core.DICOMObjectWrapper
+  langs:
+  - csharp
+  - vb
+  name: DICOMObjectWrapper()
+  nameWithType: DICOMObjectWrapper.DICOMObjectWrapper()
+  fullName: EvilDICOM.Core.DICOMObjectWrapper.DICOMObjectWrapper()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public DICOMObjectWrapper()
+    content.vb: Public Sub New
+  overload: EvilDICOM.Core.DICOMObjectWrapper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.DICOMObjectWrapper.#ctor(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Core.DICOMObjectWrapper.#ctor(EvilDICOM.Core.DICOMObject)
+  id: '#ctor(EvilDICOM.Core.DICOMObject)'
+  parent: EvilDICOM.Core.DICOMObjectWrapper
+  langs:
+  - csharp
+  - vb
+  name: DICOMObjectWrapper(DICOMObject)
+  nameWithType: DICOMObjectWrapper.DICOMObjectWrapper(DICOMObject)
+  fullName: EvilDICOM.Core.DICOMObjectWrapper.DICOMObjectWrapper(EvilDICOM.Core.DICOMObject)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public DICOMObjectWrapper(DICOMObject dicom)
+    parameters:
+    - id: dicom
+      type: EvilDICOM.Core.DICOMObject
+    content.vb: Public Sub New(dicom As DICOMObject)
+  overload: EvilDICOM.Core.DICOMObjectWrapper.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.DICOMObjectWrapper.GetValue``1(EvilDICOM.Core.Element.Tag)
+  commentId: M:EvilDICOM.Core.DICOMObjectWrapper.GetValue``1(EvilDICOM.Core.Element.Tag)
+  id: GetValue``1(EvilDICOM.Core.Element.Tag)
+  parent: EvilDICOM.Core.DICOMObjectWrapper
+  langs:
+  - csharp
+  - vb
+  name: GetValue<T>(Tag)
+  nameWithType: DICOMObjectWrapper.GetValue<T>(Tag)
+  fullName: EvilDICOM.Core.DICOMObjectWrapper.GetValue<T>(EvilDICOM.Core.Element.Tag)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetValue
+    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public DICOMData<T> GetValue<T>(Tag tag)
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+    typeParameters:
+    - id: T
+    return:
+      type: EvilDICOM.Core.DICOMData{{T}}
+    content.vb: Public Function GetValue(Of T)(tag As Tag) As DICOMData(Of T)
+  overload: EvilDICOM.Core.DICOMObjectWrapper.GetValue*
+  nameWithType.vb: DICOMObjectWrapper.GetValue(Of T)(Tag)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Core.DICOMObjectWrapper.GetValue(Of T)(EvilDICOM.Core.Element.Tag)
+  name.vb: GetValue(Of T)(Tag)
+- uid: EvilDICOM.Core.DICOMObjectWrapper.SetValue``1(EvilDICOM.Core.Element.Tag,``0)
+  commentId: M:EvilDICOM.Core.DICOMObjectWrapper.SetValue``1(EvilDICOM.Core.Element.Tag,``0)
+  id: SetValue``1(EvilDICOM.Core.Element.Tag,``0)
+  parent: EvilDICOM.Core.DICOMObjectWrapper
+  langs:
+  - csharp
+  - vb
+  name: SetValue<T>(Tag, T)
+  nameWithType: DICOMObjectWrapper.SetValue<T>(Tag, T)
+  fullName: EvilDICOM.Core.DICOMObjectWrapper.SetValue<T>(EvilDICOM.Core.Element.Tag, T)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SetValue
+    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  syntax:
+    content: public void SetValue<T>(Tag tag, T value)
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+    - id: value
+      type: '{T}'
+    typeParameters:
+    - id: T
+    content.vb: Public Sub SetValue(Of T)(tag As Tag, value As T)
+  overload: EvilDICOM.Core.DICOMObjectWrapper.SetValue*
+  nameWithType.vb: DICOMObjectWrapper.SetValue(Of T)(Tag, T)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Core.DICOMObjectWrapper.SetValue(Of T)(EvilDICOM.Core.Element.Tag, T)
+  name.vb: SetValue(Of T)(Tag, T)
+- uid: EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)
+  commentId: M:EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)
+  id: GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)
+  parent: EvilDICOM.Core.DICOMObjectWrapper
+  langs:
+  - csharp
+  - vb
+  name: GetWrappedSequence<T>(Tag)
+  nameWithType: DICOMObjectWrapper.GetWrappedSequence<T>(Tag)
+  fullName: EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence<T>(EvilDICOM.Core.Element.Tag)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetWrappedSequence
+    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
+    startLine: 39
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: "\nWraps a DICOM sequence with a type that inherits from DICOMObjectWrapper\n"
+  example: []
+  syntax:
+    content: >-
+      public List<T> GetWrappedSequence<T>(Tag tag)
+          where T : DICOMObjectWrapper, new()
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+      description: the DICOM tag of the sequence which contains the objects to wrap
+    typeParameters:
+    - id: T
+      description: the wrapping class for the DICOM objects within the sequence
+    return:
+      type: System.Collections.Generic.List{{T}}
+      description: a list of wrapped DICOM objects
+    content.vb: Public Function GetWrappedSequence(Of T As {DICOMObjectWrapper, New})(tag As Tag) As List(Of T)
+  overload: EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence*
+  nameWithType.vb: DICOMObjectWrapper.GetWrappedSequence(Of T)(Tag)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence(Of T)(EvilDICOM.Core.Element.Tag)
+  name.vb: GetWrappedSequence(Of T)(Tag)
+- uid: EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
+  commentId: M:EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
+  id: SetWrappedSequence``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
+  parent: EvilDICOM.Core.DICOMObjectWrapper
+  langs:
+  - csharp
+  - vb
+  name: SetWrappedSequence<T>(Tag, List<T>)
+  nameWithType: DICOMObjectWrapper.SetWrappedSequence<T>(Tag, List<T>)
+  fullName: EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence<T>(EvilDICOM.Core.Element.Tag, System.Collections.Generic.List<T>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SetWrappedSequence
+    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
+    startLine: 58
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: "\nExtracts the DICOMObjects out of a list of DICOMObjectWrappers and sets these as the new values in the sequence\n"
+  example: []
+  syntax:
+    content: >-
+      public void SetWrappedSequence<T>(Tag tag, List<T> value)
+          where T : DICOMObjectWrapper
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+      description: the DICOM tag of the sequence where to place the newly extracted objects
+    - id: value
+      type: System.Collections.Generic.List{{T}}
+      description: the list of wrapped DICOMObjects to go in the sequence
+    typeParameters:
+    - id: T
+    content.vb: Public Sub SetWrappedSequence(Of T As DICOMObjectWrapper)(tag As Tag, value As List(Of T))
+  overload: EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence*
+  nameWithType.vb: DICOMObjectWrapper.SetWrappedSequence(Of T)(Tag, List(Of T))
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence(Of T)(EvilDICOM.Core.Element.Tag, System.Collections.Generic.List(Of T))
+  name.vb: SetWrappedSequence(Of T)(Tag, List(Of T))
+references:
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Core.DICOMObject
+  commentId: T:EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  name: DICOMObject
+  nameWithType: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core.DICOMObjectWrapper.#ctor*
+  commentId: Overload:EvilDICOM.Core.DICOMObjectWrapper.#ctor
+  name: DICOMObjectWrapper
+  nameWithType: DICOMObjectWrapper.DICOMObjectWrapper
+  fullName: EvilDICOM.Core.DICOMObjectWrapper.DICOMObjectWrapper
+- uid: EvilDICOM.Core.DICOMObjectWrapper.GetValue*
+  commentId: Overload:EvilDICOM.Core.DICOMObjectWrapper.GetValue
+  name: GetValue
+  nameWithType: DICOMObjectWrapper.GetValue
+  fullName: EvilDICOM.Core.DICOMObjectWrapper.GetValue
+- uid: EvilDICOM.Core.Element.Tag
+  commentId: T:EvilDICOM.Core.Element.Tag
+  parent: EvilDICOM.Core.Element
+  name: Tag
+  nameWithType: Tag
+  fullName: EvilDICOM.Core.Element.Tag
+- uid: EvilDICOM.Core.DICOMData{{T}}
+  commentId: T:EvilDICOM.Core.DICOMData{``0}
+  parent: EvilDICOM.Core
+  definition: EvilDICOM.Core.DICOMData`1
+  name: DICOMData<T>
+  nameWithType: DICOMData<T>
+  fullName: EvilDICOM.Core.DICOMData<T>
+  nameWithType.vb: DICOMData(Of T)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T)
+  name.vb: DICOMData(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: EvilDICOM.Core.DICOMData`1
+  commentId: T:EvilDICOM.Core.DICOMData`1
+  parent: EvilDICOM.Core
+  name: DICOMData<T>
+  nameWithType: DICOMData<T>
+  fullName: EvilDICOM.Core.DICOMData<T>
+  nameWithType.vb: DICOMData(Of T)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T)
+  name.vb: DICOMData(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.DICOMObjectWrapper.SetValue*
+  commentId: Overload:EvilDICOM.Core.DICOMObjectWrapper.SetValue
+  name: SetValue
+  nameWithType: DICOMObjectWrapper.SetValue
+  fullName: EvilDICOM.Core.DICOMObjectWrapper.SetValue
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence*
+  commentId: Overload:EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence
+  name: GetWrappedSequence
+  nameWithType: DICOMObjectWrapper.GetWrappedSequence
+  fullName: EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence
+- uid: System.Collections.Generic.List{{T}}
+  commentId: T:System.Collections.Generic.List{`0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence*
+  commentId: Overload:EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence
+  name: SetWrappedSequence
+  nameWithType: DICOMObjectWrapper.SetWrappedSequence
+  fullName: EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence

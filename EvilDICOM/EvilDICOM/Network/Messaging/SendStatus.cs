@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace Evil_DICOM.Network.Messaging
+namespace EvilDICOM.Network.Messaging
 {
     public class SendStatus
     {

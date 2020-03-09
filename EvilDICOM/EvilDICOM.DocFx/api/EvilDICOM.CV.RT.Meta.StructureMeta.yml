@@ -1,0 +1,1029 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta
+  commentId: T:EvilDICOM.CV.RT.Meta.StructureMeta
+  id: StructureMeta
+  parent: EvilDICOM.CV.RT.Meta
+  children:
+  - EvilDICOM.CV.RT.Meta.StructureMeta.CalculateSDFMatrix(EvilDICOM.CV.Image.Matrix)
+  - EvilDICOM.CV.RT.Meta.StructureMeta.Color
+  - EvilDICOM.CV.RT.Meta.StructureMeta.DICOMType
+  - EvilDICOM.CV.RT.Meta.StructureMeta.DVHData
+  - EvilDICOM.CV.RT.Meta.StructureMeta.Look
+  - EvilDICOM.CV.RT.Meta.StructureMeta.ROINumber
+  - EvilDICOM.CV.RT.Meta.StructureMeta.SliceContours
+  - EvilDICOM.CV.RT.Meta.StructureMeta.StructureId
+  - EvilDICOM.CV.RT.Meta.StructureMeta.StructureName
+  - EvilDICOM.CV.RT.Meta.StructureMeta.ToString
+  - EvilDICOM.CV.RT.Meta.StructureMeta.VolumeCC
+  langs:
+  - csharp
+  - vb
+  name: StructureMeta
+  nameWithType: StructureMeta
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/StructureMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StructureMeta
+    path: ../EvilDICOM.CV/RT/Meta/StructureMeta.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public class StructureMeta
+    content.vb: Public Class StructureMeta
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  extensionMethods:
+  - EvilDICOM.CV.RT.Meta.StructureMeta.EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.StructureId
+  commentId: P:EvilDICOM.CV.RT.Meta.StructureMeta.StructureId
+  id: StructureId
+  parent: EvilDICOM.CV.RT.Meta.StructureMeta
+  langs:
+  - csharp
+  - vb
+  name: StructureId
+  nameWithType: StructureMeta.StructureId
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.StructureId
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/StructureMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StructureId
+    path: ../EvilDICOM.CV/RT/Meta/StructureMeta.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public string StructureId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StructureId As String
+  overload: EvilDICOM.CV.RT.Meta.StructureMeta.StructureId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.Color
+  commentId: P:EvilDICOM.CV.RT.Meta.StructureMeta.Color
+  id: Color
+  parent: EvilDICOM.CV.RT.Meta.StructureMeta
+  langs:
+  - csharp
+  - vb
+  name: Color
+  nameWithType: StructureMeta.Color
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.Color
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/StructureMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Color
+    path: ../EvilDICOM.CV/RT/Meta/StructureMeta.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public Scalar Color { get; set; }
+    parameters: []
+    return:
+      type: OpenCvSharp.Scalar
+    content.vb: Public Property Color As Scalar
+  overload: EvilDICOM.CV.RT.Meta.StructureMeta.Color*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.DVHData
+  commentId: P:EvilDICOM.CV.RT.Meta.StructureMeta.DVHData
+  id: DVHData
+  parent: EvilDICOM.CV.RT.Meta.StructureMeta
+  langs:
+  - csharp
+  - vb
+  name: DVHData
+  nameWithType: StructureMeta.DVHData
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.DVHData
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/StructureMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DVHData
+    path: ../EvilDICOM.CV/RT/Meta/StructureMeta.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public DVHData DVHData { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.RT.Data.DVH.DVHData
+    content.vb: Public Property DVHData As DVHData
+  overload: EvilDICOM.CV.RT.Meta.StructureMeta.DVHData*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.VolumeCC
+  commentId: P:EvilDICOM.CV.RT.Meta.StructureMeta.VolumeCC
+  id: VolumeCC
+  parent: EvilDICOM.CV.RT.Meta.StructureMeta
+  langs:
+  - csharp
+  - vb
+  name: VolumeCC
+  nameWithType: StructureMeta.VolumeCC
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.VolumeCC
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/StructureMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: VolumeCC
+    path: ../EvilDICOM.CV/RT/Meta/StructureMeta.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double VolumeCC { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property VolumeCC As Double
+  overload: EvilDICOM.CV.RT.Meta.StructureMeta.VolumeCC*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.ROINumber
+  commentId: P:EvilDICOM.CV.RT.Meta.StructureMeta.ROINumber
+  id: ROINumber
+  parent: EvilDICOM.CV.RT.Meta.StructureMeta
+  langs:
+  - csharp
+  - vb
+  name: ROINumber
+  nameWithType: StructureMeta.ROINumber
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.ROINumber
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/StructureMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ROINumber
+    path: ../EvilDICOM.CV/RT/Meta/StructureMeta.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public int ROINumber { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ROINumber As Integer
+  overload: EvilDICOM.CV.RT.Meta.StructureMeta.ROINumber*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.StructureName
+  commentId: P:EvilDICOM.CV.RT.Meta.StructureMeta.StructureName
+  id: StructureName
+  parent: EvilDICOM.CV.RT.Meta.StructureMeta
+  langs:
+  - csharp
+  - vb
+  name: StructureName
+  nameWithType: StructureMeta.StructureName
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.StructureName
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/StructureMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StructureName
+    path: ../EvilDICOM.CV/RT/Meta/StructureMeta.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public string StructureName { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property StructureName As String
+  overload: EvilDICOM.CV.RT.Meta.StructureMeta.StructureName*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.DICOMType
+  commentId: P:EvilDICOM.CV.RT.Meta.StructureMeta.DICOMType
+  id: DICOMType
+  parent: EvilDICOM.CV.RT.Meta.StructureMeta
+  langs:
+  - csharp
+  - vb
+  name: DICOMType
+  nameWithType: StructureMeta.DICOMType
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.DICOMType
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/StructureMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOMType
+    path: ../EvilDICOM.CV/RT/Meta/StructureMeta.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public string DICOMType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property DICOMType As String
+  overload: EvilDICOM.CV.RT.Meta.StructureMeta.DICOMType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.SliceContours
+  commentId: P:EvilDICOM.CV.RT.Meta.StructureMeta.SliceContours
+  id: SliceContours
+  parent: EvilDICOM.CV.RT.Meta.StructureMeta
+  langs:
+  - csharp
+  - vb
+  name: SliceContours
+  nameWithType: StructureMeta.SliceContours
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.SliceContours
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/StructureMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SliceContours
+    path: ../EvilDICOM.CV/RT/Meta/StructureMeta.cs
+    startLine: 29
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public List<SliceContourMeta> SliceContours { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.SliceContourMeta}
+    content.vb: Public Property SliceContours As List(Of SliceContourMeta)
+  overload: EvilDICOM.CV.RT.Meta.StructureMeta.SliceContours*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.Look
+  commentId: P:EvilDICOM.CV.RT.Meta.StructureMeta.Look
+  id: Look
+  parent: EvilDICOM.CV.RT.Meta.StructureMeta
+  langs:
+  - csharp
+  - vb
+  name: Look
+  nameWithType: StructureMeta.Look
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.Look
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/StructureMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Look
+    path: ../EvilDICOM.CV/RT/Meta/StructureMeta.cs
+    startLine: 41
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public StructureLook Look { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.CV.Drawing.StructureLook
+    content.vb: Public Property Look As StructureLook
+  overload: EvilDICOM.CV.RT.Meta.StructureMeta.Look*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.CalculateSDFMatrix(EvilDICOM.CV.Image.Matrix)
+  commentId: M:EvilDICOM.CV.RT.Meta.StructureMeta.CalculateSDFMatrix(EvilDICOM.CV.Image.Matrix)
+  id: CalculateSDFMatrix(EvilDICOM.CV.Image.Matrix)
+  parent: EvilDICOM.CV.RT.Meta.StructureMeta
+  langs:
+  - csharp
+  - vb
+  name: CalculateSDFMatrix(Matrix)
+  nameWithType: StructureMeta.CalculateSDFMatrix(Matrix)
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.CalculateSDFMatrix(EvilDICOM.CV.Image.Matrix)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/StructureMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CalculateSDFMatrix
+    path: ../EvilDICOM.CV/RT/Meta/StructureMeta.cs
+    startLine: 64
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  summary: "\nCalculates a 1 mm^3 matrix describing the shape of the contour. All voxels contain signed distance function\nto closest contour point. Zero boundry is edge\n"
+  example: []
+  syntax:
+    content: public Matrix CalculateSDFMatrix(Matrix valueMatrix)
+    parameters:
+    - id: valueMatrix
+      type: EvilDICOM.CV.Image.Matrix
+    return:
+      type: EvilDICOM.CV.Image.Matrix
+      description: a matrix describing shape of contour
+    content.vb: Public Function CalculateSDFMatrix(valueMatrix As Matrix) As Matrix
+  overload: EvilDICOM.CV.RT.Meta.StructureMeta.CalculateSDFMatrix*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.ToString
+  commentId: M:EvilDICOM.CV.RT.Meta.StructureMeta.ToString
+  id: ToString
+  parent: EvilDICOM.CV.RT.Meta.StructureMeta
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: StructureMeta.ToString()
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/StructureMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToString
+    path: ../EvilDICOM.CV/RT/Meta/StructureMeta.cs
+    startLine: 144
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  summary: "\nCalculates a 1 mm^3 matrix describing the shape of the contour. Inside is 1, Outside is -1 and zero boundry is edge\n"
+  example: []
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+      description: a matrix describing shape of contour
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: EvilDICOM.CV.RT.Meta.StructureMeta.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: EvilDICOM.CV.RT.Meta
+  commentId: N:EvilDICOM.CV.RT.Meta
+  name: EvilDICOM.CV.RT.Meta
+  nameWithType: EvilDICOM.CV.RT.Meta
+  fullName: EvilDICOM.CV.RT.Meta
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness
+  commentId: M:EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness(EvilDICOM.CV.RT.Meta.StructureMeta)
+  parent: EvilDICOM.CV.Extensions.StructureExtensions
+  definition: EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness(EvilDICOM.CV.RT.Meta.StructureMeta)
+  name: GetContourSliceThickness()
+  nameWithType: StructureExtensions.GetContourSliceThickness()
+  fullName: EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness()
+  spec.csharp:
+  - uid: EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness
+    name: GetContourSliceThickness
+    nameWithType: StructureExtensions.GetContourSliceThickness
+    fullName: EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness
+    name: GetContourSliceThickness
+    nameWithType: StructureExtensions.GetContourSliceThickness
+    fullName: EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness(EvilDICOM.CV.RT.Meta.StructureMeta)
+  commentId: M:EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness(EvilDICOM.CV.RT.Meta.StructureMeta)
+  name: GetContourSliceThickness(StructureMeta)
+  nameWithType: StructureExtensions.GetContourSliceThickness(StructureMeta)
+  fullName: EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness(EvilDICOM.CV.RT.Meta.StructureMeta)
+  spec.csharp:
+  - uid: EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness(EvilDICOM.CV.RT.Meta.StructureMeta)
+    name: GetContourSliceThickness
+    nameWithType: StructureExtensions.GetContourSliceThickness
+    fullName: EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.Meta.StructureMeta
+    name: StructureMeta
+    nameWithType: StructureMeta
+    fullName: EvilDICOM.CV.RT.Meta.StructureMeta
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness(EvilDICOM.CV.RT.Meta.StructureMeta)
+    name: GetContourSliceThickness
+    nameWithType: StructureExtensions.GetContourSliceThickness
+    fullName: EvilDICOM.CV.Extensions.StructureExtensions.GetContourSliceThickness
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.RT.Meta.StructureMeta
+    name: StructureMeta
+    nameWithType: StructureMeta
+    fullName: EvilDICOM.CV.RT.Meta.StructureMeta
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.Extensions.StructureExtensions
+  commentId: T:EvilDICOM.CV.Extensions.StructureExtensions
+  parent: EvilDICOM.CV.Extensions
+  name: StructureExtensions
+  nameWithType: StructureExtensions
+  fullName: EvilDICOM.CV.Extensions.StructureExtensions
+- uid: EvilDICOM.CV.Extensions
+  commentId: N:EvilDICOM.CV.Extensions
+  name: EvilDICOM.CV.Extensions
+  nameWithType: EvilDICOM.CV.Extensions
+  fullName: EvilDICOM.CV.Extensions
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.StructureId*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.StructureMeta.StructureId
+  name: StructureId
+  nameWithType: StructureMeta.StructureId
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.StructureId
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.Color*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.StructureMeta.Color
+  name: Color
+  nameWithType: StructureMeta.Color
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.Color
+- uid: OpenCvSharp.Scalar
+  commentId: T:OpenCvSharp.Scalar
+  parent: OpenCvSharp
+  isExternal: true
+  name: Scalar
+  nameWithType: Scalar
+  fullName: OpenCvSharp.Scalar
+- uid: OpenCvSharp
+  commentId: N:OpenCvSharp
+  isExternal: true
+  name: OpenCvSharp
+  nameWithType: OpenCvSharp
+  fullName: OpenCvSharp
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.DVHData*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.StructureMeta.DVHData
+  name: DVHData
+  nameWithType: StructureMeta.DVHData
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.DVHData
+- uid: EvilDICOM.RT.Data.DVH.DVHData
+  commentId: T:EvilDICOM.RT.Data.DVH.DVHData
+  parent: EvilDICOM.RT.Data.DVH
+  name: DVHData
+  nameWithType: DVHData
+  fullName: EvilDICOM.RT.Data.DVH.DVHData
+- uid: EvilDICOM.RT.Data.DVH
+  commentId: N:EvilDICOM.RT.Data.DVH
+  name: EvilDICOM.RT.Data.DVH
+  nameWithType: EvilDICOM.RT.Data.DVH
+  fullName: EvilDICOM.RT.Data.DVH
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.VolumeCC*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.StructureMeta.VolumeCC
+  name: VolumeCC
+  nameWithType: StructureMeta.VolumeCC
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.VolumeCC
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.ROINumber*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.StructureMeta.ROINumber
+  name: ROINumber
+  nameWithType: StructureMeta.ROINumber
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.ROINumber
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.StructureName*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.StructureMeta.StructureName
+  name: StructureName
+  nameWithType: StructureMeta.StructureName
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.StructureName
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.DICOMType*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.StructureMeta.DICOMType
+  name: DICOMType
+  nameWithType: StructureMeta.DICOMType
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.DICOMType
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.SliceContours*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.StructureMeta.SliceContours
+  name: SliceContours
+  nameWithType: StructureMeta.SliceContours
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.SliceContours
+- uid: System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.SliceContourMeta}
+  commentId: T:System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.SliceContourMeta}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<SliceContourMeta>
+  nameWithType: List<SliceContourMeta>
+  fullName: System.Collections.Generic.List<EvilDICOM.CV.RT.Meta.SliceContourMeta>
+  nameWithType.vb: List(Of SliceContourMeta)
+  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.CV.RT.Meta.SliceContourMeta)
+  name.vb: List(Of SliceContourMeta)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.CV.RT.Meta.SliceContourMeta
+    name: SliceContourMeta
+    nameWithType: SliceContourMeta
+    fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.CV.RT.Meta.SliceContourMeta
+    name: SliceContourMeta
+    nameWithType: SliceContourMeta
+    fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.Look*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.StructureMeta.Look
+  name: Look
+  nameWithType: StructureMeta.Look
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.Look
+- uid: EvilDICOM.CV.Drawing.StructureLook
+  commentId: T:EvilDICOM.CV.Drawing.StructureLook
+  parent: EvilDICOM.CV.Drawing
+  name: StructureLook
+  nameWithType: StructureLook
+  fullName: EvilDICOM.CV.Drawing.StructureLook
+- uid: EvilDICOM.CV.Drawing
+  commentId: N:EvilDICOM.CV.Drawing
+  name: EvilDICOM.CV.Drawing
+  nameWithType: EvilDICOM.CV.Drawing
+  fullName: EvilDICOM.CV.Drawing
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.CalculateSDFMatrix*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.StructureMeta.CalculateSDFMatrix
+  name: CalculateSDFMatrix
+  nameWithType: StructureMeta.CalculateSDFMatrix
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.CalculateSDFMatrix
+- uid: EvilDICOM.CV.Image.Matrix
+  commentId: T:EvilDICOM.CV.Image.Matrix
+  parent: EvilDICOM.CV.Image
+  name: Matrix
+  nameWithType: Matrix
+  fullName: EvilDICOM.CV.Image.Matrix
+- uid: EvilDICOM.CV.Image
+  commentId: N:EvilDICOM.CV.Image
+  name: EvilDICOM.CV.Image
+  nameWithType: EvilDICOM.CV.Image
+  fullName: EvilDICOM.CV.Image
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta.ToString*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.StructureMeta.ToString
+  name: ToString
+  nameWithType: StructureMeta.ToString
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta.ToString

@@ -1,0 +1,35 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.RT
+  commentId: N:EvilDICOM.RT
+  id: EvilDICOM.RT
+  children:
+  - EvilDICOM.RT.DoseValue
+  - EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.RT
+  nameWithType: EvilDICOM.RT
+  fullName: EvilDICOM.RT
+  type: Namespace
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.RT.DoseValue
+  commentId: T:EvilDICOM.RT.DoseValue
+  parent: EvilDICOM.RT
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: EvilDICOM.RT.DoseValue
+- uid: EvilDICOM.RT.RTDose
+  commentId: T:EvilDICOM.RT.RTDose
+  parent: EvilDICOM.RT
+  name: RTDose
+  nameWithType: RTDose
+  fullName: EvilDICOM.RT.RTDose
+- uid: EvilDICOM.RT
+  commentId: N:EvilDICOM.RT
+  name: EvilDICOM.RT
+  nameWithType: EvilDICOM.RT
+  fullName: EvilDICOM.RT

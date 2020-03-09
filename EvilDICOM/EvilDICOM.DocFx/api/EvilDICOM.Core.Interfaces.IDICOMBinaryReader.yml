@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Interfaces.IDICOMBinaryReader
+  commentId: T:EvilDICOM.Core.Interfaces.IDICOMBinaryReader
+  id: IDICOMBinaryReader
+  parent: EvilDICOM.Core.Interfaces
+  children: []
+  langs:
+  - csharp
+  - vb
+  name: IDICOMBinaryReader
+  nameWithType: IDICOMBinaryReader
+  fullName: EvilDICOM.Core.Interfaces.IDICOMBinaryReader
+  type: Interface
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Interfaces/IDICOMBinaryReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IDICOMBinaryReader
+    path: ../EvilDICOM/Core/Interfaces/IDICOMBinaryReader.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Interfaces
+  syntax:
+    content: public interface IDICOMBinaryReader
+    content.vb: Public Interface IDICOMBinaryReader
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+references:
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces

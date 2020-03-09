@@ -1,0 +1,34 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Image
+  commentId: N:EvilDICOM.Core.Image
+  id: EvilDICOM.Core.Image
+  children:
+  - EvilDICOM.Core.Image.PixelSlicer
+  - EvilDICOM.Core.Image.PixelStream
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Core.Image
+  nameWithType: EvilDICOM.Core.Image
+  fullName: EvilDICOM.Core.Image
+  type: Namespace
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Core.Image.PixelSlicer
+  commentId: T:EvilDICOM.Core.Image.PixelSlicer
+  name: PixelSlicer
+  nameWithType: PixelSlicer
+  fullName: EvilDICOM.Core.Image.PixelSlicer
+- uid: EvilDICOM.Core.Image.PixelStream
+  commentId: T:EvilDICOM.Core.Image.PixelStream
+  parent: EvilDICOM.Core.Image
+  name: PixelStream
+  nameWithType: PixelStream
+  fullName: EvilDICOM.Core.Image.PixelStream
+- uid: EvilDICOM.Core.Image
+  commentId: N:EvilDICOM.Core.Image
+  name: EvilDICOM.Core.Image
+  nameWithType: EvilDICOM.Core.Image
+  fullName: EvilDICOM.Core.Image

@@ -1,0 +1,211 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Anonymization.Settings.DateSettings
+  commentId: T:EvilDICOM.Anonymization.Settings.DateSettings
+  id: DateSettings
+  parent: EvilDICOM.Anonymization.Settings
+  children:
+  - EvilDICOM.Anonymization.Settings.DateSettings.KEEP_ALL_DATES
+  - EvilDICOM.Anonymization.Settings.DateSettings.MAKE_89
+  - EvilDICOM.Anonymization.Settings.DateSettings.NULL_AGE
+  - EvilDICOM.Anonymization.Settings.DateSettings.PRESERVE_AGE
+  - EvilDICOM.Anonymization.Settings.DateSettings.RANDOMIZE
+  langs:
+  - csharp
+  - vb
+  name: DateSettings
+  nameWithType: DateSettings
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DateSettings
+    path: ../EvilDICOM/Anonymization/Settings/DateSettings.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  syntax:
+    content: public enum DateSettings
+    content.vb: Public Enum DateSettings
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Anonymization.Settings.DateSettings.PRESERVE_AGE
+  commentId: F:EvilDICOM.Anonymization.Settings.DateSettings.PRESERVE_AGE
+  id: PRESERVE_AGE
+  parent: EvilDICOM.Anonymization.Settings.DateSettings
+  langs:
+  - csharp
+  - vb
+  name: PRESERVE_AGE
+  nameWithType: DateSettings.PRESERVE_AGE
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings.PRESERVE_AGE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PRESERVE_AGE
+    path: ../EvilDICOM/Anonymization/Settings/DateSettings.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  syntax:
+    content: PRESERVE_AGE = 0
+    return:
+      type: EvilDICOM.Anonymization.Settings.DateSettings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Anonymization.Settings.DateSettings.NULL_AGE
+  commentId: F:EvilDICOM.Anonymization.Settings.DateSettings.NULL_AGE
+  id: NULL_AGE
+  parent: EvilDICOM.Anonymization.Settings.DateSettings
+  langs:
+  - csharp
+  - vb
+  name: NULL_AGE
+  nameWithType: DateSettings.NULL_AGE
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings.NULL_AGE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: NULL_AGE
+    path: ../EvilDICOM/Anonymization/Settings/DateSettings.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  syntax:
+    content: NULL_AGE = 1
+    return:
+      type: EvilDICOM.Anonymization.Settings.DateSettings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Anonymization.Settings.DateSettings.MAKE_89
+  commentId: F:EvilDICOM.Anonymization.Settings.DateSettings.MAKE_89
+  id: MAKE_89
+  parent: EvilDICOM.Anonymization.Settings.DateSettings
+  langs:
+  - csharp
+  - vb
+  name: MAKE_89
+  nameWithType: DateSettings.MAKE_89
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings.MAKE_89
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MAKE_89
+    path: ../EvilDICOM/Anonymization/Settings/DateSettings.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  syntax:
+    content: MAKE_89 = 2
+    return:
+      type: EvilDICOM.Anonymization.Settings.DateSettings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Anonymization.Settings.DateSettings.RANDOMIZE
+  commentId: F:EvilDICOM.Anonymization.Settings.DateSettings.RANDOMIZE
+  id: RANDOMIZE
+  parent: EvilDICOM.Anonymization.Settings.DateSettings
+  langs:
+  - csharp
+  - vb
+  name: RANDOMIZE
+  nameWithType: DateSettings.RANDOMIZE
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings.RANDOMIZE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RANDOMIZE
+    path: ../EvilDICOM/Anonymization/Settings/DateSettings.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  syntax:
+    content: RANDOMIZE = 3
+    return:
+      type: EvilDICOM.Anonymization.Settings.DateSettings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Anonymization.Settings.DateSettings.KEEP_ALL_DATES
+  commentId: F:EvilDICOM.Anonymization.Settings.DateSettings.KEEP_ALL_DATES
+  id: KEEP_ALL_DATES
+  parent: EvilDICOM.Anonymization.Settings.DateSettings
+  langs:
+  - csharp
+  - vb
+  name: KEEP_ALL_DATES
+  nameWithType: DateSettings.KEEP_ALL_DATES
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings.KEEP_ALL_DATES
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Settings/DateSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: KEEP_ALL_DATES
+    path: ../EvilDICOM/Anonymization/Settings/DateSettings.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Settings
+  syntax:
+    content: KEEP_ALL_DATES = 4
+    return:
+      type: EvilDICOM.Anonymization.Settings.DateSettings
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Anonymization.Settings
+  commentId: N:EvilDICOM.Anonymization.Settings
+  name: EvilDICOM.Anonymization.Settings
+  nameWithType: EvilDICOM.Anonymization.Settings
+  fullName: EvilDICOM.Anonymization.Settings
+- uid: EvilDICOM.Anonymization.Settings.DateSettings
+  commentId: T:EvilDICOM.Anonymization.Settings.DateSettings
+  parent: EvilDICOM.Anonymization.Settings
+  name: DateSettings
+  nameWithType: DateSettings
+  fullName: EvilDICOM.Anonymization.Settings.DateSettings

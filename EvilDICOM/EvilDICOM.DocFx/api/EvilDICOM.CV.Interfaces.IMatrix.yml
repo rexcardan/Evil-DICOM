@@ -1,0 +1,643 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.Interfaces.IMatrix
+  commentId: T:EvilDICOM.CV.Interfaces.IMatrix
+  id: IMatrix
+  parent: EvilDICOM.CV.Interfaces
+  children:
+  - EvilDICOM.CV.Interfaces.IMatrix.DimensionX
+  - EvilDICOM.CV.Interfaces.IMatrix.DimensionY
+  - EvilDICOM.CV.Interfaces.IMatrix.DimensionZ
+  - EvilDICOM.CV.Interfaces.IMatrix.GetXPlaneBySlice(System.Int32,System.Double,System.Double)
+  - EvilDICOM.CV.Interfaces.IMatrix.GetYPlaneBySlice(System.Int32,System.Double,System.Double)
+  - EvilDICOM.CV.Interfaces.IMatrix.GetZPlaneBySlice(System.Int32,System.Double,System.Double)
+  - EvilDICOM.CV.Interfaces.IMatrix.MatType
+  - EvilDICOM.CV.Interfaces.IMatrix.Origin
+  - EvilDICOM.CV.Interfaces.IMatrix.XMax
+  - EvilDICOM.CV.Interfaces.IMatrix.XRes
+  - EvilDICOM.CV.Interfaces.IMatrix.YMax
+  - EvilDICOM.CV.Interfaces.IMatrix.YRes
+  - EvilDICOM.CV.Interfaces.IMatrix.ZMax
+  - EvilDICOM.CV.Interfaces.IMatrix.ZRes
+  langs:
+  - csharp
+  - vb
+  name: IMatrix
+  nameWithType: IMatrix
+  fullName: EvilDICOM.CV.Interfaces.IMatrix
+  type: Interface
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IMatrix
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: public interface IMatrix
+    content.vb: Public Interface IMatrix
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: EvilDICOM.CV.Interfaces.IMatrix.Origin
+  commentId: P:EvilDICOM.CV.Interfaces.IMatrix.Origin
+  id: Origin
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: Origin
+  nameWithType: IMatrix.Origin
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.Origin
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Origin
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: Vector3 Origin { get; }
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+    content.vb: ReadOnly Property Origin As Vector3
+  overload: EvilDICOM.CV.Interfaces.IMatrix.Origin*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: EvilDICOM.CV.Interfaces.IMatrix.XRes
+  commentId: P:EvilDICOM.CV.Interfaces.IMatrix.XRes
+  id: XRes
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: XRes
+  nameWithType: IMatrix.XRes
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.XRes
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: XRes
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: double XRes { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: ReadOnly Property XRes As Double
+  overload: EvilDICOM.CV.Interfaces.IMatrix.XRes*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: EvilDICOM.CV.Interfaces.IMatrix.YRes
+  commentId: P:EvilDICOM.CV.Interfaces.IMatrix.YRes
+  id: YRes
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: YRes
+  nameWithType: IMatrix.YRes
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.YRes
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: YRes
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: double YRes { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: ReadOnly Property YRes As Double
+  overload: EvilDICOM.CV.Interfaces.IMatrix.YRes*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: EvilDICOM.CV.Interfaces.IMatrix.ZRes
+  commentId: P:EvilDICOM.CV.Interfaces.IMatrix.ZRes
+  id: ZRes
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: ZRes
+  nameWithType: IMatrix.ZRes
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.ZRes
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ZRes
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: double ZRes { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: ReadOnly Property ZRes As Double
+  overload: EvilDICOM.CV.Interfaces.IMatrix.ZRes*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: EvilDICOM.CV.Interfaces.IMatrix.DimensionX
+  commentId: P:EvilDICOM.CV.Interfaces.IMatrix.DimensionX
+  id: DimensionX
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: DimensionX
+  nameWithType: IMatrix.DimensionX
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.DimensionX
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DimensionX
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: int DimensionX { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property DimensionX As Integer
+  overload: EvilDICOM.CV.Interfaces.IMatrix.DimensionX*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: EvilDICOM.CV.Interfaces.IMatrix.DimensionY
+  commentId: P:EvilDICOM.CV.Interfaces.IMatrix.DimensionY
+  id: DimensionY
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: DimensionY
+  nameWithType: IMatrix.DimensionY
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.DimensionY
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DimensionY
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: int DimensionY { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property DimensionY As Integer
+  overload: EvilDICOM.CV.Interfaces.IMatrix.DimensionY*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: EvilDICOM.CV.Interfaces.IMatrix.DimensionZ
+  commentId: P:EvilDICOM.CV.Interfaces.IMatrix.DimensionZ
+  id: DimensionZ
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: DimensionZ
+  nameWithType: IMatrix.DimensionZ
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.DimensionZ
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DimensionZ
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: int DimensionZ { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: ReadOnly Property DimensionZ As Integer
+  overload: EvilDICOM.CV.Interfaces.IMatrix.DimensionZ*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: EvilDICOM.CV.Interfaces.IMatrix.XMax
+  commentId: P:EvilDICOM.CV.Interfaces.IMatrix.XMax
+  id: XMax
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: XMax
+  nameWithType: IMatrix.XMax
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.XMax
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: XMax
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: double XMax { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: ReadOnly Property XMax As Double
+  overload: EvilDICOM.CV.Interfaces.IMatrix.XMax*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: EvilDICOM.CV.Interfaces.IMatrix.YMax
+  commentId: P:EvilDICOM.CV.Interfaces.IMatrix.YMax
+  id: YMax
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: YMax
+  nameWithType: IMatrix.YMax
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.YMax
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: YMax
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: double YMax { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: ReadOnly Property YMax As Double
+  overload: EvilDICOM.CV.Interfaces.IMatrix.YMax*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: EvilDICOM.CV.Interfaces.IMatrix.ZMax
+  commentId: P:EvilDICOM.CV.Interfaces.IMatrix.ZMax
+  id: ZMax
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: ZMax
+  nameWithType: IMatrix.ZMax
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.ZMax
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ZMax
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: double ZMax { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: ReadOnly Property ZMax As Double
+  overload: EvilDICOM.CV.Interfaces.IMatrix.ZMax*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: EvilDICOM.CV.Interfaces.IMatrix.GetZPlaneBySlice(System.Int32,System.Double,System.Double)
+  commentId: M:EvilDICOM.CV.Interfaces.IMatrix.GetZPlaneBySlice(System.Int32,System.Double,System.Double)
+  id: GetZPlaneBySlice(System.Int32,System.Double,System.Double)
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: GetZPlaneBySlice(Int32, Double, Double)
+  nameWithType: IMatrix.GetZPlaneBySlice(Int32, Double, Double)
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.GetZPlaneBySlice(System.Int32, System.Double, System.Double)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetZPlaneBySlice
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: Mat GetZPlaneBySlice(int z, double xScale = 1, double yScale = 1)
+    parameters:
+    - id: z
+      type: System.Int32
+    - id: xScale
+      type: System.Double
+    - id: yScale
+      type: System.Double
+    return:
+      type: OpenCvSharp.Mat
+    content.vb: Function GetZPlaneBySlice(z As Integer, xScale As Double = 1, yScale As Double = 1) As Mat
+  overload: EvilDICOM.CV.Interfaces.IMatrix.GetZPlaneBySlice*
+- uid: EvilDICOM.CV.Interfaces.IMatrix.GetXPlaneBySlice(System.Int32,System.Double,System.Double)
+  commentId: M:EvilDICOM.CV.Interfaces.IMatrix.GetXPlaneBySlice(System.Int32,System.Double,System.Double)
+  id: GetXPlaneBySlice(System.Int32,System.Double,System.Double)
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: GetXPlaneBySlice(Int32, Double, Double)
+  nameWithType: IMatrix.GetXPlaneBySlice(Int32, Double, Double)
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.GetXPlaneBySlice(System.Int32, System.Double, System.Double)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetXPlaneBySlice
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: Mat GetXPlaneBySlice(int x, double xScale = 1, double yScale = 1)
+    parameters:
+    - id: x
+      type: System.Int32
+    - id: xScale
+      type: System.Double
+    - id: yScale
+      type: System.Double
+    return:
+      type: OpenCvSharp.Mat
+    content.vb: Function GetXPlaneBySlice(x As Integer, xScale As Double = 1, yScale As Double = 1) As Mat
+  overload: EvilDICOM.CV.Interfaces.IMatrix.GetXPlaneBySlice*
+- uid: EvilDICOM.CV.Interfaces.IMatrix.GetYPlaneBySlice(System.Int32,System.Double,System.Double)
+  commentId: M:EvilDICOM.CV.Interfaces.IMatrix.GetYPlaneBySlice(System.Int32,System.Double,System.Double)
+  id: GetYPlaneBySlice(System.Int32,System.Double,System.Double)
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: GetYPlaneBySlice(Int32, Double, Double)
+  nameWithType: IMatrix.GetYPlaneBySlice(Int32, Double, Double)
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.GetYPlaneBySlice(System.Int32, System.Double, System.Double)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetYPlaneBySlice
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: Mat GetYPlaneBySlice(int y, double xScale = 1, double yScale = 1)
+    parameters:
+    - id: y
+      type: System.Int32
+    - id: xScale
+      type: System.Double
+    - id: yScale
+      type: System.Double
+    return:
+      type: OpenCvSharp.Mat
+    content.vb: Function GetYPlaneBySlice(y As Integer, xScale As Double = 1, yScale As Double = 1) As Mat
+  overload: EvilDICOM.CV.Interfaces.IMatrix.GetYPlaneBySlice*
+- uid: EvilDICOM.CV.Interfaces.IMatrix.MatType
+  commentId: P:EvilDICOM.CV.Interfaces.IMatrix.MatType
+  id: MatType
+  parent: EvilDICOM.CV.Interfaces.IMatrix
+  langs:
+  - csharp
+  - vb
+  name: MatType
+  nameWithType: IMatrix.MatType
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.MatType
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Interfaces/IMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MatType
+    path: ../EvilDICOM.CV/Interfaces/IMatrix.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Interfaces
+  syntax:
+    content: MatType MatType { get; }
+    parameters: []
+    return:
+      type: OpenCvSharp.MatType
+    content.vb: ReadOnly Property MatType As MatType
+  overload: EvilDICOM.CV.Interfaces.IMatrix.MatType*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+references:
+- uid: EvilDICOM.CV.Interfaces
+  commentId: N:EvilDICOM.CV.Interfaces
+  name: EvilDICOM.CV.Interfaces
+  nameWithType: EvilDICOM.CV.Interfaces
+  fullName: EvilDICOM.CV.Interfaces
+- uid: EvilDICOM.CV.Interfaces.IMatrix.Origin*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.Origin
+  name: Origin
+  nameWithType: IMatrix.Origin
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.Origin
+- uid: EvilDICOM.Core.Helpers.Vector3
+  commentId: T:EvilDICOM.Core.Helpers.Vector3
+  parent: EvilDICOM.Core.Helpers
+  name: Vector3
+  nameWithType: Vector3
+  fullName: EvilDICOM.Core.Helpers.Vector3
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: EvilDICOM.CV.Interfaces.IMatrix.XRes*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.XRes
+  name: XRes
+  nameWithType: IMatrix.XRes
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.XRes
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.Interfaces.IMatrix.YRes*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.YRes
+  name: YRes
+  nameWithType: IMatrix.YRes
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.YRes
+- uid: EvilDICOM.CV.Interfaces.IMatrix.ZRes*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.ZRes
+  name: ZRes
+  nameWithType: IMatrix.ZRes
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.ZRes
+- uid: EvilDICOM.CV.Interfaces.IMatrix.DimensionX*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.DimensionX
+  name: DimensionX
+  nameWithType: IMatrix.DimensionX
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.DimensionX
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.CV.Interfaces.IMatrix.DimensionY*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.DimensionY
+  name: DimensionY
+  nameWithType: IMatrix.DimensionY
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.DimensionY
+- uid: EvilDICOM.CV.Interfaces.IMatrix.DimensionZ*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.DimensionZ
+  name: DimensionZ
+  nameWithType: IMatrix.DimensionZ
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.DimensionZ
+- uid: EvilDICOM.CV.Interfaces.IMatrix.XMax*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.XMax
+  name: XMax
+  nameWithType: IMatrix.XMax
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.XMax
+- uid: EvilDICOM.CV.Interfaces.IMatrix.YMax*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.YMax
+  name: YMax
+  nameWithType: IMatrix.YMax
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.YMax
+- uid: EvilDICOM.CV.Interfaces.IMatrix.ZMax*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.ZMax
+  name: ZMax
+  nameWithType: IMatrix.ZMax
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.ZMax
+- uid: EvilDICOM.CV.Interfaces.IMatrix.GetZPlaneBySlice*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.GetZPlaneBySlice
+  name: GetZPlaneBySlice
+  nameWithType: IMatrix.GetZPlaneBySlice
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.GetZPlaneBySlice
+- uid: OpenCvSharp.Mat
+  commentId: T:OpenCvSharp.Mat
+  parent: OpenCvSharp
+  isExternal: true
+  name: Mat
+  nameWithType: Mat
+  fullName: OpenCvSharp.Mat
+- uid: OpenCvSharp
+  commentId: N:OpenCvSharp
+  isExternal: true
+  name: OpenCvSharp
+  nameWithType: OpenCvSharp
+  fullName: OpenCvSharp
+- uid: EvilDICOM.CV.Interfaces.IMatrix.GetXPlaneBySlice*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.GetXPlaneBySlice
+  name: GetXPlaneBySlice
+  nameWithType: IMatrix.GetXPlaneBySlice
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.GetXPlaneBySlice
+- uid: EvilDICOM.CV.Interfaces.IMatrix.GetYPlaneBySlice*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.GetYPlaneBySlice
+  name: GetYPlaneBySlice
+  nameWithType: IMatrix.GetYPlaneBySlice
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.GetYPlaneBySlice
+- uid: EvilDICOM.CV.Interfaces.IMatrix.MatType*
+  commentId: Overload:EvilDICOM.CV.Interfaces.IMatrix.MatType
+  name: MatType
+  nameWithType: IMatrix.MatType
+  fullName: EvilDICOM.CV.Interfaces.IMatrix.MatType
+- uid: OpenCvSharp.MatType
+  commentId: T:OpenCvSharp.MatType
+  parent: OpenCvSharp
+  isExternal: true
+  name: MatType
+  nameWithType: MatType
+  fullName: OpenCvSharp.MatType

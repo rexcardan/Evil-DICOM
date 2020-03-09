@@ -1,0 +1,877 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Reading.LengthReader
+  commentId: T:EvilDICOM.Core.IO.Reading.LengthReader
+  id: LengthReader
+  parent: EvilDICOM.Core.IO.Reading
+  children:
+  - EvilDICOM.Core.IO.Reading.LengthReader.IsIndefinite(System.Int32)
+  - EvilDICOM.Core.IO.Reading.LengthReader.PeekBigEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.LengthReader.PeekLittleEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.LengthReader.Read(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  - EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,System.Int32)
+  - EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(System.Byte[])
+  - EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  - EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,System.Int32)
+  - EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(System.Byte[])
+  langs:
+  - csharp
+  - vb
+  name: LengthReader
+  nameWithType: LengthReader
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/LengthReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: LengthReader
+    path: ../EvilDICOM/Core/IO/Reading/LengthReader.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nContains methods for reading the length of DICOM elements\n"
+  example: []
+  syntax:
+    content: public class LengthReader
+    content.vb: Public Class LengthReader
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.Read(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  commentId: M:EvilDICOM.Core.IO.Reading.LengthReader.Read(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  id: Read(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax)
+  parent: EvilDICOM.Core.IO.Reading.LengthReader
+  langs:
+  - csharp
+  - vb
+  name: Read(VR, DICOMBinaryReader, TransferSyntax)
+  nameWithType: LengthReader.Read(VR, DICOMBinaryReader, TransferSyntax)
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.Read(EvilDICOM.Core.Enums.VR, EvilDICOM.Core.IO.Reading.DICOMBinaryReader, EvilDICOM.Core.Enums.TransferSyntax)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/LengthReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Read
+    path: ../EvilDICOM/Core/IO/Reading/LengthReader.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the length from a series of bytes in a stream. The number of bytes is automatically determined from\nVR.\n"
+  example: []
+  syntax:
+    content: public static int Read(VR vr, DICOMBinaryReader dr, TransferSyntax syntax)
+    parameters:
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+      description: the value representation of the element
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary stream with a current position on the length parameter
+    - id: syntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+      description: the transfer syntax of this element
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Function Read(vr As VR, dr As DICOMBinaryReader, syntax As TransferSyntax) As Integer
+  overload: EvilDICOM.Core.IO.Reading.LengthReader.Read*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,System.Int32)
+  id: ReadLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,System.Int32)
+  parent: EvilDICOM.Core.IO.Reading.LengthReader
+  langs:
+  - csharp
+  - vb
+  name: ReadLittleEndian(DICOMBinaryReader, Int32)
+  nameWithType: LengthReader.ReadLittleEndian(DICOMBinaryReader, Int32)
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/LengthReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadLittleEndian
+    path: ../EvilDICOM/Core/IO/Reading/LengthReader.cs
+    startLine: 41
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the length in little endian byte format from a series of bytes in a stream\n"
+  example: []
+  syntax:
+    content: public static int ReadLittleEndian(DICOMBinaryReader dr, int length)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary stream with a current position on the length parameter
+    - id: length
+      type: System.Int32
+      description: the number of bytes containing the length
+    return:
+      type: System.Int32
+      description: the length
+    content.vb: Public Shared Function ReadLittleEndian(dr As DICOMBinaryReader, length As Integer) As Integer
+  overload: EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  commentId: M:EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: ReadLittleEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.LengthReader
+  langs:
+  - csharp
+  - vb
+  name: ReadLittleEndian(VR, DICOMBinaryReader)
+  nameWithType: LengthReader.ReadLittleEndian(VR, DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(EvilDICOM.Core.Enums.VR, EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/LengthReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadLittleEndian
+    path: ../EvilDICOM/Core/IO/Reading/LengthReader.cs
+    startLine: 62
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the length in little endian byte format from a series of bytes in a stream. The number of bytes is\nautomatically determined from\nVR.\n"
+  example: []
+  syntax:
+    content: public static int ReadLittleEndian(VR vr, DICOMBinaryReader dr)
+    parameters:
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+      description: the value representation of the element
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary stream with a current position on the length parameter
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Function ReadLittleEndian(vr As VR, dr As DICOMBinaryReader) As Integer
+  overload: EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.PeekLittleEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  commentId: M:EvilDICOM.Core.IO.Reading.LengthReader.PeekLittleEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: PeekLittleEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.LengthReader
+  langs:
+  - csharp
+  - vb
+  name: PeekLittleEndian(VR, DICOMBinaryReader)
+  nameWithType: LengthReader.PeekLittleEndian(VR, DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.PeekLittleEndian(EvilDICOM.Core.Enums.VR, EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/LengthReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PeekLittleEndian
+    path: ../EvilDICOM/Core/IO/Reading/LengthReader.cs
+    startLine: 84
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public static int PeekLittleEndian(VR vr, DICOMBinaryReader dr)
+    parameters:
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function PeekLittleEndian(vr As VR, dr As DICOMBinaryReader) As Integer
+  overload: EvilDICOM.Core.IO.Reading.LengthReader.PeekLittleEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.PeekBigEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  commentId: M:EvilDICOM.Core.IO.Reading.LengthReader.PeekBigEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: PeekBigEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.LengthReader
+  langs:
+  - csharp
+  - vb
+  name: PeekBigEndian(VR, DICOMBinaryReader)
+  nameWithType: LengthReader.PeekBigEndian(VR, DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.PeekBigEndian(EvilDICOM.Core.Enums.VR, EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/LengthReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PeekBigEndian
+    path: ../EvilDICOM/Core/IO/Reading/LengthReader.cs
+    startLine: 106
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  syntax:
+    content: public static int PeekBigEndian(VR vr, DICOMBinaryReader dr)
+    parameters:
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function PeekBigEndian(vr As VR, dr As DICOMBinaryReader) As Integer
+  overload: EvilDICOM.Core.IO.Reading.LengthReader.PeekBigEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  commentId: M:EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  id: ReadBigEndian(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  parent: EvilDICOM.Core.IO.Reading.LengthReader
+  langs:
+  - csharp
+  - vb
+  name: ReadBigEndian(VR, DICOMBinaryReader)
+  nameWithType: LengthReader.ReadBigEndian(VR, DICOMBinaryReader)
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(EvilDICOM.Core.Enums.VR, EvilDICOM.Core.IO.Reading.DICOMBinaryReader)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/LengthReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadBigEndian
+    path: ../EvilDICOM/Core/IO/Reading/LengthReader.cs
+    startLine: 132
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the length in big endian byte format from a series of bytes in a stream. The number of bytes is automatically\ndetermined from\nVR.\n"
+  example: []
+  syntax:
+    content: public static int ReadBigEndian(VR vr, DICOMBinaryReader dr)
+    parameters:
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+      description: the value representation of the element
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary stream with a current position on the length parameter
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Shared Function ReadBigEndian(vr As VR, dr As DICOMBinaryReader) As Integer
+  overload: EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.IsIndefinite(System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Reading.LengthReader.IsIndefinite(System.Int32)
+  id: IsIndefinite(System.Int32)
+  parent: EvilDICOM.Core.IO.Reading.LengthReader
+  langs:
+  - csharp
+  - vb
+  name: IsIndefinite(Int32)
+  nameWithType: LengthReader.IsIndefinite(Int32)
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.IsIndefinite(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/LengthReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IsIndefinite
+    path: ../EvilDICOM/Core/IO/Reading/LengthReader.cs
+    startLine: 156
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nChecks to see if length is indefinite type (eg. FFFFFFFF)\n"
+  example: []
+  syntax:
+    content: public static bool IsIndefinite(int length)
+    parameters:
+    - id: length
+      type: System.Int32
+      description: the length of the DICOM element
+    return:
+      type: System.Boolean
+      description: ''
+    content.vb: Public Shared Function IsIndefinite(length As Integer) As Boolean
+  overload: EvilDICOM.Core.IO.Reading.LengthReader.IsIndefinite*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,System.Int32)
+  id: ReadBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,System.Int32)
+  parent: EvilDICOM.Core.IO.Reading.LengthReader
+  langs:
+  - csharp
+  - vb
+  name: ReadBigEndian(DICOMBinaryReader, Int32)
+  nameWithType: LengthReader.ReadBigEndian(DICOMBinaryReader, Int32)
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(EvilDICOM.Core.IO.Reading.DICOMBinaryReader, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/LengthReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadBigEndian
+    path: ../EvilDICOM/Core/IO/Reading/LengthReader.cs
+    startLine: 167
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the length in big endian byte format from a series of bytes in a stream\n"
+  example: []
+  syntax:
+    content: public static int ReadBigEndian(DICOMBinaryReader dr, int length)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary stream with a current position on the length parameter
+    - id: length
+      type: System.Int32
+      description: the number of bytes containing the length
+    return:
+      type: System.Int32
+      description: the length
+    content.vb: Public Shared Function ReadBigEndian(dr As DICOMBinaryReader, length As Integer) As Integer
+  overload: EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(System.Byte[])
+  id: ReadBigEndian(System.Byte[])
+  parent: EvilDICOM.Core.IO.Reading.LengthReader
+  langs:
+  - csharp
+  - vb
+  name: ReadBigEndian(Byte[])
+  nameWithType: LengthReader.ReadBigEndian(Byte[])
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/LengthReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadBigEndian
+    path: ../EvilDICOM/Core/IO/Reading/LengthReader.cs
+    startLine: 185
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the length in big endian byte format from a series of bytes in a stream\n"
+  example: []
+  syntax:
+    content: public static int ReadBigEndian(byte[] length)
+    parameters:
+    - id: length
+      type: System.Byte[]
+      description: the bytes containing the length
+    return:
+      type: System.Int32
+      description: the length
+    content.vb: Public Shared Function ReadBigEndian(length As Byte()) As Integer
+  overload: EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian*
+  nameWithType.vb: LengthReader.ReadBigEndian(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian(System.Byte())
+  name.vb: ReadBigEndian(Byte())
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(System.Byte[])
+  id: ReadLittleEndian(System.Byte[])
+  parent: EvilDICOM.Core.IO.Reading.LengthReader
+  langs:
+  - csharp
+  - vb
+  name: ReadLittleEndian(Byte[])
+  nameWithType: LengthReader.ReadLittleEndian(Byte[])
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/LengthReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadLittleEndian
+    path: ../EvilDICOM/Core/IO/Reading/LengthReader.cs
+    startLine: 206
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads the length in little endian byte format from a series of bytes in a stream\n"
+  example: []
+  syntax:
+    content: public static int ReadLittleEndian(byte[] length)
+    parameters:
+    - id: length
+      type: System.Byte[]
+      description: the bytes containing the length
+    return:
+      type: System.Int32
+      description: the length
+    content.vb: Public Shared Function ReadLittleEndian(length As Byte()) As Integer
+  overload: EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian*
+  nameWithType.vb: LengthReader.ReadLittleEndian(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian(System.Byte())
+  name.vb: ReadLittleEndian(Byte())
+references:
+- uid: EvilDICOM.Core.IO.Reading
+  commentId: N:EvilDICOM.Core.IO.Reading
+  name: EvilDICOM.Core.IO.Reading
+  nameWithType: EvilDICOM.Core.IO.Reading
+  fullName: EvilDICOM.Core.IO.Reading
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.Read*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.LengthReader.Read
+  name: Read
+  nameWithType: LengthReader.Read
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.Read
+- uid: EvilDICOM.Core.Enums.VR
+  commentId: T:EvilDICOM.Core.Enums.VR
+  parent: EvilDICOM.Core.Enums
+  name: VR
+  nameWithType: VR
+  fullName: EvilDICOM.Core.Enums.VR
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  commentId: T:EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  parent: EvilDICOM.Core.IO.Reading
+  name: DICOMBinaryReader
+  nameWithType: DICOMBinaryReader
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  commentId: T:EvilDICOM.Core.Enums.TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  name: TransferSyntax
+  nameWithType: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian
+  name: ReadLittleEndian
+  nameWithType: LengthReader.ReadLittleEndian
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.ReadLittleEndian
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.PeekLittleEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.LengthReader.PeekLittleEndian
+  name: PeekLittleEndian
+  nameWithType: LengthReader.PeekLittleEndian
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.PeekLittleEndian
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.PeekBigEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.LengthReader.PeekBigEndian
+  name: PeekBigEndian
+  nameWithType: LengthReader.PeekBigEndian
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.PeekBigEndian
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian
+  name: ReadBigEndian
+  nameWithType: LengthReader.ReadBigEndian
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.ReadBigEndian
+- uid: EvilDICOM.Core.IO.Reading.LengthReader.IsIndefinite*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.LengthReader.IsIndefinite
+  name: IsIndefinite
+  nameWithType: LengthReader.IsIndefinite
+  fullName: EvilDICOM.Core.IO.Reading.LengthReader.IsIndefinite
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

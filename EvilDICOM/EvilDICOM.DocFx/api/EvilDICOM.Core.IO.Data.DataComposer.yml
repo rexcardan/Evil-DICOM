@@ -1,0 +1,585 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Data.DataComposer
+  commentId: T:EvilDICOM.Core.IO.Data.DataComposer
+  id: DataComposer
+  parent: EvilDICOM.Core.IO.Data
+  children:
+  - EvilDICOM.Core.IO.Data.DataComposer.GetDataBigEndian(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.StringEncoding)
+  - EvilDICOM.Core.IO.Data.DataComposer.GetDataLittleEndian(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.StringEncoding)
+  - EvilDICOM.Core.IO.Data.DataComposer.GetEncodedBytes(System.String,EvilDICOM.Core.Enums.StringEncoding)
+  - EvilDICOM.Core.IO.Data.DataComposer.GetStringBytes(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.StringEncoding)
+  langs:
+  - csharp
+  - vb
+  name: DataComposer
+  nameWithType: DataComposer
+  fullName: EvilDICOM.Core.IO.Data.DataComposer
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataComposer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DataComposer
+    path: ../EvilDICOM/Core/IO/Data/DataComposer.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public class DataComposer
+    content.vb: Public Class DataComposer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Data.DataComposer.GetDataLittleEndian(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.StringEncoding)
+  commentId: M:EvilDICOM.Core.IO.Data.DataComposer.GetDataLittleEndian(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.StringEncoding)
+  id: GetDataLittleEndian(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.StringEncoding)
+  parent: EvilDICOM.Core.IO.Data.DataComposer
+  langs:
+  - csharp
+  - vb
+  name: GetDataLittleEndian(IDICOMElement, StringEncoding)
+  nameWithType: DataComposer.GetDataLittleEndian(IDICOMElement, StringEncoding)
+  fullName: EvilDICOM.Core.IO.Data.DataComposer.GetDataLittleEndian(EvilDICOM.Core.Interfaces.IDICOMElement, EvilDICOM.Core.Enums.StringEncoding)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataComposer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetDataLittleEndian
+    path: ../EvilDICOM/Core/IO/Data/DataComposer.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] GetDataLittleEndian(IDICOMElement el, StringEncoding enc)
+    parameters:
+    - id: el
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+    - id: enc
+      type: EvilDICOM.Core.Enums.StringEncoding
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function GetDataLittleEndian(el As IDICOMElement, enc As StringEncoding) As Byte()
+  overload: EvilDICOM.Core.IO.Data.DataComposer.GetDataLittleEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.DataComposer.GetDataBigEndian(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.StringEncoding)
+  commentId: M:EvilDICOM.Core.IO.Data.DataComposer.GetDataBigEndian(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.StringEncoding)
+  id: GetDataBigEndian(EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.StringEncoding)
+  parent: EvilDICOM.Core.IO.Data.DataComposer
+  langs:
+  - csharp
+  - vb
+  name: GetDataBigEndian(IDICOMElement, StringEncoding)
+  nameWithType: DataComposer.GetDataBigEndian(IDICOMElement, StringEncoding)
+  fullName: EvilDICOM.Core.IO.Data.DataComposer.GetDataBigEndian(EvilDICOM.Core.Interfaces.IDICOMElement, EvilDICOM.Core.Enums.StringEncoding)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataComposer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetDataBigEndian
+    path: ../EvilDICOM/Core/IO/Data/DataComposer.cs
+    startLine: 65
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] GetDataBigEndian(IDICOMElement el, StringEncoding enc)
+    parameters:
+    - id: el
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+    - id: enc
+      type: EvilDICOM.Core.Enums.StringEncoding
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function GetDataBigEndian(el As IDICOMElement, enc As StringEncoding) As Byte()
+  overload: EvilDICOM.Core.IO.Data.DataComposer.GetDataBigEndian*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.DataComposer.GetStringBytes(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.StringEncoding)
+  commentId: M:EvilDICOM.Core.IO.Data.DataComposer.GetStringBytes(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.StringEncoding)
+  id: GetStringBytes(EvilDICOM.Core.Enums.VR,EvilDICOM.Core.Interfaces.IDICOMElement,EvilDICOM.Core.Enums.StringEncoding)
+  parent: EvilDICOM.Core.IO.Data.DataComposer
+  langs:
+  - csharp
+  - vb
+  name: GetStringBytes(VR, IDICOMElement, StringEncoding)
+  nameWithType: DataComposer.GetStringBytes(VR, IDICOMElement, StringEncoding)
+  fullName: EvilDICOM.Core.IO.Data.DataComposer.GetStringBytes(EvilDICOM.Core.Enums.VR, EvilDICOM.Core.Interfaces.IDICOMElement, EvilDICOM.Core.Enums.StringEncoding)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataComposer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetStringBytes
+    path: ../EvilDICOM/Core/IO/Data/DataComposer.cs
+    startLine: 123
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] GetStringBytes(VR vr, IDICOMElement el, StringEncoding enc)
+    parameters:
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+    - id: el
+      type: EvilDICOM.Core.Interfaces.IDICOMElement
+    - id: enc
+      type: EvilDICOM.Core.Enums.StringEncoding
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function GetStringBytes(vr As VR, el As IDICOMElement, enc As StringEncoding) As Byte()
+  overload: EvilDICOM.Core.IO.Data.DataComposer.GetStringBytes*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.DataComposer.GetEncodedBytes(System.String,EvilDICOM.Core.Enums.StringEncoding)
+  commentId: M:EvilDICOM.Core.IO.Data.DataComposer.GetEncodedBytes(System.String,EvilDICOM.Core.Enums.StringEncoding)
+  id: GetEncodedBytes(System.String,EvilDICOM.Core.Enums.StringEncoding)
+  parent: EvilDICOM.Core.IO.Data.DataComposer
+  langs:
+  - csharp
+  - vb
+  name: GetEncodedBytes(String, StringEncoding)
+  nameWithType: DataComposer.GetEncodedBytes(String, StringEncoding)
+  fullName: EvilDICOM.Core.IO.Data.DataComposer.GetEncodedBytes(System.String, EvilDICOM.Core.Enums.StringEncoding)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataComposer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetEncodedBytes
+    path: ../EvilDICOM/Core/IO/Data/DataComposer.cs
+    startLine: 216
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] GetEncodedBytes(string s, StringEncoding enc)
+    parameters:
+    - id: s
+      type: System.String
+    - id: enc
+      type: EvilDICOM.Core.Enums.StringEncoding
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function GetEncodedBytes(s As String, enc As StringEncoding) As Byte()
+  overload: EvilDICOM.Core.IO.Data.DataComposer.GetEncodedBytes*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.IO.Data
+  commentId: N:EvilDICOM.Core.IO.Data
+  name: EvilDICOM.Core.IO.Data
+  nameWithType: EvilDICOM.Core.IO.Data
+  fullName: EvilDICOM.Core.IO.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Core.IO.Data.DataComposer.GetDataLittleEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Data.DataComposer.GetDataLittleEndian
+  name: GetDataLittleEndian
+  nameWithType: DataComposer.GetDataLittleEndian
+  fullName: EvilDICOM.Core.IO.Data.DataComposer.GetDataLittleEndian
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  commentId: T:EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  name: IDICOMElement
+  nameWithType: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: EvilDICOM.Core.Enums.StringEncoding
+  commentId: T:EvilDICOM.Core.Enums.StringEncoding
+  parent: EvilDICOM.Core.Enums
+  name: StringEncoding
+  nameWithType: StringEncoding
+  fullName: EvilDICOM.Core.Enums.StringEncoding
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.IO.Data.DataComposer.GetDataBigEndian*
+  commentId: Overload:EvilDICOM.Core.IO.Data.DataComposer.GetDataBigEndian
+  name: GetDataBigEndian
+  nameWithType: DataComposer.GetDataBigEndian
+  fullName: EvilDICOM.Core.IO.Data.DataComposer.GetDataBigEndian
+- uid: EvilDICOM.Core.IO.Data.DataComposer.GetStringBytes*
+  commentId: Overload:EvilDICOM.Core.IO.Data.DataComposer.GetStringBytes
+  name: GetStringBytes
+  nameWithType: DataComposer.GetStringBytes
+  fullName: EvilDICOM.Core.IO.Data.DataComposer.GetStringBytes
+- uid: EvilDICOM.Core.Enums.VR
+  commentId: T:EvilDICOM.Core.Enums.VR
+  parent: EvilDICOM.Core.Enums
+  name: VR
+  nameWithType: VR
+  fullName: EvilDICOM.Core.Enums.VR
+- uid: EvilDICOM.Core.IO.Data.DataComposer.GetEncodedBytes*
+  commentId: Overload:EvilDICOM.Core.IO.Data.DataComposer.GetEncodedBytes
+  name: GetEncodedBytes
+  nameWithType: DataComposer.GetEncodedBytes
+  fullName: EvilDICOM.Core.IO.Data.DataComposer.GetEncodedBytes
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

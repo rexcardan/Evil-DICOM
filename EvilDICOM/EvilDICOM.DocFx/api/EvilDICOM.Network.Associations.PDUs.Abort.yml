@@ -1,0 +1,652 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Associations.PDUs.Abort
+  commentId: T:EvilDICOM.Network.Associations.PDUs.Abort
+  id: Abort
+  parent: EvilDICOM.Network.Associations.PDUs
+  children:
+  - EvilDICOM.Network.Associations.PDUs.Abort.Reason
+  - EvilDICOM.Network.Associations.PDUs.Abort.Source
+  - EvilDICOM.Network.Associations.PDUs.Abort.ToString
+  - EvilDICOM.Network.Associations.PDUs.Abort.Type
+  - EvilDICOM.Network.Associations.PDUs.Abort.Write
+  langs:
+  - csharp
+  - vb
+  name: Abort
+  nameWithType: Abort
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Abort
+    path: ../EvilDICOM/Network/PDUs/Abort.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Associations.PDUs
+  syntax:
+    content: 'public class Abort : IPDU'
+    content.vb: >-
+      Public Class Abort
+          Implements IPDU
+  inheritance:
+  - System.Object
+  implements:
+  - EvilDICOM.Network.Interfaces.IPDU
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Reason
+  commentId: P:EvilDICOM.Network.Associations.PDUs.Abort.Reason
+  id: Reason
+  parent: EvilDICOM.Network.Associations.PDUs.Abort
+  langs:
+  - csharp
+  - vb
+  name: Reason
+  nameWithType: Abort.Reason
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Reason
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Reason
+    path: ../EvilDICOM/Network/PDUs/Abort.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Associations.PDUs
+  syntax:
+    content: public AbortReason Reason { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.AbortReason
+    content.vb: Public Property Reason As AbortReason
+  overload: EvilDICOM.Network.Associations.PDUs.Abort.Reason*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Source
+  commentId: P:EvilDICOM.Network.Associations.PDUs.Abort.Source
+  id: Source
+  parent: EvilDICOM.Network.Associations.PDUs.Abort
+  langs:
+  - csharp
+  - vb
+  name: Source
+  nameWithType: Abort.Source
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Source
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Source
+    path: ../EvilDICOM/Network/PDUs/Abort.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Associations.PDUs
+  syntax:
+    content: public AbortSource Source { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.AbortSource
+    content.vb: Public Property Source As AbortSource
+  overload: EvilDICOM.Network.Associations.PDUs.Abort.Source*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Write
+  commentId: M:EvilDICOM.Network.Associations.PDUs.Abort.Write
+  id: Write
+  parent: EvilDICOM.Network.Associations.PDUs.Abort
+  langs:
+  - csharp
+  - vb
+  name: Write()
+  nameWithType: Abort.Write()
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Write()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Write
+    path: ../EvilDICOM/Network/PDUs/Abort.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Associations.PDUs
+  syntax:
+    content: public byte[] Write()
+    return:
+      type: System.Byte[]
+    content.vb: Public Function Write As Byte()
+  overload: EvilDICOM.Network.Associations.PDUs.Abort.Write*
+  implements:
+  - EvilDICOM.Network.Interfaces.IPDU.Write
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Type
+  commentId: P:EvilDICOM.Network.Associations.PDUs.Abort.Type
+  id: Type
+  parent: EvilDICOM.Network.Associations.PDUs.Abort
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Abort.Type
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Type
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Type
+    path: ../EvilDICOM/Network/PDUs/Abort.cs
+    startLine: 35
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Associations.PDUs
+  syntax:
+    content: public PDUType Type { get; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+    content.vb: Public ReadOnly Property Type As PDUType
+  overload: EvilDICOM.Network.Associations.PDUs.Abort.Type*
+  implements:
+  - EvilDICOM.Network.Interfaces.IPDU.Type
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.ToString
+  commentId: M:EvilDICOM.Network.Associations.PDUs.Abort.ToString
+  id: ToString
+  parent: EvilDICOM.Network.Associations.PDUs.Abort
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Abort.ToString()
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Abort.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToString
+    path: ../EvilDICOM/Network/PDUs/Abort.cs
+    startLine: 40
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Associations.PDUs
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: EvilDICOM.Network.Associations.PDUs.Abort.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: EvilDICOM.Network.Associations.PDUs
+  commentId: N:EvilDICOM.Network.Associations.PDUs
+  name: EvilDICOM.Network.Associations.PDUs
+  nameWithType: EvilDICOM.Network.Associations.PDUs
+  fullName: EvilDICOM.Network.Associations.PDUs
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.Interfaces.IPDU
+  commentId: T:EvilDICOM.Network.Interfaces.IPDU
+  parent: EvilDICOM.Network.Interfaces
+  name: IPDU
+  nameWithType: IPDU
+  fullName: EvilDICOM.Network.Interfaces.IPDU
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Network.Interfaces
+  commentId: N:EvilDICOM.Network.Interfaces
+  name: EvilDICOM.Network.Interfaces
+  nameWithType: EvilDICOM.Network.Interfaces
+  fullName: EvilDICOM.Network.Interfaces
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Reason*
+  commentId: Overload:EvilDICOM.Network.Associations.PDUs.Abort.Reason
+  name: Reason
+  nameWithType: Abort.Reason
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Reason
+- uid: EvilDICOM.Network.Enums.AbortReason
+  commentId: T:EvilDICOM.Network.Enums.AbortReason
+  parent: EvilDICOM.Network.Enums
+  name: AbortReason
+  nameWithType: AbortReason
+  fullName: EvilDICOM.Network.Enums.AbortReason
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Source*
+  commentId: Overload:EvilDICOM.Network.Associations.PDUs.Abort.Source
+  name: Source
+  nameWithType: Abort.Source
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Source
+- uid: EvilDICOM.Network.Enums.AbortSource
+  commentId: T:EvilDICOM.Network.Enums.AbortSource
+  parent: EvilDICOM.Network.Enums
+  name: AbortSource
+  nameWithType: AbortSource
+  fullName: EvilDICOM.Network.Enums.AbortSource
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Write*
+  commentId: Overload:EvilDICOM.Network.Associations.PDUs.Abort.Write
+  name: Write
+  nameWithType: Abort.Write
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Write
+- uid: EvilDICOM.Network.Interfaces.IPDU.Write
+  commentId: M:EvilDICOM.Network.Interfaces.IPDU.Write
+  parent: EvilDICOM.Network.Interfaces.IPDU
+  name: Write()
+  nameWithType: IPDU.Write()
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Write()
+  spec.csharp:
+  - uid: EvilDICOM.Network.Interfaces.IPDU.Write
+    name: Write
+    nameWithType: IPDU.Write
+    fullName: EvilDICOM.Network.Interfaces.IPDU.Write
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.Interfaces.IPDU.Write
+    name: Write
+    nameWithType: IPDU.Write
+    fullName: EvilDICOM.Network.Interfaces.IPDU.Write
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.Type*
+  commentId: Overload:EvilDICOM.Network.Associations.PDUs.Abort.Type
+  name: Type
+  nameWithType: Abort.Type
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.Type
+- uid: EvilDICOM.Network.Interfaces.IPDU.Type
+  commentId: P:EvilDICOM.Network.Interfaces.IPDU.Type
+  parent: EvilDICOM.Network.Interfaces.IPDU
+  name: Type
+  nameWithType: IPDU.Type
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Type
+- uid: EvilDICOM.Network.Enums.PDUType
+  commentId: T:EvilDICOM.Network.Enums.PDUType
+  parent: EvilDICOM.Network.Enums
+  name: PDUType
+  nameWithType: PDUType
+  fullName: EvilDICOM.Network.Enums.PDUType
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Associations.PDUs.Abort.ToString*
+  commentId: Overload:EvilDICOM.Network.Associations.PDUs.Abort.ToString
+  name: ToString
+  nameWithType: Abort.ToString
+  fullName: EvilDICOM.Network.Associations.PDUs.Abort.ToString
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

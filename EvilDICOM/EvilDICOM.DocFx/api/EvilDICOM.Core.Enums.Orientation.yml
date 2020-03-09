@@ -1,0 +1,508 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Enums.Orientation
+  commentId: T:EvilDICOM.Core.Enums.Orientation
+  id: Orientation
+  parent: EvilDICOM.Core.Enums
+  children:
+  - EvilDICOM.Core.Enums.Orientation.AFDL
+  - EvilDICOM.Core.Enums.Orientation.AFDR
+  - EvilDICOM.Core.Enums.Orientation.FFDL
+  - EvilDICOM.Core.Enums.Orientation.FFDR
+  - EvilDICOM.Core.Enums.Orientation.FFP
+  - EvilDICOM.Core.Enums.Orientation.FFS
+  - EvilDICOM.Core.Enums.Orientation.HFDL
+  - EvilDICOM.Core.Enums.Orientation.HFDR
+  - EvilDICOM.Core.Enums.Orientation.HFP
+  - EvilDICOM.Core.Enums.Orientation.HFS
+  - EvilDICOM.Core.Enums.Orientation.LFP
+  - EvilDICOM.Core.Enums.Orientation.PFDL
+  - EvilDICOM.Core.Enums.Orientation.PFDR
+  - EvilDICOM.Core.Enums.Orientation.RFP
+  langs:
+  - csharp
+  - vb
+  name: Orientation
+  nameWithType: Orientation
+  fullName: EvilDICOM.Core.Enums.Orientation
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Orientation
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: public enum Orientation
+    content.vb: Public Enum Orientation
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Core.Enums.Orientation.HFP
+  commentId: F:EvilDICOM.Core.Enums.Orientation.HFP
+  id: HFP
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: HFP
+  nameWithType: Orientation.HFP
+  fullName: EvilDICOM.Core.Enums.Orientation.HFP
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HFP
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: HFP = 0
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Orientation.HFS
+  commentId: F:EvilDICOM.Core.Enums.Orientation.HFS
+  id: HFS
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: HFS
+  nameWithType: Orientation.HFS
+  fullName: EvilDICOM.Core.Enums.Orientation.HFS
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HFS
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: HFS = 1
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Orientation.HFDR
+  commentId: F:EvilDICOM.Core.Enums.Orientation.HFDR
+  id: HFDR
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: HFDR
+  nameWithType: Orientation.HFDR
+  fullName: EvilDICOM.Core.Enums.Orientation.HFDR
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HFDR
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: HFDR = 2
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Orientation.HFDL
+  commentId: F:EvilDICOM.Core.Enums.Orientation.HFDL
+  id: HFDL
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: HFDL
+  nameWithType: Orientation.HFDL
+  fullName: EvilDICOM.Core.Enums.Orientation.HFDL
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HFDL
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: HFDL = 3
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Orientation.FFDR
+  commentId: F:EvilDICOM.Core.Enums.Orientation.FFDR
+  id: FFDR
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: FFDR
+  nameWithType: Orientation.FFDR
+  fullName: EvilDICOM.Core.Enums.Orientation.FFDR
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FFDR
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: FFDR = 4
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Orientation.FFDL
+  commentId: F:EvilDICOM.Core.Enums.Orientation.FFDL
+  id: FFDL
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: FFDL
+  nameWithType: Orientation.FFDL
+  fullName: EvilDICOM.Core.Enums.Orientation.FFDL
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FFDL
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: FFDL = 5
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Orientation.FFP
+  commentId: F:EvilDICOM.Core.Enums.Orientation.FFP
+  id: FFP
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: FFP
+  nameWithType: Orientation.FFP
+  fullName: EvilDICOM.Core.Enums.Orientation.FFP
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FFP
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: FFP = 6
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Orientation.FFS
+  commentId: F:EvilDICOM.Core.Enums.Orientation.FFS
+  id: FFS
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: FFS
+  nameWithType: Orientation.FFS
+  fullName: EvilDICOM.Core.Enums.Orientation.FFS
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FFS
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: FFS = 7
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Orientation.LFP
+  commentId: F:EvilDICOM.Core.Enums.Orientation.LFP
+  id: LFP
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: LFP
+  nameWithType: Orientation.LFP
+  fullName: EvilDICOM.Core.Enums.Orientation.LFP
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: LFP
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: LFP = 8
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Orientation.RFP
+  commentId: F:EvilDICOM.Core.Enums.Orientation.RFP
+  id: RFP
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: RFP
+  nameWithType: Orientation.RFP
+  fullName: EvilDICOM.Core.Enums.Orientation.RFP
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RFP
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: RFP = 9
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Orientation.AFDR
+  commentId: F:EvilDICOM.Core.Enums.Orientation.AFDR
+  id: AFDR
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: AFDR
+  nameWithType: Orientation.AFDR
+  fullName: EvilDICOM.Core.Enums.Orientation.AFDR
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AFDR
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: AFDR = 10
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Orientation.AFDL
+  commentId: F:EvilDICOM.Core.Enums.Orientation.AFDL
+  id: AFDL
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: AFDL
+  nameWithType: Orientation.AFDL
+  fullName: EvilDICOM.Core.Enums.Orientation.AFDL
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AFDL
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: AFDL = 11
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Orientation.PFDR
+  commentId: F:EvilDICOM.Core.Enums.Orientation.PFDR
+  id: PFDR
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: PFDR
+  nameWithType: Orientation.PFDR
+  fullName: EvilDICOM.Core.Enums.Orientation.PFDR
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PFDR
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: PFDR = 12
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Orientation.PFDL
+  commentId: F:EvilDICOM.Core.Enums.Orientation.PFDL
+  id: PFDL
+  parent: EvilDICOM.Core.Enums.Orientation
+  langs:
+  - csharp
+  - vb
+  name: PFDL
+  nameWithType: Orientation.PFDL
+  fullName: EvilDICOM.Core.Enums.Orientation.PFDL
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Orientation.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PFDL
+    path: ../EvilDICOM/Core/Enums/Orientation.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: PFDL = 13
+    return:
+      type: EvilDICOM.Core.Enums.Orientation
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.Enums.Orientation
+  commentId: T:EvilDICOM.Core.Enums.Orientation
+  parent: EvilDICOM.Core.Enums
+  name: Orientation
+  nameWithType: Orientation
+  fullName: EvilDICOM.Core.Enums.Orientation

@@ -1,0 +1,147 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Enums.VREncoding
+  commentId: T:EvilDICOM.Core.Enums.VREncoding
+  id: VREncoding
+  parent: EvilDICOM.Core.Enums
+  children:
+  - EvilDICOM.Core.Enums.VREncoding.ExplicitLong
+  - EvilDICOM.Core.Enums.VREncoding.ExplicitShort
+  - EvilDICOM.Core.Enums.VREncoding.Implicit
+  langs:
+  - csharp
+  - vb
+  name: VREncoding
+  nameWithType: VREncoding
+  fullName: EvilDICOM.Core.Enums.VREncoding
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VREncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: VREncoding
+    path: ../EvilDICOM/Core/Enums/VREncoding.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  summary: "\nAn enum that contains the different types of VR encoding in DICOM\n"
+  example: []
+  syntax:
+    content: public enum VREncoding
+    content.vb: Public Enum VREncoding
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Core.Enums.VREncoding.Implicit
+  commentId: F:EvilDICOM.Core.Enums.VREncoding.Implicit
+  id: Implicit
+  parent: EvilDICOM.Core.Enums.VREncoding
+  langs:
+  - csharp
+  - vb
+  name: Implicit
+  nameWithType: VREncoding.Implicit
+  fullName: EvilDICOM.Core.Enums.VREncoding.Implicit
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VREncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Implicit
+    path: ../EvilDICOM/Core/Enums/VREncoding.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: Implicit = 0
+    return:
+      type: EvilDICOM.Core.Enums.VREncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.VREncoding.ExplicitShort
+  commentId: F:EvilDICOM.Core.Enums.VREncoding.ExplicitShort
+  id: ExplicitShort
+  parent: EvilDICOM.Core.Enums.VREncoding
+  langs:
+  - csharp
+  - vb
+  name: ExplicitShort
+  nameWithType: VREncoding.ExplicitShort
+  fullName: EvilDICOM.Core.Enums.VREncoding.ExplicitShort
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VREncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ExplicitShort
+    path: ../EvilDICOM/Core/Enums/VREncoding.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ExplicitShort = 1
+    return:
+      type: EvilDICOM.Core.Enums.VREncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.VREncoding.ExplicitLong
+  commentId: F:EvilDICOM.Core.Enums.VREncoding.ExplicitLong
+  id: ExplicitLong
+  parent: EvilDICOM.Core.Enums.VREncoding
+  langs:
+  - csharp
+  - vb
+  name: ExplicitLong
+  nameWithType: VREncoding.ExplicitLong
+  fullName: EvilDICOM.Core.Enums.VREncoding.ExplicitLong
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/VREncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ExplicitLong
+    path: ../EvilDICOM/Core/Enums/VREncoding.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ExplicitLong = 2
+    return:
+      type: EvilDICOM.Core.Enums.VREncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.Enums.VREncoding
+  commentId: T:EvilDICOM.Core.Enums.VREncoding
+  parent: EvilDICOM.Core.Enums
+  name: VREncoding
+  nameWithType: VREncoding
+  fullName: EvilDICOM.Core.Enums.VREncoding

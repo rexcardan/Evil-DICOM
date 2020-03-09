@@ -1,0 +1,310 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  commentId: T:EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  id: RejectReason_SCP_PRESENTATION
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.LOCAL_LIMIT_EXCEEDED
+  - EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED
+  - EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_3
+  - EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_4
+  - EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_5
+  - EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_6
+  - EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_7
+  - EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.TEMPORARY_CONGESTION
+  langs:
+  - csharp
+  - vb
+  name: RejectReason_SCP_PRESENTATION
+  nameWithType: RejectReason_SCP_PRESENTATION
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RejectReason_SCP_PRESENTATION
+    path: ../EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: 'public enum RejectReason_SCP_PRESENTATION : byte'
+    content.vb: Public Enum RejectReason_SCP_PRESENTATION As Byte
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED
+  id: RESERVED
+  parent: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  langs:
+  - csharp
+  - vb
+  name: RESERVED
+  nameWithType: RejectReason_SCP_PRESENTATION.RESERVED
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RESERVED
+    path: ../EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED = 0
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.TEMPORARY_CONGESTION
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.TEMPORARY_CONGESTION
+  id: TEMPORARY_CONGESTION
+  parent: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  langs:
+  - csharp
+  - vb
+  name: TEMPORARY_CONGESTION
+  nameWithType: RejectReason_SCP_PRESENTATION.TEMPORARY_CONGESTION
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.TEMPORARY_CONGESTION
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: TEMPORARY_CONGESTION
+    path: ../EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: TEMPORARY_CONGESTION = 1
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.LOCAL_LIMIT_EXCEEDED
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.LOCAL_LIMIT_EXCEEDED
+  id: LOCAL_LIMIT_EXCEEDED
+  parent: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  langs:
+  - csharp
+  - vb
+  name: LOCAL_LIMIT_EXCEEDED
+  nameWithType: RejectReason_SCP_PRESENTATION.LOCAL_LIMIT_EXCEEDED
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.LOCAL_LIMIT_EXCEEDED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: LOCAL_LIMIT_EXCEEDED
+    path: ../EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: LOCAL_LIMIT_EXCEEDED = 2
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_3
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_3
+  id: RESERVED_3
+  parent: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  langs:
+  - csharp
+  - vb
+  name: RESERVED_3
+  nameWithType: RejectReason_SCP_PRESENTATION.RESERVED_3
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_3
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RESERVED_3
+    path: ../EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED_3 = 3
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_4
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_4
+  id: RESERVED_4
+  parent: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  langs:
+  - csharp
+  - vb
+  name: RESERVED_4
+  nameWithType: RejectReason_SCP_PRESENTATION.RESERVED_4
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_4
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RESERVED_4
+    path: ../EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED_4 = 4
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_5
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_5
+  id: RESERVED_5
+  parent: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  langs:
+  - csharp
+  - vb
+  name: RESERVED_5
+  nameWithType: RejectReason_SCP_PRESENTATION.RESERVED_5
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_5
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RESERVED_5
+    path: ../EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 29
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED_5 = 5
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_6
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_6
+  id: RESERVED_6
+  parent: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  langs:
+  - csharp
+  - vb
+  name: RESERVED_6
+  nameWithType: RejectReason_SCP_PRESENTATION.RESERVED_6
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_6
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RESERVED_6
+    path: ../EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 30
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED_6 = 6
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_7
+  commentId: F:EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_7
+  id: RESERVED_7
+  parent: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  langs:
+  - csharp
+  - vb
+  name: RESERVED_7
+  nameWithType: RejectReason_SCP_PRESENTATION.RESERVED_7
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION.RESERVED_7
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/RejectReason.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RESERVED_7
+    path: ../EvilDICOM/Network/Enums/RejectReason.cs
+    startLine: 31
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: RESERVED_7 = 7
+    return:
+      type: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  commentId: T:EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION
+  parent: EvilDICOM.Network.Enums
+  name: RejectReason_SCP_PRESENTATION
+  nameWithType: RejectReason_SCP_PRESENTATION
+  fullName: EvilDICOM.Network.Enums.RejectReason_SCP_PRESENTATION

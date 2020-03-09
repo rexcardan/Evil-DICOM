@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.RT.Data.DoseSumType
+  commentId: T:EvilDICOM.RT.Data.DoseSumType
+  id: DoseSumType
+  parent: EvilDICOM.RT.Data
+  children:
+  - EvilDICOM.RT.Data.DoseSumType.BEAM
+  - EvilDICOM.RT.Data.DoseSumType.PLAN
+  langs:
+  - csharp
+  - vb
+  name: DoseSumType
+  nameWithType: DoseSumType
+  fullName: EvilDICOM.RT.Data.DoseSumType
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/DoseSumType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DoseSumType
+    path: ../EvilDICOM/RT/Data/DoseSumType.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: public enum DoseSumType
+    content.vb: Public Enum DoseSumType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.RT.Data.DoseSumType.PLAN
+  commentId: F:EvilDICOM.RT.Data.DoseSumType.PLAN
+  id: PLAN
+  parent: EvilDICOM.RT.Data.DoseSumType
+  langs:
+  - csharp
+  - vb
+  name: PLAN
+  nameWithType: DoseSumType.PLAN
+  fullName: EvilDICOM.RT.Data.DoseSumType.PLAN
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/DoseSumType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PLAN
+    path: ../EvilDICOM/RT/Data/DoseSumType.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: PLAN = 0
+    return:
+      type: EvilDICOM.RT.Data.DoseSumType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.RT.Data.DoseSumType.BEAM
+  commentId: F:EvilDICOM.RT.Data.DoseSumType.BEAM
+  id: BEAM
+  parent: EvilDICOM.RT.Data.DoseSumType
+  langs:
+  - csharp
+  - vb
+  name: BEAM
+  nameWithType: DoseSumType.BEAM
+  fullName: EvilDICOM.RT.Data.DoseSumType.BEAM
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/DoseSumType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: BEAM
+    path: ../EvilDICOM/RT/Data/DoseSumType.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: BEAM = 1
+    return:
+      type: EvilDICOM.RT.Data.DoseSumType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.RT.Data
+  commentId: N:EvilDICOM.RT.Data
+  name: EvilDICOM.RT.Data
+  nameWithType: EvilDICOM.RT.Data
+  fullName: EvilDICOM.RT.Data
+- uid: EvilDICOM.RT.Data.DoseSumType
+  commentId: T:EvilDICOM.RT.Data.DoseSumType
+  parent: EvilDICOM.RT.Data
+  name: DoseSumType
+  nameWithType: DoseSumType
+  fullName: EvilDICOM.RT.Data.DoseSumType

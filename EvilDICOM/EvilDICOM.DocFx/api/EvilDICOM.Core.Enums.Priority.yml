@@ -1,0 +1,145 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Enums.Priority
+  commentId: T:EvilDICOM.Core.Enums.Priority
+  id: Priority
+  parent: EvilDICOM.Core.Enums
+  children:
+  - EvilDICOM.Core.Enums.Priority.HIGH
+  - EvilDICOM.Core.Enums.Priority.LOW
+  - EvilDICOM.Core.Enums.Priority.MEDIUM
+  langs:
+  - csharp
+  - vb
+  name: Priority
+  nameWithType: Priority
+  fullName: EvilDICOM.Core.Enums.Priority
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Priority.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Priority
+    path: ../EvilDICOM/Core/Enums/Priority.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: 'public enum Priority : ushort'
+    content.vb: Public Enum Priority As UShort
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Core.Enums.Priority.LOW
+  commentId: F:EvilDICOM.Core.Enums.Priority.LOW
+  id: LOW
+  parent: EvilDICOM.Core.Enums.Priority
+  langs:
+  - csharp
+  - vb
+  name: LOW
+  nameWithType: Priority.LOW
+  fullName: EvilDICOM.Core.Enums.Priority.LOW
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Priority.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: LOW
+    path: ../EvilDICOM/Core/Enums/Priority.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: LOW = 2
+    return:
+      type: EvilDICOM.Core.Enums.Priority
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Priority.MEDIUM
+  commentId: F:EvilDICOM.Core.Enums.Priority.MEDIUM
+  id: MEDIUM
+  parent: EvilDICOM.Core.Enums.Priority
+  langs:
+  - csharp
+  - vb
+  name: MEDIUM
+  nameWithType: Priority.MEDIUM
+  fullName: EvilDICOM.Core.Enums.Priority.MEDIUM
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Priority.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MEDIUM
+    path: ../EvilDICOM/Core/Enums/Priority.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: MEDIUM = 0
+    return:
+      type: EvilDICOM.Core.Enums.Priority
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.Priority.HIGH
+  commentId: F:EvilDICOM.Core.Enums.Priority.HIGH
+  id: HIGH
+  parent: EvilDICOM.Core.Enums.Priority
+  langs:
+  - csharp
+  - vb
+  name: HIGH
+  nameWithType: Priority.HIGH
+  fullName: EvilDICOM.Core.Enums.Priority.HIGH
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/Priority.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HIGH
+    path: ../EvilDICOM/Core/Enums/Priority.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: HIGH = 1
+    return:
+      type: EvilDICOM.Core.Enums.Priority
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.Enums.Priority
+  commentId: T:EvilDICOM.Core.Enums.Priority
+  parent: EvilDICOM.Core.Enums
+  name: Priority
+  nameWithType: Priority
+  fullName: EvilDICOM.Core.Enums.Priority

@@ -1,0 +1,531 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.RT.Meta.ReferencePointMeta
+  commentId: T:EvilDICOM.CV.RT.Meta.ReferencePointMeta
+  id: ReferencePointMeta
+  parent: EvilDICOM.CV.RT.Meta
+  children:
+  - EvilDICOM.CV.RT.Meta.ReferencePointMeta.FractionDoseGy
+  - EvilDICOM.CV.RT.Meta.ReferencePointMeta.Id
+  - EvilDICOM.CV.RT.Meta.ReferencePointMeta.Location
+  - EvilDICOM.CV.RT.Meta.ReferencePointMeta.PointType
+  langs:
+  - csharp
+  - vb
+  name: ReferencePointMeta
+  nameWithType: ReferencePointMeta
+  fullName: EvilDICOM.CV.RT.Meta.ReferencePointMeta
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/ReferencePointMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReferencePointMeta
+    path: ../EvilDICOM.CV/RT/Meta/ReferencePointMeta.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public class ReferencePointMeta
+    content.vb: Public Class ReferencePointMeta
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.CV.RT.Meta.ReferencePointMeta.Id
+  commentId: P:EvilDICOM.CV.RT.Meta.ReferencePointMeta.Id
+  id: Id
+  parent: EvilDICOM.CV.RT.Meta.ReferencePointMeta
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: ReferencePointMeta.Id
+  fullName: EvilDICOM.CV.RT.Meta.ReferencePointMeta.Id
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/ReferencePointMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Id
+    path: ../EvilDICOM.CV/RT/Meta/ReferencePointMeta.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: EvilDICOM.CV.RT.Meta.ReferencePointMeta.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.ReferencePointMeta.Location
+  commentId: P:EvilDICOM.CV.RT.Meta.ReferencePointMeta.Location
+  id: Location
+  parent: EvilDICOM.CV.RT.Meta.ReferencePointMeta
+  langs:
+  - csharp
+  - vb
+  name: Location
+  nameWithType: ReferencePointMeta.Location
+  fullName: EvilDICOM.CV.RT.Meta.ReferencePointMeta.Location
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/ReferencePointMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Location
+    path: ../EvilDICOM.CV/RT/Meta/ReferencePointMeta.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public Vector3 Location { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+    content.vb: Public Property Location As Vector3
+  overload: EvilDICOM.CV.RT.Meta.ReferencePointMeta.Location*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.ReferencePointMeta.FractionDoseGy
+  commentId: P:EvilDICOM.CV.RT.Meta.ReferencePointMeta.FractionDoseGy
+  id: FractionDoseGy
+  parent: EvilDICOM.CV.RT.Meta.ReferencePointMeta
+  langs:
+  - csharp
+  - vb
+  name: FractionDoseGy
+  nameWithType: ReferencePointMeta.FractionDoseGy
+  fullName: EvilDICOM.CV.RT.Meta.ReferencePointMeta.FractionDoseGy
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/ReferencePointMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FractionDoseGy
+    path: ../EvilDICOM.CV/RT/Meta/ReferencePointMeta.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double FractionDoseGy { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property FractionDoseGy As Double
+  overload: EvilDICOM.CV.RT.Meta.ReferencePointMeta.FractionDoseGy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.ReferencePointMeta.PointType
+  commentId: P:EvilDICOM.CV.RT.Meta.ReferencePointMeta.PointType
+  id: PointType
+  parent: EvilDICOM.CV.RT.Meta.ReferencePointMeta
+  langs:
+  - csharp
+  - vb
+  name: PointType
+  nameWithType: ReferencePointMeta.PointType
+  fullName: EvilDICOM.CV.RT.Meta.ReferencePointMeta.PointType
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/ReferencePointMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PointType
+    path: ../EvilDICOM.CV/RT/Meta/ReferencePointMeta.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public string PointType { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property PointType As String
+  overload: EvilDICOM.CV.RT.Meta.ReferencePointMeta.PointType*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: EvilDICOM.CV.RT.Meta
+  commentId: N:EvilDICOM.CV.RT.Meta
+  name: EvilDICOM.CV.RT.Meta
+  nameWithType: EvilDICOM.CV.RT.Meta
+  fullName: EvilDICOM.CV.RT.Meta
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.RT.Meta.ReferencePointMeta.Id*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.ReferencePointMeta.Id
+  name: Id
+  nameWithType: ReferencePointMeta.Id
+  fullName: EvilDICOM.CV.RT.Meta.ReferencePointMeta.Id
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.CV.RT.Meta.ReferencePointMeta.Location*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.ReferencePointMeta.Location
+  name: Location
+  nameWithType: ReferencePointMeta.Location
+  fullName: EvilDICOM.CV.RT.Meta.ReferencePointMeta.Location
+- uid: EvilDICOM.Core.Helpers.Vector3
+  commentId: T:EvilDICOM.Core.Helpers.Vector3
+  parent: EvilDICOM.Core.Helpers
+  name: Vector3
+  nameWithType: Vector3
+  fullName: EvilDICOM.Core.Helpers.Vector3
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: EvilDICOM.CV.RT.Meta.ReferencePointMeta.FractionDoseGy*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.ReferencePointMeta.FractionDoseGy
+  name: FractionDoseGy
+  nameWithType: ReferencePointMeta.FractionDoseGy
+  fullName: EvilDICOM.CV.RT.Meta.ReferencePointMeta.FractionDoseGy
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: EvilDICOM.CV.RT.Meta.ReferencePointMeta.PointType*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.ReferencePointMeta.PointType
+  name: PointType
+  nameWithType: ReferencePointMeta.PointType
+  fullName: EvilDICOM.CV.RT.Meta.ReferencePointMeta.PointType

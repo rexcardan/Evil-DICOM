@@ -3,7 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Evil_DICOM.Core.Element
+namespace EvilDICOM.Core.Element
 {
     public class RangeableDateTime : AbstractElement<System.DateTime?>
     {

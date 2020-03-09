@@ -1,0 +1,824 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Modules.Patient
+  commentId: T:EvilDICOM.Core.Modules.Patient
+  id: Patient
+  parent: EvilDICOM.Core.Modules
+  children:
+  - EvilDICOM.Core.Modules.Patient.BirthDate
+  - EvilDICOM.Core.Modules.Patient.Elements
+  - EvilDICOM.Core.Modules.Patient.ID
+  - EvilDICOM.Core.Modules.Patient.Name
+  - EvilDICOM.Core.Modules.Patient.Sex
+  langs:
+  - csharp
+  - vb
+  name: Patient
+  nameWithType: Patient
+  fullName: EvilDICOM.Core.Modules.Patient
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Patient
+    path: ../EvilDICOM/Core/Modules/Patient.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: 'public class Patient : IIOD'
+    content.vb: >-
+      Public Class Patient
+          Implements IIOD
+  inheritance:
+  - System.Object
+  implements:
+  - EvilDICOM.Core.Interfaces.IIOD
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  extensionMethods:
+  - EvilDICOM.Core.Interfaces.IIOD.EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Modules.Patient.Name
+  commentId: P:EvilDICOM.Core.Modules.Patient.Name
+  id: Name
+  parent: EvilDICOM.Core.Modules.Patient
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: Patient.Name
+  fullName: EvilDICOM.Core.Modules.Patient.Name
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Name
+    path: ../EvilDICOM/Core/Modules/Patient.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public string Name { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Name As String
+  overload: EvilDICOM.Core.Modules.Patient.Name*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Modules.Patient.ID
+  commentId: P:EvilDICOM.Core.Modules.Patient.ID
+  id: ID
+  parent: EvilDICOM.Core.Modules.Patient
+  langs:
+  - csharp
+  - vb
+  name: ID
+  nameWithType: Patient.ID
+  fullName: EvilDICOM.Core.Modules.Patient.ID
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ID
+    path: ../EvilDICOM/Core/Modules/Patient.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public string ID { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ID As String
+  overload: EvilDICOM.Core.Modules.Patient.ID*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Modules.Patient.BirthDate
+  commentId: P:EvilDICOM.Core.Modules.Patient.BirthDate
+  id: BirthDate
+  parent: EvilDICOM.Core.Modules.Patient
+  langs:
+  - csharp
+  - vb
+  name: BirthDate
+  nameWithType: Patient.BirthDate
+  fullName: EvilDICOM.Core.Modules.Patient.BirthDate
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: BirthDate
+    path: ../EvilDICOM/Core/Modules/Patient.cs
+    startLine: 31
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public DateTime? BirthDate { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.DateTime}
+    content.vb: Public Property BirthDate As Date?
+  overload: EvilDICOM.Core.Modules.Patient.BirthDate*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Modules.Patient.Sex
+  commentId: P:EvilDICOM.Core.Modules.Patient.Sex
+  id: Sex
+  parent: EvilDICOM.Core.Modules.Patient
+  langs:
+  - csharp
+  - vb
+  name: Sex
+  nameWithType: Patient.Sex
+  fullName: EvilDICOM.Core.Modules.Patient.Sex
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Sex
+    path: ../EvilDICOM/Core/Modules/Patient.cs
+    startLine: 37
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public string Sex { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Sex As String
+  overload: EvilDICOM.Core.Modules.Patient.Sex*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Modules.Patient.Elements
+  commentId: P:EvilDICOM.Core.Modules.Patient.Elements
+  id: Elements
+  parent: EvilDICOM.Core.Modules.Patient
+  langs:
+  - csharp
+  - vb
+  name: Elements
+  nameWithType: Patient.Elements
+  fullName: EvilDICOM.Core.Modules.Patient.Elements
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Modules/Patient.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Elements
+    path: ../EvilDICOM/Core/Modules/Patient.cs
+    startLine: 43
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Modules
+  syntax:
+    content: public List<IDICOMElement> Elements { get; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+    content.vb: Public ReadOnly Property Elements As List(Of IDICOMElement)
+  overload: EvilDICOM.Core.Modules.Patient.Elements*
+  implements:
+  - EvilDICOM.Core.Interfaces.IIOD.Elements
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+references:
+- uid: EvilDICOM.Core.Modules
+  commentId: N:EvilDICOM.Core.Modules
+  name: EvilDICOM.Core.Modules
+  nameWithType: EvilDICOM.Core.Modules
+  fullName: EvilDICOM.Core.Modules
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Interfaces.IIOD
+  commentId: T:EvilDICOM.Core.Interfaces.IIOD
+  parent: EvilDICOM.Core.Interfaces
+  name: IIOD
+  nameWithType: IIOD
+  fullName: EvilDICOM.Core.Interfaces.IIOD
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Interfaces.IIOD.EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+  commentId: M:EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+  parent: EvilDICOM.Network.Extensions.IIODExtensions
+  definition: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+  name: GetLogString()
+  nameWithType: IIODExtensions.GetLogString()
+  fullName: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString()
+  spec.csharp:
+  - uid: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+    name: GetLogString
+    nameWithType: IIODExtensions.GetLogString
+    fullName: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+    name: GetLogString
+    nameWithType: IIODExtensions.GetLogString
+    fullName: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+- uid: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+  commentId: M:EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+  name: GetLogString(IIOD)
+  nameWithType: IIODExtensions.GetLogString(IIOD)
+  fullName: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+    name: GetLogString
+    nameWithType: IIODExtensions.GetLogString
+    fullName: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.Interfaces.IIOD
+    name: IIOD
+    nameWithType: IIOD
+    fullName: EvilDICOM.Core.Interfaces.IIOD
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString(EvilDICOM.Core.Interfaces.IIOD)
+    name: GetLogString
+    nameWithType: IIODExtensions.GetLogString
+    fullName: EvilDICOM.Network.Extensions.IIODExtensions.GetLogString
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.Interfaces.IIOD
+    name: IIOD
+    nameWithType: IIOD
+    fullName: EvilDICOM.Core.Interfaces.IIOD
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Extensions.IIODExtensions
+  commentId: T:EvilDICOM.Network.Extensions.IIODExtensions
+  parent: EvilDICOM.Network.Extensions
+  name: IIODExtensions
+  nameWithType: IIODExtensions
+  fullName: EvilDICOM.Network.Extensions.IIODExtensions
+- uid: EvilDICOM.Network.Extensions
+  commentId: N:EvilDICOM.Network.Extensions
+  name: EvilDICOM.Network.Extensions
+  nameWithType: EvilDICOM.Network.Extensions
+  fullName: EvilDICOM.Network.Extensions
+- uid: EvilDICOM.Core.Modules.Patient.Name*
+  commentId: Overload:EvilDICOM.Core.Modules.Patient.Name
+  name: Name
+  nameWithType: Patient.Name
+  fullName: EvilDICOM.Core.Modules.Patient.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Core.Modules.Patient.ID*
+  commentId: Overload:EvilDICOM.Core.Modules.Patient.ID
+  name: ID
+  nameWithType: Patient.ID
+  fullName: EvilDICOM.Core.Modules.Patient.ID
+- uid: EvilDICOM.Core.Modules.Patient.BirthDate*
+  commentId: Overload:EvilDICOM.Core.Modules.Patient.BirthDate
+  name: BirthDate
+  nameWithType: Patient.BirthDate
+  fullName: EvilDICOM.Core.Modules.Patient.BirthDate
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Modules.Patient.Sex*
+  commentId: Overload:EvilDICOM.Core.Modules.Patient.Sex
+  name: Sex
+  nameWithType: Patient.Sex
+  fullName: EvilDICOM.Core.Modules.Patient.Sex
+- uid: EvilDICOM.Core.Modules.Patient.Elements*
+  commentId: Overload:EvilDICOM.Core.Modules.Patient.Elements
+  name: Elements
+  nameWithType: Patient.Elements
+  fullName: EvilDICOM.Core.Modules.Patient.Elements
+- uid: EvilDICOM.Core.Interfaces.IIOD.Elements
+  commentId: P:EvilDICOM.Core.Interfaces.IIOD.Elements
+  parent: EvilDICOM.Core.Interfaces.IIOD
+  name: Elements
+  nameWithType: IIOD.Elements
+  fullName: EvilDICOM.Core.Interfaces.IIOD.Elements
+- uid: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+  commentId: T:System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<IDICOMElement>
+  nameWithType: List<IDICOMElement>
+  fullName: System.Collections.Generic.List<EvilDICOM.Core.Interfaces.IDICOMElement>
+  nameWithType.vb: List(Of IDICOMElement)
+  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.Core.Interfaces.IDICOMElement)
+  name.vb: List(Of IDICOMElement)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    nameWithType: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    nameWithType: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

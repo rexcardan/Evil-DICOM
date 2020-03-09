@@ -1,0 +1,150 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Interfaces.IPDU
+  commentId: T:EvilDICOM.Network.Interfaces.IPDU
+  id: IPDU
+  parent: EvilDICOM.Network.Interfaces
+  children:
+  - EvilDICOM.Network.Interfaces.IPDU.Type
+  - EvilDICOM.Network.Interfaces.IPDU.Write
+  langs:
+  - csharp
+  - vb
+  name: IPDU
+  nameWithType: IPDU
+  fullName: EvilDICOM.Network.Interfaces.IPDU
+  type: Interface
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Interfaces/IPDU.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IPDU
+    path: ../EvilDICOM/Network/Interfaces/IPDU.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Interfaces
+  syntax:
+    content: public interface IPDU
+    content.vb: Public Interface IPDU
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+- uid: EvilDICOM.Network.Interfaces.IPDU.Type
+  commentId: P:EvilDICOM.Network.Interfaces.IPDU.Type
+  id: Type
+  parent: EvilDICOM.Network.Interfaces.IPDU
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: IPDU.Type
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Type
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Interfaces/IPDU.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Type
+    path: ../EvilDICOM/Network/Interfaces/IPDU.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Interfaces
+  syntax:
+    content: PDUType Type { get; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+    content.vb: ReadOnly Property Type As PDUType
+  overload: EvilDICOM.Network.Interfaces.IPDU.Type*
+  modifiers.csharp:
+  - get
+  modifiers.vb:
+  - ReadOnly
+- uid: EvilDICOM.Network.Interfaces.IPDU.Write
+  commentId: M:EvilDICOM.Network.Interfaces.IPDU.Write
+  id: Write
+  parent: EvilDICOM.Network.Interfaces.IPDU
+  langs:
+  - csharp
+  - vb
+  name: Write()
+  nameWithType: IPDU.Write()
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Write()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Interfaces/IPDU.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Write
+    path: ../EvilDICOM/Network/Interfaces/IPDU.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Interfaces
+  syntax:
+    content: byte[] Write()
+    return:
+      type: System.Byte[]
+    content.vb: Function Write As Byte()
+  overload: EvilDICOM.Network.Interfaces.IPDU.Write*
+references:
+- uid: EvilDICOM.Network.Interfaces
+  commentId: N:EvilDICOM.Network.Interfaces
+  name: EvilDICOM.Network.Interfaces
+  nameWithType: EvilDICOM.Network.Interfaces
+  fullName: EvilDICOM.Network.Interfaces
+- uid: EvilDICOM.Network.Interfaces.IPDU.Type*
+  commentId: Overload:EvilDICOM.Network.Interfaces.IPDU.Type
+  name: Type
+  nameWithType: IPDU.Type
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Type
+- uid: EvilDICOM.Network.Enums.PDUType
+  commentId: T:EvilDICOM.Network.Enums.PDUType
+  parent: EvilDICOM.Network.Enums
+  name: PDUType
+  nameWithType: PDUType
+  fullName: EvilDICOM.Network.Enums.PDUType
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.Interfaces.IPDU.Write*
+  commentId: Overload:EvilDICOM.Network.Interfaces.IPDU.Write
+  name: Write
+  nameWithType: IPDU.Write
+  fullName: EvilDICOM.Network.Interfaces.IPDU.Write
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()

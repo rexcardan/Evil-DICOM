@@ -1,0 +1,690 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.RT.Data.PlanStatus
+  commentId: T:EvilDICOM.RT.Data.PlanStatus
+  id: PlanStatus
+  parent: EvilDICOM.RT.Data
+  children:
+  - EvilDICOM.RT.Data.PlanStatus.COMPLETED
+  - EvilDICOM.RT.Data.PlanStatus.COMPLETED_EARLY
+  - EvilDICOM.RT.Data.PlanStatus.EXT_APPROVED
+  - EvilDICOM.RT.Data.PlanStatus.PLAN_APPROVED
+  - EvilDICOM.RT.Data.PlanStatus.REJECTED
+  - EvilDICOM.RT.Data.PlanStatus.RETIRED
+  - EvilDICOM.RT.Data.PlanStatus.REVIEWED
+  - EvilDICOM.RT.Data.PlanStatus.TREAT_APPROVED
+  - EvilDICOM.RT.Data.PlanStatus.UNAPPROVED
+  - EvilDICOM.RT.Data.PlanStatus.UNPLANNED_TREAT
+  langs:
+  - csharp
+  - vb
+  name: PlanStatus
+  nameWithType: PlanStatus
+  fullName: EvilDICOM.RT.Data.PlanStatus
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/PlanStatus.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PlanStatus
+    path: ../EvilDICOM/RT/Data/PlanStatus.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: public static class PlanStatus
+    content.vb: Public Module PlanStatus
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: EvilDICOM.RT.Data.PlanStatus.UNAPPROVED
+  commentId: F:EvilDICOM.RT.Data.PlanStatus.UNAPPROVED
+  id: UNAPPROVED
+  parent: EvilDICOM.RT.Data.PlanStatus
+  langs:
+  - csharp
+  - vb
+  name: UNAPPROVED
+  nameWithType: PlanStatus.UNAPPROVED
+  fullName: EvilDICOM.RT.Data.PlanStatus.UNAPPROVED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/PlanStatus.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: UNAPPROVED
+    path: ../EvilDICOM/RT/Data/PlanStatus.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: public const string UNAPPROVED = "Unapproved"
+    return:
+      type: System.String
+    content.vb: Public Const UNAPPROVED As String = "Unapproved"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.RT.Data.PlanStatus.UNPLANNED_TREAT
+  commentId: F:EvilDICOM.RT.Data.PlanStatus.UNPLANNED_TREAT
+  id: UNPLANNED_TREAT
+  parent: EvilDICOM.RT.Data.PlanStatus
+  langs:
+  - csharp
+  - vb
+  name: UNPLANNED_TREAT
+  nameWithType: PlanStatus.UNPLANNED_TREAT
+  fullName: EvilDICOM.RT.Data.PlanStatus.UNPLANNED_TREAT
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/PlanStatus.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: UNPLANNED_TREAT
+    path: ../EvilDICOM/RT/Data/PlanStatus.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: public const string UNPLANNED_TREAT = "UnplannedTreat"
+    return:
+      type: System.String
+    content.vb: Public Const UNPLANNED_TREAT As String = "UnplannedTreat"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.RT.Data.PlanStatus.PLAN_APPROVED
+  commentId: F:EvilDICOM.RT.Data.PlanStatus.PLAN_APPROVED
+  id: PLAN_APPROVED
+  parent: EvilDICOM.RT.Data.PlanStatus
+  langs:
+  - csharp
+  - vb
+  name: PLAN_APPROVED
+  nameWithType: PlanStatus.PLAN_APPROVED
+  fullName: EvilDICOM.RT.Data.PlanStatus.PLAN_APPROVED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/PlanStatus.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PLAN_APPROVED
+    path: ../EvilDICOM/RT/Data/PlanStatus.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: public const string PLAN_APPROVED = "PlanApproval"
+    return:
+      type: System.String
+    content.vb: Public Const PLAN_APPROVED As String = "PlanApproval"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.RT.Data.PlanStatus.TREAT_APPROVED
+  commentId: F:EvilDICOM.RT.Data.PlanStatus.TREAT_APPROVED
+  id: TREAT_APPROVED
+  parent: EvilDICOM.RT.Data.PlanStatus
+  langs:
+  - csharp
+  - vb
+  name: TREAT_APPROVED
+  nameWithType: PlanStatus.TREAT_APPROVED
+  fullName: EvilDICOM.RT.Data.PlanStatus.TREAT_APPROVED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/PlanStatus.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: TREAT_APPROVED
+    path: ../EvilDICOM/RT/Data/PlanStatus.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: public const string TREAT_APPROVED = "TreatApproval"
+    return:
+      type: System.String
+    content.vb: Public Const TREAT_APPROVED As String = "TreatApproval"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.RT.Data.PlanStatus.EXT_APPROVED
+  commentId: F:EvilDICOM.RT.Data.PlanStatus.EXT_APPROVED
+  id: EXT_APPROVED
+  parent: EvilDICOM.RT.Data.PlanStatus
+  langs:
+  - csharp
+  - vb
+  name: EXT_APPROVED
+  nameWithType: PlanStatus.EXT_APPROVED
+  fullName: EvilDICOM.RT.Data.PlanStatus.EXT_APPROVED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/PlanStatus.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: EXT_APPROVED
+    path: ../EvilDICOM/RT/Data/PlanStatus.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: public const string EXT_APPROVED = "ExternalApproval"
+    return:
+      type: System.String
+    content.vb: Public Const EXT_APPROVED As String = "ExternalApproval"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.RT.Data.PlanStatus.RETIRED
+  commentId: F:EvilDICOM.RT.Data.PlanStatus.RETIRED
+  id: RETIRED
+  parent: EvilDICOM.RT.Data.PlanStatus
+  langs:
+  - csharp
+  - vb
+  name: RETIRED
+  nameWithType: PlanStatus.RETIRED
+  fullName: EvilDICOM.RT.Data.PlanStatus.RETIRED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/PlanStatus.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RETIRED
+    path: ../EvilDICOM/RT/Data/PlanStatus.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: public const string RETIRED = "Retired"
+    return:
+      type: System.String
+    content.vb: Public Const RETIRED As String = "Retired"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.RT.Data.PlanStatus.REVIEWED
+  commentId: F:EvilDICOM.RT.Data.PlanStatus.REVIEWED
+  id: REVIEWED
+  parent: EvilDICOM.RT.Data.PlanStatus
+  langs:
+  - csharp
+  - vb
+  name: REVIEWED
+  nameWithType: PlanStatus.REVIEWED
+  fullName: EvilDICOM.RT.Data.PlanStatus.REVIEWED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/PlanStatus.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: REVIEWED
+    path: ../EvilDICOM/RT/Data/PlanStatus.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: public const string REVIEWED = "Reviewed"
+    return:
+      type: System.String
+    content.vb: Public Const REVIEWED As String = "Reviewed"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.RT.Data.PlanStatus.REJECTED
+  commentId: F:EvilDICOM.RT.Data.PlanStatus.REJECTED
+  id: REJECTED
+  parent: EvilDICOM.RT.Data.PlanStatus
+  langs:
+  - csharp
+  - vb
+  name: REJECTED
+  nameWithType: PlanStatus.REJECTED
+  fullName: EvilDICOM.RT.Data.PlanStatus.REJECTED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/PlanStatus.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: REJECTED
+    path: ../EvilDICOM/RT/Data/PlanStatus.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: public const string REJECTED = "Rejected"
+    return:
+      type: System.String
+    content.vb: Public Const REJECTED As String = "Rejected"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.RT.Data.PlanStatus.COMPLETED_EARLY
+  commentId: F:EvilDICOM.RT.Data.PlanStatus.COMPLETED_EARLY
+  id: COMPLETED_EARLY
+  parent: EvilDICOM.RT.Data.PlanStatus
+  langs:
+  - csharp
+  - vb
+  name: COMPLETED_EARLY
+  nameWithType: PlanStatus.COMPLETED_EARLY
+  fullName: EvilDICOM.RT.Data.PlanStatus.COMPLETED_EARLY
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/PlanStatus.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: COMPLETED_EARLY
+    path: ../EvilDICOM/RT/Data/PlanStatus.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: public const string COMPLETED_EARLY = "CompletedEarly"
+    return:
+      type: System.String
+    content.vb: Public Const COMPLETED_EARLY As String = "CompletedEarly"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.RT.Data.PlanStatus.COMPLETED
+  commentId: F:EvilDICOM.RT.Data.PlanStatus.COMPLETED
+  id: COMPLETED
+  parent: EvilDICOM.RT.Data.PlanStatus
+  langs:
+  - csharp
+  - vb
+  name: COMPLETED
+  nameWithType: PlanStatus.COMPLETED
+  fullName: EvilDICOM.RT.Data.PlanStatus.COMPLETED
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/PlanStatus.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: COMPLETED
+    path: ../EvilDICOM/RT/Data/PlanStatus.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: public const string COMPLETED = "Completed"
+    return:
+      type: System.String
+    content.vb: Public Const COMPLETED As String = "Completed"
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.RT.Data
+  commentId: N:EvilDICOM.RT.Data
+  name: EvilDICOM.RT.Data
+  nameWithType: EvilDICOM.RT.Data
+  fullName: EvilDICOM.RT.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 
-namespace Evil_DICOM.Core.Helpers
+namespace EvilDICOM.Core.Helpers
 {
     public class Tryer
     {

@@ -1,0 +1,477 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.RT.Data.DVH.DVHPoint
+  commentId: T:EvilDICOM.RT.Data.DVH.DVHPoint
+  id: DVHPoint
+  parent: EvilDICOM.RT.Data.DVH
+  children:
+  - EvilDICOM.RT.Data.DVH.DVHPoint.#ctor(EvilDICOM.RT.Data.DVH.Dose,EvilDICOM.RT.Data.DVH.Volume)
+  - EvilDICOM.RT.Data.DVH.DVHPoint.Dose
+  - EvilDICOM.RT.Data.DVH.DVHPoint.Volume
+  langs:
+  - csharp
+  - vb
+  name: DVHPoint
+  nameWithType: DVHPoint
+  fullName: EvilDICOM.RT.Data.DVH.DVHPoint
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/DVH/DVHPoint.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DVHPoint
+    path: ../EvilDICOM/RT/Data/DVH/DVHPoint.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data.DVH
+  syntax:
+    content: public class DVHPoint
+    content.vb: Public Class DVHPoint
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.RT.Data.DVH.DVHPoint.#ctor(EvilDICOM.RT.Data.DVH.Dose,EvilDICOM.RT.Data.DVH.Volume)
+  commentId: M:EvilDICOM.RT.Data.DVH.DVHPoint.#ctor(EvilDICOM.RT.Data.DVH.Dose,EvilDICOM.RT.Data.DVH.Volume)
+  id: '#ctor(EvilDICOM.RT.Data.DVH.Dose,EvilDICOM.RT.Data.DVH.Volume)'
+  parent: EvilDICOM.RT.Data.DVH.DVHPoint
+  langs:
+  - csharp
+  - vb
+  name: DVHPoint(Dose, Volume)
+  nameWithType: DVHPoint.DVHPoint(Dose, Volume)
+  fullName: EvilDICOM.RT.Data.DVH.DVHPoint.DVHPoint(EvilDICOM.RT.Data.DVH.Dose, EvilDICOM.RT.Data.DVH.Volume)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/DVH/DVHPoint.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/RT/Data/DVH/DVHPoint.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data.DVH
+  syntax:
+    content: public DVHPoint(Dose dose, Volume volume)
+    parameters:
+    - id: dose
+      type: EvilDICOM.RT.Data.DVH.Dose
+    - id: volume
+      type: EvilDICOM.RT.Data.DVH.Volume
+    content.vb: Public Sub New(dose As Dose, volume As Volume)
+  overload: EvilDICOM.RT.Data.DVH.DVHPoint.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.Data.DVH.DVHPoint.Dose
+  commentId: P:EvilDICOM.RT.Data.DVH.DVHPoint.Dose
+  id: Dose
+  parent: EvilDICOM.RT.Data.DVH.DVHPoint
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: DVHPoint.Dose
+  fullName: EvilDICOM.RT.Data.DVH.DVHPoint.Dose
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/DVH/DVHPoint.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Dose
+    path: ../EvilDICOM/RT/Data/DVH/DVHPoint.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data.DVH
+  syntax:
+    content: public Dose Dose { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.RT.Data.DVH.Dose
+    content.vb: Public Property Dose As Dose
+  overload: EvilDICOM.RT.Data.DVH.DVHPoint.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.Data.DVH.DVHPoint.Volume
+  commentId: P:EvilDICOM.RT.Data.DVH.DVHPoint.Volume
+  id: Volume
+  parent: EvilDICOM.RT.Data.DVH.DVHPoint
+  langs:
+  - csharp
+  - vb
+  name: Volume
+  nameWithType: DVHPoint.Volume
+  fullName: EvilDICOM.RT.Data.DVH.DVHPoint.Volume
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/DVH/DVHPoint.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Volume
+    path: ../EvilDICOM/RT/Data/DVH/DVHPoint.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data.DVH
+  syntax:
+    content: public Volume Volume { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.RT.Data.DVH.Volume
+    content.vb: Public Property Volume As Volume
+  overload: EvilDICOM.RT.Data.DVH.DVHPoint.Volume*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.RT.Data.DVH
+  commentId: N:EvilDICOM.RT.Data.DVH
+  name: EvilDICOM.RT.Data.DVH
+  nameWithType: EvilDICOM.RT.Data.DVH
+  fullName: EvilDICOM.RT.Data.DVH
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.RT.Data.DVH.DVHPoint.#ctor*
+  commentId: Overload:EvilDICOM.RT.Data.DVH.DVHPoint.#ctor
+  name: DVHPoint
+  nameWithType: DVHPoint.DVHPoint
+  fullName: EvilDICOM.RT.Data.DVH.DVHPoint.DVHPoint
+- uid: EvilDICOM.RT.Data.DVH.Dose
+  commentId: T:EvilDICOM.RT.Data.DVH.Dose
+  parent: EvilDICOM.RT.Data.DVH
+  name: Dose
+  nameWithType: Dose
+  fullName: EvilDICOM.RT.Data.DVH.Dose
+- uid: EvilDICOM.RT.Data.DVH.Volume
+  commentId: T:EvilDICOM.RT.Data.DVH.Volume
+  parent: EvilDICOM.RT.Data.DVH
+  name: Volume
+  nameWithType: Volume
+  fullName: EvilDICOM.RT.Data.DVH.Volume
+- uid: EvilDICOM.RT.Data.DVH.DVHPoint.Dose*
+  commentId: Overload:EvilDICOM.RT.Data.DVH.DVHPoint.Dose
+  name: Dose
+  nameWithType: DVHPoint.Dose
+  fullName: EvilDICOM.RT.Data.DVH.DVHPoint.Dose
+- uid: EvilDICOM.RT.Data.DVH.DVHPoint.Volume*
+  commentId: Overload:EvilDICOM.RT.Data.DVH.DVHPoint.Volume
+  name: Volume
+  nameWithType: DVHPoint.Volume
+  fullName: EvilDICOM.RT.Data.DVH.DVHPoint.Volume

@@ -1,0 +1,22 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Logging
+  commentId: N:EvilDICOM.Core.Logging
+  id: EvilDICOM.Core.Logging
+  children:
+  - EvilDICOM.Core.Logging.EvilLogger
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Core.Logging
+  nameWithType: EvilDICOM.Core.Logging
+  fullName: EvilDICOM.Core.Logging
+  type: Namespace
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Core.Logging.EvilLogger
+  commentId: T:EvilDICOM.Core.Logging.EvilLogger
+  name: EvilLogger
+  nameWithType: EvilLogger
+  fullName: EvilDICOM.Core.Logging.EvilLogger

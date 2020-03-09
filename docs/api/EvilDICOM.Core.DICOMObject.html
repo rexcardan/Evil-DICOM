@@ -1,0 +1,2527 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DICOMObject
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DICOMObject
+   ">
+    <meta name="generator" content="docfx 2.50.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L28" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <h1 id="" data-uid="EvilDICOM.Core.DICOMObject">Class DICOMObject
+              </h1>
+              <div class="markdown level0 summary"><p>The DICOM object is a container for DICOM elements. It contains methods for finding elements easily from within the
+structure.</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- API Ad -->
+              <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8634681343664488" data-ad-slot="2969171149"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">DICOMObject</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:EvilDICOM.Core</h6>
+              <h6><strong>Assembly</strong>:EvilDICOM.dll</h6>
+              <h5 id="_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class DICOMObject</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L38">View Source</a>
+              </span>
+              <h4 id="constructors" data-uid="EvilDICOM.Core.DICOMObject.#ctor">DICOMObject()</h4>
+              <div class="markdown level1 summary"><p>Constructor no parameters</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DICOMObject()</code></pre>
+              </div>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L80">View Source</a>
+              </span>
+              <h4 id="constructors" data-uid="EvilDICOM.Core.DICOMObject.#ctor(EvilDICOM.Core.Interfaces.IDICOMElement[])">DICOMObject(IDICOMElement[])</h4>
+              <div class="markdown level1 summary"><p>Contructor with elements</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DICOMObject(params IDICOMElement[] elements)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a>[]</td>
+                    <td><em>elements</em></td>
+                    <td><p>a param array of elements to be included in the object</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L47">View Source</a>
+              </span>
+              <h4 id="constructors" data-uid="EvilDICOM.Core.DICOMObject.#ctor(System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement})">DICOMObject(List&lt;IDICOMElement&gt;)</h4>
+              <div class="markdown level1 summary"><p>Contructor with elements</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DICOMObject(List&lt;IDICOMElement&gt; elements)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a>&gt;</td>
+                    <td><em>elements</em></td>
+                    <td><p>a list of elements to be included in the object</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="properties">Properties
+              </h3>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L104">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Core.DICOMObject.AllElements">AllElements</h4>
+              <div class="markdown level1 summary"><p>The list of all DICOM elements at every level in the DICOM structure (includes sub-elements of sequences)</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;IDICOMElement&gt; AllElements { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L90">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Core.DICOMObject.Elements">Elements</h4>
+              <div class="markdown level1 summary"><p>The list of first level DICOM elements inside this DICOM object</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;IDICOMElement&gt; Elements { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L609">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Core.DICOMObject.SOPClass">SOPClass</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public SOPClass SOPClass { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Enums.SOPClass.html">SOPClass</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L116">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Add(EvilDICOM.Core.Interfaces.IDICOMElement)">Add(IDICOMElement)</h4>
+              <div class="markdown level1 summary"><p>Adds an element to the DICOM object</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Add(IDICOMElement el)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a></td>
+                    <td><em>el</em></td>
+                    <td><p>a DICOM element to be added</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L127">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.AddRange(System.Collections.Generic.IEnumerable{EvilDICOM.Core.Interfaces.IDICOMElement})">AddRange(IEnumerable&lt;IDICOMElement&gt;)</h4>
+              <div class="markdown level1 summary"><p>Adds elements to the DICOM object</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void AddRange(IEnumerable&lt;IDICOMElement&gt; els)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a>&gt;</td>
+                    <td><em>els</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L695">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Clone">Clone()</h4>
+              <div class="markdown level1 summary"><p>Creates a clone of this DICOM object</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DICOMObject Clone()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.DICOMObject.html">DICOMObject</a></td>
+                    <td><p>a new copied DICOM object</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L684">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Equals(System.Object)">Equals(Object)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override bool Equals(object obj)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>obj</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.Equals(System.Object)</span></div>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L269">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Element.Tag)">FindAll(Tag)</h4>
+              <div class="markdown level1 summary"><p>Finds all DICOM elements that match a certain tag</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;IDICOMElement&gt; FindAll(Tag tag)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.Tag.html">Tag</a></td>
+                    <td><em>tag</em></td>
+                    <td><p>the tag to find</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a>&gt;</td>
+                    <td><p>a list of all elements that meet the search criteria</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L320">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Element.Tag[])">FindAll(Tag[])</h4>
+              <div class="markdown level1 summary"><p>Finds all DICOM elements that are embedded in the DICOM structure in some particular location. This location
+is defined by descending tags from the outer most elements to the element. It is not necessary to include every
+tag in the descending &quot;treelike&quot; structure. Branches can be skipped.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;IDICOMElement&gt; FindAll(Tag[] descendingTags)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.Tag.html">Tag</a>[]</td>
+                    <td><em>descendingTags</em></td>
+                    <td><p>a tag array containing in order the tags from the outer most elements to the element being
+searched for</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a>&gt;</td>
+                    <td><p>a list of all elements that meet the search criteria</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L198">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.FindAll(EvilDICOM.Core.Enums.VR)">FindAll(VR)</h4>
+              <div class="markdown level1 summary"><p>Finds all DICOM elements that match a VR type</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;IDICOMElement&gt; FindAll(VR vrToFind)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Enums.VR.html">VR</a></td>
+                    <td><em>vrToFind</em></td>
+                    <td><p>the VR type to find</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a>&gt;</td>
+                    <td><p>a list of all elements that meet the search criteria</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L257">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.FindAll(System.String)">FindAll(String)</h4>
+              <div class="markdown level1 summary"><p>Finds all DICOM elements that match a certain tag</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;IDICOMElement&gt; FindAll(string tag)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tag</em></td>
+                    <td><p>the tag to find</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a>&gt;</td>
+                    <td><p>a list of all elements that meet the search criteria</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L284">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.FindAll(System.String[])">FindAll(String[])</h4>
+              <div class="markdown level1 summary"><p>Finds all DICOM elements that are embedded in the DICOM structure in some particular location. This location
+is defined by descending tags from the outer most elements to the element. It is not necessary to include every
+tag in the descending &quot;treelike&quot; structure. Branches can be skipped.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;IDICOMElement&gt; FindAll(string[] descendingTags)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span>[]</td>
+                    <td><em>descendingTags</em></td>
+                    <td><p>a string array containing in order the tags from the outer most elements to the element
+being searched for</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a>&gt;</td>
+                    <td><p>a list of all elements that meet the search criteria</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L243">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.FindAll``1">FindAll&lt;T&gt;()</h4>
+              <div class="markdown level1 summary"><p>Finds all DICOM elements that match an element type</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;T&gt; FindAll&lt;T&gt;()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
+                    <td><p>a list of all elements that are strongly typed</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td><p>the DICOM element class that is being filtered and returned</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L342">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.FindFirst(EvilDICOM.Core.Element.Tag)">FindFirst(Tag)</h4>
+              <div class="markdown level1 summary"><p>Finds the first element in the entire DICOM structure that has a certain tag</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IDICOMElement FindFirst(Tag toFind)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.Tag.html">Tag</a></td>
+                    <td><em>toFind</em></td>
+                    <td><p>the tag to be searched</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a></td>
+                    <td><p>one single DICOM element that is first occurence of the tag in the structure</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L331">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.FindFirst(System.String)">FindFirst(String)</h4>
+              <div class="markdown level1 summary"><p>Finds the first element in the entire DICOM structure that has a certain tag</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public IDICOMElement FindFirst(string toFind)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>toFind</em></td>
+                    <td><p>the tag to be searched</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a></td>
+                    <td><p>one single DICOM element that is first occurence of the tag in the structure</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L599">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.GetBytes(EvilDICOM.Core.IO.Writing.DICOMIOSettings)">GetBytes(DICOMIOSettings)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public byte[] GetBytes(DICOMIOSettings settings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.IO.Writing.DICOMIOSettings.html">DICOMIOSettings</a></td>
+                    <td><em>settings</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Byte</span>[]</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L718">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.GetHashCode">GetHashCode()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override int GetHashCode()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Int32</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.GetHashCode()</span></div>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L460">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.GetSelector">GetSelector()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DICOMSelector GetSelector()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Selection.DICOMSelector.html">DICOMSelector</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L210">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.GetUnknownTagAs``1(EvilDICOM.Core.Element.Tag)">GetUnknownTagAs&lt;T&gt;(Tag)</h4>
+              <div class="markdown level1 summary"><p>Returns elements of a certain tag that are of the unknown VR type (because they are not
+in the DICOM dictionary) and reads them as the specified VR type</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;T&gt; GetUnknownTagAs&lt;T&gt;(Tag toFind)
+    where T : IDICOMElement</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.Tag.html">Tag</a></td>
+                    <td><em>toFind</em></td>
+                    <td><p>the tag of this element</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
+                    <td><p>the unknown elements strongly typed to T</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td><p>the VR type to read as</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L233">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.GetUnknownTagAs``1(System.String)">GetUnknownTagAs&lt;T&gt;(String)</h4>
+              <div class="markdown level1 summary"><p>Returns elements of a certain tag that are of the unknown VR type (because they are not
+in the DICOM dictionary) and reads them as the specified VR type</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public List&lt;T&gt; GetUnknownTagAs&lt;T&gt;(string toFind)
+    where T : IDICOMElement</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>toFind</em></td>
+                    <td><p>the tag of this element</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
+                    <td><p>the unknown elements strongly typed to T</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td><p>the VR type to read as</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L578">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Read(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)">Read(Byte[], TransferSyntax)</h4>
+              <div class="markdown level1 summary"><p>Reads a DICOM file from a byte array</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static DICOMObject Read(byte[] file, TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Byte</span>[]</td>
+                    <td><em>file</em></td>
+                    <td><p>the bytes of the DICOM file</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Enums.TransferSyntax.html">TransferSyntax</a></td>
+                    <td><em>trySyntax</em></td>
+                    <td><p>the transfer syntax to use in case there is no metadata explicitly included</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.DICOMObject.html">DICOMObject</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L549">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Read(System.String,EvilDICOM.Core.Enums.TransferSyntax)">Read(String, TransferSyntax)</h4>
+              <div class="markdown level1 summary"><p>Reads a DICOM file from a path</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static DICOMObject Read(string filePath, TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>filePath</em></td>
+                    <td><p>the path to the file</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Enums.TransferSyntax.html">TransferSyntax</a></td>
+                    <td><em>trySyntax</em></td>
+                    <td><p>the transfer syntax to use in case there is no metadata explicitly included</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.DICOMObject.html">DICOMObject</a></td>
+                    <td><p>the DICOM Object</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="methods_examples">Examples</h5>
+              <pre><code>var dcm = DICOMObject.Read(&quot;mydcm.dcm&quot;);</code></pre>
+
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L566">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReadAsync(System.String,EvilDICOM.Core.Enums.TransferSyntax)">ReadAsync(String, TransferSyntax)</h4>
+              <div class="markdown level1 summary"><p>Reads a DICOM file from a path</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Task&lt;DICOMObject&gt; ReadAsync(string filePath, TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>filePath</em></td>
+                    <td><p>the path to the file</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Enums.TransferSyntax.html">TransferSyntax</a></td>
+                    <td><em>trySyntax</em></td>
+                    <td><p>the transfer syntax to use in case there is no metadata explicitly included</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Threading.Tasks.Task</span>&lt;<a class="xref" href="EvilDICOM.Core.DICOMObject.html">DICOMObject</a>&gt;</td>
+                    <td><p>the DICOM Object</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 id="methods_examples">Examples</h5>
+              <pre><code>var dcm = DICOMObject.Read(&quot;mydcm.dcm&quot;);</code></pre>
+
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L388">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Remove(EvilDICOM.Core.Element.Tag)">Remove(Tag)</h4>
+              <div class="markdown level1 summary"><p>Removes the element with the tag from the DICOM object</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Remove(Tag tag)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.Tag.html">Tag</a></td>
+                    <td><em>tag</em></td>
+                    <td><p>the tag of the element to be removed</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L351">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Remove(System.String)">Remove(String)</h4>
+              <div class="markdown level1 summary"><p>Removes the element with the tag from the DICOM object</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Remove(string tag)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>tag</em></td>
+                    <td><p>the tag string in the form of GGGGEEEE to be removed</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L397">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.RemoveRange(System.Collections.Generic.IEnumerable{EvilDICOM.Core.Element.Tag})">RemoveRange(IEnumerable&lt;Tag&gt;)</h4>
+              <div class="markdown level1 summary"><p>Removes the element with the tag from the DICOM object</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void RemoveRange(IEnumerable&lt;Tag&gt; tags)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<a class="xref" href="EvilDICOM.Core.Element.Tag.html">Tag</a>&gt;</td>
+                    <td><em>tags</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L368">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.RemoveRange(System.Collections.Generic.IEnumerable{System.String})">RemoveRange(IEnumerable&lt;String&gt;)</h4>
+              <div class="markdown level1 summary"><p>Removes the element with the tag from the DICOM object</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void RemoveRange(IEnumerable&lt;string&gt; tags)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.IEnumerable</span>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><em>tags</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L642">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject})">Replace(AbstractElement&lt;DICOMObject&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Replace(AbstractElement&lt;DICOMObject&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<a class="xref" href="EvilDICOM.Core.DICOMObject.html">DICOMObject</a>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L647">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.Element.Tag})">Replace(AbstractElement&lt;Tag&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Replace(AbstractElement&lt;Tag&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<a class="xref" href="EvilDICOM.Core.Element.Tag.html">Tag</a>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L672">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Byte})">Replace(AbstractElement&lt;Byte&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Replace(AbstractElement&lt;byte&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Byte</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L632">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Double})">Replace(AbstractElement&lt;Double&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Replace(AbstractElement&lt;double&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Double</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L667">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Int16})">Replace(AbstractElement&lt;Int16&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Replace(AbstractElement&lt;short&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Int16</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L657">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Int32})">Replace(AbstractElement&lt;Int32&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Replace(AbstractElement&lt;int&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L677">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}})">Replace(AbstractElement&lt;Nullable&lt;DateTime&gt;&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Replace(AbstractElement&lt;DateTime?&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L627">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.Single})">Replace(AbstractElement&lt;Single&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Replace(AbstractElement&lt;float&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Single</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L637">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.String})">Replace(AbstractElement&lt;String&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Replace(AbstractElement&lt;string&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L662">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.UInt16})">Replace(AbstractElement&lt;UInt16&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Replace(AbstractElement&lt;ushort&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.UInt16</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L652">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Element.AbstractElement{System.UInt32})">Replace(AbstractElement&lt;UInt32&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Replace(AbstractElement&lt;uint&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.UInt32</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L428">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Replace(EvilDICOM.Core.Interfaces.IDICOMElement)">Replace(IDICOMElement)</h4>
+              <div class="markdown level1 summary"><p>Replaces the underlying DICOM element with input DICOM element of the same tag</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool Replace(IDICOMElement el)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Interfaces.IDICOMElement.html">IDICOMElement</a></td>
+                    <td><em>el</em></td>
+                    <td><p>the new DICOM element</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>whether or not the operation was successful</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L484">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.DICOMObject})">ReplaceOrAdd(AbstractElement&lt;DICOMObject&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd(AbstractElement&lt;DICOMObject&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<a class="xref" href="EvilDICOM.Core.DICOMObject.html">DICOMObject</a>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L489">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{EvilDICOM.Core.Element.Tag})">ReplaceOrAdd(AbstractElement&lt;Tag&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd(AbstractElement&lt;Tag&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<a class="xref" href="EvilDICOM.Core.Element.Tag.html">Tag</a>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L524">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Byte})">ReplaceOrAdd(AbstractElement&lt;Byte&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd(AbstractElement&lt;byte&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Byte</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L474">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Double})">ReplaceOrAdd(AbstractElement&lt;Double&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd(AbstractElement&lt;double&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Double</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L509">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Int16})">ReplaceOrAdd(AbstractElement&lt;Int16&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd(AbstractElement&lt;short&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Int16</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L499">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Int32})">ReplaceOrAdd(AbstractElement&lt;Int32&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd(AbstractElement&lt;int&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Int32</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L529">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.DateTime}})">ReplaceOrAdd(AbstractElement&lt;Nullable&lt;DateTime&gt;&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd(AbstractElement&lt;DateTime?&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.DateTime</span>&gt;&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L514">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.Double}})">ReplaceOrAdd(AbstractElement&lt;Nullable&lt;Double&gt;&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd(AbstractElement&lt;double?&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Double</span>&gt;&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L519">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Nullable{System.Single}})">ReplaceOrAdd(AbstractElement&lt;Nullable&lt;Single&gt;&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd(AbstractElement&lt;float?&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Nullable</span>&lt;<span class="xref">System.Single</span>&gt;&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L469">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.Single})">ReplaceOrAdd(AbstractElement&lt;Single&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd(AbstractElement&lt;float&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.Single</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L479">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.String})">ReplaceOrAdd(AbstractElement&lt;String&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd(AbstractElement&lt;string&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.String</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L504">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.UInt16})">ReplaceOrAdd(AbstractElement&lt;UInt16&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd(AbstractElement&lt;ushort&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.UInt16</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L494">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd(EvilDICOM.Core.Element.AbstractElement{System.UInt32})">ReplaceOrAdd(AbstractElement&lt;UInt32&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd(AbstractElement&lt;uint&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;<span class="xref">System.UInt32</span>&gt;</td>
+                    <td><em>element</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L447">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ReplaceOrAdd``1(EvilDICOM.Core.Element.AbstractElement{``0})">ReplaceOrAdd&lt;T&gt;(AbstractElement&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"><p>Replaces a current instance of the DICOM element in the DICOM object. If the object does not exist, this method
+will add it to the object.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void ReplaceOrAdd&lt;T&gt;(AbstractElement&lt;T&gt; element)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.AbstractElement-1.html">AbstractElement</a>&lt;T&gt;</td>
+                    <td><em>element</em></td>
+                    <td><p>the instance of the element</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td><p>the type of the data the element holds (eg. double[], int, DataTime, etc)</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L453">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.ToString">ToString()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public override string ToString()</code></pre>
+              </div>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="overrides">Overrides</h5>
+              <div><span class="xref">System.Object.ToString()</span></div>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L142">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.TryGetDataValue``1(EvilDICOM.Core.Element.Tag,System.Object)">TryGetDataValue&lt;T&gt;(Tag, Object)</h4>
+              <div class="markdown level1 summary"><p>Searches for a specific element. If it is found, it returns the data from the element. Otherwise,
+it will return a provided default value for the element.</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DICOMData&lt;T&gt; TryGetDataValue&lt;T&gt;(Tag tagToFind, object defaultValueIfNull)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.Tag.html">Tag</a></td>
+                    <td><em>tagToFind</em></td>
+                    <td><p>the tag of the element containing the data</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Object</span></td>
+                    <td><em>defaultValueIfNull</em></td>
+                    <td><p>the default value to return if the element is not found</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.DICOMData-1.html">DICOMData</a>&lt;T&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td><p>the type of data to return</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L163">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.TrySetDataValue``1(EvilDICOM.Core.Element.Tag,``0)">TrySetDataValue&lt;T&gt;(Tag, T)</h4>
+              <div class="markdown level1 summary"><p>Searches for a specific element (first instance). If it is found, it sets the data for this element and returns
+true, otherwise returns false;</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool TrySetDataValue&lt;T&gt;(Tag tagToFind, T data)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.Tag.html">Tag</a></td>
+                    <td><em>tagToFind</em></td>
+                    <td><p>the tag of the element containing the data</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">T</span></td>
+                    <td><em>data</em></td>
+                    <td><p>the data to set in this element</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>a boolean indicating whether or not the operation was successful</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td><p>the type of data to return</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L182">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.TrySetDataValue``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})">TrySetDataValue&lt;T&gt;(Tag, List&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"><p>Searches for a specific element (first instance). If it is found, it sets the data for this element and returns
+true, otherwise returns false;</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public bool TrySetDataValue&lt;T&gt;(Tag tagToFind, List&lt;T&gt; data)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Element.Tag.html">Tag</a></td>
+                    <td><em>tagToFind</em></td>
+                    <td><p>the tag of the element containing the data</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><span class="xref">System.Collections.Generic.List</span>&lt;T&gt;</td>
+                    <td><em>data</em></td>
+                    <td><p>the data to set in this element</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Boolean</span></td>
+                    <td><p>a boolean indicating whether or not the operation was successful</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td><p>the type of data to return</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/DICOMObject.cs/#L589">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.DICOMObject.Write(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)">Write(String, DICOMIOSettings)</h4>
+              <div class="markdown level1 summary"><p>Writes DICOM object to a file</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Write(string file, DICOMIOSettings settings = null)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.String</span></td>
+                    <td><em>file</em></td>
+                    <td><p>the path to write</p>
+</td>
+                  </tr>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.IO.Writing.DICOMIOSettings.html">DICOMIOSettings</a></td>
+                    <td><em>settings</em></td>
+                    <td><p>the DICOM settings to write (endianness, and indefinite sequences)</p>
+</td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="extensionmethods">Extension Methods</h3>
+              <div>
+                  <a class="xref" href="EvilDICOM.Core.Extensions.DICOMObjectExtensions.html">DICOMObjectExtensions.ToXMLString()</a>
+              </div>
+              <div>
+                  <a class="xref" href="EvilDICOM.Core.Extensions.DICOMObjectExtensions.html">DICOMObjectExtensions.RemoveMetaHeader()</a>
+              </div>
+              <div>
+                  <a class="xref" href="EvilDICOM.Core.Extensions.DICOMObjectExtensions.html">DICOMObjectExtensions.GetPixelStream()</a>
+              </div>
+              <div>
+                  <a class="xref" href="EvilDICOM.Core.Extensions.DICOMObjectExtensions.html">DICOMObjectExtensions.SetPixelStream(IEnumerable&lt;Byte&gt;)</a>
+              </div>
+              <div>
+                  <a class="xref" href="EvilDICOM.RT.Extensions.DICOMRTObjectExtensions.html">DICOMRTObjectExtensions.IsDRR()</a>
+              </div>
+              <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- API Ad -->
+              <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8634681343664488" data-ad-slot="2969171149"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

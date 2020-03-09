@@ -1,0 +1,55 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.SCUOps
+  commentId: N:EvilDICOM.Network.SCUOps
+  id: EvilDICOM.Network.SCUOps
+  children:
+  - EvilDICOM.Network.SCUOps.CFinder
+  - EvilDICOM.Network.SCUOps.CMover
+  - EvilDICOM.Network.SCUOps.CMover.ProgressUpdatedHandler
+  - EvilDICOM.Network.SCUOps.CStorer
+  - EvilDICOM.Network.SCUOps.StorageVerifier
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Network.SCUOps
+  nameWithType: EvilDICOM.Network.SCUOps
+  fullName: EvilDICOM.Network.SCUOps
+  type: Namespace
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Network.SCUOps.CFinder
+  commentId: T:EvilDICOM.Network.SCUOps.CFinder
+  parent: EvilDICOM.Network.SCUOps
+  name: CFinder
+  nameWithType: CFinder
+  fullName: EvilDICOM.Network.SCUOps.CFinder
+- uid: EvilDICOM.Network.SCUOps.CMover
+  commentId: T:EvilDICOM.Network.SCUOps.CMover
+  parent: EvilDICOM.Network.SCUOps
+  name: CMover
+  nameWithType: CMover
+  fullName: EvilDICOM.Network.SCUOps.CMover
+- uid: EvilDICOM.Network.SCUOps.CMover.ProgressUpdatedHandler
+  commentId: T:EvilDICOM.Network.SCUOps.CMover.ProgressUpdatedHandler
+  parent: EvilDICOM.Network.SCUOps
+  name: CMover.ProgressUpdatedHandler
+  nameWithType: CMover.ProgressUpdatedHandler
+  fullName: EvilDICOM.Network.SCUOps.CMover.ProgressUpdatedHandler
+- uid: EvilDICOM.Network.SCUOps.CStorer
+  commentId: T:EvilDICOM.Network.SCUOps.CStorer
+  parent: EvilDICOM.Network.SCUOps
+  name: CStorer
+  nameWithType: CStorer
+  fullName: EvilDICOM.Network.SCUOps.CStorer
+- uid: EvilDICOM.Network.SCUOps.StorageVerifier
+  commentId: T:EvilDICOM.Network.SCUOps.StorageVerifier
+  name: StorageVerifier
+  nameWithType: StorageVerifier
+  fullName: EvilDICOM.Network.SCUOps.StorageVerifier
+- uid: EvilDICOM.Network.SCUOps
+  commentId: N:EvilDICOM.Network.SCUOps
+  name: EvilDICOM.Network.SCUOps
+  nameWithType: EvilDICOM.Network.SCUOps
+  fullName: EvilDICOM.Network.SCUOps

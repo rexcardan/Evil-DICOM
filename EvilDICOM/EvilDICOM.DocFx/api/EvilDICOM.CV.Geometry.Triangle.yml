@@ -1,0 +1,494 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.Geometry.Triangle
+  commentId: T:EvilDICOM.CV.Geometry.Triangle
+  id: Triangle
+  parent: EvilDICOM.CV.Geometry
+  children:
+  - EvilDICOM.CV.Geometry.Triangle.P1
+  - EvilDICOM.CV.Geometry.Triangle.P2
+  - EvilDICOM.CV.Geometry.Triangle.P3
+  - EvilDICOM.CV.Geometry.Triangle.SignedVolume
+  langs:
+  - csharp
+  - vb
+  name: Triangle
+  nameWithType: Triangle
+  fullName: EvilDICOM.CV.Geometry.Triangle
+  type: Struct
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Geometry/Triangle.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Triangle
+    path: ../EvilDICOM.CV/Geometry/Triangle.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Geometry
+  syntax:
+    content: public struct Triangle
+    content.vb: Public Structure Triangle
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: EvilDICOM.CV.Geometry.Triangle.P1
+  commentId: P:EvilDICOM.CV.Geometry.Triangle.P1
+  id: P1
+  parent: EvilDICOM.CV.Geometry.Triangle
+  langs:
+  - csharp
+  - vb
+  name: P1
+  nameWithType: Triangle.P1
+  fullName: EvilDICOM.CV.Geometry.Triangle.P1
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Geometry/Triangle.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: P1
+    path: ../EvilDICOM.CV/Geometry/Triangle.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Geometry
+  syntax:
+    content: public Vector3 P1 { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+    content.vb: Public Property P1 As Vector3
+  overload: EvilDICOM.CV.Geometry.Triangle.P1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.Geometry.Triangle.P2
+  commentId: P:EvilDICOM.CV.Geometry.Triangle.P2
+  id: P2
+  parent: EvilDICOM.CV.Geometry.Triangle
+  langs:
+  - csharp
+  - vb
+  name: P2
+  nameWithType: Triangle.P2
+  fullName: EvilDICOM.CV.Geometry.Triangle.P2
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Geometry/Triangle.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: P2
+    path: ../EvilDICOM.CV/Geometry/Triangle.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Geometry
+  syntax:
+    content: public Vector3 P2 { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+    content.vb: Public Property P2 As Vector3
+  overload: EvilDICOM.CV.Geometry.Triangle.P2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.Geometry.Triangle.P3
+  commentId: P:EvilDICOM.CV.Geometry.Triangle.P3
+  id: P3
+  parent: EvilDICOM.CV.Geometry.Triangle
+  langs:
+  - csharp
+  - vb
+  name: P3
+  nameWithType: Triangle.P3
+  fullName: EvilDICOM.CV.Geometry.Triangle.P3
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Geometry/Triangle.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: P3
+    path: ../EvilDICOM.CV/Geometry/Triangle.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Geometry
+  syntax:
+    content: public Vector3 P3 { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+    content.vb: Public Property P3 As Vector3
+  overload: EvilDICOM.CV.Geometry.Triangle.P3*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.Geometry.Triangle.SignedVolume
+  commentId: M:EvilDICOM.CV.Geometry.Triangle.SignedVolume
+  id: SignedVolume
+  parent: EvilDICOM.CV.Geometry.Triangle
+  langs:
+  - csharp
+  - vb
+  name: SignedVolume()
+  nameWithType: Triangle.SignedVolume()
+  fullName: EvilDICOM.CV.Geometry.Triangle.SignedVolume()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Geometry/Triangle.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SignedVolume
+    path: ../EvilDICOM.CV/Geometry/Triangle.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Geometry
+  syntax:
+    content: public double SignedVolume()
+    return:
+      type: System.Double
+    content.vb: Public Function SignedVolume As Double
+  overload: EvilDICOM.CV.Geometry.Triangle.SignedVolume*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.CV.Geometry
+  commentId: N:EvilDICOM.CV.Geometry
+  name: EvilDICOM.CV.Geometry
+  nameWithType: EvilDICOM.CV.Geometry
+  fullName: EvilDICOM.CV.Geometry
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.Geometry.Triangle.P1*
+  commentId: Overload:EvilDICOM.CV.Geometry.Triangle.P1
+  name: P1
+  nameWithType: Triangle.P1
+  fullName: EvilDICOM.CV.Geometry.Triangle.P1
+- uid: EvilDICOM.Core.Helpers.Vector3
+  commentId: T:EvilDICOM.Core.Helpers.Vector3
+  parent: EvilDICOM.Core.Helpers
+  name: Vector3
+  nameWithType: Vector3
+  fullName: EvilDICOM.Core.Helpers.Vector3
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: EvilDICOM.CV.Geometry.Triangle.P2*
+  commentId: Overload:EvilDICOM.CV.Geometry.Triangle.P2
+  name: P2
+  nameWithType: Triangle.P2
+  fullName: EvilDICOM.CV.Geometry.Triangle.P2
+- uid: EvilDICOM.CV.Geometry.Triangle.P3*
+  commentId: Overload:EvilDICOM.CV.Geometry.Triangle.P3
+  name: P3
+  nameWithType: Triangle.P3
+  fullName: EvilDICOM.CV.Geometry.Triangle.P3
+- uid: EvilDICOM.CV.Geometry.Triangle.SignedVolume*
+  commentId: Overload:EvilDICOM.CV.Geometry.Triangle.SignedVolume
+  name: SignedVolume
+  nameWithType: Triangle.SignedVolume
+  fullName: EvilDICOM.CV.Geometry.Triangle.SignedVolume
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double

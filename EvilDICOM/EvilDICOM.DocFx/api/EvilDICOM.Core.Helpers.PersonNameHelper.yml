@@ -1,0 +1,613 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper
+  commentId: T:EvilDICOM.Core.Helpers.PersonNameHelper
+  id: PersonNameHelper
+  parent: EvilDICOM.Core.Helpers
+  children:
+  - EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName(System.String)
+  - EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName(System.String)
+  - EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName(System.String)
+  - EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName(System.String,System.String)
+  - EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName(System.String,System.String)
+  - EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName(System.String,System.String)
+  langs:
+  - csharp
+  - vb
+  name: PersonNameHelper
+  nameWithType: PersonNameHelper
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PersonNameHelper
+    path: ../EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public class PersonNameHelper
+    content.vb: Public Class PersonNameHelper
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName(System.String)
+  commentId: M:EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName(System.String)
+  id: GetFirstName(System.String)
+  parent: EvilDICOM.Core.Helpers.PersonNameHelper
+  langs:
+  - csharp
+  - vb
+  name: GetFirstName(String)
+  nameWithType: PersonNameHelper.GetFirstName(String)
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetFirstName
+    path: ../EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string GetFirstName(string data)
+    parameters:
+    - id: data
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetFirstName(data As String) As String
+  overload: EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName(System.String,System.String)
+  commentId: M:EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName(System.String,System.String)
+  id: SetFirstName(System.String,System.String)
+  parent: EvilDICOM.Core.Helpers.PersonNameHelper
+  langs:
+  - csharp
+  - vb
+  name: SetFirstName(String, String)
+  nameWithType: PersonNameHelper.SetFirstName(String, String)
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SetFirstName
+    path: ../EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string SetFirstName(string data, string name)
+    parameters:
+    - id: data
+      type: System.String
+    - id: name
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function SetFirstName(data As String, name As String) As String
+  overload: EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName(System.String)
+  commentId: M:EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName(System.String)
+  id: GetMiddleName(System.String)
+  parent: EvilDICOM.Core.Helpers.PersonNameHelper
+  langs:
+  - csharp
+  - vb
+  name: GetMiddleName(String)
+  nameWithType: PersonNameHelper.GetMiddleName(String)
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetMiddleName
+    path: ../EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string GetMiddleName(string data)
+    parameters:
+    - id: data
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetMiddleName(data As String) As String
+  overload: EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName(System.String,System.String)
+  commentId: M:EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName(System.String,System.String)
+  id: SetMiddleName(System.String,System.String)
+  parent: EvilDICOM.Core.Helpers.PersonNameHelper
+  langs:
+  - csharp
+  - vb
+  name: SetMiddleName(String, String)
+  nameWithType: PersonNameHelper.SetMiddleName(String, String)
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SetMiddleName
+    path: ../EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string SetMiddleName(string data, string name)
+    parameters:
+    - id: data
+      type: System.String
+    - id: name
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function SetMiddleName(data As String, name As String) As String
+  overload: EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName(System.String)
+  commentId: M:EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName(System.String)
+  id: GetLastName(System.String)
+  parent: EvilDICOM.Core.Helpers.PersonNameHelper
+  langs:
+  - csharp
+  - vb
+  name: GetLastName(String)
+  nameWithType: PersonNameHelper.GetLastName(String)
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetLastName
+    path: ../EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string GetLastName(string data)
+    parameters:
+    - id: data
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function GetLastName(data As String) As String
+  overload: EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName(System.String,System.String)
+  commentId: M:EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName(System.String,System.String)
+  id: SetLastName(System.String,System.String)
+  parent: EvilDICOM.Core.Helpers.PersonNameHelper
+  langs:
+  - csharp
+  - vb
+  name: SetLastName(String, String)
+  nameWithType: PersonNameHelper.SetLastName(String, String)
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName(System.String, System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/PersonNameHelper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SetLastName
+    path: ../EvilDICOM/Core/Helpers/PersonNameHelper.cs
+    startLine: 33
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string SetLastName(string data, string name)
+    parameters:
+    - id: data
+      type: System.String
+    - id: name
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function SetLastName(data As String, name As String) As String
+  overload: EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName*
+  commentId: Overload:EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName
+  name: GetFirstName
+  nameWithType: PersonNameHelper.GetFirstName
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.GetFirstName
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName*
+  commentId: Overload:EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName
+  name: SetFirstName
+  nameWithType: PersonNameHelper.SetFirstName
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.SetFirstName
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName*
+  commentId: Overload:EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName
+  name: GetMiddleName
+  nameWithType: PersonNameHelper.GetMiddleName
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.GetMiddleName
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName*
+  commentId: Overload:EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName
+  name: SetMiddleName
+  nameWithType: PersonNameHelper.SetMiddleName
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.SetMiddleName
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName*
+  commentId: Overload:EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName
+  name: GetLastName
+  nameWithType: PersonNameHelper.GetLastName
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.GetLastName
+- uid: EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName*
+  commentId: Overload:EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName
+  name: SetLastName
+  nameWithType: PersonNameHelper.SetLastName
+  fullName: EvilDICOM.Core.Helpers.PersonNameHelper.SetLastName

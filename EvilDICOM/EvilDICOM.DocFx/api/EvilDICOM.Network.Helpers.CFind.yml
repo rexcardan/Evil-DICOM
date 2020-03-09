@@ -1,0 +1,682 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Helpers.CFind
+  commentId: T:EvilDICOM.Network.Helpers.CFind
+  id: CFind
+  parent: EvilDICOM.Network.Helpers
+  children:
+  - EvilDICOM.Network.Helpers.CFind.CreateImageQuery(EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD)
+  - EvilDICOM.Network.Helpers.CFind.CreatePatientQuery(System.String,System.String,System.Nullable{System.DateTime})
+  - EvilDICOM.Network.Helpers.CFind.CreateQuery(EvilDICOM.Network.DIMSE.IOD.CFindRequestIOD)
+  - EvilDICOM.Network.Helpers.CFind.CreateSeriesQuery(System.String)
+  - EvilDICOM.Network.Helpers.CFind.CreateStudyQuery(System.String)
+  langs:
+  - csharp
+  - vb
+  name: CFind
+  nameWithType: CFind
+  fullName: EvilDICOM.Network.Helpers.CFind
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Helpers/CFind.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CFind
+    path: ../EvilDICOM/Network/Helpers/CFind.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Helpers
+  syntax:
+    content: public class CFind
+    content.vb: Public Class CFind
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Helpers.CFind.CreateStudyQuery(System.String)
+  commentId: M:EvilDICOM.Network.Helpers.CFind.CreateStudyQuery(System.String)
+  id: CreateStudyQuery(System.String)
+  parent: EvilDICOM.Network.Helpers.CFind
+  langs:
+  - csharp
+  - vb
+  name: CreateStudyQuery(String)
+  nameWithType: CFind.CreateStudyQuery(String)
+  fullName: EvilDICOM.Network.Helpers.CFind.CreateStudyQuery(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Helpers/CFind.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CreateStudyQuery
+    path: ../EvilDICOM/Network/Helpers/CFind.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Helpers
+  syntax:
+    content: public static CFindRequest CreateStudyQuery(string patientId)
+    parameters:
+    - id: patientId
+      type: System.String
+    return:
+      type: EvilDICOM.Network.DIMSE.CFindRequest
+    content.vb: Public Shared Function CreateStudyQuery(patientId As String) As CFindRequest
+  overload: EvilDICOM.Network.Helpers.CFind.CreateStudyQuery*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Helpers.CFind.CreateSeriesQuery(System.String)
+  commentId: M:EvilDICOM.Network.Helpers.CFind.CreateSeriesQuery(System.String)
+  id: CreateSeriesQuery(System.String)
+  parent: EvilDICOM.Network.Helpers.CFind
+  langs:
+  - csharp
+  - vb
+  name: CreateSeriesQuery(String)
+  nameWithType: CFind.CreateSeriesQuery(String)
+  fullName: EvilDICOM.Network.Helpers.CFind.CreateSeriesQuery(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Helpers/CFind.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CreateSeriesQuery
+    path: ../EvilDICOM/Network/Helpers/CFind.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Helpers
+  syntax:
+    content: public static CFindRequest CreateSeriesQuery(string studyUid)
+    parameters:
+    - id: studyUid
+      type: System.String
+    return:
+      type: EvilDICOM.Network.DIMSE.CFindRequest
+    content.vb: Public Shared Function CreateSeriesQuery(studyUid As String) As CFindRequest
+  overload: EvilDICOM.Network.Helpers.CFind.CreateSeriesQuery*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Helpers.CFind.CreateQuery(EvilDICOM.Network.DIMSE.IOD.CFindRequestIOD)
+  commentId: M:EvilDICOM.Network.Helpers.CFind.CreateQuery(EvilDICOM.Network.DIMSE.IOD.CFindRequestIOD)
+  id: CreateQuery(EvilDICOM.Network.DIMSE.IOD.CFindRequestIOD)
+  parent: EvilDICOM.Network.Helpers.CFind
+  langs:
+  - csharp
+  - vb
+  name: CreateQuery(CFindRequestIOD)
+  nameWithType: CFind.CreateQuery(CFindRequestIOD)
+  fullName: EvilDICOM.Network.Helpers.CFind.CreateQuery(EvilDICOM.Network.DIMSE.IOD.CFindRequestIOD)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Helpers/CFind.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CreateQuery
+    path: ../EvilDICOM/Network/Helpers/CFind.cs
+    startLine: 32
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Helpers
+  syntax:
+    content: public static CFindRequest CreateQuery(CFindRequestIOD iodQuery)
+    parameters:
+    - id: iodQuery
+      type: EvilDICOM.Network.DIMSE.IOD.CFindRequestIOD
+    return:
+      type: EvilDICOM.Network.DIMSE.CFindRequest
+    content.vb: Public Shared Function CreateQuery(iodQuery As CFindRequestIOD) As CFindRequest
+  overload: EvilDICOM.Network.Helpers.CFind.CreateQuery*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Helpers.CFind.CreateImageQuery(EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD)
+  commentId: M:EvilDICOM.Network.Helpers.CFind.CreateImageQuery(EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD)
+  id: CreateImageQuery(EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD)
+  parent: EvilDICOM.Network.Helpers.CFind
+  langs:
+  - csharp
+  - vb
+  name: CreateImageQuery(CFindSeriesIOD)
+  nameWithType: CFind.CreateImageQuery(CFindSeriesIOD)
+  fullName: EvilDICOM.Network.Helpers.CFind.CreateImageQuery(EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Helpers/CFind.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CreateImageQuery
+    path: ../EvilDICOM/Network/Helpers/CFind.cs
+    startLine: 40
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Helpers
+  syntax:
+    content: public static CFindRequest CreateImageQuery(CFindSeriesIOD ser)
+    parameters:
+    - id: ser
+      type: EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+    return:
+      type: EvilDICOM.Network.DIMSE.CFindRequest
+    content.vb: Public Shared Function CreateImageQuery(ser As CFindSeriesIOD) As CFindRequest
+  overload: EvilDICOM.Network.Helpers.CFind.CreateImageQuery*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Network.Helpers.CFind.CreatePatientQuery(System.String,System.String,System.Nullable{System.DateTime})
+  commentId: M:EvilDICOM.Network.Helpers.CFind.CreatePatientQuery(System.String,System.String,System.Nullable{System.DateTime})
+  id: CreatePatientQuery(System.String,System.String,System.Nullable{System.DateTime})
+  parent: EvilDICOM.Network.Helpers.CFind
+  langs:
+  - csharp
+  - vb
+  name: CreatePatientQuery(String, String, Nullable<DateTime>)
+  nameWithType: CFind.CreatePatientQuery(String, String, Nullable<DateTime>)
+  fullName: EvilDICOM.Network.Helpers.CFind.CreatePatientQuery(System.String, System.String, System.Nullable<System.DateTime>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Helpers/CFind.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CreatePatientQuery
+    path: ../EvilDICOM/Network/Helpers/CFind.cs
+    startLine: 76
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Helpers
+  syntax:
+    content: public static CFindRequest CreatePatientQuery(string patientId, string patientName, DateTime? dob)
+    parameters:
+    - id: patientId
+      type: System.String
+    - id: patientName
+      type: System.String
+    - id: dob
+      type: System.Nullable{System.DateTime}
+    return:
+      type: EvilDICOM.Network.DIMSE.CFindRequest
+    content.vb: Public Shared Function CreatePatientQuery(patientId As String, patientName As String, dob As Date?) As CFindRequest
+  overload: EvilDICOM.Network.Helpers.CFind.CreatePatientQuery*
+  nameWithType.vb: CFind.CreatePatientQuery(String, String, Nullable(Of DateTime))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Network.Helpers.CFind.CreatePatientQuery(System.String, System.String, System.Nullable(Of System.DateTime))
+  name.vb: CreatePatientQuery(String, String, Nullable(Of DateTime))
+references:
+- uid: EvilDICOM.Network.Helpers
+  commentId: N:EvilDICOM.Network.Helpers
+  name: EvilDICOM.Network.Helpers
+  nameWithType: EvilDICOM.Network.Helpers
+  fullName: EvilDICOM.Network.Helpers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Network.Helpers.CFind.CreateStudyQuery*
+  commentId: Overload:EvilDICOM.Network.Helpers.CFind.CreateStudyQuery
+  name: CreateStudyQuery
+  nameWithType: CFind.CreateStudyQuery
+  fullName: EvilDICOM.Network.Helpers.CFind.CreateStudyQuery
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Network.DIMSE.CFindRequest
+  commentId: T:EvilDICOM.Network.DIMSE.CFindRequest
+  parent: EvilDICOM.Network.DIMSE
+  name: CFindRequest
+  nameWithType: CFindRequest
+  fullName: EvilDICOM.Network.DIMSE.CFindRequest
+- uid: EvilDICOM.Network.DIMSE
+  commentId: N:EvilDICOM.Network.DIMSE
+  name: EvilDICOM.Network.DIMSE
+  nameWithType: EvilDICOM.Network.DIMSE
+  fullName: EvilDICOM.Network.DIMSE
+- uid: EvilDICOM.Network.Helpers.CFind.CreateSeriesQuery*
+  commentId: Overload:EvilDICOM.Network.Helpers.CFind.CreateSeriesQuery
+  name: CreateSeriesQuery
+  nameWithType: CFind.CreateSeriesQuery
+  fullName: EvilDICOM.Network.Helpers.CFind.CreateSeriesQuery
+- uid: EvilDICOM.Network.Helpers.CFind.CreateQuery*
+  commentId: Overload:EvilDICOM.Network.Helpers.CFind.CreateQuery
+  name: CreateQuery
+  nameWithType: CFind.CreateQuery
+  fullName: EvilDICOM.Network.Helpers.CFind.CreateQuery
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindRequestIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CFindRequestIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  name: CFindRequestIOD
+  nameWithType: CFindRequestIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindRequestIOD
+- uid: EvilDICOM.Network.DIMSE.IOD
+  commentId: N:EvilDICOM.Network.DIMSE.IOD
+  name: EvilDICOM.Network.DIMSE.IOD
+  nameWithType: EvilDICOM.Network.DIMSE.IOD
+  fullName: EvilDICOM.Network.DIMSE.IOD
+- uid: EvilDICOM.Network.Helpers.CFind.CreateImageQuery*
+  commentId: Overload:EvilDICOM.Network.Helpers.CFind.CreateImageQuery
+  name: CreateImageQuery
+  nameWithType: CFind.CreateImageQuery
+  fullName: EvilDICOM.Network.Helpers.CFind.CreateImageQuery
+- uid: EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+  commentId: T:EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+  parent: EvilDICOM.Network.DIMSE.IOD
+  name: CFindSeriesIOD
+  nameWithType: CFindSeriesIOD
+  fullName: EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+- uid: EvilDICOM.Network.Helpers.CFind.CreatePatientQuery*
+  commentId: Overload:EvilDICOM.Network.Helpers.CFind.CreatePatientQuery
+  name: CreatePatientQuery
+  nameWithType: CFind.CreatePatientQuery
+  fullName: EvilDICOM.Network.Helpers.CFind.CreatePatientQuery
+- uid: System.Nullable{System.DateTime}
+  commentId: T:System.Nullable{System.DateTime}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<DateTime>
+  nameWithType: Nullable<DateTime>
+  fullName: System.Nullable<System.DateTime>
+  nameWithType.vb: Nullable(Of DateTime)
+  fullName.vb: System.Nullable(Of System.DateTime)
+  name.vb: Nullable(Of DateTime)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.DateTime
+    name: DateTime
+    nameWithType: DateTime
+    fullName: System.DateTime
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

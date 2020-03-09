@@ -1,0 +1,534 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Messaging.Message`1
+  commentId: T:EvilDICOM.Network.Messaging.Message`1
+  id: Message`1
+  parent: EvilDICOM.Network.Messaging
+  children:
+  - EvilDICOM.Network.Messaging.Message`1.DynPayload
+  - EvilDICOM.Network.Messaging.Message`1.Payload
+  - EvilDICOM.Network.Messaging.Message`1.Type
+  langs:
+  - csharp
+  - vb
+  name: Message<T>
+  nameWithType: Message<T>
+  fullName: EvilDICOM.Network.Messaging.Message<T>
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/Message.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Message
+    path: ../EvilDICOM/Network/Messaging/Message.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: 'public class Message<T> : IMessage'
+    typeParameters:
+    - id: T
+    content.vb: >-
+      Public Class Message(Of T)
+          Implements IMessage
+  inheritance:
+  - System.Object
+  implements:
+  - EvilDICOM.Network.Interfaces.IMessage
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  nameWithType.vb: Message(Of T)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of T)
+  name.vb: Message(Of T)
+- uid: EvilDICOM.Network.Messaging.Message`1.Payload
+  commentId: P:EvilDICOM.Network.Messaging.Message`1.Payload
+  id: Payload
+  parent: EvilDICOM.Network.Messaging.Message`1
+  langs:
+  - csharp
+  - vb
+  name: Payload
+  nameWithType: Message<T>.Payload
+  fullName: EvilDICOM.Network.Messaging.Message<T>.Payload
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/Message.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Payload
+    path: ../EvilDICOM/Network/Messaging/Message.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: public T Payload { get; set; }
+    parameters: []
+    return:
+      type: '{T}'
+    content.vb: Public Property Payload As T
+  overload: EvilDICOM.Network.Messaging.Message`1.Payload*
+  nameWithType.vb: Message(Of T).Payload
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of T).Payload
+- uid: EvilDICOM.Network.Messaging.Message`1.Type
+  commentId: P:EvilDICOM.Network.Messaging.Message`1.Type
+  id: Type
+  parent: EvilDICOM.Network.Messaging.Message`1
+  langs:
+  - csharp
+  - vb
+  name: Type
+  nameWithType: Message<T>.Type
+  fullName: EvilDICOM.Network.Messaging.Message<T>.Type
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/Message.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Type
+    path: ../EvilDICOM/Network/Messaging/Message.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: public MessageType Type { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.MessageType
+    content.vb: Public Property Type As MessageType
+  overload: EvilDICOM.Network.Messaging.Message`1.Type*
+  implements:
+  - EvilDICOM.Network.Interfaces.IMessage.Type
+  nameWithType.vb: Message(Of T).Type
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of T).Type
+- uid: EvilDICOM.Network.Messaging.Message`1.DynPayload
+  commentId: P:EvilDICOM.Network.Messaging.Message`1.DynPayload
+  id: DynPayload
+  parent: EvilDICOM.Network.Messaging.Message`1
+  langs:
+  - csharp
+  - vb
+  name: DynPayload
+  nameWithType: Message<T>.DynPayload
+  fullName: EvilDICOM.Network.Messaging.Message<T>.DynPayload
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Messaging/Message.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DynPayload
+    path: ../EvilDICOM/Network/Messaging/Message.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Messaging
+  syntax:
+    content: public object DynPayload { get; }
+    parameters: []
+    return:
+      type: System.Object
+    content.vb: Public ReadOnly Property DynPayload As Object
+  overload: EvilDICOM.Network.Messaging.Message`1.DynPayload*
+  implements:
+  - EvilDICOM.Network.Interfaces.IMessage.DynPayload
+  nameWithType.vb: Message(Of T).DynPayload
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of T).DynPayload
+references:
+- uid: EvilDICOM.Network.Messaging
+  commentId: N:EvilDICOM.Network.Messaging
+  name: EvilDICOM.Network.Messaging
+  nameWithType: EvilDICOM.Network.Messaging
+  fullName: EvilDICOM.Network.Messaging
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Network.Interfaces.IMessage
+  commentId: T:EvilDICOM.Network.Interfaces.IMessage
+  parent: EvilDICOM.Network.Interfaces
+  name: IMessage
+  nameWithType: IMessage
+  fullName: EvilDICOM.Network.Interfaces.IMessage
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Network.Interfaces
+  commentId: N:EvilDICOM.Network.Interfaces
+  name: EvilDICOM.Network.Interfaces
+  nameWithType: EvilDICOM.Network.Interfaces
+  fullName: EvilDICOM.Network.Interfaces
+- uid: EvilDICOM.Network.Messaging.Message`1.Payload*
+  commentId: Overload:EvilDICOM.Network.Messaging.Message`1.Payload
+  name: Payload
+  nameWithType: Message<T>.Payload
+  fullName: EvilDICOM.Network.Messaging.Message<T>.Payload
+  nameWithType.vb: Message(Of T).Payload
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of T).Payload
+- uid: '{T}'
+  commentId: '!:T'
+  definition: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: T
+  name: T
+  nameWithType: T
+  fullName: T
+- uid: EvilDICOM.Network.Messaging.Message`1.Type*
+  commentId: Overload:EvilDICOM.Network.Messaging.Message`1.Type
+  name: Type
+  nameWithType: Message<T>.Type
+  fullName: EvilDICOM.Network.Messaging.Message<T>.Type
+  nameWithType.vb: Message(Of T).Type
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of T).Type
+- uid: EvilDICOM.Network.Interfaces.IMessage.Type
+  commentId: P:EvilDICOM.Network.Interfaces.IMessage.Type
+  parent: EvilDICOM.Network.Interfaces.IMessage
+  name: Type
+  nameWithType: IMessage.Type
+  fullName: EvilDICOM.Network.Interfaces.IMessage.Type
+- uid: EvilDICOM.Network.Enums.MessageType
+  commentId: T:EvilDICOM.Network.Enums.MessageType
+  parent: EvilDICOM.Network.Enums
+  name: MessageType
+  nameWithType: MessageType
+  fullName: EvilDICOM.Network.Enums.MessageType
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.Messaging.Message`1.DynPayload*
+  commentId: Overload:EvilDICOM.Network.Messaging.Message`1.DynPayload
+  name: DynPayload
+  nameWithType: Message<T>.DynPayload
+  fullName: EvilDICOM.Network.Messaging.Message<T>.DynPayload
+  nameWithType.vb: Message(Of T).DynPayload
+  fullName.vb: EvilDICOM.Network.Messaging.Message(Of T).DynPayload
+- uid: EvilDICOM.Network.Interfaces.IMessage.DynPayload
+  commentId: P:EvilDICOM.Network.Interfaces.IMessage.DynPayload
+  parent: EvilDICOM.Network.Interfaces.IMessage
+  name: DynPayload
+  nameWithType: IMessage.DynPayload
+  fullName: EvilDICOM.Network.Interfaces.IMessage.DynPayload

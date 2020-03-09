@@ -1,0 +1,564 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.IO.DICOM2DoseMatrix
+  commentId: T:EvilDICOM.CV.IO.DICOM2DoseMatrix
+  id: DICOM2DoseMatrix
+  parent: EvilDICOM.CV.IO
+  children:
+  - EvilDICOM.CV.IO.DICOM2DoseMatrix.ParseDICOM(System.String,System.Nullable{System.Double},System.Boolean)
+  langs:
+  - csharp
+  - vb
+  name: DICOM2DoseMatrix
+  nameWithType: DICOM2DoseMatrix
+  fullName: EvilDICOM.CV.IO.DICOM2DoseMatrix
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/IO/DICOM2DoseMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOM2DoseMatrix
+    path: ../EvilDICOM.CV/IO/DICOM2DoseMatrix.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.IO
+  syntax:
+    content: 'public class DICOM2DoseMatrix : DICOM2Matrix'
+    content.vb: >-
+      Public Class DICOM2DoseMatrix
+
+          Inherits DICOM2Matrix
+  inheritance:
+  - System.Object
+  - EvilDICOM.CV.IO.DICOM2Matrix
+  inheritedMembers:
+  - EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix,EvilDICOM.Core.DICOMObject)
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.CV.IO.DICOM2DoseMatrix.ParseDICOM(System.String,System.Nullable{System.Double},System.Boolean)
+  commentId: M:EvilDICOM.CV.IO.DICOM2DoseMatrix.ParseDICOM(System.String,System.Nullable{System.Double},System.Boolean)
+  id: ParseDICOM(System.String,System.Nullable{System.Double},System.Boolean)
+  parent: EvilDICOM.CV.IO.DICOM2DoseMatrix
+  langs:
+  - csharp
+  - vb
+  name: ParseDICOM(String, Nullable<Double>, Boolean)
+  nameWithType: DICOM2DoseMatrix.ParseDICOM(String, Nullable<Double>, Boolean)
+  fullName: EvilDICOM.CV.IO.DICOM2DoseMatrix.ParseDICOM(System.String, System.Nullable<System.Double>, System.Boolean)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/IO/DICOM2DoseMatrix.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ParseDICOM
+    path: ../EvilDICOM.CV/IO/DICOM2DoseMatrix.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.IO
+  syntax:
+    content: public static DoseMatrix ParseDICOM(string dcmFile, double? prescribedDoseGy = default(double? ), bool convertToRelative = true)
+    parameters:
+    - id: dcmFile
+      type: System.String
+    - id: prescribedDoseGy
+      type: System.Nullable{System.Double}
+    - id: convertToRelative
+      type: System.Boolean
+    return:
+      type: EvilDICOM.CV.RT.DoseMatrix
+    content.vb: Public Shared Function ParseDICOM(dcmFile As String, prescribedDoseGy As Double? = Nothing, convertToRelative As Boolean = True) As DoseMatrix
+  overload: EvilDICOM.CV.IO.DICOM2DoseMatrix.ParseDICOM*
+  nameWithType.vb: DICOM2DoseMatrix.ParseDICOM(String, Nullable(Of Double), Boolean)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.CV.IO.DICOM2DoseMatrix.ParseDICOM(System.String, System.Nullable(Of System.Double), System.Boolean)
+  name.vb: ParseDICOM(String, Nullable(Of Double), Boolean)
+references:
+- uid: EvilDICOM.CV.IO
+  commentId: N:EvilDICOM.CV.IO
+  name: EvilDICOM.CV.IO
+  nameWithType: EvilDICOM.CV.IO
+  fullName: EvilDICOM.CV.IO
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.CV.IO.DICOM2Matrix
+  commentId: T:EvilDICOM.CV.IO.DICOM2Matrix
+  parent: EvilDICOM.CV.IO
+  name: DICOM2Matrix
+  nameWithType: DICOM2Matrix
+  fullName: EvilDICOM.CV.IO.DICOM2Matrix
+- uid: EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix,EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix,EvilDICOM.Core.DICOMObject)
+  parent: EvilDICOM.CV.IO.DICOM2Matrix
+  isExternal: true
+  name: FillMetadata(Matrix, DICOMObject)
+  nameWithType: DICOM2Matrix.FillMetadata(Matrix, DICOMObject)
+  fullName: EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix, EvilDICOM.Core.DICOMObject)
+  spec.csharp:
+  - uid: EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix,EvilDICOM.Core.DICOMObject)
+    name: FillMetadata
+    nameWithType: DICOM2Matrix.FillMetadata
+    fullName: EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.Image.Matrix
+    name: Matrix
+    nameWithType: Matrix
+    fullName: EvilDICOM.CV.Image.Matrix
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix,EvilDICOM.Core.DICOMObject)
+    name: FillMetadata
+    nameWithType: DICOM2Matrix.FillMetadata
+    fullName: EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.CV.Image.Matrix
+    name: Matrix
+    nameWithType: Matrix
+    fullName: EvilDICOM.CV.Image.Matrix
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.IO.DICOM2DoseMatrix.ParseDICOM*
+  commentId: Overload:EvilDICOM.CV.IO.DICOM2DoseMatrix.ParseDICOM
+  name: ParseDICOM
+  nameWithType: DICOM2DoseMatrix.ParseDICOM
+  fullName: EvilDICOM.CV.IO.DICOM2DoseMatrix.ParseDICOM
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Double>
+  nameWithType: Nullable<Double>
+  fullName: System.Nullable<System.Double>
+  nameWithType.vb: Nullable(Of Double)
+  fullName.vb: System.Nullable(Of System.Double)
+  name.vb: Nullable(Of Double)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: EvilDICOM.CV.RT.DoseMatrix
+  commentId: T:EvilDICOM.CV.RT.DoseMatrix
+  parent: EvilDICOM.CV.RT
+  name: DoseMatrix
+  nameWithType: DoseMatrix
+  fullName: EvilDICOM.CV.RT.DoseMatrix
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.RT
+  commentId: N:EvilDICOM.CV.RT
+  name: EvilDICOM.CV.RT
+  nameWithType: EvilDICOM.CV.RT
+  fullName: EvilDICOM.CV.RT

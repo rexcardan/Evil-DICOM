@@ -1,0 +1,937 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Enums.StringEncoding
+  commentId: T:EvilDICOM.Core.Enums.StringEncoding
+  id: StringEncoding
+  parent: EvilDICOM.Core.Enums
+  children:
+  - EvilDICOM.Core.Enums.StringEncoding.GB18030
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_100
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_101
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_109
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_110
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_126
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_127
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_13
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_138
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_144
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_148
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_149
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_166
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_6
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_87
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_IR_100
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_IR_101
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_IR_109
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_IR_110
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_IR_126
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_IR_127
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_IR_13
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_IR_138
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_IR_144
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_IR_148
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_IR_166
+  - EvilDICOM.Core.Enums.StringEncoding.ISO_IR_192
+  langs:
+  - csharp
+  - vb
+  name: StringEncoding
+  nameWithType: StringEncoding
+  fullName: EvilDICOM.Core.Enums.StringEncoding
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StringEncoding
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 2
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: public enum StringEncoding
+    content.vb: Public Enum StringEncoding
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_13
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_IR_13
+  id: ISO_IR_13
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_IR_13
+  nameWithType: StringEncoding.ISO_IR_13
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_13
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_IR_13
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 4
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_IR_13 = 0
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_100
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_IR_100
+  id: ISO_IR_100
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_IR_100
+  nameWithType: StringEncoding.ISO_IR_100
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_100
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_IR_100
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 5
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_IR_100 = 1
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_101
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_IR_101
+  id: ISO_IR_101
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_IR_101
+  nameWithType: StringEncoding.ISO_IR_101
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_101
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_IR_101
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 6
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_IR_101 = 2
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_109
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_IR_109
+  id: ISO_IR_109
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_IR_109
+  nameWithType: StringEncoding.ISO_IR_109
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_109
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_IR_109
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_IR_109 = 3
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_110
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_IR_110
+  id: ISO_IR_110
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_IR_110
+  nameWithType: StringEncoding.ISO_IR_110
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_110
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_IR_110
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_IR_110 = 4
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_144
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_IR_144
+  id: ISO_IR_144
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_IR_144
+  nameWithType: StringEncoding.ISO_IR_144
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_144
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_IR_144
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_IR_144 = 5
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_127
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_IR_127
+  id: ISO_IR_127
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_IR_127
+  nameWithType: StringEncoding.ISO_IR_127
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_127
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_IR_127
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_IR_127 = 6
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_126
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_IR_126
+  id: ISO_IR_126
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_IR_126
+  nameWithType: StringEncoding.ISO_IR_126
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_126
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_IR_126
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_IR_126 = 7
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_138
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_IR_138
+  id: ISO_IR_138
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_IR_138
+  nameWithType: StringEncoding.ISO_IR_138
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_138
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_IR_138
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_IR_138 = 8
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_148
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_IR_148
+  id: ISO_IR_148
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_IR_148
+  nameWithType: StringEncoding.ISO_IR_148
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_148
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_IR_148
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_IR_148 = 9
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_6
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_6
+  id: ISO_2022_IR_6
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_6
+  nameWithType: StringEncoding.ISO_2022_IR_6
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_6
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_6
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_6 = 10
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_13
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_13
+  id: ISO_2022_IR_13
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_13
+  nameWithType: StringEncoding.ISO_2022_IR_13
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_13
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_13
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_13 = 11
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_87
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_87
+  id: ISO_2022_IR_87
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_87
+  nameWithType: StringEncoding.ISO_2022_IR_87
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_87
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_87
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_87 = 12
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_100
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_100
+  id: ISO_2022_IR_100
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_100
+  nameWithType: StringEncoding.ISO_2022_IR_100
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_100
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_100
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_100 = 13
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_101
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_101
+  id: ISO_2022_IR_101
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_101
+  nameWithType: StringEncoding.ISO_2022_IR_101
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_101
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_101
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_101 = 14
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_109
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_109
+  id: ISO_2022_IR_109
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_109
+  nameWithType: StringEncoding.ISO_2022_IR_109
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_109
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_109
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_109 = 15
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_110
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_110
+  id: ISO_2022_IR_110
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_110
+  nameWithType: StringEncoding.ISO_2022_IR_110
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_110
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_110
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_110 = 16
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_144
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_144
+  id: ISO_2022_IR_144
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_144
+  nameWithType: StringEncoding.ISO_2022_IR_144
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_144
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_144
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_144 = 17
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_127
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_127
+  id: ISO_2022_IR_127
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_127
+  nameWithType: StringEncoding.ISO_2022_IR_127
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_127
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_127
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_127 = 18
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_126
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_126
+  id: ISO_2022_IR_126
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_126
+  nameWithType: StringEncoding.ISO_2022_IR_126
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_126
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_126
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_126 = 19
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_138
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_138
+  id: ISO_2022_IR_138
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_138
+  nameWithType: StringEncoding.ISO_2022_IR_138
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_138
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_138
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_138 = 20
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_148
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_148
+  id: ISO_2022_IR_148
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_148
+  nameWithType: StringEncoding.ISO_2022_IR_148
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_148
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_148
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_148 = 21
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_166
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_IR_166
+  id: ISO_IR_166
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_IR_166
+  nameWithType: StringEncoding.ISO_IR_166
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_166
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_IR_166
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_IR_166 = 22
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_166
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_166
+  id: ISO_2022_IR_166
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_166
+  nameWithType: StringEncoding.ISO_2022_IR_166
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_166
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_166
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_166 = 23
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_149
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_149
+  id: ISO_2022_IR_149
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_2022_IR_149
+  nameWithType: StringEncoding.ISO_2022_IR_149
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_2022_IR_149
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_2022_IR_149
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_2022_IR_149 = 24
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_192
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.ISO_IR_192
+  id: ISO_IR_192
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: ISO_IR_192
+  nameWithType: StringEncoding.ISO_IR_192
+  fullName: EvilDICOM.Core.Enums.StringEncoding.ISO_IR_192
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ISO_IR_192
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 29
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: ISO_IR_192 = 25
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Core.Enums.StringEncoding.GB18030
+  commentId: F:EvilDICOM.Core.Enums.StringEncoding.GB18030
+  id: GB18030
+  parent: EvilDICOM.Core.Enums.StringEncoding
+  langs:
+  - csharp
+  - vb
+  name: GB18030
+  nameWithType: StringEncoding.GB18030
+  fullName: EvilDICOM.Core.Enums.StringEncoding.GB18030
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Enums/StringEncoding.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GB18030
+    path: ../EvilDICOM/Core/Enums/StringEncoding.cs
+    startLine: 30
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Enums
+  syntax:
+    content: GB18030 = 26
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.Enums.StringEncoding
+  commentId: T:EvilDICOM.Core.Enums.StringEncoding
+  parent: EvilDICOM.Core.Enums
+  name: StringEncoding
+  nameWithType: StringEncoding
+  fullName: EvilDICOM.Core.Enums.StringEncoding

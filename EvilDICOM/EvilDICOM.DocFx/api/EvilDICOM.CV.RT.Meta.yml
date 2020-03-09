@@ -1,0 +1,74 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.RT.Meta
+  commentId: N:EvilDICOM.CV.RT.Meta
+  id: EvilDICOM.CV.RT.Meta
+  children:
+  - EvilDICOM.CV.RT.Meta.ApprovalMeta
+  - EvilDICOM.CV.RT.Meta.BeamMeta
+  - EvilDICOM.CV.RT.Meta.CalculationOptionMeta
+  - EvilDICOM.CV.RT.Meta.PlanMeta
+  - EvilDICOM.CV.RT.Meta.ReferencePointMeta
+  - EvilDICOM.CV.RT.Meta.SliceContourMeta
+  - EvilDICOM.CV.RT.Meta.StructureMeta
+  - EvilDICOM.CV.RT.Meta.StructureSetMeta
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.CV.RT.Meta
+  nameWithType: EvilDICOM.CV.RT.Meta
+  fullName: EvilDICOM.CV.RT.Meta
+  type: Namespace
+  assemblies:
+  - EvilDICOM.CV
+references:
+- uid: EvilDICOM.CV.RT.Meta.ApprovalMeta
+  commentId: T:EvilDICOM.CV.RT.Meta.ApprovalMeta
+  name: ApprovalMeta
+  nameWithType: ApprovalMeta
+  fullName: EvilDICOM.CV.RT.Meta.ApprovalMeta
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta
+  commentId: T:EvilDICOM.CV.RT.Meta.BeamMeta
+  parent: EvilDICOM.CV.RT.Meta
+  name: BeamMeta
+  nameWithType: BeamMeta
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta
+- uid: EvilDICOM.CV.RT.Meta.CalculationOptionMeta
+  commentId: T:EvilDICOM.CV.RT.Meta.CalculationOptionMeta
+  name: CalculationOptionMeta
+  nameWithType: CalculationOptionMeta
+  fullName: EvilDICOM.CV.RT.Meta.CalculationOptionMeta
+- uid: EvilDICOM.CV.RT.Meta.PlanMeta
+  commentId: T:EvilDICOM.CV.RT.Meta.PlanMeta
+  parent: EvilDICOM.CV.RT.Meta
+  name: PlanMeta
+  nameWithType: PlanMeta
+  fullName: EvilDICOM.CV.RT.Meta.PlanMeta
+- uid: EvilDICOM.CV.RT.Meta.ReferencePointMeta
+  commentId: T:EvilDICOM.CV.RT.Meta.ReferencePointMeta
+  name: ReferencePointMeta
+  nameWithType: ReferencePointMeta
+  fullName: EvilDICOM.CV.RT.Meta.ReferencePointMeta
+- uid: EvilDICOM.CV.RT.Meta.SliceContourMeta
+  commentId: T:EvilDICOM.CV.RT.Meta.SliceContourMeta
+  parent: EvilDICOM.CV.RT.Meta
+  name: SliceContourMeta
+  nameWithType: SliceContourMeta
+  fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta
+  commentId: T:EvilDICOM.CV.RT.Meta.StructureMeta
+  parent: EvilDICOM.CV.RT.Meta
+  name: StructureMeta
+  nameWithType: StructureMeta
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta
+- uid: EvilDICOM.CV.RT.Meta.StructureSetMeta
+  commentId: T:EvilDICOM.CV.RT.Meta.StructureSetMeta
+  parent: EvilDICOM.CV.RT.Meta
+  name: StructureSetMeta
+  nameWithType: StructureSetMeta
+  fullName: EvilDICOM.CV.RT.Meta.StructureSetMeta
+- uid: EvilDICOM.CV.RT.Meta
+  commentId: N:EvilDICOM.CV.RT.Meta
+  name: EvilDICOM.CV.RT.Meta
+  nameWithType: EvilDICOM.CV.RT.Meta
+  fullName: EvilDICOM.CV.RT.Meta

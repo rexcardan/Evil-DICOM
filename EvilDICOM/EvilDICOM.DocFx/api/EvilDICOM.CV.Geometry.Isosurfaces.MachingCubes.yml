@@ -1,0 +1,753 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes
+  commentId: T:EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes
+  id: MachingCubes
+  parent: EvilDICOM.CV.Geometry.Isosurfaces
+  children:
+  - EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(EvilDICOM.CV.Image.Matrix,System.Double)
+  - EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(System.Int16[],System.Int32[],System.Int32,System.Single[],System.Double,System.Int32)
+  - EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(System.Single[],System.Int32[],System.Int32,System.Single[],System.Double,System.Int32)
+  - EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Lerp(System.Single[],System.Single[],System.Single)
+  langs:
+  - csharp
+  - vb
+  name: MachingCubes
+  nameWithType: MachingCubes
+  fullName: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Geometry/Isosurfaces/MarchingCubes.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MachingCubes
+    path: ../EvilDICOM.CV/Geometry/Isosurfaces/MarchingCubes.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Geometry.Isosurfaces
+  syntax:
+    content: public class MachingCubes
+    content.vb: Public Class MachingCubes
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(EvilDICOM.CV.Image.Matrix,System.Double)
+  commentId: M:EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(EvilDICOM.CV.Image.Matrix,System.Double)
+  id: Calculate(EvilDICOM.CV.Image.Matrix,System.Double)
+  parent: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes
+  langs:
+  - csharp
+  - vb
+  name: Calculate(Matrix, Double)
+  nameWithType: MachingCubes.Calculate(Matrix, Double)
+  fullName: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(EvilDICOM.CV.Image.Matrix, System.Double)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Geometry/Isosurfaces/MarchingCubes.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Calculate
+    path: ../EvilDICOM.CV/Geometry/Isosurfaces/MarchingCubes.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Geometry.Isosurfaces
+  syntax:
+    content: public static Mesh Calculate(Matrix mat, double isodoseLevel)
+    parameters:
+    - id: mat
+      type: EvilDICOM.CV.Image.Matrix
+    - id: isodoseLevel
+      type: System.Double
+    return:
+      type: EvilDICOM.CV.Geometry.Mesh
+    content.vb: Public Shared Function Calculate(mat As Matrix, isodoseLevel As Double) As Mesh
+  overload: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(System.Single[],System.Int32[],System.Int32,System.Single[],System.Double,System.Int32)
+  commentId: M:EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(System.Single[],System.Int32[],System.Int32,System.Single[],System.Double,System.Int32)
+  id: Calculate(System.Single[],System.Int32[],System.Int32,System.Single[],System.Double,System.Int32)
+  parent: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes
+  langs:
+  - csharp
+  - vb
+  name: Calculate(Single[], Int32[], Int32, Single[], Double, Int32)
+  nameWithType: MachingCubes.Calculate(Single[], Int32[], Int32, Single[], Double, Int32)
+  fullName: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(System.Single[], System.Int32[], System.Int32, System.Single[], System.Double, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Geometry/Isosurfaces/MarchingCubes.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Calculate
+    path: ../EvilDICOM.CV/Geometry/Isosurfaces/MarchingCubes.cs
+    startLine: 29
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Geometry.Isosurfaces
+  syntax:
+    content: public static Mesh Calculate(float[] values, int[] volDim, int volZFull, float[] voxDim, double isoLevel, int offset = 0)
+    parameters:
+    - id: values
+      type: System.Single[]
+    - id: volDim
+      type: System.Int32[]
+    - id: volZFull
+      type: System.Int32
+    - id: voxDim
+      type: System.Single[]
+    - id: isoLevel
+      type: System.Double
+    - id: offset
+      type: System.Int32
+    return:
+      type: EvilDICOM.CV.Geometry.Mesh
+    content.vb: Public Shared Function Calculate(values As Single(), volDim As Integer(), volZFull As Integer, voxDim As Single(), isoLevel As Double, offset As Integer = 0) As Mesh
+  overload: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate*
+  nameWithType.vb: MachingCubes.Calculate(Single(), Int32(), Int32, Single(), Double, Int32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(System.Single(), System.Int32(), System.Int32, System.Single(), System.Double, System.Int32)
+  name.vb: Calculate(Single(), Int32(), Int32, Single(), Double, Int32)
+- uid: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(System.Int16[],System.Int32[],System.Int32,System.Single[],System.Double,System.Int32)
+  commentId: M:EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(System.Int16[],System.Int32[],System.Int32,System.Single[],System.Double,System.Int32)
+  id: Calculate(System.Int16[],System.Int32[],System.Int32,System.Single[],System.Double,System.Int32)
+  parent: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes
+  langs:
+  - csharp
+  - vb
+  name: Calculate(Int16[], Int32[], Int32, Single[], Double, Int32)
+  nameWithType: MachingCubes.Calculate(Int16[], Int32[], Int32, Single[], Double, Int32)
+  fullName: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(System.Int16[], System.Int32[], System.Int32, System.Single[], System.Double, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Geometry/Isosurfaces/MarchingCubes.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Calculate
+    path: ../EvilDICOM.CV/Geometry/Isosurfaces/MarchingCubes.cs
+    startLine: 197
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Geometry.Isosurfaces
+  syntax:
+    content: public static List<Triangle> Calculate(short[] values, int[] volDim, int volZFull, float[] voxDim, double isoLevel, int offset = 0)
+    parameters:
+    - id: values
+      type: System.Int16[]
+    - id: volDim
+      type: System.Int32[]
+    - id: volZFull
+      type: System.Int32
+    - id: voxDim
+      type: System.Single[]
+    - id: isoLevel
+      type: System.Double
+    - id: offset
+      type: System.Int32
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.CV.Geometry.Triangle}
+    content.vb: Public Shared Function Calculate(values As Short(), volDim As Integer(), volZFull As Integer, voxDim As Single(), isoLevel As Double, offset As Integer = 0) As List(Of Triangle)
+  overload: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate*
+  nameWithType.vb: MachingCubes.Calculate(Int16(), Int32(), Int32, Single(), Double, Int32)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate(System.Int16(), System.Int32(), System.Int32, System.Single(), System.Double, System.Int32)
+  name.vb: Calculate(Int16(), Int32(), Int32, Single(), Double, Int32)
+- uid: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Lerp(System.Single[],System.Single[],System.Single)
+  commentId: M:EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Lerp(System.Single[],System.Single[],System.Single)
+  id: Lerp(System.Single[],System.Single[],System.Single)
+  parent: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes
+  langs:
+  - csharp
+  - vb
+  name: Lerp(Single[], Single[], Single)
+  nameWithType: MachingCubes.Lerp(Single[], Single[], Single)
+  fullName: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Lerp(System.Single[], System.Single[], System.Single)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Geometry/Isosurfaces/MarchingCubes.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Lerp
+    path: ../EvilDICOM.CV/Geometry/Isosurfaces/MarchingCubes.cs
+    startLine: 370
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Geometry.Isosurfaces
+  summary: "\nLinearly interpolates between two vectors\n"
+  example: []
+  syntax:
+    content: public static float[] Lerp(float[] vec1, float[] vec2, float alpha)
+    parameters:
+    - id: vec1
+      type: System.Single[]
+      description: vector 1
+    - id: vec2
+      type: System.Single[]
+      description: vector 2
+    - id: alpha
+      type: System.Single
+      description: interpolate parameter
+    return:
+      type: System.Single[]
+      description: ''
+    content.vb: Public Shared Function Lerp(vec1 As Single(), vec2 As Single(), alpha As Single) As Single()
+  overload: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Lerp*
+  nameWithType.vb: MachingCubes.Lerp(Single(), Single(), Single)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Lerp(System.Single(), System.Single(), System.Single)
+  name.vb: Lerp(Single(), Single(), Single)
+references:
+- uid: EvilDICOM.CV.Geometry.Isosurfaces
+  commentId: N:EvilDICOM.CV.Geometry.Isosurfaces
+  name: EvilDICOM.CV.Geometry.Isosurfaces
+  nameWithType: EvilDICOM.CV.Geometry.Isosurfaces
+  fullName: EvilDICOM.CV.Geometry.Isosurfaces
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate*
+  commentId: Overload:EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate
+  name: Calculate
+  nameWithType: MachingCubes.Calculate
+  fullName: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Calculate
+- uid: EvilDICOM.CV.Image.Matrix
+  commentId: T:EvilDICOM.CV.Image.Matrix
+  parent: EvilDICOM.CV.Image
+  name: Matrix
+  nameWithType: Matrix
+  fullName: EvilDICOM.CV.Image.Matrix
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: EvilDICOM.CV.Geometry.Mesh
+  commentId: T:EvilDICOM.CV.Geometry.Mesh
+  parent: EvilDICOM.CV.Geometry
+  name: Mesh
+  nameWithType: Mesh
+  fullName: EvilDICOM.CV.Geometry.Mesh
+- uid: EvilDICOM.CV.Image
+  commentId: N:EvilDICOM.CV.Image
+  name: EvilDICOM.CV.Image
+  nameWithType: EvilDICOM.CV.Image
+  fullName: EvilDICOM.CV.Image
+- uid: EvilDICOM.CV.Geometry
+  commentId: N:EvilDICOM.CV.Geometry
+  name: EvilDICOM.CV.Geometry
+  nameWithType: EvilDICOM.CV.Geometry
+  fullName: EvilDICOM.CV.Geometry
+- uid: System.Single[]
+  isExternal: true
+  name: Single[]
+  nameWithType: Single[]
+  fullName: System.Single[]
+  nameWithType.vb: Single()
+  fullName.vb: System.Single()
+  name.vb: Single()
+  spec.csharp:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Int32[]
+  isExternal: true
+  name: Int32[]
+  nameWithType: Int32[]
+  fullName: System.Int32[]
+  nameWithType.vb: Int32()
+  fullName.vb: System.Int32()
+  name.vb: Int32()
+  spec.csharp:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: System.Int16[]
+  isExternal: true
+  name: Int16[]
+  nameWithType: Int16[]
+  fullName: System.Int16[]
+  nameWithType.vb: Int16()
+  fullName.vb: System.Int16()
+  name.vb: Int16()
+  spec.csharp:
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: System.Collections.Generic.List{EvilDICOM.CV.Geometry.Triangle}
+  commentId: T:System.Collections.Generic.List{EvilDICOM.CV.Geometry.Triangle}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Triangle>
+  nameWithType: List<Triangle>
+  fullName: System.Collections.Generic.List<EvilDICOM.CV.Geometry.Triangle>
+  nameWithType.vb: List(Of Triangle)
+  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.CV.Geometry.Triangle)
+  name.vb: List(Of Triangle)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.CV.Geometry.Triangle
+    name: Triangle
+    nameWithType: Triangle
+    fullName: EvilDICOM.CV.Geometry.Triangle
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.CV.Geometry.Triangle
+    name: Triangle
+    nameWithType: Triangle
+    fullName: EvilDICOM.CV.Geometry.Triangle
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Lerp*
+  commentId: Overload:EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Lerp
+  name: Lerp
+  nameWithType: MachingCubes.Lerp
+  fullName: EvilDICOM.CV.Geometry.Isosurfaces.MachingCubes.Lerp
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single

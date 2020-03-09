@@ -1,0 +1,616 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  id: DICOMIOSettings
+  parent: EvilDICOM.Core.IO.Writing
+  children:
+  - EvilDICOM.Core.IO.Writing.DICOMIOSettings.Default
+  - EvilDICOM.Core.IO.Writing.DICOMIOSettings.DefaultExplicit
+  - EvilDICOM.Core.IO.Writing.DICOMIOSettings.DoWriteIndefiniteSequences
+  - EvilDICOM.Core.IO.Writing.DICOMIOSettings.GetFileMetaSettings
+  - EvilDICOM.Core.IO.Writing.DICOMIOSettings.StringEncoding
+  - EvilDICOM.Core.IO.Writing.DICOMIOSettings.TransferSyntax
+  langs:
+  - csharp
+  - vb
+  name: DICOMIOSettings
+  nameWithType: DICOMIOSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOMIOSettings
+    path: ../EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public class DICOMIOSettings
+    content.vb: Public Class DICOMIOSettings
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings.TransferSyntax
+  commentId: P:EvilDICOM.Core.IO.Writing.DICOMIOSettings.TransferSyntax
+  id: TransferSyntax
+  parent: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  langs:
+  - csharp
+  - vb
+  name: TransferSyntax
+  nameWithType: DICOMIOSettings.TransferSyntax
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings.TransferSyntax
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: TransferSyntax
+    path: ../EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public TransferSyntax TransferSyntax { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Enums.TransferSyntax
+    content.vb: Public Property TransferSyntax As TransferSyntax
+  overload: EvilDICOM.Core.IO.Writing.DICOMIOSettings.TransferSyntax*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings.DoWriteIndefiniteSequences
+  commentId: P:EvilDICOM.Core.IO.Writing.DICOMIOSettings.DoWriteIndefiniteSequences
+  id: DoWriteIndefiniteSequences
+  parent: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  langs:
+  - csharp
+  - vb
+  name: DoWriteIndefiniteSequences
+  nameWithType: DICOMIOSettings.DoWriteIndefiniteSequences
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings.DoWriteIndefiniteSequences
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DoWriteIndefiniteSequences
+    path: ../EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public bool DoWriteIndefiniteSequences { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property DoWriteIndefiniteSequences As Boolean
+  overload: EvilDICOM.Core.IO.Writing.DICOMIOSettings.DoWriteIndefiniteSequences*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings.StringEncoding
+  commentId: P:EvilDICOM.Core.IO.Writing.DICOMIOSettings.StringEncoding
+  id: StringEncoding
+  parent: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  langs:
+  - csharp
+  - vb
+  name: StringEncoding
+  nameWithType: DICOMIOSettings.StringEncoding
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings.StringEncoding
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StringEncoding
+    path: ../EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public StringEncoding StringEncoding { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Enums.StringEncoding
+    content.vb: Public Property StringEncoding As StringEncoding
+  overload: EvilDICOM.Core.IO.Writing.DICOMIOSettings.StringEncoding*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings.Default
+  commentId: M:EvilDICOM.Core.IO.Writing.DICOMIOSettings.Default
+  id: Default
+  parent: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  langs:
+  - csharp
+  - vb
+  name: Default()
+  nameWithType: DICOMIOSettings.Default()
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings.Default()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Default
+    path: ../EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static DICOMIOSettings Default()
+    return:
+      type: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+    content.vb: Public Shared Function Default As DICOMIOSettings
+  overload: EvilDICOM.Core.IO.Writing.DICOMIOSettings.Default*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings.DefaultExplicit
+  commentId: M:EvilDICOM.Core.IO.Writing.DICOMIOSettings.DefaultExplicit
+  id: DefaultExplicit
+  parent: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  langs:
+  - csharp
+  - vb
+  name: DefaultExplicit()
+  nameWithType: DICOMIOSettings.DefaultExplicit()
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings.DefaultExplicit()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DefaultExplicit
+    path: ../EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  syntax:
+    content: public static DICOMIOSettings DefaultExplicit()
+    return:
+      type: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+    content.vb: Public Shared Function DefaultExplicit As DICOMIOSettings
+  overload: EvilDICOM.Core.IO.Writing.DICOMIOSettings.DefaultExplicit*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings.GetFileMetaSettings
+  commentId: M:EvilDICOM.Core.IO.Writing.DICOMIOSettings.GetFileMetaSettings
+  id: GetFileMetaSettings
+  parent: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  langs:
+  - csharp
+  - vb
+  name: GetFileMetaSettings()
+  nameWithType: DICOMIOSettings.GetFileMetaSettings()
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings.GetFileMetaSettings()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetFileMetaSettings
+    path: ../EvilDICOM/Core/IO/Writing/DICOMIOSettings.cs
+    startLine: 38
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Writing
+  summary: "\nWrite settings when writing the meta header group 0002\n"
+  example: []
+  syntax:
+    content: public DICOMIOSettings GetFileMetaSettings()
+    return:
+      type: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+      description: ''
+    content.vb: Public Function GetFileMetaSettings As DICOMIOSettings
+  overload: EvilDICOM.Core.IO.Writing.DICOMIOSettings.GetFileMetaSettings*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Core.IO.Writing
+  commentId: N:EvilDICOM.Core.IO.Writing
+  name: EvilDICOM.Core.IO.Writing
+  nameWithType: EvilDICOM.Core.IO.Writing
+  fullName: EvilDICOM.Core.IO.Writing
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings.TransferSyntax*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DICOMIOSettings.TransferSyntax
+  name: TransferSyntax
+  nameWithType: DICOMIOSettings.TransferSyntax
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings.TransferSyntax
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  commentId: T:EvilDICOM.Core.Enums.TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  name: TransferSyntax
+  nameWithType: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings.DoWriteIndefiniteSequences*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DICOMIOSettings.DoWriteIndefiniteSequences
+  name: DoWriteIndefiniteSequences
+  nameWithType: DICOMIOSettings.DoWriteIndefiniteSequences
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings.DoWriteIndefiniteSequences
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings.StringEncoding*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DICOMIOSettings.StringEncoding
+  name: StringEncoding
+  nameWithType: DICOMIOSettings.StringEncoding
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings.StringEncoding
+- uid: EvilDICOM.Core.Enums.StringEncoding
+  commentId: T:EvilDICOM.Core.Enums.StringEncoding
+  parent: EvilDICOM.Core.Enums
+  name: StringEncoding
+  nameWithType: StringEncoding
+  fullName: EvilDICOM.Core.Enums.StringEncoding
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings.Default*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DICOMIOSettings.Default
+  name: Default
+  nameWithType: DICOMIOSettings.Default
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings.Default
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  parent: EvilDICOM.Core.IO.Writing
+  name: DICOMIOSettings
+  nameWithType: DICOMIOSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings.DefaultExplicit*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DICOMIOSettings.DefaultExplicit
+  name: DefaultExplicit
+  nameWithType: DICOMIOSettings.DefaultExplicit
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings.DefaultExplicit
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings.GetFileMetaSettings*
+  commentId: Overload:EvilDICOM.Core.IO.Writing.DICOMIOSettings.GetFileMetaSettings
+  name: GetFileMetaSettings
+  nameWithType: DICOMIOSettings.GetFileMetaSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings.GetFileMetaSettings

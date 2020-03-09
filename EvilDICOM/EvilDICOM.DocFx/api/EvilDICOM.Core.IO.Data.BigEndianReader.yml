@@ -1,0 +1,2513 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader
+  commentId: T:EvilDICOM.Core.IO.Data.BigEndianReader
+  id: BigEndianReader
+  parent: EvilDICOM.Core.IO.Data
+  children:
+  - EvilDICOM.Core.IO.Data.BigEndianReader.AttributeTag(EvilDICOM.Core.Element.Tag,System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecision(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecisionSingle(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLong(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLongSingle(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShort(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShortSingle(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLong(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLongSingle(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecision(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecisionSingle(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadTag(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadTagSingle(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLong(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLongSingle(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShort(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShortSingle(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLong(System.Byte[])
+  - EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLongSingle(System.Byte[])
+  langs:
+  - csharp
+  - vb
+  name: BigEndianReader
+  nameWithType: BigEndianReader
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: BigEndianReader
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: 'public class BigEndianReader : AbstractBinaryDataReader'
+    content.vb: >-
+      Public Class BigEndianReader
+          Inherits AbstractBinaryDataReader
+  inheritance:
+  - System.Object
+  - EvilDICOM.Core.IO.Data.AbstractBinaryDataReader
+  inheritedMembers:
+  - EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadTag(System.Byte[],System.Func{System.Byte[],EvilDICOM.Core.Element.Tag})
+  - EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSinglePrecision(System.Byte[],System.Func{System.Byte[],System.Single})
+  - EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadDoublePrecision(System.Byte[],System.Func{System.Byte[],System.Double})
+  - EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedLong(System.Byte[],System.Func{System.Byte[],System.Int32})
+  - EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedVeryLong(System.Byte[],System.Func{System.Byte[],System.Int64})
+  - EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedLong(System.Byte[],System.Func{System.Byte[],System.UInt32})
+  - EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedVeryLong(System.Byte[],System.Func{System.Byte[],System.UInt64})
+  - EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedShort(System.Byte[],System.Func{System.Byte[],System.Int16})
+  - EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedShort(System.Byte[],System.Func{System.Byte[],System.UInt16})
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.AttributeTag(EvilDICOM.Core.Element.Tag,System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.AttributeTag(EvilDICOM.Core.Element.Tag,System.Byte[])
+  id: AttributeTag(EvilDICOM.Core.Element.Tag,System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: AttributeTag(Tag, Byte[])
+  nameWithType: BigEndianReader.AttributeTag(Tag, Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.AttributeTag(EvilDICOM.Core.Element.Tag, System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AttributeTag
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static AttributeTag AttributeTag(Tag tag, byte[] data)
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+    - id: data
+      type: System.Byte[]
+    return:
+      type: EvilDICOM.Core.Element.AttributeTag
+    content.vb: Public Shared Function AttributeTag(tag As Tag, data As Byte()) As AttributeTag
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.AttributeTag*
+  nameWithType.vb: BigEndianReader.AttributeTag(Tag, Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.AttributeTag(EvilDICOM.Core.Element.Tag, System.Byte())
+  name.vb: AttributeTag(Tag, Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadTag(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadTag(System.Byte[])
+  id: ReadTag(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadTag(Byte[])
+  nameWithType: BigEndianReader.ReadTag(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadTag(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadTag
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static Tag ReadTag(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: EvilDICOM.Core.Element.Tag
+    content.vb: Public Shared Function ReadTag(data As Byte()) As Tag
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadTag*
+  nameWithType.vb: BigEndianReader.ReadTag(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadTag(System.Byte())
+  name.vb: ReadTag(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecision(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecision(System.Byte[])
+  id: ReadSinglePrecision(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadSinglePrecision(Byte[])
+  nameWithType: BigEndianReader.ReadSinglePrecision(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecision(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadSinglePrecision
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static float[] ReadSinglePrecision(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Single[]
+    content.vb: Public Shared Function ReadSinglePrecision(data As Byte()) As Single()
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecision*
+  nameWithType.vb: BigEndianReader.ReadSinglePrecision(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecision(System.Byte())
+  name.vb: ReadSinglePrecision(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecision(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecision(System.Byte[])
+  id: ReadDoublePrecision(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadDoublePrecision(Byte[])
+  nameWithType: BigEndianReader.ReadDoublePrecision(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecision(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadDoublePrecision
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 30
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static double[] ReadDoublePrecision(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Double[]
+    content.vb: Public Shared Function ReadDoublePrecision(data As Byte()) As Double()
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecision*
+  nameWithType.vb: BigEndianReader.ReadDoublePrecision(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecision(System.Byte())
+  name.vb: ReadDoublePrecision(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLong(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLong(System.Byte[])
+  id: ReadSignedLong(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadSignedLong(Byte[])
+  nameWithType: BigEndianReader.ReadSignedLong(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLong(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadSignedLong
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 35
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static int[] ReadSignedLong(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Int32[]
+    content.vb: Public Shared Function ReadSignedLong(data As Byte()) As Integer()
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLong*
+  nameWithType.vb: BigEndianReader.ReadSignedLong(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLong(System.Byte())
+  name.vb: ReadSignedLong(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLong(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLong(System.Byte[])
+  id: ReadUnsignedLong(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadUnsignedLong(Byte[])
+  nameWithType: BigEndianReader.ReadUnsignedLong(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLong(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadUnsignedLong
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 40
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static uint[] ReadUnsignedLong(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.UInt32[]
+    content.vb: Public Shared Function ReadUnsignedLong(data As Byte()) As UInteger()
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLong*
+  nameWithType.vb: BigEndianReader.ReadUnsignedLong(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLong(System.Byte())
+  name.vb: ReadUnsignedLong(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShort(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShort(System.Byte[])
+  id: ReadSignedShort(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadSignedShort(Byte[])
+  nameWithType: BigEndianReader.ReadSignedShort(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShort(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadSignedShort
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 45
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static short[] ReadSignedShort(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Int16[]
+    content.vb: Public Shared Function ReadSignedShort(data As Byte()) As Short()
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShort*
+  nameWithType.vb: BigEndianReader.ReadSignedShort(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShort(System.Byte())
+  name.vb: ReadSignedShort(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShort(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShort(System.Byte[])
+  id: ReadUnsignedShort(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadUnsignedShort(Byte[])
+  nameWithType: BigEndianReader.ReadUnsignedShort(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShort(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadUnsignedShort
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 50
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static ushort[] ReadUnsignedShort(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.UInt16[]
+    content.vb: Public Shared Function ReadUnsignedShort(data As Byte()) As UShort()
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShort*
+  nameWithType.vb: BigEndianReader.ReadUnsignedShort(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShort(System.Byte())
+  name.vb: ReadUnsignedShort(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLong(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLong(System.Byte[])
+  id: ReadSignedVeryLong(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadSignedVeryLong(Byte[])
+  nameWithType: BigEndianReader.ReadSignedVeryLong(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLong(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadSignedVeryLong
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 55
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static long[] ReadSignedVeryLong(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Int64[]
+    content.vb: Public Shared Function ReadSignedVeryLong(data As Byte()) As Long()
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLong*
+  nameWithType.vb: BigEndianReader.ReadSignedVeryLong(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLong(System.Byte())
+  name.vb: ReadSignedVeryLong(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLong(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLong(System.Byte[])
+  id: ReadUnsignedVeryLong(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadUnsignedVeryLong(Byte[])
+  nameWithType: BigEndianReader.ReadUnsignedVeryLong(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLong(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadUnsignedVeryLong
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 60
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static ulong[] ReadUnsignedVeryLong(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.UInt64[]
+    content.vb: Public Shared Function ReadUnsignedVeryLong(data As Byte()) As ULong()
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLong*
+  nameWithType.vb: BigEndianReader.ReadUnsignedVeryLong(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLong(System.Byte())
+  name.vb: ReadUnsignedVeryLong(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecisionSingle(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecisionSingle(System.Byte[])
+  id: ReadSinglePrecisionSingle(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadSinglePrecisionSingle(Byte[])
+  nameWithType: BigEndianReader.ReadSinglePrecisionSingle(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecisionSingle(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadSinglePrecisionSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 67
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static float ReadSinglePrecisionSingle(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Single
+    content.vb: Public Shared Function ReadSinglePrecisionSingle(data As Byte()) As Single
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecisionSingle*
+  nameWithType.vb: BigEndianReader.ReadSinglePrecisionSingle(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecisionSingle(System.Byte())
+  name.vb: ReadSinglePrecisionSingle(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadTagSingle(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadTagSingle(System.Byte[])
+  id: ReadTagSingle(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadTagSingle(Byte[])
+  nameWithType: BigEndianReader.ReadTagSingle(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadTagSingle(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadTagSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 72
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static Tag ReadTagSingle(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: EvilDICOM.Core.Element.Tag
+    content.vb: Public Shared Function ReadTagSingle(data As Byte()) As Tag
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadTagSingle*
+  nameWithType.vb: BigEndianReader.ReadTagSingle(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadTagSingle(System.Byte())
+  name.vb: ReadTagSingle(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecisionSingle(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecisionSingle(System.Byte[])
+  id: ReadDoublePrecisionSingle(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadDoublePrecisionSingle(Byte[])
+  nameWithType: BigEndianReader.ReadDoublePrecisionSingle(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecisionSingle(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadDoublePrecisionSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 77
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static double ReadDoublePrecisionSingle(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Double
+    content.vb: Public Shared Function ReadDoublePrecisionSingle(data As Byte()) As Double
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecisionSingle*
+  nameWithType.vb: BigEndianReader.ReadDoublePrecisionSingle(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecisionSingle(System.Byte())
+  name.vb: ReadDoublePrecisionSingle(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLongSingle(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLongSingle(System.Byte[])
+  id: ReadSignedVeryLongSingle(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadSignedVeryLongSingle(Byte[])
+  nameWithType: BigEndianReader.ReadSignedVeryLongSingle(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLongSingle(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadSignedVeryLongSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 82
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static long ReadSignedVeryLongSingle(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Int64
+    content.vb: Public Shared Function ReadSignedVeryLongSingle(data As Byte()) As Long
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLongSingle*
+  nameWithType.vb: BigEndianReader.ReadSignedVeryLongSingle(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLongSingle(System.Byte())
+  name.vb: ReadSignedVeryLongSingle(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLongSingle(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLongSingle(System.Byte[])
+  id: ReadSignedLongSingle(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadSignedLongSingle(Byte[])
+  nameWithType: BigEndianReader.ReadSignedLongSingle(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLongSingle(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadSignedLongSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 87
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static int ReadSignedLongSingle(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Int32
+    content.vb: Public Shared Function ReadSignedLongSingle(data As Byte()) As Integer
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLongSingle*
+  nameWithType.vb: BigEndianReader.ReadSignedLongSingle(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLongSingle(System.Byte())
+  name.vb: ReadSignedLongSingle(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLongSingle(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLongSingle(System.Byte[])
+  id: ReadUnsignedLongSingle(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadUnsignedLongSingle(Byte[])
+  nameWithType: BigEndianReader.ReadUnsignedLongSingle(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLongSingle(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadUnsignedLongSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 92
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static uint ReadUnsignedLongSingle(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.UInt32
+    content.vb: Public Shared Function ReadUnsignedLongSingle(data As Byte()) As UInteger
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLongSingle*
+  nameWithType.vb: BigEndianReader.ReadUnsignedLongSingle(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLongSingle(System.Byte())
+  name.vb: ReadUnsignedLongSingle(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLongSingle(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLongSingle(System.Byte[])
+  id: ReadUnsignedVeryLongSingle(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadUnsignedVeryLongSingle(Byte[])
+  nameWithType: BigEndianReader.ReadUnsignedVeryLongSingle(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLongSingle(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadUnsignedVeryLongSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 97
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static ulong ReadUnsignedVeryLongSingle(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.UInt64
+    content.vb: Public Shared Function ReadUnsignedVeryLongSingle(data As Byte()) As ULong
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLongSingle*
+  nameWithType.vb: BigEndianReader.ReadUnsignedVeryLongSingle(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLongSingle(System.Byte())
+  name.vb: ReadUnsignedVeryLongSingle(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShortSingle(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShortSingle(System.Byte[])
+  id: ReadSignedShortSingle(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadSignedShortSingle(Byte[])
+  nameWithType: BigEndianReader.ReadSignedShortSingle(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShortSingle(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadSignedShortSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 102
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static short ReadSignedShortSingle(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.Int16
+    content.vb: Public Shared Function ReadSignedShortSingle(data As Byte()) As Short
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShortSingle*
+  nameWithType.vb: BigEndianReader.ReadSignedShortSingle(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShortSingle(System.Byte())
+  name.vb: ReadSignedShortSingle(Byte())
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShortSingle(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShortSingle(System.Byte[])
+  id: ReadUnsignedShortSingle(System.Byte[])
+  parent: EvilDICOM.Core.IO.Data.BigEndianReader
+  langs:
+  - csharp
+  - vb
+  name: ReadUnsignedShortSingle(Byte[])
+  nameWithType: BigEndianReader.ReadUnsignedShortSingle(Byte[])
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShortSingle(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadUnsignedShortSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianReader.cs
+    startLine: 107
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static ushort ReadUnsignedShortSingle(byte[] data)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    return:
+      type: System.UInt16
+    content.vb: Public Shared Function ReadUnsignedShortSingle(data As Byte()) As UShort
+  overload: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShortSingle*
+  nameWithType.vb: BigEndianReader.ReadUnsignedShortSingle(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShortSingle(System.Byte())
+  name.vb: ReadUnsignedShortSingle(Byte())
+references:
+- uid: EvilDICOM.Core.IO.Data
+  commentId: N:EvilDICOM.Core.IO.Data
+  name: EvilDICOM.Core.IO.Data
+  nameWithType: EvilDICOM.Core.IO.Data
+  fullName: EvilDICOM.Core.IO.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader
+  commentId: T:EvilDICOM.Core.IO.Data.AbstractBinaryDataReader
+  parent: EvilDICOM.Core.IO.Data
+  name: AbstractBinaryDataReader
+  nameWithType: AbstractBinaryDataReader
+  fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader
+- uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadTag(System.Byte[],System.Func{System.Byte[],EvilDICOM.Core.Element.Tag})
+  commentId: M:EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadTag(System.Byte[],System.Func{System.Byte[],EvilDICOM.Core.Element.Tag})
+  parent: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader
+  isExternal: true
+  name: ReadTag(Byte[], Func<Byte[], Tag>)
+  nameWithType: AbstractBinaryDataReader.ReadTag(Byte[], Func<Byte[], Tag>)
+  fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadTag(System.Byte[], System.Func<System.Byte[], EvilDICOM.Core.Element.Tag>)
+  nameWithType.vb: AbstractBinaryDataReader.ReadTag(Byte(), Func(Of Byte(), Tag))
+  fullName.vb: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadTag(System.Byte(), System.Func(Of System.Byte(), EvilDICOM.Core.Element.Tag))
+  name.vb: ReadTag(Byte(), Func(Of Byte(), Tag))
+  spec.csharp:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadTag(System.Byte[],System.Func{System.Byte[],EvilDICOM.Core.Element.Tag})
+    name: ReadTag
+    nameWithType: AbstractBinaryDataReader.ReadTag
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadTag
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Core.Element.Tag
+    name: Tag
+    nameWithType: Tag
+    fullName: EvilDICOM.Core.Element.Tag
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadTag(System.Byte[],System.Func{System.Byte[],EvilDICOM.Core.Element.Tag})
+    name: ReadTag
+    nameWithType: AbstractBinaryDataReader.ReadTag
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadTag
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Core.Element.Tag
+    name: Tag
+    nameWithType: Tag
+    fullName: EvilDICOM.Core.Element.Tag
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSinglePrecision(System.Byte[],System.Func{System.Byte[],System.Single})
+  commentId: M:EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSinglePrecision(System.Byte[],System.Func{System.Byte[],System.Single})
+  parent: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader
+  isExternal: true
+  name: ReadSinglePrecision(Byte[], Func<Byte[], Single>)
+  nameWithType: AbstractBinaryDataReader.ReadSinglePrecision(Byte[], Func<Byte[], Single>)
+  fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSinglePrecision(System.Byte[], System.Func<System.Byte[], System.Single>)
+  nameWithType.vb: AbstractBinaryDataReader.ReadSinglePrecision(Byte(), Func(Of Byte(), Single))
+  fullName.vb: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSinglePrecision(System.Byte(), System.Func(Of System.Byte(), System.Single))
+  name.vb: ReadSinglePrecision(Byte(), Func(Of Byte(), Single))
+  spec.csharp:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSinglePrecision(System.Byte[],System.Func{System.Byte[],System.Single})
+    name: ReadSinglePrecision
+    nameWithType: AbstractBinaryDataReader.ReadSinglePrecision
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSinglePrecision
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSinglePrecision(System.Byte[],System.Func{System.Byte[],System.Single})
+    name: ReadSinglePrecision
+    nameWithType: AbstractBinaryDataReader.ReadSinglePrecision
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSinglePrecision
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadDoublePrecision(System.Byte[],System.Func{System.Byte[],System.Double})
+  commentId: M:EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadDoublePrecision(System.Byte[],System.Func{System.Byte[],System.Double})
+  parent: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader
+  isExternal: true
+  name: ReadDoublePrecision(Byte[], Func<Byte[], Double>)
+  nameWithType: AbstractBinaryDataReader.ReadDoublePrecision(Byte[], Func<Byte[], Double>)
+  fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadDoublePrecision(System.Byte[], System.Func<System.Byte[], System.Double>)
+  nameWithType.vb: AbstractBinaryDataReader.ReadDoublePrecision(Byte(), Func(Of Byte(), Double))
+  fullName.vb: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadDoublePrecision(System.Byte(), System.Func(Of System.Byte(), System.Double))
+  name.vb: ReadDoublePrecision(Byte(), Func(Of Byte(), Double))
+  spec.csharp:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadDoublePrecision(System.Byte[],System.Func{System.Byte[],System.Double})
+    name: ReadDoublePrecision
+    nameWithType: AbstractBinaryDataReader.ReadDoublePrecision
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadDoublePrecision
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadDoublePrecision(System.Byte[],System.Func{System.Byte[],System.Double})
+    name: ReadDoublePrecision
+    nameWithType: AbstractBinaryDataReader.ReadDoublePrecision
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadDoublePrecision
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedLong(System.Byte[],System.Func{System.Byte[],System.Int32})
+  commentId: M:EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedLong(System.Byte[],System.Func{System.Byte[],System.Int32})
+  parent: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader
+  isExternal: true
+  name: ReadSignedLong(Byte[], Func<Byte[], Int32>)
+  nameWithType: AbstractBinaryDataReader.ReadSignedLong(Byte[], Func<Byte[], Int32>)
+  fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedLong(System.Byte[], System.Func<System.Byte[], System.Int32>)
+  nameWithType.vb: AbstractBinaryDataReader.ReadSignedLong(Byte(), Func(Of Byte(), Int32))
+  fullName.vb: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedLong(System.Byte(), System.Func(Of System.Byte(), System.Int32))
+  name.vb: ReadSignedLong(Byte(), Func(Of Byte(), Int32))
+  spec.csharp:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedLong(System.Byte[],System.Func{System.Byte[],System.Int32})
+    name: ReadSignedLong
+    nameWithType: AbstractBinaryDataReader.ReadSignedLong
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedLong
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedLong(System.Byte[],System.Func{System.Byte[],System.Int32})
+    name: ReadSignedLong
+    nameWithType: AbstractBinaryDataReader.ReadSignedLong
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedLong
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedVeryLong(System.Byte[],System.Func{System.Byte[],System.Int64})
+  commentId: M:EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedVeryLong(System.Byte[],System.Func{System.Byte[],System.Int64})
+  parent: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader
+  isExternal: true
+  name: ReadSignedVeryLong(Byte[], Func<Byte[], Int64>)
+  nameWithType: AbstractBinaryDataReader.ReadSignedVeryLong(Byte[], Func<Byte[], Int64>)
+  fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedVeryLong(System.Byte[], System.Func<System.Byte[], System.Int64>)
+  nameWithType.vb: AbstractBinaryDataReader.ReadSignedVeryLong(Byte(), Func(Of Byte(), Int64))
+  fullName.vb: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedVeryLong(System.Byte(), System.Func(Of System.Byte(), System.Int64))
+  name.vb: ReadSignedVeryLong(Byte(), Func(Of Byte(), Int64))
+  spec.csharp:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedVeryLong(System.Byte[],System.Func{System.Byte[],System.Int64})
+    name: ReadSignedVeryLong
+    nameWithType: AbstractBinaryDataReader.ReadSignedVeryLong
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedVeryLong
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedVeryLong(System.Byte[],System.Func{System.Byte[],System.Int64})
+    name: ReadSignedVeryLong
+    nameWithType: AbstractBinaryDataReader.ReadSignedVeryLong
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedVeryLong
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedLong(System.Byte[],System.Func{System.Byte[],System.UInt32})
+  commentId: M:EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedLong(System.Byte[],System.Func{System.Byte[],System.UInt32})
+  parent: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader
+  isExternal: true
+  name: ReadUnsignedLong(Byte[], Func<Byte[], UInt32>)
+  nameWithType: AbstractBinaryDataReader.ReadUnsignedLong(Byte[], Func<Byte[], UInt32>)
+  fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedLong(System.Byte[], System.Func<System.Byte[], System.UInt32>)
+  nameWithType.vb: AbstractBinaryDataReader.ReadUnsignedLong(Byte(), Func(Of Byte(), UInt32))
+  fullName.vb: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedLong(System.Byte(), System.Func(Of System.Byte(), System.UInt32))
+  name.vb: ReadUnsignedLong(Byte(), Func(Of Byte(), UInt32))
+  spec.csharp:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedLong(System.Byte[],System.Func{System.Byte[],System.UInt32})
+    name: ReadUnsignedLong
+    nameWithType: AbstractBinaryDataReader.ReadUnsignedLong
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedLong
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedLong(System.Byte[],System.Func{System.Byte[],System.UInt32})
+    name: ReadUnsignedLong
+    nameWithType: AbstractBinaryDataReader.ReadUnsignedLong
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedLong
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedVeryLong(System.Byte[],System.Func{System.Byte[],System.UInt64})
+  commentId: M:EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedVeryLong(System.Byte[],System.Func{System.Byte[],System.UInt64})
+  parent: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader
+  isExternal: true
+  name: ReadUnsignedVeryLong(Byte[], Func<Byte[], UInt64>)
+  nameWithType: AbstractBinaryDataReader.ReadUnsignedVeryLong(Byte[], Func<Byte[], UInt64>)
+  fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedVeryLong(System.Byte[], System.Func<System.Byte[], System.UInt64>)
+  nameWithType.vb: AbstractBinaryDataReader.ReadUnsignedVeryLong(Byte(), Func(Of Byte(), UInt64))
+  fullName.vb: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedVeryLong(System.Byte(), System.Func(Of System.Byte(), System.UInt64))
+  name.vb: ReadUnsignedVeryLong(Byte(), Func(Of Byte(), UInt64))
+  spec.csharp:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedVeryLong(System.Byte[],System.Func{System.Byte[],System.UInt64})
+    name: ReadUnsignedVeryLong
+    nameWithType: AbstractBinaryDataReader.ReadUnsignedVeryLong
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedVeryLong
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedVeryLong(System.Byte[],System.Func{System.Byte[],System.UInt64})
+    name: ReadUnsignedVeryLong
+    nameWithType: AbstractBinaryDataReader.ReadUnsignedVeryLong
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedVeryLong
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedShort(System.Byte[],System.Func{System.Byte[],System.Int16})
+  commentId: M:EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedShort(System.Byte[],System.Func{System.Byte[],System.Int16})
+  parent: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader
+  isExternal: true
+  name: ReadSignedShort(Byte[], Func<Byte[], Int16>)
+  nameWithType: AbstractBinaryDataReader.ReadSignedShort(Byte[], Func<Byte[], Int16>)
+  fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedShort(System.Byte[], System.Func<System.Byte[], System.Int16>)
+  nameWithType.vb: AbstractBinaryDataReader.ReadSignedShort(Byte(), Func(Of Byte(), Int16))
+  fullName.vb: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedShort(System.Byte(), System.Func(Of System.Byte(), System.Int16))
+  name.vb: ReadSignedShort(Byte(), Func(Of Byte(), Int16))
+  spec.csharp:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedShort(System.Byte[],System.Func{System.Byte[],System.Int16})
+    name: ReadSignedShort
+    nameWithType: AbstractBinaryDataReader.ReadSignedShort
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedShort
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedShort(System.Byte[],System.Func{System.Byte[],System.Int16})
+    name: ReadSignedShort
+    nameWithType: AbstractBinaryDataReader.ReadSignedShort
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadSignedShort
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedShort(System.Byte[],System.Func{System.Byte[],System.UInt16})
+  commentId: M:EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedShort(System.Byte[],System.Func{System.Byte[],System.UInt16})
+  parent: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader
+  isExternal: true
+  name: ReadUnsignedShort(Byte[], Func<Byte[], UInt16>)
+  nameWithType: AbstractBinaryDataReader.ReadUnsignedShort(Byte[], Func<Byte[], UInt16>)
+  fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedShort(System.Byte[], System.Func<System.Byte[], System.UInt16>)
+  nameWithType.vb: AbstractBinaryDataReader.ReadUnsignedShort(Byte(), Func(Of Byte(), UInt16))
+  fullName.vb: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedShort(System.Byte(), System.Func(Of System.Byte(), System.UInt16))
+  name.vb: ReadUnsignedShort(Byte(), Func(Of Byte(), UInt16))
+  spec.csharp:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedShort(System.Byte[],System.Func{System.Byte[],System.UInt16})
+    name: ReadUnsignedShort
+    nameWithType: AbstractBinaryDataReader.ReadUnsignedShort
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedShort
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt16
+    name: UInt16
+    nameWithType: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedShort(System.Byte[],System.Func{System.Byte[],System.UInt16})
+    name: ReadUnsignedShort
+    nameWithType: AbstractBinaryDataReader.ReadUnsignedShort
+    fullName: EvilDICOM.Core.IO.Data.AbstractBinaryDataReader.ReadUnsignedShort
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Func`2
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.UInt16
+    name: UInt16
+    nameWithType: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.AttributeTag*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.AttributeTag
+  name: AttributeTag
+  nameWithType: BigEndianReader.AttributeTag
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.AttributeTag
+- uid: EvilDICOM.Core.Element.Tag
+  commentId: T:EvilDICOM.Core.Element.Tag
+  parent: EvilDICOM.Core.Element
+  name: Tag
+  nameWithType: Tag
+  fullName: EvilDICOM.Core.Element.Tag
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.Element.AttributeTag
+  commentId: T:EvilDICOM.Core.Element.AttributeTag
+  parent: EvilDICOM.Core.Element
+  name: AttributeTag
+  nameWithType: AttributeTag
+  fullName: EvilDICOM.Core.Element.AttributeTag
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadTag*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadTag
+  name: ReadTag
+  nameWithType: BigEndianReader.ReadTag
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadTag
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecision*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecision
+  name: ReadSinglePrecision
+  nameWithType: BigEndianReader.ReadSinglePrecision
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecision
+- uid: System.Single[]
+  isExternal: true
+  name: Single[]
+  nameWithType: Single[]
+  fullName: System.Single[]
+  nameWithType.vb: Single()
+  fullName.vb: System.Single()
+  name.vb: Single()
+  spec.csharp:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecision*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecision
+  name: ReadDoublePrecision
+  nameWithType: BigEndianReader.ReadDoublePrecision
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecision
+- uid: System.Double[]
+  isExternal: true
+  name: Double[]
+  nameWithType: Double[]
+  fullName: System.Double[]
+  nameWithType.vb: Double()
+  fullName.vb: System.Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLong*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLong
+  name: ReadSignedLong
+  nameWithType: BigEndianReader.ReadSignedLong
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLong
+- uid: System.Int32[]
+  isExternal: true
+  name: Int32[]
+  nameWithType: Int32[]
+  fullName: System.Int32[]
+  nameWithType.vb: Int32()
+  fullName.vb: System.Int32()
+  name.vb: Int32()
+  spec.csharp:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLong*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLong
+  name: ReadUnsignedLong
+  nameWithType: BigEndianReader.ReadUnsignedLong
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLong
+- uid: System.UInt32[]
+  isExternal: true
+  name: UInt32[]
+  nameWithType: UInt32[]
+  fullName: System.UInt32[]
+  nameWithType.vb: UInt32()
+  fullName.vb: System.UInt32()
+  name.vb: UInt32()
+  spec.csharp:
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShort*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShort
+  name: ReadSignedShort
+  nameWithType: BigEndianReader.ReadSignedShort
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShort
+- uid: System.Int16[]
+  isExternal: true
+  name: Int16[]
+  nameWithType: Int16[]
+  fullName: System.Int16[]
+  nameWithType.vb: Int16()
+  fullName.vb: System.Int16()
+  name.vb: Int16()
+  spec.csharp:
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShort*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShort
+  name: ReadUnsignedShort
+  nameWithType: BigEndianReader.ReadUnsignedShort
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShort
+- uid: System.UInt16[]
+  isExternal: true
+  name: UInt16[]
+  nameWithType: UInt16[]
+  fullName: System.UInt16[]
+  nameWithType.vb: UInt16()
+  fullName.vb: System.UInt16()
+  name.vb: UInt16()
+  spec.csharp:
+  - uid: System.UInt16
+    name: UInt16
+    nameWithType: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.UInt16
+    name: UInt16
+    nameWithType: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLong*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLong
+  name: ReadSignedVeryLong
+  nameWithType: BigEndianReader.ReadSignedVeryLong
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLong
+- uid: System.Int64[]
+  isExternal: true
+  name: Int64[]
+  nameWithType: Int64[]
+  fullName: System.Int64[]
+  nameWithType.vb: Int64()
+  fullName.vb: System.Int64()
+  name.vb: Int64()
+  spec.csharp:
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLong*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLong
+  name: ReadUnsignedVeryLong
+  nameWithType: BigEndianReader.ReadUnsignedVeryLong
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLong
+- uid: System.UInt64[]
+  isExternal: true
+  name: UInt64[]
+  nameWithType: UInt64[]
+  fullName: System.UInt64[]
+  nameWithType.vb: UInt64()
+  fullName.vb: System.UInt64()
+  name.vb: UInt64()
+  spec.csharp:
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecisionSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecisionSingle
+  name: ReadSinglePrecisionSingle
+  nameWithType: BigEndianReader.ReadSinglePrecisionSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSinglePrecisionSingle
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadTagSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadTagSingle
+  name: ReadTagSingle
+  nameWithType: BigEndianReader.ReadTagSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadTagSingle
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecisionSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecisionSingle
+  name: ReadDoublePrecisionSingle
+  nameWithType: BigEndianReader.ReadDoublePrecisionSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadDoublePrecisionSingle
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLongSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLongSingle
+  name: ReadSignedVeryLongSingle
+  nameWithType: BigEndianReader.ReadSignedVeryLongSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedVeryLongSingle
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLongSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLongSingle
+  name: ReadSignedLongSingle
+  nameWithType: BigEndianReader.ReadSignedLongSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedLongSingle
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLongSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLongSingle
+  name: ReadUnsignedLongSingle
+  nameWithType: BigEndianReader.ReadUnsignedLongSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedLongSingle
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLongSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLongSingle
+  name: ReadUnsignedVeryLongSingle
+  nameWithType: BigEndianReader.ReadUnsignedVeryLongSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedVeryLongSingle
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShortSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShortSingle
+  name: ReadSignedShortSingle
+  nameWithType: BigEndianReader.ReadSignedShortSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadSignedShortSingle
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  name: Int16
+  nameWithType: Int16
+  fullName: System.Int16
+- uid: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShortSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShortSingle
+  name: ReadUnsignedShortSingle
+  nameWithType: BigEndianReader.ReadUnsignedShortSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianReader.ReadUnsignedShortSingle
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16

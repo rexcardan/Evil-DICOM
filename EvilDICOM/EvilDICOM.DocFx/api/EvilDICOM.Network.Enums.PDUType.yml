@@ -1,0 +1,279 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Enums.PDUType
+  commentId: T:EvilDICOM.Network.Enums.PDUType
+  id: PDUType
+  parent: EvilDICOM.Network.Enums
+  children:
+  - EvilDICOM.Network.Enums.PDUType.A_ABORT
+  - EvilDICOM.Network.Enums.PDUType.A_ASSOC_ACCEPT
+  - EvilDICOM.Network.Enums.PDUType.A_ASSOC_REJECT
+  - EvilDICOM.Network.Enums.PDUType.A_ASSOC_REQUEST
+  - EvilDICOM.Network.Enums.PDUType.A_RELEASE_REQUEST
+  - EvilDICOM.Network.Enums.PDUType.A_RELEASE_RESPONSE
+  - EvilDICOM.Network.Enums.PDUType.P_DATA_TRANSFER
+  langs:
+  - csharp
+  - vb
+  name: PDUType
+  nameWithType: PDUType
+  fullName: EvilDICOM.Network.Enums.PDUType
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PDUType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PDUType
+    path: ../EvilDICOM/Network/Enums/PDUType.cs
+    startLine: 7
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  summary: "\nProtocal Data Unit (PDU) Type. The first byte in a PDU message conveys the purpose of the message. The PDU type\nenum\nholds the different possible bytes and their meanings.\n"
+  example: []
+  syntax:
+    content: 'public enum PDUType : byte'
+    content.vb: Public Enum PDUType As Byte
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Network.Enums.PDUType.A_ASSOC_REQUEST
+  commentId: F:EvilDICOM.Network.Enums.PDUType.A_ASSOC_REQUEST
+  id: A_ASSOC_REQUEST
+  parent: EvilDICOM.Network.Enums.PDUType
+  langs:
+  - csharp
+  - vb
+  name: A_ASSOC_REQUEST
+  nameWithType: PDUType.A_ASSOC_REQUEST
+  fullName: EvilDICOM.Network.Enums.PDUType.A_ASSOC_REQUEST
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PDUType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: A_ASSOC_REQUEST
+    path: ../EvilDICOM/Network/Enums/PDUType.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: A_ASSOC_REQUEST = 1
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.PDUType.A_ASSOC_ACCEPT
+  commentId: F:EvilDICOM.Network.Enums.PDUType.A_ASSOC_ACCEPT
+  id: A_ASSOC_ACCEPT
+  parent: EvilDICOM.Network.Enums.PDUType
+  langs:
+  - csharp
+  - vb
+  name: A_ASSOC_ACCEPT
+  nameWithType: PDUType.A_ASSOC_ACCEPT
+  fullName: EvilDICOM.Network.Enums.PDUType.A_ASSOC_ACCEPT
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PDUType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: A_ASSOC_ACCEPT
+    path: ../EvilDICOM/Network/Enums/PDUType.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: A_ASSOC_ACCEPT = 2
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.PDUType.A_ASSOC_REJECT
+  commentId: F:EvilDICOM.Network.Enums.PDUType.A_ASSOC_REJECT
+  id: A_ASSOC_REJECT
+  parent: EvilDICOM.Network.Enums.PDUType
+  langs:
+  - csharp
+  - vb
+  name: A_ASSOC_REJECT
+  nameWithType: PDUType.A_ASSOC_REJECT
+  fullName: EvilDICOM.Network.Enums.PDUType.A_ASSOC_REJECT
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PDUType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: A_ASSOC_REJECT
+    path: ../EvilDICOM/Network/Enums/PDUType.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: A_ASSOC_REJECT = 3
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.PDUType.P_DATA_TRANSFER
+  commentId: F:EvilDICOM.Network.Enums.PDUType.P_DATA_TRANSFER
+  id: P_DATA_TRANSFER
+  parent: EvilDICOM.Network.Enums.PDUType
+  langs:
+  - csharp
+  - vb
+  name: P_DATA_TRANSFER
+  nameWithType: PDUType.P_DATA_TRANSFER
+  fullName: EvilDICOM.Network.Enums.PDUType.P_DATA_TRANSFER
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PDUType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: P_DATA_TRANSFER
+    path: ../EvilDICOM/Network/Enums/PDUType.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: P_DATA_TRANSFER = 4
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.PDUType.A_RELEASE_REQUEST
+  commentId: F:EvilDICOM.Network.Enums.PDUType.A_RELEASE_REQUEST
+  id: A_RELEASE_REQUEST
+  parent: EvilDICOM.Network.Enums.PDUType
+  langs:
+  - csharp
+  - vb
+  name: A_RELEASE_REQUEST
+  nameWithType: PDUType.A_RELEASE_REQUEST
+  fullName: EvilDICOM.Network.Enums.PDUType.A_RELEASE_REQUEST
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PDUType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: A_RELEASE_REQUEST
+    path: ../EvilDICOM/Network/Enums/PDUType.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: A_RELEASE_REQUEST = 5
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.PDUType.A_RELEASE_RESPONSE
+  commentId: F:EvilDICOM.Network.Enums.PDUType.A_RELEASE_RESPONSE
+  id: A_RELEASE_RESPONSE
+  parent: EvilDICOM.Network.Enums.PDUType
+  langs:
+  - csharp
+  - vb
+  name: A_RELEASE_RESPONSE
+  nameWithType: PDUType.A_RELEASE_RESPONSE
+  fullName: EvilDICOM.Network.Enums.PDUType.A_RELEASE_RESPONSE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PDUType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: A_RELEASE_RESPONSE
+    path: ../EvilDICOM/Network/Enums/PDUType.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: A_RELEASE_RESPONSE = 6
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Network.Enums.PDUType.A_ABORT
+  commentId: F:EvilDICOM.Network.Enums.PDUType.A_ABORT
+  id: A_ABORT
+  parent: EvilDICOM.Network.Enums.PDUType
+  langs:
+  - csharp
+  - vb
+  name: A_ABORT
+  nameWithType: PDUType.A_ABORT
+  fullName: EvilDICOM.Network.Enums.PDUType.A_ABORT
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Enums/PDUType.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: A_ABORT
+    path: ../EvilDICOM/Network/Enums/PDUType.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Enums
+  syntax:
+    content: A_ABORT = 7
+    return:
+      type: EvilDICOM.Network.Enums.PDUType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.Enums.PDUType
+  commentId: T:EvilDICOM.Network.Enums.PDUType
+  parent: EvilDICOM.Network.Enums
+  name: PDUType
+  nameWithType: PDUType
+  fullName: EvilDICOM.Network.Enums.PDUType

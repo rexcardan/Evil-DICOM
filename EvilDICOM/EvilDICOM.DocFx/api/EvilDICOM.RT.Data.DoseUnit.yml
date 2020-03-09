@@ -1,0 +1,112 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.RT.Data.DoseUnit
+  commentId: T:EvilDICOM.RT.Data.DoseUnit
+  id: DoseUnit
+  parent: EvilDICOM.RT.Data
+  children:
+  - EvilDICOM.RT.Data.DoseUnit.ABSOLUTE
+  - EvilDICOM.RT.Data.DoseUnit.RELATIVE
+  langs:
+  - csharp
+  - vb
+  name: DoseUnit
+  nameWithType: DoseUnit
+  fullName: EvilDICOM.RT.Data.DoseUnit
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/DoseUnit.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DoseUnit
+    path: ../EvilDICOM/RT/Data/DoseUnit.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: public enum DoseUnit
+    content.vb: Public Enum DoseUnit
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.RT.Data.DoseUnit.ABSOLUTE
+  commentId: F:EvilDICOM.RT.Data.DoseUnit.ABSOLUTE
+  id: ABSOLUTE
+  parent: EvilDICOM.RT.Data.DoseUnit
+  langs:
+  - csharp
+  - vb
+  name: ABSOLUTE
+  nameWithType: DoseUnit.ABSOLUTE
+  fullName: EvilDICOM.RT.Data.DoseUnit.ABSOLUTE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/DoseUnit.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ABSOLUTE
+    path: ../EvilDICOM/RT/Data/DoseUnit.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: ABSOLUTE = 0
+    return:
+      type: EvilDICOM.RT.Data.DoseUnit
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.RT.Data.DoseUnit.RELATIVE
+  commentId: F:EvilDICOM.RT.Data.DoseUnit.RELATIVE
+  id: RELATIVE
+  parent: EvilDICOM.RT.Data.DoseUnit
+  langs:
+  - csharp
+  - vb
+  name: RELATIVE
+  nameWithType: DoseUnit.RELATIVE
+  fullName: EvilDICOM.RT.Data.DoseUnit.RELATIVE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/Data/DoseUnit.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RELATIVE
+    path: ../EvilDICOM/RT/Data/DoseUnit.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT.Data
+  syntax:
+    content: RELATIVE = 1
+    return:
+      type: EvilDICOM.RT.Data.DoseUnit
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.RT.Data
+  commentId: N:EvilDICOM.RT.Data
+  name: EvilDICOM.RT.Data
+  nameWithType: EvilDICOM.RT.Data
+  fullName: EvilDICOM.RT.Data
+- uid: EvilDICOM.RT.Data.DoseUnit
+  commentId: T:EvilDICOM.RT.Data.DoseUnit
+  parent: EvilDICOM.RT.Data
+  name: DoseUnit
+  nameWithType: DoseUnit
+  fullName: EvilDICOM.RT.Data.DoseUnit

@@ -4,7 +4,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Evil_DICOM.Core.Helpers;
+using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core;
 using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.DIMSE.IOD;

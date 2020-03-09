@@ -1,0 +1,48 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.RT.Data.DVH
+  commentId: N:EvilDICOM.RT.Data.DVH
+  id: EvilDICOM.RT.Data.DVH
+  children:
+  - EvilDICOM.RT.Data.DVH.Dose
+  - EvilDICOM.RT.Data.DVH.DVHData
+  - EvilDICOM.RT.Data.DVH.DVHPoint
+  - EvilDICOM.RT.Data.DVH.Volume
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.RT.Data.DVH
+  nameWithType: EvilDICOM.RT.Data.DVH
+  fullName: EvilDICOM.RT.Data.DVH
+  type: Namespace
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.RT.Data.DVH.Dose
+  commentId: T:EvilDICOM.RT.Data.DVH.Dose
+  parent: EvilDICOM.RT.Data.DVH
+  name: Dose
+  nameWithType: Dose
+  fullName: EvilDICOM.RT.Data.DVH.Dose
+- uid: EvilDICOM.RT.Data.DVH.DVHData
+  commentId: T:EvilDICOM.RT.Data.DVH.DVHData
+  parent: EvilDICOM.RT.Data.DVH
+  name: DVHData
+  nameWithType: DVHData
+  fullName: EvilDICOM.RT.Data.DVH.DVHData
+- uid: EvilDICOM.RT.Data.DVH.DVHPoint
+  commentId: T:EvilDICOM.RT.Data.DVH.DVHPoint
+  name: DVHPoint
+  nameWithType: DVHPoint
+  fullName: EvilDICOM.RT.Data.DVH.DVHPoint
+- uid: EvilDICOM.RT.Data.DVH.Volume
+  commentId: T:EvilDICOM.RT.Data.DVH.Volume
+  parent: EvilDICOM.RT.Data.DVH
+  name: Volume
+  nameWithType: Volume
+  fullName: EvilDICOM.RT.Data.DVH.Volume
+- uid: EvilDICOM.RT.Data.DVH
+  commentId: N:EvilDICOM.RT.Data.DVH
+  name: EvilDICOM.RT.Data.DVH
+  nameWithType: EvilDICOM.RT.Data.DVH
+  fullName: EvilDICOM.RT.Data.DVH

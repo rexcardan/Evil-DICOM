@@ -1,0 +1,1827 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax
+  commentId: T:EvilDICOM.Core.Helpers.AbstractSyntax
+  id: AbstractSyntax
+  parent: EvilDICOM.Core.Helpers
+  children:
+  - EvilDICOM.Core.Helpers.AbstractSyntax.ALL_RADIOTHERAPY_STORAGE
+  - EvilDICOM.Core.Helpers.AbstractSyntax.MODALITY_WORKLIST_FIND
+  - EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_FIND
+  - EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_GET
+  - EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_MOVE
+  - EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_STUDY_FIND
+  - EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_STUDY_MOVE
+  - EvilDICOM.Core.Helpers.AbstractSyntax.StorageCommitment_Push
+  - EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_FIND
+  - EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_GET
+  - EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_MOVE
+  - EvilDICOM.Core.Helpers.AbstractSyntax.VARIAN_MOTION_MANAGEMENT_PROTOCOL
+  - EvilDICOM.Core.Helpers.AbstractSyntax.VERIFICATION
+  langs:
+  - csharp
+  - vb
+  name: AbstractSyntax
+  nameWithType: AbstractSyntax
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AbstractSyntax
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: 'public class AbstractSyntax : SOPClassUID'
+    content.vb: >-
+      Public Class AbstractSyntax
+          Inherits SOPClassUID
+  inheritance:
+  - System.Object
+  - EvilDICOM.Core.Helpers.SOPClassUID
+  inheritedMembers:
+  - EvilDICOM.Core.Helpers.SOPClassUID.ComputedRadiographyImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.DigitalX_RayImageStorage_ForPresentation
+  - EvilDICOM.Core.Helpers.SOPClassUID.DigitalX_RayImageStorage_ForProcessing
+  - EvilDICOM.Core.Helpers.SOPClassUID.DigitalMammographyX_RayImageStorage_ForPresentation
+  - EvilDICOM.Core.Helpers.SOPClassUID.DigitalMammographyX_RayImageStorage_ForProcessing
+  - EvilDICOM.Core.Helpers.SOPClassUID.DigitalIntra_OralX_RayImageStorage_ForPresentation
+  - EvilDICOM.Core.Helpers.SOPClassUID.DigitalIntra_OralX_RayImageStorage_ForProcessing
+  - EvilDICOM.Core.Helpers.SOPClassUID.CTImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.EnhancedCTImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.LegacyConvertedEnhancedCTImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.UltrasoundMulti_frameImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.MRImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.EnhancedMRImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.MRSpectroscopyStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.EnhancedMRColorImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.LegacyConvertedEnhancedMRImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.UltrasoundImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.EnhancedUSVolumeStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.SecondaryCaptureImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameSingleBitSecondaryCaptureImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameGrayscaleByteSecondaryCaptureImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameGrayscaleWordSecondaryCaptureImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameTrueColorSecondaryCaptureImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID._12_leadECGWaveformStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.GeneralECGWaveformStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.AmbulatoryECGWaveformStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.HemodynamicWaveformStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.CardiacElectrophysiologyWaveformStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.BasicVoiceAudioWaveformStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.GeneralAudioWaveformStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.ArterialPulseWaveformStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RespiratoryWaveformStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.GrayscaleSoftcopyPresentationStateStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.ColorSoftcopyPresentationStateStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.Pseudo_ColorSoftcopyPresentationStateStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.BlendingSoftcopyPresentationStateStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.XAXRFGrayscaleSoftcopyPresentationStateStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.GrayscalePlanarMPRVolumetricPresentationStateStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.CompositingPlanarMPRVolumetricPresentationStateStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.AdvancedBlendingPresentationStateStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.VolumeRenderingVolumetricPresentationStateStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.SegmentedVolumeRenderingVolumetricPresentationStateStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.MultipleVolumeRenderingVolumetricPresentationStateStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.X_RayAngiographicImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.EnhancedXAImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.X_RayRadiofluoroscopicImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.EnhancedXRFImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.X_Ray3DAngiographicImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.X_Ray3DCraniofacialImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.BreastTomosynthesisImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.BreastProjectionX_RayImageStorage_ForPresentation
+  - EvilDICOM.Core.Helpers.SOPClassUID.BreastProjectionX_RayImageStorage_ForProcessing
+  - EvilDICOM.Core.Helpers.SOPClassUID.IntravascularOpticalCoherenceTomographyImageStorage_ForPresentation
+  - EvilDICOM.Core.Helpers.SOPClassUID.IntravascularOpticalCoherenceTomographyImageStorage_ForProcessing
+  - EvilDICOM.Core.Helpers.SOPClassUID.NuclearMedicineImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.ParametricMapStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RawDataStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.SpatialRegistrationStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.SpatialFiducialsStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.DeformableSpatialRegistrationStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.SegmentationStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.SurfaceSegmentationStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.TractographyResultsStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RealWorldValueMappingStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.SurfaceScanMeshStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.SurfaceScanPointCloudStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.VLEndoscopicImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.VideoEndoscopicImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.VLMicroscopicImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.VideoMicroscopicImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.VLSlide_CoordinatesMicroscopicImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.VLPhotographicImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.VideoPhotographicImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicPhotography8BitImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicPhotography16BitImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.StereometricRelationshipStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicTomographyImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.WideFieldOphthalmicPhotographyStereographicProjectionImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.WideFieldOphthalmicPhotography3DCoordinatesImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicOpticalCoherenceTomographyEnFaceImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicOpticalCoherenceTomographyB_scanVolumeAnalysisStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.VLWholeSlideMicroscopyImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.LensometryMeasurementsStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.AutorefractionMeasurementsStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.KeratometryMeasurementsStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.SubjectiveRefractionMeasurementsStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.VisualAcuityMeasurementsStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.SpectaclePrescriptionReportStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicAxialMeasurementsStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.IntraocularLensCalculationsStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.MacularGridThicknessandVolumeReport
+  - EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicVisualFieldStaticPerimetryMeasurementsStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicThicknessMapStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.CornealTopographyMapStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.BasicTextSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.EnhancedSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.ComprehensiveSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.Comprehensive3DSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.ExtensibleSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.ProcedureLogStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.MammographyCADSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.KeyObjectSelectionStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.ChestCADSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.X_RayRadiationDoseSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RadiopharmaceuticalRadiationDoseSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.ColonCADSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.ImplantationPlanSRDocumentStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.AcquisitionContextSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.SimplifiedAdultEchoSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.PatientRadiationDoseSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.PlannedImagingAgentAdministrationSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.PerformedImagingAgentAdministrationSRStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.ContentAssessmentResultsStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.EncapsulatedPDFStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.EncapsulatedCDAStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.EncapsulatedSTLStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.PositronEmissionTomographyImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.EnhancedPETImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.LegacyConvertedEnhancedPETImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.BasicStructuredDisplayStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.CTPerformedProcedureProtocolStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RTImageStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RTDoseStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RTStructureSetStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RTBeamsTreatmentRecordStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RTPlanStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RTBrachyTreatmentRecordStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RTTreatmentSummaryRecordStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RTIonPlanStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RTIonBeamsTreatmentRecordStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RTPhysicianIntentStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RTSegmentAnnotationStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RTBeamsDeliveryInstructionStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.RTBrachyApplicationSetupDeliveryInstructionStorage
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax.VERIFICATION
+  commentId: F:EvilDICOM.Core.Helpers.AbstractSyntax.VERIFICATION
+  id: VERIFICATION
+  parent: EvilDICOM.Core.Helpers.AbstractSyntax
+  langs:
+  - csharp
+  - vb
+  name: VERIFICATION
+  nameWithType: AbstractSyntax.VERIFICATION
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax.VERIFICATION
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: VERIFICATION
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string VERIFICATION
+    return:
+      type: System.String
+    content.vb: Public Shared VERIFICATION As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_FIND
+  commentId: F:EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_FIND
+  id: PATIENT_FIND
+  parent: EvilDICOM.Core.Helpers.AbstractSyntax
+  langs:
+  - csharp
+  - vb
+  name: PATIENT_FIND
+  nameWithType: AbstractSyntax.PATIENT_FIND
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_FIND
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PATIENT_FIND
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string PATIENT_FIND
+    return:
+      type: System.String
+    content.vb: Public Shared PATIENT_FIND As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_MOVE
+  commentId: F:EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_MOVE
+  id: PATIENT_MOVE
+  parent: EvilDICOM.Core.Helpers.AbstractSyntax
+  langs:
+  - csharp
+  - vb
+  name: PATIENT_MOVE
+  nameWithType: AbstractSyntax.PATIENT_MOVE
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_MOVE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PATIENT_MOVE
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string PATIENT_MOVE
+    return:
+      type: System.String
+    content.vb: Public Shared PATIENT_MOVE As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_GET
+  commentId: F:EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_GET
+  id: PATIENT_GET
+  parent: EvilDICOM.Core.Helpers.AbstractSyntax
+  langs:
+  - csharp
+  - vb
+  name: PATIENT_GET
+  nameWithType: AbstractSyntax.PATIENT_GET
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_GET
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PATIENT_GET
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string PATIENT_GET
+    return:
+      type: System.String
+    content.vb: Public Shared PATIENT_GET As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_FIND
+  commentId: F:EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_FIND
+  id: STUDY_FIND
+  parent: EvilDICOM.Core.Helpers.AbstractSyntax
+  langs:
+  - csharp
+  - vb
+  name: STUDY_FIND
+  nameWithType: AbstractSyntax.STUDY_FIND
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_FIND
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: STUDY_FIND
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string STUDY_FIND
+    return:
+      type: System.String
+    content.vb: Public Shared STUDY_FIND As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_MOVE
+  commentId: F:EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_MOVE
+  id: STUDY_MOVE
+  parent: EvilDICOM.Core.Helpers.AbstractSyntax
+  langs:
+  - csharp
+  - vb
+  name: STUDY_MOVE
+  nameWithType: AbstractSyntax.STUDY_MOVE
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_MOVE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: STUDY_MOVE
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string STUDY_MOVE
+    return:
+      type: System.String
+    content.vb: Public Shared STUDY_MOVE As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_GET
+  commentId: F:EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_GET
+  id: STUDY_GET
+  parent: EvilDICOM.Core.Helpers.AbstractSyntax
+  langs:
+  - csharp
+  - vb
+  name: STUDY_GET
+  nameWithType: AbstractSyntax.STUDY_GET
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax.STUDY_GET
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: STUDY_GET
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string STUDY_GET
+    return:
+      type: System.String
+    content.vb: Public Shared STUDY_GET As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_STUDY_FIND
+  commentId: F:EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_STUDY_FIND
+  id: PATIENT_STUDY_FIND
+  parent: EvilDICOM.Core.Helpers.AbstractSyntax
+  langs:
+  - csharp
+  - vb
+  name: PATIENT_STUDY_FIND
+  nameWithType: AbstractSyntax.PATIENT_STUDY_FIND
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_STUDY_FIND
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PATIENT_STUDY_FIND
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string PATIENT_STUDY_FIND
+    return:
+      type: System.String
+    content.vb: Public Shared PATIENT_STUDY_FIND As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_STUDY_MOVE
+  commentId: F:EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_STUDY_MOVE
+  id: PATIENT_STUDY_MOVE
+  parent: EvilDICOM.Core.Helpers.AbstractSyntax
+  langs:
+  - csharp
+  - vb
+  name: PATIENT_STUDY_MOVE
+  nameWithType: AbstractSyntax.PATIENT_STUDY_MOVE
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax.PATIENT_STUDY_MOVE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PATIENT_STUDY_MOVE
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string PATIENT_STUDY_MOVE
+    return:
+      type: System.String
+    content.vb: Public Shared PATIENT_STUDY_MOVE As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax.MODALITY_WORKLIST_FIND
+  commentId: F:EvilDICOM.Core.Helpers.AbstractSyntax.MODALITY_WORKLIST_FIND
+  id: MODALITY_WORKLIST_FIND
+  parent: EvilDICOM.Core.Helpers.AbstractSyntax
+  langs:
+  - csharp
+  - vb
+  name: MODALITY_WORKLIST_FIND
+  nameWithType: AbstractSyntax.MODALITY_WORKLIST_FIND
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax.MODALITY_WORKLIST_FIND
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MODALITY_WORKLIST_FIND
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 30
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string MODALITY_WORKLIST_FIND
+    return:
+      type: System.String
+    content.vb: Public Shared MODALITY_WORKLIST_FIND As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax.VARIAN_MOTION_MANAGEMENT_PROTOCOL
+  commentId: F:EvilDICOM.Core.Helpers.AbstractSyntax.VARIAN_MOTION_MANAGEMENT_PROTOCOL
+  id: VARIAN_MOTION_MANAGEMENT_PROTOCOL
+  parent: EvilDICOM.Core.Helpers.AbstractSyntax
+  langs:
+  - csharp
+  - vb
+  name: VARIAN_MOTION_MANAGEMENT_PROTOCOL
+  nameWithType: AbstractSyntax.VARIAN_MOTION_MANAGEMENT_PROTOCOL
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax.VARIAN_MOTION_MANAGEMENT_PROTOCOL
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: VARIAN_MOTION_MANAGEMENT_PROTOCOL
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 32
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string VARIAN_MOTION_MANAGEMENT_PROTOCOL
+    return:
+      type: System.String
+    content.vb: Public Shared VARIAN_MOTION_MANAGEMENT_PROTOCOL As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax.ALL_RADIOTHERAPY_STORAGE
+  commentId: F:EvilDICOM.Core.Helpers.AbstractSyntax.ALL_RADIOTHERAPY_STORAGE
+  id: ALL_RADIOTHERAPY_STORAGE
+  parent: EvilDICOM.Core.Helpers.AbstractSyntax
+  langs:
+  - csharp
+  - vb
+  name: ALL_RADIOTHERAPY_STORAGE
+  nameWithType: AbstractSyntax.ALL_RADIOTHERAPY_STORAGE
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax.ALL_RADIOTHERAPY_STORAGE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ALL_RADIOTHERAPY_STORAGE
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 35
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static List<string> ALL_RADIOTHERAPY_STORAGE
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Shared ALL_RADIOTHERAPY_STORAGE As List(Of String)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Helpers.AbstractSyntax.StorageCommitment_Push
+  commentId: F:EvilDICOM.Core.Helpers.AbstractSyntax.StorageCommitment_Push
+  id: StorageCommitment_Push
+  parent: EvilDICOM.Core.Helpers.AbstractSyntax
+  langs:
+  - csharp
+  - vb
+  name: StorageCommitment_Push
+  nameWithType: AbstractSyntax.StorageCommitment_Push
+  fullName: EvilDICOM.Core.Helpers.AbstractSyntax.StorageCommitment_Push
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StorageCommitment_Push
+    path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
+    startLine: 62
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Helpers
+  syntax:
+    content: public static string StorageCommitment_Push
+    return:
+      type: System.String
+    content.vb: Public Shared StorageCommitment_Push As String
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Core.Helpers.SOPClassUID
+  commentId: T:EvilDICOM.Core.Helpers.SOPClassUID
+  parent: EvilDICOM.Core.Helpers
+  name: SOPClassUID
+  nameWithType: SOPClassUID
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.ComputedRadiographyImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.ComputedRadiographyImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: ComputedRadiographyImageStorage
+  nameWithType: SOPClassUID.ComputedRadiographyImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.ComputedRadiographyImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.DigitalX_RayImageStorage_ForPresentation
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.DigitalX_RayImageStorage_ForPresentation
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: DigitalX_RayImageStorage_ForPresentation
+  nameWithType: SOPClassUID.DigitalX_RayImageStorage_ForPresentation
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.DigitalX_RayImageStorage_ForPresentation
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.DigitalX_RayImageStorage_ForProcessing
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.DigitalX_RayImageStorage_ForProcessing
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: DigitalX_RayImageStorage_ForProcessing
+  nameWithType: SOPClassUID.DigitalX_RayImageStorage_ForProcessing
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.DigitalX_RayImageStorage_ForProcessing
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.DigitalMammographyX_RayImageStorage_ForPresentation
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.DigitalMammographyX_RayImageStorage_ForPresentation
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: DigitalMammographyX_RayImageStorage_ForPresentation
+  nameWithType: SOPClassUID.DigitalMammographyX_RayImageStorage_ForPresentation
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.DigitalMammographyX_RayImageStorage_ForPresentation
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.DigitalMammographyX_RayImageStorage_ForProcessing
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.DigitalMammographyX_RayImageStorage_ForProcessing
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: DigitalMammographyX_RayImageStorage_ForProcessing
+  nameWithType: SOPClassUID.DigitalMammographyX_RayImageStorage_ForProcessing
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.DigitalMammographyX_RayImageStorage_ForProcessing
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.DigitalIntra_OralX_RayImageStorage_ForPresentation
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.DigitalIntra_OralX_RayImageStorage_ForPresentation
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: DigitalIntra_OralX_RayImageStorage_ForPresentation
+  nameWithType: SOPClassUID.DigitalIntra_OralX_RayImageStorage_ForPresentation
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.DigitalIntra_OralX_RayImageStorage_ForPresentation
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.DigitalIntra_OralX_RayImageStorage_ForProcessing
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.DigitalIntra_OralX_RayImageStorage_ForProcessing
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: DigitalIntra_OralX_RayImageStorage_ForProcessing
+  nameWithType: SOPClassUID.DigitalIntra_OralX_RayImageStorage_ForProcessing
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.DigitalIntra_OralX_RayImageStorage_ForProcessing
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.CTImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.CTImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: CTImageStorage
+  nameWithType: SOPClassUID.CTImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.CTImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedCTImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.EnhancedCTImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: EnhancedCTImageStorage
+  nameWithType: SOPClassUID.EnhancedCTImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedCTImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.LegacyConvertedEnhancedCTImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.LegacyConvertedEnhancedCTImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: LegacyConvertedEnhancedCTImageStorage
+  nameWithType: SOPClassUID.LegacyConvertedEnhancedCTImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.LegacyConvertedEnhancedCTImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.UltrasoundMulti_frameImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.UltrasoundMulti_frameImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: UltrasoundMulti_frameImageStorage
+  nameWithType: SOPClassUID.UltrasoundMulti_frameImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.UltrasoundMulti_frameImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.MRImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.MRImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: MRImageStorage
+  nameWithType: SOPClassUID.MRImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.MRImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedMRImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.EnhancedMRImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: EnhancedMRImageStorage
+  nameWithType: SOPClassUID.EnhancedMRImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedMRImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.MRSpectroscopyStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.MRSpectroscopyStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: MRSpectroscopyStorage
+  nameWithType: SOPClassUID.MRSpectroscopyStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.MRSpectroscopyStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedMRColorImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.EnhancedMRColorImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: EnhancedMRColorImageStorage
+  nameWithType: SOPClassUID.EnhancedMRColorImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedMRColorImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.LegacyConvertedEnhancedMRImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.LegacyConvertedEnhancedMRImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: LegacyConvertedEnhancedMRImageStorage
+  nameWithType: SOPClassUID.LegacyConvertedEnhancedMRImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.LegacyConvertedEnhancedMRImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.UltrasoundImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.UltrasoundImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: UltrasoundImageStorage
+  nameWithType: SOPClassUID.UltrasoundImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.UltrasoundImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedUSVolumeStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.EnhancedUSVolumeStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: EnhancedUSVolumeStorage
+  nameWithType: SOPClassUID.EnhancedUSVolumeStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedUSVolumeStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.SecondaryCaptureImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.SecondaryCaptureImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: SecondaryCaptureImageStorage
+  nameWithType: SOPClassUID.SecondaryCaptureImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.SecondaryCaptureImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameSingleBitSecondaryCaptureImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameSingleBitSecondaryCaptureImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: Multi_frameSingleBitSecondaryCaptureImageStorage
+  nameWithType: SOPClassUID.Multi_frameSingleBitSecondaryCaptureImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameSingleBitSecondaryCaptureImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameGrayscaleByteSecondaryCaptureImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameGrayscaleByteSecondaryCaptureImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: Multi_frameGrayscaleByteSecondaryCaptureImageStorage
+  nameWithType: SOPClassUID.Multi_frameGrayscaleByteSecondaryCaptureImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameGrayscaleByteSecondaryCaptureImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameGrayscaleWordSecondaryCaptureImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameGrayscaleWordSecondaryCaptureImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: Multi_frameGrayscaleWordSecondaryCaptureImageStorage
+  nameWithType: SOPClassUID.Multi_frameGrayscaleWordSecondaryCaptureImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameGrayscaleWordSecondaryCaptureImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameTrueColorSecondaryCaptureImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameTrueColorSecondaryCaptureImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: Multi_frameTrueColorSecondaryCaptureImageStorage
+  nameWithType: SOPClassUID.Multi_frameTrueColorSecondaryCaptureImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.Multi_frameTrueColorSecondaryCaptureImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID._12_leadECGWaveformStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID._12_leadECGWaveformStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: _12_leadECGWaveformStorage
+  nameWithType: SOPClassUID._12_leadECGWaveformStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID._12_leadECGWaveformStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.GeneralECGWaveformStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.GeneralECGWaveformStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: GeneralECGWaveformStorage
+  nameWithType: SOPClassUID.GeneralECGWaveformStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.GeneralECGWaveformStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.AmbulatoryECGWaveformStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.AmbulatoryECGWaveformStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: AmbulatoryECGWaveformStorage
+  nameWithType: SOPClassUID.AmbulatoryECGWaveformStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.AmbulatoryECGWaveformStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.HemodynamicWaveformStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.HemodynamicWaveformStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: HemodynamicWaveformStorage
+  nameWithType: SOPClassUID.HemodynamicWaveformStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.HemodynamicWaveformStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.CardiacElectrophysiologyWaveformStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.CardiacElectrophysiologyWaveformStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: CardiacElectrophysiologyWaveformStorage
+  nameWithType: SOPClassUID.CardiacElectrophysiologyWaveformStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.CardiacElectrophysiologyWaveformStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.BasicVoiceAudioWaveformStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.BasicVoiceAudioWaveformStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: BasicVoiceAudioWaveformStorage
+  nameWithType: SOPClassUID.BasicVoiceAudioWaveformStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.BasicVoiceAudioWaveformStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.GeneralAudioWaveformStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.GeneralAudioWaveformStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: GeneralAudioWaveformStorage
+  nameWithType: SOPClassUID.GeneralAudioWaveformStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.GeneralAudioWaveformStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.ArterialPulseWaveformStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.ArterialPulseWaveformStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: ArterialPulseWaveformStorage
+  nameWithType: SOPClassUID.ArterialPulseWaveformStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.ArterialPulseWaveformStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RespiratoryWaveformStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RespiratoryWaveformStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RespiratoryWaveformStorage
+  nameWithType: SOPClassUID.RespiratoryWaveformStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RespiratoryWaveformStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.GrayscaleSoftcopyPresentationStateStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.GrayscaleSoftcopyPresentationStateStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: GrayscaleSoftcopyPresentationStateStorage
+  nameWithType: SOPClassUID.GrayscaleSoftcopyPresentationStateStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.GrayscaleSoftcopyPresentationStateStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.ColorSoftcopyPresentationStateStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.ColorSoftcopyPresentationStateStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: ColorSoftcopyPresentationStateStorage
+  nameWithType: SOPClassUID.ColorSoftcopyPresentationStateStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.ColorSoftcopyPresentationStateStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.Pseudo_ColorSoftcopyPresentationStateStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.Pseudo_ColorSoftcopyPresentationStateStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: Pseudo_ColorSoftcopyPresentationStateStorage
+  nameWithType: SOPClassUID.Pseudo_ColorSoftcopyPresentationStateStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.Pseudo_ColorSoftcopyPresentationStateStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.BlendingSoftcopyPresentationStateStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.BlendingSoftcopyPresentationStateStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: BlendingSoftcopyPresentationStateStorage
+  nameWithType: SOPClassUID.BlendingSoftcopyPresentationStateStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.BlendingSoftcopyPresentationStateStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.XAXRFGrayscaleSoftcopyPresentationStateStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.XAXRFGrayscaleSoftcopyPresentationStateStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: XAXRFGrayscaleSoftcopyPresentationStateStorage
+  nameWithType: SOPClassUID.XAXRFGrayscaleSoftcopyPresentationStateStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.XAXRFGrayscaleSoftcopyPresentationStateStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.GrayscalePlanarMPRVolumetricPresentationStateStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.GrayscalePlanarMPRVolumetricPresentationStateStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: GrayscalePlanarMPRVolumetricPresentationStateStorage
+  nameWithType: SOPClassUID.GrayscalePlanarMPRVolumetricPresentationStateStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.GrayscalePlanarMPRVolumetricPresentationStateStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.CompositingPlanarMPRVolumetricPresentationStateStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.CompositingPlanarMPRVolumetricPresentationStateStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: CompositingPlanarMPRVolumetricPresentationStateStorage
+  nameWithType: SOPClassUID.CompositingPlanarMPRVolumetricPresentationStateStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.CompositingPlanarMPRVolumetricPresentationStateStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.AdvancedBlendingPresentationStateStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.AdvancedBlendingPresentationStateStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: AdvancedBlendingPresentationStateStorage
+  nameWithType: SOPClassUID.AdvancedBlendingPresentationStateStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.AdvancedBlendingPresentationStateStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.VolumeRenderingVolumetricPresentationStateStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.VolumeRenderingVolumetricPresentationStateStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: VolumeRenderingVolumetricPresentationStateStorage
+  nameWithType: SOPClassUID.VolumeRenderingVolumetricPresentationStateStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.VolumeRenderingVolumetricPresentationStateStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.SegmentedVolumeRenderingVolumetricPresentationStateStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.SegmentedVolumeRenderingVolumetricPresentationStateStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: SegmentedVolumeRenderingVolumetricPresentationStateStorage
+  nameWithType: SOPClassUID.SegmentedVolumeRenderingVolumetricPresentationStateStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.SegmentedVolumeRenderingVolumetricPresentationStateStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.MultipleVolumeRenderingVolumetricPresentationStateStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.MultipleVolumeRenderingVolumetricPresentationStateStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: MultipleVolumeRenderingVolumetricPresentationStateStorage
+  nameWithType: SOPClassUID.MultipleVolumeRenderingVolumetricPresentationStateStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.MultipleVolumeRenderingVolumetricPresentationStateStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.X_RayAngiographicImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.X_RayAngiographicImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: X_RayAngiographicImageStorage
+  nameWithType: SOPClassUID.X_RayAngiographicImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.X_RayAngiographicImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedXAImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.EnhancedXAImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: EnhancedXAImageStorage
+  nameWithType: SOPClassUID.EnhancedXAImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedXAImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.X_RayRadiofluoroscopicImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.X_RayRadiofluoroscopicImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: X_RayRadiofluoroscopicImageStorage
+  nameWithType: SOPClassUID.X_RayRadiofluoroscopicImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.X_RayRadiofluoroscopicImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedXRFImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.EnhancedXRFImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: EnhancedXRFImageStorage
+  nameWithType: SOPClassUID.EnhancedXRFImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedXRFImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.X_Ray3DAngiographicImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.X_Ray3DAngiographicImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: X_Ray3DAngiographicImageStorage
+  nameWithType: SOPClassUID.X_Ray3DAngiographicImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.X_Ray3DAngiographicImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.X_Ray3DCraniofacialImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.X_Ray3DCraniofacialImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: X_Ray3DCraniofacialImageStorage
+  nameWithType: SOPClassUID.X_Ray3DCraniofacialImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.X_Ray3DCraniofacialImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.BreastTomosynthesisImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.BreastTomosynthesisImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: BreastTomosynthesisImageStorage
+  nameWithType: SOPClassUID.BreastTomosynthesisImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.BreastTomosynthesisImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.BreastProjectionX_RayImageStorage_ForPresentation
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.BreastProjectionX_RayImageStorage_ForPresentation
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: BreastProjectionX_RayImageStorage_ForPresentation
+  nameWithType: SOPClassUID.BreastProjectionX_RayImageStorage_ForPresentation
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.BreastProjectionX_RayImageStorage_ForPresentation
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.BreastProjectionX_RayImageStorage_ForProcessing
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.BreastProjectionX_RayImageStorage_ForProcessing
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: BreastProjectionX_RayImageStorage_ForProcessing
+  nameWithType: SOPClassUID.BreastProjectionX_RayImageStorage_ForProcessing
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.BreastProjectionX_RayImageStorage_ForProcessing
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.IntravascularOpticalCoherenceTomographyImageStorage_ForPresentation
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.IntravascularOpticalCoherenceTomographyImageStorage_ForPresentation
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: IntravascularOpticalCoherenceTomographyImageStorage_ForPresentation
+  nameWithType: SOPClassUID.IntravascularOpticalCoherenceTomographyImageStorage_ForPresentation
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.IntravascularOpticalCoherenceTomographyImageStorage_ForPresentation
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.IntravascularOpticalCoherenceTomographyImageStorage_ForProcessing
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.IntravascularOpticalCoherenceTomographyImageStorage_ForProcessing
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: IntravascularOpticalCoherenceTomographyImageStorage_ForProcessing
+  nameWithType: SOPClassUID.IntravascularOpticalCoherenceTomographyImageStorage_ForProcessing
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.IntravascularOpticalCoherenceTomographyImageStorage_ForProcessing
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.NuclearMedicineImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.NuclearMedicineImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: NuclearMedicineImageStorage
+  nameWithType: SOPClassUID.NuclearMedicineImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.NuclearMedicineImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.ParametricMapStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.ParametricMapStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: ParametricMapStorage
+  nameWithType: SOPClassUID.ParametricMapStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.ParametricMapStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RawDataStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RawDataStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RawDataStorage
+  nameWithType: SOPClassUID.RawDataStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RawDataStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.SpatialRegistrationStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.SpatialRegistrationStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: SpatialRegistrationStorage
+  nameWithType: SOPClassUID.SpatialRegistrationStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.SpatialRegistrationStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.SpatialFiducialsStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.SpatialFiducialsStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: SpatialFiducialsStorage
+  nameWithType: SOPClassUID.SpatialFiducialsStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.SpatialFiducialsStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.DeformableSpatialRegistrationStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.DeformableSpatialRegistrationStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: DeformableSpatialRegistrationStorage
+  nameWithType: SOPClassUID.DeformableSpatialRegistrationStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.DeformableSpatialRegistrationStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.SegmentationStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.SegmentationStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: SegmentationStorage
+  nameWithType: SOPClassUID.SegmentationStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.SegmentationStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.SurfaceSegmentationStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.SurfaceSegmentationStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: SurfaceSegmentationStorage
+  nameWithType: SOPClassUID.SurfaceSegmentationStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.SurfaceSegmentationStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.TractographyResultsStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.TractographyResultsStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: TractographyResultsStorage
+  nameWithType: SOPClassUID.TractographyResultsStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.TractographyResultsStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RealWorldValueMappingStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RealWorldValueMappingStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RealWorldValueMappingStorage
+  nameWithType: SOPClassUID.RealWorldValueMappingStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RealWorldValueMappingStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.SurfaceScanMeshStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.SurfaceScanMeshStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: SurfaceScanMeshStorage
+  nameWithType: SOPClassUID.SurfaceScanMeshStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.SurfaceScanMeshStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.SurfaceScanPointCloudStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.SurfaceScanPointCloudStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: SurfaceScanPointCloudStorage
+  nameWithType: SOPClassUID.SurfaceScanPointCloudStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.SurfaceScanPointCloudStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.VLEndoscopicImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.VLEndoscopicImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: VLEndoscopicImageStorage
+  nameWithType: SOPClassUID.VLEndoscopicImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.VLEndoscopicImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.VideoEndoscopicImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.VideoEndoscopicImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: VideoEndoscopicImageStorage
+  nameWithType: SOPClassUID.VideoEndoscopicImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.VideoEndoscopicImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.VLMicroscopicImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.VLMicroscopicImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: VLMicroscopicImageStorage
+  nameWithType: SOPClassUID.VLMicroscopicImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.VLMicroscopicImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.VideoMicroscopicImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.VideoMicroscopicImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: VideoMicroscopicImageStorage
+  nameWithType: SOPClassUID.VideoMicroscopicImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.VideoMicroscopicImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.VLSlide_CoordinatesMicroscopicImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.VLSlide_CoordinatesMicroscopicImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: VLSlide_CoordinatesMicroscopicImageStorage
+  nameWithType: SOPClassUID.VLSlide_CoordinatesMicroscopicImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.VLSlide_CoordinatesMicroscopicImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.VLPhotographicImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.VLPhotographicImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: VLPhotographicImageStorage
+  nameWithType: SOPClassUID.VLPhotographicImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.VLPhotographicImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.VideoPhotographicImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.VideoPhotographicImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: VideoPhotographicImageStorage
+  nameWithType: SOPClassUID.VideoPhotographicImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.VideoPhotographicImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicPhotography8BitImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicPhotography8BitImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: OphthalmicPhotography8BitImageStorage
+  nameWithType: SOPClassUID.OphthalmicPhotography8BitImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicPhotography8BitImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicPhotography16BitImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicPhotography16BitImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: OphthalmicPhotography16BitImageStorage
+  nameWithType: SOPClassUID.OphthalmicPhotography16BitImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicPhotography16BitImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.StereometricRelationshipStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.StereometricRelationshipStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: StereometricRelationshipStorage
+  nameWithType: SOPClassUID.StereometricRelationshipStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.StereometricRelationshipStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicTomographyImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicTomographyImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: OphthalmicTomographyImageStorage
+  nameWithType: SOPClassUID.OphthalmicTomographyImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicTomographyImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.WideFieldOphthalmicPhotographyStereographicProjectionImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.WideFieldOphthalmicPhotographyStereographicProjectionImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: WideFieldOphthalmicPhotographyStereographicProjectionImageStorage
+  nameWithType: SOPClassUID.WideFieldOphthalmicPhotographyStereographicProjectionImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.WideFieldOphthalmicPhotographyStereographicProjectionImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.WideFieldOphthalmicPhotography3DCoordinatesImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.WideFieldOphthalmicPhotography3DCoordinatesImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: WideFieldOphthalmicPhotography3DCoordinatesImageStorage
+  nameWithType: SOPClassUID.WideFieldOphthalmicPhotography3DCoordinatesImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.WideFieldOphthalmicPhotography3DCoordinatesImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicOpticalCoherenceTomographyEnFaceImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicOpticalCoherenceTomographyEnFaceImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: OphthalmicOpticalCoherenceTomographyEnFaceImageStorage
+  nameWithType: SOPClassUID.OphthalmicOpticalCoherenceTomographyEnFaceImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicOpticalCoherenceTomographyEnFaceImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicOpticalCoherenceTomographyB_scanVolumeAnalysisStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicOpticalCoherenceTomographyB_scanVolumeAnalysisStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: OphthalmicOpticalCoherenceTomographyB_scanVolumeAnalysisStorage
+  nameWithType: SOPClassUID.OphthalmicOpticalCoherenceTomographyB_scanVolumeAnalysisStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicOpticalCoherenceTomographyB_scanVolumeAnalysisStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.VLWholeSlideMicroscopyImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.VLWholeSlideMicroscopyImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: VLWholeSlideMicroscopyImageStorage
+  nameWithType: SOPClassUID.VLWholeSlideMicroscopyImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.VLWholeSlideMicroscopyImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.LensometryMeasurementsStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.LensometryMeasurementsStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: LensometryMeasurementsStorage
+  nameWithType: SOPClassUID.LensometryMeasurementsStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.LensometryMeasurementsStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.AutorefractionMeasurementsStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.AutorefractionMeasurementsStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: AutorefractionMeasurementsStorage
+  nameWithType: SOPClassUID.AutorefractionMeasurementsStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.AutorefractionMeasurementsStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.KeratometryMeasurementsStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.KeratometryMeasurementsStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: KeratometryMeasurementsStorage
+  nameWithType: SOPClassUID.KeratometryMeasurementsStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.KeratometryMeasurementsStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.SubjectiveRefractionMeasurementsStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.SubjectiveRefractionMeasurementsStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: SubjectiveRefractionMeasurementsStorage
+  nameWithType: SOPClassUID.SubjectiveRefractionMeasurementsStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.SubjectiveRefractionMeasurementsStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.VisualAcuityMeasurementsStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.VisualAcuityMeasurementsStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: VisualAcuityMeasurementsStorage
+  nameWithType: SOPClassUID.VisualAcuityMeasurementsStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.VisualAcuityMeasurementsStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.SpectaclePrescriptionReportStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.SpectaclePrescriptionReportStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: SpectaclePrescriptionReportStorage
+  nameWithType: SOPClassUID.SpectaclePrescriptionReportStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.SpectaclePrescriptionReportStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicAxialMeasurementsStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicAxialMeasurementsStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: OphthalmicAxialMeasurementsStorage
+  nameWithType: SOPClassUID.OphthalmicAxialMeasurementsStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicAxialMeasurementsStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.IntraocularLensCalculationsStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.IntraocularLensCalculationsStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: IntraocularLensCalculationsStorage
+  nameWithType: SOPClassUID.IntraocularLensCalculationsStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.IntraocularLensCalculationsStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.MacularGridThicknessandVolumeReport
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.MacularGridThicknessandVolumeReport
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: MacularGridThicknessandVolumeReport
+  nameWithType: SOPClassUID.MacularGridThicknessandVolumeReport
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.MacularGridThicknessandVolumeReport
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicVisualFieldStaticPerimetryMeasurementsStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicVisualFieldStaticPerimetryMeasurementsStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: OphthalmicVisualFieldStaticPerimetryMeasurementsStorage
+  nameWithType: SOPClassUID.OphthalmicVisualFieldStaticPerimetryMeasurementsStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicVisualFieldStaticPerimetryMeasurementsStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicThicknessMapStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicThicknessMapStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: OphthalmicThicknessMapStorage
+  nameWithType: SOPClassUID.OphthalmicThicknessMapStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.OphthalmicThicknessMapStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.CornealTopographyMapStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.CornealTopographyMapStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: CornealTopographyMapStorage
+  nameWithType: SOPClassUID.CornealTopographyMapStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.CornealTopographyMapStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.BasicTextSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.BasicTextSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: BasicTextSRStorage
+  nameWithType: SOPClassUID.BasicTextSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.BasicTextSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.EnhancedSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: EnhancedSRStorage
+  nameWithType: SOPClassUID.EnhancedSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.ComprehensiveSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.ComprehensiveSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: ComprehensiveSRStorage
+  nameWithType: SOPClassUID.ComprehensiveSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.ComprehensiveSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.Comprehensive3DSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.Comprehensive3DSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: Comprehensive3DSRStorage
+  nameWithType: SOPClassUID.Comprehensive3DSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.Comprehensive3DSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.ExtensibleSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.ExtensibleSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: ExtensibleSRStorage
+  nameWithType: SOPClassUID.ExtensibleSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.ExtensibleSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.ProcedureLogStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.ProcedureLogStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: ProcedureLogStorage
+  nameWithType: SOPClassUID.ProcedureLogStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.ProcedureLogStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.MammographyCADSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.MammographyCADSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: MammographyCADSRStorage
+  nameWithType: SOPClassUID.MammographyCADSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.MammographyCADSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.KeyObjectSelectionStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.KeyObjectSelectionStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: KeyObjectSelectionStorage
+  nameWithType: SOPClassUID.KeyObjectSelectionStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.KeyObjectSelectionStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.ChestCADSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.ChestCADSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: ChestCADSRStorage
+  nameWithType: SOPClassUID.ChestCADSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.ChestCADSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.X_RayRadiationDoseSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.X_RayRadiationDoseSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: X_RayRadiationDoseSRStorage
+  nameWithType: SOPClassUID.X_RayRadiationDoseSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.X_RayRadiationDoseSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RadiopharmaceuticalRadiationDoseSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RadiopharmaceuticalRadiationDoseSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RadiopharmaceuticalRadiationDoseSRStorage
+  nameWithType: SOPClassUID.RadiopharmaceuticalRadiationDoseSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RadiopharmaceuticalRadiationDoseSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.ColonCADSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.ColonCADSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: ColonCADSRStorage
+  nameWithType: SOPClassUID.ColonCADSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.ColonCADSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.ImplantationPlanSRDocumentStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.ImplantationPlanSRDocumentStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: ImplantationPlanSRDocumentStorage
+  nameWithType: SOPClassUID.ImplantationPlanSRDocumentStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.ImplantationPlanSRDocumentStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.AcquisitionContextSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.AcquisitionContextSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: AcquisitionContextSRStorage
+  nameWithType: SOPClassUID.AcquisitionContextSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.AcquisitionContextSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.SimplifiedAdultEchoSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.SimplifiedAdultEchoSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: SimplifiedAdultEchoSRStorage
+  nameWithType: SOPClassUID.SimplifiedAdultEchoSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.SimplifiedAdultEchoSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.PatientRadiationDoseSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.PatientRadiationDoseSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: PatientRadiationDoseSRStorage
+  nameWithType: SOPClassUID.PatientRadiationDoseSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.PatientRadiationDoseSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.PlannedImagingAgentAdministrationSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.PlannedImagingAgentAdministrationSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: PlannedImagingAgentAdministrationSRStorage
+  nameWithType: SOPClassUID.PlannedImagingAgentAdministrationSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.PlannedImagingAgentAdministrationSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.PerformedImagingAgentAdministrationSRStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.PerformedImagingAgentAdministrationSRStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: PerformedImagingAgentAdministrationSRStorage
+  nameWithType: SOPClassUID.PerformedImagingAgentAdministrationSRStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.PerformedImagingAgentAdministrationSRStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.ContentAssessmentResultsStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.ContentAssessmentResultsStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: ContentAssessmentResultsStorage
+  nameWithType: SOPClassUID.ContentAssessmentResultsStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.ContentAssessmentResultsStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.EncapsulatedPDFStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.EncapsulatedPDFStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: EncapsulatedPDFStorage
+  nameWithType: SOPClassUID.EncapsulatedPDFStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.EncapsulatedPDFStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.EncapsulatedCDAStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.EncapsulatedCDAStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: EncapsulatedCDAStorage
+  nameWithType: SOPClassUID.EncapsulatedCDAStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.EncapsulatedCDAStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.EncapsulatedSTLStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.EncapsulatedSTLStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: EncapsulatedSTLStorage
+  nameWithType: SOPClassUID.EncapsulatedSTLStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.EncapsulatedSTLStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.PositronEmissionTomographyImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.PositronEmissionTomographyImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: PositronEmissionTomographyImageStorage
+  nameWithType: SOPClassUID.PositronEmissionTomographyImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.PositronEmissionTomographyImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedPETImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.EnhancedPETImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: EnhancedPETImageStorage
+  nameWithType: SOPClassUID.EnhancedPETImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.EnhancedPETImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.LegacyConvertedEnhancedPETImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.LegacyConvertedEnhancedPETImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: LegacyConvertedEnhancedPETImageStorage
+  nameWithType: SOPClassUID.LegacyConvertedEnhancedPETImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.LegacyConvertedEnhancedPETImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.BasicStructuredDisplayStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.BasicStructuredDisplayStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: BasicStructuredDisplayStorage
+  nameWithType: SOPClassUID.BasicStructuredDisplayStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.BasicStructuredDisplayStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.CTPerformedProcedureProtocolStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.CTPerformedProcedureProtocolStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: CTPerformedProcedureProtocolStorage
+  nameWithType: SOPClassUID.CTPerformedProcedureProtocolStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.CTPerformedProcedureProtocolStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RTImageStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTImageStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RTImageStorage
+  nameWithType: SOPClassUID.RTImageStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTImageStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RTDoseStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTDoseStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RTDoseStorage
+  nameWithType: SOPClassUID.RTDoseStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTDoseStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RTStructureSetStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTStructureSetStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RTStructureSetStorage
+  nameWithType: SOPClassUID.RTStructureSetStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTStructureSetStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RTBeamsTreatmentRecordStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTBeamsTreatmentRecordStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RTBeamsTreatmentRecordStorage
+  nameWithType: SOPClassUID.RTBeamsTreatmentRecordStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTBeamsTreatmentRecordStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RTPlanStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTPlanStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RTPlanStorage
+  nameWithType: SOPClassUID.RTPlanStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTPlanStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RTBrachyTreatmentRecordStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTBrachyTreatmentRecordStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RTBrachyTreatmentRecordStorage
+  nameWithType: SOPClassUID.RTBrachyTreatmentRecordStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTBrachyTreatmentRecordStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RTTreatmentSummaryRecordStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTTreatmentSummaryRecordStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RTTreatmentSummaryRecordStorage
+  nameWithType: SOPClassUID.RTTreatmentSummaryRecordStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTTreatmentSummaryRecordStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RTIonPlanStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTIonPlanStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RTIonPlanStorage
+  nameWithType: SOPClassUID.RTIonPlanStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTIonPlanStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RTIonBeamsTreatmentRecordStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTIonBeamsTreatmentRecordStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RTIonBeamsTreatmentRecordStorage
+  nameWithType: SOPClassUID.RTIonBeamsTreatmentRecordStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTIonBeamsTreatmentRecordStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RTPhysicianIntentStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTPhysicianIntentStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RTPhysicianIntentStorage
+  nameWithType: SOPClassUID.RTPhysicianIntentStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTPhysicianIntentStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RTSegmentAnnotationStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTSegmentAnnotationStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RTSegmentAnnotationStorage
+  nameWithType: SOPClassUID.RTSegmentAnnotationStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTSegmentAnnotationStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RTBeamsDeliveryInstructionStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTBeamsDeliveryInstructionStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RTBeamsDeliveryInstructionStorage
+  nameWithType: SOPClassUID.RTBeamsDeliveryInstructionStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTBeamsDeliveryInstructionStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.RTBrachyApplicationSetupDeliveryInstructionStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTBrachyApplicationSetupDeliveryInstructionStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: RTBrachyApplicationSetupDeliveryInstructionStorage
+  nameWithType: SOPClassUID.RTBrachyApplicationSetupDeliveryInstructionStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTBrachyApplicationSetupDeliveryInstructionStorage
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

@@ -1,0 +1,998 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class DIMSEService
+   </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class DIMSEService
+   ">
+    <meta name="generator" content="docfx 2.50.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content">
+              
+              
+              <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L21" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <h1 id="" data-uid="EvilDICOM.Network.Services.DIMSEService">Class DIMSEService
+              </h1>
+              <div class="markdown level0 summary"><p>This class handles incoming DIMSE messaging. It logs the message, creates and sends the appropriate response</p>
+</div>
+              <div class="markdown level0 conceptual"></div>
+              <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- API Ad -->
+              <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8634681343664488" data-ad-slot="2969171149"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>
+              <div class="inheritance">
+                <h5>Inheritance</h5>
+                  <div class="level0"><span class="xref">System.Object</span></div>
+                  <div class="level1"><span class="xref">DIMSEService</span></div>
+              </div>
+              <div class="inheritedMembers">
+                <h5>Inherited Members</h5>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetHashCode()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.GetType()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.MemberwiseClone()</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
+                </div>
+                <div>
+                  <span class="xref">System.Object.ToString()</span>
+                </div>
+              </div>
+              <h6><strong>Namespace</strong>:EvilDICOM.Network.Services</h6>
+              <h6><strong>Assembly</strong>:EvilDICOM.dll</h6>
+              <h5 id="_syntax">Syntax</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public class DIMSEService</code></pre>
+              </div>
+              <h3 id="constructors">Constructors
+              </h3>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L31">View Source</a>
+              </span>
+              <h4 id="constructors" data-uid="EvilDICOM.Network.Services.DIMSEService.#ctor">DIMSEService()</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public DIMSEService()</code></pre>
+              </div>
+              <h3 id="properties">Properties
+              </h3>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L47">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceivedAction">CEchoRequestReceivedAction</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Action&lt;CEchoRequest, Association&gt; CEchoRequestReceivedAction { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CEchoRequest.html">CEchoRequest</a>, <a class="xref" href="EvilDICOM.Network.Association.html">Association</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L48">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceivedAction">CEchoResponseReceivedAction</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Action&lt;CEchoResponse, Association&gt; CEchoResponseReceivedAction { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CEchoResponse.html">CEchoResponse</a>, <a class="xref" href="EvilDICOM.Network.Association.html">Association</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L42">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Network.Services.DIMSEService.CFindService">CFindService</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public CFindService CFindService { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.CFindService.html">CFindService</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L51">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Network.Services.DIMSEService.CGetRequestReceivedAction">CGetRequestReceivedAction</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Action&lt;CGetRequest, Association&gt; CGetRequestReceivedAction { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CGetRequest.html">CGetRequest</a>, <a class="xref" href="EvilDICOM.Network.Association.html">Association</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L52">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Network.Services.DIMSEService.CGetResponseReceivedAction">CGetResponseReceivedAction</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Action&lt;CGetResponse, Association&gt; CGetResponseReceivedAction { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CGetResponse.html">CGetResponse</a>, <a class="xref" href="EvilDICOM.Network.Association.html">Association</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L49">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceivedAction">CMoveRequestReceivedAction</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Action&lt;CMoveRequest, Association&gt; CMoveRequestReceivedAction { get; set; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CMoveRequest.html">CMoveRequest</a>, <a class="xref" href="EvilDICOM.Network.Association.html">Association</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L50">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceivedAction">CMoveResponseReceivedAction</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public Action&lt;CMoveResponse, Association&gt; CMoveResponseReceivedAction { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Action</span>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CMoveResponse.html">CMoveResponse</a>, <a class="xref" href="EvilDICOM.Network.Association.html">Association</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L41">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Network.Services.DIMSEService.CStoreService">CStoreService</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public CStoreService CStoreService { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.CStoreService.html">CStoreService</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L43">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Network.Services.DIMSEService.NActionService">NActionService</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public NActionService NActionService { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.NActionService.html">NActionService</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L44">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Network.Services.DIMSEService.NEventReportService">NEventReportService</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public NEventReportService NEventReportService { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.NEventReportService.html">NEventReportService</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L45">View Source</a>
+              </span>
+              <h4 id="properties" data-uid="EvilDICOM.Network.Services.DIMSEService.StorageCommitmentService">StorageCommitmentService</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public StorageCommitmentService StorageCommitmentService { get; }</code></pre>
+              </div>
+              <h5 class="propertyValue">Property Value</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.StorageCommitmentService.html">StorageCommitmentService</a></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="methods">Methods
+              </h3>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L156">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Network.Services.DIMSEService.Subscribe``1(EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{``0})">Subscribe&lt;T&gt;(DIMSEService.DIMSERequestHandler&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Subscribe&lt;T&gt;(DIMSEService.DIMSERequestHandler&lt;T&gt; cr)
+    where T : AbstractDIMSERequest</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler-1.html">DIMSEService.DIMSERequestHandler</a>&lt;T&gt;</td>
+                    <td><em>cr</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L120">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Network.Services.DIMSEService.Subscribe``1(EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{``0})">Subscribe&lt;T&gt;(DIMSEService.DIMSEResponseHandler&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Subscribe&lt;T&gt;(DIMSEService.DIMSEResponseHandler&lt;T&gt; cr)
+    where T : AbstractDIMSEResponse</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler-1.html">DIMSEService.DIMSEResponseHandler</a>&lt;T&gt;</td>
+                    <td><em>cr</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L174">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Network.Services.DIMSEService.Unsubscribe``1(EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler{``0})">Unsubscribe&lt;T&gt;(DIMSEService.DIMSERequestHandler&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Unsubscribe&lt;T&gt;(DIMSEService.DIMSERequestHandler&lt;T&gt; cr)
+    where T : AbstractDIMSERequest</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler-1.html">DIMSEService.DIMSERequestHandler</a>&lt;T&gt;</td>
+                    <td><em>cr</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L138">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Network.Services.DIMSEService.Unsubscribe``1(EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler{``0})">Unsubscribe&lt;T&gt;(DIMSEService.DIMSEResponseHandler&lt;T&gt;)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public void Unsubscribe&lt;T&gt;(DIMSEService.DIMSEResponseHandler&lt;T&gt; cr)
+    where T : AbstractDIMSEResponse</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler-1.html">DIMSEService.DIMSEResponseHandler</a>&lt;T&gt;</td>
+                    <td><em>cr</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="typeParameters">Type Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><em>T</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h3 id="events">Events
+              </h3>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L194">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.CEchoRequestReceived">CEchoRequestReceived</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSERequestHandler&lt;CEchoRequest&gt; CEchoRequestReceived</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler-1.html">DIMSEService.DIMSERequestHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CEchoRequest.html">CEchoRequest</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L222">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.CEchoResponseReceived">CEchoResponseReceived</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSEResponseHandler&lt;CEchoResponse&gt; CEchoResponseReceived</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler-1.html">DIMSEService.DIMSEResponseHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CEchoResponse.html">CEchoResponse</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L195">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.CFindRequestReceived">CFindRequestReceived</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSERequestHandler&lt;CFindRequest&gt; CFindRequestReceived</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler-1.html">DIMSEService.DIMSERequestHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CFindRequest.html">CFindRequest</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L223">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.CFindResponseReceived">CFindResponseReceived</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSEResponseHandler&lt;CFindResponse&gt; CFindResponseReceived</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler-1.html">DIMSEService.DIMSEResponseHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CFindResponse.html">CFindResponse</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L198">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.CGetRequestReceived">CGetRequestReceived</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSERequestHandler&lt;CGetRequest&gt; CGetRequestReceived</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler-1.html">DIMSEService.DIMSERequestHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CGetRequest.html">CGetRequest</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L226">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.CGetResponseReceived">CGetResponseReceived</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSEResponseHandler&lt;CGetResponse&gt; CGetResponseReceived</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler-1.html">DIMSEService.DIMSEResponseHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CGetResponse.html">CGetResponse</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L196">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.CMoveRequestReceived">CMoveRequestReceived</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSERequestHandler&lt;CMoveRequest&gt; CMoveRequestReceived</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler-1.html">DIMSEService.DIMSERequestHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CMoveRequest.html">CMoveRequest</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L224">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.CMoveResponseReceived">CMoveResponseReceived</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSEResponseHandler&lt;CMoveResponse&gt; CMoveResponseReceived</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler-1.html">DIMSEService.DIMSEResponseHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CMoveResponse.html">CMoveResponse</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L197">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.CStoreRequestReceived">CStoreRequestReceived</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSERequestHandler&lt;CStoreRequest&gt; CStoreRequestReceived</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler-1.html">DIMSEService.DIMSERequestHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CStoreRequest.html">CStoreRequest</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L225">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.CStoreResponseReceived">CStoreResponseReceived</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSEResponseHandler&lt;CStoreResponse&gt; CStoreResponseReceived</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler-1.html">DIMSEService.DIMSEResponseHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.CStoreResponse.html">CStoreResponse</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L199">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.NActionRequestRecieved">NActionRequestRecieved</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSERequestHandler&lt;NActionRequest&gt; NActionRequestRecieved</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler-1.html">DIMSEService.DIMSERequestHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.NActionRequest.html">NActionRequest</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L227">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.NActionResponseReceived">NActionResponseReceived</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSEResponseHandler&lt;NActionResponse&gt; NActionResponseReceived</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler-1.html">DIMSEService.DIMSEResponseHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.NActionResponse.html">NActionResponse</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L200">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.NEventReportRequestRecieved">NEventReportRequestRecieved</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSERequestHandler&lt;NEventReportRequest&gt; NEventReportRequestRecieved</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSERequestHandler-1.html">DIMSEService.DIMSERequestHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.NEventReportRequest.html">NEventReportRequest</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Network/Services/DIMSEService.cs/#L228">View Source</a>
+              </span>
+              <h4 id="events" data-uid="EvilDICOM.Network.Services.DIMSEService.NEventReportResponseReceived">NEventReportResponseReceived</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public event DIMSEService.DIMSEResponseHandler&lt;NEventReportResponse&gt; NEventReportResponseReceived</code></pre>
+              </div>
+              <h5 class="eventType">Event Type</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Network.Services.DIMSEService.DIMSEResponseHandler-1.html">DIMSEService.DIMSEResponseHandler</a>&lt;<a class="xref" href="EvilDICOM.Network.DIMSE.NEventReportResponse.html">NEventReportResponse</a>&gt;</td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <script async="" src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+              <!-- API Ad -->
+              <ins class="adsbygoogle" style="display:inline-block;width:728px;height:90px" data-ad-client="ca-pub-8634681343664488" data-ad-slot="2969171149"></ins>
+              <script>
+              (adsbygoogle = window.adsbygoogle || []).push({});
+              </script>            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

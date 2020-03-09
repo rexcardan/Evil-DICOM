@@ -14,7 +14,7 @@ using EvilDICOM.Core.Enums;
 using EvilDICOM.Network.Helpers;
 using System.Linq;
 using System.Text;
-using Evil_DICOM.Network.Messaging;
+using EvilDICOM.Network.Messaging;
 using static EvilDICOM.Network.Services.AssociationService;
 using Microsoft.Extensions.Logging;
 

@@ -1,0 +1,940 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.Image.ImageContours
+  commentId: T:EvilDICOM.CV.Image.ImageContours
+  id: ImageContours
+  parent: EvilDICOM.CV.Image
+  children:
+  - EvilDICOM.CV.Image.ImageContours.BuildFromImage(EvilDICOM.CV.RT.Meta.StructureMeta,EvilDICOM.CV.Image.Matrix)
+  - EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(OpenCvSharp.Mat,System.Int32,EvilDICOM.CV.Drawing.StructureLook)
+  - EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(System.Int32,EvilDICOM.CV.Drawing.StructureLook)
+  - EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceX(System.Int32)
+  - EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceY(System.Int32)
+  - EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceZ(System.Int32)
+  - EvilDICOM.CV.Image.ImageContours.MaxX
+  - EvilDICOM.CV.Image.ImageContours.MaxY
+  - EvilDICOM.CV.Image.ImageContours.MaxZ
+  - EvilDICOM.CV.Image.ImageContours.MinX
+  - EvilDICOM.CV.Image.ImageContours.MinY
+  - EvilDICOM.CV.Image.ImageContours.MinZ
+  langs:
+  - csharp
+  - vb
+  name: ImageContours
+  nameWithType: ImageContours
+  fullName: EvilDICOM.CV.Image.ImageContours
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ImageContours
+    path: ../EvilDICOM.CV/Image/ImageContours.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  summary: "\nClass that holds image contours on a given 3D image\n"
+  example: []
+  syntax:
+    content: public class ImageContours
+    content.vb: Public Class ImageContours
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.CV.Image.ImageContours.BuildFromImage(EvilDICOM.CV.RT.Meta.StructureMeta,EvilDICOM.CV.Image.Matrix)
+  commentId: M:EvilDICOM.CV.Image.ImageContours.BuildFromImage(EvilDICOM.CV.RT.Meta.StructureMeta,EvilDICOM.CV.Image.Matrix)
+  id: BuildFromImage(EvilDICOM.CV.RT.Meta.StructureMeta,EvilDICOM.CV.Image.Matrix)
+  parent: EvilDICOM.CV.Image.ImageContours
+  langs:
+  - csharp
+  - vb
+  name: BuildFromImage(StructureMeta, Matrix)
+  nameWithType: ImageContours.BuildFromImage(StructureMeta, Matrix)
+  fullName: EvilDICOM.CV.Image.ImageContours.BuildFromImage(EvilDICOM.CV.RT.Meta.StructureMeta, EvilDICOM.CV.Image.Matrix)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: BuildFromImage
+    path: ../EvilDICOM.CV/Image/ImageContours.cs
+    startLine: 39
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  summary: "\nCreates a rough approximation of the structure inside a given 3d matrix. Useful for calculating bounds\n"
+  example: []
+  syntax:
+    content: public static ImageContours BuildFromImage(StructureMeta sm, Matrix im)
+    parameters:
+    - id: sm
+      type: EvilDICOM.CV.RT.Meta.StructureMeta
+      description: ''
+    - id: im
+      type: EvilDICOM.CV.Image.Matrix
+      description: ''
+    return:
+      type: EvilDICOM.CV.Image.ImageContours
+      description: ''
+    content.vb: Public Shared Function BuildFromImage(sm As StructureMeta, im As Matrix) As ImageContours
+  overload: EvilDICOM.CV.Image.ImageContours.BuildFromImage*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.CV.Image.ImageContours.MinX
+  commentId: P:EvilDICOM.CV.Image.ImageContours.MinX
+  id: MinX
+  parent: EvilDICOM.CV.Image.ImageContours
+  langs:
+  - csharp
+  - vb
+  name: MinX
+  nameWithType: ImageContours.MinX
+  fullName: EvilDICOM.CV.Image.ImageContours.MinX
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MinX
+    path: ../EvilDICOM.CV/Image/ImageContours.cs
+    startLine: 46
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public int MinX { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MinX As Integer
+  overload: EvilDICOM.CV.Image.ImageContours.MinX*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.CV.Image.ImageContours.MaxX
+  commentId: P:EvilDICOM.CV.Image.ImageContours.MaxX
+  id: MaxX
+  parent: EvilDICOM.CV.Image.ImageContours
+  langs:
+  - csharp
+  - vb
+  name: MaxX
+  nameWithType: ImageContours.MaxX
+  fullName: EvilDICOM.CV.Image.ImageContours.MaxX
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MaxX
+    path: ../EvilDICOM.CV/Image/ImageContours.cs
+    startLine: 47
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public int MaxX { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxX As Integer
+  overload: EvilDICOM.CV.Image.ImageContours.MaxX*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.CV.Image.ImageContours.MinY
+  commentId: P:EvilDICOM.CV.Image.ImageContours.MinY
+  id: MinY
+  parent: EvilDICOM.CV.Image.ImageContours
+  langs:
+  - csharp
+  - vb
+  name: MinY
+  nameWithType: ImageContours.MinY
+  fullName: EvilDICOM.CV.Image.ImageContours.MinY
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MinY
+    path: ../EvilDICOM.CV/Image/ImageContours.cs
+    startLine: 49
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public int MinY { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MinY As Integer
+  overload: EvilDICOM.CV.Image.ImageContours.MinY*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.CV.Image.ImageContours.MaxY
+  commentId: P:EvilDICOM.CV.Image.ImageContours.MaxY
+  id: MaxY
+  parent: EvilDICOM.CV.Image.ImageContours
+  langs:
+  - csharp
+  - vb
+  name: MaxY
+  nameWithType: ImageContours.MaxY
+  fullName: EvilDICOM.CV.Image.ImageContours.MaxY
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MaxY
+    path: ../EvilDICOM.CV/Image/ImageContours.cs
+    startLine: 50
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public int MaxY { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxY As Integer
+  overload: EvilDICOM.CV.Image.ImageContours.MaxY*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.CV.Image.ImageContours.MinZ
+  commentId: P:EvilDICOM.CV.Image.ImageContours.MinZ
+  id: MinZ
+  parent: EvilDICOM.CV.Image.ImageContours
+  langs:
+  - csharp
+  - vb
+  name: MinZ
+  nameWithType: ImageContours.MinZ
+  fullName: EvilDICOM.CV.Image.ImageContours.MinZ
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MinZ
+    path: ../EvilDICOM.CV/Image/ImageContours.cs
+    startLine: 52
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public int MinZ { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MinZ As Integer
+  overload: EvilDICOM.CV.Image.ImageContours.MinZ*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.CV.Image.ImageContours.MaxZ
+  commentId: P:EvilDICOM.CV.Image.ImageContours.MaxZ
+  id: MaxZ
+  parent: EvilDICOM.CV.Image.ImageContours
+  langs:
+  - csharp
+  - vb
+  name: MaxZ
+  nameWithType: ImageContours.MaxZ
+  fullName: EvilDICOM.CV.Image.ImageContours.MaxZ
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MaxZ
+    path: ../EvilDICOM.CV/Image/ImageContours.cs
+    startLine: 53
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public int MaxZ { get; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public ReadOnly Property MaxZ As Integer
+  overload: EvilDICOM.CV.Image.ImageContours.MaxZ*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceZ(System.Int32)
+  commentId: M:EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceZ(System.Int32)
+  id: GetContoursOnSliceZ(System.Int32)
+  parent: EvilDICOM.CV.Image.ImageContours
+  langs:
+  - csharp
+  - vb
+  name: GetContoursOnSliceZ(Int32)
+  nameWithType: ImageContours.GetContoursOnSliceZ(Int32)
+  fullName: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceZ(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetContoursOnSliceZ
+    path: ../EvilDICOM.CV/Image/ImageContours.cs
+    startLine: 56
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public Point[][] GetContoursOnSliceZ(int zIdx)
+    parameters:
+    - id: zIdx
+      type: System.Int32
+    return:
+      type: OpenCvSharp.Point[][]
+    content.vb: Public Function GetContoursOnSliceZ(zIdx As Integer) As Point()()
+  overload: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceZ*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceY(System.Int32)
+  commentId: M:EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceY(System.Int32)
+  id: GetContoursOnSliceY(System.Int32)
+  parent: EvilDICOM.CV.Image.ImageContours
+  langs:
+  - csharp
+  - vb
+  name: GetContoursOnSliceY(Int32)
+  nameWithType: ImageContours.GetContoursOnSliceY(Int32)
+  fullName: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceY(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetContoursOnSliceY
+    path: ../EvilDICOM.CV/Image/ImageContours.cs
+    startLine: 68
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public Point[][] GetContoursOnSliceY(int yIdx)
+    parameters:
+    - id: yIdx
+      type: System.Int32
+    return:
+      type: OpenCvSharp.Point[][]
+    content.vb: Public Function GetContoursOnSliceY(yIdx As Integer) As Point()()
+  overload: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceY*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceX(System.Int32)
+  commentId: M:EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceX(System.Int32)
+  id: GetContoursOnSliceX(System.Int32)
+  parent: EvilDICOM.CV.Image.ImageContours
+  langs:
+  - csharp
+  - vb
+  name: GetContoursOnSliceX(Int32)
+  nameWithType: ImageContours.GetContoursOnSliceX(Int32)
+  fullName: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceX(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetContoursOnSliceX
+    path: ../EvilDICOM.CV/Image/ImageContours.cs
+    startLine: 80
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public Point[][] GetContoursOnSliceX(int xIdx)
+    parameters:
+    - id: xIdx
+      type: System.Int32
+    return:
+      type: OpenCvSharp.Point[][]
+    content.vb: Public Function GetContoursOnSliceX(xIdx As Integer) As Point()()
+  overload: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceX*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(System.Int32,EvilDICOM.CV.Drawing.StructureLook)
+  commentId: M:EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(System.Int32,EvilDICOM.CV.Drawing.StructureLook)
+  id: DrawContourOnSlice(System.Int32,EvilDICOM.CV.Drawing.StructureLook)
+  parent: EvilDICOM.CV.Image.ImageContours
+  langs:
+  - csharp
+  - vb
+  name: DrawContourOnSlice(Int32, StructureLook)
+  nameWithType: ImageContours.DrawContourOnSlice(Int32, StructureLook)
+  fullName: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(System.Int32, EvilDICOM.CV.Drawing.StructureLook)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DrawContourOnSlice
+    path: ../EvilDICOM.CV/Image/ImageContours.cs
+    startLine: 151
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  summary: "\nDraws the contour in patient coordinates on the slice voxels (which are voxel coordinates)\n"
+  example: []
+  syntax:
+    content: public Mat DrawContourOnSlice(int z, StructureLook look)
+    parameters:
+    - id: z
+      type: System.Int32
+      description: the z slice to draw the structure
+    - id: look
+      type: EvilDICOM.CV.Drawing.StructureLook
+    return:
+      type: OpenCvSharp.Mat
+      description: ''
+    content.vb: Public Function DrawContourOnSlice(z As Integer, look As StructureLook) As Mat
+  overload: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(OpenCvSharp.Mat,System.Int32,EvilDICOM.CV.Drawing.StructureLook)
+  commentId: M:EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(OpenCvSharp.Mat,System.Int32,EvilDICOM.CV.Drawing.StructureLook)
+  id: DrawContourOnSlice(OpenCvSharp.Mat,System.Int32,EvilDICOM.CV.Drawing.StructureLook)
+  parent: EvilDICOM.CV.Image.ImageContours
+  langs:
+  - csharp
+  - vb
+  name: DrawContourOnSlice(Mat, Int32, StructureLook)
+  nameWithType: ImageContours.DrawContourOnSlice(Mat, Int32, StructureLook)
+  fullName: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(OpenCvSharp.Mat, System.Int32, EvilDICOM.CV.Drawing.StructureLook)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DrawContourOnSlice
+    path: ../EvilDICOM.CV/Image/ImageContours.cs
+    startLine: 183
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  summary: "\nDraws the contour in patient coordinates on the slice voxels (which are voxel coordinates)\n"
+  example: []
+  syntax:
+    content: public Mat DrawContourOnSlice(Mat imSlice, int z, StructureLook look)
+    parameters:
+    - id: imSlice
+      type: OpenCvSharp.Mat
+    - id: z
+      type: System.Int32
+      description: the z slice to draw the structure
+    - id: look
+      type: EvilDICOM.CV.Drawing.StructureLook
+    return:
+      type: OpenCvSharp.Mat
+      description: ''
+    content.vb: Public Function DrawContourOnSlice(imSlice As Mat, z As Integer, look As StructureLook) As Mat
+  overload: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.CV.Image
+  commentId: N:EvilDICOM.CV.Image
+  name: EvilDICOM.CV.Image
+  nameWithType: EvilDICOM.CV.Image
+  fullName: EvilDICOM.CV.Image
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.Image.ImageContours.BuildFromImage*
+  commentId: Overload:EvilDICOM.CV.Image.ImageContours.BuildFromImage
+  name: BuildFromImage
+  nameWithType: ImageContours.BuildFromImage
+  fullName: EvilDICOM.CV.Image.ImageContours.BuildFromImage
+- uid: EvilDICOM.CV.RT.Meta.StructureMeta
+  commentId: T:EvilDICOM.CV.RT.Meta.StructureMeta
+  parent: EvilDICOM.CV.RT.Meta
+  name: StructureMeta
+  nameWithType: StructureMeta
+  fullName: EvilDICOM.CV.RT.Meta.StructureMeta
+- uid: EvilDICOM.CV.Image.Matrix
+  commentId: T:EvilDICOM.CV.Image.Matrix
+  parent: EvilDICOM.CV.Image
+  name: Matrix
+  nameWithType: Matrix
+  fullName: EvilDICOM.CV.Image.Matrix
+- uid: EvilDICOM.CV.Image.ImageContours
+  commentId: T:EvilDICOM.CV.Image.ImageContours
+  parent: EvilDICOM.CV.Image
+  name: ImageContours
+  nameWithType: ImageContours
+  fullName: EvilDICOM.CV.Image.ImageContours
+- uid: EvilDICOM.CV.RT.Meta
+  commentId: N:EvilDICOM.CV.RT.Meta
+  name: EvilDICOM.CV.RT.Meta
+  nameWithType: EvilDICOM.CV.RT.Meta
+  fullName: EvilDICOM.CV.RT.Meta
+- uid: EvilDICOM.CV.Image.ImageContours.MinX*
+  commentId: Overload:EvilDICOM.CV.Image.ImageContours.MinX
+  name: MinX
+  nameWithType: ImageContours.MinX
+  fullName: EvilDICOM.CV.Image.ImageContours.MinX
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.CV.Image.ImageContours.MaxX*
+  commentId: Overload:EvilDICOM.CV.Image.ImageContours.MaxX
+  name: MaxX
+  nameWithType: ImageContours.MaxX
+  fullName: EvilDICOM.CV.Image.ImageContours.MaxX
+- uid: EvilDICOM.CV.Image.ImageContours.MinY*
+  commentId: Overload:EvilDICOM.CV.Image.ImageContours.MinY
+  name: MinY
+  nameWithType: ImageContours.MinY
+  fullName: EvilDICOM.CV.Image.ImageContours.MinY
+- uid: EvilDICOM.CV.Image.ImageContours.MaxY*
+  commentId: Overload:EvilDICOM.CV.Image.ImageContours.MaxY
+  name: MaxY
+  nameWithType: ImageContours.MaxY
+  fullName: EvilDICOM.CV.Image.ImageContours.MaxY
+- uid: EvilDICOM.CV.Image.ImageContours.MinZ*
+  commentId: Overload:EvilDICOM.CV.Image.ImageContours.MinZ
+  name: MinZ
+  nameWithType: ImageContours.MinZ
+  fullName: EvilDICOM.CV.Image.ImageContours.MinZ
+- uid: EvilDICOM.CV.Image.ImageContours.MaxZ*
+  commentId: Overload:EvilDICOM.CV.Image.ImageContours.MaxZ
+  name: MaxZ
+  nameWithType: ImageContours.MaxZ
+  fullName: EvilDICOM.CV.Image.ImageContours.MaxZ
+- uid: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceZ*
+  commentId: Overload:EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceZ
+  name: GetContoursOnSliceZ
+  nameWithType: ImageContours.GetContoursOnSliceZ
+  fullName: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceZ
+- uid: OpenCvSharp.Point[][]
+  isExternal: true
+  name: Point[][]
+  nameWithType: Point[][]
+  fullName: OpenCvSharp.Point[][]
+  nameWithType.vb: Point()()
+  fullName.vb: OpenCvSharp.Point()()
+  name.vb: Point()()
+  spec.csharp:
+  - uid: OpenCvSharp.Point
+    name: Point
+    nameWithType: Point
+    fullName: OpenCvSharp.Point
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: OpenCvSharp.Point
+    name: Point
+    nameWithType: Point
+    fullName: OpenCvSharp.Point
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceY*
+  commentId: Overload:EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceY
+  name: GetContoursOnSliceY
+  nameWithType: ImageContours.GetContoursOnSliceY
+  fullName: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceY
+- uid: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceX*
+  commentId: Overload:EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceX
+  name: GetContoursOnSliceX
+  nameWithType: ImageContours.GetContoursOnSliceX
+  fullName: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceX
+- uid: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice*
+  commentId: Overload:EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice
+  name: DrawContourOnSlice
+  nameWithType: ImageContours.DrawContourOnSlice
+  fullName: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice
+- uid: EvilDICOM.CV.Drawing.StructureLook
+  commentId: T:EvilDICOM.CV.Drawing.StructureLook
+  parent: EvilDICOM.CV.Drawing
+  name: StructureLook
+  nameWithType: StructureLook
+  fullName: EvilDICOM.CV.Drawing.StructureLook
+- uid: OpenCvSharp.Mat
+  commentId: T:OpenCvSharp.Mat
+  parent: OpenCvSharp
+  isExternal: true
+  name: Mat
+  nameWithType: Mat
+  fullName: OpenCvSharp.Mat
+- uid: EvilDICOM.CV.Drawing
+  commentId: N:EvilDICOM.CV.Drawing
+  name: EvilDICOM.CV.Drawing
+  nameWithType: EvilDICOM.CV.Drawing
+  fullName: EvilDICOM.CV.Drawing
+- uid: OpenCvSharp
+  commentId: N:OpenCvSharp
+  isExternal: true
+  name: OpenCvSharp
+  nameWithType: OpenCvSharp
+  fullName: OpenCvSharp

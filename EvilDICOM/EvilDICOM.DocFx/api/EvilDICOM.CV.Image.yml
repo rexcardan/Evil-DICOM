@@ -1,0 +1,61 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.Image
+  commentId: N:EvilDICOM.CV.Image
+  id: EvilDICOM.CV.Image
+  children:
+  - EvilDICOM.CV.Image.Bounds
+  - EvilDICOM.CV.Image.ImageContours
+  - EvilDICOM.CV.Image.ImageMatrix
+  - EvilDICOM.CV.Image.Matrix
+  - EvilDICOM.CV.Image.MatrixHistogram
+  - EvilDICOM.CV.Image.Slicer3D
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.CV.Image
+  nameWithType: EvilDICOM.CV.Image
+  fullName: EvilDICOM.CV.Image
+  type: Namespace
+  assemblies:
+  - EvilDICOM.CV
+references:
+- uid: EvilDICOM.CV.Image.Bounds
+  commentId: T:EvilDICOM.CV.Image.Bounds
+  name: Bounds
+  nameWithType: Bounds
+  fullName: EvilDICOM.CV.Image.Bounds
+- uid: EvilDICOM.CV.Image.ImageContours
+  commentId: T:EvilDICOM.CV.Image.ImageContours
+  parent: EvilDICOM.CV.Image
+  name: ImageContours
+  nameWithType: ImageContours
+  fullName: EvilDICOM.CV.Image.ImageContours
+- uid: EvilDICOM.CV.Image.ImageMatrix
+  commentId: T:EvilDICOM.CV.Image.ImageMatrix
+  parent: EvilDICOM.CV.Image
+  name: ImageMatrix
+  nameWithType: ImageMatrix
+  fullName: EvilDICOM.CV.Image.ImageMatrix
+- uid: EvilDICOM.CV.Image.Matrix
+  commentId: T:EvilDICOM.CV.Image.Matrix
+  parent: EvilDICOM.CV.Image
+  name: Matrix
+  nameWithType: Matrix
+  fullName: EvilDICOM.CV.Image.Matrix
+- uid: EvilDICOM.CV.Image.MatrixHistogram
+  commentId: T:EvilDICOM.CV.Image.MatrixHistogram
+  parent: EvilDICOM.CV.Image
+  name: MatrixHistogram
+  nameWithType: MatrixHistogram
+  fullName: EvilDICOM.CV.Image.MatrixHistogram
+- uid: EvilDICOM.CV.Image.Slicer3D
+  commentId: T:EvilDICOM.CV.Image.Slicer3D
+  name: Slicer3D
+  nameWithType: Slicer3D
+  fullName: EvilDICOM.CV.Image.Slicer3D
+- uid: EvilDICOM.CV.Image
+  commentId: N:EvilDICOM.CV.Image
+  name: EvilDICOM.CV.Image
+  nameWithType: EvilDICOM.CV.Image
+  fullName: EvilDICOM.CV.Image

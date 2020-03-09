@@ -1,0 +1,1620 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.RT.RTDose
+  commentId: T:EvilDICOM.RT.RTDose
+  id: RTDose
+  parent: EvilDICOM.RT
+  children:
+  - EvilDICOM.RT.RTDose.#ctor(EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.RT.RTDose.ConvertAbsToRel(System.Double)
+  - EvilDICOM.RT.RTDose.ConvertRelToAbs(System.Double)
+  - EvilDICOM.RT.RTDose.DimensionX
+  - EvilDICOM.RT.RTDose.DimensionY
+  - EvilDICOM.RT.RTDose.DimensionZ
+  - EvilDICOM.RT.RTDose.DirectionalCosines
+  - EvilDICOM.RT.RTDose.DoseValues
+  - EvilDICOM.RT.RTDose.GetLineDose(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,System.Double)
+  - EvilDICOM.RT.RTDose.GetPointDose(EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.RT.RTDose.GetPointDose(System.Double,System.Double,System.Double)
+  - EvilDICOM.RT.RTDose.Load(System.String)
+  - EvilDICOM.RT.RTDose.MaxPointDose
+  - EvilDICOM.RT.RTDose.Save(System.String)
+  - EvilDICOM.RT.RTDose.Scaling
+  - EvilDICOM.RT.RTDose.ToDICOM
+  - EvilDICOM.RT.RTDose.ValueSizeInBytes
+  - EvilDICOM.RT.RTDose.X0
+  - EvilDICOM.RT.RTDose.XMax
+  - EvilDICOM.RT.RTDose.XRes
+  - EvilDICOM.RT.RTDose.Y0
+  - EvilDICOM.RT.RTDose.YMax
+  - EvilDICOM.RT.RTDose.YRes
+  - EvilDICOM.RT.RTDose.Z0
+  - EvilDICOM.RT.RTDose.ZMax
+  - EvilDICOM.RT.RTDose.ZRes
+  langs:
+  - csharp
+  - vb
+  name: RTDose
+  nameWithType: RTDose
+  fullName: EvilDICOM.RT.RTDose
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RTDose
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public class RTDose
+    content.vb: Public Class RTDose
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.RT.RTDose.#ctor(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.RT.RTDose.#ctor(EvilDICOM.Core.DICOMObject)
+  id: '#ctor(EvilDICOM.Core.DICOMObject)'
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: RTDose(DICOMObject)
+  nameWithType: RTDose.RTDose(DICOMObject)
+  fullName: EvilDICOM.RT.RTDose.RTDose(EvilDICOM.Core.DICOMObject)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public RTDose(DICOMObject dcm)
+    parameters:
+    - id: dcm
+      type: EvilDICOM.Core.DICOMObject
+    content.vb: Public Sub New(dcm As DICOMObject)
+  overload: EvilDICOM.RT.RTDose.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.DoseValues
+  commentId: P:EvilDICOM.RT.RTDose.DoseValues
+  id: DoseValues
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: DoseValues
+  nameWithType: RTDose.DoseValues
+  fullName: EvilDICOM.RT.RTDose.DoseValues
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DoseValues
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 40
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public List<double> DoseValues { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.Double}
+    content.vb: Public Property DoseValues As List(Of Double)
+  overload: EvilDICOM.RT.RTDose.DoseValues*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.ValueSizeInBytes
+  commentId: P:EvilDICOM.RT.RTDose.ValueSizeInBytes
+  id: ValueSizeInBytes
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: ValueSizeInBytes
+  nameWithType: RTDose.ValueSizeInBytes
+  fullName: EvilDICOM.RT.RTDose.ValueSizeInBytes
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ValueSizeInBytes
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 42
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public int ValueSizeInBytes { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property ValueSizeInBytes As Integer
+  overload: EvilDICOM.RT.RTDose.ValueSizeInBytes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.XRes
+  commentId: P:EvilDICOM.RT.RTDose.XRes
+  id: XRes
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: XRes
+  nameWithType: RTDose.XRes
+  fullName: EvilDICOM.RT.RTDose.XRes
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: XRes
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 44
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double XRes { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property XRes As Double
+  overload: EvilDICOM.RT.RTDose.XRes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.YRes
+  commentId: P:EvilDICOM.RT.RTDose.YRes
+  id: YRes
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: YRes
+  nameWithType: RTDose.YRes
+  fullName: EvilDICOM.RT.RTDose.YRes
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: YRes
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 50
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double YRes { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property YRes As Double
+  overload: EvilDICOM.RT.RTDose.YRes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.ZRes
+  commentId: P:EvilDICOM.RT.RTDose.ZRes
+  id: ZRes
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: ZRes
+  nameWithType: RTDose.ZRes
+  fullName: EvilDICOM.RT.RTDose.ZRes
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ZRes
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 56
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double ZRes { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property ZRes As Double
+  overload: EvilDICOM.RT.RTDose.ZRes*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.RT.RTDose.X0
+  commentId: P:EvilDICOM.RT.RTDose.X0
+  id: X0
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: X0
+  nameWithType: RTDose.X0
+  fullName: EvilDICOM.RT.RTDose.X0
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: X0
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 64
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double X0 { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property X0 As Double
+  overload: EvilDICOM.RT.RTDose.X0*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.Y0
+  commentId: P:EvilDICOM.RT.RTDose.Y0
+  id: Y0
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: Y0
+  nameWithType: RTDose.Y0
+  fullName: EvilDICOM.RT.RTDose.Y0
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Y0
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 70
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double Y0 { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Y0 As Double
+  overload: EvilDICOM.RT.RTDose.Y0*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.Z0
+  commentId: P:EvilDICOM.RT.RTDose.Z0
+  id: Z0
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: Z0
+  nameWithType: RTDose.Z0
+  fullName: EvilDICOM.RT.RTDose.Z0
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Z0
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 76
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double Z0 { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Z0 As Double
+  overload: EvilDICOM.RT.RTDose.Z0*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.XMax
+  commentId: P:EvilDICOM.RT.RTDose.XMax
+  id: XMax
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: XMax
+  nameWithType: RTDose.XMax
+  fullName: EvilDICOM.RT.RTDose.XMax
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: XMax
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 82
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double XMax { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property XMax As Double
+  overload: EvilDICOM.RT.RTDose.XMax*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.RT.RTDose.YMax
+  commentId: P:EvilDICOM.RT.RTDose.YMax
+  id: YMax
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: YMax
+  nameWithType: RTDose.YMax
+  fullName: EvilDICOM.RT.RTDose.YMax
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: YMax
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 87
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double YMax { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property YMax As Double
+  overload: EvilDICOM.RT.RTDose.YMax*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.RT.RTDose.ZMax
+  commentId: P:EvilDICOM.RT.RTDose.ZMax
+  id: ZMax
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: ZMax
+  nameWithType: RTDose.ZMax
+  fullName: EvilDICOM.RT.RTDose.ZMax
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ZMax
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 92
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double ZMax { get; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public ReadOnly Property ZMax As Double
+  overload: EvilDICOM.RT.RTDose.ZMax*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.RT.RTDose.DimensionX
+  commentId: P:EvilDICOM.RT.RTDose.DimensionX
+  id: DimensionX
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: DimensionX
+  nameWithType: RTDose.DimensionX
+  fullName: EvilDICOM.RT.RTDose.DimensionX
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DimensionX
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 97
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public int DimensionX { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DimensionX As Integer
+  overload: EvilDICOM.RT.RTDose.DimensionX*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.DimensionY
+  commentId: P:EvilDICOM.RT.RTDose.DimensionY
+  id: DimensionY
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: DimensionY
+  nameWithType: RTDose.DimensionY
+  fullName: EvilDICOM.RT.RTDose.DimensionY
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DimensionY
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 103
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public int DimensionY { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DimensionY As Integer
+  overload: EvilDICOM.RT.RTDose.DimensionY*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.DimensionZ
+  commentId: P:EvilDICOM.RT.RTDose.DimensionZ
+  id: DimensionZ
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: DimensionZ
+  nameWithType: RTDose.DimensionZ
+  fullName: EvilDICOM.RT.RTDose.DimensionZ
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DimensionZ
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 109
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public int DimensionZ { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property DimensionZ As Integer
+  overload: EvilDICOM.RT.RTDose.DimensionZ*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.MaxPointDose
+  commentId: P:EvilDICOM.RT.RTDose.MaxPointDose
+  id: MaxPointDose
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: MaxPointDose
+  nameWithType: RTDose.MaxPointDose
+  fullName: EvilDICOM.RT.RTDose.MaxPointDose
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MaxPointDose
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 115
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public DoseValue MaxPointDose { get; }
+    parameters: []
+    return:
+      type: EvilDICOM.RT.DoseValue
+    content.vb: Public ReadOnly Property MaxPointDose As DoseValue
+  overload: EvilDICOM.RT.RTDose.MaxPointDose*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.RT.RTDose.DirectionalCosines
+  commentId: P:EvilDICOM.RT.RTDose.DirectionalCosines
+  id: DirectionalCosines
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: DirectionalCosines
+  nameWithType: RTDose.DirectionalCosines
+  fullName: EvilDICOM.RT.RTDose.DirectionalCosines
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DirectionalCosines
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 126
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double[] DirectionalCosines { get; }
+    parameters: []
+    return:
+      type: System.Double[]
+    content.vb: Public ReadOnly Property DirectionalCosines As Double()
+  overload: EvilDICOM.RT.RTDose.DirectionalCosines*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.RT.RTDose.Scaling
+  commentId: P:EvilDICOM.RT.RTDose.Scaling
+  id: Scaling
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: Scaling
+  nameWithType: RTDose.Scaling
+  fullName: EvilDICOM.RT.RTDose.Scaling
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Scaling
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 131
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public double Scaling { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Scaling As Double
+  overload: EvilDICOM.RT.RTDose.Scaling*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.Load(System.String)
+  commentId: M:EvilDICOM.RT.RTDose.Load(System.String)
+  id: Load(System.String)
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: Load(String)
+  nameWithType: RTDose.Load(String)
+  fullName: EvilDICOM.RT.RTDose.Load(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Load
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 133
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public static RTDose Load(string dcmFile)
+    parameters:
+    - id: dcmFile
+      type: System.String
+    return:
+      type: EvilDICOM.RT.RTDose
+    content.vb: Public Shared Function Load(dcmFile As String) As RTDose
+  overload: EvilDICOM.RT.RTDose.Load*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.RT.RTDose.GetLineDose(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,System.Double)
+  commentId: M:EvilDICOM.RT.RTDose.GetLineDose(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,System.Double)
+  id: GetLineDose(EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,System.Double)
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: GetLineDose(Vector3, Vector3, Double)
+  nameWithType: RTDose.GetLineDose(Vector3, Vector3, Double)
+  fullName: EvilDICOM.RT.RTDose.GetLineDose(EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3, System.Double)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetLineDose
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 145
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  summary: "\nScrapes a dose matrix along the line from startXYZ in mm to endXYZ in mm\n"
+  example: []
+  syntax:
+    content: public List<DoseValue> GetLineDose(Vector3 startXYZmm, Vector3 endXYZmm, double resolution_mm = 2)
+    parameters:
+    - id: startXYZmm
+      type: EvilDICOM.Core.Helpers.Vector3
+      description: the starting position of the line
+    - id: endXYZmm
+      type: EvilDICOM.Core.Helpers.Vector3
+      description: the end position of the line
+    - id: resolution_mm
+      type: System.Double
+      description: the resolution to interoplate the line dose (default 2 mm)
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.RT.DoseValue}
+      description: a list of dose values at the specified resolution along the line
+    content.vb: Public Function GetLineDose(startXYZmm As Vector3, endXYZmm As Vector3, resolution_mm As Double = 2) As List(Of DoseValue)
+  overload: EvilDICOM.RT.RTDose.GetLineDose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.GetPointDose(System.Double,System.Double,System.Double)
+  commentId: M:EvilDICOM.RT.RTDose.GetPointDose(System.Double,System.Double,System.Double)
+  id: GetPointDose(System.Double,System.Double,System.Double)
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: GetPointDose(Double, Double, Double)
+  nameWithType: RTDose.GetPointDose(Double, Double, Double)
+  fullName: EvilDICOM.RT.RTDose.GetPointDose(System.Double, System.Double, System.Double)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetPointDose
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 166
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public DoseValue GetPointDose(double x, double y, double z)
+    parameters:
+    - id: x
+      type: System.Double
+    - id: y
+      type: System.Double
+    - id: z
+      type: System.Double
+    return:
+      type: EvilDICOM.RT.DoseValue
+    content.vb: Public Function GetPointDose(x As Double, y As Double, z As Double) As DoseValue
+  overload: EvilDICOM.RT.RTDose.GetPointDose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.GetPointDose(EvilDICOM.Core.Helpers.Vector3)
+  commentId: M:EvilDICOM.RT.RTDose.GetPointDose(EvilDICOM.Core.Helpers.Vector3)
+  id: GetPointDose(EvilDICOM.Core.Helpers.Vector3)
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: GetPointDose(Vector3)
+  nameWithType: RTDose.GetPointDose(Vector3)
+  fullName: EvilDICOM.RT.RTDose.GetPointDose(EvilDICOM.Core.Helpers.Vector3)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetPointDose
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 216
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public DoseValue GetPointDose(Vector3 pt)
+    parameters:
+    - id: pt
+      type: EvilDICOM.Core.Helpers.Vector3
+    return:
+      type: EvilDICOM.RT.DoseValue
+    content.vb: Public Function GetPointDose(pt As Vector3) As DoseValue
+  overload: EvilDICOM.RT.RTDose.GetPointDose*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.ConvertRelToAbs(System.Double)
+  commentId: M:EvilDICOM.RT.RTDose.ConvertRelToAbs(System.Double)
+  id: ConvertRelToAbs(System.Double)
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: ConvertRelToAbs(Double)
+  nameWithType: RTDose.ConvertRelToAbs(Double)
+  fullName: EvilDICOM.RT.RTDose.ConvertRelToAbs(System.Double)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ConvertRelToAbs
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 228
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public void ConvertRelToAbs(double totalDose)
+    parameters:
+    - id: totalDose
+      type: System.Double
+    content.vb: Public Sub ConvertRelToAbs(totalDose As Double)
+  overload: EvilDICOM.RT.RTDose.ConvertRelToAbs*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.ConvertAbsToRel(System.Double)
+  commentId: M:EvilDICOM.RT.RTDose.ConvertAbsToRel(System.Double)
+  id: ConvertAbsToRel(System.Double)
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: ConvertAbsToRel(Double)
+  nameWithType: RTDose.ConvertAbsToRel(Double)
+  fullName: EvilDICOM.RT.RTDose.ConvertAbsToRel(System.Double)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ConvertAbsToRel
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 250
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public void ConvertAbsToRel(double totalDose)
+    parameters:
+    - id: totalDose
+      type: System.Double
+    content.vb: Public Sub ConvertAbsToRel(totalDose As Double)
+  overload: EvilDICOM.RT.RTDose.ConvertAbsToRel*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.ToDICOM
+  commentId: M:EvilDICOM.RT.RTDose.ToDICOM
+  id: ToDICOM
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: ToDICOM()
+  nameWithType: RTDose.ToDICOM()
+  fullName: EvilDICOM.RT.RTDose.ToDICOM()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToDICOM
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 273
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public DICOMObject ToDICOM()
+    return:
+      type: EvilDICOM.Core.DICOMObject
+    content.vb: Public Function ToDICOM As DICOMObject
+  overload: EvilDICOM.RT.RTDose.ToDICOM*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.RT.RTDose.Save(System.String)
+  commentId: M:EvilDICOM.RT.RTDose.Save(System.String)
+  id: Save(System.String)
+  parent: EvilDICOM.RT.RTDose
+  langs:
+  - csharp
+  - vb
+  name: Save(String)
+  nameWithType: RTDose.Save(String)
+  fullName: EvilDICOM.RT.RTDose.Save(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/RT/RTDose.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Save
+    path: ../EvilDICOM/RT/RTDose.cs
+    startLine: 302
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.RT
+  syntax:
+    content: public void Save(string path)
+    parameters:
+    - id: path
+      type: System.String
+    content.vb: Public Sub Save(path As String)
+  overload: EvilDICOM.RT.RTDose.Save*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.RT
+  commentId: N:EvilDICOM.RT
+  name: EvilDICOM.RT
+  nameWithType: EvilDICOM.RT
+  fullName: EvilDICOM.RT
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.RT.RTDose.#ctor*
+  commentId: Overload:EvilDICOM.RT.RTDose.#ctor
+  name: RTDose
+  nameWithType: RTDose.RTDose
+  fullName: EvilDICOM.RT.RTDose.RTDose
+- uid: EvilDICOM.Core.DICOMObject
+  commentId: T:EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  name: DICOMObject
+  nameWithType: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: EvilDICOM.RT.RTDose.DoseValues*
+  commentId: Overload:EvilDICOM.RT.RTDose.DoseValues
+  name: DoseValues
+  nameWithType: RTDose.DoseValues
+  fullName: EvilDICOM.RT.RTDose.DoseValues
+- uid: System.Collections.Generic.List{System.Double}
+  commentId: T:System.Collections.Generic.List{System.Double}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<Double>
+  nameWithType: List<Double>
+  fullName: System.Collections.Generic.List<System.Double>
+  nameWithType.vb: List(Of Double)
+  fullName.vb: System.Collections.Generic.List(Of System.Double)
+  name.vb: List(Of Double)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: EvilDICOM.RT.RTDose.ValueSizeInBytes*
+  commentId: Overload:EvilDICOM.RT.RTDose.ValueSizeInBytes
+  name: ValueSizeInBytes
+  nameWithType: RTDose.ValueSizeInBytes
+  fullName: EvilDICOM.RT.RTDose.ValueSizeInBytes
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.RT.RTDose.XRes*
+  commentId: Overload:EvilDICOM.RT.RTDose.XRes
+  name: XRes
+  nameWithType: RTDose.XRes
+  fullName: EvilDICOM.RT.RTDose.XRes
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: EvilDICOM.RT.RTDose.YRes*
+  commentId: Overload:EvilDICOM.RT.RTDose.YRes
+  name: YRes
+  nameWithType: RTDose.YRes
+  fullName: EvilDICOM.RT.RTDose.YRes
+- uid: EvilDICOM.RT.RTDose.ZRes*
+  commentId: Overload:EvilDICOM.RT.RTDose.ZRes
+  name: ZRes
+  nameWithType: RTDose.ZRes
+  fullName: EvilDICOM.RT.RTDose.ZRes
+- uid: EvilDICOM.RT.RTDose.X0*
+  commentId: Overload:EvilDICOM.RT.RTDose.X0
+  name: X0
+  nameWithType: RTDose.X0
+  fullName: EvilDICOM.RT.RTDose.X0
+- uid: EvilDICOM.RT.RTDose.Y0*
+  commentId: Overload:EvilDICOM.RT.RTDose.Y0
+  name: Y0
+  nameWithType: RTDose.Y0
+  fullName: EvilDICOM.RT.RTDose.Y0
+- uid: EvilDICOM.RT.RTDose.Z0*
+  commentId: Overload:EvilDICOM.RT.RTDose.Z0
+  name: Z0
+  nameWithType: RTDose.Z0
+  fullName: EvilDICOM.RT.RTDose.Z0
+- uid: EvilDICOM.RT.RTDose.XMax*
+  commentId: Overload:EvilDICOM.RT.RTDose.XMax
+  name: XMax
+  nameWithType: RTDose.XMax
+  fullName: EvilDICOM.RT.RTDose.XMax
+- uid: EvilDICOM.RT.RTDose.YMax*
+  commentId: Overload:EvilDICOM.RT.RTDose.YMax
+  name: YMax
+  nameWithType: RTDose.YMax
+  fullName: EvilDICOM.RT.RTDose.YMax
+- uid: EvilDICOM.RT.RTDose.ZMax*
+  commentId: Overload:EvilDICOM.RT.RTDose.ZMax
+  name: ZMax
+  nameWithType: RTDose.ZMax
+  fullName: EvilDICOM.RT.RTDose.ZMax
+- uid: EvilDICOM.RT.RTDose.DimensionX*
+  commentId: Overload:EvilDICOM.RT.RTDose.DimensionX
+  name: DimensionX
+  nameWithType: RTDose.DimensionX
+  fullName: EvilDICOM.RT.RTDose.DimensionX
+- uid: EvilDICOM.RT.RTDose.DimensionY*
+  commentId: Overload:EvilDICOM.RT.RTDose.DimensionY
+  name: DimensionY
+  nameWithType: RTDose.DimensionY
+  fullName: EvilDICOM.RT.RTDose.DimensionY
+- uid: EvilDICOM.RT.RTDose.DimensionZ*
+  commentId: Overload:EvilDICOM.RT.RTDose.DimensionZ
+  name: DimensionZ
+  nameWithType: RTDose.DimensionZ
+  fullName: EvilDICOM.RT.RTDose.DimensionZ
+- uid: EvilDICOM.RT.RTDose.MaxPointDose*
+  commentId: Overload:EvilDICOM.RT.RTDose.MaxPointDose
+  name: MaxPointDose
+  nameWithType: RTDose.MaxPointDose
+  fullName: EvilDICOM.RT.RTDose.MaxPointDose
+- uid: EvilDICOM.RT.DoseValue
+  commentId: T:EvilDICOM.RT.DoseValue
+  parent: EvilDICOM.RT
+  name: DoseValue
+  nameWithType: DoseValue
+  fullName: EvilDICOM.RT.DoseValue
+- uid: EvilDICOM.RT.RTDose.DirectionalCosines*
+  commentId: Overload:EvilDICOM.RT.RTDose.DirectionalCosines
+  name: DirectionalCosines
+  nameWithType: RTDose.DirectionalCosines
+  fullName: EvilDICOM.RT.RTDose.DirectionalCosines
+- uid: System.Double[]
+  isExternal: true
+  name: Double[]
+  nameWithType: Double[]
+  fullName: System.Double[]
+  nameWithType.vb: Double()
+  fullName.vb: System.Double()
+  name.vb: Double()
+  spec.csharp:
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.RT.RTDose.Scaling*
+  commentId: Overload:EvilDICOM.RT.RTDose.Scaling
+  name: Scaling
+  nameWithType: RTDose.Scaling
+  fullName: EvilDICOM.RT.RTDose.Scaling
+- uid: EvilDICOM.RT.RTDose.Load*
+  commentId: Overload:EvilDICOM.RT.RTDose.Load
+  name: Load
+  nameWithType: RTDose.Load
+  fullName: EvilDICOM.RT.RTDose.Load
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.RT.RTDose
+  commentId: T:EvilDICOM.RT.RTDose
+  parent: EvilDICOM.RT
+  name: RTDose
+  nameWithType: RTDose
+  fullName: EvilDICOM.RT.RTDose
+- uid: EvilDICOM.RT.RTDose.GetLineDose*
+  commentId: Overload:EvilDICOM.RT.RTDose.GetLineDose
+  name: GetLineDose
+  nameWithType: RTDose.GetLineDose
+  fullName: EvilDICOM.RT.RTDose.GetLineDose
+- uid: EvilDICOM.Core.Helpers.Vector3
+  commentId: T:EvilDICOM.Core.Helpers.Vector3
+  parent: EvilDICOM.Core.Helpers
+  name: Vector3
+  nameWithType: Vector3
+  fullName: EvilDICOM.Core.Helpers.Vector3
+- uid: System.Collections.Generic.List{EvilDICOM.RT.DoseValue}
+  commentId: T:System.Collections.Generic.List{EvilDICOM.RT.DoseValue}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<DoseValue>
+  nameWithType: List<DoseValue>
+  fullName: System.Collections.Generic.List<EvilDICOM.RT.DoseValue>
+  nameWithType.vb: List(Of DoseValue)
+  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.RT.DoseValue)
+  name.vb: List(Of DoseValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.RT.DoseValue
+    name: DoseValue
+    nameWithType: DoseValue
+    fullName: EvilDICOM.RT.DoseValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.RT.DoseValue
+    name: DoseValue
+    nameWithType: DoseValue
+    fullName: EvilDICOM.RT.DoseValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: EvilDICOM.RT.RTDose.GetPointDose*
+  commentId: Overload:EvilDICOM.RT.RTDose.GetPointDose
+  name: GetPointDose
+  nameWithType: RTDose.GetPointDose
+  fullName: EvilDICOM.RT.RTDose.GetPointDose
+- uid: EvilDICOM.RT.RTDose.ConvertRelToAbs*
+  commentId: Overload:EvilDICOM.RT.RTDose.ConvertRelToAbs
+  name: ConvertRelToAbs
+  nameWithType: RTDose.ConvertRelToAbs
+  fullName: EvilDICOM.RT.RTDose.ConvertRelToAbs
+- uid: EvilDICOM.RT.RTDose.ConvertAbsToRel*
+  commentId: Overload:EvilDICOM.RT.RTDose.ConvertAbsToRel
+  name: ConvertAbsToRel
+  nameWithType: RTDose.ConvertAbsToRel
+  fullName: EvilDICOM.RT.RTDose.ConvertAbsToRel
+- uid: EvilDICOM.RT.RTDose.ToDICOM*
+  commentId: Overload:EvilDICOM.RT.RTDose.ToDICOM
+  name: ToDICOM
+  nameWithType: RTDose.ToDICOM
+  fullName: EvilDICOM.RT.RTDose.ToDICOM
+- uid: EvilDICOM.RT.RTDose.Save*
+  commentId: Overload:EvilDICOM.RT.RTDose.Save
+  name: Save
+  nameWithType: RTDose.Save
+  fullName: EvilDICOM.RT.RTDose.Save

@@ -1,0 +1,1654 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter
+  commentId: T:EvilDICOM.Core.IO.Data.BigEndianWriter
+  id: BigEndianWriter
+  parent: EvilDICOM.Core.IO.Data
+  children:
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecision(EvilDICOM.Core.DICOMData{System.Double})
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecisionSingle(System.Double)
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLong(EvilDICOM.Core.DICOMData{System.Int32})
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLongSingle(System.Int32)
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShort(EvilDICOM.Core.DICOMData{System.Int16})
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShortSingle(System.Int16)
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLong(EvilDICOM.Core.DICOMData{System.Int64})
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLongSingle(System.Int64)
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecision(EvilDICOM.Core.DICOMData{System.Single})
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecisionSingle(System.Single)
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTag(EvilDICOM.Core.DICOMData{EvilDICOM.Core.Element.Tag})
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTagSingle(EvilDICOM.Core.Element.Tag)
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLong(EvilDICOM.Core.DICOMData{System.UInt32})
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLongSingle(System.UInt32)
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShort(EvilDICOM.Core.DICOMData{System.UInt16})
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShortSingle(System.UInt16)
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLong(EvilDICOM.Core.DICOMData{System.UInt64})
+  - EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLongSingle(System.UInt64)
+  langs:
+  - csharp
+  - vb
+  name: BigEndianWriter
+  nameWithType: BigEndianWriter
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: BigEndianWriter
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public class BigEndianWriter
+    content.vb: Public Class BigEndianWriter
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTag(EvilDICOM.Core.DICOMData{EvilDICOM.Core.Element.Tag})
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTag(EvilDICOM.Core.DICOMData{EvilDICOM.Core.Element.Tag})
+  id: WriteTag(EvilDICOM.Core.DICOMData{EvilDICOM.Core.Element.Tag})
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteTag(DICOMData<Tag>)
+  nameWithType: BigEndianWriter.WriteTag(DICOMData<Tag>)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTag(EvilDICOM.Core.DICOMData<EvilDICOM.Core.Element.Tag>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteTag
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteTag(DICOMData<Tag> data)
+    parameters:
+    - id: data
+      type: EvilDICOM.Core.DICOMData{EvilDICOM.Core.Element.Tag}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteTag(data As DICOMData(Of Tag)) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTag*
+  nameWithType.vb: BigEndianWriter.WriteTag(DICOMData(Of Tag))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTag(EvilDICOM.Core.DICOMData(Of EvilDICOM.Core.Element.Tag))
+  name.vb: WriteTag(DICOMData(Of Tag))
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecision(EvilDICOM.Core.DICOMData{System.Single})
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecision(EvilDICOM.Core.DICOMData{System.Single})
+  id: WriteSinglePrecision(EvilDICOM.Core.DICOMData{System.Single})
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteSinglePrecision(DICOMData<Single>)
+  nameWithType: BigEndianWriter.WriteSinglePrecision(DICOMData<Single>)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecision(EvilDICOM.Core.DICOMData<System.Single>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteSinglePrecision
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteSinglePrecision(DICOMData<float> data)
+    parameters:
+    - id: data
+      type: EvilDICOM.Core.DICOMData{System.Single}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteSinglePrecision(data As DICOMData(Of Single)) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecision*
+  nameWithType.vb: BigEndianWriter.WriteSinglePrecision(DICOMData(Of Single))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecision(EvilDICOM.Core.DICOMData(Of System.Single))
+  name.vb: WriteSinglePrecision(DICOMData(Of Single))
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecision(EvilDICOM.Core.DICOMData{System.Double})
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecision(EvilDICOM.Core.DICOMData{System.Double})
+  id: WriteDoublePrecision(EvilDICOM.Core.DICOMData{System.Double})
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteDoublePrecision(DICOMData<Double>)
+  nameWithType: BigEndianWriter.WriteDoublePrecision(DICOMData<Double>)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecision(EvilDICOM.Core.DICOMData<System.Double>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteDoublePrecision
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteDoublePrecision(DICOMData<double> data)
+    parameters:
+    - id: data
+      type: EvilDICOM.Core.DICOMData{System.Double}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteDoublePrecision(data As DICOMData(Of Double)) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecision*
+  nameWithType.vb: BigEndianWriter.WriteDoublePrecision(DICOMData(Of Double))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecision(EvilDICOM.Core.DICOMData(Of System.Double))
+  name.vb: WriteDoublePrecision(DICOMData(Of Double))
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLong(EvilDICOM.Core.DICOMData{System.Int32})
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLong(EvilDICOM.Core.DICOMData{System.Int32})
+  id: WriteSignedLong(EvilDICOM.Core.DICOMData{System.Int32})
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteSignedLong(DICOMData<Int32>)
+  nameWithType: BigEndianWriter.WriteSignedLong(DICOMData<Int32>)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLong(EvilDICOM.Core.DICOMData<System.Int32>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteSignedLong
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteSignedLong(DICOMData<int> data)
+    parameters:
+    - id: data
+      type: EvilDICOM.Core.DICOMData{System.Int32}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteSignedLong(data As DICOMData(Of Integer)) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLong*
+  nameWithType.vb: BigEndianWriter.WriteSignedLong(DICOMData(Of Int32))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLong(EvilDICOM.Core.DICOMData(Of System.Int32))
+  name.vb: WriteSignedLong(DICOMData(Of Int32))
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLong(EvilDICOM.Core.DICOMData{System.UInt32})
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLong(EvilDICOM.Core.DICOMData{System.UInt32})
+  id: WriteUnsignedLong(EvilDICOM.Core.DICOMData{System.UInt32})
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteUnsignedLong(DICOMData<UInt32>)
+  nameWithType: BigEndianWriter.WriteUnsignedLong(DICOMData<UInt32>)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLong(EvilDICOM.Core.DICOMData<System.UInt32>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteUnsignedLong
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 33
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteUnsignedLong(DICOMData<uint> data)
+    parameters:
+    - id: data
+      type: EvilDICOM.Core.DICOMData{System.UInt32}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteUnsignedLong(data As DICOMData(Of UInteger)) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLong*
+  nameWithType.vb: BigEndianWriter.WriteUnsignedLong(DICOMData(Of UInt32))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLong(EvilDICOM.Core.DICOMData(Of System.UInt32))
+  name.vb: WriteUnsignedLong(DICOMData(Of UInt32))
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLong(EvilDICOM.Core.DICOMData{System.Int64})
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLong(EvilDICOM.Core.DICOMData{System.Int64})
+  id: WriteSignedVeryLong(EvilDICOM.Core.DICOMData{System.Int64})
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteSignedVeryLong(DICOMData<Int64>)
+  nameWithType: BigEndianWriter.WriteSignedVeryLong(DICOMData<Int64>)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLong(EvilDICOM.Core.DICOMData<System.Int64>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteSignedVeryLong
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 38
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteSignedVeryLong(DICOMData<long> data)
+    parameters:
+    - id: data
+      type: EvilDICOM.Core.DICOMData{System.Int64}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteSignedVeryLong(data As DICOMData(Of Long)) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLong*
+  nameWithType.vb: BigEndianWriter.WriteSignedVeryLong(DICOMData(Of Int64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLong(EvilDICOM.Core.DICOMData(Of System.Int64))
+  name.vb: WriteSignedVeryLong(DICOMData(Of Int64))
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShort(EvilDICOM.Core.DICOMData{System.Int16})
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShort(EvilDICOM.Core.DICOMData{System.Int16})
+  id: WriteSignedShort(EvilDICOM.Core.DICOMData{System.Int16})
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteSignedShort(DICOMData<Int16>)
+  nameWithType: BigEndianWriter.WriteSignedShort(DICOMData<Int16>)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShort(EvilDICOM.Core.DICOMData<System.Int16>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteSignedShort
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 43
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteSignedShort(DICOMData<short> data)
+    parameters:
+    - id: data
+      type: EvilDICOM.Core.DICOMData{System.Int16}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteSignedShort(data As DICOMData(Of Short)) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShort*
+  nameWithType.vb: BigEndianWriter.WriteSignedShort(DICOMData(Of Int16))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShort(EvilDICOM.Core.DICOMData(Of System.Int16))
+  name.vb: WriteSignedShort(DICOMData(Of Int16))
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShort(EvilDICOM.Core.DICOMData{System.UInt16})
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShort(EvilDICOM.Core.DICOMData{System.UInt16})
+  id: WriteUnsignedShort(EvilDICOM.Core.DICOMData{System.UInt16})
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteUnsignedShort(DICOMData<UInt16>)
+  nameWithType: BigEndianWriter.WriteUnsignedShort(DICOMData<UInt16>)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShort(EvilDICOM.Core.DICOMData<System.UInt16>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteUnsignedShort
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 48
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteUnsignedShort(DICOMData<ushort> data)
+    parameters:
+    - id: data
+      type: EvilDICOM.Core.DICOMData{System.UInt16}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteUnsignedShort(data As DICOMData(Of UShort)) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShort*
+  nameWithType.vb: BigEndianWriter.WriteUnsignedShort(DICOMData(Of UInt16))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShort(EvilDICOM.Core.DICOMData(Of System.UInt16))
+  name.vb: WriteUnsignedShort(DICOMData(Of UInt16))
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLong(EvilDICOM.Core.DICOMData{System.UInt64})
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLong(EvilDICOM.Core.DICOMData{System.UInt64})
+  id: WriteUnsignedVeryLong(EvilDICOM.Core.DICOMData{System.UInt64})
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteUnsignedVeryLong(DICOMData<UInt64>)
+  nameWithType: BigEndianWriter.WriteUnsignedVeryLong(DICOMData<UInt64>)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLong(EvilDICOM.Core.DICOMData<System.UInt64>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteUnsignedVeryLong
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 53
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteUnsignedVeryLong(DICOMData<ulong> data)
+    parameters:
+    - id: data
+      type: EvilDICOM.Core.DICOMData{System.UInt64}
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteUnsignedVeryLong(data As DICOMData(Of ULong)) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLong*
+  nameWithType.vb: BigEndianWriter.WriteUnsignedVeryLong(DICOMData(Of UInt64))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLong(EvilDICOM.Core.DICOMData(Of System.UInt64))
+  name.vb: WriteUnsignedVeryLong(DICOMData(Of UInt64))
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTagSingle(EvilDICOM.Core.Element.Tag)
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTagSingle(EvilDICOM.Core.Element.Tag)
+  id: WriteTagSingle(EvilDICOM.Core.Element.Tag)
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteTagSingle(Tag)
+  nameWithType: BigEndianWriter.WriteTagSingle(Tag)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTagSingle(EvilDICOM.Core.Element.Tag)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteTagSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 62
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteTagSingle(Tag tag)
+    parameters:
+    - id: tag
+      type: EvilDICOM.Core.Element.Tag
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteTagSingle(tag As Tag) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTagSingle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecisionSingle(System.Single)
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecisionSingle(System.Single)
+  id: WriteSinglePrecisionSingle(System.Single)
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteSinglePrecisionSingle(Single)
+  nameWithType: BigEndianWriter.WriteSinglePrecisionSingle(Single)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecisionSingle(System.Single)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteSinglePrecisionSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 67
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteSinglePrecisionSingle(float data)
+    parameters:
+    - id: data
+      type: System.Single
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteSinglePrecisionSingle(data As Single) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecisionSingle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecisionSingle(System.Double)
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecisionSingle(System.Double)
+  id: WriteDoublePrecisionSingle(System.Double)
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteDoublePrecisionSingle(Double)
+  nameWithType: BigEndianWriter.WriteDoublePrecisionSingle(Double)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecisionSingle(System.Double)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteDoublePrecisionSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 72
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteDoublePrecisionSingle(double data)
+    parameters:
+    - id: data
+      type: System.Double
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteDoublePrecisionSingle(data As Double) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecisionSingle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLongSingle(System.Int32)
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLongSingle(System.Int32)
+  id: WriteSignedLongSingle(System.Int32)
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteSignedLongSingle(Int32)
+  nameWithType: BigEndianWriter.WriteSignedLongSingle(Int32)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLongSingle(System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteSignedLongSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 77
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteSignedLongSingle(int data)
+    parameters:
+    - id: data
+      type: System.Int32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteSignedLongSingle(data As Integer) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLongSingle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLongSingle(System.UInt32)
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLongSingle(System.UInt32)
+  id: WriteUnsignedLongSingle(System.UInt32)
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteUnsignedLongSingle(UInt32)
+  nameWithType: BigEndianWriter.WriteUnsignedLongSingle(UInt32)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLongSingle(System.UInt32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteUnsignedLongSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 82
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteUnsignedLongSingle(uint data)
+    parameters:
+    - id: data
+      type: System.UInt32
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteUnsignedLongSingle(data As UInteger) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLongSingle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShortSingle(System.Int16)
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShortSingle(System.Int16)
+  id: WriteSignedShortSingle(System.Int16)
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteSignedShortSingle(Int16)
+  nameWithType: BigEndianWriter.WriteSignedShortSingle(Int16)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShortSingle(System.Int16)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteSignedShortSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 87
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteSignedShortSingle(short data)
+    parameters:
+    - id: data
+      type: System.Int16
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteSignedShortSingle(data As Short) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShortSingle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShortSingle(System.UInt16)
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShortSingle(System.UInt16)
+  id: WriteUnsignedShortSingle(System.UInt16)
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteUnsignedShortSingle(UInt16)
+  nameWithType: BigEndianWriter.WriteUnsignedShortSingle(UInt16)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShortSingle(System.UInt16)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteUnsignedShortSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 92
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteUnsignedShortSingle(ushort data)
+    parameters:
+    - id: data
+      type: System.UInt16
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteUnsignedShortSingle(data As UShort) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShortSingle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLongSingle(System.Int64)
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLongSingle(System.Int64)
+  id: WriteSignedVeryLongSingle(System.Int64)
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteSignedVeryLongSingle(Int64)
+  nameWithType: BigEndianWriter.WriteSignedVeryLongSingle(Int64)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLongSingle(System.Int64)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteSignedVeryLongSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 97
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteSignedVeryLongSingle(long data)
+    parameters:
+    - id: data
+      type: System.Int64
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteSignedVeryLongSingle(data As Long) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLongSingle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLongSingle(System.UInt64)
+  commentId: M:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLongSingle(System.UInt64)
+  id: WriteUnsignedVeryLongSingle(System.UInt64)
+  parent: EvilDICOM.Core.IO.Data.BigEndianWriter
+  langs:
+  - csharp
+  - vb
+  name: WriteUnsignedVeryLongSingle(UInt64)
+  nameWithType: BigEndianWriter.WriteUnsignedVeryLongSingle(UInt64)
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLongSingle(System.UInt64)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WriteUnsignedVeryLongSingle
+    path: ../EvilDICOM/Core/IO/Data/BigEndianWriter.cs
+    startLine: 102
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] WriteUnsignedVeryLongSingle(ulong data)
+    parameters:
+    - id: data
+      type: System.UInt64
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function WriteUnsignedVeryLongSingle(data As ULong) As Byte()
+  overload: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLongSingle*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.IO.Data
+  commentId: N:EvilDICOM.Core.IO.Data
+  name: EvilDICOM.Core.IO.Data
+  nameWithType: EvilDICOM.Core.IO.Data
+  fullName: EvilDICOM.Core.IO.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTag*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTag
+  name: WriteTag
+  nameWithType: BigEndianWriter.WriteTag
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTag
+- uid: EvilDICOM.Core.DICOMData{EvilDICOM.Core.Element.Tag}
+  commentId: T:EvilDICOM.Core.DICOMData{EvilDICOM.Core.Element.Tag}
+  parent: EvilDICOM.Core
+  definition: EvilDICOM.Core.DICOMData`1
+  name: DICOMData<Tag>
+  nameWithType: DICOMData<Tag>
+  fullName: EvilDICOM.Core.DICOMData<EvilDICOM.Core.Element.Tag>
+  nameWithType.vb: DICOMData(Of Tag)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of EvilDICOM.Core.Element.Tag)
+  name.vb: DICOMData(Of Tag)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Core.Element.Tag
+    name: Tag
+    nameWithType: Tag
+    fullName: EvilDICOM.Core.Element.Tag
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.Element.Tag
+    name: Tag
+    nameWithType: Tag
+    fullName: EvilDICOM.Core.Element.Tag
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.DICOMData`1
+  commentId: T:EvilDICOM.Core.DICOMData`1
+  parent: EvilDICOM.Core
+  name: DICOMData<T>
+  nameWithType: DICOMData<T>
+  fullName: EvilDICOM.Core.DICOMData<T>
+  nameWithType.vb: DICOMData(Of T)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of T)
+  name.vb: DICOMData(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecision*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecision
+  name: WriteSinglePrecision
+  nameWithType: BigEndianWriter.WriteSinglePrecision
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecision
+- uid: EvilDICOM.Core.DICOMData{System.Single}
+  commentId: T:EvilDICOM.Core.DICOMData{System.Single}
+  parent: EvilDICOM.Core
+  definition: EvilDICOM.Core.DICOMData`1
+  name: DICOMData<Single>
+  nameWithType: DICOMData<Single>
+  fullName: EvilDICOM.Core.DICOMData<System.Single>
+  nameWithType.vb: DICOMData(Of Single)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of System.Single)
+  name.vb: DICOMData(Of Single)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Single
+    name: Single
+    nameWithType: Single
+    fullName: System.Single
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecision*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecision
+  name: WriteDoublePrecision
+  nameWithType: BigEndianWriter.WriteDoublePrecision
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecision
+- uid: EvilDICOM.Core.DICOMData{System.Double}
+  commentId: T:EvilDICOM.Core.DICOMData{System.Double}
+  parent: EvilDICOM.Core
+  definition: EvilDICOM.Core.DICOMData`1
+  name: DICOMData<Double>
+  nameWithType: DICOMData<Double>
+  fullName: EvilDICOM.Core.DICOMData<System.Double>
+  nameWithType.vb: DICOMData(Of Double)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of System.Double)
+  name.vb: DICOMData(Of Double)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLong*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLong
+  name: WriteSignedLong
+  nameWithType: BigEndianWriter.WriteSignedLong
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLong
+- uid: EvilDICOM.Core.DICOMData{System.Int32}
+  commentId: T:EvilDICOM.Core.DICOMData{System.Int32}
+  parent: EvilDICOM.Core
+  definition: EvilDICOM.Core.DICOMData`1
+  name: DICOMData<Int32>
+  nameWithType: DICOMData<Int32>
+  fullName: EvilDICOM.Core.DICOMData<System.Int32>
+  nameWithType.vb: DICOMData(Of Int32)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of System.Int32)
+  name.vb: DICOMData(Of Int32)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLong*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLong
+  name: WriteUnsignedLong
+  nameWithType: BigEndianWriter.WriteUnsignedLong
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLong
+- uid: EvilDICOM.Core.DICOMData{System.UInt32}
+  commentId: T:EvilDICOM.Core.DICOMData{System.UInt32}
+  parent: EvilDICOM.Core
+  definition: EvilDICOM.Core.DICOMData`1
+  name: DICOMData<UInt32>
+  nameWithType: DICOMData<UInt32>
+  fullName: EvilDICOM.Core.DICOMData<System.UInt32>
+  nameWithType.vb: DICOMData(Of UInt32)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of System.UInt32)
+  name.vb: DICOMData(Of UInt32)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt32
+    name: UInt32
+    nameWithType: UInt32
+    fullName: System.UInt32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLong*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLong
+  name: WriteSignedVeryLong
+  nameWithType: BigEndianWriter.WriteSignedVeryLong
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLong
+- uid: EvilDICOM.Core.DICOMData{System.Int64}
+  commentId: T:EvilDICOM.Core.DICOMData{System.Int64}
+  parent: EvilDICOM.Core
+  definition: EvilDICOM.Core.DICOMData`1
+  name: DICOMData<Int64>
+  nameWithType: DICOMData<Int64>
+  fullName: EvilDICOM.Core.DICOMData<System.Int64>
+  nameWithType.vb: DICOMData(Of Int64)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of System.Int64)
+  name.vb: DICOMData(Of Int64)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int64
+    name: Int64
+    nameWithType: Int64
+    fullName: System.Int64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShort*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShort
+  name: WriteSignedShort
+  nameWithType: BigEndianWriter.WriteSignedShort
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShort
+- uid: EvilDICOM.Core.DICOMData{System.Int16}
+  commentId: T:EvilDICOM.Core.DICOMData{System.Int16}
+  parent: EvilDICOM.Core
+  definition: EvilDICOM.Core.DICOMData`1
+  name: DICOMData<Int16>
+  nameWithType: DICOMData<Int16>
+  fullName: EvilDICOM.Core.DICOMData<System.Int16>
+  nameWithType.vb: DICOMData(Of Int16)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of System.Int16)
+  name.vb: DICOMData(Of Int16)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Int16
+    name: Int16
+    nameWithType: Int16
+    fullName: System.Int16
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShort*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShort
+  name: WriteUnsignedShort
+  nameWithType: BigEndianWriter.WriteUnsignedShort
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShort
+- uid: EvilDICOM.Core.DICOMData{System.UInt16}
+  commentId: T:EvilDICOM.Core.DICOMData{System.UInt16}
+  parent: EvilDICOM.Core
+  definition: EvilDICOM.Core.DICOMData`1
+  name: DICOMData<UInt16>
+  nameWithType: DICOMData<UInt16>
+  fullName: EvilDICOM.Core.DICOMData<System.UInt16>
+  nameWithType.vb: DICOMData(Of UInt16)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of System.UInt16)
+  name.vb: DICOMData(Of UInt16)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt16
+    name: UInt16
+    nameWithType: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt16
+    name: UInt16
+    nameWithType: UInt16
+    fullName: System.UInt16
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLong*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLong
+  name: WriteUnsignedVeryLong
+  nameWithType: BigEndianWriter.WriteUnsignedVeryLong
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLong
+- uid: EvilDICOM.Core.DICOMData{System.UInt64}
+  commentId: T:EvilDICOM.Core.DICOMData{System.UInt64}
+  parent: EvilDICOM.Core
+  definition: EvilDICOM.Core.DICOMData`1
+  name: DICOMData<UInt64>
+  nameWithType: DICOMData<UInt64>
+  fullName: EvilDICOM.Core.DICOMData<System.UInt64>
+  nameWithType.vb: DICOMData(Of UInt64)
+  fullName.vb: EvilDICOM.Core.DICOMData(Of System.UInt64)
+  name.vb: DICOMData(Of UInt64)
+  spec.csharp:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.DICOMData`1
+    name: DICOMData
+    nameWithType: DICOMData
+    fullName: EvilDICOM.Core.DICOMData
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.UInt64
+    name: UInt64
+    nameWithType: UInt64
+    fullName: System.UInt64
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTagSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTagSingle
+  name: WriteTagSingle
+  nameWithType: BigEndianWriter.WriteTagSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteTagSingle
+- uid: EvilDICOM.Core.Element.Tag
+  commentId: T:EvilDICOM.Core.Element.Tag
+  parent: EvilDICOM.Core.Element
+  name: Tag
+  nameWithType: Tag
+  fullName: EvilDICOM.Core.Element.Tag
+- uid: EvilDICOM.Core.Element
+  commentId: N:EvilDICOM.Core.Element
+  name: EvilDICOM.Core.Element
+  nameWithType: EvilDICOM.Core.Element
+  fullName: EvilDICOM.Core.Element
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecisionSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecisionSingle
+  name: WriteSinglePrecisionSingle
+  nameWithType: BigEndianWriter.WriteSinglePrecisionSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSinglePrecisionSingle
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecisionSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecisionSingle
+  name: WriteDoublePrecisionSingle
+  nameWithType: BigEndianWriter.WriteDoublePrecisionSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteDoublePrecisionSingle
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLongSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLongSingle
+  name: WriteSignedLongSingle
+  nameWithType: BigEndianWriter.WriteSignedLongSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedLongSingle
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLongSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLongSingle
+  name: WriteUnsignedLongSingle
+  nameWithType: BigEndianWriter.WriteUnsignedLongSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedLongSingle
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShortSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShortSingle
+  name: WriteSignedShortSingle
+  nameWithType: BigEndianWriter.WriteSignedShortSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedShortSingle
+- uid: System.Int16
+  commentId: T:System.Int16
+  parent: System
+  isExternal: true
+  name: Int16
+  nameWithType: Int16
+  fullName: System.Int16
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShortSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShortSingle
+  name: WriteUnsignedShortSingle
+  nameWithType: BigEndianWriter.WriteUnsignedShortSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedShortSingle
+- uid: System.UInt16
+  commentId: T:System.UInt16
+  parent: System
+  isExternal: true
+  name: UInt16
+  nameWithType: UInt16
+  fullName: System.UInt16
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLongSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLongSingle
+  name: WriteSignedVeryLongSingle
+  nameWithType: BigEndianWriter.WriteSignedVeryLongSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteSignedVeryLongSingle
+- uid: System.Int64
+  commentId: T:System.Int64
+  parent: System
+  isExternal: true
+  name: Int64
+  nameWithType: Int64
+  fullName: System.Int64
+- uid: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLongSingle*
+  commentId: Overload:EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLongSingle
+  name: WriteUnsignedVeryLongSingle
+  nameWithType: BigEndianWriter.WriteUnsignedVeryLongSingle
+  fullName: EvilDICOM.Core.IO.Data.BigEndianWriter.WriteUnsignedVeryLongSingle
+- uid: System.UInt64
+  commentId: T:System.UInt64
+  parent: System
+  isExternal: true
+  name: UInt64
+  nameWithType: UInt64
+  fullName: System.UInt64

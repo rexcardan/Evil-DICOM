@@ -1,0 +1,659 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  commentId: T:EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  id: DICOMObjectExtensions
+  parent: EvilDICOM.Core.Extensions
+  children:
+  - EvilDICOM.Core.Extensions.DICOMObjectExtensions.GetPixelStream(EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.Core.Extensions.DICOMObjectExtensions.RemoveMetaHeader(EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.Core.Extensions.DICOMObjectExtensions.SetPixelStream(EvilDICOM.Core.DICOMObject,System.Collections.Generic.IEnumerable{System.Byte})
+  - EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString(EvilDICOM.Core.DICOMObject)
+  langs:
+  - csharp
+  - vb
+  name: DICOMObjectExtensions
+  nameWithType: DICOMObjectExtensions
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOMObjectExtensions
+    path: ../EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  syntax:
+    content: public static class DICOMObjectExtensions
+    content.vb: Public Module DICOMObjectExtensions
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - static
+  - class
+  modifiers.vb:
+  - Public
+  - Module
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString(EvilDICOM.Core.DICOMObject)
+  id: ToXMLString(EvilDICOM.Core.DICOMObject)
+  isExtensionMethod: true
+  parent: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: ToXMLString(DICOMObject)
+  nameWithType: DICOMObjectExtensions.ToXMLString(DICOMObject)
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString(EvilDICOM.Core.DICOMObject)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToXMLString
+    path: ../EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: "\nConverts a DICOM object to XML format\n"
+  example: []
+  syntax:
+    content: public static string ToXMLString(this DICOMObject dcm)
+    parameters:
+    - id: dcm
+      type: EvilDICOM.Core.DICOMObject
+      description: ''
+    return:
+      type: System.String
+      description: ''
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function ToXMLString(dcm As DICOMObject) As String
+  overload: EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.RemoveMetaHeader(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Core.Extensions.DICOMObjectExtensions.RemoveMetaHeader(EvilDICOM.Core.DICOMObject)
+  id: RemoveMetaHeader(EvilDICOM.Core.DICOMObject)
+  isExtensionMethod: true
+  parent: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: RemoveMetaHeader(DICOMObject)
+  nameWithType: DICOMObjectExtensions.RemoveMetaHeader(DICOMObject)
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.RemoveMetaHeader(EvilDICOM.Core.DICOMObject)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RemoveMetaHeader
+    path: ../EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+    startLine: 41
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: "\nRemoves all elements beginning with 0002\n"
+  example: []
+  syntax:
+    content: public static void RemoveMetaHeader(this DICOMObject dcm)
+    parameters:
+    - id: dcm
+      type: EvilDICOM.Core.DICOMObject
+      description: DICOM object containing metadata header
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub RemoveMetaHeader(dcm As DICOMObject)
+  overload: EvilDICOM.Core.Extensions.DICOMObjectExtensions.RemoveMetaHeader*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.GetPixelStream(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Core.Extensions.DICOMObjectExtensions.GetPixelStream(EvilDICOM.Core.DICOMObject)
+  id: GetPixelStream(EvilDICOM.Core.DICOMObject)
+  isExtensionMethod: true
+  parent: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: GetPixelStream(DICOMObject)
+  nameWithType: DICOMObjectExtensions.GetPixelStream(DICOMObject)
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.GetPixelStream(EvilDICOM.Core.DICOMObject)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetPixelStream
+    path: ../EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+    startLine: 58
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  summary: "\nGrabs the pixel data bytes and sends it as a stream. Returns null if no pixel data element is found.\n"
+  example: []
+  syntax:
+    content: public static PixelStream GetPixelStream(this DICOMObject dcm)
+    parameters:
+    - id: dcm
+      type: EvilDICOM.Core.DICOMObject
+    return:
+      type: EvilDICOM.Core.Image.PixelStream
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Function GetPixelStream(dcm As DICOMObject) As PixelStream
+  overload: EvilDICOM.Core.Extensions.DICOMObjectExtensions.GetPixelStream*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.SetPixelStream(EvilDICOM.Core.DICOMObject,System.Collections.Generic.IEnumerable{System.Byte})
+  commentId: M:EvilDICOM.Core.Extensions.DICOMObjectExtensions.SetPixelStream(EvilDICOM.Core.DICOMObject,System.Collections.Generic.IEnumerable{System.Byte})
+  id: SetPixelStream(EvilDICOM.Core.DICOMObject,System.Collections.Generic.IEnumerable{System.Byte})
+  isExtensionMethod: true
+  parent: EvilDICOM.Core.Extensions.DICOMObjectExtensions
+  langs:
+  - csharp
+  - vb
+  name: SetPixelStream(DICOMObject, IEnumerable<Byte>)
+  nameWithType: DICOMObjectExtensions.SetPixelStream(DICOMObject, IEnumerable<Byte>)
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.SetPixelStream(EvilDICOM.Core.DICOMObject, System.Collections.Generic.IEnumerable<System.Byte>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SetPixelStream
+    path: ../EvilDICOM/Core/Extensions/DICOMObjectExtensions.cs
+    startLine: 67
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Extensions
+  syntax:
+    content: public static void SetPixelStream(this DICOMObject dcm, IEnumerable<byte> value)
+    parameters:
+    - id: dcm
+      type: EvilDICOM.Core.DICOMObject
+    - id: value
+      type: System.Collections.Generic.IEnumerable{System.Byte}
+    content.vb: >-
+      <ExtensionAttribute>
+
+      Public Shared Sub SetPixelStream(dcm As DICOMObject, value As IEnumerable(Of Byte))
+  overload: EvilDICOM.Core.Extensions.DICOMObjectExtensions.SetPixelStream*
+  nameWithType.vb: DICOMObjectExtensions.SetPixelStream(DICOMObject, IEnumerable(Of Byte))
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.Extensions.DICOMObjectExtensions.SetPixelStream(EvilDICOM.Core.DICOMObject, System.Collections.Generic.IEnumerable(Of System.Byte))
+  name.vb: SetPixelStream(DICOMObject, IEnumerable(Of Byte))
+references:
+- uid: EvilDICOM.Core.Extensions
+  commentId: N:EvilDICOM.Core.Extensions
+  name: EvilDICOM.Core.Extensions
+  nameWithType: EvilDICOM.Core.Extensions
+  fullName: EvilDICOM.Core.Extensions
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString*
+  commentId: Overload:EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString
+  name: ToXMLString
+  nameWithType: DICOMObjectExtensions.ToXMLString
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.ToXMLString
+- uid: EvilDICOM.Core.DICOMObject
+  commentId: T:EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  name: DICOMObject
+  nameWithType: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.RemoveMetaHeader*
+  commentId: Overload:EvilDICOM.Core.Extensions.DICOMObjectExtensions.RemoveMetaHeader
+  name: RemoveMetaHeader
+  nameWithType: DICOMObjectExtensions.RemoveMetaHeader
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.RemoveMetaHeader
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.GetPixelStream*
+  commentId: Overload:EvilDICOM.Core.Extensions.DICOMObjectExtensions.GetPixelStream
+  name: GetPixelStream
+  nameWithType: DICOMObjectExtensions.GetPixelStream
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.GetPixelStream
+- uid: EvilDICOM.Core.Image.PixelStream
+  commentId: T:EvilDICOM.Core.Image.PixelStream
+  parent: EvilDICOM.Core.Image
+  name: PixelStream
+  nameWithType: PixelStream
+  fullName: EvilDICOM.Core.Image.PixelStream
+- uid: EvilDICOM.Core.Image
+  commentId: N:EvilDICOM.Core.Image
+  name: EvilDICOM.Core.Image
+  nameWithType: EvilDICOM.Core.Image
+  fullName: EvilDICOM.Core.Image
+- uid: EvilDICOM.Core.Extensions.DICOMObjectExtensions.SetPixelStream*
+  commentId: Overload:EvilDICOM.Core.Extensions.DICOMObjectExtensions.SetPixelStream
+  name: SetPixelStream
+  nameWithType: DICOMObjectExtensions.SetPixelStream
+  fullName: EvilDICOM.Core.Extensions.DICOMObjectExtensions.SetPixelStream
+- uid: System.Collections.Generic.IEnumerable{System.Byte}
+  commentId: T:System.Collections.Generic.IEnumerable{System.Byte}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<Byte>
+  nameWithType: IEnumerable<Byte>
+  fullName: System.Collections.Generic.IEnumerable<System.Byte>
+  nameWithType.vb: IEnumerable(Of Byte)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of System.Byte)
+  name.vb: IEnumerable(Of Byte)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

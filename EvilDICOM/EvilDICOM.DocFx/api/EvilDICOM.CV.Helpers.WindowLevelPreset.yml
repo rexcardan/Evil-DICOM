@@ -1,0 +1,472 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.Helpers.WindowLevelPreset
+  commentId: T:EvilDICOM.CV.Helpers.WindowLevelPreset
+  id: WindowLevelPreset
+  parent: EvilDICOM.CV.Helpers
+  children:
+  - EvilDICOM.CV.Helpers.WindowLevelPreset.#ctor(System.Double,System.Double)
+  - EvilDICOM.CV.Helpers.WindowLevelPreset.Level
+  - EvilDICOM.CV.Helpers.WindowLevelPreset.Window
+  langs:
+  - csharp
+  - vb
+  name: WindowLevelPreset
+  nameWithType: WindowLevelPreset
+  fullName: EvilDICOM.CV.Helpers.WindowLevelPreset
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Helpers/WindowLevelPreset.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: WindowLevelPreset
+    path: ../EvilDICOM.CV/Helpers/WindowLevelPreset.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Helpers
+  syntax:
+    content: public class WindowLevelPreset
+    content.vb: Public Class WindowLevelPreset
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.CV.Helpers.WindowLevelPreset.#ctor(System.Double,System.Double)
+  commentId: M:EvilDICOM.CV.Helpers.WindowLevelPreset.#ctor(System.Double,System.Double)
+  id: '#ctor(System.Double,System.Double)'
+  parent: EvilDICOM.CV.Helpers.WindowLevelPreset
+  langs:
+  - csharp
+  - vb
+  name: WindowLevelPreset(Double, Double)
+  nameWithType: WindowLevelPreset.WindowLevelPreset(Double, Double)
+  fullName: EvilDICOM.CV.Helpers.WindowLevelPreset.WindowLevelPreset(System.Double, System.Double)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Helpers/WindowLevelPreset.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM.CV/Helpers/WindowLevelPreset.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Helpers
+  syntax:
+    content: public WindowLevelPreset(double window, double level)
+    parameters:
+    - id: window
+      type: System.Double
+    - id: level
+      type: System.Double
+    content.vb: Public Sub New(window As Double, level As Double)
+  overload: EvilDICOM.CV.Helpers.WindowLevelPreset.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.Helpers.WindowLevelPreset.Level
+  commentId: P:EvilDICOM.CV.Helpers.WindowLevelPreset.Level
+  id: Level
+  parent: EvilDICOM.CV.Helpers.WindowLevelPreset
+  langs:
+  - csharp
+  - vb
+  name: Level
+  nameWithType: WindowLevelPreset.Level
+  fullName: EvilDICOM.CV.Helpers.WindowLevelPreset.Level
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Helpers/WindowLevelPreset.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Level
+    path: ../EvilDICOM.CV/Helpers/WindowLevelPreset.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Helpers
+  syntax:
+    content: public double Level { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Level As Double
+  overload: EvilDICOM.CV.Helpers.WindowLevelPreset.Level*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.Helpers.WindowLevelPreset.Window
+  commentId: P:EvilDICOM.CV.Helpers.WindowLevelPreset.Window
+  id: Window
+  parent: EvilDICOM.CV.Helpers.WindowLevelPreset
+  langs:
+  - csharp
+  - vb
+  name: Window
+  nameWithType: WindowLevelPreset.Window
+  fullName: EvilDICOM.CV.Helpers.WindowLevelPreset.Window
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Helpers/WindowLevelPreset.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Window
+    path: ../EvilDICOM.CV/Helpers/WindowLevelPreset.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Helpers
+  syntax:
+    content: public double Window { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Window As Double
+  overload: EvilDICOM.CV.Helpers.WindowLevelPreset.Window*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.CV.Helpers
+  commentId: N:EvilDICOM.CV.Helpers
+  name: EvilDICOM.CV.Helpers
+  nameWithType: EvilDICOM.CV.Helpers
+  fullName: EvilDICOM.CV.Helpers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.Helpers.WindowLevelPreset.#ctor*
+  commentId: Overload:EvilDICOM.CV.Helpers.WindowLevelPreset.#ctor
+  name: WindowLevelPreset
+  nameWithType: WindowLevelPreset.WindowLevelPreset
+  fullName: EvilDICOM.CV.Helpers.WindowLevelPreset.WindowLevelPreset
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: EvilDICOM.CV.Helpers.WindowLevelPreset.Level*
+  commentId: Overload:EvilDICOM.CV.Helpers.WindowLevelPreset.Level
+  name: Level
+  nameWithType: WindowLevelPreset.Level
+  fullName: EvilDICOM.CV.Helpers.WindowLevelPreset.Level
+- uid: EvilDICOM.CV.Helpers.WindowLevelPreset.Window*
+  commentId: Overload:EvilDICOM.CV.Helpers.WindowLevelPreset.Window
+  name: Window
+  nameWithType: WindowLevelPreset.Window
+  fullName: EvilDICOM.CV.Helpers.WindowLevelPreset.Window

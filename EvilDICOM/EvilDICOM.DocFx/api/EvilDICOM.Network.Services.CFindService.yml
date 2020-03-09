@@ -1,0 +1,959 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Services.CFindService
+  commentId: T:EvilDICOM.Network.Services.CFindService
+  id: CFindService
+  parent: EvilDICOM.Network.Services
+  children:
+  - EvilDICOM.Network.Services.CFindService.#ctor(EvilDICOM.Network.Services.DIMSEService)
+  - EvilDICOM.Network.Services.CFindService.CStorePayloadAction
+  - EvilDICOM.Network.Services.CFindService.FindImageService
+  - EvilDICOM.Network.Services.CFindService.FindSeriesService
+  - EvilDICOM.Network.Services.CFindService.FindStudyService
+  - EvilDICOM.Network.Services.CFindService.OnRequestRecieved(EvilDICOM.Network.DIMSE.CFindRequest,EvilDICOM.Network.Association)
+  - EvilDICOM.Network.Services.CFindService.OnResponseRecieved(EvilDICOM.Network.DIMSE.CFindResponse,EvilDICOM.Network.Association)
+  langs:
+  - csharp
+  - vb
+  name: CFindService
+  nameWithType: CFindService
+  fullName: EvilDICOM.Network.Services.CFindService
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/CFindService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CFindService
+    path: ../EvilDICOM/Network/Services/CFindService.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  summary: "\nA implementation of a C-FIND service, where C-FIND Requests can be made. To make it work, you\nmust connect the FindStudyService, FindSeriesService, or FindImageService and connect it to this.\nThe idea is you would have a database or algorithm which could implement the simple method provided.\nThis just routes all the DICOM communication\n"
+  example: []
+  syntax:
+    content: public class CFindService
+    content.vb: Public Class CFindService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Services.CFindService.#ctor(EvilDICOM.Network.Services.DIMSEService)
+  commentId: M:EvilDICOM.Network.Services.CFindService.#ctor(EvilDICOM.Network.Services.DIMSEService)
+  id: '#ctor(EvilDICOM.Network.Services.DIMSEService)'
+  parent: EvilDICOM.Network.Services.CFindService
+  langs:
+  - csharp
+  - vb
+  name: CFindService(DIMSEService)
+  nameWithType: CFindService.CFindService(DIMSEService)
+  fullName: EvilDICOM.Network.Services.CFindService.CFindService(EvilDICOM.Network.Services.DIMSEService)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/CFindService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/Network/Services/CFindService.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public CFindService(DIMSEService dIMSEService)
+    parameters:
+    - id: dIMSEService
+      type: EvilDICOM.Network.Services.DIMSEService
+    content.vb: Public Sub New(dIMSEService As DIMSEService)
+  overload: EvilDICOM.Network.Services.CFindService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.CFindService.CStorePayloadAction
+  commentId: P:EvilDICOM.Network.Services.CFindService.CStorePayloadAction
+  id: CStorePayloadAction
+  parent: EvilDICOM.Network.Services.CFindService
+  langs:
+  - csharp
+  - vb
+  name: CStorePayloadAction
+  nameWithType: CFindService.CStorePayloadAction
+  fullName: EvilDICOM.Network.Services.CFindService.CStorePayloadAction
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/CFindService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CStorePayloadAction
+    path: ../EvilDICOM/Network/Services/CFindService.cs
+    startLine: 34
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public Func<DICOMObject, Association, bool> CStorePayloadAction { get; set; }
+    parameters: []
+    return:
+      type: System.Func{EvilDICOM.Core.DICOMObject,EvilDICOM.Network.Association,System.Boolean}
+    content.vb: Public Property CStorePayloadAction As Func(Of DICOMObject, Association, Boolean)
+  overload: EvilDICOM.Network.Services.CFindService.CStorePayloadAction*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.CFindService.OnRequestRecieved(EvilDICOM.Network.DIMSE.CFindRequest,EvilDICOM.Network.Association)
+  commentId: M:EvilDICOM.Network.Services.CFindService.OnRequestRecieved(EvilDICOM.Network.DIMSE.CFindRequest,EvilDICOM.Network.Association)
+  id: OnRequestRecieved(EvilDICOM.Network.DIMSE.CFindRequest,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Services.CFindService
+  langs:
+  - csharp
+  - vb
+  name: OnRequestRecieved(CFindRequest, Association)
+  nameWithType: CFindService.OnRequestRecieved(CFindRequest, Association)
+  fullName: EvilDICOM.Network.Services.CFindService.OnRequestRecieved(EvilDICOM.Network.DIMSE.CFindRequest, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/CFindService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: OnRequestRecieved
+    path: ../EvilDICOM/Network/Services/CFindService.cs
+    startLine: 36
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public void OnRequestRecieved(CFindRequest req, Association asc)
+    parameters:
+    - id: req
+      type: EvilDICOM.Network.DIMSE.CFindRequest
+    - id: asc
+      type: EvilDICOM.Network.Association
+    content.vb: Public Sub OnRequestRecieved(req As CFindRequest, asc As Association)
+  overload: EvilDICOM.Network.Services.CFindService.OnRequestRecieved*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.CFindService.OnResponseRecieved(EvilDICOM.Network.DIMSE.CFindResponse,EvilDICOM.Network.Association)
+  commentId: M:EvilDICOM.Network.Services.CFindService.OnResponseRecieved(EvilDICOM.Network.DIMSE.CFindResponse,EvilDICOM.Network.Association)
+  id: OnResponseRecieved(EvilDICOM.Network.DIMSE.CFindResponse,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Services.CFindService
+  langs:
+  - csharp
+  - vb
+  name: OnResponseRecieved(CFindResponse, Association)
+  nameWithType: CFindService.OnResponseRecieved(CFindResponse, Association)
+  fullName: EvilDICOM.Network.Services.CFindService.OnResponseRecieved(EvilDICOM.Network.DIMSE.CFindResponse, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/CFindService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: OnResponseRecieved
+    path: ../EvilDICOM/Network/Services/CFindService.cs
+    startLine: 114
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public void OnResponseRecieved(CFindResponse resp, Association asc)
+    parameters:
+    - id: resp
+      type: EvilDICOM.Network.DIMSE.CFindResponse
+    - id: asc
+      type: EvilDICOM.Network.Association
+    content.vb: Public Sub OnResponseRecieved(resp As CFindResponse, asc As Association)
+  overload: EvilDICOM.Network.Services.CFindService.OnResponseRecieved*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.CFindService.FindStudyService
+  commentId: P:EvilDICOM.Network.Services.CFindService.FindStudyService
+  id: FindStudyService
+  parent: EvilDICOM.Network.Services.CFindService
+  langs:
+  - csharp
+  - vb
+  name: FindStudyService
+  nameWithType: CFindService.FindStudyService
+  fullName: EvilDICOM.Network.Services.CFindService.FindStudyService
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/CFindService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FindStudyService
+    path: ../EvilDICOM/Network/Services/CFindService.cs
+    startLine: 124
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public IFindService<CFindStudyIOD> FindStudyService { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Services.Interfaces.IFindService{EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD}
+    content.vb: Public Property FindStudyService As IFindService(Of CFindStudyIOD)
+  overload: EvilDICOM.Network.Services.CFindService.FindStudyService*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.CFindService.FindImageService
+  commentId: P:EvilDICOM.Network.Services.CFindService.FindImageService
+  id: FindImageService
+  parent: EvilDICOM.Network.Services.CFindService
+  langs:
+  - csharp
+  - vb
+  name: FindImageService
+  nameWithType: CFindService.FindImageService
+  fullName: EvilDICOM.Network.Services.CFindService.FindImageService
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/CFindService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FindImageService
+    path: ../EvilDICOM/Network/Services/CFindService.cs
+    startLine: 125
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public IFindService<CFindImageIOD> FindImageService { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Services.Interfaces.IFindService{EvilDICOM.Network.DIMSE.IOD.CFindImageIOD}
+    content.vb: Public Property FindImageService As IFindService(Of CFindImageIOD)
+  overload: EvilDICOM.Network.Services.CFindService.FindImageService*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.CFindService.FindSeriesService
+  commentId: P:EvilDICOM.Network.Services.CFindService.FindSeriesService
+  id: FindSeriesService
+  parent: EvilDICOM.Network.Services.CFindService
+  langs:
+  - csharp
+  - vb
+  name: FindSeriesService
+  nameWithType: CFindService.FindSeriesService
+  fullName: EvilDICOM.Network.Services.CFindService.FindSeriesService
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/CFindService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FindSeriesService
+    path: ../EvilDICOM/Network/Services/CFindService.cs
+    startLine: 126
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public IFindService<CFindSeriesIOD> FindSeriesService { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Services.Interfaces.IFindService{EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD}
+    content.vb: Public Property FindSeriesService As IFindService(Of CFindSeriesIOD)
+  overload: EvilDICOM.Network.Services.CFindService.FindSeriesService*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Network.Services
+  commentId: N:EvilDICOM.Network.Services
+  name: EvilDICOM.Network.Services
+  nameWithType: EvilDICOM.Network.Services
+  fullName: EvilDICOM.Network.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Network.Services.CFindService.#ctor*
+  commentId: Overload:EvilDICOM.Network.Services.CFindService.#ctor
+  name: CFindService
+  nameWithType: CFindService.CFindService
+  fullName: EvilDICOM.Network.Services.CFindService.CFindService
+- uid: EvilDICOM.Network.Services.DIMSEService
+  commentId: T:EvilDICOM.Network.Services.DIMSEService
+  parent: EvilDICOM.Network.Services
+  name: DIMSEService
+  nameWithType: DIMSEService
+  fullName: EvilDICOM.Network.Services.DIMSEService
+- uid: EvilDICOM.Network.Services.CFindService.CStorePayloadAction*
+  commentId: Overload:EvilDICOM.Network.Services.CFindService.CStorePayloadAction
+  name: CStorePayloadAction
+  nameWithType: CFindService.CStorePayloadAction
+  fullName: EvilDICOM.Network.Services.CFindService.CStorePayloadAction
+- uid: System.Func{EvilDICOM.Core.DICOMObject,EvilDICOM.Network.Association,System.Boolean}
+  commentId: T:System.Func{EvilDICOM.Core.DICOMObject,EvilDICOM.Network.Association,System.Boolean}
+  parent: System
+  definition: System.Func`3
+  name: Func<DICOMObject, Association, Boolean>
+  nameWithType: Func<DICOMObject, Association, Boolean>
+  fullName: System.Func<EvilDICOM.Core.DICOMObject, EvilDICOM.Network.Association, System.Boolean>
+  nameWithType.vb: Func(Of DICOMObject, Association, Boolean)
+  fullName.vb: System.Func(Of EvilDICOM.Core.DICOMObject, EvilDICOM.Network.Association, System.Boolean)
+  name.vb: Func(Of DICOMObject, Association, Boolean)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: EvilDICOM.Network.Association
+    name: Association
+    nameWithType: Association
+    fullName: EvilDICOM.Network.Association
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Boolean
+    name: Boolean
+    nameWithType: Boolean
+    fullName: System.Boolean
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Func`3
+  commentId: T:System.Func`3
+  isExternal: true
+  name: Func<T1, T2, TResult>
+  nameWithType: Func<T1, T2, TResult>
+  fullName: System.Func<T1, T2, TResult>
+  nameWithType.vb: Func(Of T1, T2, TResult)
+  fullName.vb: System.Func(Of T1, T2, TResult)
+  name.vb: Func(Of T1, T2, TResult)
+  spec.csharp:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Func`3
+    name: Func
+    nameWithType: Func
+    fullName: System.Func
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.CFindService.OnRequestRecieved*
+  commentId: Overload:EvilDICOM.Network.Services.CFindService.OnRequestRecieved
+  name: OnRequestRecieved
+  nameWithType: CFindService.OnRequestRecieved
+  fullName: EvilDICOM.Network.Services.CFindService.OnRequestRecieved
+- uid: EvilDICOM.Network.DIMSE.CFindRequest
+  commentId: T:EvilDICOM.Network.DIMSE.CFindRequest
+  parent: EvilDICOM.Network.DIMSE
+  name: CFindRequest
+  nameWithType: CFindRequest
+  fullName: EvilDICOM.Network.DIMSE.CFindRequest
+- uid: EvilDICOM.Network.Association
+  commentId: T:EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  name: Association
+  nameWithType: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.DIMSE
+  commentId: N:EvilDICOM.Network.DIMSE
+  name: EvilDICOM.Network.DIMSE
+  nameWithType: EvilDICOM.Network.DIMSE
+  fullName: EvilDICOM.Network.DIMSE
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+- uid: EvilDICOM.Network.Services.CFindService.OnResponseRecieved*
+  commentId: Overload:EvilDICOM.Network.Services.CFindService.OnResponseRecieved
+  name: OnResponseRecieved
+  nameWithType: CFindService.OnResponseRecieved
+  fullName: EvilDICOM.Network.Services.CFindService.OnResponseRecieved
+- uid: EvilDICOM.Network.DIMSE.CFindResponse
+  commentId: T:EvilDICOM.Network.DIMSE.CFindResponse
+  parent: EvilDICOM.Network.DIMSE
+  name: CFindResponse
+  nameWithType: CFindResponse
+  fullName: EvilDICOM.Network.DIMSE.CFindResponse
+- uid: EvilDICOM.Network.Services.CFindService.FindStudyService*
+  commentId: Overload:EvilDICOM.Network.Services.CFindService.FindStudyService
+  name: FindStudyService
+  nameWithType: CFindService.FindStudyService
+  fullName: EvilDICOM.Network.Services.CFindService.FindStudyService
+- uid: EvilDICOM.Network.Services.Interfaces.IFindService{EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD}
+  commentId: T:EvilDICOM.Network.Services.Interfaces.IFindService{EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD}
+  parent: EvilDICOM.Network.Services.Interfaces
+  definition: EvilDICOM.Network.Services.Interfaces.IFindService`1
+  name: IFindService<CFindStudyIOD>
+  nameWithType: IFindService<CFindStudyIOD>
+  fullName: EvilDICOM.Network.Services.Interfaces.IFindService<EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD>
+  nameWithType.vb: IFindService(Of CFindStudyIOD)
+  fullName.vb: EvilDICOM.Network.Services.Interfaces.IFindService(Of EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD)
+  name.vb: IFindService(Of CFindStudyIOD)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.Interfaces.IFindService`1
+    name: IFindService
+    nameWithType: IFindService
+    fullName: EvilDICOM.Network.Services.Interfaces.IFindService
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+    name: CFindStudyIOD
+    nameWithType: CFindStudyIOD
+    fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.Interfaces.IFindService`1
+    name: IFindService
+    nameWithType: IFindService
+    fullName: EvilDICOM.Network.Services.Interfaces.IFindService
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+    name: CFindStudyIOD
+    nameWithType: CFindStudyIOD
+    fullName: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.Interfaces.IFindService`1
+  commentId: T:EvilDICOM.Network.Services.Interfaces.IFindService`1
+  name: IFindService<T>
+  nameWithType: IFindService<T>
+  fullName: EvilDICOM.Network.Services.Interfaces.IFindService<T>
+  nameWithType.vb: IFindService(Of T)
+  fullName.vb: EvilDICOM.Network.Services.Interfaces.IFindService(Of T)
+  name.vb: IFindService(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.Interfaces.IFindService`1
+    name: IFindService
+    nameWithType: IFindService
+    fullName: EvilDICOM.Network.Services.Interfaces.IFindService
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.Interfaces.IFindService`1
+    name: IFindService
+    nameWithType: IFindService
+    fullName: EvilDICOM.Network.Services.Interfaces.IFindService
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.Interfaces
+  commentId: N:EvilDICOM.Network.Services.Interfaces
+  name: EvilDICOM.Network.Services.Interfaces
+  nameWithType: EvilDICOM.Network.Services.Interfaces
+  fullName: EvilDICOM.Network.Services.Interfaces
+- uid: EvilDICOM.Network.Services.CFindService.FindImageService*
+  commentId: Overload:EvilDICOM.Network.Services.CFindService.FindImageService
+  name: FindImageService
+  nameWithType: CFindService.FindImageService
+  fullName: EvilDICOM.Network.Services.CFindService.FindImageService
+- uid: EvilDICOM.Network.Services.Interfaces.IFindService{EvilDICOM.Network.DIMSE.IOD.CFindImageIOD}
+  commentId: T:EvilDICOM.Network.Services.Interfaces.IFindService{EvilDICOM.Network.DIMSE.IOD.CFindImageIOD}
+  parent: EvilDICOM.Network.Services.Interfaces
+  definition: EvilDICOM.Network.Services.Interfaces.IFindService`1
+  name: IFindService<CFindImageIOD>
+  nameWithType: IFindService<CFindImageIOD>
+  fullName: EvilDICOM.Network.Services.Interfaces.IFindService<EvilDICOM.Network.DIMSE.IOD.CFindImageIOD>
+  nameWithType.vb: IFindService(Of CFindImageIOD)
+  fullName.vb: EvilDICOM.Network.Services.Interfaces.IFindService(Of EvilDICOM.Network.DIMSE.IOD.CFindImageIOD)
+  name.vb: IFindService(Of CFindImageIOD)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.Interfaces.IFindService`1
+    name: IFindService
+    nameWithType: IFindService
+    fullName: EvilDICOM.Network.Services.Interfaces.IFindService
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+    name: CFindImageIOD
+    nameWithType: CFindImageIOD
+    fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.Interfaces.IFindService`1
+    name: IFindService
+    nameWithType: IFindService
+    fullName: EvilDICOM.Network.Services.Interfaces.IFindService
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+    name: CFindImageIOD
+    nameWithType: CFindImageIOD
+    fullName: EvilDICOM.Network.DIMSE.IOD.CFindImageIOD
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Services.CFindService.FindSeriesService*
+  commentId: Overload:EvilDICOM.Network.Services.CFindService.FindSeriesService
+  name: FindSeriesService
+  nameWithType: CFindService.FindSeriesService
+  fullName: EvilDICOM.Network.Services.CFindService.FindSeriesService
+- uid: EvilDICOM.Network.Services.Interfaces.IFindService{EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD}
+  commentId: T:EvilDICOM.Network.Services.Interfaces.IFindService{EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD}
+  parent: EvilDICOM.Network.Services.Interfaces
+  definition: EvilDICOM.Network.Services.Interfaces.IFindService`1
+  name: IFindService<CFindSeriesIOD>
+  nameWithType: IFindService<CFindSeriesIOD>
+  fullName: EvilDICOM.Network.Services.Interfaces.IFindService<EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD>
+  nameWithType.vb: IFindService(Of CFindSeriesIOD)
+  fullName.vb: EvilDICOM.Network.Services.Interfaces.IFindService(Of EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD)
+  name.vb: IFindService(Of CFindSeriesIOD)
+  spec.csharp:
+  - uid: EvilDICOM.Network.Services.Interfaces.IFindService`1
+    name: IFindService
+    nameWithType: IFindService
+    fullName: EvilDICOM.Network.Services.Interfaces.IFindService
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+    name: CFindSeriesIOD
+    nameWithType: CFindSeriesIOD
+    fullName: EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Network.Services.Interfaces.IFindService`1
+    name: IFindService
+    nameWithType: IFindService
+    fullName: EvilDICOM.Network.Services.Interfaces.IFindService
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+    name: CFindSeriesIOD
+    nameWithType: CFindSeriesIOD
+    fullName: EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
+  - name: )
+    nameWithType: )
+    fullName: )

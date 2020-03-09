@@ -1,0 +1,573 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Entity
+  commentId: T:EvilDICOM.Network.Entity
+  id: Entity
+  parent: EvilDICOM.Network
+  children:
+  - EvilDICOM.Network.Entity.#ctor(System.String,System.String,System.Int32)
+  - EvilDICOM.Network.Entity.AeTitle
+  - EvilDICOM.Network.Entity.CreateLocal(System.String,System.Int32)
+  - EvilDICOM.Network.Entity.IpAddress
+  - EvilDICOM.Network.Entity.Port
+  langs:
+  - csharp
+  - vb
+  name: Entity
+  nameWithType: Entity
+  fullName: EvilDICOM.Network.Entity
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/ApplicationEntity.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Entity
+    path: ../EvilDICOM/Network/ApplicationEntity.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: public class Entity
+    content.vb: Public Class Entity
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Entity.#ctor(System.String,System.String,System.Int32)
+  commentId: M:EvilDICOM.Network.Entity.#ctor(System.String,System.String,System.Int32)
+  id: '#ctor(System.String,System.String,System.Int32)'
+  parent: EvilDICOM.Network.Entity
+  langs:
+  - csharp
+  - vb
+  name: Entity(String, String, Int32)
+  nameWithType: Entity.Entity(String, String, Int32)
+  fullName: EvilDICOM.Network.Entity.Entity(System.String, System.String, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/ApplicationEntity.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/Network/ApplicationEntity.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: public Entity(string aeTitle, string ipAddress, int port)
+    parameters:
+    - id: aeTitle
+      type: System.String
+    - id: ipAddress
+      type: System.String
+    - id: port
+      type: System.Int32
+    content.vb: Public Sub New(aeTitle As String, ipAddress As String, port As Integer)
+  overload: EvilDICOM.Network.Entity.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Entity.AeTitle
+  commentId: P:EvilDICOM.Network.Entity.AeTitle
+  id: AeTitle
+  parent: EvilDICOM.Network.Entity
+  langs:
+  - csharp
+  - vb
+  name: AeTitle
+  nameWithType: Entity.AeTitle
+  fullName: EvilDICOM.Network.Entity.AeTitle
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/ApplicationEntity.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AeTitle
+    path: ../EvilDICOM/Network/ApplicationEntity.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: public string AeTitle { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AeTitle As String
+  overload: EvilDICOM.Network.Entity.AeTitle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Entity.IpAddress
+  commentId: P:EvilDICOM.Network.Entity.IpAddress
+  id: IpAddress
+  parent: EvilDICOM.Network.Entity
+  langs:
+  - csharp
+  - vb
+  name: IpAddress
+  nameWithType: Entity.IpAddress
+  fullName: EvilDICOM.Network.Entity.IpAddress
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/ApplicationEntity.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IpAddress
+    path: ../EvilDICOM/Network/ApplicationEntity.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: public string IpAddress { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property IpAddress As String
+  overload: EvilDICOM.Network.Entity.IpAddress*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Entity.Port
+  commentId: P:EvilDICOM.Network.Entity.Port
+  id: Port
+  parent: EvilDICOM.Network.Entity
+  langs:
+  - csharp
+  - vb
+  name: Port
+  nameWithType: Entity.Port
+  fullName: EvilDICOM.Network.Entity.Port
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/ApplicationEntity.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Port
+    path: ../EvilDICOM/Network/ApplicationEntity.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: public int Port { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Port As Integer
+  overload: EvilDICOM.Network.Entity.Port*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Entity.CreateLocal(System.String,System.Int32)
+  commentId: M:EvilDICOM.Network.Entity.CreateLocal(System.String,System.Int32)
+  id: CreateLocal(System.String,System.Int32)
+  parent: EvilDICOM.Network.Entity
+  langs:
+  - csharp
+  - vb
+  name: CreateLocal(String, Int32)
+  nameWithType: Entity.CreateLocal(String, Int32)
+  fullName: EvilDICOM.Network.Entity.CreateLocal(System.String, System.Int32)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/ApplicationEntity.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CreateLocal
+    path: ../EvilDICOM/Network/ApplicationEntity.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: public static Entity CreateLocal(string aeTitle, int port)
+    parameters:
+    - id: aeTitle
+      type: System.String
+    - id: port
+      type: System.Int32
+    return:
+      type: EvilDICOM.Network.Entity
+    content.vb: Public Shared Function CreateLocal(aeTitle As String, port As Integer) As Entity
+  overload: EvilDICOM.Network.Entity.CreateLocal*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Network.Entity.#ctor*
+  commentId: Overload:EvilDICOM.Network.Entity.#ctor
+  name: Entity
+  nameWithType: Entity.Entity
+  fullName: EvilDICOM.Network.Entity.Entity
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Network.Entity.AeTitle*
+  commentId: Overload:EvilDICOM.Network.Entity.AeTitle
+  name: AeTitle
+  nameWithType: Entity.AeTitle
+  fullName: EvilDICOM.Network.Entity.AeTitle
+- uid: EvilDICOM.Network.Entity.IpAddress*
+  commentId: Overload:EvilDICOM.Network.Entity.IpAddress
+  name: IpAddress
+  nameWithType: Entity.IpAddress
+  fullName: EvilDICOM.Network.Entity.IpAddress
+- uid: EvilDICOM.Network.Entity.Port*
+  commentId: Overload:EvilDICOM.Network.Entity.Port
+  name: Port
+  nameWithType: Entity.Port
+  fullName: EvilDICOM.Network.Entity.Port
+- uid: EvilDICOM.Network.Entity.CreateLocal*
+  commentId: Overload:EvilDICOM.Network.Entity.CreateLocal
+  name: CreateLocal
+  nameWithType: Entity.CreateLocal
+  fullName: EvilDICOM.Network.Entity.CreateLocal
+- uid: EvilDICOM.Network.Entity
+  commentId: T:EvilDICOM.Network.Entity
+  parent: EvilDICOM.Network
+  name: Entity
+  nameWithType: Entity
+  fullName: EvilDICOM.Network.Entity

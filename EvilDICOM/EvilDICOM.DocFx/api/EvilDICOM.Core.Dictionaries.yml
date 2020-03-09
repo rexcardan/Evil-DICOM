@@ -1,0 +1,40 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Dictionaries
+  commentId: N:EvilDICOM.Core.Dictionaries
+  id: EvilDICOM.Core.Dictionaries
+  children:
+  - EvilDICOM.Core.Dictionaries.EncodingDictionary
+  - EvilDICOM.Core.Dictionaries.TagDictionary
+  - EvilDICOM.Core.Dictionaries.TagDictionary.TagInfo
+  - EvilDICOM.Core.Dictionaries.VRDictionary
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Core.Dictionaries
+  nameWithType: EvilDICOM.Core.Dictionaries
+  fullName: EvilDICOM.Core.Dictionaries
+  type: Namespace
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Core.Dictionaries.EncodingDictionary
+  commentId: T:EvilDICOM.Core.Dictionaries.EncodingDictionary
+  name: EncodingDictionary
+  nameWithType: EncodingDictionary
+  fullName: EvilDICOM.Core.Dictionaries.EncodingDictionary
+- uid: EvilDICOM.Core.Dictionaries.TagDictionary
+  commentId: T:EvilDICOM.Core.Dictionaries.TagDictionary
+  name: TagDictionary
+  nameWithType: TagDictionary
+  fullName: EvilDICOM.Core.Dictionaries.TagDictionary
+- uid: EvilDICOM.Core.Dictionaries.TagDictionary.TagInfo
+  commentId: T:EvilDICOM.Core.Dictionaries.TagDictionary.TagInfo
+  name: TagDictionary.TagInfo
+  nameWithType: TagDictionary.TagInfo
+  fullName: EvilDICOM.Core.Dictionaries.TagDictionary.TagInfo
+- uid: EvilDICOM.Core.Dictionaries.VRDictionary
+  commentId: T:EvilDICOM.Core.Dictionaries.VRDictionary
+  name: VRDictionary
+  nameWithType: VRDictionary
+  fullName: EvilDICOM.Core.Dictionaries.VRDictionary

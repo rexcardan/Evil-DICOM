@@ -1,0 +1,871 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Reading.DICOMFileReader
+  commentId: T:EvilDICOM.Core.IO.Reading.DICOMFileReader
+  id: DICOMFileReader
+  parent: EvilDICOM.Core.IO.Reading
+  children:
+  - EvilDICOM.Core.IO.Reading.DICOMFileReader.Read(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  - EvilDICOM.Core.IO.Reading.DICOMFileReader.Read(System.String,EvilDICOM.Core.Enums.TransferSyntax)
+  - EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadAsync(System.String,EvilDICOM.Core.Enums.TransferSyntax)
+  - EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax@,EvilDICOM.Core.Enums.StringEncoding@)
+  - EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(System.Byte[])
+  - EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(System.String)
+  langs:
+  - csharp
+  - vb
+  name: DICOMFileReader
+  nameWithType: DICOMFileReader
+  fullName: EvilDICOM.Core.IO.Reading.DICOMFileReader
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOMFileReader
+    path: ../EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nClass for reading DICOM files\n"
+  example: []
+  syntax:
+    content: public class DICOMFileReader
+    content.vb: Public Class DICOMFileReader
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Reading.DICOMFileReader.Read(System.String,EvilDICOM.Core.Enums.TransferSyntax)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMFileReader.Read(System.String,EvilDICOM.Core.Enums.TransferSyntax)
+  id: Read(System.String,EvilDICOM.Core.Enums.TransferSyntax)
+  parent: EvilDICOM.Core.IO.Reading.DICOMFileReader
+  langs:
+  - csharp
+  - vb
+  name: Read(String, TransferSyntax)
+  nameWithType: DICOMFileReader.Read(String, TransferSyntax)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMFileReader.Read(System.String, EvilDICOM.Core.Enums.TransferSyntax)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Read
+    path: ../EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads a DICOM file from a path\n"
+  example: []
+  syntax:
+    content: public static DICOMObject Read(string filePath, TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: the path to the DICOM file
+    - id: trySyntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+    return:
+      type: EvilDICOM.Core.DICOMObject
+      description: a DICOM object containing all elements
+    content.vb: Public Shared Function Read(filePath As String, trySyntax As TransferSyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN) As DICOMObject
+  overload: EvilDICOM.Core.IO.Reading.DICOMFileReader.Read*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadAsync(System.String,EvilDICOM.Core.Enums.TransferSyntax)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadAsync(System.String,EvilDICOM.Core.Enums.TransferSyntax)
+  id: ReadAsync(System.String,EvilDICOM.Core.Enums.TransferSyntax)
+  parent: EvilDICOM.Core.IO.Reading.DICOMFileReader
+  langs:
+  - csharp
+  - vb
+  name: ReadAsync(String, TransferSyntax)
+  nameWithType: DICOMFileReader.ReadAsync(String, TransferSyntax)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadAsync(System.String, EvilDICOM.Core.Enums.TransferSyntax)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadAsync
+    path: ../EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+    startLine: 46
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nAsynchronously reads a DICOM file from a path\n"
+  example: []
+  syntax:
+    content: public static Task<DICOMObject> ReadAsync(string filePath, TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: the path to the DICOM file
+    - id: trySyntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+    return:
+      type: System.Threading.Tasks.Task{EvilDICOM.Core.DICOMObject}
+      description: a DICOM object containing all elements
+    content.vb: Public Shared Function ReadAsync(filePath As String, trySyntax As TransferSyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN) As Task(Of DICOMObject)
+  overload: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadAsync*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.DICOMFileReader.Read(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMFileReader.Read(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  id: Read(System.Byte[],EvilDICOM.Core.Enums.TransferSyntax)
+  parent: EvilDICOM.Core.IO.Reading.DICOMFileReader
+  langs:
+  - csharp
+  - vb
+  name: Read(Byte[], TransferSyntax)
+  nameWithType: DICOMFileReader.Read(Byte[], TransferSyntax)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMFileReader.Read(System.Byte[], EvilDICOM.Core.Enums.TransferSyntax)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Read
+    path: ../EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+    startLine: 69
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nReads a DICOM file from a byte array\n"
+  example: []
+  syntax:
+    content: public static DICOMObject Read(byte[] fileBytes, TransferSyntax trySyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN)
+    parameters:
+    - id: fileBytes
+      type: System.Byte[]
+      description: the bytes of the DICOM file
+    - id: trySyntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+    return:
+      type: EvilDICOM.Core.DICOMObject
+      description: a DICOM object containing all elements
+    content.vb: Public Shared Function Read(fileBytes As Byte(), trySyntax As TransferSyntax = TransferSyntax.IMPLICIT_VR_LITTLE_ENDIAN) As DICOMObject
+  overload: EvilDICOM.Core.IO.Reading.DICOMFileReader.Read*
+  nameWithType.vb: DICOMFileReader.Read(Byte(), TransferSyntax)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Reading.DICOMFileReader.Read(System.Byte(), EvilDICOM.Core.Enums.TransferSyntax)
+  name.vb: Read(Byte(), TransferSyntax)
+- uid: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(System.String)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(System.String)
+  id: ReadFileMetadata(System.String)
+  parent: EvilDICOM.Core.IO.Reading.DICOMFileReader
+  langs:
+  - csharp
+  - vb
+  name: ReadFileMetadata(String)
+  nameWithType: DICOMFileReader.ReadFileMetadata(String)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadFileMetadata
+    path: ../EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+    startLine: 90
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nRead the meta data from the DICOM object\n"
+  example: []
+  syntax:
+    content: public static DICOMObject ReadFileMetadata(string filePath)
+    parameters:
+    - id: filePath
+      type: System.String
+      description: the path to the DICOM file
+    return:
+      type: EvilDICOM.Core.DICOMObject
+      description: a DICOM object containing the metadata elements
+    content.vb: Public Shared Function ReadFileMetadata(filePath As String) As DICOMObject
+  overload: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(System.Byte[])
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(System.Byte[])
+  id: ReadFileMetadata(System.Byte[])
+  parent: EvilDICOM.Core.IO.Reading.DICOMFileReader
+  langs:
+  - csharp
+  - vb
+  name: ReadFileMetadata(Byte[])
+  nameWithType: DICOMFileReader.ReadFileMetadata(Byte[])
+  fullName: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(System.Byte[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadFileMetadata
+    path: ../EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+    startLine: 108
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nRead the meta data from the DICOM object\n"
+  example: []
+  syntax:
+    content: public static DICOMObject ReadFileMetadata(byte[] fileBytes)
+    parameters:
+    - id: fileBytes
+      type: System.Byte[]
+    return:
+      type: EvilDICOM.Core.DICOMObject
+      description: a DICOM object containing the metadata elements
+    content.vb: Public Shared Function ReadFileMetadata(fileBytes As Byte()) As DICOMObject
+  overload: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata*
+  nameWithType.vb: DICOMFileReader.ReadFileMetadata(Byte())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(System.Byte())
+  name.vb: ReadFileMetadata(Byte())
+- uid: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax@,EvilDICOM.Core.Enums.StringEncoding@)
+  commentId: M:EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax@,EvilDICOM.Core.Enums.StringEncoding@)
+  id: ReadFileMetadata(EvilDICOM.Core.IO.Reading.DICOMBinaryReader,EvilDICOM.Core.Enums.TransferSyntax@,EvilDICOM.Core.Enums.StringEncoding@)
+  parent: EvilDICOM.Core.IO.Reading.DICOMFileReader
+  langs:
+  - csharp
+  - vb
+  name: ReadFileMetadata(DICOMBinaryReader, ref TransferSyntax, ref StringEncoding)
+  nameWithType: DICOMFileReader.ReadFileMetadata(DICOMBinaryReader, ref TransferSyntax, ref StringEncoding)
+  fullName: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(EvilDICOM.Core.IO.Reading.DICOMBinaryReader, ref EvilDICOM.Core.Enums.TransferSyntax, ref EvilDICOM.Core.Enums.StringEncoding)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ReadFileMetadata
+    path: ../EvilDICOM/Core/IO/Reading/DICOMFileReader.cs
+    startLine: 127
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Reading
+  summary: "\nRead explicit VR little endian up to transfer syntax element and determines transfer syntax for rest of elements\n"
+  example: []
+  syntax:
+    content: public static List<IDICOMElement> ReadFileMetadata(DICOMBinaryReader dr, ref TransferSyntax syntax, ref StringEncoding enc)
+    parameters:
+    - id: dr
+      type: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+      description: the binary reader which is reading the DICOM object
+    - id: syntax
+      type: EvilDICOM.Core.Enums.TransferSyntax
+      description: the transfer syntax of the DICOM file
+    - id: enc
+      type: EvilDICOM.Core.Enums.StringEncoding
+    return:
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+      description: elements preceeding and including transfer syntax element
+    content.vb: Public Shared Function ReadFileMetadata(dr As DICOMBinaryReader, ByRef syntax As TransferSyntax, ByRef enc As StringEncoding) As List(Of IDICOMElement)
+  overload: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata*
+  nameWithType.vb: DICOMFileReader.ReadFileMetadata(DICOMBinaryReader, ByRef TransferSyntax, ByRef StringEncoding)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata(EvilDICOM.Core.IO.Reading.DICOMBinaryReader, ByRef EvilDICOM.Core.Enums.TransferSyntax, ByRef EvilDICOM.Core.Enums.StringEncoding)
+  name.vb: ReadFileMetadata(DICOMBinaryReader, ByRef TransferSyntax, ByRef StringEncoding)
+references:
+- uid: EvilDICOM.Core.IO.Reading
+  commentId: N:EvilDICOM.Core.IO.Reading
+  name: EvilDICOM.Core.IO.Reading
+  nameWithType: EvilDICOM.Core.IO.Reading
+  fullName: EvilDICOM.Core.IO.Reading
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Core.IO.Reading.DICOMFileReader.Read*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMFileReader.Read
+  name: Read
+  nameWithType: DICOMFileReader.Read
+  fullName: EvilDICOM.Core.IO.Reading.DICOMFileReader.Read
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Core.Enums.TransferSyntax
+  commentId: T:EvilDICOM.Core.Enums.TransferSyntax
+  parent: EvilDICOM.Core.Enums
+  name: TransferSyntax
+  nameWithType: TransferSyntax
+  fullName: EvilDICOM.Core.Enums.TransferSyntax
+- uid: EvilDICOM.Core.DICOMObject
+  commentId: T:EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  name: DICOMObject
+  nameWithType: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadAsync*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadAsync
+  name: ReadAsync
+  nameWithType: DICOMFileReader.ReadAsync
+  fullName: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadAsync
+- uid: System.Threading.Tasks.Task{EvilDICOM.Core.DICOMObject}
+  commentId: T:System.Threading.Tasks.Task{EvilDICOM.Core.DICOMObject}
+  parent: System.Threading.Tasks
+  definition: System.Threading.Tasks.Task`1
+  name: Task<DICOMObject>
+  nameWithType: Task<DICOMObject>
+  fullName: System.Threading.Tasks.Task<EvilDICOM.Core.DICOMObject>
+  nameWithType.vb: Task(Of DICOMObject)
+  fullName.vb: System.Threading.Tasks.Task(Of EvilDICOM.Core.DICOMObject)
+  name.vb: Task(Of DICOMObject)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks.Task`1
+  commentId: T:System.Threading.Tasks.Task`1
+  isExternal: true
+  name: Task<TResult>
+  nameWithType: Task<TResult>
+  fullName: System.Threading.Tasks.Task<TResult>
+  nameWithType.vb: Task(Of TResult)
+  fullName.vb: System.Threading.Tasks.Task(Of TResult)
+  name.vb: Task(Of TResult)
+  spec.csharp:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Threading.Tasks.Task`1
+    name: Task
+    nameWithType: Task
+    fullName: System.Threading.Tasks.Task
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TResult
+    nameWithType: TResult
+    fullName: TResult
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Threading.Tasks
+  commentId: N:System.Threading.Tasks
+  isExternal: true
+  name: System.Threading.Tasks
+  nameWithType: System.Threading.Tasks
+  fullName: System.Threading.Tasks
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata*
+  commentId: Overload:EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata
+  name: ReadFileMetadata
+  nameWithType: DICOMFileReader.ReadFileMetadata
+  fullName: EvilDICOM.Core.IO.Reading.DICOMFileReader.ReadFileMetadata
+- uid: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  commentId: T:EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+  parent: EvilDICOM.Core.IO.Reading
+  name: DICOMBinaryReader
+  nameWithType: DICOMBinaryReader
+  fullName: EvilDICOM.Core.IO.Reading.DICOMBinaryReader
+- uid: EvilDICOM.Core.Enums.StringEncoding
+  commentId: T:EvilDICOM.Core.Enums.StringEncoding
+  parent: EvilDICOM.Core.Enums
+  name: StringEncoding
+  nameWithType: StringEncoding
+  fullName: EvilDICOM.Core.Enums.StringEncoding
+- uid: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+  commentId: T:System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<IDICOMElement>
+  nameWithType: List<IDICOMElement>
+  fullName: System.Collections.Generic.List<EvilDICOM.Core.Interfaces.IDICOMElement>
+  nameWithType.vb: List(Of IDICOMElement)
+  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.Core.Interfaces.IDICOMElement)
+  name.vb: List(Of IDICOMElement)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    nameWithType: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    nameWithType: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic

@@ -1,6 +1,6 @@
 ﻿#region
 
-using Evil_DICOM.Core.Element;
+using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.IO.Data;
 

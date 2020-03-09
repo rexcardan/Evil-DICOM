@@ -1,0 +1,445 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.RT.TargetIndices
+  commentId: T:EvilDICOM.CV.RT.TargetIndices
+  id: TargetIndices
+  parent: EvilDICOM.CV.RT
+  children:
+  - EvilDICOM.CV.RT.TargetIndices.Gradient
+  - EvilDICOM.CV.RT.TargetIndices.PaddingCI
+  - EvilDICOM.CV.RT.TargetIndices.RTOGCI
+  langs:
+  - csharp
+  - vb
+  name: TargetIndices
+  nameWithType: TargetIndices
+  fullName: EvilDICOM.CV.RT.TargetIndices
+  type: Struct
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/TargetIndices.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: TargetIndices
+    path: ../EvilDICOM.CV/RT/TargetIndices.cs
+    startLine: 8
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  syntax:
+    content: public struct TargetIndices
+    content.vb: Public Structure TargetIndices
+  inheritedMembers:
+  - System.ValueType.Equals(System.Object)
+  - System.ValueType.GetHashCode
+  - System.ValueType.ToString
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetType
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - struct
+  modifiers.vb:
+  - Public
+  - Structure
+- uid: EvilDICOM.CV.RT.TargetIndices.Gradient
+  commentId: P:EvilDICOM.CV.RT.TargetIndices.Gradient
+  id: Gradient
+  parent: EvilDICOM.CV.RT.TargetIndices
+  langs:
+  - csharp
+  - vb
+  name: Gradient
+  nameWithType: TargetIndices.Gradient
+  fullName: EvilDICOM.CV.RT.TargetIndices.Gradient
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/TargetIndices.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Gradient
+    path: ../EvilDICOM.CV/RT/TargetIndices.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  syntax:
+    content: public double Gradient { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Gradient As Double
+  overload: EvilDICOM.CV.RT.TargetIndices.Gradient*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.TargetIndices.PaddingCI
+  commentId: P:EvilDICOM.CV.RT.TargetIndices.PaddingCI
+  id: PaddingCI
+  parent: EvilDICOM.CV.RT.TargetIndices
+  langs:
+  - csharp
+  - vb
+  name: PaddingCI
+  nameWithType: TargetIndices.PaddingCI
+  fullName: EvilDICOM.CV.RT.TargetIndices.PaddingCI
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/TargetIndices.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PaddingCI
+    path: ../EvilDICOM.CV/RT/TargetIndices.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  syntax:
+    content: public double PaddingCI { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property PaddingCI As Double
+  overload: EvilDICOM.CV.RT.TargetIndices.PaddingCI*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.TargetIndices.RTOGCI
+  commentId: P:EvilDICOM.CV.RT.TargetIndices.RTOGCI
+  id: RTOGCI
+  parent: EvilDICOM.CV.RT.TargetIndices
+  langs:
+  - csharp
+  - vb
+  name: RTOGCI
+  nameWithType: TargetIndices.RTOGCI
+  fullName: EvilDICOM.CV.RT.TargetIndices.RTOGCI
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/TargetIndices.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RTOGCI
+    path: ../EvilDICOM.CV/RT/TargetIndices.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT
+  syntax:
+    content: public double RTOGCI { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property RTOGCI As Double
+  overload: EvilDICOM.CV.RT.TargetIndices.RTOGCI*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.CV.RT
+  commentId: N:EvilDICOM.CV.RT
+  name: EvilDICOM.CV.RT
+  nameWithType: EvilDICOM.CV.RT
+  fullName: EvilDICOM.CV.RT
+- uid: System.ValueType.Equals(System.Object)
+  commentId: M:System.ValueType.Equals(System.Object)
+  parent: System.ValueType
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: ValueType.Equals(Object)
+  fullName: System.ValueType.Equals(System.Object)
+  spec.csharp:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.Equals(System.Object)
+    name: Equals
+    nameWithType: ValueType.Equals
+    fullName: System.ValueType.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.GetHashCode
+  commentId: M:System.ValueType.GetHashCode
+  parent: System.ValueType
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: ValueType.GetHashCode()
+  fullName: System.ValueType.GetHashCode()
+  spec.csharp:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.GetHashCode
+    name: GetHashCode
+    nameWithType: ValueType.GetHashCode
+    fullName: System.ValueType.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType.ToString
+  commentId: M:System.ValueType.ToString
+  parent: System.ValueType
+  isExternal: true
+  name: ToString()
+  nameWithType: ValueType.ToString()
+  fullName: System.ValueType.ToString()
+  spec.csharp:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.ValueType.ToString
+    name: ToString
+    nameWithType: ValueType.ToString
+    fullName: System.ValueType.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueType
+  commentId: T:System.ValueType
+  parent: System
+  isExternal: true
+  name: ValueType
+  nameWithType: ValueType
+  fullName: System.ValueType
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.RT.TargetIndices.Gradient*
+  commentId: Overload:EvilDICOM.CV.RT.TargetIndices.Gradient
+  name: Gradient
+  nameWithType: TargetIndices.Gradient
+  fullName: EvilDICOM.CV.RT.TargetIndices.Gradient
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: EvilDICOM.CV.RT.TargetIndices.PaddingCI*
+  commentId: Overload:EvilDICOM.CV.RT.TargetIndices.PaddingCI
+  name: PaddingCI
+  nameWithType: TargetIndices.PaddingCI
+  fullName: EvilDICOM.CV.RT.TargetIndices.PaddingCI
+- uid: EvilDICOM.CV.RT.TargetIndices.RTOGCI*
+  commentId: Overload:EvilDICOM.CV.RT.TargetIndices.RTOGCI
+  name: RTOGCI
+  nameWithType: TargetIndices.RTOGCI
+  fullName: EvilDICOM.CV.RT.TargetIndices.RTOGCI

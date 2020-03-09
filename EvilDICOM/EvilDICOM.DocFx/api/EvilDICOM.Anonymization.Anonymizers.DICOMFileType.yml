@@ -1,0 +1,343 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  commentId: T:EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  id: DICOMFileType
+  parent: EvilDICOM.Anonymization.Anonymizers
+  children:
+  - EvilDICOM.Anonymization.Anonymizers.DICOMFileType.CT_IMAGE
+  - EvilDICOM.Anonymization.Anonymizers.DICOMFileType.MRI_IMAGE
+  - EvilDICOM.Anonymization.Anonymizers.DICOMFileType.OTHER
+  - EvilDICOM.Anonymization.Anonymizers.DICOMFileType.PET_IMAGE
+  - EvilDICOM.Anonymization.Anonymizers.DICOMFileType.REGISTRATION
+  - EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_DOSE
+  - EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_IMAGE
+  - EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_PLAN
+  - EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_STRUCT
+  langs:
+  - csharp
+  - vb
+  name: DICOMFileType
+  nameWithType: DICOMFileType
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  type: Enum
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DICOMFileType
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 153
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: public enum DICOMFileType
+    content.vb: Public Enum DICOMFileType
+  modifiers.csharp:
+  - public
+  - enum
+  modifiers.vb:
+  - Public
+  - Enum
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_IMAGE
+  commentId: F:EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_IMAGE
+  id: RT_IMAGE
+  parent: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  langs:
+  - csharp
+  - vb
+  name: RT_IMAGE
+  nameWithType: DICOMFileType.RT_IMAGE
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_IMAGE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RT_IMAGE
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 155
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: RT_IMAGE = 0
+    return:
+      type: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.CT_IMAGE
+  commentId: F:EvilDICOM.Anonymization.Anonymizers.DICOMFileType.CT_IMAGE
+  id: CT_IMAGE
+  parent: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  langs:
+  - csharp
+  - vb
+  name: CT_IMAGE
+  nameWithType: DICOMFileType.CT_IMAGE
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.CT_IMAGE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CT_IMAGE
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 156
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: CT_IMAGE = 1
+    return:
+      type: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.MRI_IMAGE
+  commentId: F:EvilDICOM.Anonymization.Anonymizers.DICOMFileType.MRI_IMAGE
+  id: MRI_IMAGE
+  parent: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  langs:
+  - csharp
+  - vb
+  name: MRI_IMAGE
+  nameWithType: DICOMFileType.MRI_IMAGE
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.MRI_IMAGE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MRI_IMAGE
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 157
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: MRI_IMAGE = 2
+    return:
+      type: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.PET_IMAGE
+  commentId: F:EvilDICOM.Anonymization.Anonymizers.DICOMFileType.PET_IMAGE
+  id: PET_IMAGE
+  parent: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  langs:
+  - csharp
+  - vb
+  name: PET_IMAGE
+  nameWithType: DICOMFileType.PET_IMAGE
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.PET_IMAGE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PET_IMAGE
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 158
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: PET_IMAGE = 3
+    return:
+      type: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_DOSE
+  commentId: F:EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_DOSE
+  id: RT_DOSE
+  parent: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  langs:
+  - csharp
+  - vb
+  name: RT_DOSE
+  nameWithType: DICOMFileType.RT_DOSE
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_DOSE
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RT_DOSE
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 159
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: RT_DOSE = 4
+    return:
+      type: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_PLAN
+  commentId: F:EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_PLAN
+  id: RT_PLAN
+  parent: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  langs:
+  - csharp
+  - vb
+  name: RT_PLAN
+  nameWithType: DICOMFileType.RT_PLAN
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_PLAN
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RT_PLAN
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 160
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: RT_PLAN = 5
+    return:
+      type: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_STRUCT
+  commentId: F:EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_STRUCT
+  id: RT_STRUCT
+  parent: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  langs:
+  - csharp
+  - vb
+  name: RT_STRUCT
+  nameWithType: DICOMFileType.RT_STRUCT
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.RT_STRUCT
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RT_STRUCT
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 161
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: RT_STRUCT = 6
+    return:
+      type: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.REGISTRATION
+  commentId: F:EvilDICOM.Anonymization.Anonymizers.DICOMFileType.REGISTRATION
+  id: REGISTRATION
+  parent: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  langs:
+  - csharp
+  - vb
+  name: REGISTRATION
+  nameWithType: DICOMFileType.REGISTRATION
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.REGISTRATION
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: REGISTRATION
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 162
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: REGISTRATION = 7
+    return:
+      type: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.OTHER
+  commentId: F:EvilDICOM.Anonymization.Anonymizers.DICOMFileType.OTHER
+  id: OTHER
+  parent: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  langs:
+  - csharp
+  - vb
+  name: OTHER
+  nameWithType: DICOMFileType.OTHER
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType.OTHER
+  type: Field
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: OTHER
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 163
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: OTHER = 8
+    return:
+      type: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  modifiers.csharp:
+  - public
+  - const
+  modifiers.vb:
+  - Public
+  - Const
+references:
+- uid: EvilDICOM.Anonymization.Anonymizers
+  commentId: N:EvilDICOM.Anonymization.Anonymizers
+  name: EvilDICOM.Anonymization.Anonymizers
+  nameWithType: EvilDICOM.Anonymization.Anonymizers
+  fullName: EvilDICOM.Anonymization.Anonymizers
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  commentId: T:EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  parent: EvilDICOM.Anonymization.Anonymizers
+  name: DICOMFileType
+  nameWithType: DICOMFileType
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType

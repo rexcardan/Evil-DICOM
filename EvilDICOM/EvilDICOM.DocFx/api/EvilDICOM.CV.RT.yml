@@ -1,0 +1,62 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.RT
+  commentId: N:EvilDICOM.CV.RT
+  id: EvilDICOM.CV.RT
+  children:
+  - EvilDICOM.CV.RT.DoseMatrix
+  - EvilDICOM.CV.RT.DRR
+  - EvilDICOM.CV.RT.DVH
+  - EvilDICOM.CV.RT.DVHCalculator
+  - EvilDICOM.CV.RT.IsodoseLevel
+  - EvilDICOM.CV.RT.TargetIndices
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.CV.RT
+  nameWithType: EvilDICOM.CV.RT
+  fullName: EvilDICOM.CV.RT
+  type: Namespace
+  assemblies:
+  - EvilDICOM.CV
+references:
+- uid: EvilDICOM.CV.RT.DoseMatrix
+  commentId: T:EvilDICOM.CV.RT.DoseMatrix
+  parent: EvilDICOM.CV.RT
+  name: DoseMatrix
+  nameWithType: DoseMatrix
+  fullName: EvilDICOM.CV.RT.DoseMatrix
+- uid: EvilDICOM.CV.RT.DRR
+  commentId: T:EvilDICOM.CV.RT.DRR
+  parent: EvilDICOM.CV.RT
+  name: DRR
+  nameWithType: DRR
+  fullName: EvilDICOM.CV.RT.DRR
+- uid: EvilDICOM.CV.RT.DVH
+  commentId: T:EvilDICOM.CV.RT.DVH
+  parent: EvilDICOM.CV.RT
+  name: DVH
+  nameWithType: DVH
+  fullName: EvilDICOM.CV.RT.DVH
+- uid: EvilDICOM.CV.RT.DVHCalculator
+  commentId: T:EvilDICOM.CV.RT.DVHCalculator
+  name: DVHCalculator
+  nameWithType: DVHCalculator
+  fullName: EvilDICOM.CV.RT.DVHCalculator
+- uid: EvilDICOM.CV.RT.IsodoseLevel
+  commentId: T:EvilDICOM.CV.RT.IsodoseLevel
+  parent: EvilDICOM.CV.RT
+  name: IsodoseLevel
+  nameWithType: IsodoseLevel
+  fullName: EvilDICOM.CV.RT.IsodoseLevel
+- uid: EvilDICOM.CV.RT.TargetIndices
+  commentId: T:EvilDICOM.CV.RT.TargetIndices
+  parent: EvilDICOM.CV.RT
+  name: TargetIndices
+  nameWithType: TargetIndices
+  fullName: EvilDICOM.CV.RT.TargetIndices
+- uid: EvilDICOM.CV.RT
+  commentId: N:EvilDICOM.CV.RT
+  name: EvilDICOM.CV.RT
+  nameWithType: EvilDICOM.CV.RT
+  fullName: EvilDICOM.CV.RT

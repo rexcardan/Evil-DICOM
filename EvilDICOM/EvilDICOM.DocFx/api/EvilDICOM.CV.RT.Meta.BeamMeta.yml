@@ -1,0 +1,1441 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta
+  commentId: T:EvilDICOM.CV.RT.Meta.BeamMeta
+  id: BeamMeta
+  parent: EvilDICOM.CV.RT.Meta
+  children:
+  - EvilDICOM.CV.RT.Meta.BeamMeta.CollimatorAngle
+  - EvilDICOM.CV.RT.Meta.BeamMeta.Dose
+  - EvilDICOM.CV.RT.Meta.BeamMeta.EndingGantryAngle
+  - EvilDICOM.CV.RT.Meta.BeamMeta.Energy
+  - EvilDICOM.CV.RT.Meta.BeamMeta.HasBlock
+  - EvilDICOM.CV.RT.Meta.BeamMeta.HasBolus
+  - EvilDICOM.CV.RT.Meta.BeamMeta.HasWedge
+  - EvilDICOM.CV.RT.Meta.BeamMeta.Id
+  - EvilDICOM.CV.RT.Meta.BeamMeta.Isocenter
+  - EvilDICOM.CV.RT.Meta.BeamMeta.IsSetup
+  - EvilDICOM.CV.RT.Meta.BeamMeta.MachineId
+  - EvilDICOM.CV.RT.Meta.BeamMeta.MLCType
+  - EvilDICOM.CV.RT.Meta.BeamMeta.Modality
+  - EvilDICOM.CV.RT.Meta.BeamMeta.ModalityAbbr
+  - EvilDICOM.CV.RT.Meta.BeamMeta.MU
+  - EvilDICOM.CV.RT.Meta.BeamMeta.SSD
+  - EvilDICOM.CV.RT.Meta.BeamMeta.StartingGantryAngle
+  - EvilDICOM.CV.RT.Meta.BeamMeta.TableAngle
+  - EvilDICOM.CV.RT.Meta.BeamMeta.Wedge
+  - EvilDICOM.CV.RT.Meta.BeamMeta.Weight
+  - EvilDICOM.CV.RT.Meta.BeamMeta.X1
+  - EvilDICOM.CV.RT.Meta.BeamMeta.X2
+  - EvilDICOM.CV.RT.Meta.BeamMeta.Y1
+  - EvilDICOM.CV.RT.Meta.BeamMeta.Y2
+  langs:
+  - csharp
+  - vb
+  name: BeamMeta
+  nameWithType: BeamMeta
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: BeamMeta
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public class BeamMeta
+    content.vb: Public Class BeamMeta
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Energy
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.Energy
+  id: Energy
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: Energy
+  nameWithType: BeamMeta.Energy
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Energy
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Energy
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double Energy { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Energy As Double
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.Energy*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.ModalityAbbr
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.ModalityAbbr
+  id: ModalityAbbr
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: ModalityAbbr
+  nameWithType: BeamMeta.ModalityAbbr
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.ModalityAbbr
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ModalityAbbr
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public string ModalityAbbr { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property ModalityAbbr As String
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.ModalityAbbr*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Id
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.Id
+  id: Id
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: BeamMeta.Id
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Id
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Id
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public string Id { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Id As String
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.MachineId
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.MachineId
+  id: MachineId
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: MachineId
+  nameWithType: BeamMeta.MachineId
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.MachineId
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MachineId
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public string MachineId { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MachineId As String
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.MachineId*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Modality
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.Modality
+  id: Modality
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: Modality
+  nameWithType: BeamMeta.Modality
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Modality
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Modality
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public string Modality { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Modality As String
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.Modality*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Weight
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.Weight
+  id: Weight
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: Weight
+  nameWithType: BeamMeta.Weight
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Weight
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Weight
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double Weight { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Weight As Double
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.Weight*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.StartingGantryAngle
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.StartingGantryAngle
+  id: StartingGantryAngle
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: StartingGantryAngle
+  nameWithType: BeamMeta.StartingGantryAngle
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.StartingGantryAngle
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StartingGantryAngle
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 17
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double StartingGantryAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property StartingGantryAngle As Double
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.StartingGantryAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.EndingGantryAngle
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.EndingGantryAngle
+  id: EndingGantryAngle
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: EndingGantryAngle
+  nameWithType: BeamMeta.EndingGantryAngle
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.EndingGantryAngle
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: EndingGantryAngle
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double EndingGantryAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property EndingGantryAngle As Double
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.EndingGantryAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Wedge
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.Wedge
+  id: Wedge
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: Wedge
+  nameWithType: BeamMeta.Wedge
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Wedge
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Wedge
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public string Wedge { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property Wedge As String
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.Wedge*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.CollimatorAngle
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.CollimatorAngle
+  id: CollimatorAngle
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: CollimatorAngle
+  nameWithType: BeamMeta.CollimatorAngle
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.CollimatorAngle
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: CollimatorAngle
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 20
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double CollimatorAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property CollimatorAngle As Double
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.CollimatorAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.TableAngle
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.TableAngle
+  id: TableAngle
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: TableAngle
+  nameWithType: BeamMeta.TableAngle
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.TableAngle
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: TableAngle
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double TableAngle { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property TableAngle As Double
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.TableAngle*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.SSD
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.SSD
+  id: SSD
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: SSD
+  nameWithType: BeamMeta.SSD
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.SSD
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SSD
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double SSD { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property SSD As Double
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.SSD*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.MU
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.MU
+  id: MU
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: MU
+  nameWithType: BeamMeta.MU
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.MU
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MU
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double? MU { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property MU As Double?
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.MU*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.X1
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.X1
+  id: X1
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: X1
+  nameWithType: BeamMeta.X1
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.X1
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: X1
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double X1 { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property X1 As Double
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.X1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.X2
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.X2
+  id: X2
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: X2
+  nameWithType: BeamMeta.X2
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.X2
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: X2
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 25
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double X2 { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property X2 As Double
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.X2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Y1
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.Y1
+  id: Y1
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: Y1
+  nameWithType: BeamMeta.Y1
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Y1
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Y1
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double Y1 { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Y1 As Double
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.Y1*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Y2
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.Y2
+  id: Y2
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: Y2
+  nameWithType: BeamMeta.Y2
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Y2
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Y2
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double Y2 { get; set; }
+    parameters: []
+    return:
+      type: System.Double
+    content.vb: Public Property Y2 As Double
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.Y2*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.MLCType
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.MLCType
+  id: MLCType
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: MLCType
+  nameWithType: BeamMeta.MLCType
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.MLCType
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MLCType
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public string MLCType { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property MLCType As String
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.MLCType*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.HasBlock
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.HasBlock
+  id: HasBlock
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: HasBlock
+  nameWithType: BeamMeta.HasBlock
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.HasBlock
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HasBlock
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 29
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public bool HasBlock { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasBlock As Boolean
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.HasBlock*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.HasBolus
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.HasBolus
+  id: HasBolus
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: HasBolus
+  nameWithType: BeamMeta.HasBolus
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.HasBolus
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HasBolus
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 30
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public bool HasBolus { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasBolus As Boolean
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.HasBolus*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.IsSetup
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.IsSetup
+  id: IsSetup
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: IsSetup
+  nameWithType: BeamMeta.IsSetup
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.IsSetup
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IsSetup
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 31
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public bool IsSetup { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property IsSetup As Boolean
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.IsSetup*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.HasWedge
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.HasWedge
+  id: HasWedge
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: HasWedge
+  nameWithType: BeamMeta.HasWedge
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.HasWedge
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: HasWedge
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 32
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public bool HasWedge { get; set; }
+    parameters: []
+    return:
+      type: System.Boolean
+    content.vb: Public Property HasWedge As Boolean
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.HasWedge*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Isocenter
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.Isocenter
+  id: Isocenter
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: Isocenter
+  nameWithType: BeamMeta.Isocenter
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Isocenter
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Isocenter
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 33
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public Vector3 Isocenter { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Core.Helpers.Vector3
+    content.vb: Public Property Isocenter As Vector3
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.Isocenter*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Dose
+  commentId: P:EvilDICOM.CV.RT.Meta.BeamMeta.Dose
+  id: Dose
+  parent: EvilDICOM.CV.RT.Meta.BeamMeta
+  langs:
+  - csharp
+  - vb
+  name: Dose
+  nameWithType: BeamMeta.Dose
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Dose
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Dose
+    path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
+    startLine: 34
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.RT.Meta
+  syntax:
+    content: public double? Dose { get; set; }
+    parameters: []
+    return:
+      type: System.Nullable{System.Double}
+    content.vb: Public Property Dose As Double?
+  overload: EvilDICOM.CV.RT.Meta.BeamMeta.Dose*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.CV.RT.Meta
+  commentId: N:EvilDICOM.CV.RT.Meta
+  name: EvilDICOM.CV.RT.Meta
+  nameWithType: EvilDICOM.CV.RT.Meta
+  fullName: EvilDICOM.CV.RT.Meta
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Energy*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.Energy
+  name: Energy
+  nameWithType: BeamMeta.Energy
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Energy
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.ModalityAbbr*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.ModalityAbbr
+  name: ModalityAbbr
+  nameWithType: BeamMeta.ModalityAbbr
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.ModalityAbbr
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Id*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.Id
+  name: Id
+  nameWithType: BeamMeta.Id
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Id
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.MachineId*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.MachineId
+  name: MachineId
+  nameWithType: BeamMeta.MachineId
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.MachineId
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Modality*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.Modality
+  name: Modality
+  nameWithType: BeamMeta.Modality
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Modality
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Weight*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.Weight
+  name: Weight
+  nameWithType: BeamMeta.Weight
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Weight
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.StartingGantryAngle*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.StartingGantryAngle
+  name: StartingGantryAngle
+  nameWithType: BeamMeta.StartingGantryAngle
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.StartingGantryAngle
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.EndingGantryAngle*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.EndingGantryAngle
+  name: EndingGantryAngle
+  nameWithType: BeamMeta.EndingGantryAngle
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.EndingGantryAngle
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Wedge*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.Wedge
+  name: Wedge
+  nameWithType: BeamMeta.Wedge
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Wedge
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.CollimatorAngle*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.CollimatorAngle
+  name: CollimatorAngle
+  nameWithType: BeamMeta.CollimatorAngle
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.CollimatorAngle
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.TableAngle*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.TableAngle
+  name: TableAngle
+  nameWithType: BeamMeta.TableAngle
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.TableAngle
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.SSD*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.SSD
+  name: SSD
+  nameWithType: BeamMeta.SSD
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.SSD
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.MU*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.MU
+  name: MU
+  nameWithType: BeamMeta.MU
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.MU
+- uid: System.Nullable{System.Double}
+  commentId: T:System.Nullable{System.Double}
+  parent: System
+  definition: System.Nullable`1
+  name: Nullable<Double>
+  nameWithType: Nullable<Double>
+  fullName: System.Nullable<System.Double>
+  nameWithType.vb: Nullable(Of Double)
+  fullName.vb: System.Nullable(Of System.Double)
+  name.vb: Nullable(Of Double)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.Double
+    name: Double
+    nameWithType: Double
+    fullName: System.Double
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Nullable`1
+  commentId: T:System.Nullable`1
+  isExternal: true
+  name: Nullable<T>
+  nameWithType: Nullable<T>
+  fullName: System.Nullable<T>
+  nameWithType.vb: Nullable(Of T)
+  fullName.vb: System.Nullable(Of T)
+  name.vb: Nullable(Of T)
+  spec.csharp:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Nullable`1
+    name: Nullable
+    nameWithType: Nullable
+    fullName: System.Nullable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.X1*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.X1
+  name: X1
+  nameWithType: BeamMeta.X1
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.X1
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.X2*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.X2
+  name: X2
+  nameWithType: BeamMeta.X2
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.X2
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Y1*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.Y1
+  name: Y1
+  nameWithType: BeamMeta.Y1
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Y1
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Y2*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.Y2
+  name: Y2
+  nameWithType: BeamMeta.Y2
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Y2
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.MLCType*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.MLCType
+  name: MLCType
+  nameWithType: BeamMeta.MLCType
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.MLCType
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.HasBlock*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.HasBlock
+  name: HasBlock
+  nameWithType: BeamMeta.HasBlock
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.HasBlock
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.HasBolus*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.HasBolus
+  name: HasBolus
+  nameWithType: BeamMeta.HasBolus
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.HasBolus
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.IsSetup*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.IsSetup
+  name: IsSetup
+  nameWithType: BeamMeta.IsSetup
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.IsSetup
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.HasWedge*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.HasWedge
+  name: HasWedge
+  nameWithType: BeamMeta.HasWedge
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.HasWedge
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Isocenter*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.Isocenter
+  name: Isocenter
+  nameWithType: BeamMeta.Isocenter
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Isocenter
+- uid: EvilDICOM.Core.Helpers.Vector3
+  commentId: T:EvilDICOM.Core.Helpers.Vector3
+  parent: EvilDICOM.Core.Helpers
+  name: Vector3
+  nameWithType: Vector3
+  fullName: EvilDICOM.Core.Helpers.Vector3
+- uid: EvilDICOM.Core.Helpers
+  commentId: N:EvilDICOM.Core.Helpers
+  name: EvilDICOM.Core.Helpers
+  nameWithType: EvilDICOM.Core.Helpers
+  fullName: EvilDICOM.Core.Helpers
+- uid: EvilDICOM.CV.RT.Meta.BeamMeta.Dose*
+  commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.Dose
+  name: Dose
+  nameWithType: BeamMeta.Dose
+  fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Dose

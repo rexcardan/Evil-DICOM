@@ -1,0 +1,889 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  commentId: T:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  id: StudyIdAnonymizer
+  parent: EvilDICOM.Anonymization.Anonymizers
+  children:
+  - EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.#ctor
+  - EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.AddDICOMObject(EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.FinalizeDictionary
+  - EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNames
+  - EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNamesByType
+  - EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GetFileType(EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Name
+  - EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.StudyDictionary
+  langs:
+  - csharp
+  - vb
+  name: StudyIdAnonymizer
+  nameWithType: StudyIdAnonymizer
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StudyIdAnonymizer
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  summary: "\nRemoves the study id from the DICOM files and creates a new study id\n"
+  example: []
+  syntax:
+    content: 'public class StudyIdAnonymizer : IAnonymizer'
+    content.vb: >-
+      Public Class StudyIdAnonymizer
+          Implements IAnonymizer
+  inheritance:
+  - System.Object
+  implements:
+  - EvilDICOM.Anonymization.IAnonymizer
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.#ctor
+  commentId: M:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: StudyIdAnonymizer()
+  nameWithType: StudyIdAnonymizer.StudyIdAnonymizer()
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.StudyIdAnonymizer()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: public StudyIdAnonymizer()
+    content.vb: Public Sub New
+  overload: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.StudyDictionary
+  commentId: P:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.StudyDictionary
+  id: StudyDictionary
+  parent: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: StudyDictionary
+  nameWithType: StudyIdAnonymizer.StudyDictionary
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.StudyDictionary
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: StudyDictionary
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 32
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  summary: "\nA dictionary which stores the original study id and type of study\n"
+  example: []
+  syntax:
+    content: public Dictionary<string, string> StudyDictionary { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.Dictionary{System.String,System.String}
+    content.vb: Public Property StudyDictionary As Dictionary(Of String, String)
+  overload: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.StudyDictionary*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Name
+  commentId: P:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Name
+  id: Name
+  parent: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: Name
+  nameWithType: StudyIdAnonymizer.Name
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Name
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Name
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 34
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: public string Name { get; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public ReadOnly Property Name As String
+  overload: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Name*
+  modifiers.csharp:
+  - public
+  - get
+  modifiers.vb:
+  - Public
+  - ReadOnly
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  id: Anonymize(EvilDICOM.Core.DICOMObject)
+  parent: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: Anonymize(DICOMObject)
+  nameWithType: StudyIdAnonymizer.Anonymize(DICOMObject)
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Anonymize
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 39
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: public void Anonymize(DICOMObject d)
+    parameters:
+    - id: d
+      type: EvilDICOM.Core.DICOMObject
+    content.vb: Public Sub Anonymize(d As DICOMObject)
+  overload: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Anonymize*
+  implements:
+  - EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.FinalizeDictionary
+  commentId: M:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.FinalizeDictionary
+  id: FinalizeDictionary
+  parent: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: FinalizeDictionary()
+  nameWithType: StudyIdAnonymizer.FinalizeDictionary()
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.FinalizeDictionary()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: FinalizeDictionary
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 53
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  summary: "\nThis method is to be called once all DICOM objects are added. It then remaps study ids in a private dictionary\n"
+  example: []
+  syntax:
+    content: public void FinalizeDictionary()
+    content.vb: Public Sub FinalizeDictionary
+  overload: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.FinalizeDictionary*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNames
+  commentId: M:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNames
+  id: GenerateNames
+  parent: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: GenerateNames()
+  nameWithType: StudyIdAnonymizer.GenerateNames()
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNames()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GenerateNames
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 58
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: public void GenerateNames()
+    content.vb: Public Sub GenerateNames
+  overload: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNames*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNamesByType
+  commentId: M:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNamesByType
+  id: GenerateNamesByType
+  parent: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: GenerateNamesByType()
+  nameWithType: StudyIdAnonymizer.GenerateNamesByType()
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNamesByType()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GenerateNamesByType
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 69
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: public void GenerateNamesByType()
+    content.vb: Public Sub GenerateNamesByType
+  overload: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNamesByType*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.AddDICOMObject(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.AddDICOMObject(EvilDICOM.Core.DICOMObject)
+  id: AddDICOMObject(EvilDICOM.Core.DICOMObject)
+  parent: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: AddDICOMObject(DICOMObject)
+  nameWithType: StudyIdAnonymizer.AddDICOMObject(DICOMObject)
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.AddDICOMObject(EvilDICOM.Core.DICOMObject)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AddDICOMObject
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 105
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: public void AddDICOMObject(DICOMObject d)
+    parameters:
+    - id: d
+      type: EvilDICOM.Core.DICOMObject
+    content.vb: Public Sub AddDICOMObject(d As DICOMObject)
+  overload: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.AddDICOMObject*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GetFileType(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GetFileType(EvilDICOM.Core.DICOMObject)
+  id: GetFileType(EvilDICOM.Core.DICOMObject)
+  parent: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: GetFileType(DICOMObject)
+  nameWithType: StudyIdAnonymizer.GetFileType(DICOMObject)
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GetFileType(EvilDICOM.Core.DICOMObject)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetFileType
+    path: ../EvilDICOM/Anonymization/Anonymizers/StudyIdAnonymizer.cs
+    startLine: 124
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Anonymization.Anonymizers
+  syntax:
+    content: public static DICOMFileType GetFileType(DICOMObject d)
+    parameters:
+    - id: d
+      type: EvilDICOM.Core.DICOMObject
+    return:
+      type: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+    content.vb: Public Shared Function GetFileType(d As DICOMObject) As DICOMFileType
+  overload: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GetFileType*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Anonymization.Anonymizers
+  commentId: N:EvilDICOM.Anonymization.Anonymizers
+  name: EvilDICOM.Anonymization.Anonymizers
+  nameWithType: EvilDICOM.Anonymization.Anonymizers
+  fullName: EvilDICOM.Anonymization.Anonymizers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: EvilDICOM.Anonymization.IAnonymizer
+  commentId: T:EvilDICOM.Anonymization.IAnonymizer
+  parent: EvilDICOM.Anonymization
+  name: IAnonymizer
+  nameWithType: IAnonymizer
+  fullName: EvilDICOM.Anonymization.IAnonymizer
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Anonymization
+  commentId: N:EvilDICOM.Anonymization
+  name: EvilDICOM.Anonymization
+  nameWithType: EvilDICOM.Anonymization
+  fullName: EvilDICOM.Anonymization
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.#ctor*
+  commentId: Overload:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.#ctor
+  name: StudyIdAnonymizer
+  nameWithType: StudyIdAnonymizer.StudyIdAnonymizer
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.StudyIdAnonymizer
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.StudyDictionary*
+  commentId: Overload:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.StudyDictionary
+  name: StudyDictionary
+  nameWithType: StudyIdAnonymizer.StudyDictionary
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.StudyDictionary
+- uid: System.Collections.Generic.Dictionary{System.String,System.String}
+  commentId: T:System.Collections.Generic.Dictionary{System.String,System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.Dictionary`2
+  name: Dictionary<String, String>
+  nameWithType: Dictionary<String, String>
+  fullName: System.Collections.Generic.Dictionary<System.String, System.String>
+  nameWithType.vb: Dictionary(Of String, String)
+  fullName.vb: System.Collections.Generic.Dictionary(Of System.String, System.String)
+  name.vb: Dictionary(Of String, String)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.Dictionary`2
+  commentId: T:System.Collections.Generic.Dictionary`2
+  isExternal: true
+  name: Dictionary<TKey, TValue>
+  nameWithType: Dictionary<TKey, TValue>
+  fullName: System.Collections.Generic.Dictionary<TKey, TValue>
+  nameWithType.vb: Dictionary(Of TKey, TValue)
+  fullName.vb: System.Collections.Generic.Dictionary(Of TKey, TValue)
+  name.vb: Dictionary(Of TKey, TValue)
+  spec.csharp:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.Dictionary`2
+    name: Dictionary
+    nameWithType: Dictionary
+    fullName: System.Collections.Generic.Dictionary
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: TKey
+    nameWithType: TKey
+    fullName: TKey
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: TValue
+    nameWithType: TValue
+    fullName: TValue
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Name*
+  commentId: Overload:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Name
+  name: Name
+  nameWithType: StudyIdAnonymizer.Name
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Name
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Anonymize*
+  commentId: Overload:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Anonymize
+  name: Anonymize
+  nameWithType: StudyIdAnonymizer.Anonymize
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.Anonymize
+- uid: EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  parent: EvilDICOM.Anonymization.IAnonymizer
+  name: Anonymize(DICOMObject)
+  nameWithType: IAnonymizer.Anonymize(DICOMObject)
+  fullName: EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+  spec.csharp:
+  - uid: EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+    name: Anonymize
+    nameWithType: IAnonymizer.Anonymize
+    fullName: EvilDICOM.Anonymization.IAnonymizer.Anonymize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: EvilDICOM.Anonymization.IAnonymizer.Anonymize(EvilDICOM.Core.DICOMObject)
+    name: Anonymize
+    nameWithType: IAnonymizer.Anonymize
+    fullName: EvilDICOM.Anonymization.IAnonymizer.Anonymize
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: EvilDICOM.Core.DICOMObject
+    name: DICOMObject
+    nameWithType: DICOMObject
+    fullName: EvilDICOM.Core.DICOMObject
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.DICOMObject
+  commentId: T:EvilDICOM.Core.DICOMObject
+  parent: EvilDICOM.Core
+  name: DICOMObject
+  nameWithType: DICOMObject
+  fullName: EvilDICOM.Core.DICOMObject
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.FinalizeDictionary*
+  commentId: Overload:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.FinalizeDictionary
+  name: FinalizeDictionary
+  nameWithType: StudyIdAnonymizer.FinalizeDictionary
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.FinalizeDictionary
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNames*
+  commentId: Overload:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNames
+  name: GenerateNames
+  nameWithType: StudyIdAnonymizer.GenerateNames
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNames
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNamesByType*
+  commentId: Overload:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNamesByType
+  name: GenerateNamesByType
+  nameWithType: StudyIdAnonymizer.GenerateNamesByType
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GenerateNamesByType
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.AddDICOMObject*
+  commentId: Overload:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.AddDICOMObject
+  name: AddDICOMObject
+  nameWithType: StudyIdAnonymizer.AddDICOMObject
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.AddDICOMObject
+- uid: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GetFileType*
+  commentId: Overload:EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GetFileType
+  name: GetFileType
+  nameWithType: StudyIdAnonymizer.GetFileType
+  fullName: EvilDICOM.Anonymization.Anonymizers.StudyIdAnonymizer.GetFileType
+- uid: EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  commentId: T:EvilDICOM.Anonymization.Anonymizers.DICOMFileType
+  parent: EvilDICOM.Anonymization.Anonymizers
+  name: DICOMFileType
+  nameWithType: DICOMFileType
+  fullName: EvilDICOM.Anonymization.Anonymizers.DICOMFileType

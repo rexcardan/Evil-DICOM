@@ -1,0 +1,255 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Services.Interfaces.IFindService`1
+  commentId: T:EvilDICOM.Network.Services.Interfaces.IFindService`1
+  id: IFindService`1
+  parent: EvilDICOM.Network.Services.Interfaces
+  children:
+  - EvilDICOM.Network.Services.Interfaces.IFindService`1.RetrieveMatches(System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement})
+  langs:
+  - csharp
+  - vb
+  name: IFindService<T>
+  nameWithType: IFindService<T>
+  fullName: EvilDICOM.Network.Services.Interfaces.IFindService<T>
+  type: Interface
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/Interfaces/IFindService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: IFindService
+    path: ../EvilDICOM/Network/Services/Interfaces/IFindService.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services.Interfaces
+  syntax:
+    content: >-
+      public interface IFindService<T>
+          where T : AbstractDIMSEIOD
+    typeParameters:
+    - id: T
+    content.vb: Public Interface IFindService(Of T As AbstractDIMSEIOD)
+  nameWithType.vb: IFindService(Of T)
+  modifiers.csharp:
+  - public
+  - interface
+  modifiers.vb:
+  - Public
+  - Interface
+  fullName.vb: EvilDICOM.Network.Services.Interfaces.IFindService(Of T)
+  name.vb: IFindService(Of T)
+- uid: EvilDICOM.Network.Services.Interfaces.IFindService`1.RetrieveMatches(System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement})
+  commentId: M:EvilDICOM.Network.Services.Interfaces.IFindService`1.RetrieveMatches(System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement})
+  id: RetrieveMatches(System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement})
+  parent: EvilDICOM.Network.Services.Interfaces.IFindService`1
+  langs:
+  - csharp
+  - vb
+  name: RetrieveMatches(List<IDICOMElement>)
+  nameWithType: IFindService<T>.RetrieveMatches(List<IDICOMElement>)
+  fullName: EvilDICOM.Network.Services.Interfaces.IFindService<T>.RetrieveMatches(System.Collections.Generic.List<EvilDICOM.Core.Interfaces.IDICOMElement>)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/Interfaces/IFindService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RetrieveMatches
+    path: ../EvilDICOM/Network/Services/Interfaces/IFindService.cs
+    startLine: 12
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services.Interfaces
+  syntax:
+    content: IEnumerable<T> RetrieveMatches(List<IDICOMElement> keys)
+    parameters:
+    - id: keys
+      type: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+    return:
+      type: System.Collections.Generic.IEnumerable{{T}}
+    content.vb: Function RetrieveMatches(keys As List(Of IDICOMElement)) As IEnumerable(Of T)
+  overload: EvilDICOM.Network.Services.Interfaces.IFindService`1.RetrieveMatches*
+  nameWithType.vb: IFindService(Of T).RetrieveMatches(List(Of IDICOMElement))
+  fullName.vb: EvilDICOM.Network.Services.Interfaces.IFindService(Of T).RetrieveMatches(System.Collections.Generic.List(Of EvilDICOM.Core.Interfaces.IDICOMElement))
+  name.vb: RetrieveMatches(List(Of IDICOMElement))
+references:
+- uid: EvilDICOM.Network.Services.Interfaces
+  commentId: N:EvilDICOM.Network.Services.Interfaces
+  name: EvilDICOM.Network.Services.Interfaces
+  nameWithType: EvilDICOM.Network.Services.Interfaces
+  fullName: EvilDICOM.Network.Services.Interfaces
+- uid: EvilDICOM.Network.Services.Interfaces.IFindService`1.RetrieveMatches*
+  commentId: Overload:EvilDICOM.Network.Services.Interfaces.IFindService`1.RetrieveMatches
+  name: RetrieveMatches
+  nameWithType: IFindService<T>.RetrieveMatches
+  fullName: EvilDICOM.Network.Services.Interfaces.IFindService<T>.RetrieveMatches
+  nameWithType.vb: IFindService(Of T).RetrieveMatches
+  fullName.vb: EvilDICOM.Network.Services.Interfaces.IFindService(Of T).RetrieveMatches
+- uid: System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+  commentId: T:System.Collections.Generic.List{EvilDICOM.Core.Interfaces.IDICOMElement}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<IDICOMElement>
+  nameWithType: List<IDICOMElement>
+  fullName: System.Collections.Generic.List<EvilDICOM.Core.Interfaces.IDICOMElement>
+  nameWithType.vb: List(Of IDICOMElement)
+  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.Core.Interfaces.IDICOMElement)
+  name.vb: List(Of IDICOMElement)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    nameWithType: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: EvilDICOM.Core.Interfaces.IDICOMElement
+    name: IDICOMElement
+    nameWithType: IDICOMElement
+    fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.IEnumerable{{T}}
+  commentId: T:System.Collections.Generic.IEnumerable{``0}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.IEnumerable`1
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: System.Collections.Generic.IEnumerable`1
+  commentId: T:System.Collections.Generic.IEnumerable`1
+  isExternal: true
+  name: IEnumerable<T>
+  nameWithType: IEnumerable<T>
+  fullName: System.Collections.Generic.IEnumerable<T>
+  nameWithType.vb: IEnumerable(Of T)
+  fullName.vb: System.Collections.Generic.IEnumerable(Of T)
+  name.vb: IEnumerable(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.IEnumerable`1
+    name: IEnumerable
+    nameWithType: IEnumerable
+    fullName: System.Collections.Generic.IEnumerable
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

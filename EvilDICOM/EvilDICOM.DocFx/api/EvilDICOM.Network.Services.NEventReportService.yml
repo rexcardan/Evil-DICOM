@@ -1,0 +1,497 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.Services.NEventReportService
+  commentId: T:EvilDICOM.Network.Services.NEventReportService
+  id: NEventReportService
+  parent: EvilDICOM.Network.Services
+  children:
+  - EvilDICOM.Network.Services.NEventReportService.#ctor(EvilDICOM.Network.Services.DIMSEService)
+  - EvilDICOM.Network.Services.NEventReportService.OnRequestReceived(EvilDICOM.Network.DIMSE.NEventReportRequest,EvilDICOM.Network.Association)
+  - EvilDICOM.Network.Services.NEventReportService.OnResponseReceived(EvilDICOM.Network.DIMSE.NEventReportResponse,EvilDICOM.Network.Association)
+  langs:
+  - csharp
+  - vb
+  name: NEventReportService
+  nameWithType: NEventReportService
+  fullName: EvilDICOM.Network.Services.NEventReportService
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/NEventReportService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: NEventReportService
+    path: ../EvilDICOM/Network/Services/NEventReportService.cs
+    startLine: 9
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public class NEventReportService
+    content.vb: Public Class NEventReportService
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.Services.NEventReportService.#ctor(EvilDICOM.Network.Services.DIMSEService)
+  commentId: M:EvilDICOM.Network.Services.NEventReportService.#ctor(EvilDICOM.Network.Services.DIMSEService)
+  id: '#ctor(EvilDICOM.Network.Services.DIMSEService)'
+  parent: EvilDICOM.Network.Services.NEventReportService
+  langs:
+  - csharp
+  - vb
+  name: NEventReportService(DIMSEService)
+  nameWithType: NEventReportService.NEventReportService(DIMSEService)
+  fullName: EvilDICOM.Network.Services.NEventReportService.NEventReportService(EvilDICOM.Network.Services.DIMSEService)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/NEventReportService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/Network/Services/NEventReportService.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public NEventReportService(DIMSEService dIMSEService)
+    parameters:
+    - id: dIMSEService
+      type: EvilDICOM.Network.Services.DIMSEService
+    content.vb: Public Sub New(dIMSEService As DIMSEService)
+  overload: EvilDICOM.Network.Services.NEventReportService.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.NEventReportService.OnRequestReceived(EvilDICOM.Network.DIMSE.NEventReportRequest,EvilDICOM.Network.Association)
+  commentId: M:EvilDICOM.Network.Services.NEventReportService.OnRequestReceived(EvilDICOM.Network.DIMSE.NEventReportRequest,EvilDICOM.Network.Association)
+  id: OnRequestReceived(EvilDICOM.Network.DIMSE.NEventReportRequest,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Services.NEventReportService
+  langs:
+  - csharp
+  - vb
+  name: OnRequestReceived(NEventReportRequest, Association)
+  nameWithType: NEventReportService.OnRequestReceived(NEventReportRequest, Association)
+  fullName: EvilDICOM.Network.Services.NEventReportService.OnRequestReceived(EvilDICOM.Network.DIMSE.NEventReportRequest, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/NEventReportService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: OnRequestReceived
+    path: ../EvilDICOM/Network/Services/NEventReportService.cs
+    startLine: 18
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public void OnRequestReceived(NEventReportRequest req, Association asc)
+    parameters:
+    - id: req
+      type: EvilDICOM.Network.DIMSE.NEventReportRequest
+    - id: asc
+      type: EvilDICOM.Network.Association
+    content.vb: Public Sub OnRequestReceived(req As NEventReportRequest, asc As Association)
+  overload: EvilDICOM.Network.Services.NEventReportService.OnRequestReceived*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.Services.NEventReportService.OnResponseReceived(EvilDICOM.Network.DIMSE.NEventReportResponse,EvilDICOM.Network.Association)
+  commentId: M:EvilDICOM.Network.Services.NEventReportService.OnResponseReceived(EvilDICOM.Network.DIMSE.NEventReportResponse,EvilDICOM.Network.Association)
+  id: OnResponseReceived(EvilDICOM.Network.DIMSE.NEventReportResponse,EvilDICOM.Network.Association)
+  parent: EvilDICOM.Network.Services.NEventReportService
+  langs:
+  - csharp
+  - vb
+  name: OnResponseReceived(NEventReportResponse, Association)
+  nameWithType: NEventReportService.OnResponseReceived(NEventReportResponse, Association)
+  fullName: EvilDICOM.Network.Services.NEventReportService.OnResponseReceived(EvilDICOM.Network.DIMSE.NEventReportResponse, EvilDICOM.Network.Association)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/Services/NEventReportService.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: OnResponseReceived
+    path: ../EvilDICOM/Network/Services/NEventReportService.cs
+    startLine: 28
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.Services
+  syntax:
+    content: public void OnResponseReceived(NEventReportResponse resp, Association asc)
+    parameters:
+    - id: resp
+      type: EvilDICOM.Network.DIMSE.NEventReportResponse
+    - id: asc
+      type: EvilDICOM.Network.Association
+    content.vb: Public Sub OnResponseReceived(resp As NEventReportResponse, asc As Association)
+  overload: EvilDICOM.Network.Services.NEventReportService.OnResponseReceived*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.Network.Services
+  commentId: N:EvilDICOM.Network.Services
+  name: EvilDICOM.Network.Services
+  nameWithType: EvilDICOM.Network.Services
+  fullName: EvilDICOM.Network.Services
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Network.Services.NEventReportService.#ctor*
+  commentId: Overload:EvilDICOM.Network.Services.NEventReportService.#ctor
+  name: NEventReportService
+  nameWithType: NEventReportService.NEventReportService
+  fullName: EvilDICOM.Network.Services.NEventReportService.NEventReportService
+- uid: EvilDICOM.Network.Services.DIMSEService
+  commentId: T:EvilDICOM.Network.Services.DIMSEService
+  parent: EvilDICOM.Network.Services
+  name: DIMSEService
+  nameWithType: DIMSEService
+  fullName: EvilDICOM.Network.Services.DIMSEService
+- uid: EvilDICOM.Network.Services.NEventReportService.OnRequestReceived*
+  commentId: Overload:EvilDICOM.Network.Services.NEventReportService.OnRequestReceived
+  name: OnRequestReceived
+  nameWithType: NEventReportService.OnRequestReceived
+  fullName: EvilDICOM.Network.Services.NEventReportService.OnRequestReceived
+- uid: EvilDICOM.Network.DIMSE.NEventReportRequest
+  commentId: T:EvilDICOM.Network.DIMSE.NEventReportRequest
+  parent: EvilDICOM.Network.DIMSE
+  name: NEventReportRequest
+  nameWithType: NEventReportRequest
+  fullName: EvilDICOM.Network.DIMSE.NEventReportRequest
+- uid: EvilDICOM.Network.Association
+  commentId: T:EvilDICOM.Network.Association
+  parent: EvilDICOM.Network
+  name: Association
+  nameWithType: Association
+  fullName: EvilDICOM.Network.Association
+- uid: EvilDICOM.Network.DIMSE
+  commentId: N:EvilDICOM.Network.DIMSE
+  name: EvilDICOM.Network.DIMSE
+  nameWithType: EvilDICOM.Network.DIMSE
+  fullName: EvilDICOM.Network.DIMSE
+- uid: EvilDICOM.Network
+  commentId: N:EvilDICOM.Network
+  name: EvilDICOM.Network
+  nameWithType: EvilDICOM.Network
+  fullName: EvilDICOM.Network
+- uid: EvilDICOM.Network.Services.NEventReportService.OnResponseReceived*
+  commentId: Overload:EvilDICOM.Network.Services.NEventReportService.OnResponseReceived
+  name: OnResponseReceived
+  nameWithType: NEventReportService.OnResponseReceived
+  fullName: EvilDICOM.Network.Services.NEventReportService.OnResponseReceived
+- uid: EvilDICOM.Network.DIMSE.NEventReportResponse
+  commentId: T:EvilDICOM.Network.DIMSE.NEventReportResponse
+  parent: EvilDICOM.Network.DIMSE
+  name: NEventReportResponse
+  nameWithType: NEventReportResponse
+  fullName: EvilDICOM.Network.DIMSE.NEventReportResponse

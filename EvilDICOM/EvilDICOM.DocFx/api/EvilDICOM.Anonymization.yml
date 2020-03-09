@@ -1,0 +1,42 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Anonymization
+  commentId: N:EvilDICOM.Anonymization
+  id: EvilDICOM.Anonymization
+  children:
+  - EvilDICOM.Anonymization.AnonymizationQueue
+  - EvilDICOM.Anonymization.AnonymizationQueue.ProgressUpdatedHandler
+  - EvilDICOM.Anonymization.IAnonymizer
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Anonymization
+  nameWithType: EvilDICOM.Anonymization
+  fullName: EvilDICOM.Anonymization
+  type: Namespace
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Anonymization.AnonymizationQueue
+  commentId: T:EvilDICOM.Anonymization.AnonymizationQueue
+  parent: EvilDICOM.Anonymization
+  name: AnonymizationQueue
+  nameWithType: AnonymizationQueue
+  fullName: EvilDICOM.Anonymization.AnonymizationQueue
+- uid: EvilDICOM.Anonymization.AnonymizationQueue.ProgressUpdatedHandler
+  commentId: T:EvilDICOM.Anonymization.AnonymizationQueue.ProgressUpdatedHandler
+  parent: EvilDICOM.Anonymization
+  name: AnonymizationQueue.ProgressUpdatedHandler
+  nameWithType: AnonymizationQueue.ProgressUpdatedHandler
+  fullName: EvilDICOM.Anonymization.AnonymizationQueue.ProgressUpdatedHandler
+- uid: EvilDICOM.Anonymization.IAnonymizer
+  commentId: T:EvilDICOM.Anonymization.IAnonymizer
+  parent: EvilDICOM.Anonymization
+  name: IAnonymizer
+  nameWithType: IAnonymizer
+  fullName: EvilDICOM.Anonymization.IAnonymizer
+- uid: EvilDICOM.Anonymization
+  commentId: N:EvilDICOM.Anonymization
+  name: EvilDICOM.Anonymization
+  nameWithType: EvilDICOM.Anonymization
+  fullName: EvilDICOM.Anonymization

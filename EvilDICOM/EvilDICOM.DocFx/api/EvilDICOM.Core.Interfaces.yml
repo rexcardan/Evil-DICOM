@@ -1,0 +1,47 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  id: EvilDICOM.Core.Interfaces
+  children:
+  - EvilDICOM.Core.Interfaces.IDICOMBinaryReader
+  - EvilDICOM.Core.Interfaces.IDICOMElement
+  - EvilDICOM.Core.Interfaces.IEncoderDecoder
+  - EvilDICOM.Core.Interfaces.IIOD
+  langs:
+  - csharp
+  - vb
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces
+  type: Namespace
+  assemblies:
+  - EvilDICOM
+references:
+- uid: EvilDICOM.Core.Interfaces.IDICOMBinaryReader
+  commentId: T:EvilDICOM.Core.Interfaces.IDICOMBinaryReader
+  name: IDICOMBinaryReader
+  nameWithType: IDICOMBinaryReader
+  fullName: EvilDICOM.Core.Interfaces.IDICOMBinaryReader
+- uid: EvilDICOM.Core.Interfaces.IDICOMElement
+  commentId: T:EvilDICOM.Core.Interfaces.IDICOMElement
+  parent: EvilDICOM.Core.Interfaces
+  name: IDICOMElement
+  nameWithType: IDICOMElement
+  fullName: EvilDICOM.Core.Interfaces.IDICOMElement
+- uid: EvilDICOM.Core.Interfaces.IEncoderDecoder
+  commentId: T:EvilDICOM.Core.Interfaces.IEncoderDecoder
+  name: IEncoderDecoder
+  nameWithType: IEncoderDecoder
+  fullName: EvilDICOM.Core.Interfaces.IEncoderDecoder
+- uid: EvilDICOM.Core.Interfaces.IIOD
+  commentId: T:EvilDICOM.Core.Interfaces.IIOD
+  parent: EvilDICOM.Core.Interfaces
+  name: IIOD
+  nameWithType: IIOD
+  fullName: EvilDICOM.Core.Interfaces.IIOD
+- uid: EvilDICOM.Core.Interfaces
+  commentId: N:EvilDICOM.Core.Interfaces
+  name: EvilDICOM.Core.Interfaces
+  nameWithType: EvilDICOM.Core.Interfaces
+  fullName: EvilDICOM.Core.Interfaces

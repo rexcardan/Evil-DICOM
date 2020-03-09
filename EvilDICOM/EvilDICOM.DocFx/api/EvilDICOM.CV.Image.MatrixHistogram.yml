@@ -1,0 +1,584 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.Image.MatrixHistogram
+  commentId: T:EvilDICOM.CV.Image.MatrixHistogram
+  id: MatrixHistogram
+  parent: EvilDICOM.CV.Image
+  children:
+  - EvilDICOM.CV.Image.MatrixHistogram.#ctor(EvilDICOM.CV.Image.Matrix,System.Int32)
+  - EvilDICOM.CV.Image.MatrixHistogram.AddSlice(OpenCvSharp.Mat)
+  - EvilDICOM.CV.Image.MatrixHistogram.Count(System.Single,System.Single)
+  - EvilDICOM.CV.Image.MatrixHistogram.Dispose
+  langs:
+  - csharp
+  - vb
+  name: MatrixHistogram
+  nameWithType: MatrixHistogram
+  fullName: EvilDICOM.CV.Image.MatrixHistogram
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/MatrixHistogram.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: MatrixHistogram
+    path: ../EvilDICOM.CV/Image/MatrixHistogram.cs
+    startLine: 10
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: 'public class MatrixHistogram : IDisposable'
+    content.vb: >-
+      Public Class MatrixHistogram
+
+          Implements IDisposable
+  inheritance:
+  - System.Object
+  implements:
+  - System.IDisposable
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.CV.Image.MatrixHistogram.#ctor(EvilDICOM.CV.Image.Matrix,System.Int32)
+  commentId: M:EvilDICOM.CV.Image.MatrixHistogram.#ctor(EvilDICOM.CV.Image.Matrix,System.Int32)
+  id: '#ctor(EvilDICOM.CV.Image.Matrix,System.Int32)'
+  parent: EvilDICOM.CV.Image.MatrixHistogram
+  langs:
+  - csharp
+  - vb
+  name: MatrixHistogram(Matrix, Int32)
+  nameWithType: MatrixHistogram.MatrixHistogram(Matrix, Int32)
+  fullName: EvilDICOM.CV.Image.MatrixHistogram.MatrixHistogram(EvilDICOM.CV.Image.Matrix, System.Int32)
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/MatrixHistogram.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM.CV/Image/MatrixHistogram.cs
+    startLine: 19
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public MatrixHistogram(Matrix m, int nBins)
+    parameters:
+    - id: m
+      type: EvilDICOM.CV.Image.Matrix
+    - id: nBins
+      type: System.Int32
+    content.vb: Public Sub New(m As Matrix, nBins As Integer)
+  overload: EvilDICOM.CV.Image.MatrixHistogram.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.Image.MatrixHistogram.AddSlice(OpenCvSharp.Mat)
+  commentId: M:EvilDICOM.CV.Image.MatrixHistogram.AddSlice(OpenCvSharp.Mat)
+  id: AddSlice(OpenCvSharp.Mat)
+  parent: EvilDICOM.CV.Image.MatrixHistogram
+  langs:
+  - csharp
+  - vb
+  name: AddSlice(Mat)
+  nameWithType: MatrixHistogram.AddSlice(Mat)
+  fullName: EvilDICOM.CV.Image.MatrixHistogram.AddSlice(OpenCvSharp.Mat)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/MatrixHistogram.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AddSlice
+    path: ../EvilDICOM.CV/Image/MatrixHistogram.cs
+    startLine: 27
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public void AddSlice(Mat slice)
+    parameters:
+    - id: slice
+      type: OpenCvSharp.Mat
+    content.vb: Public Sub AddSlice(slice As Mat)
+  overload: EvilDICOM.CV.Image.MatrixHistogram.AddSlice*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.Image.MatrixHistogram.Count(System.Single,System.Single)
+  commentId: M:EvilDICOM.CV.Image.MatrixHistogram.Count(System.Single,System.Single)
+  id: Count(System.Single,System.Single)
+  parent: EvilDICOM.CV.Image.MatrixHistogram
+  langs:
+  - csharp
+  - vb
+  name: Count(Single, Single)
+  nameWithType: MatrixHistogram.Count(Single, Single)
+  fullName: EvilDICOM.CV.Image.MatrixHistogram.Count(System.Single, System.Single)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/MatrixHistogram.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Count
+    path: ../EvilDICOM.CV/Image/MatrixHistogram.cs
+    startLine: 39
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  summary: "\nCounts voxels between min and max\n"
+  example: []
+  syntax:
+    content: public int Count(float min, float max)
+    parameters:
+    - id: min
+      type: System.Single
+      description: ''
+    - id: max
+      type: System.Single
+      description: ''
+    return:
+      type: System.Int32
+      description: ''
+    content.vb: Public Function Count(min As Single, max As Single) As Integer
+  overload: EvilDICOM.CV.Image.MatrixHistogram.Count*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.CV.Image.MatrixHistogram.Dispose
+  commentId: M:EvilDICOM.CV.Image.MatrixHistogram.Dispose
+  id: Dispose
+  parent: EvilDICOM.CV.Image.MatrixHistogram
+  langs:
+  - csharp
+  - vb
+  name: Dispose()
+  nameWithType: MatrixHistogram.Dispose()
+  fullName: EvilDICOM.CV.Image.MatrixHistogram.Dispose()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Image/MatrixHistogram.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Dispose
+    path: ../EvilDICOM.CV/Image/MatrixHistogram.cs
+    startLine: 60
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Image
+  syntax:
+    content: public void Dispose()
+    content.vb: Public Sub Dispose
+  overload: EvilDICOM.CV.Image.MatrixHistogram.Dispose*
+  implements:
+  - System.IDisposable.Dispose
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+references:
+- uid: EvilDICOM.CV.Image
+  commentId: N:EvilDICOM.CV.Image
+  name: EvilDICOM.CV.Image
+  nameWithType: EvilDICOM.CV.Image
+  fullName: EvilDICOM.CV.Image
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.IDisposable
+  commentId: T:System.IDisposable
+  parent: System
+  isExternal: true
+  name: IDisposable
+  nameWithType: IDisposable
+  fullName: System.IDisposable
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.Image.MatrixHistogram.#ctor*
+  commentId: Overload:EvilDICOM.CV.Image.MatrixHistogram.#ctor
+  name: MatrixHistogram
+  nameWithType: MatrixHistogram.MatrixHistogram
+  fullName: EvilDICOM.CV.Image.MatrixHistogram.MatrixHistogram
+- uid: EvilDICOM.CV.Image.Matrix
+  commentId: T:EvilDICOM.CV.Image.Matrix
+  parent: EvilDICOM.CV.Image
+  name: Matrix
+  nameWithType: Matrix
+  fullName: EvilDICOM.CV.Image.Matrix
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.CV.Image.MatrixHistogram.AddSlice*
+  commentId: Overload:EvilDICOM.CV.Image.MatrixHistogram.AddSlice
+  name: AddSlice
+  nameWithType: MatrixHistogram.AddSlice
+  fullName: EvilDICOM.CV.Image.MatrixHistogram.AddSlice
+- uid: OpenCvSharp.Mat
+  commentId: T:OpenCvSharp.Mat
+  parent: OpenCvSharp
+  isExternal: true
+  name: Mat
+  nameWithType: Mat
+  fullName: OpenCvSharp.Mat
+- uid: OpenCvSharp
+  commentId: N:OpenCvSharp
+  isExternal: true
+  name: OpenCvSharp
+  nameWithType: OpenCvSharp
+  fullName: OpenCvSharp
+- uid: EvilDICOM.CV.Image.MatrixHistogram.Count*
+  commentId: Overload:EvilDICOM.CV.Image.MatrixHistogram.Count
+  name: Count
+  nameWithType: MatrixHistogram.Count
+  fullName: EvilDICOM.CV.Image.MatrixHistogram.Count
+- uid: System.Single
+  commentId: T:System.Single
+  parent: System
+  isExternal: true
+  name: Single
+  nameWithType: Single
+  fullName: System.Single
+- uid: EvilDICOM.CV.Image.MatrixHistogram.Dispose*
+  commentId: Overload:EvilDICOM.CV.Image.MatrixHistogram.Dispose
+  name: Dispose
+  nameWithType: MatrixHistogram.Dispose
+  fullName: EvilDICOM.CV.Image.MatrixHistogram.Dispose
+- uid: System.IDisposable.Dispose
+  commentId: M:System.IDisposable.Dispose
+  parent: System.IDisposable
+  isExternal: true
+  name: Dispose()
+  nameWithType: IDisposable.Dispose()
+  fullName: System.IDisposable.Dispose()
+  spec.csharp:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IDisposable.Dispose
+    name: Dispose
+    nameWithType: IDisposable.Dispose
+    fullName: System.IDisposable.Dispose
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )

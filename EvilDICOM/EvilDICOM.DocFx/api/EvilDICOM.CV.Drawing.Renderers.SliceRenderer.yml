@@ -1,0 +1,423 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.CV.Drawing.Renderers.SliceRenderer
+  commentId: T:EvilDICOM.CV.Drawing.Renderers.SliceRenderer
+  id: SliceRenderer
+  parent: EvilDICOM.CV.Drawing.Renderers
+  children:
+  - EvilDICOM.CV.Drawing.Renderers.SliceRenderer.RenderContourOnDose(EvilDICOM.CV.Image.Matrix,EvilDICOM.CV.RT.Meta.SliceContourMeta[])
+  langs:
+  - csharp
+  - vb
+  name: SliceRenderer
+  nameWithType: SliceRenderer
+  fullName: EvilDICOM.CV.Drawing.Renderers.SliceRenderer
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Drawing/Renderers/SliceRenderer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: SliceRenderer
+    path: ../EvilDICOM.CV/Drawing/Renderers/SliceRenderer.cs
+    startLine: 13
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Drawing.Renderers
+  syntax:
+    content: public class SliceRenderer
+    content.vb: Public Class SliceRenderer
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.CV.Drawing.Renderers.SliceRenderer.RenderContourOnDose(EvilDICOM.CV.Image.Matrix,EvilDICOM.CV.RT.Meta.SliceContourMeta[])
+  commentId: M:EvilDICOM.CV.Drawing.Renderers.SliceRenderer.RenderContourOnDose(EvilDICOM.CV.Image.Matrix,EvilDICOM.CV.RT.Meta.SliceContourMeta[])
+  id: RenderContourOnDose(EvilDICOM.CV.Image.Matrix,EvilDICOM.CV.RT.Meta.SliceContourMeta[])
+  parent: EvilDICOM.CV.Drawing.Renderers.SliceRenderer
+  langs:
+  - csharp
+  - vb
+  name: RenderContourOnDose(Matrix, SliceContourMeta[])
+  nameWithType: SliceRenderer.RenderContourOnDose(Matrix, SliceContourMeta[])
+  fullName: EvilDICOM.CV.Drawing.Renderers.SliceRenderer.RenderContourOnDose(EvilDICOM.CV.Image.Matrix, EvilDICOM.CV.RT.Meta.SliceContourMeta[])
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM.CV/Drawing/Renderers/SliceRenderer.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: RenderContourOnDose
+    path: ../EvilDICOM.CV/Drawing/Renderers/SliceRenderer.cs
+    startLine: 15
+  assemblies:
+  - EvilDICOM.CV
+  namespace: EvilDICOM.CV.Drawing.Renderers
+  syntax:
+    content: public static void RenderContourOnDose(Matrix dm, params SliceContourMeta[] contours)
+    parameters:
+    - id: dm
+      type: EvilDICOM.CV.Image.Matrix
+    - id: contours
+      type: EvilDICOM.CV.RT.Meta.SliceContourMeta[]
+    content.vb: Public Shared Sub RenderContourOnDose(dm As Matrix, ParamArray contours As SliceContourMeta())
+  overload: EvilDICOM.CV.Drawing.Renderers.SliceRenderer.RenderContourOnDose*
+  nameWithType.vb: SliceRenderer.RenderContourOnDose(Matrix, SliceContourMeta())
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.CV.Drawing.Renderers.SliceRenderer.RenderContourOnDose(EvilDICOM.CV.Image.Matrix, EvilDICOM.CV.RT.Meta.SliceContourMeta())
+  name.vb: RenderContourOnDose(Matrix, SliceContourMeta())
+references:
+- uid: EvilDICOM.CV.Drawing.Renderers
+  commentId: N:EvilDICOM.CV.Drawing.Renderers
+  name: EvilDICOM.CV.Drawing.Renderers
+  nameWithType: EvilDICOM.CV.Drawing.Renderers
+  fullName: EvilDICOM.CV.Drawing.Renderers
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.CV.Drawing.Renderers.SliceRenderer.RenderContourOnDose*
+  commentId: Overload:EvilDICOM.CV.Drawing.Renderers.SliceRenderer.RenderContourOnDose
+  name: RenderContourOnDose
+  nameWithType: SliceRenderer.RenderContourOnDose
+  fullName: EvilDICOM.CV.Drawing.Renderers.SliceRenderer.RenderContourOnDose
+- uid: EvilDICOM.CV.Image.Matrix
+  commentId: T:EvilDICOM.CV.Image.Matrix
+  parent: EvilDICOM.CV.Image
+  name: Matrix
+  nameWithType: Matrix
+  fullName: EvilDICOM.CV.Image.Matrix
+- uid: EvilDICOM.CV.RT.Meta.SliceContourMeta[]
+  isExternal: true
+  name: SliceContourMeta[]
+  nameWithType: SliceContourMeta[]
+  fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta[]
+  nameWithType.vb: SliceContourMeta()
+  fullName.vb: EvilDICOM.CV.RT.Meta.SliceContourMeta()
+  name.vb: SliceContourMeta()
+  spec.csharp:
+  - uid: EvilDICOM.CV.RT.Meta.SliceContourMeta
+    name: SliceContourMeta
+    nameWithType: SliceContourMeta
+    fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: EvilDICOM.CV.RT.Meta.SliceContourMeta
+    name: SliceContourMeta
+    nameWithType: SliceContourMeta
+    fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.CV.Image
+  commentId: N:EvilDICOM.CV.Image
+  name: EvilDICOM.CV.Image
+  nameWithType: EvilDICOM.CV.Image
+  fullName: EvilDICOM.CV.Image

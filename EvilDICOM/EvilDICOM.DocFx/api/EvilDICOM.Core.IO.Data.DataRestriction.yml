@@ -1,0 +1,635 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Core.IO.Data.DataRestriction
+  commentId: T:EvilDICOM.Core.IO.Data.DataRestriction
+  id: DataRestriction
+  parent: EvilDICOM.Core.IO.Data
+  children:
+  - EvilDICOM.Core.IO.Data.DataRestriction.EnforceEvenLength(System.Byte[],EvilDICOM.Core.Enums.VR)
+  - EvilDICOM.Core.IO.Data.DataRestriction.EnforceLengthRestriction(System.UInt32,System.String)
+  - EvilDICOM.Core.IO.Data.DataRestriction.EnforceRealNonZero(System.Double,System.String)
+  - EvilDICOM.Core.IO.Data.DataRestriction.EnforceRealNonZero(System.Int32,System.String)
+  - EvilDICOM.Core.IO.Data.DataRestriction.EnforceUrlEncoding(System.String)
+  langs:
+  - csharp
+  - vb
+  name: DataRestriction
+  nameWithType: DataRestriction
+  fullName: EvilDICOM.Core.IO.Data.DataRestriction
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataRestriction.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: DataRestriction
+    path: ../EvilDICOM/Core/IO/Data/DataRestriction.cs
+    startLine: 11
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public class DataRestriction
+    content.vb: Public Class DataRestriction
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  - System.Object.ToString
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Core.IO.Data.DataRestriction.EnforceLengthRestriction(System.UInt32,System.String)
+  commentId: M:EvilDICOM.Core.IO.Data.DataRestriction.EnforceLengthRestriction(System.UInt32,System.String)
+  id: EnforceLengthRestriction(System.UInt32,System.String)
+  parent: EvilDICOM.Core.IO.Data.DataRestriction
+  langs:
+  - csharp
+  - vb
+  name: EnforceLengthRestriction(UInt32, String)
+  nameWithType: DataRestriction.EnforceLengthRestriction(UInt32, String)
+  fullName: EvilDICOM.Core.IO.Data.DataRestriction.EnforceLengthRestriction(System.UInt32, System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataRestriction.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: EnforceLengthRestriction
+    path: ../EvilDICOM/Core/IO/Data/DataRestriction.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static string EnforceLengthRestriction(uint lengthLimit, string data)
+    parameters:
+    - id: lengthLimit
+      type: System.UInt32
+    - id: data
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function EnforceLengthRestriction(lengthLimit As UInteger, data As String) As String
+  overload: EvilDICOM.Core.IO.Data.DataRestriction.EnforceLengthRestriction*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.DataRestriction.EnforceEvenLength(System.Byte[],EvilDICOM.Core.Enums.VR)
+  commentId: M:EvilDICOM.Core.IO.Data.DataRestriction.EnforceEvenLength(System.Byte[],EvilDICOM.Core.Enums.VR)
+  id: EnforceEvenLength(System.Byte[],EvilDICOM.Core.Enums.VR)
+  parent: EvilDICOM.Core.IO.Data.DataRestriction
+  langs:
+  - csharp
+  - vb
+  name: EnforceEvenLength(Byte[], VR)
+  nameWithType: DataRestriction.EnforceEvenLength(Byte[], VR)
+  fullName: EvilDICOM.Core.IO.Data.DataRestriction.EnforceEvenLength(System.Byte[], EvilDICOM.Core.Enums.VR)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataRestriction.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: EnforceEvenLength
+    path: ../EvilDICOM/Core/IO/Data/DataRestriction.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static byte[] EnforceEvenLength(byte[] data, VR vr)
+    parameters:
+    - id: data
+      type: System.Byte[]
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+    return:
+      type: System.Byte[]
+    content.vb: Public Shared Function EnforceEvenLength(data As Byte(), vr As VR) As Byte()
+  overload: EvilDICOM.Core.IO.Data.DataRestriction.EnforceEvenLength*
+  nameWithType.vb: DataRestriction.EnforceEvenLength(Byte(), VR)
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+  fullName.vb: EvilDICOM.Core.IO.Data.DataRestriction.EnforceEvenLength(System.Byte(), EvilDICOM.Core.Enums.VR)
+  name.vb: EnforceEvenLength(Byte(), VR)
+- uid: EvilDICOM.Core.IO.Data.DataRestriction.EnforceUrlEncoding(System.String)
+  commentId: M:EvilDICOM.Core.IO.Data.DataRestriction.EnforceUrlEncoding(System.String)
+  id: EnforceUrlEncoding(System.String)
+  parent: EvilDICOM.Core.IO.Data.DataRestriction
+  langs:
+  - csharp
+  - vb
+  name: EnforceUrlEncoding(String)
+  nameWithType: DataRestriction.EnforceUrlEncoding(String)
+  fullName: EvilDICOM.Core.IO.Data.DataRestriction.EnforceUrlEncoding(System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataRestriction.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: EnforceUrlEncoding
+    path: ../EvilDICOM/Core/IO/Data/DataRestriction.cs
+    startLine: 56
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static string EnforceUrlEncoding(string originalValue)
+    parameters:
+    - id: originalValue
+      type: System.String
+    return:
+      type: System.String
+    content.vb: Public Shared Function EnforceUrlEncoding(originalValue As String) As String
+  overload: EvilDICOM.Core.IO.Data.DataRestriction.EnforceUrlEncoding*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.DataRestriction.EnforceRealNonZero(System.Double,System.String)
+  commentId: M:EvilDICOM.Core.IO.Data.DataRestriction.EnforceRealNonZero(System.Double,System.String)
+  id: EnforceRealNonZero(System.Double,System.String)
+  parent: EvilDICOM.Core.IO.Data.DataRestriction
+  langs:
+  - csharp
+  - vb
+  name: EnforceRealNonZero(Double, String)
+  nameWithType: DataRestriction.EnforceRealNonZero(Double, String)
+  fullName: EvilDICOM.Core.IO.Data.DataRestriction.EnforceRealNonZero(System.Double, System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataRestriction.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: EnforceRealNonZero
+    path: ../EvilDICOM/Core/IO/Data/DataRestriction.cs
+    startLine: 66
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static bool EnforceRealNonZero(double value, string propertyName)
+    parameters:
+    - id: value
+      type: System.Double
+    - id: propertyName
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function EnforceRealNonZero(value As Double, propertyName As String) As Boolean
+  overload: EvilDICOM.Core.IO.Data.DataRestriction.EnforceRealNonZero*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.IO.Data.DataRestriction.EnforceRealNonZero(System.Int32,System.String)
+  commentId: M:EvilDICOM.Core.IO.Data.DataRestriction.EnforceRealNonZero(System.Int32,System.String)
+  id: EnforceRealNonZero(System.Int32,System.String)
+  parent: EvilDICOM.Core.IO.Data.DataRestriction
+  langs:
+  - csharp
+  - vb
+  name: EnforceRealNonZero(Int32, String)
+  nameWithType: DataRestriction.EnforceRealNonZero(Int32, String)
+  fullName: EvilDICOM.Core.IO.Data.DataRestriction.EnforceRealNonZero(System.Int32, System.String)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/IO/Data/DataRestriction.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: EnforceRealNonZero
+    path: ../EvilDICOM/Core/IO/Data/DataRestriction.cs
+    startLine: 77
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.IO.Data
+  syntax:
+    content: public static bool EnforceRealNonZero(int value, string propertyName)
+    parameters:
+    - id: value
+      type: System.Int32
+    - id: propertyName
+      type: System.String
+    return:
+      type: System.Boolean
+    content.vb: Public Shared Function EnforceRealNonZero(value As Integer, propertyName As String) As Boolean
+  overload: EvilDICOM.Core.IO.Data.DataRestriction.EnforceRealNonZero*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+references:
+- uid: EvilDICOM.Core.IO.Data
+  commentId: N:EvilDICOM.Core.IO.Data
+  name: EvilDICOM.Core.IO.Data
+  nameWithType: EvilDICOM.Core.IO.Data
+  fullName: EvilDICOM.Core.IO.Data
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Core.IO.Data.DataRestriction.EnforceLengthRestriction*
+  commentId: Overload:EvilDICOM.Core.IO.Data.DataRestriction.EnforceLengthRestriction
+  name: EnforceLengthRestriction
+  nameWithType: DataRestriction.EnforceLengthRestriction
+  fullName: EvilDICOM.Core.IO.Data.DataRestriction.EnforceLengthRestriction
+- uid: System.UInt32
+  commentId: T:System.UInt32
+  parent: System
+  isExternal: true
+  name: UInt32
+  nameWithType: UInt32
+  fullName: System.UInt32
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Core.IO.Data.DataRestriction.EnforceEvenLength*
+  commentId: Overload:EvilDICOM.Core.IO.Data.DataRestriction.EnforceEvenLength
+  name: EnforceEvenLength
+  nameWithType: DataRestriction.EnforceEvenLength
+  fullName: EvilDICOM.Core.IO.Data.DataRestriction.EnforceEvenLength
+- uid: System.Byte[]
+  isExternal: true
+  name: Byte[]
+  nameWithType: Byte[]
+  fullName: System.Byte[]
+  nameWithType.vb: Byte()
+  fullName.vb: System.Byte()
+  name.vb: Byte()
+  spec.csharp:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  spec.vb:
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+- uid: EvilDICOM.Core.Enums.VR
+  commentId: T:EvilDICOM.Core.Enums.VR
+  parent: EvilDICOM.Core.Enums
+  name: VR
+  nameWithType: VR
+  fullName: EvilDICOM.Core.Enums.VR
+- uid: EvilDICOM.Core.Enums
+  commentId: N:EvilDICOM.Core.Enums
+  name: EvilDICOM.Core.Enums
+  nameWithType: EvilDICOM.Core.Enums
+  fullName: EvilDICOM.Core.Enums
+- uid: EvilDICOM.Core.IO.Data.DataRestriction.EnforceUrlEncoding*
+  commentId: Overload:EvilDICOM.Core.IO.Data.DataRestriction.EnforceUrlEncoding
+  name: EnforceUrlEncoding
+  nameWithType: DataRestriction.EnforceUrlEncoding
+  fullName: EvilDICOM.Core.IO.Data.DataRestriction.EnforceUrlEncoding
+- uid: EvilDICOM.Core.IO.Data.DataRestriction.EnforceRealNonZero*
+  commentId: Overload:EvilDICOM.Core.IO.Data.DataRestriction.EnforceRealNonZero
+  name: EnforceRealNonZero
+  nameWithType: DataRestriction.EnforceRealNonZero
+  fullName: EvilDICOM.Core.IO.Data.DataRestriction.EnforceRealNonZero
+- uid: System.Double
+  commentId: T:System.Double
+  parent: System
+  isExternal: true
+  name: Double
+  nameWithType: Double
+  fullName: System.Double
+- uid: System.Boolean
+  commentId: T:System.Boolean
+  parent: System
+  isExternal: true
+  name: Boolean
+  nameWithType: Boolean
+  fullName: System.Boolean
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32

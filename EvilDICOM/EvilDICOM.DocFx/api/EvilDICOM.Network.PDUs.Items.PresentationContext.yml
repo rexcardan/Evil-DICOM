@@ -1,0 +1,745 @@
+### YamlMime:ManagedReference
+items:
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext
+  commentId: T:EvilDICOM.Network.PDUs.Items.PresentationContext
+  id: PresentationContext
+  parent: EvilDICOM.Network.PDUs.Items
+  children:
+  - EvilDICOM.Network.PDUs.Items.PresentationContext.#ctor
+  - EvilDICOM.Network.PDUs.Items.PresentationContext.AbstractSyntax
+  - EvilDICOM.Network.PDUs.Items.PresentationContext.Id
+  - EvilDICOM.Network.PDUs.Items.PresentationContext.Reason
+  - EvilDICOM.Network.PDUs.Items.PresentationContext.ToDICOMWriteSettings
+  - EvilDICOM.Network.PDUs.Items.PresentationContext.ToString
+  - EvilDICOM.Network.PDUs.Items.PresentationContext.TransferSyntaxes
+  langs:
+  - csharp
+  - vb
+  name: PresentationContext
+  nameWithType: PresentationContext
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext
+  type: Class
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: PresentationContext
+    path: ../EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+    startLine: 14
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public class PresentationContext
+    content.vb: Public Class PresentationContext
+  inheritance:
+  - System.Object
+  inheritedMembers:
+  - System.Object.Equals(System.Object)
+  - System.Object.Equals(System.Object,System.Object)
+  - System.Object.GetHashCode
+  - System.Object.GetType
+  - System.Object.MemberwiseClone
+  - System.Object.ReferenceEquals(System.Object,System.Object)
+  modifiers.csharp:
+  - public
+  - class
+  modifiers.vb:
+  - Public
+  - Class
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.#ctor
+  commentId: M:EvilDICOM.Network.PDUs.Items.PresentationContext.#ctor
+  id: '#ctor'
+  parent: EvilDICOM.Network.PDUs.Items.PresentationContext
+  langs:
+  - csharp
+  - vb
+  name: PresentationContext()
+  nameWithType: PresentationContext.PresentationContext()
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.PresentationContext()
+  type: Constructor
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: .ctor
+    path: ../EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+    startLine: 16
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public PresentationContext()
+    content.vb: Public Sub New
+  overload: EvilDICOM.Network.PDUs.Items.PresentationContext.#ctor*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.Id
+  commentId: P:EvilDICOM.Network.PDUs.Items.PresentationContext.Id
+  id: Id
+  parent: EvilDICOM.Network.PDUs.Items.PresentationContext
+  langs:
+  - csharp
+  - vb
+  name: Id
+  nameWithType: PresentationContext.Id
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.Id
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Id
+    path: ../EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+    startLine: 21
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public int Id { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property Id As Integer
+  overload: EvilDICOM.Network.PDUs.Items.PresentationContext.Id*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.Reason
+  commentId: P:EvilDICOM.Network.PDUs.Items.PresentationContext.Reason
+  id: Reason
+  parent: EvilDICOM.Network.PDUs.Items.PresentationContext
+  langs:
+  - csharp
+  - vb
+  name: Reason
+  nameWithType: PresentationContext.Reason
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.Reason
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: Reason
+    path: ../EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+    startLine: 22
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public PresentationContextReason Reason { get; set; }
+    parameters: []
+    return:
+      type: EvilDICOM.Network.Enums.PresentationContextReason
+    content.vb: Public Property Reason As PresentationContextReason
+  overload: EvilDICOM.Network.PDUs.Items.PresentationContext.Reason*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.AbstractSyntax
+  commentId: P:EvilDICOM.Network.PDUs.Items.PresentationContext.AbstractSyntax
+  id: AbstractSyntax
+  parent: EvilDICOM.Network.PDUs.Items.PresentationContext
+  langs:
+  - csharp
+  - vb
+  name: AbstractSyntax
+  nameWithType: PresentationContext.AbstractSyntax
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.AbstractSyntax
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: AbstractSyntax
+    path: ../EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+    startLine: 23
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public string AbstractSyntax { get; set; }
+    parameters: []
+    return:
+      type: System.String
+    content.vb: Public Property AbstractSyntax As String
+  overload: EvilDICOM.Network.PDUs.Items.PresentationContext.AbstractSyntax*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.TransferSyntaxes
+  commentId: P:EvilDICOM.Network.PDUs.Items.PresentationContext.TransferSyntaxes
+  id: TransferSyntaxes
+  parent: EvilDICOM.Network.PDUs.Items.PresentationContext
+  langs:
+  - csharp
+  - vb
+  name: TransferSyntaxes
+  nameWithType: PresentationContext.TransferSyntaxes
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.TransferSyntaxes
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: TransferSyntaxes
+    path: ../EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+    startLine: 24
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public List<string> TransferSyntaxes { get; set; }
+    parameters: []
+    return:
+      type: System.Collections.Generic.List{System.String}
+    content.vb: Public Property TransferSyntaxes As List(Of String)
+  overload: EvilDICOM.Network.PDUs.Items.PresentationContext.TransferSyntaxes*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.ToDICOMWriteSettings
+  commentId: M:EvilDICOM.Network.PDUs.Items.PresentationContext.ToDICOMWriteSettings
+  id: ToDICOMWriteSettings
+  parent: EvilDICOM.Network.PDUs.Items.PresentationContext
+  langs:
+  - csharp
+  - vb
+  name: ToDICOMWriteSettings()
+  nameWithType: PresentationContext.ToDICOMWriteSettings()
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.ToDICOMWriteSettings()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToDICOMWriteSettings
+    path: ../EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public DICOMIOSettings ToDICOMWriteSettings()
+    return:
+      type: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+    content.vb: Public Function ToDICOMWriteSettings As DICOMIOSettings
+  overload: EvilDICOM.Network.PDUs.Items.PresentationContext.ToDICOMWriteSettings*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.ToString
+  commentId: M:EvilDICOM.Network.PDUs.Items.PresentationContext.ToString
+  id: ToString
+  parent: EvilDICOM.Network.PDUs.Items.PresentationContext
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: PresentationContext.ToString()
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: ToString
+    path: ../EvilDICOM/Network/PDUs/Items/PresentationContext.cs
+    startLine: 33
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network.PDUs.Items
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: EvilDICOM.Network.PDUs.Items.PresentationContext.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
+references:
+- uid: EvilDICOM.Network.PDUs.Items
+  commentId: N:EvilDICOM.Network.PDUs.Items
+  name: EvilDICOM.Network.PDUs.Items
+  nameWithType: EvilDICOM.Network.PDUs.Items
+  fullName: EvilDICOM.Network.PDUs.Items
+- uid: System.Object
+  commentId: T:System.Object
+  parent: System
+  isExternal: true
+  name: Object
+  nameWithType: Object
+  fullName: System.Object
+- uid: System.Object.Equals(System.Object)
+  commentId: M:System.Object.Equals(System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object)
+  nameWithType: Object.Equals(Object)
+  fullName: System.Object.Equals(System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.Equals(System.Object,System.Object)
+  commentId: M:System.Object.Equals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: Equals(Object, Object)
+  nameWithType: Object.Equals(Object, Object)
+  fullName: System.Object.Equals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.Equals(System.Object,System.Object)
+    name: Equals
+    nameWithType: Object.Equals
+    fullName: System.Object.Equals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetHashCode
+  commentId: M:System.Object.GetHashCode
+  parent: System.Object
+  isExternal: true
+  name: GetHashCode()
+  nameWithType: Object.GetHashCode()
+  fullName: System.Object.GetHashCode()
+  spec.csharp:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetHashCode
+    name: GetHashCode
+    nameWithType: Object.GetHashCode
+    fullName: System.Object.GetHashCode
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.GetType
+  commentId: M:System.Object.GetType
+  parent: System.Object
+  isExternal: true
+  name: GetType()
+  nameWithType: Object.GetType()
+  fullName: System.Object.GetType()
+  spec.csharp:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.GetType
+    name: GetType
+    nameWithType: Object.GetType
+    fullName: System.Object.GetType
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.MemberwiseClone
+  commentId: M:System.Object.MemberwiseClone
+  parent: System.Object
+  isExternal: true
+  name: MemberwiseClone()
+  nameWithType: Object.MemberwiseClone()
+  fullName: System.Object.MemberwiseClone()
+  spec.csharp:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.MemberwiseClone
+    name: MemberwiseClone
+    nameWithType: Object.MemberwiseClone
+    fullName: System.Object.MemberwiseClone
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Object.ReferenceEquals(System.Object,System.Object)
+  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
+  parent: System.Object
+  isExternal: true
+  name: ReferenceEquals(Object, Object)
+  nameWithType: Object.ReferenceEquals(Object, Object)
+  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
+  spec.csharp:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
+    name: ReferenceEquals
+    nameWithType: Object.ReferenceEquals
+    fullName: System.Object.ReferenceEquals
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Object
+    name: Object
+    nameWithType: Object
+    fullName: System.Object
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System
+  commentId: N:System
+  isExternal: true
+  name: System
+  nameWithType: System
+  fullName: System
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.#ctor*
+  commentId: Overload:EvilDICOM.Network.PDUs.Items.PresentationContext.#ctor
+  name: PresentationContext
+  nameWithType: PresentationContext.PresentationContext
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.PresentationContext
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.Id*
+  commentId: Overload:EvilDICOM.Network.PDUs.Items.PresentationContext.Id
+  name: Id
+  nameWithType: PresentationContext.Id
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.Id
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.Reason*
+  commentId: Overload:EvilDICOM.Network.PDUs.Items.PresentationContext.Reason
+  name: Reason
+  nameWithType: PresentationContext.Reason
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.Reason
+- uid: EvilDICOM.Network.Enums.PresentationContextReason
+  commentId: T:EvilDICOM.Network.Enums.PresentationContextReason
+  parent: EvilDICOM.Network.Enums
+  name: PresentationContextReason
+  nameWithType: PresentationContextReason
+  fullName: EvilDICOM.Network.Enums.PresentationContextReason
+- uid: EvilDICOM.Network.Enums
+  commentId: N:EvilDICOM.Network.Enums
+  name: EvilDICOM.Network.Enums
+  nameWithType: EvilDICOM.Network.Enums
+  fullName: EvilDICOM.Network.Enums
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.AbstractSyntax*
+  commentId: Overload:EvilDICOM.Network.PDUs.Items.PresentationContext.AbstractSyntax
+  name: AbstractSyntax
+  nameWithType: PresentationContext.AbstractSyntax
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.AbstractSyntax
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.TransferSyntaxes*
+  commentId: Overload:EvilDICOM.Network.PDUs.Items.PresentationContext.TransferSyntaxes
+  name: TransferSyntaxes
+  nameWithType: PresentationContext.TransferSyntaxes
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.TransferSyntaxes
+- uid: System.Collections.Generic.List{System.String}
+  commentId: T:System.Collections.Generic.List{System.String}
+  parent: System.Collections.Generic
+  definition: System.Collections.Generic.List`1
+  name: List<String>
+  nameWithType: List<String>
+  fullName: System.Collections.Generic.List<System.String>
+  nameWithType.vb: List(Of String)
+  fullName.vb: System.Collections.Generic.List(Of System.String)
+  name.vb: List(Of String)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - uid: System.String
+    name: String
+    nameWithType: String
+    fullName: System.String
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic.List`1
+  commentId: T:System.Collections.Generic.List`1
+  isExternal: true
+  name: List<T>
+  nameWithType: List<T>
+  fullName: System.Collections.Generic.List<T>
+  nameWithType.vb: List(Of T)
+  fullName.vb: System.Collections.Generic.List(Of T)
+  name.vb: List(Of T)
+  spec.csharp:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.Collections.Generic.List`1
+    name: List
+    nameWithType: List
+    fullName: System.Collections.Generic.List
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.Collections.Generic
+  commentId: N:System.Collections.Generic
+  isExternal: true
+  name: System.Collections.Generic
+  nameWithType: System.Collections.Generic
+  fullName: System.Collections.Generic
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.ToDICOMWriteSettings*
+  commentId: Overload:EvilDICOM.Network.PDUs.Items.PresentationContext.ToDICOMWriteSettings
+  name: ToDICOMWriteSettings
+  nameWithType: PresentationContext.ToDICOMWriteSettings
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.ToDICOMWriteSettings
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  parent: EvilDICOM.Core.IO.Writing
+  name: DICOMIOSettings
+  nameWithType: DICOMIOSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+- uid: EvilDICOM.Core.IO.Writing
+  commentId: N:EvilDICOM.Core.IO.Writing
+  name: EvilDICOM.Core.IO.Writing
+  nameWithType: EvilDICOM.Core.IO.Writing
+  fullName: EvilDICOM.Core.IO.Writing
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.PDUs.Items.PresentationContext.ToString*
+  commentId: Overload:EvilDICOM.Network.PDUs.Items.PresentationContext.ToString
+  name: ToString
+  nameWithType: PresentationContext.ToString
+  fullName: EvilDICOM.Network.PDUs.Items.PresentationContext.ToString
