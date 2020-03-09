@@ -1,5 +1,5 @@
 
-![Logo](https://github.com/rexcardan/Evil-DICOM/blob/gh-pages/images/evilDicomLogo.png)
+![Logo](https://github.com/rexcardan/Evil-DICOM/blob/master/docs/images/evilDicomLogo.png)
 
 A simple to use C# library for reading and manipulating DICOM files. 
 New documentation added to github via Github pages. 
