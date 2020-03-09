@@ -6,6 +6,7 @@ using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Logging;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -16,9 +17,10 @@ namespace EvilDICOM.Anonymization.Anonymizers
     /// </summary>
     public class ProfileAnonymizer : IAnonymizer
     {
+        ILogger _logger = EvilLogger.LoggerFactory.CreateLogger<ProfileAnonymizer>();
         public void Anonymize(DICOMObject d)
         {
-            EvilLogger.Instance.Log("Clearing DICOM profile...");
+            _logger.LogInformation("Clearing DICOM profile...");
             foreach (var el in GenerateProfile())
                 d.Replace(el);
         }

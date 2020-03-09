@@ -3,6 +3,7 @@
 using System.Net;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Logging;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -10,11 +11,12 @@ namespace EvilDICOM.Core.IO.Data
 {
     public class DataRestriction
     {
+        static ILogger _logger = EvilLogger.LoggerFactory.CreateLogger<DataRestriction>();
         public static string EnforceLengthRestriction(uint lengthLimit, string data)
         {
             if (data.Length > lengthLimit)
             {
-                EvilLogger.Instance.Log(
+                _logger.LogInformation(
                     "Not DICOM compliant. Attempted data input of {0} characters. Data size is limited to {1} characters. Read anyway.",
                     data.Length, lengthLimit);
                 return data;
@@ -56,7 +58,7 @@ namespace EvilDICOM.Core.IO.Data
         {
             var encoded = WebUtility.UrlEncode(originalValue.TrimEnd(' '));
             if (encoded != originalValue.TrimEnd(' '))
-                EvilLogger.Instance.Log(
+                _logger.LogInformation(
                     "Not URI compliant data string Original = {0}, URI Encoded = {1}",
                     originalValue, encoded);
             return encoded;
@@ -67,7 +69,7 @@ namespace EvilDICOM.Core.IO.Data
             if (value == 0 || double.IsNaN(value))
             {
                 var msg = string.Format("{0} must be real and non-zero. Current value is {1}", propertyName, value);
-                EvilLogger.Instance.Log(msg);
+                _logger.LogInformation(msg);
                 return false;
             }
             return true;
@@ -78,7 +80,7 @@ namespace EvilDICOM.Core.IO.Data
             if (value == 0)
             {
                 var msg = string.Format("{0} must be real and non-zero. Current value is {1}", propertyName, value);
-                EvilLogger.Instance.Log(msg);
+                _logger.LogInformation(msg);
                 return false;
             }
             return true;

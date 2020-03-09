@@ -7,6 +7,7 @@ using EvilDICOM.Network.PDUs.Items;
 using System;
 using System.Diagnostics;
 using System.Text;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -65,9 +66,9 @@ namespace EvilDICOM.Network
             Task.Factory.StartNew(() =>
             {
                 var asc = GenerateAssociation(client);
-                Logger.Log(asc.ToString());
+                Logger.LogInformation(asc.ToString());
                 asc.Listen();
-                Logger.Log("Closing association with {0}.", asc.IpAddress, asc.Port);
+                Logger.LogInformation("Closing association with {0}.", asc.IpAddress, asc.Port);
                 client.Close();
             });
         }
@@ -80,7 +81,7 @@ namespace EvilDICOM.Network
         private Association GenerateAssociation(TcpClient connection)
         {
             var asc = new Association(this, connection);
-            Logger.Log("Starting association with {0}.", asc.IpAddress, asc.Port);
+            Logger.LogInformation("Starting association with {0}.", asc.IpAddress, asc.Port);
             //Add supported presentation contexts
             foreach (var ab in SupportedAbstractSyntaxes)
                 asc.PresentationContexts.Add(new PresentationContext

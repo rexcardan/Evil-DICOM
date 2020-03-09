@@ -9,6 +9,7 @@ using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Extensions;
 using EvilDICOM.Network.Messaging;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -56,7 +57,7 @@ namespace EvilDICOM.Network.Services
             
             CEchoRequestReceivedAction = (cEchoReq, asc) =>
             {
-                asc.Logger.Log("<-- DIMSE" + cEchoReq.GetLogString());
+                asc.Logger.LogInformation("<-- DIMSE" + cEchoReq.GetLogString());
                 if (!asc.ServiceClass.SupportedAbstractSyntaxes.Contains(AbstractSyntax.VERIFICATION)) return;
                 asc.LastActive = DateTime.Now;
                 asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
@@ -67,7 +68,7 @@ namespace EvilDICOM.Network.Services
 
             CEchoResponseReceivedAction = (cEchoRp, asc) =>
             {
-                asc.Logger.Log("<-- DIMSE" + cEchoRp.GetLogString());
+                asc.Logger.LogInformation("<-- DIMSE" + cEchoRp.GetLogString());
                 asc.LastActive = DateTime.Now;
                 RaiseDIMSEResponseReceived(cEchoRp, asc);
                 AssociationMessenger.SendReleaseRequest(asc);
@@ -75,7 +76,7 @@ namespace EvilDICOM.Network.Services
 
             CGetRequestReceivedAction = (cGetReq, asc) =>
             {
-                asc.Logger.Log("<-- DIMSE" + cGetReq.GetLogString());
+                asc.Logger.LogInformation("<-- DIMSE" + cGetReq.GetLogString());
                 cGetReq.LogData(asc);
                 asc.LastActive = DateTime.Now;
                 asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
@@ -85,7 +86,7 @@ namespace EvilDICOM.Network.Services
 
             CGetResponseReceivedAction = (cGetRes, asc) =>
             {
-                asc.Logger.Log("<-- DIMSE" + cGetRes.GetLogString());
+                asc.Logger.LogInformation("<-- DIMSE" + cGetRes.GetLogString());
                 cGetRes.LogData(asc);
                 asc.LastActive = DateTime.Now;
                 RaiseDIMSEResponseReceived(cGetRes, asc);
@@ -95,7 +96,7 @@ namespace EvilDICOM.Network.Services
 
             CMoveRequestReceivedAction = (cMoveReq, asc) =>
             {
-                asc.Logger.Log("<-- DIMSE" + cMoveReq.GetLogString());
+                asc.Logger.LogInformation("<-- DIMSE" + cMoveReq.GetLogString());
                 cMoveReq.LogData(asc);
                 asc.LastActive = DateTime.Now;
                 asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN;
@@ -105,7 +106,7 @@ namespace EvilDICOM.Network.Services
 
             CMoveResponseReceivedAction = (cMoveRes, asc) =>
             {
-                asc.Logger.Log("<-- DIMSE" + cMoveRes.GetLogString());
+                asc.Logger.LogInformation("<-- DIMSE" + cMoveRes.GetLogString());
                 cMoveRes.LogData(asc);
                 asc.LastActive = DateTime.Now;
                 RaiseDIMSEResponseReceived(cMoveRes, asc);

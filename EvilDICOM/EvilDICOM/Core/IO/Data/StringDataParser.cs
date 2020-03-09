@@ -5,6 +5,7 @@ using System.Globalization;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Logging;
+using Microsoft.Extensions.Logging;
 using DateTime = System.DateTime;
 
 #endregion
@@ -13,6 +14,7 @@ namespace EvilDICOM.Core.IO.Data
 {
     public class StringDataParser
     {
+        static ILogger _logger = EvilLogger.LoggerFactory.CreateLogger<StringDataParser>();
         public static Age ParseAgeString(string data)
         {
             if (string.IsNullOrEmpty(data))
@@ -72,7 +74,7 @@ namespace EvilDICOM.Core.IO.Data
 
             if (!success)
             {
-                EvilLogger.Instance.Log("Date {0} does not match any known format", LogPriority.ERROR, data);
+                _logger.LogError($"Date {data} does not match any known format");
                 return null;
             }
 
@@ -126,7 +128,7 @@ namespace EvilDICOM.Core.IO.Data
                 out time);
 
             if (!success)
-                EvilLogger.Instance.Log("Time {0} does not match any known format", LogPriority.ERROR, data);
+                _logger.LogError($"Time {data} does not match any known format");
             return time;
         }
 

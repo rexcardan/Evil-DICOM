@@ -1,6 +1,7 @@
 ﻿#region
 
 using EvilDICOM.Network.DIMSE;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -17,13 +18,13 @@ namespace EvilDICOM.Network.Extensions
                 {
                     if (abd.Data == null)
                     {
-                        asc.Logger.Log("Expected data but no data present!");
+                        asc.Logger.LogInformation("Expected data but no data present!");
                     }
                     else
                     {
                         foreach (var el in abd.Data.Elements)
-                            asc.Logger.Log(el);
-                        asc.Logger.Log(""); //Space
+                            asc.Logger.LogInformation(el.ToString());
+                        asc.Logger.LogInformation(""); //Space
                     }
                 }
             }

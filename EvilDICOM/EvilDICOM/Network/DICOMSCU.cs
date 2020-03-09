@@ -16,6 +16,7 @@ using System.Linq;
 using System.Text;
 using Evil_DICOM.Network.Messaging;
 using static EvilDICOM.Network.Services.AssociationService;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -76,8 +77,8 @@ namespace EvilDICOM.Network
                 }
                 catch (Exception e)
                 {
-                    Logger.Log($"Could not connect to {ae.AeTitle} @{ae.IpAddress}:{ae.Port}", LogPriority.ERROR);
-                    Logger.Log($"{e.ToString()}", LogPriority.ERROR);
+                    Logger.LogError($"Could not connect to {ae.AeTitle} @{ae.IpAddress}:{ae.Port}");
+                    Logger.LogError($"{e.ToString()}");
                     return status;
                 }
             }
@@ -113,8 +114,8 @@ namespace EvilDICOM.Network
                 }
                 catch (Exception e)
                 {
-                    Logger.Log($"Could not connect to {ae.AeTitle} @{ae.IpAddress}:{ae.Port}", LogPriority.ERROR);
-                    Logger.Log($"{e.ToString()}", LogPriority.ERROR);
+                    Logger.LogError($"Could not connect to {ae.AeTitle} @{ae.IpAddress}:{ae.Port}");
+                    Logger.LogError($"{e.ToString()}");
                     return false;
                 }
             }

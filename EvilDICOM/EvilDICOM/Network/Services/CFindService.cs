@@ -7,6 +7,7 @@ using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Extensions;
 using EvilDICOM.Network.Messaging;
 using EvilDICOM.Network.Services.Interfaces;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,7 +36,7 @@ namespace EvilDICOM.Network.Services
 
         public void OnRequestRecieved(CFindRequest req, Association asc)
         {
-            asc.Logger.Log("<-- DIMSE" + req.GetLogString());
+            asc.Logger.LogInformation("<-- DIMSE" + req.GetLogString());
             req.LogData(asc);
             asc.LastActive = DateTime.Now;
             asc.IdleClock.Restart();
@@ -113,7 +114,7 @@ namespace EvilDICOM.Network.Services
 
         public void OnResponseRecieved(CFindResponse resp, Association asc)
         {
-            asc.Logger.Log("<-- DIMSE" + resp.GetLogString());
+            asc.Logger.LogInformation("<-- DIMSE" + resp.GetLogString());
             asc.LastActive = DateTime.Now;
             dms.RaiseDIMSEResponseReceived(resp, asc);
             resp.LogData(asc);

@@ -1,0 +1,192 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Basic Operations </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Basic Operations ">
+    <meta name="generator" content="docfx 2.50.0.0">
+    
+    <link rel="shortcut icon" href="favicon.ico">
+    <link rel="stylesheet" href="styles/docfx.vendor.css">
+    <link rel="stylesheet" href="styles/docfx.css">
+    <link rel="stylesheet" href="styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="index.html">
+                <img id="logo" class="svg" src="logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        <div class="article row grid">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="">
+              <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.DocFx/index.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              
+              <center><img src="images/evilDicomLogo.png" alt="Logo" title="Evil DICOM Logo"></center>
+
+<p>Welcome to the Evil DICOM C# library homepage. Don&#39;t let the name scare you. Evil DICOM is one of the easiest DICOM libraries in the world to use and implement into your .NET applications. You can forget about the byte order, endianiness, tag order, and all of those little details that can make DICOM seem..well evil. With Evil DICOM you will be able to access DICOM objects and elements in an intuitive object oriented way. This site has tutorials, API documentation, and even little projects that you can download to get you started.</p>
+<h2 id="basic-operations">Basic Operations</h2>
+<h3 id="reading-and-writing">Reading and Writing</h3>
+<pre><code class="lang-csharp">var dcm = DICOMObject.Read(@&quot;MyDICOMFile.dcm&quot;);
+
+//You can also read from bytes (eg. a stream)
+var dBytes = File.ReadAllBytes(@&quot;MyDICOMFile.dcm&quot;);
+var dcm = DICOMObject.Read(dBytes);
+
+    //***COOL CODE GOES HERE***
+    //Writing is equally easy
+
+dcm.Write(&quot;MyHackedDICOMFile.dcm&quot;);
+</code></pre><p>The dcm variable is now a DICOM object. It is in fact the outermost DICOM object from the file string that was input into the Read() method. The DICOMObject class is the main class of Evil DICOM.  Of course the DICOM object is really just a container for all of the DICOM elements that you will want to get and luckily for you, it is easy to do. Now that we did the useless task of reading a file and writing it back unchanged, let&#39;s look at some code we can insert in between.</p>
+<h3 id="working-with-elements">Working With Elements</h3>
+<h4 id="the-idicomelement-interface">The IDICOMElement Interface</h4>
+<p>Each DICOM element contains a little piece of data. The element (VR) type provides enough information for determining what type of data the element contains. All Evil DICOM elements implement the IDICOMElement interface. This interface looks like:</p>
+<pre><code class="lang-csharp">public interface IDICOMElement
+{
+   Tag Tag { get; set; }
+   DatType { get; }
+   dynamic DData { get; set; }
+   dynamic DData_ { get; set; }
+}
+</code></pre><p>The tag holds all of the identifying information for the element. The IDICOMElement interface also exposes the element&#39;s data, but it is not strongly typed. Because each element can hold different types of data. You can cast the data to a certain type if you know what it is supposed to be, otherwise I will show you some wicked ways of getting the strongly typed data you want.</p>
+<h3 id="generic-data-casting-elements">Generic Data Casting Elements</h3>
+<p>If you don&#39;t know the underlying VR type, but you know the type of data that it contains, you can always cast to the more generic AbstactElement where T is the type of data. As you can see below, there is an advantage to knowing the actual VR element type because it provides more intuitive methods of data access (eg. the &quot;FirstName&quot; and &quot;LastName&quot; properties of the PersonName class). You lose those on a generic cast.</p>
+<pre><code class="lang-csharp">//Generic casting
+var genericName = dcm.FindFirst(TagHelper.PATIENT_NAME) as AbstractElement&lt;string;
+var genValue = genericName.Data; // returns Flinstone^Fred
+</code></pre><h3 id="specific-casting-elements">Specific Casting Elements</h3>
+<p>Each VR (value representation) has its own class. If you know the underlying VR, you can cast to a VR class to get some handy strong typed variables.</p>
+<pre><code class="lang-csharp">//The patient&#39;s name IDICOMElement
+var pName = dcm.FindFirst(TagHelper.PATIENT_NAME);
+
+//The patient&#39;s name strong typed for better data access
+var strongName = dcm.FindFirst(TagHelper.PATIENT_NAME) as PersonName;
+var firstName = strongName.FirstName;
+var lastName = strongName.LastName;
+
+//You can manipulate this way also
+strongName.FirstName = &quot;Fred&quot;;
+strongName.LastName = &quot;Flinstone&quot;;
+</code></pre><h3 id="finding-dicom-elements">Finding DICOM Elements</h3>
+<p>The DICOMObject class (dcm variable below) provides two properties that give access to all contained elements. The Elements property gives access to the direct children of the DICOM object and the AllElements property returns all descendant elements including children of elements.</p>
+<pre><code class="lang-csharp">var directChildren = dcm.Elements;
+var allDescendants = dcm.AllElements
+</code></pre><p>Of course you might need to be more specific about the elements you want returned. There are several methods to help you get what you need.</p>
+<pre><code class="lang-csharp">//Finds the first instance of the Group Length element (0002,0000)
+var firstInstance = dcm.FindFirst(&quot;00020000&quot;);
+
+//Finds all instances of the Group Length element (0002,0000)
+var allInstances = dcm.FindAll(&quot;00020000&quot;);
+
+//Finds all Code Value (0008,0100) elements that are children of Procedure Code Sequence Elements (0008,1032)
+var specificTree = dcm.FindAll(new Tag[]{ TagHelper.PROCEDURE_CODE_SEQUENCE, TagHelper.CODE_VALUE });
+
+//Finds all elements that are of VR type PersonName
+var allPersonsNameElements = dcm.FindAll(Enums.VR.PersonName);
+</code></pre><h3 id="replacing-and-removing-elements">Replacing and Removing Elements</h3>
+<p>Sometimes, you may just want to remove or replace an element. That is easy as well:</p>
+<pre><code class="lang-csharp">var refName = new PersonName
+    {
+        FirstName = &quot;Fred&quot;,
+        LastName = &quot;Flinstone&quot;,
+        Tag = TagHelper.REFERRING_PHYSICIAN_NAME
+    };
+
+//Whatever the referring physicians real name was, it is now Fred Flinstone
+dcm.Replace(refName);
+
+//Even if it doesn&#39;t exist yet, add it
+dcm.ReplaceOrAdd(refName);
+
+//Remove elements by tag
+dcm.Remove(&quot;00020000&quot;);
+dcm.Remove(TagHelper.SEGMENT_NUMBER);
+</code></pre><h3 id="working-with-dicom-data">Working with DICOM Data</h3>
+<p>DICOM data containers need to be very flexible. They must be able to have single values, multiple values, and be null. Evil DICOM accommodates these needs with the DICOMData class. This class wraps a list of data of type T and provides easy access to the single data and multiple data. The following demonstrates how to grab a single (first) value and a multiple value property. It might seem weird to use an underscore at first, but when you are digging deep into DICOM, it helps to keep thinks terse but readable.</p>
+<pre><code class="lang-csharp">//Patient&#39;s age is a single string value
+var age = dcm.FindFirst(TagHelper.PATIENT_AGE) as AgeString;
+var actualAge = age.Data; // data of type T (in this case string)
+
+//Patient position holds double values
+var position = dcm.FindFirst(TagHelper.PATIENT_POSITION) as AbstractElement&lt;double&gt;;
+
+//Patient position contains an array of double values {X,Y,Z}
+//Notice the underscore ( _ ) AFTER Data
+//The underscore grabs the the multiplicity data (if there is more than one value)
+var xyz = position.Data_; //Data as List&lt;T&gt; (in this case List&lt;double&gt;)
+var x = xyz[0];
+var y = xyz[1];
+var z = xyz[2];
+</code></pre><h3 id="see-also">See Also</h3>
+<p><a class="xref" href="articles/structure.html">Evil DICOM Structure</a>
+<a class="xref" href="articles/selection.html">Evil DICOM Selection</a>
+<a class="xref" href="articles/helpers.html">Evil DICOM Helpers</a></p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="styles/docfx.js"></script>
+    <script type="text/javascript" src="styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

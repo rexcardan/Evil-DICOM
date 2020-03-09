@@ -12,7 +12,9 @@
     <PackageLicenseUrl>https://github.com/rexcardan/Evil-DICOM/blob/master/X11.LICENSE</PackageLicenseUrl>
     <RepositoryUrl>https://github.com/rexcardan/Evil-DICOM</RepositoryUrl>
     <PackageTags>dicom, medical-physics, radiology, radiation-oncology</PackageTags>
-    <Version>2.0.5.6</Version>
+    <Version>2.0.6.0</Version>
+    <PackageIcon>evilEye.png</PackageIcon>
+    <PackageIconUrl />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -29,9 +31,19 @@
 
   <ItemGroup>
     <None Remove="packages.config" />
+    <None Include="F:\OneDrive\Cardan.Design\Artwork\Logos\Evil Dicom\evilEye.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
   </ItemGroup>
 
   <ItemGroup>
     <Folder Include="Properties\" />
+    <Folder Include="RT\Data\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging" Version="3.1.2" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="3.1.2" />
   </ItemGroup>
 </Project>

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Logging;
 using EvilDICOM.Network.Services;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -22,7 +23,7 @@ namespace EvilDICOM.Network
             SupportedAbstractSyntaxes = new List<string>();
             DIMSEService = new DIMSEService();
             AssociationService = new AssociationService();
-            Logger = new EventLogger();
+            Logger = EvilLogger.LoggerFactory.CreateLogger<DICOMServiceClass>();
         }
 
         public AssociationService AssociationService { get; set; }
@@ -30,6 +31,6 @@ namespace EvilDICOM.Network
         public Entity ApplicationEntity { get; set; }
         public List<string> SupportedTransferSyntaxes { get; set; }
         public List<string> SupportedAbstractSyntaxes { get; set; }
-        public EventLogger Logger { get; set; }
+        public ILogger Logger { get; set; }
     }
 }

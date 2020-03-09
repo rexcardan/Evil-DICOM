@@ -5,6 +5,7 @@ using EvilDICOM.Network.Associations.PDUs;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.PDUs;
 using EvilDICOM.Network.PDUs.Items;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -16,7 +17,7 @@ namespace EvilDICOM.Network.Messaging
         {
             var stream = asc.Stream;
             var message = accept.Write();
-            asc.Logger.Log("-->" + accept);
+            asc.Logger.LogInformation("-->" + accept);
             stream.Write(message, 0, message.Length);
         }
 
@@ -27,7 +28,7 @@ namespace EvilDICOM.Network.Messaging
                 Result = RejectResult.REJECTED_PERMANENT,
                 Reason = (byte) RejectReason_SCU.NO_REASON_GIVEN
             };
-            asc.Logger.Log("-->" + rej);
+            asc.Logger.LogInformation("-->" + rej);
             var rejBytes = rej.Write();
             asc.Stream.Write(rejBytes, 0, rejBytes.Length);
         }
@@ -59,7 +60,7 @@ namespace EvilDICOM.Network.Messaging
                 });
             asc.PresentationContexts.AddRange(request.PresentationContexts);
             request.UserInfo = new UserInfo();
-            asc.Logger.Log("--> " + request);
+            asc.Logger.LogInformation("--> " + request);
             asc.SendMessage(request);
             asc.State = NetworkState.ASSOCIATION_ESTABLISHED_WAITING_ON_DATA;
         }
@@ -67,7 +68,7 @@ namespace EvilDICOM.Network.Messaging
         public static void SendReleaseRequest(Association asc)
         {
             var req = new ReleaseRequest();
-            asc.Logger.Log("-->" + req);
+            asc.Logger.LogInformation("-->" + req);
             var message = req.Write();
             if (asc.Stream.CanWrite)
             {
@@ -80,7 +81,7 @@ namespace EvilDICOM.Network.Messaging
         public static void SendReleaseResponse(Association asc)
         {
             var resp = new ReleaseResponse();
-            asc.Logger.Log("-->" + resp);
+            asc.Logger.LogInformation("-->" + resp);
             var message = resp.Write();
             if (asc.Stream.CanWrite)
             {

@@ -9,6 +9,7 @@ using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Extensions;
 using EvilDICOM.Network.Messaging;
+using Microsoft.Extensions.Logging;
 
 namespace EvilDICOM.Network.Services
 {
@@ -24,7 +25,7 @@ namespace EvilDICOM.Network.Services
 
         public void OnRequestReceived(NActionRequest req, Association asc)
         {
-            asc.Logger.Log("<-- DIMSE" + req.GetLogString());
+            asc.Logger.LogInformation("<-- DIMSE" + req.GetLogString());
             req.LogData(asc);
             asc.LastActive = DateTime.Now;
             var resp = new NActionResponse(req, Status.SUCCESS);
@@ -48,14 +49,14 @@ namespace EvilDICOM.Network.Services
         private async Task PerformStorageCommitment(NActionRequest req, Association asc)
         {
             asc.State = NetworkState.TRANSPORT_CONNECTION_OPEN; // Don't read stream...Wait for task to complete
-            asc.Logger.Log("Delaying 1.5 seconds to perform Storage Commitment Query...");
+            asc.Logger.LogInformation("Delaying 1.5 seconds to perform Storage Commitment Query...");
             await Task.Delay(1500);
             _dms.StorageCommitmentService.OnRequestReceived(req, asc);
         }
 
         public void OnResponseReceived(NActionResponse resp, Association asc)
         {
-            asc.Logger.Log("<-- DIMSE" + resp.GetLogString());
+            asc.Logger.LogInformation("<-- DIMSE" + resp.GetLogString());
             resp.LogData(asc);
             asc.LastActive = DateTime.Now;
             _dms.RaiseDIMSEResponseReceived(resp, asc);

@@ -3,6 +3,7 @@
 using System.Linq;
 using EvilDICOM.Core;
 using EvilDICOM.Core.Logging;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -13,9 +14,10 @@ namespace EvilDICOM.Anonymization.Anonymizers
     /// </summary>
     public class PrivateTagAnonymizer : IAnonymizer
     {
+        ILogger _logger = EvilLogger.LoggerFactory.CreateLogger<PrivateTagAnonymizer>();
         public void Anonymize(DICOMObject d)
         {
-            EvilLogger.Instance.Log("Removing private tags...", 0);
+            _logger.LogInformation("Removing private tags...", 0);
             foreach (var priv in d.AllElements.Where(e => e.Tag.IsPrivate()))
                 d.Remove(priv.Tag);
         }

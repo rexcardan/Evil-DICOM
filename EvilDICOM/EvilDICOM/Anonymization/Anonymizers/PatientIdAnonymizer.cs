@@ -2,6 +2,7 @@
 
 using EvilDICOM.Core;
 using EvilDICOM.Core.Logging;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -12,6 +13,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
     /// </summary>
     public class PatientIdAnonymizer : IAnonymizer
     {
+        ILogger _logger = EvilLogger.LoggerFactory.CreateLogger<PatientIdAnonymizer>();
         public PatientIdAnonymizer(string firstName, string lastName, string id)
         {
             FirstName = firstName;
@@ -36,7 +38,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
 
         public void Anonymize(DICOMObject d)
         {
-            EvilLogger.Instance.Log("Anonymizing patient identity...", 0);
+            _logger.LogInformation("Anonymizing patient identity...", 0);
             //PATIENTS NAME
             var name = DICOMForge.Patient​Name();
             name.FirstName = FirstName;

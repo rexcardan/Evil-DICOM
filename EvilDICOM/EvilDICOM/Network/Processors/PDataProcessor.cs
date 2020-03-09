@@ -10,6 +10,7 @@ using EvilDICOM.Network.DIMSE;
 using EvilDICOM.Network.Interfaces;
 using EvilDICOM.Network.PDUs;
 using EvilDICOM.Network.Readers;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -29,7 +30,7 @@ namespace EvilDICOM.Network.Processors
                 }
                 catch (Exception e)
                 {
-                    asc.Logger.Log(e.Message);
+                    asc.Logger.LogInformation(e.Message);
                     asc.RequestAbort();
                 }
             }
@@ -37,13 +38,13 @@ namespace EvilDICOM.Network.Processors
             {
                 return ProcessCommand(pdatas, asc);
             }
-            asc.Logger.Log("Free DICOM object not assciated with command:");
+            asc.Logger.LogInformation("Free DICOM object not assciated with command:");
             int id;
             var txSyntax = GetTransferSyntax(asc, pdatas, out id);
             var data = GetDataObject(pdatas, txSyntax);
-            asc.Logger.Log("<-- DICOM OBJ");
+            asc.Logger.LogInformation("<-- DICOM OBJ");
             foreach (var el in data.Elements)
-                asc.Logger.Log(el);
+                asc.Logger.LogInformation(el.ToString());
 
             return null;
         }
@@ -73,7 +74,7 @@ namespace EvilDICOM.Network.Processors
             AbstractDIMSE dimse;
             var success = DIMSEReader.TryReadDIMSE(dcm, out dimse);
             if (!success)
-                asc.Logger.Log("DIMSE could not be read!");
+                asc.Logger.LogInformation("DIMSE could not be read!");
             if (dimse.HasData)
             {
                 var dr = asc.Reader;

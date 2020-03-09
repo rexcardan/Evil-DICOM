@@ -5,6 +5,7 @@ using EvilDICOM.Core.Dictionaries;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Logging;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -15,6 +16,7 @@ namespace EvilDICOM.Core.Element
     /// </summary>
     public class Unknown : AbstractElement<byte>
     {
+        ILogger _logger = EvilLogger.LoggerFactory.CreateLogger<Unknown>();
         public Unknown()
         {
             VR = VR.Unknown;
@@ -49,7 +51,7 @@ namespace EvilDICOM.Core.Element
             }
             catch (Exception e)
             {
-                EvilLogger.Instance.Log("Couldn't cast unknown type as type {0} for {1}", LogPriority.ERROR, typeof(T),
+                _logger.LogInformation("Couldn't cast unknown type as type {0} for {1}", LogPriority.ERROR, typeof(T),
                     Tag);
                 outValue = default(T);
                 return false;

@@ -8,6 +8,7 @@ using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Extensions;
 using EvilDICOM.Network.Messaging;
 using EvilDICOM.Network.PDUs;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -31,14 +32,14 @@ namespace EvilDICOM.Network.Services
         {
             AbortReceivedAction = (abort, asc) =>
             {
-                asc.Logger.Log("<-- " + abort);
+                asc.Logger.LogInformation("<-- " + abort);
                 RaiseAbortRequestReceived(abort, asc);
                 asc.Release();
             };
 
             AssociationRequestReceivedAction = (req, asc) =>
             {
-                asc.Logger.Log("<-- " + req);
+                asc.Logger.LogInformation("<-- " + req);
                 RaiseAssociationRequestReceived(req, asc);
                 var ctxs = asc.GetResponseContexts(req.PresentationContexts);
                 if (ctxs.Any())
@@ -60,7 +61,7 @@ namespace EvilDICOM.Network.Services
 
             AssociationAcceptanceReceivedAction = (acc, asc) =>
             {
-                asc.Logger.Log("<-- " + acc);
+                asc.Logger.LogInformation("<-- " + acc);
                 RaiseAssociationAcceptanceReceived(acc, asc);
                 asc.SetFinalContexts(acc);
                 if (asc.PresentationContexts.Any())
@@ -76,14 +77,14 @@ namespace EvilDICOM.Network.Services
 
             AssociationRejectAction = (rej, asc) =>
             {
-                asc.Logger.Log("<-- " + rej);
+                asc.Logger.LogInformation("<-- " + rej);
                 RaiseAssociationRejectionReceived(rej, asc);
                 asc.Release();
             };
 
             ReleaseRequestReceivedAction = (rel, asc) =>
             {
-                asc.Logger.Log("<-- " + rel);
+                asc.Logger.LogInformation("<-- " + rel);
                 RaiseReleaseRequestReceived(rel, asc);
                 AssociationMessenger.SendReleaseResponse(asc);
                 asc.Release();
@@ -91,7 +92,7 @@ namespace EvilDICOM.Network.Services
 
             ReleaseResponseAction = (rel, asc) =>
             {
-                asc.Logger.Log("<-- " + rel);
+                asc.Logger.LogInformation("<-- " + rel);
                 RaiseReleaseResponseReceived(rel, asc);
                 asc.Release();
             };

@@ -1,6 +1,7 @@
 ﻿#region
 
 using EvilDICOM.Core.Logging;
+using Microsoft.Extensions.Logging;
 using System.Net;
 using System.Net.Sockets;
 
@@ -10,7 +11,7 @@ namespace EvilDICOM.Network.Helpers
 {
     public class IpHelper
     {
-        public static EventLogger Logger = new EventLogger();
+        public static ILogger Logger = EvilLogger.LoggerFactory.CreateLogger<IpHelper>();
 
         public static string LocalIPAddress()
         {
@@ -31,7 +32,7 @@ namespace EvilDICOM.Network.Helpers
             IPAddress ipAddress;
             if (!IPAddress.TryParse(inputIpAddress, out ipAddress))
             {
-                Logger.Log($"Could not parse IP address {inputIpAddress}");
+                Logger.LogInformation($"Could not parse IP address {inputIpAddress}");
                 return (null, false);
             }
             IPEndPoint ipLocalEndPoint = new IPEndPoint(ipAddress, port);

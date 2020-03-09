@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using EvilDICOM.Network.PDUs;
 using EvilDICOM.Network.PDUs.Items;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -47,7 +48,7 @@ namespace EvilDICOM.Network.Extensions
                     else
                     {
                         //Transfer syntax not supported
-                        asc.Logger.Log("Transfer syntax(es) not supported : {0}",
+                        asc.Logger.LogInformation("Transfer syntax(es) not supported : {0}",
                             string.Join(",", ctx.TransferSyntaxes));
                         ctx.Reason = Enums.PresentationContextReason.TRANSFER_SYNAXES_NOT_SUPPORTED;
                         response.Add(ctx);
@@ -56,7 +57,7 @@ namespace EvilDICOM.Network.Extensions
                 else
                 {
                     //Abstract Syntax not supported
-                    asc.Logger.Log("Abstract syntax not supported : {0}", string.Join(",", ctx.TransferSyntaxes));
+                    asc.Logger.LogInformation("Abstract syntax not supported : {0}", string.Join(",", ctx.TransferSyntaxes));
                     ctx.Reason = Enums.PresentationContextReason.ABSTRACT_SYNAX_NOT_SUPPORTED;
                     var syntax = ctx.TransferSyntaxes.First();
                     ctx.TransferSyntaxes.Clear();

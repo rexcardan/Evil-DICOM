@@ -11,6 +11,7 @@ using EvilDICOM.Network.Enums;
 using EvilDICOM.Network.Extensions;
 using EvilDICOM.Network.PDUs;
 using EvilDICOM.Network.PDUs.Items;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -28,11 +29,11 @@ namespace EvilDICOM.Network.Messaging
             else if (!asc.IsClientConnected)
             {
                 //Connection lost
-                asc.Logger.Log("TCP connection has been lost. Ending association");     
+                asc.Logger.LogInformation("TCP connection has been lost. Ending association");     
             }
             else
             {
-                asc.Logger.Log("--> DIMSE" + dimse.GetLogString());
+                asc.Logger.LogInformation("--> DIMSE" + dimse.GetLogString());
                 dimse.LogData(asc);
                 pContext = pContext ?? asc.PresentationContexts.First(a => a.AbstractSyntax == dimse.AffectedSOPClassUID);
                 var maxPDU = asc.UserInfo.MaxPDULength;

@@ -3,6 +3,7 @@
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Logging;
+using Microsoft.Extensions.Logging;
 using System;
 
 #endregion
@@ -11,6 +12,7 @@ namespace EvilDICOM.Core.IO.Writing
 {
     public class DICOMObjectWriter
     {
+        static ILogger _logger = EvilLogger.LoggerFactory.CreateLogger<DICOMObjectWriter>();
         public static bool IsFileMetaGroup(IDICOMElement el)
         {
             return el.Tag.Group == "0002";
@@ -32,14 +34,14 @@ namespace EvilDICOM.Core.IO.Writing
                 }
                 else
                 {
-                    EvilLogger.Instance.Log($"Writing element ${el.Tag.CompleteID}", priority: Enums.LogPriority.NORMAL);
+                    _logger.LogInformation($"Writing element ${el.Tag.CompleteID}");
                     try
                     {
                         DICOMElementWriter.Write(dw, currentSettings, el);
                     }
                     catch (Exception e)
                     {
-                        EvilLogger.Instance.Log($"Error writing :  ${el.Tag.CompleteID}\n{e}", priority: Enums.LogPriority.ERROR);
+                        _logger.LogError($"Error writing :  ${el.Tag.CompleteID}\n{e}");
                         throw e;
                     }
                 }

@@ -2,6 +2,7 @@
 using EvilDICOM.Core.Extensions;
 using EvilDICOM.Core.Logging;
 using EvilDICOM.Network.DIMSE;
+using Microsoft.Extensions.Logging;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -21,7 +22,7 @@ namespace EvilDICOM.Network.SCUOps
             this.callingEntity = callingEntity;
         }
 
-        public EventLogger Logger { get { return _scu.Logger; } }
+        public ILogger Logger { get { return _scu.Logger; } }
 
         /// <summary>
         /// Emits a CStore operation to an entity which moves an image to the specified entity

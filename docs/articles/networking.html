@@ -1,0 +1,152 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Evil DICOM Networking </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Evil DICOM Networking ">
+    <meta name="generator" content="docfx 2.50.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="networking.md">
+              <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.DocFx/articles/networking.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h2 id="entities">Entities</h2>
+              
+<p>In DICOM networking, the networking objects that communicate are called Entities, or Application Entities. An entity has a label called an AETitle, a port, and an IP address where it can be reached. To contruct this information in Evil DICOM, use:</p>
+<pre><code class="lang-csharp">var myEntity = new Entity(&quot;AETitle&quot;,&quot;192.168.1.1&quot;,104);
+
+//Create an entity on the localhost
+var daemon = Entity.CreateLocal(&quot;Daemon&quot;, 104);
+</code></pre><h2 id="dicom-service-classes">DICOM Service Classes</h2>
+<p>DICOM services for sending, recieving and querying are divided into two main classes : DICOM Service User (DICOMSCU) and DICOM Service Provider (DICOMSCP). These objects can send and recieve specially encoded messages over a network to transmit information in a DICOM like format called DIMSE. </p>
+<h3 id="dicomscp">DICOMSCP</h3>
+<p>The DICOM SCP (provider) is the object that typically will hold information and will send it on request. You can query it typically, and you can ask to download DICOM objects from it. You can often also send DICOM objects to store to it. To construct a DICOM SCP, you use:</p>
+<pre><code class="lang-csharp">var myEntity = new Entity(&quot;AETitle&quot;,&quot;192.168.1.1&quot;,104);
+var scp = new DICOMSCP(myEntity);
+//Asynchronously run - Don&#39;t block thread
+scp.ListenForIncomingAssociations(keepListenerRunning:true);
+</code></pre><h3 id="dicomscu">DICOMSCU</h3>
+<p>The DICOM SCU (user) is the client object which directs DICOM traffic. It calls the DICOMSCP and queries it, pulls from it, or pushes to it. It typically has a single focus while the provider is potentially doing multiple things simultaneously.</p>
+<pre><code class="lang-csharp">var en1 = Entity.CreateLocal(&quot;EvilDICOM&quot;, 666);
+var scu = new DICOMSCU(en1);
+</code></pre><h3 id="messaging-101">Messaging 101</h3>
+<p>There are lots of message types you can do, but let&#39;s start with the basics. Typically you will query an SCP (daemon) and get all the information you need to actually pull files down, or move them somewhere (to another SCP for example). The next example shows how to do this with a class called the QueryBuilder. It starts with the highest level of querying (the patient) and works its way down to the individual images. The typical order of query descension is PATIENT &gt;&gt; STUDY &gt;&gt; SERIES &gt;&gt; IMAGE. You can get a list of all the images for a given patient like this:</p>
+<pre><code class="lang-csharp">//The SCP we can Query (we&#39;ll just store this info...not create our own SCP)
+var daemon = Entity.CreateLocal(&quot;Daemon&quot;, 104);
+
+//The SCU that we will use in the QueryBuilder
+var en1 = Entity.CreateLocal(&quot;EvilDICOM&quot;, 666);
+var scu = new DICOMSCU(en1);
+
+//Construct the QueryBuilder (us, them)
+var qb = new QueryBuilder(scu, daemon);
+
+//Get all studies
+var studies = qb.GetStudyUids(&quot;PatientId&quot;);
+
+//Filter studies if you want
+//Next pass in to get all series from those studies
+var series = qb.GetSeriesUids(studies);
+
+//Filter series if you want
+//Next get all images from those remaining series
+var images = qb.GetImageUids(series);
+</code></pre><p>The images are not the actual DICOM images, but information that contains the SOP instance UID of the image, series, and study. That&#39;s all you need to do something useful!</p>
+<h2 id="c-move">C-Move</h2>
+<p>Now what? Let&#39;s take our image information and instruct the SCP to move it to our own SCP. Now typically, the foriegn SCP must already know where your SCP is. There is typically a &quot;whitelist&quot; of known servers. Let&#39;s assume our entity &quot;EvilDICOMCatcher&quot; at port 667 is listed. Then we can tell SCP to push via a C-MOVE operation like:</p>
+<pre><code class="lang-csharp">ushort msg = 1;
+
+foreach (var im in images)
+{
+   //This will only return after the image was successfully transferred or there was an error.
+   var resp = scu.SendCMoveImage(daemon, im, &quot;EvilDICOMCatcher&quot;, ref msg);
+   Console.WriteLine(&quot;CMoveResp recieved {0} {1}&quot;, resp.MessageIDBeingResponsedTo, resp.Status);
+}    
+</code></pre><p>That is probably enough to make you dangerous. The networking API is not fully developed but contains many pieces you will need to perform DICOM and DIMSE tasks.</p>
+
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

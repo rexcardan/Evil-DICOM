@@ -18,6 +18,7 @@ using EvilDICOM.Network.Messaging;
 using EvilDICOM.Network.PDUs.Items;
 using EvilDICOM.Network.Processors;
 using EvilDICOM.Network.Readers;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -73,7 +74,7 @@ namespace EvilDICOM.Network
         public PDUProcessor PDUProcessor { get; set; }
         public PDataProcessor PDataProcessor { get; set; }
 
-        public EventLogger Logger
+        public ILogger Logger
         {
             get { return ServiceClass.Logger; }
         }
@@ -87,7 +88,7 @@ namespace EvilDICOM.Network
             get { return state; }
             set
             {
-                Logger.Log($"|-----{value}-----|");
+                Logger.LogInformation($"|-----{value}-----|");
                 state = value;
             }
         }
@@ -103,13 +104,13 @@ namespace EvilDICOM.Network
             {
                 if (_abortRequested)
                 {
-                    Logger.Log("Abort requested...aborting.");
+                    Logger.LogInformation("Abort requested...aborting.");
                     HandleAbort();
                     break;
                 }
                 if (_cancelRequested)
                 {
-                    Logger.Log("Cancellation requested...cancelling.");
+                    Logger.LogInformation("Cancellation requested...cancelling.");
                     HandleCancel();
                 }
 
@@ -129,7 +130,7 @@ namespace EvilDICOM.Network
                         }
                         catch (IOException e)
                         {
-                            Logger.Log($"Network connection was lost. {e.Message}", LogPriority.ERROR);
+                            Logger.LogError($"Network connection was lost. {e.Message}");
                             break;//Connection was lost
                         }
                     }
@@ -148,12 +149,12 @@ namespace EvilDICOM.Network
 
                 if (!IsClientConnected)
                 {
-                    Logger.Log("Connection closed - ending association."); break;
+                    Logger.LogInformation("Connection closed - ending association."); break;
                 }
             }
             if (State != NetworkState.CLOSING_ASSOCIATION)
             {
-                Logger.Log("Network timeout - closing association.");
+                Logger.LogInformation("Network timeout - closing association.");
             }
         }
 
@@ -187,7 +188,7 @@ namespace EvilDICOM.Network
                  }
                  catch (Exception e)
                  {
-                     Logger.Log(e.Message);
+                     Logger.LogError(e.Message);
                  }
              }).Wait(TimeSpan.FromMilliseconds(msToWait));
             return message;

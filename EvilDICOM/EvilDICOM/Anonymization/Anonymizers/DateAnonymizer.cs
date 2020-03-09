@@ -8,6 +8,7 @@ using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Logging;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -15,6 +16,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
 {
     public class DateAnonymizer : IAnonymizer
     {
+        ILogger _logger = EvilLogger.LoggerFactory.CreateLogger<DateAnonymizer>();
         private readonly DateSettings dateSettings;
 
         public DateAnonymizer(DateSettings dateSettings)
@@ -24,7 +26,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
 
         public void Anonymize(DICOMObject d)
         {
-            EvilLogger.Instance.Log("Anonymizing dates...");
+            _logger.LogInformation("Anonymizing dates...");
 
             if (dateSettings == DateSettings.KEEP_ALL_DATES)
             {

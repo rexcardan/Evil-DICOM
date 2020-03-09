@@ -7,6 +7,7 @@ using EvilDICOM.Core;
 using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Logging;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -17,6 +18,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
     /// </summary>
     public class StudyIdAnonymizer : IAnonymizer
     {
+        ILogger _logger = EvilLogger.LoggerFactory.CreateLogger<StudyIdAnonymizer>();
         public StudyIdAnonymizer()
         {
             Studies = new List<DICOMStudy>();
@@ -37,7 +39,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
 
         public void Anonymize(DICOMObject d)
         {
-            EvilLogger.Instance.Log("Removing study IDs and descriptions...");
+            _logger.LogInformation("Removing study IDs and descriptions...");
             var sID = d.FindFirst(TagHelper.Study​ID) as ShortString;
             if (sID != null)
                 sID.Data = StudyDictionary[sID.Data];

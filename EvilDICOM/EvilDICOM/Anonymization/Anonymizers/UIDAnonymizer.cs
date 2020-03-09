@@ -7,6 +7,7 @@ using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Logging;
+using Microsoft.Extensions.Logging;
 
 #endregion
 
@@ -17,6 +18,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
     /// </summary>
     public class UIDAnonymizer : IAnonymizer
     {
+        ILogger _logger = EvilLogger.LoggerFactory.CreateLogger<UIDAnonymizer>();
         private readonly Dictionary<string, string> _uidMap = new Dictionary<string, string>();
 
         public string Name
@@ -27,7 +29,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
 
         public void Anonymize(DICOMObject d)
         {
-            EvilLogger.Instance.Log("Remapping UIDs...");
+            _logger.LogInformation("Remapping UIDs...");
             var uids = d.FindAll(VR.UniqueIdentifier).ToList();
             foreach (var el in uids)
             {

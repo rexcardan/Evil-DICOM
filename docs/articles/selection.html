@@ -1,0 +1,162 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Evil DICOM Selection </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Evil DICOM Selection ">
+    <meta name="generator" content="docfx 2.50.0.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.png" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="selection.md">
+              <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.DocFx/articles/selection.md/#L1" class="btn btn-primary pull-right mobile-hide">Improve this Doc</a>
+              <h2 id="easy-dicom-selection">Easy DICOM Selection</h2>
+              
+<p>The DICOMSelector used to be a premium feature of the library and now it is included for free. It is all about convenience. Selecting and manipulating DICOM elements is easy with Evil DICOM, but it is even EASIER when you are using the selector. The selector gives you <em>strongly</em> typed access to all elements allowing you to do complex hierarchical descension by dot notation. You never have to manually cast the element with this module.</p>
+<h3 id="grabbing-a-selector-object">Grabbing A Selector Object</h3>
+<p>To create a DICOM selector is easy!</p>
+<pre><code class="lang-csharp">var dcm = DICOMFileReader.Read(&quot;structureSet.dcm&quot;);
+var sel = dcm.GetSelector();
+</code></pre><h3 id="dot-descension">Dot Descension</h3>
+<p>The following example shows the simple dot descension into an element of the DICOM object. The Selector is just a wrapper around the object that allows for quick access to the elements.</p>
+<pre><code class="lang-csharp">//Select a single element and get data
+var dcm = DICOMFileReader.Read(&quot;structureSet.dcm&quot;);
+var sel = new DICOMSelector(dcm);
+
+//The default way
+var defaultModality = (dcm.FindFirst(TagHelper.MODALITY) as CodeString).Data;
+
+//The SELECTION module way
+var modality = sel.Modality.Data; //RTSTRUCT
+
+Assert.AreEqual(modality, &quot;RTSTRUCT&quot;);
+</code></pre><h3 id="selecting-mulitple-elements">Selecting Mulitple Elements</h3>
+<p>Selecting multiple elements of the same type is really easy. Just add an underscore (_) after the name of the element.</p>
+<pre><code class="lang-csharp">var dcm = DICOMFileReader.Read(&quot;structureSet.dcm&quot;);
+var sel = new DICOMSelector(dcm);
+
+//The default way
+var defaultRoiNumbers = dcm.FindAll(new Tag[] { TagHelper.STRUCTURE_SET_ROISEQUENCE, TagHelper.ROINUMBER })
+.Select(rn =&gt; rn as IntegerString).ToList();
+
+//THE SELECTION module way
+var roiNumbers = sel.StructureSetROISequence
+                .Select(s =&gt; s.ROINumber_);
+
+foreach (var roi in roiNumbers)
+{
+    Console.WriteLine(roi.Data);
+}
+Assert.AreEqual(roiNumbers.Count, 4);
+</code></pre><h3 id="deep-descension">Deep Descension</h3>
+<p>The real payoff of using the module comes when you need to dig deep. The following show just how easy it is to drill deep into the DICOM object using the Selection object</p>
+<pre><code class="lang-csharp">var dcm = DICOMObject.Read(&quot;structureSet.dcm&quot;);
+var selector = dcm.GetSelector();
+var numCtrPoints = selector.ROIContourSequence
+                .Select(s =&gt; s.ContourSequence_[1])
+                .Select(s =&gt; s.NumberOfContourPoints_[4]);
+Assert.AreEqual(numCtrPoints.Data, 186);
+</code></pre><p><img src="../images/selection.png" alt="Object Illustration" title="Selecting Deep Descension"></p>
+<h3 id="quick-manipulation">Quick Manipulation</h3>
+<p>It is also very easy to quickly modify DICOM data (for anonymization for example).</p>
+<pre><code class="lang-csharp">var dcm = DICOMFileReader.Read(Resources.structure);
+var sel = new DICOMSelector(dcm);
+
+//Modify some data deep in the DICOM object
+selector.ROIContourSequence
+        .Select(s =&gt; s.ContourSequence_[1])
+        .Select(s =&gt; s.NumberOfContourPoints_[4]).Data = 500;
+DICOMFileWriter.WriteLittleEndian(&quot;structureMod.dcm&quot;, sel.ToDICOMObject());
+dcm = DICOMFileReader.Read(&quot;structureMod.dcm&quot;);
+selector = new DICOMSelector(dcm);
+var numCtrPoints = selector.ROIContourSequence
+                .Select(s =&gt; s.ContourSequence_[1])
+                .Select(s =&gt; s.NumberOfContourPoints_[4]);
+Assert.AreEqual(numCtrPoints.Data, 500);
+</code></pre>
+            </article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+            <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+            </nav>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            
+            <span>Copyright © 2015-2016 Microsoft<br>Generated by <strong>DocFX</strong></span>
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+    <script>hljs.initHighlightingOnLoad();</script>
+  </body>
+</html>

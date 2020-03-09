@@ -1,31 +1,26 @@
-﻿namespace EvilDICOM.Core.Logging
+﻿using Microsoft.Extensions.Logging;
+
+namespace EvilDICOM.Core.Logging
 {
     /// <summary>
     ///     The singleton instance of a logging system for the core Evil DICOM operations. Can subscribe, to
     ///     see this stream
     /// </summary>
-    public sealed class EvilLogger : EventLogger
+    public sealed class EvilLogger
     {
-        private static volatile EvilLogger instance;
-        private static readonly object locker = new object();
+        private static ILoggerFactory _Factory = null;
 
-        private EvilLogger()
-        {
-        }
-
-        public static EvilLogger Instance
+        public static ILoggerFactory LoggerFactory
         {
             get
             {
-                if (instance == null)
-                    lock (locker)
-                    {
-                        if (instance == null)
-                            instance = new EvilLogger();
-                    }
-
-                return instance;
+                if (_Factory == null)
+                {
+                    _Factory = new LoggerFactory();
+                }
+                return _Factory;
             }
+            set { _Factory = value; }
         }
     }
 }
