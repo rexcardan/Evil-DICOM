@@ -29,6 +29,8 @@ http://rexcardan.github.io/Evil-DICOM/
 |	Examples | [Example Operations](http://rexcardan.github.io/Evil-DICOM/articles/operations.html) |
 |	Online API | [API Documentation](http://rexcardan.github.io/Evil-DICOM/api/index.html) |
 
+-----------------------
+
 ### Evil-DICOM used and featured in publications
 
 1. Mayo, C., et al., Demonstration of a software design and statistical analysis methodology with application to patient outcomes data sets. Medical physics, 2013. 40(11): p. 111718.
