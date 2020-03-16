@@ -3,7 +3,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using EvilDICOM.Core.Element;
-using EvilDICOM.Core.Wapping;
 
 #endregion
 
