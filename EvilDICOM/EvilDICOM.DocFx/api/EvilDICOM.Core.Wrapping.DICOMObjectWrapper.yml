@@ -1,35 +1,35 @@
 ### YamlMime:ManagedReference
 items:
-- uid: EvilDICOM.Core.DICOMObjectWrapper
-  commentId: T:EvilDICOM.Core.DICOMObjectWrapper
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper
+  commentId: T:EvilDICOM.Core.Wrapping.DICOMObjectWrapper
   id: DICOMObjectWrapper
-  parent: EvilDICOM.Core
+  parent: EvilDICOM.Core.Wrapping
   children:
-  - EvilDICOM.Core.DICOMObjectWrapper.#ctor
-  - EvilDICOM.Core.DICOMObjectWrapper.#ctor(EvilDICOM.Core.DICOMObject)
-  - EvilDICOM.Core.DICOMObjectWrapper._dcm
-  - EvilDICOM.Core.DICOMObjectWrapper.GetValue``1(EvilDICOM.Core.Element.Tag)
-  - EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)
-  - EvilDICOM.Core.DICOMObjectWrapper.SetValue``1(EvilDICOM.Core.Element.Tag,``0)
-  - EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
+  - EvilDICOM.Core.Wrapping.DICOMObjectWrapper.#ctor
+  - EvilDICOM.Core.Wrapping.DICOMObjectWrapper.#ctor(EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.Core.Wrapping.DICOMObjectWrapper.DCM
+  - EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetValue``1(EvilDICOM.Core.Element.Tag)
+  - EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)
+  - EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetValue``1(EvilDICOM.Core.Element.Tag,``0)
+  - EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetWrappedSequence``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
   langs:
   - csharp
   - vb
   name: DICOMObjectWrapper
   nameWithType: DICOMObjectWrapper
-  fullName: EvilDICOM.Core.DICOMObjectWrapper
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper
   type: Class
   source:
     remote:
-      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: DICOMObjectWrapper
-    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
-    startLine: 10
+    path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
+    startLine: 11
   assemblies:
   - EvilDICOM
-  namespace: EvilDICOM.Core
+  namespace: EvilDICOM.Core.Wrapping
   syntax:
     content: public abstract class DICOMObjectWrapper
     content.vb: Public MustInherit Class DICOMObjectWrapper
@@ -51,122 +51,126 @@ items:
   - Public
   - MustInherit
   - Class
-- uid: EvilDICOM.Core.DICOMObjectWrapper._dcm
-  commentId: F:EvilDICOM.Core.DICOMObjectWrapper._dcm
-  id: _dcm
-  parent: EvilDICOM.Core.DICOMObjectWrapper
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.DCM
+  commentId: P:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.DCM
+  id: DCM
+  parent: EvilDICOM.Core.Wrapping.DICOMObjectWrapper
   langs:
   - csharp
   - vb
-  name: _dcm
-  nameWithType: DICOMObjectWrapper._dcm
-  fullName: EvilDICOM.Core.DICOMObjectWrapper._dcm
-  type: Field
+  name: DCM
+  nameWithType: DICOMObjectWrapper.DCM
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.DCM
+  type: Property
   source:
     remote:
-      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
       repo: https://github.com/rexcardan/Evil-DICOM.git
-    id: _dcm
-    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
-    startLine: 12
+    id: DCM
+    path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
+    startLine: 13
   assemblies:
   - EvilDICOM
-  namespace: EvilDICOM.Core
+  namespace: EvilDICOM.Core.Wrapping
   syntax:
-    content: protected DICOMObject _dcm
+    content: public DICOMObject DCM { get; set; }
+    parameters: []
     return:
       type: EvilDICOM.Core.DICOMObject
-    content.vb: Protected _dcm As DICOMObject
+    content.vb: Public Property DCM As DICOMObject
+  overload: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.DCM*
   modifiers.csharp:
-  - protected
+  - public
+  - get
+  - set
   modifiers.vb:
-  - Protected
-- uid: EvilDICOM.Core.DICOMObjectWrapper.#ctor
-  commentId: M:EvilDICOM.Core.DICOMObjectWrapper.#ctor
+  - Public
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.#ctor
+  commentId: M:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.#ctor
   id: '#ctor'
-  parent: EvilDICOM.Core.DICOMObjectWrapper
+  parent: EvilDICOM.Core.Wrapping.DICOMObjectWrapper
   langs:
   - csharp
   - vb
   name: DICOMObjectWrapper()
   nameWithType: DICOMObjectWrapper.DICOMObjectWrapper()
-  fullName: EvilDICOM.Core.DICOMObjectWrapper.DICOMObjectWrapper()
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.DICOMObjectWrapper()
   type: Constructor
   source:
     remote:
-      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: .ctor
-    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
-    startLine: 14
+    path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
+    startLine: 15
   assemblies:
   - EvilDICOM
-  namespace: EvilDICOM.Core
+  namespace: EvilDICOM.Core.Wrapping
   syntax:
     content: public DICOMObjectWrapper()
     content.vb: Public Sub New
-  overload: EvilDICOM.Core.DICOMObjectWrapper.#ctor*
+  overload: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: EvilDICOM.Core.DICOMObjectWrapper.#ctor(EvilDICOM.Core.DICOMObject)
-  commentId: M:EvilDICOM.Core.DICOMObjectWrapper.#ctor(EvilDICOM.Core.DICOMObject)
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.#ctor(EvilDICOM.Core.DICOMObject)
+  commentId: M:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.#ctor(EvilDICOM.Core.DICOMObject)
   id: '#ctor(EvilDICOM.Core.DICOMObject)'
-  parent: EvilDICOM.Core.DICOMObjectWrapper
+  parent: EvilDICOM.Core.Wrapping.DICOMObjectWrapper
   langs:
   - csharp
   - vb
   name: DICOMObjectWrapper(DICOMObject)
   nameWithType: DICOMObjectWrapper.DICOMObjectWrapper(DICOMObject)
-  fullName: EvilDICOM.Core.DICOMObjectWrapper.DICOMObjectWrapper(EvilDICOM.Core.DICOMObject)
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.DICOMObjectWrapper(EvilDICOM.Core.DICOMObject)
   type: Constructor
   source:
     remote:
-      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: .ctor
-    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
-    startLine: 18
+    path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
+    startLine: 19
   assemblies:
   - EvilDICOM
-  namespace: EvilDICOM.Core
+  namespace: EvilDICOM.Core.Wrapping
   syntax:
     content: public DICOMObjectWrapper(DICOMObject dicom)
     parameters:
     - id: dicom
       type: EvilDICOM.Core.DICOMObject
     content.vb: Public Sub New(dicom As DICOMObject)
-  overload: EvilDICOM.Core.DICOMObjectWrapper.#ctor*
+  overload: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.#ctor*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: EvilDICOM.Core.DICOMObjectWrapper.GetValue``1(EvilDICOM.Core.Element.Tag)
-  commentId: M:EvilDICOM.Core.DICOMObjectWrapper.GetValue``1(EvilDICOM.Core.Element.Tag)
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetValue``1(EvilDICOM.Core.Element.Tag)
+  commentId: M:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetValue``1(EvilDICOM.Core.Element.Tag)
   id: GetValue``1(EvilDICOM.Core.Element.Tag)
-  parent: EvilDICOM.Core.DICOMObjectWrapper
+  parent: EvilDICOM.Core.Wrapping.DICOMObjectWrapper
   langs:
   - csharp
   - vb
   name: GetValue<T>(Tag)
   nameWithType: DICOMObjectWrapper.GetValue<T>(Tag)
-  fullName: EvilDICOM.Core.DICOMObjectWrapper.GetValue<T>(EvilDICOM.Core.Element.Tag)
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetValue<T>(EvilDICOM.Core.Element.Tag)
   type: Method
   source:
     remote:
-      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: GetValue
-    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
-    startLine: 23
+    path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
+    startLine: 24
   assemblies:
   - EvilDICOM
-  namespace: EvilDICOM.Core
+  namespace: EvilDICOM.Core.Wrapping
   syntax:
     content: public DICOMData<T> GetValue<T>(Tag tag)
     parameters:
@@ -177,36 +181,36 @@ items:
     return:
       type: EvilDICOM.Core.DICOMData{{T}}
     content.vb: Public Function GetValue(Of T)(tag As Tag) As DICOMData(Of T)
-  overload: EvilDICOM.Core.DICOMObjectWrapper.GetValue*
+  overload: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetValue*
   nameWithType.vb: DICOMObjectWrapper.GetValue(Of T)(Tag)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: EvilDICOM.Core.DICOMObjectWrapper.GetValue(Of T)(EvilDICOM.Core.Element.Tag)
+  fullName.vb: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetValue(Of T)(EvilDICOM.Core.Element.Tag)
   name.vb: GetValue(Of T)(Tag)
-- uid: EvilDICOM.Core.DICOMObjectWrapper.SetValue``1(EvilDICOM.Core.Element.Tag,``0)
-  commentId: M:EvilDICOM.Core.DICOMObjectWrapper.SetValue``1(EvilDICOM.Core.Element.Tag,``0)
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetValue``1(EvilDICOM.Core.Element.Tag,``0)
+  commentId: M:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetValue``1(EvilDICOM.Core.Element.Tag,``0)
   id: SetValue``1(EvilDICOM.Core.Element.Tag,``0)
-  parent: EvilDICOM.Core.DICOMObjectWrapper
+  parent: EvilDICOM.Core.Wrapping.DICOMObjectWrapper
   langs:
   - csharp
   - vb
   name: SetValue<T>(Tag, T)
   nameWithType: DICOMObjectWrapper.SetValue<T>(Tag, T)
-  fullName: EvilDICOM.Core.DICOMObjectWrapper.SetValue<T>(EvilDICOM.Core.Element.Tag, T)
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetValue<T>(EvilDICOM.Core.Element.Tag, T)
   type: Method
   source:
     remote:
-      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: SetValue
-    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
-    startLine: 28
+    path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
+    startLine: 29
   assemblies:
   - EvilDICOM
-  namespace: EvilDICOM.Core
+  namespace: EvilDICOM.Core.Wrapping
   syntax:
     content: public void SetValue<T>(Tag tag, T value)
     parameters:
@@ -217,41 +221,41 @@ items:
     typeParameters:
     - id: T
     content.vb: Public Sub SetValue(Of T)(tag As Tag, value As T)
-  overload: EvilDICOM.Core.DICOMObjectWrapper.SetValue*
+  overload: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetValue*
   nameWithType.vb: DICOMObjectWrapper.SetValue(Of T)(Tag, T)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: EvilDICOM.Core.DICOMObjectWrapper.SetValue(Of T)(EvilDICOM.Core.Element.Tag, T)
+  fullName.vb: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetValue(Of T)(EvilDICOM.Core.Element.Tag, T)
   name.vb: SetValue(Of T)(Tag, T)
-- uid: EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)
-  commentId: M:EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)
+  commentId: M:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)
   id: GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)
-  parent: EvilDICOM.Core.DICOMObjectWrapper
+  parent: EvilDICOM.Core.Wrapping.DICOMObjectWrapper
   langs:
   - csharp
   - vb
   name: GetWrappedSequence<T>(Tag)
   nameWithType: DICOMObjectWrapper.GetWrappedSequence<T>(Tag)
-  fullName: EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence<T>(EvilDICOM.Core.Element.Tag)
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetWrappedSequence<T>(EvilDICOM.Core.Element.Tag)
   type: Method
   source:
     remote:
-      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: GetWrappedSequence
-    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
-    startLine: 39
+    path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
+    startLine: 40
   assemblies:
   - EvilDICOM
-  namespace: EvilDICOM.Core
+  namespace: EvilDICOM.Core.Wrapping
   summary: "\nWraps a DICOM sequence with a type that inherits from DICOMObjectWrapper\n"
   example: []
   syntax:
     content: >-
-      public List<T> GetWrappedSequence<T>(Tag tag)
+      public SequenceItemWrapper<T> GetWrappedSequence<T>(Tag tag)
           where T : DICOMObjectWrapper, new()
     parameters:
     - id: tag
@@ -261,39 +265,39 @@ items:
     - id: T
       description: the wrapping class for the DICOM objects within the sequence
     return:
-      type: System.Collections.Generic.List{{T}}
+      type: EvilDICOM.Core.Wapping.SequenceItemWrapper{{T}}
       description: a list of wrapped DICOM objects
-    content.vb: Public Function GetWrappedSequence(Of T As {DICOMObjectWrapper, New})(tag As Tag) As List(Of T)
-  overload: EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence*
+    content.vb: Public Function GetWrappedSequence(Of T As {DICOMObjectWrapper, New})(tag As Tag) As SequenceItemWrapper(Of T)
+  overload: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetWrappedSequence*
   nameWithType.vb: DICOMObjectWrapper.GetWrappedSequence(Of T)(Tag)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence(Of T)(EvilDICOM.Core.Element.Tag)
+  fullName.vb: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetWrappedSequence(Of T)(EvilDICOM.Core.Element.Tag)
   name.vb: GetWrappedSequence(Of T)(Tag)
-- uid: EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
-  commentId: M:EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetWrappedSequence``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
+  commentId: M:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetWrappedSequence``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
   id: SetWrappedSequence``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
-  parent: EvilDICOM.Core.DICOMObjectWrapper
+  parent: EvilDICOM.Core.Wrapping.DICOMObjectWrapper
   langs:
   - csharp
   - vb
   name: SetWrappedSequence<T>(Tag, List<T>)
   nameWithType: DICOMObjectWrapper.SetWrappedSequence<T>(Tag, List<T>)
-  fullName: EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence<T>(EvilDICOM.Core.Element.Tag, System.Collections.Generic.List<T>)
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetWrappedSequence<T>(EvilDICOM.Core.Element.Tag, System.Collections.Generic.List<T>)
   type: Method
   source:
     remote:
-      path: EvilDICOM/EvilDICOM/Core/DICOMObjectWrapper.cs
+      path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: SetWrappedSequence
-    path: ../EvilDICOM/Core/DICOMObjectWrapper.cs
-    startLine: 58
+    path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
+    startLine: 53
   assemblies:
   - EvilDICOM
-  namespace: EvilDICOM.Core
+  namespace: EvilDICOM.Core.Wrapping
   summary: "\nExtracts the DICOMObjects out of a list of DICOMObjectWrappers and sets these as the new values in the sequence\n"
   example: []
   syntax:
@@ -310,20 +314,20 @@ items:
     typeParameters:
     - id: T
     content.vb: Public Sub SetWrappedSequence(Of T As DICOMObjectWrapper)(tag As Tag, value As List(Of T))
-  overload: EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence*
+  overload: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetWrappedSequence*
   nameWithType.vb: DICOMObjectWrapper.SetWrappedSequence(Of T)(Tag, List(Of T))
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence(Of T)(EvilDICOM.Core.Element.Tag, System.Collections.Generic.List(Of T))
+  fullName.vb: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetWrappedSequence(Of T)(EvilDICOM.Core.Element.Tag, System.Collections.Generic.List(Of T))
   name.vb: SetWrappedSequence(Of T)(Tag, List(Of T))
 references:
-- uid: EvilDICOM.Core
-  commentId: N:EvilDICOM.Core
-  name: EvilDICOM.Core
-  nameWithType: EvilDICOM.Core
-  fullName: EvilDICOM.Core
+- uid: EvilDICOM.Core.Wrapping
+  commentId: N:EvilDICOM.Core.Wrapping
+  name: EvilDICOM.Core.Wrapping
+  nameWithType: EvilDICOM.Core.Wrapping
+  fullName: EvilDICOM.Core.Wrapping
 - uid: System.Object
   commentId: T:System.Object
   parent: System
@@ -616,22 +620,32 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.DCM*
+  commentId: Overload:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.DCM
+  name: DCM
+  nameWithType: DICOMObjectWrapper.DCM
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.DCM
 - uid: EvilDICOM.Core.DICOMObject
   commentId: T:EvilDICOM.Core.DICOMObject
   parent: EvilDICOM.Core
   name: DICOMObject
   nameWithType: DICOMObject
   fullName: EvilDICOM.Core.DICOMObject
-- uid: EvilDICOM.Core.DICOMObjectWrapper.#ctor*
-  commentId: Overload:EvilDICOM.Core.DICOMObjectWrapper.#ctor
+- uid: EvilDICOM.Core
+  commentId: N:EvilDICOM.Core
+  name: EvilDICOM.Core
+  nameWithType: EvilDICOM.Core
+  fullName: EvilDICOM.Core
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.#ctor*
+  commentId: Overload:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.#ctor
   name: DICOMObjectWrapper
   nameWithType: DICOMObjectWrapper.DICOMObjectWrapper
-  fullName: EvilDICOM.Core.DICOMObjectWrapper.DICOMObjectWrapper
-- uid: EvilDICOM.Core.DICOMObjectWrapper.GetValue*
-  commentId: Overload:EvilDICOM.Core.DICOMObjectWrapper.GetValue
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.DICOMObjectWrapper
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetValue*
+  commentId: Overload:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetValue
   name: GetValue
   nameWithType: DICOMObjectWrapper.GetValue
-  fullName: EvilDICOM.Core.DICOMObjectWrapper.GetValue
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetValue
 - uid: EvilDICOM.Core.Element.Tag
   commentId: T:EvilDICOM.Core.Element.Tag
   parent: EvilDICOM.Core.Element
@@ -718,11 +732,11 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: EvilDICOM.Core.DICOMObjectWrapper.SetValue*
-  commentId: Overload:EvilDICOM.Core.DICOMObjectWrapper.SetValue
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetValue*
+  commentId: Overload:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetValue
   name: SetValue
   nameWithType: DICOMObjectWrapper.SetValue
-  fullName: EvilDICOM.Core.DICOMObjectWrapper.SetValue
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetValue
 - uid: '{T}'
   commentId: '!:T'
   definition: T
@@ -733,11 +747,95 @@ references:
   name: T
   nameWithType: T
   fullName: T
-- uid: EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence*
-  commentId: Overload:EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetWrappedSequence*
+  commentId: Overload:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetWrappedSequence
   name: GetWrappedSequence
   nameWithType: DICOMObjectWrapper.GetWrappedSequence
-  fullName: EvilDICOM.Core.DICOMObjectWrapper.GetWrappedSequence
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetWrappedSequence
+- uid: EvilDICOM.Core.Wapping.SequenceItemWrapper{{T}}
+  commentId: T:EvilDICOM.Core.Wapping.SequenceItemWrapper{``0}
+  parent: EvilDICOM.Core.Wapping
+  definition: EvilDICOM.Core.Wapping.SequenceItemWrapper`1
+  name: SequenceItemWrapper<T>
+  nameWithType: SequenceItemWrapper<T>
+  fullName: EvilDICOM.Core.Wapping.SequenceItemWrapper<T>
+  nameWithType.vb: SequenceItemWrapper(Of T)
+  fullName.vb: EvilDICOM.Core.Wapping.SequenceItemWrapper(Of T)
+  name.vb: SequenceItemWrapper(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Wapping.SequenceItemWrapper`1
+    name: SequenceItemWrapper
+    nameWithType: SequenceItemWrapper
+    fullName: EvilDICOM.Core.Wapping.SequenceItemWrapper
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Wapping.SequenceItemWrapper`1
+    name: SequenceItemWrapper
+    nameWithType: SequenceItemWrapper
+    fullName: EvilDICOM.Core.Wapping.SequenceItemWrapper
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Wapping.SequenceItemWrapper`1
+  commentId: T:EvilDICOM.Core.Wapping.SequenceItemWrapper`1
+  name: SequenceItemWrapper<T>
+  nameWithType: SequenceItemWrapper<T>
+  fullName: EvilDICOM.Core.Wapping.SequenceItemWrapper<T>
+  nameWithType.vb: SequenceItemWrapper(Of T)
+  fullName.vb: EvilDICOM.Core.Wapping.SequenceItemWrapper(Of T)
+  name.vb: SequenceItemWrapper(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Wapping.SequenceItemWrapper`1
+    name: SequenceItemWrapper
+    nameWithType: SequenceItemWrapper
+    fullName: EvilDICOM.Core.Wapping.SequenceItemWrapper
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Wapping.SequenceItemWrapper`1
+    name: SequenceItemWrapper
+    nameWithType: SequenceItemWrapper
+    fullName: EvilDICOM.Core.Wapping.SequenceItemWrapper
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Core.Wapping
+  commentId: N:EvilDICOM.Core.Wapping
+  name: EvilDICOM.Core.Wapping
+  nameWithType: EvilDICOM.Core.Wapping
+  fullName: EvilDICOM.Core.Wapping
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetWrappedSequence*
+  commentId: Overload:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetWrappedSequence
+  name: SetWrappedSequence
+  nameWithType: DICOMObjectWrapper.SetWrappedSequence
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetWrappedSequence
 - uid: System.Collections.Generic.List{{T}}
   commentId: T:System.Collections.Generic.List{`0}
   parent: System.Collections.Generic
@@ -823,8 +921,3 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
-- uid: EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence*
-  commentId: Overload:EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence
-  name: SetWrappedSequence
-  nameWithType: DICOMObjectWrapper.SetWrappedSequence
-  fullName: EvilDICOM.Core.DICOMObjectWrapper.SetWrappedSequence
