@@ -258,5 +258,62 @@ namespace EvilDICOM.Core.Dictionaries
                     return VREncoding.ExplicitShort;
             }
         }
+
+        public static Type GetDataTypeFromVR(VR vr)
+        {
+            switch (vr)
+            {
+                case VR.CodeString:
+                case VR.ShortString:
+                case VR.LongString:
+                case VR.ShortText:
+                case VR.LongText:
+                case VR.UnlimitedCharacter:
+                case VR.UniversalResourceId:
+                case VR.UnlimitedText:
+                case VR.ApplicationEntity:
+                case VR.PersonName:
+                case VR.UniqueIdentifier:
+                case VR.AgeString:
+                    return typeof(string);
+                case VR.Date:
+                case VR.Time:
+                case VR.DateTime:
+                    return typeof(System.DateTime?);
+                case VR.IntegerString:
+                    return typeof(int);
+                case VR.DecimalString:
+                    return typeof(double);
+                case VR.SignedShort:
+                    return typeof(short);
+                case VR.UnsignedShort:
+                    return typeof(ushort);
+                case VR.SignedLong:
+                    return typeof(int);
+                case VR.UnsignedLong:
+                    return typeof(uint);
+                case VR.AttributeTag:
+                    return typeof(Tag);
+                case VR.FloatingPointSingle:
+                    return typeof(float);
+                case VR.FloatingPointDouble:
+                    return typeof(double);
+                case VR.OtherByteString:
+                case VR.OtherWordString:
+                case VR.OtherFloatString:
+                case VR.OtherDoubleString:
+                case VR.Other64BitVeryLongString:
+                case VR.OtherLongString:
+                    return typeof(byte);
+                case VR.Sequence:
+                    return typeof(DICOMObject);
+                case VR.Signed64BitVeryLong:
+                    return typeof(long);
+                case VR.Unsigned64BitVeryLong:
+                    return typeof(ulong);
+                default:
+                    return typeof(object);
+            }
+        }
     }
 }

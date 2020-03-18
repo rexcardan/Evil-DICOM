@@ -8,7 +8,7 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>CodeGenerator</RootNamespace>
     <AssemblyName>CodeGenerator</AssemblyName>
-    <TargetFrameworkVersion>v4.6</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <TargetFrameworkProfile />
@@ -37,8 +37,11 @@
     <Reference Include="Esent.Interop, Version=1.9.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\ManagedEsent.1.9.4\lib\net40\Esent.Interop.dll</HintPath>
     </Reference>
-    <Reference Include="EvilDICOM, Version=2.0.2.6, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\EvilDICOM.2.0.2.7\lib\net45\EvilDICOM.dll</HintPath>
+    <Reference Include="EvilDICOM, Version=2.0.6.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\EvilDICOM.2.0.6.3\lib\net472\EvilDICOM.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=1.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Bcl.AsyncInterfaces.1.1.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CodeAnalysis, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeAnalysis.Common.2.8.0\lib\netstandard1.3\Microsoft.CodeAnalysis.dll</HintPath>
@@ -58,14 +61,48 @@
     <Reference Include="Microsoft.CodeAnalysis.Workspaces.Desktop, Version=2.8.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
       <HintPath>..\packages\Microsoft.CodeAnalysis.Workspaces.Common.2.8.0\lib\net46\Microsoft.CodeAnalysis.Workspaces.Desktop.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Configuration.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Abstractions, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Abstractions.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Configuration.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Configuration.Binder, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Configuration.Binder.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Configuration.Binder.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.3.1.2\lib\net461\Microsoft.Extensions.DependencyInjection.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.DependencyInjection.Abstractions, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.DependencyInjection.Abstractions.3.1.2\lib\netstandard2.0\Microsoft.Extensions.DependencyInjection.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Logging.Abstractions, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Logging.Abstractions.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Logging.Abstractions.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Options, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Options.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Options.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Extensions.Primitives, Version=3.1.2.0, Culture=neutral, PublicKeyToken=adb9793829ddae60, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Extensions.Primitives.3.1.2\lib\netstandard2.0\Microsoft.Extensions.Primitives.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.AppContext, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.AppContext.4.3.0\lib\net46\System.AppContext.dll</HintPath>
     </Reference>
+    <Reference Include="System.Buffers, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Buffers.4.4.0\lib\netstandard2.0\System.Buffers.dll</HintPath>
+    </Reference>
     <Reference Include="System.Collections.Immutable, Version=1.2.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Collections.Immutable.1.4.0\lib\portable-net45+win8+wp8+wpa81\System.Collections.Immutable.dll</HintPath>
     </Reference>
+    <Reference Include="System.ComponentModel.Annotations, Version=4.2.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ComponentModel.Annotations.4.7.0\lib\net461\System.ComponentModel.Annotations.dll</HintPath>
+    </Reference>
     <Reference Include="System.ComponentModel.Composition" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Composition.AttributedModel, Version=1.0.32.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Composition.AttributedModel.1.1.0\lib\portable-net45+win8+wp8+wpa81\System.Composition.AttributedModel.dll</HintPath>
     </Reference>
@@ -100,9 +137,18 @@
     <Reference Include="System.IO.FileSystem.Primitives, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.IO.FileSystem.Primitives.4.3.0\lib\net46\System.IO.FileSystem.Primitives.dll</HintPath>
     </Reference>
+    <Reference Include="System.Memory, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Memory.4.5.2\lib\netstandard2.0\System.Memory.dll</HintPath>
+    </Reference>
     <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors, Version=4.1.3.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Numerics.Vectors.4.4.0\lib\net46\System.Numerics.Vectors.dll</HintPath>
+    </Reference>
     <Reference Include="System.Reflection.Metadata, Version=1.4.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Reflection.Metadata.1.5.0\lib\portable-net45+win8\System.Reflection.Metadata.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.CompilerServices.Unsafe, Version=4.0.6.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Runtime.CompilerServices.Unsafe.4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll</HintPath>
     </Reference>
     <Reference Include="System.Security.Cryptography.Algorithms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Security.Cryptography.Algorithms.4.3.1\lib\net46\System.Security.Cryptography.Algorithms.dll</HintPath>
@@ -121,11 +167,14 @@
     <Reference Include="System.Text.Encoding.CodePages, Version=4.0.2.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Text.Encoding.CodePages.4.4.0\lib\net46\System.Text.Encoding.CodePages.dll</HintPath>
     </Reference>
+    <Reference Include="System.Threading.Tasks.Extensions, Version=4.2.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Threading.Tasks.Extensions.4.5.2\lib\netstandard2.0\System.Threading.Tasks.Extensions.dll</HintPath>
+    </Reference>
     <Reference Include="System.Threading.Thread, Version=4.0.1.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
       <HintPath>..\packages\System.Threading.Thread.4.3.0\lib\net46\System.Threading.Thread.dll</HintPath>
     </Reference>
-    <Reference Include="System.ValueTuple, Version=4.0.2.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.ValueTuple.4.4.0\lib\netstandard1.0\System.ValueTuple.dll</HintPath>
+    <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -149,44 +198,9 @@
   <ItemGroup>
     <Compile Include="DICOMData.cs" />
     <Compile Include="DICOMDefinitionLoader.cs" />
-    <Compile Include="DICOMObject.cs" />
-    <Compile Include="Dictionaries\TagDictionary.cs" />
-    <Compile Include="Dictionaries\VRDictionary.cs" />
+    <Compile Include="DICOMDictionary.cs" />
     <Compile Include="DictionaryData.cs" />
-    <Compile Include="Element\AbstractElement.cs" />
-    <Compile Include="Element\AgeString.cs" />
-    <Compile Include="Element\ApplicationEntity.cs" />
-    <Compile Include="Element\AttributeTag.cs" />
-    <Compile Include="Element\CodeString.cs" />
-    <Compile Include="Element\Date.cs" />
-    <Compile Include="Element\DateTime.cs" />
-    <Compile Include="Element\DecimalString.cs" />
-    <Compile Include="Element\FloatingPointDouble.cs" />
-    <Compile Include="Element\FloatingPointSingle.cs" />
-    <Compile Include="Element\IntegerString.cs" />
-    <Compile Include="Element\LongString.cs" />
-    <Compile Include="Element\LongText.cs" />
-    <Compile Include="Element\OtherByteString.cs" />
-    <Compile Include="Element\OtherDoubleString.cs" />
-    <Compile Include="Element\OtherFloatString.cs" />
-    <Compile Include="Element\OtherLongString.cs" />
-    <Compile Include="Element\OtherWordString.cs" />
-    <Compile Include="Element\PersonName.cs" />
-    <Compile Include="Element\Sequence.cs" />
-    <Compile Include="Element\ShortString.cs" />
-    <Compile Include="Element\ShortText.cs" />
-    <Compile Include="Element\SignedLong.cs" />
-    <Compile Include="Element\SignedShort.cs" />
-    <Compile Include="Element\Tag.cs" />
-    <Compile Include="Element\Time.cs" />
-    <Compile Include="Element\UniqueIdentifier.cs" />
-    <Compile Include="Element\UniversalResourceId.cs" />
-    <Compile Include="Element\Unknown.cs" />
-    <Compile Include="Element\UnlimitedCharacter.cs" />
-    <Compile Include="Element\UnlimitedText.cs" />
-    <Compile Include="Element\UnsignedLong.cs" />
-    <Compile Include="Element\UnsignedShort.cs" />
-    <Compile Include="Element\_ElementFactory.cs" />
+    <Compile Include="Domain\DomainBuilder.cs" />
     <Compile Include="EntryParser.cs" />
     <Compile Include="Enums\LogPriority.cs" />
     <Compile Include="Enums\Priority.cs" />
@@ -195,11 +209,8 @@
     <Compile Include="Enums\VR.cs" />
     <Compile Include="Enums\VREncoding.cs" />
     <Compile Include="Extensions\ByteExtensions.cs" />
-    <Compile Include="Extensions\DICOMObjectExtensions.cs" />
-    <Compile Include="Extensions\IDICOMElementExtensions.cs" />
     <Compile Include="Extensions\IDICOMElementListExtensions.cs" />
     <Compile Include="Extensions\StringExtensions.cs" />
-    <Compile Include="Extensions\XElementExtensions.cs" />
     <Compile Include="GeneratorBuilder.cs" />
     <Compile Include="Helpers\AbstractSyntax.cs" />
     <Compile Include="Helpers\ArrayHelper.cs" />
@@ -215,42 +226,6 @@
     <Compile Include="Helpers\TransferSyntaxHelper.cs" />
     <Compile Include="Helpers\UIDHelper.cs" />
     <Compile Include="Helpers\Vector3.cs" />
-    <Compile Include="IDICOMElement.cs" />
-    <Compile Include="IO\Data\AbstractBinaryDataReader.cs" />
-    <Compile Include="IO\Data\BigEndianReader.cs" />
-    <Compile Include="IO\Data\BigEndianWriter.cs" />
-    <Compile Include="IO\Data\DataComposer.cs" />
-    <Compile Include="IO\Data\DataPadder.cs" />
-    <Compile Include="IO\Data\DataRestriction.cs" />
-    <Compile Include="IO\Data\DICOMString.cs" />
-    <Compile Include="IO\Data\LittleEndianReader.cs" />
-    <Compile Include="IO\Data\LittleEndianWriter.cs" />
-    <Compile Include="IO\Data\MultiplicityComposer.cs" />
-    <Compile Include="IO\Data\MultiplicityReader.cs" />
-    <Compile Include="IO\Data\StringDataComposer.cs" />
-    <Compile Include="IO\Data\StringDataParser.cs" />
-    <Compile Include="IO\Reading\DataReader.cs" />
-    <Compile Include="IO\Reading\DICOMBinaryReader.cs" />
-    <Compile Include="IO\Reading\DICOMElementReader.cs" />
-    <Compile Include="IO\Reading\DICOMPreambleReader.cs" />
-    <Compile Include="IO\Reading\LengthReader.cs" />
-    <Compile Include="IO\Reading\SequenceItemReader.cs" />
-    <Compile Include="IO\Reading\SequenceReader.cs" />
-    <Compile Include="IO\Reading\TagReader.cs" />
-    <Compile Include="IO\Reading\VRReader.cs" />
-    <Compile Include="IO\Writing\DataWriter.cs" />
-    <Compile Include="IO\Writing\DICOMBinaryWriter.cs" />
-    <Compile Include="IO\Writing\DICOMElementWriter.cs" />
-    <Compile Include="IO\Writing\DICOMFileWriter.cs" />
-    <Compile Include="IO\Writing\DICOMObjectWriter.cs" />
-    <Compile Include="IO\Writing\DICOMPreambleWriter.cs" />
-    <Compile Include="IO\Writing\DICOMTagWriter.cs" />
-    <Compile Include="IO\Writing\DICOMWriteSettings.cs" />
-    <Compile Include="IO\Writing\GroupWriter.cs" />
-    <Compile Include="IO\Writing\LengthWriter.cs" />
-    <Compile Include="IO\Writing\SequenceItemWriter.cs" />
-    <Compile Include="IO\Writing\SequenceWriter.cs" />
-    <Compile Include="IO\Writing\VRWriter.cs" />
     <Compile Include="Logging\ConsoleLogger.cs" />
     <Compile Include="Logging\EventLogger.cs" />
     <Compile Include="Logging\EvilLogger.cs" />

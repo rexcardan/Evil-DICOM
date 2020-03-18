@@ -11,6 +11,7 @@ using Microsoft.CodeAnalysis;
 using Microsoft.CodeAnalysis.Editing;
 using System.IO;
 using Microsoft.CodeAnalysis.CSharp;
+using CodeGenerator.Domain;
 
 namespace CodeGenerator
 {
@@ -18,13 +19,15 @@ namespace CodeGenerator
     {
         static void Main(string[] args)
         {
+            var ionPlan = DomainBuilder.BuildFromFile(@"D:\CALIBRATION_2.5SS_10x10_50MUPS.dcm", "IonPlan");
+
             //SOPClassUIDBuilder.BuildSOPClassUIDs(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Helpers\SOPClassUID.cs");
             //SOPClassUIDBuilder.BuildSOPClassDictionary(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Helpers\SOPClassDictionary.cs");
             //SOPClassUIDBuilder.BuildSOPClass(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Enums\SOPClass.cs");
             var g = GeneratorBuilder.Instance.Generator;
 
             //DICOMDefinitionLoader.UpdateCurrentFromWeb();
-            var dictionary = DICOMDefinitionLoader.LoadCurrentDictionary().ToList();
+            var dictionary = DICOMDictionary.Instance.Entries;
 
             // Get Anonymization tags
             var anonTags = DICOMDefinitionLoader.LoadAnonymizationTags().ToList();
