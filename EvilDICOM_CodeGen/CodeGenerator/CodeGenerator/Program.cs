@@ -20,7 +20,7 @@ namespace CodeGenerator
         static void Main(string[] args)
         {
             var ionPlan = DomainBuilder.BuildFromFile(@"D:\CALIBRATION_2.5SS_10x10_50MUPS.dcm", "IonPlan");
-
+            DomainWriter.WriteObjects(ionPlan, @"D:\DomainObjects" );
             //SOPClassUIDBuilder.BuildSOPClassUIDs(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Helpers\SOPClassUID.cs");
             //SOPClassUIDBuilder.BuildSOPClassDictionary(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Helpers\SOPClassDictionary.cs");
             //SOPClassUIDBuilder.BuildSOPClass(@"D:\OneDrive\Cardan.Code\Git\Evil-DICOM\EvilDICOM\EvilDICOM\Core\Enums\SOPClass.cs");

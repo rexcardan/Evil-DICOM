@@ -68,7 +68,7 @@
             <article class="content wrap" id="_content">
               
               
-              <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L17" class="btn btn-primary pull-right mobile-hide">View Source</a>
+              <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L18" class="btn btn-primary pull-right mobile-hide">View Source</a>
               <h1 id="" data-uid="EvilDICOM.Core.Dictionaries.VRDictionary">Class VRDictionary
               </h1>
               <div class="markdown level0 summary"><p>General purpose class for working with VRs. It contains methods to convert ASCII string abbreviations into VR type,
@@ -121,7 +121,7 @@ and a few more useful methods when working with VR enums.</p>
               </h3>
               
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L212">View Source</a>
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L213">View Source</a>
               </span>
               <h4 id="methods" data-uid="EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(EvilDICOM.Core.Interfaces.IDICOMElement)">GetAbbreviationFromType(IDICOMElement)</h4>
               <div class="markdown level1 summary"><p>Finds the VR enum from a specific DICOM element.</p>
@@ -167,7 +167,7 @@ and a few more useful methods when working with VR enums.</p>
               </table>
               
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L224">View Source</a>
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L225">View Source</a>
               </span>
               <h4 id="methods" data-uid="EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(System.Type)">GetAbbreviationFromType(Type)</h4>
               <div class="markdown level1 summary"><p>Finds the VR enum from a specific DICOM element.</p>
@@ -212,7 +212,7 @@ and a few more useful methods when working with VR enums.</p>
               </table>
               
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L108">View Source</a>
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L109">View Source</a>
               </span>
               <h4 id="methods" data-uid="EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromVR(EvilDICOM.Core.Enums.VR)">GetAbbreviationFromVR(VR)</h4>
               <div class="markdown level1 summary"><p>Creates the DICOM two letter abbreviation from a VR type.</p>
@@ -258,7 +258,50 @@ and a few more useful methods when working with VR enums.</p>
               </table>
               
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L237">View Source</a>
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L263">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.Core.Dictionaries.VRDictionary.GetDataTypeFromVR(EvilDICOM.Core.Enums.VR)">GetDataTypeFromVR(VR)</h4>
+              <div class="markdown level1 summary"></div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public static Type GetDataTypeFromVR(VR vr)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><a class="xref" href="EvilDICOM.Core.Enums.VR.html">VR</a></td>
+                    <td><em>vr</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Type</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L238">View Source</a>
               </span>
               <h4 id="methods" data-uid="EvilDICOM.Core.Dictionaries.VRDictionary.GetEncodingFromVR(EvilDICOM.Core.Enums.VR)">GetEncodingFromVR(VR)</h4>
               <div class="markdown level1 summary"><p>Determines the encoding, meaning how many bytes to write the VR and length parameters, from a VR type.
@@ -306,7 +349,7 @@ VR is used to represent an unknown VR (before dictionary lookup) that is implici
               </table>
               
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L24">View Source</a>
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L25">View Source</a>
               </span>
               <h4 id="methods" data-uid="EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromAbbreviation(System.String)">GetVRFromAbbreviation(String)</h4>
               <div class="markdown level1 summary"><p>Finds the VR type from an DICOM two letter abbreviation.</p>
@@ -352,7 +395,7 @@ VR is used to represent an unknown VR (before dictionary lookup) that is implici
               </table>
               
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L191">View Source</a>
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L192">View Source</a>
               </span>
               <h4 id="methods" data-uid="EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromType(EvilDICOM.Core.Interfaces.IDICOMElement)">GetVRFromType(IDICOMElement)</h4>
               <div class="markdown level1 summary"><p>Finds the VR enum from a specific DICOM element.</p>
@@ -398,7 +441,7 @@ VR is used to represent an unknown VR (before dictionary lookup) that is implici
               </table>
               
               <span class="small pull-right mobile-hide">
-                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L202">View Source</a>
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs/#L203">View Source</a>
               </span>
               <h4 id="methods" data-uid="EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromType(System.Type)">GetVRFromType(Type)</h4>
               <div class="markdown level1 summary"><p>Finds the VR enum from a specific DICOM element type.</p>

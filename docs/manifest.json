@@ -1125,7 +1125,7 @@
       "output": {
         ".html": {
           "relative_path": "api/EvilDICOM.Core.Dictionaries.VRDictionary.html",
-          "hash": "hZY9CrPmCXSoJ22DdSNMvg=="
+          "hash": "Na4D6TbyrZJ5kwfHHNvO1w=="
         }
       },
       "is_incremental": false,
@@ -1627,6 +1627,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "api/EvilDICOM.Core.Element.yml",
       "output": {
@@ -2047,6 +2050,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "api/EvilDICOM.Core.Helpers.Tryer.yml",
       "output": {
@@ -2083,6 +2089,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "api/EvilDICOM.Core.Helpers.yml",
       "output": {
@@ -2792,35 +2801,23 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/EvilDICOM.Core.Wapping.SequenceItemWrapper-1.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/EvilDICOM.Core.Wapping.SequenceItemWrapper-1.html",
-          "hash": "6+U0ETJrrDbxkCbZLD3+PA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/EvilDICOM.Core.Wapping.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/EvilDICOM.Core.Wapping.html",
-          "hash": "DXJoanyVII5dyXkmPPaQtw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/EvilDICOM.Core.Wrapping.DICOMObjectWrapper.yml",
       "output": {
         ".html": {
           "relative_path": "api/EvilDICOM.Core.Wrapping.DICOMObjectWrapper.html",
-          "hash": "BUcZ4jMrrnB/M4J0EI6Trw=="
+          "hash": "TNJ2v7adSRz5lwXv5PM9Ew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/EvilDICOM.Core.Wrapping.SequenceItemWrapper-1.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/EvilDICOM.Core.Wrapping.SequenceItemWrapper-1.html",
+          "hash": "jdSf4KhgEzxilnhHos+Nug=="
         }
       },
       "is_incremental": false,
@@ -2832,7 +2829,7 @@
       "output": {
         ".html": {
           "relative_path": "api/EvilDICOM.Core.Wrapping.html",
-          "hash": "neF8y+oDNFeKMKshwELJ1w=="
+          "hash": "kevy1xVyLAxD+jPQTLU7xg=="
         }
       },
       "is_incremental": false,
@@ -3811,6 +3808,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "api/EvilDICOM.Network.Messaging.yml",
       "output": {
@@ -4591,9 +4591,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/Evil_DICOM.Core.Element.yml",
       "output": {
@@ -4606,9 +4603,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/Evil_DICOM.Core.Helpers.Tryer.yml",
       "output": {
@@ -4621,9 +4615,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/Evil_DICOM.Core.Helpers.yml",
       "output": {
@@ -4651,9 +4642,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/Evil_DICOM.Network.Messaging.yml",
       "output": {
@@ -4683,7 +4671,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "SFbv0wKlUqAZjLgKFC6Xsg=="
+          "hash": "e659EYpGqcnWi0DYLG1ctw=="
         }
       },
       "is_incremental": false,
@@ -4775,11 +4763,11 @@
     },
     {
       "type": "Toc",
-      "source_relative_path": "articles/toc.yml",
+      "source_relative_path": "articles/toc.md",
       "output": {
         ".html": {
           "relative_path": "articles/toc.html",
-          "hash": "GtO8sEwhttM/jlaImwG8lQ=="
+          "hash": "ebHxViKNdjCEmoZiyl9nrA=="
         }
       },
       "is_incremental": false,
@@ -4866,7 +4854,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 387,
+          "total_file_count": 386,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

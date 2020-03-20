@@ -8,6 +8,7 @@ items:
   - EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(EvilDICOM.Core.Interfaces.IDICOMElement)
   - EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromType(System.Type)
   - EvilDICOM.Core.Dictionaries.VRDictionary.GetAbbreviationFromVR(EvilDICOM.Core.Enums.VR)
+  - EvilDICOM.Core.Dictionaries.VRDictionary.GetDataTypeFromVR(EvilDICOM.Core.Enums.VR)
   - EvilDICOM.Core.Dictionaries.VRDictionary.GetEncodingFromVR(EvilDICOM.Core.Enums.VR)
   - EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromAbbreviation(System.String)
   - EvilDICOM.Core.Dictionaries.VRDictionary.GetVRFromType(EvilDICOM.Core.Interfaces.IDICOMElement)
@@ -26,7 +27,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: VRDictionary
     path: ../EvilDICOM/Core/Dictionaries/VRDictionary.cs
-    startLine: 16
+    startLine: 17
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Dictionaries
@@ -69,7 +70,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: GetVRFromAbbreviation
     path: ../EvilDICOM/Core/Dictionaries/VRDictionary.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Dictionaries
@@ -110,7 +111,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: GetAbbreviationFromVR
     path: ../EvilDICOM/Core/Dictionaries/VRDictionary.cs
-    startLine: 107
+    startLine: 108
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Dictionaries
@@ -151,7 +152,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: GetVRFromType
     path: ../EvilDICOM/Core/Dictionaries/VRDictionary.cs
-    startLine: 190
+    startLine: 191
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Dictionaries
@@ -192,7 +193,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: GetVRFromType
     path: ../EvilDICOM/Core/Dictionaries/VRDictionary.cs
-    startLine: 201
+    startLine: 202
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Dictionaries
@@ -232,7 +233,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: GetAbbreviationFromType
     path: ../EvilDICOM/Core/Dictionaries/VRDictionary.cs
-    startLine: 211
+    startLine: 212
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Dictionaries
@@ -273,7 +274,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: GetAbbreviationFromType
     path: ../EvilDICOM/Core/Dictionaries/VRDictionary.cs
-    startLine: 223
+    startLine: 224
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Dictionaries
@@ -313,7 +314,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: GetEncodingFromVR
     path: ../EvilDICOM/Core/Dictionaries/VRDictionary.cs
-    startLine: 236
+    startLine: 237
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Dictionaries
@@ -330,6 +331,43 @@ items:
       description: the encoding method for this type
     content.vb: Public Shared Function GetEncodingFromVR(vr As VR) As VREncoding
   overload: EvilDICOM.Core.Dictionaries.VRDictionary.GetEncodingFromVR*
+  modifiers.csharp:
+  - public
+  - static
+  modifiers.vb:
+  - Public
+  - Shared
+- uid: EvilDICOM.Core.Dictionaries.VRDictionary.GetDataTypeFromVR(EvilDICOM.Core.Enums.VR)
+  commentId: M:EvilDICOM.Core.Dictionaries.VRDictionary.GetDataTypeFromVR(EvilDICOM.Core.Enums.VR)
+  id: GetDataTypeFromVR(EvilDICOM.Core.Enums.VR)
+  parent: EvilDICOM.Core.Dictionaries.VRDictionary
+  langs:
+  - csharp
+  - vb
+  name: GetDataTypeFromVR(VR)
+  nameWithType: VRDictionary.GetDataTypeFromVR(VR)
+  fullName: EvilDICOM.Core.Dictionaries.VRDictionary.GetDataTypeFromVR(EvilDICOM.Core.Enums.VR)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Dictionaries/VRDictionary.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM.git
+    id: GetDataTypeFromVR
+    path: ../EvilDICOM/Core/Dictionaries/VRDictionary.cs
+    startLine: 262
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Dictionaries
+  syntax:
+    content: public static Type GetDataTypeFromVR(VR vr)
+    parameters:
+    - id: vr
+      type: EvilDICOM.Core.Enums.VR
+    return:
+      type: System.Type
+    content.vb: Public Shared Function GetDataTypeFromVR(vr As VR) As Type
+  overload: EvilDICOM.Core.Dictionaries.VRDictionary.GetDataTypeFromVR*
   modifiers.csharp:
   - public
   - static
@@ -701,3 +739,8 @@ references:
   name: VREncoding
   nameWithType: VREncoding
   fullName: EvilDICOM.Core.Enums.VREncoding
+- uid: EvilDICOM.Core.Dictionaries.VRDictionary.GetDataTypeFromVR*
+  commentId: Overload:EvilDICOM.Core.Dictionaries.VRDictionary.GetDataTypeFromVR
+  name: GetDataTypeFromVR
+  nameWithType: VRDictionary.GetDataTypeFromVR
+  fullName: EvilDICOM.Core.Dictionaries.VRDictionary.GetDataTypeFromVR

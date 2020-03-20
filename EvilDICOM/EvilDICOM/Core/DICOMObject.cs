@@ -596,6 +596,25 @@ namespace EvilDICOM.Core
             DICOMFileWriter.Write(file, settings, this);
         }
 
+        /// <summary>
+        /// Same function as write, but adds required metadata for file (often missing in DICOM objects transferred over a network)
+        /// </summary>
+        /// <param name="file">the path to write</param>
+        /// <param name="settings">the DICOM settings to write (endianness, and indefinite sequences)</param>
+        public void WriteAddMeta(string file, DICOMIOSettings settings = null)
+        {
+            var newSOP = GetSelector().SOPInstanceUID.Data;
+            var sopClass = GetSelector().SOPClassUID.Data;
+
+            //ADD REQUIRED METADATA
+            ReplaceOrAdd(DICOMForge.FileMetaInformationGroupLength(0));
+            ReplaceOrAdd(DICOMForge.FileMetaInformationVersion(0));
+            ReplaceOrAdd(DICOMForge.MediaStorageSOPClassUID(sopClass));
+            ReplaceOrAdd(DICOMForge.MediaStorageSOPInstanceUID(newSOP));
+            ReplaceOrAdd(DICOMForge.ImplementationClassUID("2.16.840.1.113883.3.7570"));
+            Write(file, settings);
+        }
+
         public byte[] GetBytes(DICOMIOSettings settings = null)
         {
             settings = settings ?? DICOMIOSettings.Default();

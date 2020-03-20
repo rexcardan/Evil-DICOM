@@ -5,6 +5,7 @@ items:
   id: EvilDICOM.Core.Wrapping
   children:
   - EvilDICOM.Core.Wrapping.DICOMObjectWrapper
+  - EvilDICOM.Core.Wrapping.SequenceItemWrapper`1
   langs:
   - csharp
   - vb
@@ -20,3 +21,39 @@ references:
   name: DICOMObjectWrapper
   nameWithType: DICOMObjectWrapper
   fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper
+- uid: EvilDICOM.Core.Wrapping.SequenceItemWrapper`1
+  commentId: T:EvilDICOM.Core.Wrapping.SequenceItemWrapper`1
+  name: SequenceItemWrapper<T>
+  nameWithType: SequenceItemWrapper<T>
+  fullName: EvilDICOM.Core.Wrapping.SequenceItemWrapper<T>
+  nameWithType.vb: SequenceItemWrapper(Of T)
+  fullName.vb: EvilDICOM.Core.Wrapping.SequenceItemWrapper(Of T)
+  name.vb: SequenceItemWrapper(Of T)
+  spec.csharp:
+  - uid: EvilDICOM.Core.Wrapping.SequenceItemWrapper`1
+    name: SequenceItemWrapper
+    nameWithType: SequenceItemWrapper
+    fullName: EvilDICOM.Core.Wrapping.SequenceItemWrapper
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: EvilDICOM.Core.Wrapping.SequenceItemWrapper`1
+    name: SequenceItemWrapper
+    nameWithType: SequenceItemWrapper
+    fullName: EvilDICOM.Core.Wrapping.SequenceItemWrapper
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T
+    nameWithType: T
+    fullName: T
+  - name: )
+    nameWithType: )
+    fullName: )

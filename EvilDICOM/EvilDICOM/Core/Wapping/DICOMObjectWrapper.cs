@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using EvilDICOM.Core.Element;
+using EvilDICOM.Core.IO.Writing;
 
 #endregion
 
@@ -53,6 +54,16 @@ namespace EvilDICOM.Core.Wrapping
         public void SetWrappedSequence<T>(Tag tag, List<T> value) where T : DICOMObjectWrapper
         {
             DCM.TrySetDataValue<List<DICOMObject>>(tag, value.Select(dw => dw.DCM).ToList());
+        }
+
+        public void Write(string filePath, DICOMIOSettings settings = null)
+        {
+            DCM.Write(filePath, settings);
+        }
+
+        public void WriteAddMeta(string filePath, DICOMIOSettings settings = null)
+        {
+            DCM.WriteAddMeta(filePath, settings);
         }
     }
 }

@@ -349,17 +349,14 @@
     name: ListExtensions
   - uid: EvilDICOM.Core.Selection.SequenceSelector
     name: SequenceSelector
-- uid: EvilDICOM.Core.Wapping
-  name: EvilDICOM.Core.Wapping
-  items:
-  - uid: EvilDICOM.Core.Wapping.SequenceItemWrapper`1
-    name: SequenceItemWrapper<T>
-    name.vb: SequenceItemWrapper(Of T)
 - uid: EvilDICOM.Core.Wrapping
   name: EvilDICOM.Core.Wrapping
   items:
   - uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper
     name: DICOMObjectWrapper
+  - uid: EvilDICOM.Core.Wrapping.SequenceItemWrapper`1
+    name: SequenceItemWrapper<T>
+    name.vb: SequenceItemWrapper(Of T)
 - uid: EvilDICOM.CV.Drawing
   name: EvilDICOM.CV.Drawing
   items:

@@ -1,6 +1,7 @@
 ﻿#region
 
 using System;
+using EvilDICOM.Core.Element;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Helpers;
 using EvilDICOM.Core.Interfaces;

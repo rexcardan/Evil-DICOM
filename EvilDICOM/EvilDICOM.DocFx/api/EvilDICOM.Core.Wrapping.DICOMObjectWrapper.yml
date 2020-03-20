@@ -26,7 +26,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: DICOMObjectWrapper
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 11
+    startLine: 10
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -69,7 +69,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: DCM
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 13
+    startLine: 12
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -104,7 +104,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: .ctor
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 15
+    startLine: 14
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -134,7 +134,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: .ctor
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 19
+    startLine: 18
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -167,7 +167,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: GetValue
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 24
+    startLine: 23
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -207,7 +207,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: SetValue
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 29
+    startLine: 28
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -247,7 +247,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: GetWrappedSequence
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 40
+    startLine: 39
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -265,7 +265,7 @@ items:
     - id: T
       description: the wrapping class for the DICOM objects within the sequence
     return:
-      type: EvilDICOM.Core.Wapping.SequenceItemWrapper{{T}}
+      type: EvilDICOM.Core.Wrapping.SequenceItemWrapper{{T}}
       description: a list of wrapped DICOM objects
     content.vb: Public Function GetWrappedSequence(Of T As {DICOMObjectWrapper, New})(tag As Tag) As SequenceItemWrapper(Of T)
   overload: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetWrappedSequence*
@@ -294,7 +294,7 @@ items:
       repo: https://github.com/rexcardan/Evil-DICOM.git
     id: SetWrappedSequence
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 53
+    startLine: 52
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -752,21 +752,21 @@ references:
   name: GetWrappedSequence
   nameWithType: DICOMObjectWrapper.GetWrappedSequence
   fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetWrappedSequence
-- uid: EvilDICOM.Core.Wapping.SequenceItemWrapper{{T}}
-  commentId: T:EvilDICOM.Core.Wapping.SequenceItemWrapper{``0}
-  parent: EvilDICOM.Core.Wapping
-  definition: EvilDICOM.Core.Wapping.SequenceItemWrapper`1
+- uid: EvilDICOM.Core.Wrapping.SequenceItemWrapper{{T}}
+  commentId: T:EvilDICOM.Core.Wrapping.SequenceItemWrapper{``0}
+  parent: EvilDICOM.Core.Wrapping
+  definition: EvilDICOM.Core.Wrapping.SequenceItemWrapper`1
   name: SequenceItemWrapper<T>
   nameWithType: SequenceItemWrapper<T>
-  fullName: EvilDICOM.Core.Wapping.SequenceItemWrapper<T>
+  fullName: EvilDICOM.Core.Wrapping.SequenceItemWrapper<T>
   nameWithType.vb: SequenceItemWrapper(Of T)
-  fullName.vb: EvilDICOM.Core.Wapping.SequenceItemWrapper(Of T)
+  fullName.vb: EvilDICOM.Core.Wrapping.SequenceItemWrapper(Of T)
   name.vb: SequenceItemWrapper(Of T)
   spec.csharp:
-  - uid: EvilDICOM.Core.Wapping.SequenceItemWrapper`1
+  - uid: EvilDICOM.Core.Wrapping.SequenceItemWrapper`1
     name: SequenceItemWrapper
     nameWithType: SequenceItemWrapper
-    fullName: EvilDICOM.Core.Wapping.SequenceItemWrapper
+    fullName: EvilDICOM.Core.Wrapping.SequenceItemWrapper
   - name: <
     nameWithType: <
     fullName: <
@@ -777,10 +777,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: EvilDICOM.Core.Wapping.SequenceItemWrapper`1
+  - uid: EvilDICOM.Core.Wrapping.SequenceItemWrapper`1
     name: SequenceItemWrapper
     nameWithType: SequenceItemWrapper
-    fullName: EvilDICOM.Core.Wapping.SequenceItemWrapper
+    fullName: EvilDICOM.Core.Wrapping.SequenceItemWrapper
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -790,19 +790,19 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: EvilDICOM.Core.Wapping.SequenceItemWrapper`1
-  commentId: T:EvilDICOM.Core.Wapping.SequenceItemWrapper`1
+- uid: EvilDICOM.Core.Wrapping.SequenceItemWrapper`1
+  commentId: T:EvilDICOM.Core.Wrapping.SequenceItemWrapper`1
   name: SequenceItemWrapper<T>
   nameWithType: SequenceItemWrapper<T>
-  fullName: EvilDICOM.Core.Wapping.SequenceItemWrapper<T>
+  fullName: EvilDICOM.Core.Wrapping.SequenceItemWrapper<T>
   nameWithType.vb: SequenceItemWrapper(Of T)
-  fullName.vb: EvilDICOM.Core.Wapping.SequenceItemWrapper(Of T)
+  fullName.vb: EvilDICOM.Core.Wrapping.SequenceItemWrapper(Of T)
   name.vb: SequenceItemWrapper(Of T)
   spec.csharp:
-  - uid: EvilDICOM.Core.Wapping.SequenceItemWrapper`1
+  - uid: EvilDICOM.Core.Wrapping.SequenceItemWrapper`1
     name: SequenceItemWrapper
     nameWithType: SequenceItemWrapper
-    fullName: EvilDICOM.Core.Wapping.SequenceItemWrapper
+    fullName: EvilDICOM.Core.Wrapping.SequenceItemWrapper
   - name: <
     nameWithType: <
     fullName: <
@@ -813,10 +813,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: EvilDICOM.Core.Wapping.SequenceItemWrapper`1
+  - uid: EvilDICOM.Core.Wrapping.SequenceItemWrapper`1
     name: SequenceItemWrapper
     nameWithType: SequenceItemWrapper
-    fullName: EvilDICOM.Core.Wapping.SequenceItemWrapper
+    fullName: EvilDICOM.Core.Wrapping.SequenceItemWrapper
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
@@ -826,11 +826,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: EvilDICOM.Core.Wapping
-  commentId: N:EvilDICOM.Core.Wapping
-  name: EvilDICOM.Core.Wapping
-  nameWithType: EvilDICOM.Core.Wapping
-  fullName: EvilDICOM.Core.Wapping
 - uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetWrappedSequence*
   commentId: Overload:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetWrappedSequence
   name: SetWrappedSequence
