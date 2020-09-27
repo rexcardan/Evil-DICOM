@@ -16,7 +16,7 @@ namespace EvilDICOM.Core.IO.Reading
         public static int ReadIndefiniteLengthLittleEndian(DICOMBinaryReader dr, TransferSyntax syntax)
         {
             var startingPos = dr.StreamPosition;
-            while (!IsEndOfSequenceLittleEndian(dr))
+            while (!IsEndOfSequenceLittleEndian(dr) && dr.StreamLength != dr.StreamPosition)
             {
                 dr.StreamPosition -= 8;
                 SequenceItemReader.SkipItemLittleEndian(dr, syntax);
@@ -27,7 +27,7 @@ namespace EvilDICOM.Core.IO.Reading
         public static int ReadIndefiniteLengthBigEndian(DICOMBinaryReader dr)
         {
             var startingPos = dr.StreamPosition;
-            while (!IsEndOfSequenceBigEndian(dr))
+            while (!IsEndOfSequenceBigEndian(dr) && dr.StreamLength != dr.StreamPosition)
             {
                 dr.StreamPosition -= 8;
                 SequenceItemReader.SkipItemBigEndian(dr);

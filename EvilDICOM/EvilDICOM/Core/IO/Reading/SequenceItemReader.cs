@@ -52,13 +52,13 @@ namespace EvilDICOM.Core.IO.Reading
             else
             {
                 if (syntax == TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN)
-                    while (!IsEndOfSequenceItemLittleEndian(dr))
+                    while (!IsEndOfSequenceItemLittleEndian(dr) && dr.StreamLength != dr.StreamPosition)
                     {
                         dr.StreamPosition -= 8;
                         DICOMElementReader.SkipElementExplicitLittleEndian(dr);
                     }
                 else
-                    while (!IsEndOfSequenceItemLittleEndian(dr))
+                    while (!IsEndOfSequenceItemLittleEndian(dr) && dr.StreamLength != dr.StreamPosition)
                     {
                         dr.StreamPosition -= 8;
                         DICOMElementReader.SkipElementImplicitLittleEndian(dr);
@@ -72,7 +72,7 @@ namespace EvilDICOM.Core.IO.Reading
             if (length != -1)
                 dr.Skip(length);
             else
-                while (!IsEndOfSequenceItemBigEndian(dr))
+                while (!IsEndOfSequenceItemBigEndian(dr) && dr.StreamLength != dr.StreamPosition)
                 {
                     dr.StreamPosition -= 8;
                     DICOMElementReader.SkipElementExplicitBigEndian(dr);
@@ -94,7 +94,7 @@ namespace EvilDICOM.Core.IO.Reading
         private static DICOMObject ReadIndefiniteBigEndian(DICOMBinaryReader dr, TransferSyntax syntax, StringEncoding enc)
         {
             var elements = new List<IDICOMElement>();
-            while (!IsEndOfSequenceItemLittleEndian(dr))
+            while (!IsEndOfSequenceItemLittleEndian(dr) && dr.StreamLength != dr.StreamPosition)
             {
                 dr.StreamPosition -= 8;
                 elements.Add(DICOMElementReader.ReadElementExplicitBigEndian(dr, enc));
@@ -105,7 +105,7 @@ namespace EvilDICOM.Core.IO.Reading
         private static DICOMObject ReadIndefiniteLittleEndian(DICOMBinaryReader dr, TransferSyntax syntax, StringEncoding enc)
         {
             var elements = new List<IDICOMElement>();
-            while (!IsEndOfSequenceItemLittleEndian(dr))
+            while (!IsEndOfSequenceItemLittleEndian(dr) && dr.StreamLength != dr.StreamPosition)
             {
                 dr.StreamPosition -= 8;
                 if (syntax == TransferSyntax.EXPLICIT_VR_LITTLE_ENDIAN)
