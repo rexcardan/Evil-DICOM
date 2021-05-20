@@ -32,5 +32,10 @@ namespace EvilDICOM.Network
                 Port = port
             };
         }
+
+        public override string ToString()
+        {
+            return $"{nameof(AeTitle)}: {AeTitle}, {nameof(IpAddress)}: {IpAddress}, {nameof(Port)}: {Port}";
+        }
     }
 }
