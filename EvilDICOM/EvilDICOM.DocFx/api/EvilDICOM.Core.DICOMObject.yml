@@ -66,6 +66,7 @@ items:
   - EvilDICOM.Core.DICOMObject.TrySetDataValue``1(EvilDICOM.Core.Element.Tag,``0)
   - EvilDICOM.Core.DICOMObject.TrySetDataValue``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
   - EvilDICOM.Core.DICOMObject.Write(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  - EvilDICOM.Core.DICOMObject.WriteAddMeta(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)
   langs:
   - csharp
   - vb
@@ -77,7 +78,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: DICOMObject
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 27
@@ -123,7 +124,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: .ctor
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 37
@@ -155,7 +156,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: .ctor
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 46
@@ -194,7 +195,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: .ctor
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 79
@@ -233,7 +234,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Elements
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 89
@@ -270,7 +271,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: AllElements
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 103
@@ -307,7 +308,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Add
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 115
@@ -343,7 +344,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: AddRange
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 126
@@ -381,7 +382,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: TryGetDataValue
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 141
@@ -429,7 +430,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: TrySetDataValue
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 162
@@ -477,7 +478,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: TrySetDataValue
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 181
@@ -525,7 +526,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: FindAll
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 197
@@ -564,7 +565,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: GetUnknownTagAs
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 209
@@ -611,7 +612,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: GetUnknownTagAs
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 232
@@ -658,7 +659,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: FindAll
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 242
@@ -699,7 +700,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: FindAll
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 256
@@ -738,7 +739,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: FindAll
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 268
@@ -777,7 +778,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: FindAll
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 283
@@ -819,7 +820,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: FindAll
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 319
@@ -861,7 +862,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: FindFirst
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 330
@@ -900,7 +901,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: FindFirst
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 341
@@ -939,7 +940,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Remove
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 350
@@ -975,7 +976,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: RemoveRange
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 367
@@ -1013,7 +1014,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Remove
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 387
@@ -1049,7 +1050,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: RemoveRange
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 396
@@ -1087,7 +1088,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Replace
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 427
@@ -1126,7 +1127,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 446
@@ -1168,7 +1169,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ToString
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 452
@@ -1203,7 +1204,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: GetSelector
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 459
@@ -1235,7 +1236,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 468
@@ -1271,7 +1272,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 473
@@ -1307,7 +1308,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 478
@@ -1343,7 +1344,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 483
@@ -1379,7 +1380,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 488
@@ -1415,7 +1416,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 493
@@ -1451,7 +1452,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 498
@@ -1487,7 +1488,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 503
@@ -1523,7 +1524,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 508
@@ -1559,7 +1560,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 513
@@ -1595,7 +1596,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 518
@@ -1631,7 +1632,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 523
@@ -1667,7 +1668,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReplaceOrAdd
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 528
@@ -1703,7 +1704,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Read
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 548
@@ -1748,7 +1749,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: ReadAsync
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 565
@@ -1793,7 +1794,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Read
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 577
@@ -1840,7 +1841,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Write
     path: ../EvilDICOM/Core/DICOMObject.cs
     startLine: 588
@@ -1864,6 +1865,45 @@ items:
   - public
   modifiers.vb:
   - Public
+- uid: EvilDICOM.Core.DICOMObject.WriteAddMeta(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  commentId: M:EvilDICOM.Core.DICOMObject.WriteAddMeta(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  id: WriteAddMeta(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  parent: EvilDICOM.Core.DICOMObject
+  langs:
+  - csharp
+  - vb
+  name: WriteAddMeta(String, DICOMIOSettings)
+  nameWithType: DICOMObject.WriteAddMeta(String, DICOMIOSettings)
+  fullName: EvilDICOM.Core.DICOMObject.WriteAddMeta(System.String, EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
+      branch: master
+      repo: https://github.com/isachpaz/Evil-DICOM.git
+    id: WriteAddMeta
+    path: ../EvilDICOM/Core/DICOMObject.cs
+    startLine: 603
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core
+  summary: "\nSame function as write, but adds required metadata for file (often missing in DICOM objects transferred over a network)\n"
+  example: []
+  syntax:
+    content: public void WriteAddMeta(string file, DICOMIOSettings settings = null)
+    parameters:
+    - id: file
+      type: System.String
+      description: the path to write
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+      description: the DICOM settings to write (endianness, and indefinite sequences)
+    content.vb: Public Sub WriteAddMeta(file As String, settings As DICOMIOSettings = Nothing)
+  overload: EvilDICOM.Core.DICOMObject.WriteAddMeta*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 - uid: EvilDICOM.Core.DICOMObject.GetBytes(EvilDICOM.Core.IO.Writing.DICOMIOSettings)
   commentId: M:EvilDICOM.Core.DICOMObject.GetBytes(EvilDICOM.Core.IO.Writing.DICOMIOSettings)
   id: GetBytes(EvilDICOM.Core.IO.Writing.DICOMIOSettings)
@@ -1879,10 +1919,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: GetBytes
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 598
+    startLine: 617
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -1914,10 +1954,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: SOPClass
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 608
+    startLine: 627
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -1949,10 +1989,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Replace
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 626
+    startLine: 645
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -1987,10 +2027,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Replace
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 631
+    startLine: 650
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -2025,10 +2065,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Replace
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 636
+    startLine: 655
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -2063,10 +2103,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Replace
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 641
+    startLine: 660
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -2101,10 +2141,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Replace
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 646
+    startLine: 665
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -2139,10 +2179,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Replace
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 651
+    startLine: 670
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -2177,10 +2217,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Replace
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 656
+    startLine: 675
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -2215,10 +2255,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Replace
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 661
+    startLine: 680
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -2253,10 +2293,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Replace
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 666
+    startLine: 685
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -2291,10 +2331,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Replace
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 671
+    startLine: 690
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -2329,10 +2369,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Replace
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 676
+    startLine: 695
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -2367,10 +2407,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Equals
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 683
+    startLine: 702
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -2405,10 +2445,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Clone
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 694
+    startLine: 713
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -2440,10 +2480,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/DICOMObject.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: GetHashCode
     path: ../EvilDICOM/Core/DICOMObject.cs
-    startLine: 717
+    startLine: 736
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core
@@ -4529,6 +4569,11 @@ references:
   name: EvilDICOM.Core.IO.Writing
   nameWithType: EvilDICOM.Core.IO.Writing
   fullName: EvilDICOM.Core.IO.Writing
+- uid: EvilDICOM.Core.DICOMObject.WriteAddMeta*
+  commentId: Overload:EvilDICOM.Core.DICOMObject.WriteAddMeta
+  name: WriteAddMeta
+  nameWithType: DICOMObject.WriteAddMeta
+  fullName: EvilDICOM.Core.DICOMObject.WriteAddMeta
 - uid: EvilDICOM.Core.DICOMObject.GetBytes*
   commentId: Overload:EvilDICOM.Core.DICOMObject.GetBytes
   name: GetBytes

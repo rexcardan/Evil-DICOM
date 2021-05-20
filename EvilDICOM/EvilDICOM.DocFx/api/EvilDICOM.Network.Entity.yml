@@ -10,6 +10,7 @@ items:
   - EvilDICOM.Network.Entity.CreateLocal(System.String,System.Int32)
   - EvilDICOM.Network.Entity.IpAddress
   - EvilDICOM.Network.Entity.Port
+  - EvilDICOM.Network.Entity.ToString
   langs:
   - csharp
   - vb
@@ -21,7 +22,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/ApplicationEntity.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Entity
     path: ../EvilDICOM/Network/ApplicationEntity.cs
     startLine: 8
@@ -40,7 +41,6 @@ items:
   - System.Object.GetType
   - System.Object.MemberwiseClone
   - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -62,7 +62,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/ApplicationEntity.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: .ctor
     path: ../EvilDICOM/Network/ApplicationEntity.cs
     startLine: 14
@@ -99,7 +99,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/ApplicationEntity.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: AeTitle
     path: ../EvilDICOM/Network/ApplicationEntity.cs
     startLine: 21
@@ -134,7 +134,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/ApplicationEntity.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: IpAddress
     path: ../EvilDICOM/Network/ApplicationEntity.cs
     startLine: 22
@@ -169,7 +169,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/ApplicationEntity.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: Port
     path: ../EvilDICOM/Network/ApplicationEntity.cs
     startLine: 23
@@ -204,7 +204,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/ApplicationEntity.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/isachpaz/Evil-DICOM.git
     id: CreateLocal
     path: ../EvilDICOM/Network/ApplicationEntity.cs
     startLine: 25
@@ -228,6 +228,41 @@ items:
   modifiers.vb:
   - Public
   - Shared
+- uid: EvilDICOM.Network.Entity.ToString
+  commentId: M:EvilDICOM.Network.Entity.ToString
+  id: ToString
+  parent: EvilDICOM.Network.Entity
+  langs:
+  - csharp
+  - vb
+  name: ToString()
+  nameWithType: Entity.ToString()
+  fullName: EvilDICOM.Network.Entity.ToString()
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/ApplicationEntity.cs
+      branch: master
+      repo: https://github.com/isachpaz/Evil-DICOM.git
+    id: ToString
+    path: ../EvilDICOM/Network/ApplicationEntity.cs
+    startLine: 35
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  syntax:
+    content: public override string ToString()
+    return:
+      type: System.String
+    content.vb: Public Overrides Function ToString As String
+  overridden: System.Object.ToString
+  overload: EvilDICOM.Network.Entity.ToString*
+  modifiers.csharp:
+  - public
+  - override
+  modifiers.vb:
+  - Public
+  - Overrides
 references:
 - uid: EvilDICOM.Network
   commentId: N:EvilDICOM.Network
@@ -489,37 +524,6 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -571,3 +575,39 @@ references:
   name: Entity
   nameWithType: Entity
   fullName: EvilDICOM.Network.Entity
+- uid: System.Object.ToString
+  commentId: M:System.Object.ToString
+  parent: System.Object
+  isExternal: true
+  name: ToString()
+  nameWithType: Object.ToString()
+  fullName: System.Object.ToString()
+  spec.csharp:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.Object.ToString
+    name: ToString
+    nameWithType: Object.ToString
+    fullName: System.Object.ToString
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: EvilDICOM.Network.Entity.ToString*
+  commentId: Overload:EvilDICOM.Network.Entity.ToString
+  name: ToString
+  nameWithType: Entity.ToString
+  fullName: EvilDICOM.Network.Entity.ToString

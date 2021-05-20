@@ -13,8 +13,7 @@
     <RepositoryUrl>https://github.com/rexcardan/Evil-DICOM</RepositoryUrl>
     <PackageTags>dicom, medical-physics, radiology, radiation-oncology</PackageTags>
     <Version>2.0.6.5</Version>
-    <PackageIcon>evilEye.png</PackageIcon>
-    <PackageIconUrl />
+	  <PackageIconUrl />
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -31,10 +30,6 @@
 
   <ItemGroup>
     <None Remove="packages.config" />
-    <None Include="F:\OneDrive\Cardan.Design\Artwork\Logos\Evil Dicom\evilEye.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
   </ItemGroup>
 
   <ItemGroup>

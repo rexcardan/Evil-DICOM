@@ -8,21 +8,13 @@
     <Description>Evil DICOM with a twist: OpenCV matrices and computer vision components. Useful for advanced operations with DICOM files.</Description>
     <Copyright>Red Ion LLC © 2020</Copyright>
     <PackageProjectUrl>http://rexcardan.github.io/Evil-DICOM/</PackageProjectUrl>
-    <PackageIcon>evilEye.png</PackageIcon>
-    <PackageIconUrl />
+	  <PackageIconUrl />
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="EvilDICOM" Version="2.0.6.1" />
     <PackageReference Include="OpenCvSharp4.Windows" Version="4.2.0.20200208" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="F:\OneDrive\Cardan.Design\Artwork\Logos\Evil Dicom\evilEye.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
   </ItemGroup>
 
 </Project>
