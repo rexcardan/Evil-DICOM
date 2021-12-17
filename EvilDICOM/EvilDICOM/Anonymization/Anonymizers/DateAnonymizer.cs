@@ -62,7 +62,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
         public void NullAndAnonymize(DICOMObject d)
         {
             var dob = d.FindFirst(TagHelper.Patient​Birth​Date) as Date;
-            dob.Data = null;
+            if (dob != null) dob.Data = null;
 
             var dates = d.FindAll(VR.Date);
             if (dates.Count > 0)
