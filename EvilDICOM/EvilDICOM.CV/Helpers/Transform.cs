@@ -1,4 +1,4 @@
-﻿using OpenCvSharp.CPlusPlus;
+﻿using OpenCvSharp;
 using EvilDICOM.Core.Enums;
 using EvilDICOM.Core.Extensions;
 using EvilDICOM.Core.Helpers;
