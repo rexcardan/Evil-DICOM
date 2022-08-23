@@ -33,6 +33,7 @@ namespace EvilDICOM.Core.Helpers
             new KeyValuePair<string,SOPClass>(AbstractSyntax.RT_DOSE_STORAGE, SOPClass.RT_Dose),
             new KeyValuePair<string,SOPClass>(AbstractSyntax.RT_IMAGE_STORAGE, SOPClass.RT_Image),
             new KeyValuePair<string,SOPClass>(AbstractSyntax.RT_PLAN_STORAGE, SOPClass.RT_Plan),
+            new KeyValuePair<string,SOPClass>(AbstractSyntax.HALCYON_RT_PLAN_STORAGE, SOPClass.HALCYON_RT_Plan),
             new KeyValuePair<string,SOPClass>(AbstractSyntax.RT_STRUCTURE_STORAGE, SOPClass.RT_Structure),
             new KeyValuePair<string,SOPClass>(AbstractSyntax.VERIFICATION, SOPClass.Verification),
             new KeyValuePair<string,SOPClass>(AbstractSyntax.MR_IMAGE_STORAGE, SOPClass.MR),

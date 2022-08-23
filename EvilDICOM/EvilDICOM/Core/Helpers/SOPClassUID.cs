@@ -130,6 +130,7 @@ namespace EvilDICOM.Core.Helpers
         public const String RTStructureSetStorage = "1.2.840.10008.5.1.4.1.1.481.3";
         public const String RTBeamsTreatmentRecordStorage = "1.2.840.10008.5.1.4.1.1.481.4";
         public const String RTPlanStorage = "1.2.840.10008.5.1.4.1.1.481.5";
+        public const String HalcyonRTPlanStorage = "1.2.246.352.70.1.70";
         public const String RTBrachyTreatmentRecordStorage = "1.2.840.10008.5.1.4.1.1.481.6";
         public const String RTTreatmentSummaryRecordStorage = "1.2.840.10008.5.1.4.1.1.481.7";
         public const String RTIonPlanStorage = "1.2.840.10008.5.1.4.1.1.481.8";

@@ -38,6 +38,7 @@ namespace EvilDICOM.Core.Helpers
         public static string RT_STRUCTURE_STORAGE = "1.2.840.10008.5.1.4.1.1.481.3";
         public static string RT_BEAMS_TREAT_RECORD_STORAGE = "1.2.840.10008.5.1.4.1.1.481.4";
         public static string RT_PLAN_STORAGE = "1.2.840.10008.5.1.4.1.1.481.5";
+        public static string HALCYON_RT_PLAN_STORAGE = "1.2.246.352.70.1.70";
         public static string RT_BRACHY_TREATMENT_RECORD_STORAGE = "1.2.840.10008.5.1.4.1.1.481.6";
         public static string RT_BRACHY_TREATMENT_SUMMARY_STORAGE = "1.2.840.10008.5.1.4.1.1.481.7";
         public static string RT_ION_PLAN_STORAGE = "1.2.840.10008.5.1.4.1.1.481.8";
@@ -60,6 +61,7 @@ namespace EvilDICOM.Core.Helpers
             RT_STRUCTURE_STORAGE,
             RT_BEAMS_TREAT_RECORD_STORAGE,
             RT_PLAN_STORAGE,
+            HALCYON_RT_PLAN_STORAGE,
             RT_BRACHY_TREATMENT_RECORD_STORAGE,
             RT_BRACHY_TREATMENT_SUMMARY_STORAGE,
             CR_IMAGE_STORAGE,
