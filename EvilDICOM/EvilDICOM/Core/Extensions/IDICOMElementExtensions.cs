@@ -50,7 +50,7 @@ namespace EvilDICOM.Core.Extensions
                 case VR.Time:
                     return elem is Time;
                 case VR.DateTime:
-                    return elem is DateTime;
+                    return elem is EvilDICOM.Core.Element.DateTime;
                 case VR.AgeString:
                     return elem is AgeString;
                 case VR.IntegerString:

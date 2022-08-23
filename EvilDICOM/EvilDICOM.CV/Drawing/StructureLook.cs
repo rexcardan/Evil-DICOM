@@ -11,8 +11,8 @@ namespace EvilDICOM.CV.Drawing
     {
         public int OutlineThickness { get; set; } = 1;
 
-        public Scalar OutlineColor { get; set; } = new Scalar(0, 255, 0);
+        public CvScalar OutlineColor { get; set; } = new CvScalar(0, 255, 0);
 
-        public Scalar FillColor { get; set; } = new Scalar(0, 255, 0);
+        public CvScalar FillColor { get; set; } = new CvScalar(0, 255, 0);
     }
 }
