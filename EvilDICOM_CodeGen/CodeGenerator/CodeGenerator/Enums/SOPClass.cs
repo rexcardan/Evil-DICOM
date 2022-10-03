@@ -19,6 +19,7 @@ namespace EvilDICOM.Core.Enums
         RT_Reg,
         RT_Structure,
         RT_Plan,
+        HALCYON_RT_Plan,
         RT_Brachy_Record,
         RT_Treatment_Record,
         RT_IonPlan,

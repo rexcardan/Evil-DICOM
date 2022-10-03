@@ -42,6 +42,7 @@ namespace EvilDICOM.Core.Helpers
             RTStructureSetStorage,
             RTBeamsTreatmentRecordStorage,
             RTPlanStorage,
+            HalcyonRTPlanStorage,
             RTBrachyTreatmentRecordStorage,
             RTBrachyApplicationSetupDeliveryInstructionStorage,
             ComputedRadiographyImageStorage,

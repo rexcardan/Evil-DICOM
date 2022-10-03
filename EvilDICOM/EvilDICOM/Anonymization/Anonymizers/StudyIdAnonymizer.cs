@@ -135,6 +135,7 @@ namespace EvilDICOM.Anonymization.Anonymizers
                     case "1.2.840.10008.5.1.4.1.1.4": return DICOMFileType.MRI_IMAGE;
                     case "1.2.840.10008.5.1.4.1.1.77.1.5.2": return DICOMFileType.PET_IMAGE;
                     case "1.2.840.10008.5.1.4.1.1.481.5": return DICOMFileType.RT_PLAN;
+                    case "1.2.246.352.70.1.70": return DICOMFileType.RT_PLAN;
                     case "1.2.840.10008.5.1.4.1.1.481.3": return DICOMFileType.RT_STRUCT;
                     case "1.2.840.10008.5.1.4.1.1.481.2": return DICOMFileType.RT_DOSE;
                     default: return DICOMFileType.OTHER;

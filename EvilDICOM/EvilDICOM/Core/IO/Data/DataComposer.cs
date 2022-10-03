@@ -148,7 +148,7 @@ namespace EvilDICOM.Core.IO.Data
                     unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
                 case VR.DateTime:
-                    var dt = el as DateTime;
+                    var dt = el as EvilDICOM.Core.Element.DateTime;
                     data = StringDataComposer.ComposeDateTimes(dt.Data_);
                     unpadded = GetEncodedBytes(data, enc);
                     return DataRestriction.EnforceEvenLength(unpadded, vr);
