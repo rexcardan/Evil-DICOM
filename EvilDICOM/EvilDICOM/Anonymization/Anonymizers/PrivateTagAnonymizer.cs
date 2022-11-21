@@ -18,8 +18,11 @@ namespace EvilDICOM.Anonymization.Anonymizers
         public void Anonymize(DICOMObject d)
         {
             _logger.LogInformation("Removing private tags...", 0);
-            foreach (var priv in d.AllElements.Where(e => e.Tag.IsPrivate()))
-                d.Remove(priv.Tag);
+
+            d.RemoveRange(d.AllElements.Where(e => e.Tag.IsPrivate()).Select(x=>x.Tag));
+
+            //foreach (var priv in d.AllElements.Where(e => e.Tag.IsPrivate()))
+            //    d.Remove(priv.Tag);
         }
     }
 }
