@@ -207,7 +207,7 @@ namespace EvilDICOM.Network
         /// <param name="scp">the provider which will perform the move</param>
         /// <param name="sopUid">the uid of the image to be moved</param>
         /// <param name="patientId">the patient id of the image</param>
-        /// <param name="toAETite">the entity title which will receive the image</param>
+        /// <param name="toAETitle">the entity title which will receive the image</param>
         /// <param name="msgId">the message id</param>
         /// <returns>the move response</returns>
         public CGetResponse SendGetImage(Entity daemon, CFindImageIOD iod, ref ushort msgId)
