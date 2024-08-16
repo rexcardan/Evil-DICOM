@@ -29,7 +29,7 @@ namespace EvilDICOM.CV.Image
                 if (!interpZ)
                 {
                     return _mat.GetZPlaneBySlice(zSteps, xiScale, yiScale)
-                            .Resize(Size.Zero, xScale, yScale);
+                            .Resize(new Size(0,0), xScale, yScale);
                 }
                 else
                 {
@@ -39,7 +39,7 @@ namespace EvilDICOM.CV.Image
                     var highPlane = _mat.GetZPlaneBySlice(zSteps + 1, xiScale, yiScale);
                     Mat interpolated = lowPlane.EmptyClone();
                     Cv2.AddWeighted(lowPlane, 1 - zd, highPlane, zd, 0, interpolated);
-                    interpolated = interpolated.Resize(Size.Zero, xScale, yScale);
+                    interpolated = interpolated.Resize(new Size(0,0), xScale, yScale);
                     return interpolated;
                 }
             }
@@ -69,13 +69,13 @@ namespace EvilDICOM.CV.Image
                 if (Math.Abs(firstLessThan.Value - xPositionMM) < 0.001)
                 {
                     return _mat.GetXPlaneBySlice(firstLessThan.Key - 1, xiScale, yiScale)
-                            .Resize(Size.Zero, xScale, yScale);
+                            .Resize(new Size(0,0), xScale, yScale);
                 }
                 var firstMoreThan = ordered.FirstOrDefault(o => o.Value >= xPositionMM);
                 if (Math.Abs(firstMoreThan.Value - xPositionMM) < 0.001)
                 {
                     return _mat.GetXPlaneBySlice(firstMoreThan.Key - 1, xiScale, yiScale)
-                            .Resize(Size.Zero, xScale, yScale);
+                            .Resize(new Size(0,0), xScale, yScale);
                 }
 
                 //Otherwise interpolate
@@ -85,13 +85,13 @@ namespace EvilDICOM.CV.Image
                 Mat interpolated = lowPlane.EmptyClone();
                 Cv2.AddWeighted(lowPlane, zd, highPlane, 1 - zd, 0, interpolated);
 
-                interpolated = interpolated.Resize(Size.Zero, xScale, yScale);
+                interpolated = interpolated.Resize(new Size(0,0), xScale, yScale);
                 return interpolated;
             }
             else
             {
                 //Return empty
-                return new Mat(_mat.DimensionZ, _mat.DimensionY, _mat.MatType).Resize(Size.Zero, xScale, yScale);
+                return new Mat(_mat.DimensionZ, _mat.DimensionY, _mat.MatType).Resize(new Size(0,0), xScale, yScale);
             }
         }
 
@@ -113,13 +113,13 @@ namespace EvilDICOM.CV.Image
                 if (Math.Abs(firstLessThan.Value - yPositionMM) < 0.001)
                 {
                     return _mat.GetYPlaneBySlice(firstLessThan.Key - 1, xiScale, yiScale)
-                            .Resize(Size.Zero, xScale, yScale);
+                            .Resize(new Size(0,0), xScale, yScale);
                 }
                 var firstMoreThan = ordered.FirstOrDefault(o => o.Value >= yPositionMM);
                 if (Math.Abs(firstMoreThan.Value - yPositionMM) < 0.001)
                 {
                     return _mat.GetYPlaneBySlice(firstMoreThan.Key - 1, xiScale, yiScale)
-                            .Resize(Size.Zero, xScale, yScale);
+                            .Resize(new Size(0,0), xScale, yScale);
                 }
 
                 //Otherwise interpolate
@@ -128,13 +128,13 @@ namespace EvilDICOM.CV.Image
                 var highPlane = _mat.GetYPlaneBySlice(firstMoreThan.Key - 1, xiScale, yiScale);
                 Mat interpolated = lowPlane.EmptyClone();
                 Cv2.AddWeighted(lowPlane, zd, highPlane, 1 - zd, 0, interpolated);
-                interpolated = interpolated.Resize(Size.Zero, xScale, yScale);
+                interpolated = interpolated.Resize(new Size(0,0), xScale, yScale);
                 return interpolated;
             }
             else
             {
                 //Return empty
-                return new Mat(_mat.DimensionZ, _mat.DimensionX, _mat.MatType).Resize(Size.Zero, xScale, yScale);
+                return new Mat(_mat.DimensionZ, _mat.DimensionX, _mat.MatType).Resize(new Size(0,0), xScale, yScale);
             }
         }
     }

@@ -1,28 +1,33 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>netcoreapp3.1</TargetFramework>
-    <Version>0.0.3</Version>
-    <Authors>Rex Cardan, PhD</Authors>
-    <Company>Red Ion LLC</Company>
-    <Description>Evil DICOM with a twist: OpenCV matrices and computer vision components. Useful for advanced operations with DICOM files.</Description>
-    <Copyright>Red Ion LLC © 2020</Copyright>
-    <PackageProjectUrl>http://rexcardan.github.io/Evil-DICOM/</PackageProjectUrl>
-    <PackageIcon>evilEye.png</PackageIcon>
-    <PackageIconUrl />
-    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net8.0-windows</TargetFramework>
+		<Build>$([System.DateTime]::op_Subtraction($([System.DateTime]::get_Now().get_Date()),$([System.DateTime]::new(2000,1,1))).get_TotalDays())</Build>
+		<Revision>$([MSBuild]::Divide($([System.DateTime]::get_Now().get_TimeOfDay().get_TotalMinutes()), 2).ToString('F0'))</Revision>
+		<Version>0.0.$(Build).$(Revision)</Version>
+		<Authors>Rex Cardan, PhD</Authors>
+		<Company>Red Ion LLC</Company>
+		<Description>Evil DICOM with a twist: OpenCV matrices and computer vision components. Useful for advanced operations with DICOM files.</Description>
+		<Copyright>Red Ion LLC © 2024</Copyright>
+		<PackageProjectUrl>http://rexcardan.github.io/Evil-DICOM/</PackageProjectUrl>
+		<PackageIconUrl />
+		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="EvilDICOM" Version="2.0.6.1" />
-    <PackageReference Include="OpenCvSharp4.Windows" Version="4.2.0.20200208" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="EvilDICOM" Version="2.0.6.5" />
+		<PackageReference Include="OpenCvSharp4.Windows" Version="4.10.0.20240616" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <None Include="F:\OneDrive\Cardan.Design\Artwork\Logos\Evil Dicom\evilEye.png">
-      <Pack>True</Pack>
-      <PackagePath></PackagePath>
-    </None>
-  </ItemGroup>
+	<ItemGroup>
+		<Resource Include="Resources\evilEye.png" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<None Update="Resources\evilEye.png">
+			<Pack>True</Pack>
+			<PackagePath>\</PackagePath>
+		</None>
+	</ItemGroup>
 
 </Project>

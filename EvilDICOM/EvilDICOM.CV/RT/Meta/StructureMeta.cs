@@ -78,7 +78,7 @@ namespace EvilDICOM.CV.RT.Meta
 
             var contoursToSlice = new Func<IEnumerable<SliceContourMeta>, Matrix, Mat>((zContours, mat) =>
             {
-                Mat toReturn = new Mat(mat.DimensionY, mat.DimensionX, MatType.CV_32FC1, zeroSlice, 0);
+                Mat toReturn = Mat.FromPixelData(mat.DimensionY, mat.DimensionX, MatType.CV_32FC1, zeroSlice, 0);
 
                 if (zContours.Any())
                 {
@@ -94,7 +94,7 @@ namespace EvilDICOM.CV.RT.Meta
                             pixels[i] = (float)dist;
                         });
                     }
-                    toReturn = new Mat(mat.DimensionY, mat.DimensionX, MatType.CV_32FC1, pixels, 0);
+                    toReturn = Mat.FromPixelData(mat.DimensionY, mat.DimensionX, MatType.CV_32FC1, pixels, 0);
                 }
                 return toReturn;
             });

@@ -29,7 +29,7 @@ namespace EvilDICOM.CV.IO
             var window = sel.WindowWidth.Data;
             var level = sel.WindowCenter.Data;
 
-            using (var im = new Mat((int)sel.Rows.Data, (int)sel.Columns.Data, MatType.CV_32FC1, pixels.ToArray()))
+            using (var im = Mat.FromPixelData((int)sel.Rows.Data, (int)sel.Columns.Data, MatType.CV_32FC1, pixels.ToArray()))
             {
                 drr.Image = im.WindowAndLevel(level, window).CvtColor(ColorConversionCodes.GRAY2BGR);
             }

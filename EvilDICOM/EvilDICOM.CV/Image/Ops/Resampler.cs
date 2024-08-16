@@ -37,7 +37,7 @@ namespace EvilDICOM.CV.Image.Ops
                 var zPos = matrix.Origin.Z +
                     (Transform.TransformOffset(new Vector3(0, 0, z), matrix.ImageOrientation).Z) * matrix.ZRes;
                 var slice = m.GetZPlane(zPos);
-                var resize = slice.Resize(Size.Zero, xScale, yScale);
+                var resize = slice.Resize(new Size(0,0), xScale, yScale);
                 slice.Dispose();
                 matrix.SetZPlaneBySlice(resize.Clone(), z);
                 resize.Dispose();

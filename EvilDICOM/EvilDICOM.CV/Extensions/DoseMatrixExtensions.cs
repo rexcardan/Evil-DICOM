@@ -49,7 +49,7 @@ namespace EvilDICOM.CV.Extensions
                     var yCenterPix = (float)((yCenter - y0) / d1.YRes * d1.YRes / im.YRes);
 
                     //Scale to same resolution
-                    zPlane = zPlane.Resize(Size.Zero, d1.XRes / im.XRes, d1.YRes / im.YRes);
+                    zPlane = zPlane.Resize(new Size(0,0), d1.XRes / im.XRes, d1.YRes / im.YRes);
 
                     Mat projectedMat = new Mat();
                     Cv2.GetRectSubPix(zPlane, new Size(im.DimensionX, im.DimensionY), new Point2f(xCenterPix, yCenterPix), projectedMat);
@@ -65,7 +65,7 @@ namespace EvilDICOM.CV.Extensions
             }
 
             //Return empty plane
-            return new Mat(im.DimensionY, im.DimensionX, MatType.CV_32FC1, projected);
+            return Mat.FromPixelData(im.DimensionY, im.DimensionX, MatType.CV_32FC1, projected);
         }
 
         public static DoseMatrix ResampleToImage(this DoseMatrix d1, ImageMatrix im)

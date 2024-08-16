@@ -205,7 +205,7 @@ namespace EvilDICOM.CV.Image
             else
             {
                 //Return empty
-                return new Mat(DimensionY, DimensionX, _mat.Type(), new float[DimensionX * DimensionY]);
+                return Mat.FromPixelData(DimensionY, DimensionX, _mat.Type(), new float[DimensionX * DimensionY]);
             }
         }
 
@@ -225,9 +225,9 @@ namespace EvilDICOM.CV.Image
                 });
                 var firstLessThan = ordered.LastOrDefault(o => o.Value <= xPositionMM);
                 //If close enough, send this plane
-                if (Math.Abs(firstLessThan.Value - xPositionMM) < 0.001) { return GetXPlaneBySlice(firstLessThan.Key - 1).Resize(Size.Zero, xScale, yScale); }
+                if (Math.Abs(firstLessThan.Value - xPositionMM) < 0.001) { return GetXPlaneBySlice(firstLessThan.Key - 1).Resize(new Size(0,0), xScale, yScale); }
                 var firstMoreThan = ordered.FirstOrDefault(o => o.Value >= xPositionMM);
-                if (Math.Abs(firstMoreThan.Value - xPositionMM) < 0.001) { return GetXPlaneBySlice(firstMoreThan.Key - 1).Resize(Size.Zero, xScale, yScale); }
+                if (Math.Abs(firstMoreThan.Value - xPositionMM) < 0.001) { return GetXPlaneBySlice(firstMoreThan.Key - 1).Resize(new Size(0,0), xScale, yScale); }
 
                 //Otherwise interpolate
                 var zd = (xPositionMM - firstLessThan.Value) / (firstMoreThan.Value - firstLessThan.Value);
@@ -236,13 +236,13 @@ namespace EvilDICOM.CV.Image
                 Mat interpolated = lowPlane.EmptyClone();
                 Cv2.AddWeighted(lowPlane, zd, highPlane, 1 - zd, 0, interpolated);
 
-                interpolated = interpolated.Resize(Size.Zero, xScale, yScale);
+                interpolated = interpolated.Resize(new Size(0,0), xScale, yScale);
                 return interpolated;
             }
             else
             {
                 //Return empty
-                return new Mat(DimensionZ, DimensionY, _mat.Type()).Resize(Size.Zero, xScale, yScale);
+                return new Mat(DimensionZ, DimensionY, _mat.Type()).Resize(new Size(0,0), xScale, yScale);
             }
         }
 
@@ -261,9 +261,9 @@ namespace EvilDICOM.CV.Image
                 });
                 var firstLessThan = ordered.LastOrDefault(o => o.Value <= yPositionMM);
                 //If close enough, send this plane
-                if (Math.Abs(firstLessThan.Value - yPositionMM) < 0.001) { return GetYPlaneBySlice(firstLessThan.Key - 1).Resize(Size.Zero, xScale, yScale); }
+                if (Math.Abs(firstLessThan.Value - yPositionMM) < 0.001) { return GetYPlaneBySlice(firstLessThan.Key - 1).Resize(new Size(0,0), xScale, yScale); }
                 var firstMoreThan = ordered.FirstOrDefault(o => o.Value >= yPositionMM);
-                if (Math.Abs(firstMoreThan.Value - yPositionMM) < 0.001) { return GetYPlaneBySlice(firstMoreThan.Key - 1).Resize(Size.Zero, xScale, yScale); }
+                if (Math.Abs(firstMoreThan.Value - yPositionMM) < 0.001) { return GetYPlaneBySlice(firstMoreThan.Key - 1).Resize(new Size(0,0), xScale, yScale); }
 
                 //Otherwise interpolate
                 var zd = (yPositionMM - firstLessThan.Value) / (firstMoreThan.Value - firstLessThan.Value);
@@ -271,13 +271,13 @@ namespace EvilDICOM.CV.Image
                 var highPlane = GetYPlaneBySlice(firstMoreThan.Key - 1);
                 Mat interpolated = lowPlane.EmptyClone();
                 Cv2.AddWeighted(lowPlane, zd, highPlane, 1 - zd, 0, interpolated);
-                interpolated = interpolated.Resize(Size.Zero, xScale, yScale);
+                interpolated = interpolated.Resize(new Size(0,0), xScale, yScale);
                 return interpolated;
             }
             else
             {
                 //Return empty
-                return new Mat(DimensionZ, DimensionY, _mat.Type()).Resize(Size.Zero, xScale, yScale);
+                return new Mat(DimensionZ, DimensionY, _mat.Type()).Resize(new Size(0,0), xScale, yScale);
             }
         }
 
@@ -435,7 +435,7 @@ namespace EvilDICOM.CV.Image
         {
             CalculatePatientTransformMatrix();
             CalculateBounds();
-            _mat = new Mat(new int[] { DimensionZ, DimensionY, DimensionX }, MatType.CV_32FC1, values).Clone();
+            _mat = Mat.FromPixelData(new int[] { DimensionZ, DimensionY, DimensionX }, MatType.CV_32FC1, values).Clone();
         }
 
         public void CalculatePatientTransformMatrix()
@@ -448,7 +448,7 @@ namespace EvilDICOM.CV.Image
                 {0,0,0,1 }
             };
 
-            PatientTransformMatrix = new Mat(4, 4, MatType.CV_64FC1, txValues);
+            PatientTransformMatrix = Mat.FromPixelData(4, 4, MatType.CV_64FC1, txValues);
         }
 
 

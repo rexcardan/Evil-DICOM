@@ -24,56 +24,56 @@ namespace EvilDICOM.CV.Helpers
             switch (orient)
             {
                 case HFS:
-                    return new Mat<float>(new Mat(4, 4, MatType.CV_32FC1,
+                    return new Mat<float>(Mat.FromPixelData(4, 4, MatType.CV_32FC1,
                   new float[] {
                         1, 0, 0, 0,
                         0, 0, -1, 0,
                         0, 1, 0, 0,
                         0, 0, 0, 1 }));
                 case HFP:
-                    return new Mat<float>(new Mat(4, 4, MatType.CV_32FC1,
+                    return new Mat<float>(Mat.FromPixelData(4, 4, MatType.CV_32FC1,
                         new float[] {
                        -1, 0, 0, 0,
                        0, 0, 1, 0,
                        0, 1, 0, 0,
                        0, 0, 0, 1 }));
                 case FFS:
-                    return new Mat<float>(new Mat(4, 4, MatType.CV_32FC1,
+                    return new Mat<float>(Mat.FromPixelData(4, 4, MatType.CV_32FC1,
                         new float[] {
                        -1, 0, 0, 0,
                        0, 0, -1, 0,
                        0, -1, 0, 0,
                        0, 0, 0, 1 }));
                 case FFP:
-                    return new Mat<float>(new Mat(4, 4, MatType.CV_32FC1,
+                    return new Mat<float>(Mat.FromPixelData(4, 4, MatType.CV_32FC1,
                          new float[] {
                        1, 0, 0, 0,
                        0, 0, 1, 0,
                        0, -1, 0, 0,
                        0, 0, 0, 1 }));
                 case HFDL:
-                    return new Mat<float>(new Mat(4, 4, MatType.CV_32FC1,
+                    return new Mat<float>(Mat.FromPixelData(4, 4, MatType.CV_32FC1,
                           new float[] {
                        0, 0, -1, 0,
                        -1, 0, 0, 0,
                        0, 1, 0, 0,
                        0, 0, 0, 1 }));
                 case HFDR:
-                    return new Mat<float>(new Mat(4, 4, MatType.CV_32FC1,
+                    return new Mat<float>(Mat.FromPixelData(4, 4, MatType.CV_32FC1,
                            new float[] {
                        0, 0, 1, 0,
                        1, 0, 0, 0,
                        0, 1, 0, 0,
                        0, 0, 0, 1 }));
                 case FFDL:
-                    return new Mat<float>(new Mat(4, 4, MatType.CV_32FC1,
+                    return new Mat<float>(Mat.FromPixelData(4, 4, MatType.CV_32FC1,
                           new float[] {
                        0, 0, -1, 0,
                        1, 0, 0, 0,
                        0, -1, 0, 0,
                        0, 0, 0, 1 }));
                 case FFDR:
-                    return new Mat<float>(new Mat(4, 4, MatType.CV_32FC1,
+                    return new Mat<float>(Mat.FromPixelData(4, 4, MatType.CV_32FC1,
                          new float[] {
                        0, 0, 1, 0,
                        -1, 0, 0, 0,
