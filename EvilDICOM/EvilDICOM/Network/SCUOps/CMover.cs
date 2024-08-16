@@ -28,45 +28,45 @@ namespace EvilDICOM.Network.SCUOps
         /// <param name="scp">the provider which will perform the move</param>
         /// <param name="sopUid">the uid of the image to be moved</param>
         /// <param name="patientId">the patient id of the image</param>
-        /// <param name="toAETite">the entity title which will receive the image</param>
+        /// <param name="toAETitle">the entity title which will receive the image</param>
         /// <param name="msgId">the message id</param>
         /// <returns>the move response</returns>
-        public CMoveResponse SendCMove(CFindInstanceIOD iod, string toAETite, ref ushort msgId)
+        public CMoveResponse SendCMove(CFindInstanceIOD iod, string toAETitle, ref ushort msgId)
         {
             var result = new CMoveIOD
             {
                 QueryLevel = QueryLevel.IMAGE,
                 SOPInstanceUID = iod.SOPInstanceUID
             };
-            var request = new CMoveRequest(result, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
+            var request = new CMoveRequest(result, toAETitle, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
             return _scu.GetResponse<CMoveResponse, CMoveRequest>(request, callingEntity, ref msgId);
         }
 
-        public CMoveResponse SendCMove(CFindSeriesIOD iod, string toAETite, ref ushort msgId)
+        public CMoveResponse SendCMove(CFindSeriesIOD iod, string toAETitle, ref ushort msgId)
         {
             var result = new CMoveIOD
             {
                 QueryLevel = QueryLevel.SERIES,
                 SeriesInstanceUID = iod.SeriesInstanceUID
             };
-            var request = new CMoveRequest(result, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
+            var request = new CMoveRequest(result, toAETitle, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
             return _scu.GetResponse<CMoveResponse, CMoveRequest>(request, callingEntity, ref msgId);
         }
 
-        public CMoveResponse SendCMove(CMoveIOD iod, string toAETite, ref ushort msgId)
+        public CMoveResponse SendCMove(CMoveIOD iod, string toAETitle, ref ushort msgId)
         {
-            var request = new CMoveRequest(iod, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
+            var request = new CMoveRequest(iod, toAETitle, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
             return _scu.GetResponse<CMoveResponse, CMoveRequest>(request, callingEntity, ref msgId);
         }
 
-        public CMoveResponse SendCMove(CFindStudyIOD iod, string toAETite, ref ushort msgId)
+        public CMoveResponse SendCMove(CFindStudyIOD iod, string toAETitle, ref ushort msgId)
         {
             var result = new CMoveIOD
             {
                 QueryLevel = QueryLevel.STUDY,
                 StudyInstanceUID = iod.StudyInstanceUID,
             };
-            var request = new CMoveRequest(result, toAETite, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
+            var request = new CMoveRequest(result, toAETitle, Root.STUDY, Core.Enums.Priority.MEDIUM, msgId);
             return _scu.GetResponse<CMoveResponse, CMoveRequest>(request, callingEntity, ref msgId);
         }
 
