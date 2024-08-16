@@ -21,6 +21,11 @@ namespace EvilDICOM.Network
         private bool _started;
         private bool _requestStop = false;
 
+        /// <summary>
+        /// IdleTimeout in milliseconds. Default value: 25000ms.
+        /// </summary>
+        public int IdleTimeout { get; set; } = 25000; // 25 sec
+
         public DICOMSCP(Entity ae) : base(ae)
         {
             _server = new TcpListener(IPAddress.Parse(ApplicationEntity.IpAddress), ApplicationEntity.Port);
@@ -67,7 +72,7 @@ namespace EvilDICOM.Network
             {
                 var asc = GenerateAssociation(client);
                 Logger.LogInformation(asc.ToString());
-                asc.Listen();
+                asc.Listen(TimeSpan.FromMilliseconds(IdleTimeout));
                 Logger.LogInformation("Closing association with {0}.", asc.IpAddress, asc.Port);
                 client.Close();
             });
