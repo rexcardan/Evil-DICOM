@@ -86,35 +86,11 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">SliceContourMeta</span></div>
               </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:EvilDICOM.CV.RT.Meta</h6>
               <h6><strong>Assembly</strong>:EvilDICOM.CV.dll</h6>
               <h5 id="_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class SliceContourMeta</code></pre>
+                <pre><code class="lang-csharp hljs">public class SliceContourMeta : object</code></pre>
               </div>
               <h3 id="properties">Properties
               </h3>
@@ -140,7 +116,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="EvilDICOM.CV.RT.Meta.SliceContourMeta.html">SliceContourMeta</a>&gt;</td>
+                    <td><span class="xref">List</span>&lt;<a class="xref" href="EvilDICOM.CV.RT.Meta.SliceContourMeta.html">SliceContourMeta</a>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -154,7 +130,7 @@
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public List&lt;Point2f&gt; ContourPoints { get; }</code></pre>
+                <pre><code class="lang-csharp hljs">public List&lt;OpenCvSharp.Point2f&gt; ContourPoints { get; }</code></pre>
               </div>
               <h5 class="propertyValue">Property Value</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -166,7 +142,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">OpenCvSharp.Point2f</span>&gt;</td>
+                    <td><span class="xref">List</span>&lt;<span class="xref">OpenCvSharp.Point2f</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -203,12 +179,12 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs/#L18">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.RT.Meta.SliceContourMeta.AddPoint(OpenCvSharp.Point3f)">AddPoint(Point3f)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.RT.Meta.SliceContourMeta.AddPoint(OpenCvSharp.Point3f)">AddPoint(OpenCvSharp.Point3f)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void AddPoint(Point3f pt)</code></pre>
+                <pre><code class="lang-csharp hljs">public void AddPoint(OpenCvSharp.Point3f pt)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -300,12 +276,12 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs/#L57">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.RT.Meta.SliceContourMeta.DrawOnSlice(OpenCvSharp.Mat,OpenCvSharp.Mat,System.Double)">DrawOnSlice(Mat, Mat, Double)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.RT.Meta.SliceContourMeta.DrawOnSlice(Mat,Mat,System.Double)">DrawOnSlice(Mat, Mat, Double)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public Mat DrawOnSlice(Mat txMatrix, Mat slice, double scale = 1)</code></pre>
+                <pre><code class="lang-csharp hljs">public Mat DrawOnSlice(Mat txMatrix, Mat slice, double scale = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -318,12 +294,12 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>txMatrix</em></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>slice</em></td>
                     <td></td>
                   </tr>
@@ -344,7 +320,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -353,7 +329,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs/#L120">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage(OpenCvSharp.Mat,OpenCvSharp.Vec2f[],System.Byte)">MaskImage(Mat, Vec2f[], Byte)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage(Mat,Vec2f[],System.Byte)">MaskImage(Mat, Vec2f[], Byte)</h4>
               <div class="markdown level1 summary"><p>Masks an image of the same voxel count as the input doseGrid. Voxels inside the
 contour are filled with the specified color. Intent is white (0x255) on inside and outside
 areas/holes are left black (0x00)</p>
@@ -361,7 +337,7 @@ areas/holes are left black (0x00)</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MaskImage(Mat mask, Vec2f[] doseGridPts, byte color = 255)</code></pre>
+                <pre><code class="lang-csharp hljs">public void MaskImage(Mat mask, Vec2f[] doseGridPts, byte color = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -374,13 +350,13 @@ areas/holes are left black (0x00)</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>mask</em></td>
                     <td><p>the mask to fill or modify (recursively)</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Vec2f</span>[]</td>
+                    <td><span class="xref">Vec2f</span>[]</td>
                     <td><em>doseGridPts</em></td>
                     <td><p>the 2d (x,y) patient coordinates of the dose matrix slices</p>
 </td>
@@ -397,7 +373,7 @@ areas/holes are left black (0x00)</p>
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs/#L86">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImageFast(OpenCvSharp.Mat,OpenCvSharp.Mat,System.Byte,System.Double)">MaskImageFast(Mat, Mat, Byte, Double)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImageFast(Mat,Mat,System.Byte,System.Double)">MaskImageFast(Mat, Mat, Byte, Double)</h4>
               <div class="markdown level1 summary"><p>Masks an image of the same voxel count as the input doseGrid. Voxels inside the
 contour are filled with the specified color. Intent is white (0x255) on inside and outside
 areas/holes are left black (0x00)</p>
@@ -405,7 +381,7 @@ areas/holes are left black (0x00)</p>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public void MaskImageFast(Mat mask, Mat txMatrix, byte color = 255, double scale = 1)</code></pre>
+                <pre><code class="lang-csharp hljs">public void MaskImageFast(Mat mask, Mat txMatrix, byte color = null, double scale = null)</code></pre>
               </div>
               <h5 class="parameters">Parameters</h5>
               <table class="table table-bordered table-striped table-condensed">
@@ -418,13 +394,13 @@ areas/holes are left black (0x00)</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>mask</em></td>
                     <td><p>the mask to fill or modify (recursively)</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>txMatrix</em></td>
                     <td><p>the patient transform matrix from the imagematrix/dosematrix</p>
 </td>

@@ -19,7 +19,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Helpers/IpHelper.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: IpHelper
     path: ../EvilDICOM/Network/Helpers/IpHelper.cs
     startLine: 11
@@ -60,7 +60,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Helpers/IpHelper.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Logger
     path: ../EvilDICOM/Network/Helpers/IpHelper.cs
     startLine: 13
@@ -93,7 +93,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Helpers/IpHelper.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: LocalIPAddress
     path: ../EvilDICOM/Network/Helpers/IpHelper.cs
     startLine: 15
@@ -127,7 +127,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Helpers/IpHelper.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: VerifyIPAddress
     path: ../EvilDICOM/Network/Helpers/IpHelper.cs
     startLine: 29
@@ -143,7 +143,7 @@ items:
       type: System.Int32
     return:
       type: System.ValueTuple{System.Net.IPEndPoint,System.Boolean}
-    content.vb: Public Shared Function VerifyIPAddress(inputIpAddress As String, port As Integer) As(Address As IPEndPoint, Success As Boolean)
+    content.vb: Public Shared Function VerifyIPAddress(inputIpAddress As String, port As Integer) As(Address As IPEndPoint, Success As Boolean)(Of IPEndPoint , Boolean)
   overload: EvilDICOM.Network.Helpers.IpHelper.VerifyIPAddress*
   modifiers.csharp:
   - public
@@ -489,17 +489,17 @@ references:
 - uid: System.ValueTuple{System.Net.IPEndPoint,System.Boolean}
   commentId: T:System.ValueTuple{System.Net.IPEndPoint,System.Boolean}
   parent: System
-  isExternal: true
-  name: ValueTuple<IPEndPoint, Boolean>
-  nameWithType: ValueTuple<IPEndPoint, Boolean>
+  definition: System.ValueTuple`2
+  name: (T1, T2)<IPEndPoint, Boolean>
+  nameWithType: (T1, T2)<IPEndPoint, Boolean>
   fullName: System.ValueTuple<System.Net.IPEndPoint, System.Boolean>
-  nameWithType.vb: ValueTuple(Of IPEndPoint, Boolean)
+  nameWithType.vb: (T1, T2)(Of IPEndPoint, Boolean)
   fullName.vb: System.ValueTuple(Of System.Net.IPEndPoint, System.Boolean)
-  name.vb: ValueTuple(Of IPEndPoint, Boolean)
+  name.vb: (T1, T2)(Of IPEndPoint, Boolean)
   spec.csharp:
   - uid: System.ValueTuple`2
-    name: ValueTuple
-    nameWithType: ValueTuple
+    name: (T1, T2)
+    nameWithType: (T1, T2)
     fullName: System.ValueTuple
     isExternal: true
   - name: <
@@ -523,8 +523,8 @@ references:
     fullName: '>'
   spec.vb:
   - uid: System.ValueTuple`2
-    name: ValueTuple
-    nameWithType: ValueTuple
+    name: (T1, T2)
+    nameWithType: (T1, T2)
     fullName: System.ValueTuple
     isExternal: true
   - name: '(Of '
@@ -543,6 +543,57 @@ references:
     nameWithType: Boolean
     fullName: System.Boolean
     isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  isExternal: true
+  name: (T1, T2)<T1, T2>
+  nameWithType: (T1, T2)<T1, T2>
+  fullName: System.ValueTuple<T1, T2>
+  nameWithType.vb: (T1, T2)(Of T1, T2)
+  fullName.vb: System.ValueTuple(Of T1, T2)
+  name.vb: (T1, T2)(Of T1, T2)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
   - name: )
     nameWithType: )
     fullName: )

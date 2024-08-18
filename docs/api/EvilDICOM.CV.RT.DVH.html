@@ -84,35 +84,11 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">DVH</span></div>
               </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:EvilDICOM.CV.RT</h6>
               <h6><strong>Assembly</strong>:EvilDICOM.CV.dll</h6>
               <h5 id="_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class DVH</code></pre>
+                <pre><code class="lang-csharp hljs">public class DVH : object</code></pre>
               </div>
               <h3 id="constructors">Constructors
               </h3>
@@ -188,7 +164,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/RT/DVH.cs/#L32">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.RT.DVH.AddSliceToDVH(OpenCvSharp.Mat,OpenCvSharp.Mat)">AddSliceToDVH(Mat, Mat)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.RT.DVH.AddSliceToDVH(Mat,Mat)">AddSliceToDVH(Mat, Mat)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -206,12 +182,12 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>doseSlice</em></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>mask</em></td>
                     <td></td>
                   </tr>
@@ -238,7 +214,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="EvilDICOM.RT.Data.DVH.DVHData.html">DVHData</a></td>
+                    <td><span class="xref">DVHData</span></td>
                     <td></td>
                   </tr>
                 </tbody>

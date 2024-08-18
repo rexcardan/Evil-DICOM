@@ -84,30 +84,6 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Matrix</span></div>
               </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:EvilDICOM.CV.Image</h6>
               <h6><strong>Assembly</strong>:EvilDICOM.CV.dll</h6>
               <h5 id="_syntax">Syntax</h5>
@@ -241,7 +217,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.ValueTuple</span>&lt;<a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a>, <a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a>, <a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a>&gt;</td>
+                    <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">Vector3</span>, <span class="xref">Vector3</span>, <span class="xref">Vector3</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -267,7 +243,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a></td>
+                    <td><span class="xref">Vector3</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -293,7 +269,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -701,8 +677,6 @@
               <div class="codewrapper">
                 <pre><code class="lang-csharp hljs">public void Dispose()</code></pre>
               </div>
-              <h5 class="implements">Implements</h5>
-                  <div><span class="xref">System.IDisposable.Dispose()</span></div>
               
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Image/Matrix.cs/#L524">View Source</a>
@@ -795,53 +769,9 @@ for deciding if a pixel is inside of a contour.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Point2f</span>[]</td>
+                    <td><span class="xref">Point2f</span>[]</td>
                     <td><p>2D vector array corresponding to concatenated voxel rows</p>
 </td>
-                  </tr>
-                </tbody>
-              </table>
-              
-              <span class="small pull-right mobile-hide">
-                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Image/Matrix.cs/#L413">View Source</a>
-              </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)">GetPointValue(Vector3)</h4>
-              <div class="markdown level1 summary"><p>Retrieves the point value in the matrix. Inefficient but useful for single point queries</p>
-</div>
-              <div class="markdown level1 conceptual"></div>
-              <h5 class="decalaration">Declaration</h5>
-              <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public float GetPointValue(Vector3 pt)</code></pre>
-              </div>
-              <h5 class="parameters">Parameters</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Name</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a></td>
-                    <td><em>pt</em></td>
-                    <td></td>
-                  </tr>
-                </tbody>
-              </table>
-              <h5 class="returns">Returns</h5>
-              <table class="table table-bordered table-striped table-condensed">
-                <thead>
-                  <tr>
-                    <th>Type</th>
-                    <th>Description</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr>
-                    <td><span class="xref">System.Single</span></td>
-                    <td></td>
                   </tr>
                 </tbody>
               </table>
@@ -879,6 +809,50 @@ for deciding if a pixel is inside of a contour.</p>
                   <tr>
                     <td><span class="xref">System.Double</span></td>
                     <td><em>z</em></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              <h5 class="returns">Returns</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">System.Single</span></td>
+                    <td></td>
+                  </tr>
+                </tbody>
+              </table>
+              
+              <span class="small pull-right mobile-hide">
+                <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Image/Matrix.cs/#L413">View Source</a>
+              </span>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Image.Matrix.GetPointValue(Vector3)">GetPointValue(Vector3)</h4>
+              <div class="markdown level1 summary"><p>Retrieves the point value in the matrix. Inefficient but useful for single point queries</p>
+</div>
+              <div class="markdown level1 conceptual"></div>
+              <h5 class="decalaration">Declaration</h5>
+              <div class="codewrapper">
+                <pre><code class="lang-csharp hljs">public float GetPointValue(Vector3 pt)</code></pre>
+              </div>
+              <h5 class="parameters">Parameters</h5>
+              <table class="table table-bordered table-striped table-condensed">
+                <thead>
+                  <tr>
+                    <th>Type</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><span class="xref">Vector3</span></td>
+                    <td><em>pt</em></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -989,7 +963,7 @@ for deciding if a pixel is inside of a contour.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1032,7 +1006,7 @@ for deciding if a pixel is inside of a contour.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1075,7 +1049,7 @@ for deciding if a pixel is inside of a contour.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1118,7 +1092,7 @@ for deciding if a pixel is inside of a contour.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1161,7 +1135,7 @@ for deciding if a pixel is inside of a contour.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1204,7 +1178,7 @@ for deciding if a pixel is inside of a contour.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1213,7 +1187,7 @@ for deciding if a pixel is inside of a contour.</p>
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Image/Matrix.cs/#L423">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)">ImageToPatientTx(Vector3)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Image.Matrix.ImageToPatientTx(Vector3)">ImageToPatientTx(Vector3)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1231,7 +1205,7 @@ for deciding if a pixel is inside of a contour.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a></td>
+                    <td><span class="xref">Vector3</span></td>
                     <td><em>pos</em></td>
                     <td></td>
                   </tr>
@@ -1247,7 +1221,7 @@ for deciding if a pixel is inside of a contour.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a></td>
+                    <td><span class="xref">Vector3</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -1256,7 +1230,7 @@ for deciding if a pixel is inside of a contour.</p>
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Image/Matrix.cs/#L328">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)">IsInBounds(Vector3)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Image.Matrix.IsInBounds(Vector3)">IsInBounds(Vector3)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1274,7 +1248,7 @@ for deciding if a pixel is inside of a contour.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a></td>
+                    <td><span class="xref">Vector3</span></td>
                     <td><em>pt</em></td>
                     <td></td>
                   </tr>
@@ -1492,7 +1466,7 @@ for deciding if a pixel is inside of a contour.</p>
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Image/Matrix.cs/#L42">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)">SetZPlaneBySlice(Mat, Int32)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(Mat,System.Int32)">SetZPlaneBySlice(Mat, Int32)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -1510,7 +1484,7 @@ for deciding if a pixel is inside of a contour.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>insert</em></td>
                     <td></td>
                   </tr>

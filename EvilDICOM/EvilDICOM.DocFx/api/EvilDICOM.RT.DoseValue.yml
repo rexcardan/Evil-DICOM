@@ -21,7 +21,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DoseValue
     path: ../EvilDICOM/RT/DoseValue.cs
     startLine: 5
@@ -61,7 +61,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: X
     path: ../EvilDICOM/RT/DoseValue.cs
     startLine: 7
@@ -69,7 +69,7 @@ items:
   - EvilDICOM
   namespace: EvilDICOM.RT
   syntax:
-    content: public double X { get; set; }
+    content: public double X { readonly get; set; }
     parameters: []
     return:
       type: System.Double
@@ -77,7 +77,7 @@ items:
   overload: EvilDICOM.RT.DoseValue.X*
   modifiers.csharp:
   - public
-  - get
+  - readonly get
   - set
   modifiers.vb:
   - Public
@@ -96,7 +96,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Y
     path: ../EvilDICOM/RT/DoseValue.cs
     startLine: 8
@@ -104,7 +104,7 @@ items:
   - EvilDICOM
   namespace: EvilDICOM.RT
   syntax:
-    content: public double Y { get; set; }
+    content: public double Y { readonly get; set; }
     parameters: []
     return:
       type: System.Double
@@ -112,7 +112,7 @@ items:
   overload: EvilDICOM.RT.DoseValue.Y*
   modifiers.csharp:
   - public
-  - get
+  - readonly get
   - set
   modifiers.vb:
   - Public
@@ -131,7 +131,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Z
     path: ../EvilDICOM/RT/DoseValue.cs
     startLine: 9
@@ -139,7 +139,7 @@ items:
   - EvilDICOM
   namespace: EvilDICOM.RT
   syntax:
-    content: public double Z { get; set; }
+    content: public double Z { readonly get; set; }
     parameters: []
     return:
       type: System.Double
@@ -147,7 +147,7 @@ items:
   overload: EvilDICOM.RT.DoseValue.Z*
   modifiers.csharp:
   - public
-  - get
+  - readonly get
   - set
   modifiers.vb:
   - Public
@@ -166,7 +166,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Dose
     path: ../EvilDICOM/RT/DoseValue.cs
     startLine: 10
@@ -174,7 +174,7 @@ items:
   - EvilDICOM
   namespace: EvilDICOM.RT
   syntax:
-    content: public double Dose { get; set; }
+    content: public double Dose { readonly get; set; }
     parameters: []
     return:
       type: System.Double
@@ -182,7 +182,7 @@ items:
   overload: EvilDICOM.RT.DoseValue.Dose*
   modifiers.csharp:
   - public
-  - get
+  - readonly get
   - set
   modifiers.vb:
   - Public
@@ -201,7 +201,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/RT/DoseValue.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: .ctor
     path: ../EvilDICOM/RT/DoseValue.cs
     startLine: 12

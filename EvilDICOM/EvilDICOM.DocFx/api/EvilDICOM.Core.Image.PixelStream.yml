@@ -24,7 +24,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Image/PixelStream.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PixelStream
     path: ../EvilDICOM/Core/Image/PixelStream.cs
     startLine: 7
@@ -90,6 +90,8 @@ items:
   - System.IO.Stream.ObjectInvariant
   - System.IO.Stream.ReadAsync(System.Byte[],System.Int32,System.Int32)
   - System.IO.Stream.Synchronized(System.IO.Stream)
+  - System.IO.Stream.ValidateBufferArguments(System.Byte[],System.Int32,System.Int32)
+  - System.IO.Stream.ValidateCopyToArguments(System.IO.Stream,System.Int32)
   - System.IO.Stream.WriteAsync(System.Byte[],System.Int32,System.Int32)
   - System.IO.Stream.CanTimeout
   - System.IO.Stream.ReadTimeout
@@ -125,7 +127,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Image/PixelStream.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: .ctor
     path: ../EvilDICOM/Core/Image/PixelStream.cs
     startLine: 9
@@ -161,7 +163,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Image/PixelStream.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetValues64
     path: ../EvilDICOM/Core/Image/PixelStream.cs
     startLine: 15
@@ -199,7 +201,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Image/PixelStream.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SetValues8
     path: ../EvilDICOM/Core/Image/PixelStream.cs
     startLine: 30
@@ -235,7 +237,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Image/PixelStream.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetValues32
     path: ../EvilDICOM/Core/Image/PixelStream.cs
     startLine: 45
@@ -273,7 +275,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Image/PixelStream.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SetValues32
     path: ../EvilDICOM/Core/Image/PixelStream.cs
     startLine: 64
@@ -313,7 +315,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Image/PixelStream.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SetValues32
     path: ../EvilDICOM/Core/Image/PixelStream.cs
     startLine: 80
@@ -353,7 +355,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Image/PixelStream.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SetValues16
     path: ../EvilDICOM/Core/Image/PixelStream.cs
     startLine: 95
@@ -393,7 +395,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Image/PixelStream.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetValues16
     path: ../EvilDICOM/Core/Image/PixelStream.cs
     startLine: 111
@@ -2562,6 +2564,145 @@ references:
     name: Stream
     nameWithType: Stream
     fullName: System.IO.Stream
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.Stream.ValidateBufferArguments(System.Byte[],System.Int32,System.Int32)
+  commentId: M:System.IO.Stream.ValidateBufferArguments(System.Byte[],System.Int32,System.Int32)
+  parent: System.IO.Stream
+  isExternal: true
+  name: ValidateBufferArguments(Byte[], Int32, Int32)
+  nameWithType: Stream.ValidateBufferArguments(Byte[], Int32, Int32)
+  fullName: System.IO.Stream.ValidateBufferArguments(System.Byte[], System.Int32, System.Int32)
+  nameWithType.vb: Stream.ValidateBufferArguments(Byte(), Int32, Int32)
+  fullName.vb: System.IO.Stream.ValidateBufferArguments(System.Byte(), System.Int32, System.Int32)
+  name.vb: ValidateBufferArguments(Byte(), Int32, Int32)
+  spec.csharp:
+  - uid: System.IO.Stream.ValidateBufferArguments(System.Byte[],System.Int32,System.Int32)
+    name: ValidateBufferArguments
+    nameWithType: Stream.ValidateBufferArguments
+    fullName: System.IO.Stream.ValidateBufferArguments
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: '[]'
+    nameWithType: '[]'
+    fullName: '[]'
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.ValidateBufferArguments(System.Byte[],System.Int32,System.Int32)
+    name: ValidateBufferArguments
+    nameWithType: Stream.ValidateBufferArguments
+    fullName: System.IO.Stream.ValidateBufferArguments
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.Byte
+    name: Byte
+    nameWithType: Byte
+    fullName: System.Byte
+    isExternal: true
+  - name: ()
+    nameWithType: ()
+    fullName: ()
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.IO.Stream.ValidateCopyToArguments(System.IO.Stream,System.Int32)
+  commentId: M:System.IO.Stream.ValidateCopyToArguments(System.IO.Stream,System.Int32)
+  parent: System.IO.Stream
+  isExternal: true
+  name: ValidateCopyToArguments(Stream, Int32)
+  nameWithType: Stream.ValidateCopyToArguments(Stream, Int32)
+  fullName: System.IO.Stream.ValidateCopyToArguments(System.IO.Stream, System.Int32)
+  spec.csharp:
+  - uid: System.IO.Stream.ValidateCopyToArguments(System.IO.Stream,System.Int32)
+    name: ValidateCopyToArguments
+    nameWithType: Stream.ValidateCopyToArguments
+    fullName: System.IO.Stream.ValidateCopyToArguments
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
+    isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+  spec.vb:
+  - uid: System.IO.Stream.ValidateCopyToArguments(System.IO.Stream,System.Int32)
+    name: ValidateCopyToArguments
+    nameWithType: Stream.ValidateCopyToArguments
+    fullName: System.IO.Stream.ValidateCopyToArguments
+    isExternal: true
+  - name: (
+    nameWithType: (
+    fullName: (
+  - uid: System.IO.Stream
+    name: Stream
+    nameWithType: Stream
+    fullName: System.IO.Stream
+    isExternal: true
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - uid: System.Int32
+    name: Int32
+    nameWithType: Int32
+    fullName: System.Int32
     isExternal: true
   - name: )
     nameWithType: )

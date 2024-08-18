@@ -43,7 +43,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PlanMeta
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 9
@@ -51,18 +51,12 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.RT.Meta
   syntax:
-    content: public class PlanMeta
-    content.vb: Public Class PlanMeta
+    content: 'public class PlanMeta : object'
+    content.vb: >-
+      Public Class PlanMeta
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -84,7 +78,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PlanId
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 11
@@ -119,7 +113,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CourseId
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 12
@@ -154,7 +148,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: StructureSetUID
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 13
@@ -189,7 +183,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PatientId
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 14
@@ -224,7 +218,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Dose
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 16
@@ -259,7 +253,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CT
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 17
@@ -294,7 +288,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: StructureSet
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 18
@@ -329,7 +323,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Beams
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 19
@@ -340,7 +334,7 @@ items:
     content: public List<BeamMeta> Beams { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.BeamMeta}
+      type: List{EvilDICOM.CV.RT.Meta.BeamMeta}
     content.vb: Public ReadOnly Property Beams As List(Of BeamMeta)
   overload: EvilDICOM.CV.RT.Meta.PlanMeta.Beams*
   modifiers.csharp:
@@ -364,7 +358,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SOPInstanceUID
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 20
@@ -399,7 +393,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SeriesUID
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 21
@@ -434,7 +428,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Status
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 22
@@ -469,7 +463,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ModifiedBy
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 23
@@ -504,7 +498,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ModifiedDate
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 24
@@ -515,8 +509,8 @@ items:
     content: public DateTime ModifiedDate { get; set; }
     parameters: []
     return:
-      type: System.DateTime
-    content.vb: Public Property ModifiedDate As Date
+      type: DateTime
+    content.vb: Public Property ModifiedDate As DateTime
   overload: EvilDICOM.CV.RT.Meta.PlanMeta.ModifiedDate*
   modifiers.csharp:
   - public
@@ -539,7 +533,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PatientName
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 25
@@ -574,7 +568,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SoftwareVersion
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 26
@@ -609,7 +603,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PrescribedDose
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 27
@@ -644,7 +638,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: NumFractions
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 28
@@ -679,7 +673,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Hospital
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 29
@@ -714,7 +708,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PrescribedDosePercentage
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 30
@@ -749,7 +743,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Approvals
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 31
@@ -760,7 +754,7 @@ items:
     content: public List<ApprovalMeta> Approvals { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.ApprovalMeta}
+      type: List{EvilDICOM.CV.RT.Meta.ApprovalMeta}
     content.vb: Public Property Approvals As List(Of ApprovalMeta)
   overload: EvilDICOM.CV.RT.Meta.PlanMeta.Approvals*
   modifiers.csharp:
@@ -784,7 +778,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ReferencesPoints
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 32
@@ -795,7 +789,7 @@ items:
     content: public List<ReferencePointMeta> ReferencesPoints { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.ReferencePointMeta}
+      type: List{EvilDICOM.CV.RT.Meta.ReferencePointMeta}
     content.vb: Public Property ReferencesPoints As List(Of ReferencePointMeta)
   overload: EvilDICOM.CV.RT.Meta.PlanMeta.ReferencesPoints*
   modifiers.csharp:
@@ -819,7 +813,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: IsVerification
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 33
@@ -854,7 +848,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: IsTreated
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 34
@@ -889,7 +883,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CalculationSettings
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 35
@@ -900,7 +894,7 @@ items:
     content: public List<CalculationOptionMeta> CalculationSettings { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.CalculationOptionMeta}
+      type: List{EvilDICOM.CV.RT.Meta.CalculationOptionMeta}
     content.vb: Public Property CalculationSettings As List(Of CalculationOptionMeta)
   overload: EvilDICOM.CV.RT.Meta.PlanMeta.CalculationSettings*
   modifiers.csharp:
@@ -924,7 +918,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Normalization
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 36
@@ -959,7 +953,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: TreatmentOrientationDescription
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 37
@@ -994,7 +988,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/PlanMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: IsDataComplete
     path: ../EvilDICOM.CV/RT/Meta/PlanMeta.cs
     startLine: 38
@@ -1027,285 +1021,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -1387,21 +1102,20 @@ references:
   name: Beams
   nameWithType: PlanMeta.Beams
   fullName: EvilDICOM.CV.RT.Meta.PlanMeta.Beams
-- uid: System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.BeamMeta}
-  commentId: T:System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.BeamMeta}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: List{EvilDICOM.CV.RT.Meta.BeamMeta}
+  commentId: '!:List{EvilDICOM.CV.RT.Meta.BeamMeta}'
+  definition: List`1
   name: List<BeamMeta>
   nameWithType: List<BeamMeta>
-  fullName: System.Collections.Generic.List<EvilDICOM.CV.RT.Meta.BeamMeta>
+  fullName: List<EvilDICOM.CV.RT.Meta.BeamMeta>
   nameWithType.vb: List(Of BeamMeta)
-  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.CV.RT.Meta.BeamMeta)
+  fullName.vb: List(Of EvilDICOM.CV.RT.Meta.BeamMeta)
   name.vb: List(Of BeamMeta)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -1414,10 +1128,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1429,51 +1143,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+- uid: List`1
   isExternal: true
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: EvilDICOM.CV.RT.Meta.PlanMeta.SOPInstanceUID*
   commentId: Overload:EvilDICOM.CV.RT.Meta.PlanMeta.SOPInstanceUID
   name: SOPInstanceUID
@@ -1499,13 +1206,11 @@ references:
   name: ModifiedDate
   nameWithType: PlanMeta.ModifiedDate
   fullName: EvilDICOM.CV.RT.Meta.PlanMeta.ModifiedDate
-- uid: System.DateTime
-  commentId: T:System.DateTime
-  parent: System
+- uid: DateTime
   isExternal: true
   name: DateTime
   nameWithType: DateTime
-  fullName: System.DateTime
+  fullName: DateTime
 - uid: EvilDICOM.CV.RT.Meta.PlanMeta.PatientName*
   commentId: Overload:EvilDICOM.CV.RT.Meta.PlanMeta.PatientName
   name: PatientName
@@ -1522,8 +1227,7 @@ references:
   nameWithType: PlanMeta.PrescribedDose
   fullName: EvilDICOM.CV.RT.Meta.PlanMeta.PrescribedDose
 - uid: System.Nullable{System.Double}
-  commentId: T:System.Nullable{System.Double}
-  parent: System
+  commentId: '!:System.Nullable{System.Double}'
   definition: System.Nullable`1
   name: Nullable<Double>
   nameWithType: Nullable<Double>
@@ -1668,21 +1372,20 @@ references:
   name: Approvals
   nameWithType: PlanMeta.Approvals
   fullName: EvilDICOM.CV.RT.Meta.PlanMeta.Approvals
-- uid: System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.ApprovalMeta}
-  commentId: T:System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.ApprovalMeta}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: List{EvilDICOM.CV.RT.Meta.ApprovalMeta}
+  commentId: '!:List{EvilDICOM.CV.RT.Meta.ApprovalMeta}'
+  definition: List`1
   name: List<ApprovalMeta>
   nameWithType: List<ApprovalMeta>
-  fullName: System.Collections.Generic.List<EvilDICOM.CV.RT.Meta.ApprovalMeta>
+  fullName: List<EvilDICOM.CV.RT.Meta.ApprovalMeta>
   nameWithType.vb: List(Of ApprovalMeta)
-  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.CV.RT.Meta.ApprovalMeta)
+  fullName.vb: List(Of EvilDICOM.CV.RT.Meta.ApprovalMeta)
   name.vb: List(Of ApprovalMeta)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -1695,10 +1398,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1715,21 +1418,20 @@ references:
   name: ReferencesPoints
   nameWithType: PlanMeta.ReferencesPoints
   fullName: EvilDICOM.CV.RT.Meta.PlanMeta.ReferencesPoints
-- uid: System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.ReferencePointMeta}
-  commentId: T:System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.ReferencePointMeta}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: List{EvilDICOM.CV.RT.Meta.ReferencePointMeta}
+  commentId: '!:List{EvilDICOM.CV.RT.Meta.ReferencePointMeta}'
+  definition: List`1
   name: List<ReferencePointMeta>
   nameWithType: List<ReferencePointMeta>
-  fullName: System.Collections.Generic.List<EvilDICOM.CV.RT.Meta.ReferencePointMeta>
+  fullName: List<EvilDICOM.CV.RT.Meta.ReferencePointMeta>
   nameWithType.vb: List(Of ReferencePointMeta)
-  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.CV.RT.Meta.ReferencePointMeta)
+  fullName.vb: List(Of EvilDICOM.CV.RT.Meta.ReferencePointMeta)
   name.vb: List(Of ReferencePointMeta)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -1742,10 +1444,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -1779,21 +1481,20 @@ references:
   name: CalculationSettings
   nameWithType: PlanMeta.CalculationSettings
   fullName: EvilDICOM.CV.RT.Meta.PlanMeta.CalculationSettings
-- uid: System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.CalculationOptionMeta}
-  commentId: T:System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.CalculationOptionMeta}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: List{EvilDICOM.CV.RT.Meta.CalculationOptionMeta}
+  commentId: '!:List{EvilDICOM.CV.RT.Meta.CalculationOptionMeta}'
+  definition: List`1
   name: List<CalculationOptionMeta>
   nameWithType: List<CalculationOptionMeta>
-  fullName: System.Collections.Generic.List<EvilDICOM.CV.RT.Meta.CalculationOptionMeta>
+  fullName: List<EvilDICOM.CV.RT.Meta.CalculationOptionMeta>
   nameWithType.vb: List(Of CalculationOptionMeta)
-  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.CV.RT.Meta.CalculationOptionMeta)
+  fullName.vb: List(Of EvilDICOM.CV.RT.Meta.CalculationOptionMeta)
   name.vb: List(Of CalculationOptionMeta)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -1806,10 +1507,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '

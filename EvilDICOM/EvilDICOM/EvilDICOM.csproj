@@ -1,7 +1,7 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
-		<TargetFrameworks>net8.0-windows;net472</TargetFrameworks>
+		<TargetFrameworks>net6.0-windows;net8.0-windows;net472</TargetFrameworks>
 		<RootNamespace>EvilDICOM</RootNamespace>
 		<GeneratePackageOnBuild>true</GeneratePackageOnBuild>
 		<Authors>Rex Cardan, PhD</Authors>
@@ -42,7 +42,6 @@
 
 	<ItemGroup>
 		<PackageReference Include="Microsoft.Extensions.Logging" Version="8.0.0" />
-		<PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="8.0.1" />
 	</ItemGroup>
 
 	<ItemGroup>

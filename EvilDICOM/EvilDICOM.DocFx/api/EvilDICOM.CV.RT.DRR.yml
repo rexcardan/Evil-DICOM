@@ -8,7 +8,7 @@ items:
   - EvilDICOM.CV.RT.DRR.Image
   - EvilDICOM.CV.RT.DRR.Iso2D
   - EvilDICOM.CV.RT.DRR.Label
-  - EvilDICOM.CV.RT.DRR.Rotate(OpenCvSharp.Point,System.Double)
+  - EvilDICOM.CV.RT.DRR.Rotate(Point,System.Double)
   langs:
   - csharp
   - vb
@@ -20,7 +20,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DRR.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DRR
     path: ../EvilDICOM.CV/RT/DRR.cs
     startLine: 10
@@ -28,18 +28,12 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.RT
   syntax:
-    content: public class DRR
-    content.vb: Public Class DRR
+    content: 'public class DRR : object'
+    content.vb: >-
+      Public Class DRR
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -61,7 +55,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DRR.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Image
     path: ../EvilDICOM.CV/RT/DRR.cs
     startLine: 14
@@ -72,7 +66,7 @@ items:
     content: public Mat Image { get; }
     parameters: []
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: Public ReadOnly Property Image As Mat
   overload: EvilDICOM.CV.RT.DRR.Image*
   modifiers.csharp:
@@ -96,7 +90,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DRR.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Label
     path: ../EvilDICOM.CV/RT/DRR.cs
     startLine: 15
@@ -131,7 +125,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DRR.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Iso2D
     path: ../EvilDICOM.CV/RT/DRR.cs
     startLine: 16
@@ -142,7 +136,7 @@ items:
     content: public Point Iso2D { get; }
     parameters: []
     return:
-      type: OpenCvSharp.Point
+      type: Point
     content.vb: Public ReadOnly Property Iso2D As Point
   overload: EvilDICOM.CV.RT.DRR.Iso2D*
   modifiers.csharp:
@@ -151,22 +145,22 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: EvilDICOM.CV.RT.DRR.Rotate(OpenCvSharp.Point,System.Double)
-  commentId: M:EvilDICOM.CV.RT.DRR.Rotate(OpenCvSharp.Point,System.Double)
-  id: Rotate(OpenCvSharp.Point,System.Double)
+- uid: EvilDICOM.CV.RT.DRR.Rotate(Point,System.Double)
+  commentId: M:EvilDICOM.CV.RT.DRR.Rotate(Point,System.Double)
+  id: Rotate(Point,System.Double)
   parent: EvilDICOM.CV.RT.DRR
   langs:
   - csharp
   - vb
   name: Rotate(Point, Double)
   nameWithType: DRR.Rotate(Point, Double)
-  fullName: EvilDICOM.CV.RT.DRR.Rotate(OpenCvSharp.Point, System.Double)
+  fullName: EvilDICOM.CV.RT.DRR.Rotate(Point, System.Double)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DRR.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Rotate
     path: ../EvilDICOM.CV/RT/DRR.cs
     startLine: 18
@@ -177,11 +171,11 @@ items:
     content: public static Point Rotate(Point pt, double collAngleDeg)
     parameters:
     - id: pt
-      type: OpenCvSharp.Point
+      type: Point
     - id: collAngleDeg
       type: System.Double
     return:
-      type: OpenCvSharp.Point
+      type: Point
     content.vb: Public Shared Function Rotate(pt As Point, collAngleDeg As Double) As Point
   overload: EvilDICOM.CV.RT.DRR.Rotate*
   modifiers.csharp:
@@ -203,285 +197,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -493,19 +208,11 @@ references:
   name: Image
   nameWithType: DRR.Image
   fullName: EvilDICOM.CV.RT.DRR.Image
-- uid: OpenCvSharp.Mat
-  commentId: T:OpenCvSharp.Mat
-  parent: OpenCvSharp
+- uid: Mat
   isExternal: true
   name: Mat
   nameWithType: Mat
-  fullName: OpenCvSharp.Mat
-- uid: OpenCvSharp
-  commentId: N:OpenCvSharp
-  isExternal: true
-  name: OpenCvSharp
-  nameWithType: OpenCvSharp
-  fullName: OpenCvSharp
+  fullName: Mat
 - uid: EvilDICOM.CV.RT.DRR.Label*
   commentId: Overload:EvilDICOM.CV.RT.DRR.Label
   name: Label
@@ -523,13 +230,11 @@ references:
   name: Iso2D
   nameWithType: DRR.Iso2D
   fullName: EvilDICOM.CV.RT.DRR.Iso2D
-- uid: OpenCvSharp.Point
-  commentId: T:OpenCvSharp.Point
-  parent: OpenCvSharp
+- uid: Point
   isExternal: true
   name: Point
   nameWithType: Point
-  fullName: OpenCvSharp.Point
+  fullName: Point
 - uid: EvilDICOM.CV.RT.DRR.Rotate*
   commentId: Overload:EvilDICOM.CV.RT.DRR.Rotate
   name: Rotate

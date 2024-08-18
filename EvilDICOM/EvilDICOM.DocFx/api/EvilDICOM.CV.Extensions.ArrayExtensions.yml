@@ -5,7 +5,7 @@ items:
   id: ArrayExtensions
   parent: EvilDICOM.CV.Extensions
   children:
-  - EvilDICOM.CV.Extensions.ArrayExtensions.ToPoint3f(System.Collections.Generic.List{System.Double})
+  - EvilDICOM.CV.Extensions.ArrayExtensions.ToPoint3f(List{System.Double})
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/ArrayExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ArrayExtensions
     path: ../EvilDICOM.CV/Extensions/ArrayExtensions.cs
     startLine: 9
@@ -25,18 +25,12 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.Extensions
   syntax:
-    content: public static class ArrayExtensions
-    content.vb: Public Module ArrayExtensions
+    content: 'public static class ArrayExtensions : object'
+    content.vb: >-
+      Public Module ArrayExtensions
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - static
@@ -44,9 +38,9 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: EvilDICOM.CV.Extensions.ArrayExtensions.ToPoint3f(System.Collections.Generic.List{System.Double})
-  commentId: M:EvilDICOM.CV.Extensions.ArrayExtensions.ToPoint3f(System.Collections.Generic.List{System.Double})
-  id: ToPoint3f(System.Collections.Generic.List{System.Double})
+- uid: EvilDICOM.CV.Extensions.ArrayExtensions.ToPoint3f(List{System.Double})
+  commentId: M:EvilDICOM.CV.Extensions.ArrayExtensions.ToPoint3f(List{System.Double})
+  id: ToPoint3f(List{System.Double})
   isExtensionMethod: true
   parent: EvilDICOM.CV.Extensions.ArrayExtensions
   langs:
@@ -54,13 +48,13 @@ items:
   - vb
   name: ToPoint3f(List<Double>)
   nameWithType: ArrayExtensions.ToPoint3f(List<Double>)
-  fullName: EvilDICOM.CV.Extensions.ArrayExtensions.ToPoint3f(System.Collections.Generic.List<System.Double>)
+  fullName: EvilDICOM.CV.Extensions.ArrayExtensions.ToPoint3f(List<System.Double>)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/ArrayExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ToPoint3f
     path: ../EvilDICOM.CV/Extensions/ArrayExtensions.cs
     startLine: 11
@@ -71,9 +65,9 @@ items:
     content: public static Point3f ToPoint3f(this List<double> array)
     parameters:
     - id: array
-      type: System.Collections.Generic.List{System.Double}
+      type: List{System.Double}
     return:
-      type: OpenCvSharp.Point3f
+      type: Point3f
     content.vb: >-
       <ExtensionAttribute>
 
@@ -86,7 +80,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: EvilDICOM.CV.Extensions.ArrayExtensions.ToPoint3f(System.Collections.Generic.List(Of System.Double))
+  fullName.vb: EvilDICOM.CV.Extensions.ArrayExtensions.ToPoint3f(List(Of System.Double))
   name.vb: ToPoint3f(List(Of Double))
 references:
 - uid: EvilDICOM.CV.Extensions
@@ -101,285 +95,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -391,21 +106,20 @@ references:
   name: ToPoint3f
   nameWithType: ArrayExtensions.ToPoint3f
   fullName: EvilDICOM.CV.Extensions.ArrayExtensions.ToPoint3f
-- uid: System.Collections.Generic.List{System.Double}
-  commentId: T:System.Collections.Generic.List{System.Double}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: List{System.Double}
+  commentId: '!:List{System.Double}'
+  definition: List`1
   name: List<Double>
   nameWithType: List<Double>
-  fullName: System.Collections.Generic.List<System.Double>
+  fullName: List<System.Double>
   nameWithType.vb: List(Of Double)
-  fullName.vb: System.Collections.Generic.List(Of System.Double)
+  fullName.vb: List(Of System.Double)
   name.vb: List(Of Double)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -419,10 +133,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -435,61 +149,46 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: OpenCvSharp.Point3f
-  commentId: T:OpenCvSharp.Point3f
-  parent: OpenCvSharp
+- uid: Point3f
   isExternal: true
   name: Point3f
   nameWithType: Point3f
-  fullName: OpenCvSharp.Point3f
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+  fullName: Point3f
+- uid: List`1
   isExternal: true
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
-- uid: OpenCvSharp
-  commentId: N:OpenCvSharp
-  isExternal: true
-  name: OpenCvSharp
-  nameWithType: OpenCvSharp
-  fullName: OpenCvSharp

@@ -18,8 +18,8 @@ items:
   - EvilDICOM.CV.Image.Matrix.EmptyClone
   - EvilDICOM.CV.Image.Matrix.ExcludeOutsideStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
   - EvilDICOM.CV.Image.Matrix.GetImageGridPointsPatientCoordinates
-  - EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
   - EvilDICOM.CV.Image.Matrix.GetPointValue(System.Double,System.Double,System.Double)
+  - EvilDICOM.CV.Image.Matrix.GetPointValue(Vector3)
   - EvilDICOM.CV.Image.Matrix.GetValueByIndex(System.Int32,System.Int32,System.Int32)
   - EvilDICOM.CV.Image.Matrix.GetXPlane(System.Double)
   - EvilDICOM.CV.Image.Matrix.GetXPlaneBySlice(System.Int32)
@@ -28,8 +28,8 @@ items:
   - EvilDICOM.CV.Image.Matrix.GetZPlane(System.Double)
   - EvilDICOM.CV.Image.Matrix.GetZPlaneBySlice(System.Int32)
   - EvilDICOM.CV.Image.Matrix.ImageOrientation
-  - EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
-  - EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.CV.Image.Matrix.ImageToPatientTx(Vector3)
+  - EvilDICOM.CV.Image.Matrix.IsInBounds(Vector3)
   - EvilDICOM.CV.Image.Matrix.MaskToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
   - EvilDICOM.CV.Image.Matrix.MinMaxVal
   - EvilDICOM.CV.Image.Matrix.Origin
@@ -37,7 +37,7 @@ items:
   - EvilDICOM.CV.Image.Matrix.PatientTransformMatrix
   - EvilDICOM.CV.Image.Matrix.Resample(System.Double,System.Double,System.Double)
   - EvilDICOM.CV.Image.Matrix.ResampleMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
-  - EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
+  - EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(Mat,System.Int32)
   - EvilDICOM.CV.Image.Matrix.VolumeCC
   - EvilDICOM.CV.Image.Matrix.XMax
   - EvilDICOM.CV.Image.Matrix.XMin
@@ -59,7 +59,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Matrix
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 16
@@ -70,22 +70,12 @@ items:
     content: 'public class Matrix : IDisposable'
     content.vb: >-
       Public Class Matrix
-          Implements IDisposable
+          Inherits IDisposable
   inheritance:
   - System.Object
   derivedClasses:
   - EvilDICOM.CV.Image.ImageMatrix
   - EvilDICOM.CV.RT.DoseMatrix
-  implements:
-  - System.IDisposable
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   extensionMethods:
   - EvilDICOM.CV.Image.Matrix.EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.RT.IsodoseLevel[])
   - EvilDICOM.CV.Image.Matrix.EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(System.Double)
@@ -112,7 +102,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: XRes
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 20
@@ -147,7 +137,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: YRes
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 21
@@ -182,7 +172,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ZRes
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 22
@@ -217,7 +207,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetZPlaneBySlice
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 24
@@ -230,29 +220,29 @@ items:
     - id: z
       type: System.Int32
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: Public Function GetZPlaneBySlice(z As Integer) As Mat
   overload: EvilDICOM.CV.Image.Matrix.GetZPlaneBySlice*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
-  commentId: M:EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
-  id: SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
+- uid: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(Mat,System.Int32)
+  commentId: M:EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(Mat,System.Int32)
+  id: SetZPlaneBySlice(Mat,System.Int32)
   parent: EvilDICOM.CV.Image.Matrix
   langs:
   - csharp
   - vb
   name: SetZPlaneBySlice(Mat, Int32)
   nameWithType: Matrix.SetZPlaneBySlice(Mat, Int32)
-  fullName: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat, System.Int32)
+  fullName: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(Mat, System.Int32)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SetZPlaneBySlice
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 41
@@ -263,7 +253,7 @@ items:
     content: public void SetZPlaneBySlice(Mat insert, int z)
     parameters:
     - id: insert
-      type: OpenCvSharp.Mat
+      type: Mat
     - id: z
       type: System.Int32
     content.vb: Public Sub SetZPlaneBySlice(insert As Mat, z As Integer)
@@ -287,7 +277,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CalculateZeroBoundaryVolumeCC
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 56
@@ -319,7 +309,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ExcludeOutsideStructure
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 96
@@ -354,7 +344,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MaskToStructure
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 121
@@ -389,7 +379,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetXPlaneBySlice
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 150
@@ -402,7 +392,7 @@ items:
     - id: x
       type: System.Int32
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: Public Function GetXPlaneBySlice(x As Integer) As Mat
   overload: EvilDICOM.CV.Image.Matrix.GetXPlaneBySlice*
   modifiers.csharp:
@@ -424,7 +414,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetYPlaneBySlice
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 165
@@ -437,7 +427,7 @@ items:
     - id: y
       type: System.Int32
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: Public Function GetYPlaneBySlice(y As Integer) As Mat
   overload: EvilDICOM.CV.Image.Matrix.GetYPlaneBySlice*
   modifiers.csharp:
@@ -459,7 +449,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetZPlane
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 180
@@ -472,7 +462,7 @@ items:
     - id: z
       type: System.Double
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: Public Function GetZPlane(z As Double) As Mat
   overload: EvilDICOM.CV.Image.Matrix.GetZPlane*
   modifiers.csharp:
@@ -494,7 +484,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetXPlane
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 211
@@ -507,7 +497,7 @@ items:
     - id: xPositionMM
       type: System.Double
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: Public Function GetXPlane(xPositionMM As Double) As Mat
   overload: EvilDICOM.CV.Image.Matrix.GetXPlane*
   modifiers.csharp:
@@ -529,7 +519,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetYPlane
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 248
@@ -542,7 +532,7 @@ items:
     - id: yPositionMM
       type: System.Double
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: Public Function GetYPlane(yPositionMM As Double) As Mat
   overload: EvilDICOM.CV.Image.Matrix.GetYPlane*
   modifiers.csharp:
@@ -564,7 +554,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: BytesAllocated
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 283
@@ -599,7 +589,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ImageOrientation
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 285
@@ -610,8 +600,8 @@ items:
     content: public (Vector3 xDir, Vector3 yDir, Vector3 zDir) ImageOrientation { get; set; }
     parameters: []
     return:
-      type: System.ValueTuple{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3}
-    content.vb: Public Property ImageOrientation As(xDir As Vector3, yDir As Vector3, zDir As Vector3)
+      type: System.ValueTuple{Vector3,Vector3,Vector3}
+    content.vb: Public Property ImageOrientation As(xDir As Vector3, yDir As Vector3, zDir As Vector3)(Of Vector3 , Vector3, Vector3)
   overload: EvilDICOM.CV.Image.Matrix.ImageOrientation*
   modifiers.csharp:
   - public
@@ -634,7 +624,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: XMax
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 309
@@ -669,7 +659,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: YMax
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 310
@@ -704,7 +694,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ZMax
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 311
@@ -739,7 +729,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: XMin
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 312
@@ -774,7 +764,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: YMin
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 313
@@ -809,7 +799,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ZMin
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 314
@@ -844,7 +834,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DimensionX
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 317
@@ -879,7 +869,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DimensionY
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 319
@@ -914,7 +904,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DimensionZ
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 321
@@ -949,7 +939,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Origin
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 323
@@ -960,7 +950,7 @@ items:
     content: public Vector3 Origin { get; set; }
     parameters: []
     return:
-      type: EvilDICOM.Core.Helpers.Vector3
+      type: Vector3
     content.vb: Public Property Origin As Vector3
   overload: EvilDICOM.CV.Image.Matrix.Origin*
   modifiers.csharp:
@@ -984,7 +974,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PatientTransformMatrix
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 325
@@ -995,7 +985,7 @@ items:
     content: public Mat PatientTransformMatrix { get; }
     parameters: []
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: Public ReadOnly Property PatientTransformMatrix As Mat
   overload: EvilDICOM.CV.Image.Matrix.PatientTransformMatrix*
   modifiers.csharp:
@@ -1004,22 +994,22 @@ items:
   modifiers.vb:
   - Public
   - ReadOnly
-- uid: EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
-  commentId: M:EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
-  id: IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+- uid: EvilDICOM.CV.Image.Matrix.IsInBounds(Vector3)
+  commentId: M:EvilDICOM.CV.Image.Matrix.IsInBounds(Vector3)
+  id: IsInBounds(Vector3)
   parent: EvilDICOM.CV.Image.Matrix
   langs:
   - csharp
   - vb
   name: IsInBounds(Vector3)
   nameWithType: Matrix.IsInBounds(Vector3)
-  fullName: EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+  fullName: EvilDICOM.CV.Image.Matrix.IsInBounds(Vector3)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: IsInBounds
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 327
@@ -1030,7 +1020,7 @@ items:
     content: public bool IsInBounds(Vector3 pt)
     parameters:
     - id: pt
-      type: EvilDICOM.Core.Helpers.Vector3
+      type: Vector3
     return:
       type: System.Boolean
     content.vb: Public Function IsInBounds(pt As Vector3) As Boolean
@@ -1054,7 +1044,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetPointValue
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 332
@@ -1093,7 +1083,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetValueByIndex
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 337
@@ -1132,7 +1122,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CropMatrixToStructure
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 342
@@ -1167,7 +1157,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ResampleMatrixToStructure
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 348
@@ -1202,7 +1192,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PadZ
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 375
@@ -1222,22 +1212,22 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
-  commentId: M:EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
-  id: GetPointValue(EvilDICOM.Core.Helpers.Vector3)
+- uid: EvilDICOM.CV.Image.Matrix.GetPointValue(Vector3)
+  commentId: M:EvilDICOM.CV.Image.Matrix.GetPointValue(Vector3)
+  id: GetPointValue(Vector3)
   parent: EvilDICOM.CV.Image.Matrix
   langs:
   - csharp
   - vb
   name: GetPointValue(Vector3)
   nameWithType: Matrix.GetPointValue(Vector3)
-  fullName: EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
+  fullName: EvilDICOM.CV.Image.Matrix.GetPointValue(Vector3)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetPointValue
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 412
@@ -1250,7 +1240,7 @@ items:
     content: public float GetPointValue(Vector3 pt)
     parameters:
     - id: pt
-      type: EvilDICOM.Core.Helpers.Vector3
+      type: Vector3
       description: ''
     return:
       type: System.Single
@@ -1261,22 +1251,22 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
-  commentId: M:EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
-  id: ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
+- uid: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(Vector3)
+  commentId: M:EvilDICOM.CV.Image.Matrix.ImageToPatientTx(Vector3)
+  id: ImageToPatientTx(Vector3)
   parent: EvilDICOM.CV.Image.Matrix
   langs:
   - csharp
   - vb
   name: ImageToPatientTx(Vector3)
   nameWithType: Matrix.ImageToPatientTx(Vector3)
-  fullName: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
+  fullName: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(Vector3)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ImageToPatientTx
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 422
@@ -1287,9 +1277,9 @@ items:
     content: public Vector3 ImageToPatientTx(Vector3 pos)
     parameters:
     - id: pos
-      type: EvilDICOM.Core.Helpers.Vector3
+      type: Vector3
     return:
-      type: EvilDICOM.Core.Helpers.Vector3
+      type: Vector3
     content.vb: Public Function ImageToPatientTx(pos As Vector3) As Vector3
   overload: EvilDICOM.CV.Image.Matrix.ImageToPatientTx*
   modifiers.csharp:
@@ -1311,7 +1301,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CalculatePatientTransformMatrix
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 440
@@ -1341,7 +1331,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetImageGridPointsPatientCoordinates
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 459
@@ -1353,7 +1343,7 @@ items:
   syntax:
     content: public Point2f[] GetImageGridPointsPatientCoordinates()
     return:
-      type: OpenCvSharp.Point2f[]
+      type: Point2f[]
       description: 2D vector array corresponding to concatenated voxel rows
     content.vb: Public Function GetImageGridPointsPatientCoordinates As Point2f()
   overload: EvilDICOM.CV.Image.Matrix.GetImageGridPointsPatientCoordinates*
@@ -1376,7 +1366,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: VolumeCC
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 479
@@ -1408,7 +1398,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ConvertIsodoseLevelToMesh
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 484
@@ -1443,7 +1433,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CalcHistogram
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 489
@@ -1478,7 +1468,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Resample
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 502
@@ -1515,7 +1505,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MinMaxVal
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 507
@@ -1526,7 +1516,7 @@ items:
     content: public (float Max, float Min) MinMaxVal()
     return:
       type: System.ValueTuple{System.Single,System.Single}
-    content.vb: Public Function MinMaxVal As(Max As Single, Min As Single)
+    content.vb: Public Function MinMaxVal As(Max As Single, Min As Single)(Of Single , Single)
   overload: EvilDICOM.CV.Image.Matrix.MinMaxVal*
   modifiers.csharp:
   - public
@@ -1547,7 +1537,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: EmptyClone
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 523
@@ -1579,7 +1569,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Dispose
     path: ../EvilDICOM.CV/Image/Matrix.cs
     startLine: 540
@@ -1590,8 +1580,6 @@ items:
     content: public void Dispose()
     content.vb: Public Sub Dispose
   overload: EvilDICOM.CV.Image.Matrix.Dispose*
-  implements:
-  - System.IDisposable.Dispose
   modifiers.csharp:
   - public
   modifiers.vb:
@@ -1609,292 +1597,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.IDisposable
-  commentId: T:System.IDisposable
-  parent: System
-  isExternal: true
-  name: IDisposable
-  nameWithType: IDisposable
-  fullName: System.IDisposable
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: EvilDICOM.CV.Image.Matrix.EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.RT.IsodoseLevel[])
   commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.Image.Matrix,EvilDICOM.CV.RT.IsodoseLevel[])
   parent: EvilDICOM.CV.Extensions.MatrixExtensions
@@ -2269,19 +1971,11 @@ references:
   name: Int32
   nameWithType: Int32
   fullName: System.Int32
-- uid: OpenCvSharp.Mat
-  commentId: T:OpenCvSharp.Mat
-  parent: OpenCvSharp
+- uid: Mat
   isExternal: true
   name: Mat
   nameWithType: Mat
-  fullName: OpenCvSharp.Mat
-- uid: OpenCvSharp
-  commentId: N:OpenCvSharp
-  isExternal: true
-  name: OpenCvSharp
-  nameWithType: OpenCvSharp
-  fullName: OpenCvSharp
+  fullName: Mat
 - uid: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice*
   commentId: Overload:EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice
   name: SetZPlaneBySlice
@@ -2354,79 +2048,141 @@ references:
   name: ImageOrientation
   nameWithType: Matrix.ImageOrientation
   fullName: EvilDICOM.CV.Image.Matrix.ImageOrientation
-- uid: System.ValueTuple{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3}
-  commentId: T:System.ValueTuple{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3}
-  parent: System
-  isExternal: true
-  name: ValueTuple<Vector3, Vector3, Vector3>
-  nameWithType: ValueTuple<Vector3, Vector3, Vector3>
-  fullName: System.ValueTuple<EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3>
-  nameWithType.vb: ValueTuple(Of Vector3, Vector3, Vector3)
-  fullName.vb: System.ValueTuple(Of EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3)
-  name.vb: ValueTuple(Of Vector3, Vector3, Vector3)
+- uid: System.ValueTuple{Vector3,Vector3,Vector3}
+  commentId: '!:System.ValueTuple{Vector3,Vector3,Vector3}'
+  definition: System.ValueTuple`3
+  name: (, , )<Vector3, Vector3, Vector3>
+  nameWithType: (, , )<Vector3, Vector3, Vector3>
+  fullName: System.ValueTuple<Vector3, Vector3, Vector3>
+  nameWithType.vb: (, , )(Of Vector3, Vector3, Vector3)
+  fullName.vb: System.ValueTuple(Of Vector3, Vector3, Vector3)
+  name.vb: (, , )(Of Vector3, Vector3, Vector3)
   spec.csharp:
   - uid: System.ValueTuple`3
-    name: ValueTuple
-    nameWithType: ValueTuple
+    name: (, , )
+    nameWithType: (, , )
     fullName: System.ValueTuple
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.ValueTuple`3
-    name: ValueTuple
-    nameWithType: ValueTuple
+    name: (, , )
+    nameWithType: (, , )
     fullName: System.ValueTuple
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`3
+  commentId: T:System.ValueTuple`3
+  isExternal: true
+  name: (T1, T2, T3)<T1, T2, T3>
+  nameWithType: (T1, T2, T3)<T1, T2, T3>
+  fullName: System.ValueTuple<T1, T2, T3>
+  nameWithType.vb: (T1, T2, T3)(Of T1, T2, T3)
+  fullName.vb: System.ValueTuple(Of T1, T2, T3)
+  name.vb: (T1, T2, T3)(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
   - name: )
     nameWithType: )
     fullName: )
@@ -2480,17 +2236,11 @@ references:
   name: Origin
   nameWithType: Matrix.Origin
   fullName: EvilDICOM.CV.Image.Matrix.Origin
-- uid: EvilDICOM.Core.Helpers.Vector3
-  commentId: T:EvilDICOM.Core.Helpers.Vector3
-  parent: EvilDICOM.Core.Helpers
+- uid: Vector3
+  isExternal: true
   name: Vector3
   nameWithType: Vector3
-  fullName: EvilDICOM.Core.Helpers.Vector3
-- uid: EvilDICOM.Core.Helpers
-  commentId: N:EvilDICOM.Core.Helpers
-  name: EvilDICOM.Core.Helpers
-  nameWithType: EvilDICOM.Core.Helpers
-  fullName: EvilDICOM.Core.Helpers
+  fullName: Vector3
 - uid: EvilDICOM.CV.Image.Matrix.PatientTransformMatrix*
   commentId: Overload:EvilDICOM.CV.Image.Matrix.PatientTransformMatrix
   name: PatientTransformMatrix
@@ -2555,28 +2305,28 @@ references:
   name: GetImageGridPointsPatientCoordinates
   nameWithType: Matrix.GetImageGridPointsPatientCoordinates
   fullName: EvilDICOM.CV.Image.Matrix.GetImageGridPointsPatientCoordinates
-- uid: OpenCvSharp.Point2f[]
+- uid: Point2f[]
   isExternal: true
   name: Point2f[]
   nameWithType: Point2f[]
-  fullName: OpenCvSharp.Point2f[]
+  fullName: Point2f[]
   nameWithType.vb: Point2f()
-  fullName.vb: OpenCvSharp.Point2f()
+  fullName.vb: Point2f()
   name.vb: Point2f()
   spec.csharp:
-  - uid: OpenCvSharp.Point2f
+  - uid: Point2f
     name: Point2f
     nameWithType: Point2f
-    fullName: OpenCvSharp.Point2f
+    fullName: Point2f
     isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: OpenCvSharp.Point2f
+  - uid: Point2f
     name: Point2f
     nameWithType: Point2f
-    fullName: OpenCvSharp.Point2f
+    fullName: Point2f
     isExternal: true
   - name: ()
     nameWithType: ()
@@ -2624,19 +2374,18 @@ references:
   nameWithType: Matrix.MinMaxVal
   fullName: EvilDICOM.CV.Image.Matrix.MinMaxVal
 - uid: System.ValueTuple{System.Single,System.Single}
-  commentId: T:System.ValueTuple{System.Single,System.Single}
-  parent: System
-  isExternal: true
-  name: ValueTuple<Single, Single>
-  nameWithType: ValueTuple<Single, Single>
+  commentId: '!:System.ValueTuple{System.Single,System.Single}'
+  definition: System.ValueTuple`2
+  name: (, )<Single, Single>
+  nameWithType: (, )<Single, Single>
   fullName: System.ValueTuple<System.Single, System.Single>
-  nameWithType.vb: ValueTuple(Of Single, Single)
+  nameWithType.vb: (, )(Of Single, Single)
   fullName.vb: System.ValueTuple(Of System.Single, System.Single)
-  name.vb: ValueTuple(Of Single, Single)
+  name.vb: (, )(Of Single, Single)
   spec.csharp:
   - uid: System.ValueTuple`2
-    name: ValueTuple
-    nameWithType: ValueTuple
+    name: (, )
+    nameWithType: (, )
     fullName: System.ValueTuple
     isExternal: true
   - name: <
@@ -2660,8 +2409,8 @@ references:
     fullName: '>'
   spec.vb:
   - uid: System.ValueTuple`2
-    name: ValueTuple
-    nameWithType: ValueTuple
+    name: (, )
+    nameWithType: (, )
     fullName: System.ValueTuple
     isExternal: true
   - name: '(Of '
@@ -2683,6 +2432,57 @@ references:
   - name: )
     nameWithType: )
     fullName: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  isExternal: true
+  name: (T1, T2)<T1, T2>
+  nameWithType: (T1, T2)<T1, T2>
+  fullName: System.ValueTuple<T1, T2>
+  nameWithType.vb: (T1, T2)(Of T1, T2)
+  fullName.vb: System.ValueTuple(Of T1, T2)
+  name.vb: (T1, T2)(Of T1, T2)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: )
+    nameWithType: )
+    fullName: )
 - uid: EvilDICOM.CV.Image.Matrix.EmptyClone*
   commentId: Overload:EvilDICOM.CV.Image.Matrix.EmptyClone
   name: EmptyClone
@@ -2693,34 +2493,3 @@ references:
   name: Dispose
   nameWithType: Matrix.Dispose
   fullName: EvilDICOM.CV.Image.Matrix.Dispose
-- uid: System.IDisposable.Dispose
-  commentId: M:System.IDisposable.Dispose
-  parent: System.IDisposable
-  isExternal: true
-  name: Dispose()
-  nameWithType: IDisposable.Dispose()
-  fullName: System.IDisposable.Dispose()
-  spec.csharp:
-  - uid: System.IDisposable.Dispose
-    name: Dispose
-    nameWithType: IDisposable.Dispose
-    fullName: System.IDisposable.Dispose
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.IDisposable.Dispose
-    name: Dispose
-    nameWithType: IDisposable.Dispose
-    fullName: System.IDisposable.Dispose
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )

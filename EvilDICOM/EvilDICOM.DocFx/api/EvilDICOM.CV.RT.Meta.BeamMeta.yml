@@ -40,7 +40,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: BeamMeta
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 9
@@ -48,18 +48,12 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.RT.Meta
   syntax:
-    content: public class BeamMeta
-    content.vb: Public Class BeamMeta
+    content: 'public class BeamMeta : object'
+    content.vb: >-
+      Public Class BeamMeta
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -81,7 +75,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Energy
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 11
@@ -116,7 +110,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ModalityAbbr
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 12
@@ -151,7 +145,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Id
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 13
@@ -186,7 +180,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MachineId
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 14
@@ -221,7 +215,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Modality
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 15
@@ -256,7 +250,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Weight
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 16
@@ -291,7 +285,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: StartingGantryAngle
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 17
@@ -326,7 +320,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: EndingGantryAngle
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 18
@@ -361,7 +355,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Wedge
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 19
@@ -396,7 +390,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CollimatorAngle
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 20
@@ -431,7 +425,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: TableAngle
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 21
@@ -466,7 +460,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SSD
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 22
@@ -501,7 +495,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MU
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 23
@@ -536,7 +530,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: X1
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 24
@@ -571,7 +565,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: X2
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 25
@@ -606,7 +600,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Y1
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 26
@@ -641,7 +635,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Y2
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 27
@@ -676,7 +670,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MLCType
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 28
@@ -711,7 +705,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: HasBlock
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 29
@@ -746,7 +740,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: HasBolus
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 30
@@ -781,7 +775,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: IsSetup
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 31
@@ -816,7 +810,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: HasWedge
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 32
@@ -851,7 +845,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Isocenter
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 33
@@ -862,7 +856,7 @@ items:
     content: public Vector3 Isocenter { get; set; }
     parameters: []
     return:
-      type: EvilDICOM.Core.Helpers.Vector3
+      type: Vector3
     content.vb: Public Property Isocenter As Vector3
   overload: EvilDICOM.CV.RT.Meta.BeamMeta.Isocenter*
   modifiers.csharp:
@@ -886,7 +880,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/BeamMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Dose
     path: ../EvilDICOM.CV/RT/Meta/BeamMeta.cs
     startLine: 34
@@ -919,285 +913,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -1284,8 +999,7 @@ references:
   nameWithType: BeamMeta.MU
   fullName: EvilDICOM.CV.RT.Meta.BeamMeta.MU
 - uid: System.Nullable{System.Double}
-  commentId: T:System.Nullable{System.Double}
-  parent: System
+  commentId: '!:System.Nullable{System.Double}'
   definition: System.Nullable`1
   name: Nullable<Double>
   nameWithType: Nullable<Double>
@@ -1423,17 +1137,11 @@ references:
   name: Isocenter
   nameWithType: BeamMeta.Isocenter
   fullName: EvilDICOM.CV.RT.Meta.BeamMeta.Isocenter
-- uid: EvilDICOM.Core.Helpers.Vector3
-  commentId: T:EvilDICOM.Core.Helpers.Vector3
-  parent: EvilDICOM.Core.Helpers
+- uid: Vector3
+  isExternal: true
   name: Vector3
   nameWithType: Vector3
-  fullName: EvilDICOM.Core.Helpers.Vector3
-- uid: EvilDICOM.Core.Helpers
-  commentId: N:EvilDICOM.Core.Helpers
-  name: EvilDICOM.Core.Helpers
-  nameWithType: EvilDICOM.Core.Helpers
-  fullName: EvilDICOM.Core.Helpers
+  fullName: Vector3
 - uid: EvilDICOM.CV.RT.Meta.BeamMeta.Dose*
   commentId: Overload:EvilDICOM.CV.RT.Meta.BeamMeta.Dose
   name: Dose

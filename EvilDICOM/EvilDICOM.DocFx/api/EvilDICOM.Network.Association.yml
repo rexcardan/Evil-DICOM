@@ -42,7 +42,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Association
     path: ../EvilDICOM/Network/Association.cs
     startLine: 26
@@ -85,7 +85,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: .ctor
     path: ../EvilDICOM/Network/Association.cs
     startLine: 32
@@ -120,7 +120,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: IsClientConnected
     path: ../EvilDICOM/Network/Association.cs
     startLine: 47
@@ -155,7 +155,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ServiceClass
     path: ../EvilDICOM/Network/Association.cs
     startLine: 55
@@ -190,7 +190,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PresentationContexts
     path: ../EvilDICOM/Network/Association.cs
     startLine: 60
@@ -227,7 +227,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: LastActive
     path: ../EvilDICOM/Network/Association.cs
     startLine: 65
@@ -264,7 +264,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: UserInfo
     path: ../EvilDICOM/Network/Association.cs
     startLine: 70
@@ -301,7 +301,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PDUProcessor
     path: ../EvilDICOM/Network/Association.cs
     startLine: 73
@@ -336,7 +336,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PDataProcessor
     path: ../EvilDICOM/Network/Association.cs
     startLine: 74
@@ -371,7 +371,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Logger
     path: ../EvilDICOM/Network/Association.cs
     startLine: 76
@@ -406,7 +406,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: OutboundMessages
     path: ../EvilDICOM/Network/Association.cs
     startLine: 81
@@ -441,7 +441,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Stream
     path: ../EvilDICOM/Network/Association.cs
     startLine: 82
@@ -476,7 +476,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Reader
     path: ../EvilDICOM/Network/Association.cs
     startLine: 83
@@ -511,7 +511,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: State
     path: ../EvilDICOM/Network/Association.cs
     startLine: 85
@@ -546,7 +546,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Listen
     path: ../EvilDICOM/Network/Association.cs
     startLine: 95
@@ -554,7 +554,7 @@ items:
   - EvilDICOM
   namespace: EvilDICOM.Network
   syntax:
-    content: public void Listen(TimeSpan? maxWaitTime = default(TimeSpan? ))
+    content: public void Listen(TimeSpan? maxWaitTime = null)
     parameters:
     - id: maxWaitTime
       type: System.Nullable{System.TimeSpan}
@@ -582,7 +582,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Read
     path: ../EvilDICOM/Network/Association.cs
     startLine: 178
@@ -617,7 +617,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Process
     path: ../EvilDICOM/Network/Association.cs
     startLine: 196
@@ -650,7 +650,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Release
     path: ../EvilDICOM/Network/Association.cs
     startLine: 213
@@ -680,7 +680,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: RequestAbort
     path: ../EvilDICOM/Network/Association.cs
     startLine: 227
@@ -710,7 +710,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ToString
     path: ../EvilDICOM/Network/Association.cs
     startLine: 232
@@ -745,7 +745,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Cancel
     path: ../EvilDICOM/Network/Association.cs
     startLine: 237
@@ -778,7 +778,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: AeTitle
     path: ../EvilDICOM/Network/Association.cs
     startLine: 248
@@ -815,7 +815,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: IpAddress
     path: ../EvilDICOM/Network/Association.cs
     startLine: 253
@@ -852,7 +852,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Port
     path: ../EvilDICOM/Network/Association.cs
     startLine: 258
@@ -889,7 +889,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: IdleClock
     path: ../EvilDICOM/Network/Association.cs
     startLine: 260
@@ -924,7 +924,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SendMessage
     path: ../EvilDICOM/Network/Association.cs
     startLine: 266
@@ -960,7 +960,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Association.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SendMessage
     path: ../EvilDICOM/Network/Association.cs
     startLine: 272

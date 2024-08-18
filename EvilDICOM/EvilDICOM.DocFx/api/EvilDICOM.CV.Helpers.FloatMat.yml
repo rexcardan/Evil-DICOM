@@ -5,9 +5,9 @@ items:
   id: FloatMat
   parent: EvilDICOM.CV.Helpers
   children:
-  - EvilDICOM.CV.Helpers.FloatMat.Show(OpenCvSharp.Mat,System.String)
-  - EvilDICOM.CV.Helpers.FloatMat.ToSDFRender(OpenCvSharp.Mat)
-  - EvilDICOM.CV.Helpers.FloatMat.WindowLevelColor(OpenCvSharp.Mat)
+  - EvilDICOM.CV.Helpers.FloatMat.Show(Mat,System.String)
+  - EvilDICOM.CV.Helpers.FloatMat.ToSDFRender(Mat)
+  - EvilDICOM.CV.Helpers.FloatMat.WindowLevelColor(Mat)
   langs:
   - csharp
   - vb
@@ -19,7 +19,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Helpers/FloatMat.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: FloatMat
     path: ../EvilDICOM.CV/Helpers/FloatMat.cs
     startLine: 10
@@ -27,18 +27,12 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.Helpers
   syntax:
-    content: public static class FloatMat
-    content.vb: Public Module FloatMat
+    content: 'public static class FloatMat : object'
+    content.vb: >-
+      Public Module FloatMat
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - static
@@ -46,22 +40,22 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: EvilDICOM.CV.Helpers.FloatMat.Show(OpenCvSharp.Mat,System.String)
-  commentId: M:EvilDICOM.CV.Helpers.FloatMat.Show(OpenCvSharp.Mat,System.String)
-  id: Show(OpenCvSharp.Mat,System.String)
+- uid: EvilDICOM.CV.Helpers.FloatMat.Show(Mat,System.String)
+  commentId: M:EvilDICOM.CV.Helpers.FloatMat.Show(Mat,System.String)
+  id: Show(Mat,System.String)
   parent: EvilDICOM.CV.Helpers.FloatMat
   langs:
   - csharp
   - vb
   name: Show(Mat, String)
   nameWithType: FloatMat.Show(Mat, String)
-  fullName: EvilDICOM.CV.Helpers.FloatMat.Show(OpenCvSharp.Mat, System.String)
+  fullName: EvilDICOM.CV.Helpers.FloatMat.Show(Mat, System.String)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Helpers/FloatMat.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Show
     path: ../EvilDICOM.CV/Helpers/FloatMat.cs
     startLine: 12
@@ -72,7 +66,7 @@ items:
     content: public static void Show(Mat mat, string windowName = "CV")
     parameters:
     - id: mat
-      type: OpenCvSharp.Mat
+      type: Mat
     - id: windowName
       type: System.String
     content.vb: Public Shared Sub Show(mat As Mat, windowName As String = "CV")
@@ -83,22 +77,22 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Helpers.FloatMat.WindowLevelColor(OpenCvSharp.Mat)
-  commentId: M:EvilDICOM.CV.Helpers.FloatMat.WindowLevelColor(OpenCvSharp.Mat)
-  id: WindowLevelColor(OpenCvSharp.Mat)
+- uid: EvilDICOM.CV.Helpers.FloatMat.WindowLevelColor(Mat)
+  commentId: M:EvilDICOM.CV.Helpers.FloatMat.WindowLevelColor(Mat)
+  id: WindowLevelColor(Mat)
   parent: EvilDICOM.CV.Helpers.FloatMat
   langs:
   - csharp
   - vb
   name: WindowLevelColor(Mat)
   nameWithType: FloatMat.WindowLevelColor(Mat)
-  fullName: EvilDICOM.CV.Helpers.FloatMat.WindowLevelColor(OpenCvSharp.Mat)
+  fullName: EvilDICOM.CV.Helpers.FloatMat.WindowLevelColor(Mat)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Helpers/FloatMat.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: WindowLevelColor
     path: ../EvilDICOM.CV/Helpers/FloatMat.cs
     startLine: 21
@@ -109,9 +103,9 @@ items:
     content: public static Mat WindowLevelColor(Mat mat)
     parameters:
     - id: mat
-      type: OpenCvSharp.Mat
+      type: Mat
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: Public Shared Function WindowLevelColor(mat As Mat) As Mat
   overload: EvilDICOM.CV.Helpers.FloatMat.WindowLevelColor*
   modifiers.csharp:
@@ -120,22 +114,22 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Helpers.FloatMat.ToSDFRender(OpenCvSharp.Mat)
-  commentId: M:EvilDICOM.CV.Helpers.FloatMat.ToSDFRender(OpenCvSharp.Mat)
-  id: ToSDFRender(OpenCvSharp.Mat)
+- uid: EvilDICOM.CV.Helpers.FloatMat.ToSDFRender(Mat)
+  commentId: M:EvilDICOM.CV.Helpers.FloatMat.ToSDFRender(Mat)
+  id: ToSDFRender(Mat)
   parent: EvilDICOM.CV.Helpers.FloatMat
   langs:
   - csharp
   - vb
   name: ToSDFRender(Mat)
   nameWithType: FloatMat.ToSDFRender(Mat)
-  fullName: EvilDICOM.CV.Helpers.FloatMat.ToSDFRender(OpenCvSharp.Mat)
+  fullName: EvilDICOM.CV.Helpers.FloatMat.ToSDFRender(Mat)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Helpers/FloatMat.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ToSDFRender
     path: ../EvilDICOM.CV/Helpers/FloatMat.cs
     startLine: 31
@@ -146,9 +140,9 @@ items:
     content: public static Mat ToSDFRender(Mat sdf)
     parameters:
     - id: sdf
-      type: OpenCvSharp.Mat
+      type: Mat
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: Public Shared Function ToSDFRender(sdf As Mat) As Mat
   overload: EvilDICOM.CV.Helpers.FloatMat.ToSDFRender*
   modifiers.csharp:
@@ -170,285 +164,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -460,13 +175,11 @@ references:
   name: Show
   nameWithType: FloatMat.Show
   fullName: EvilDICOM.CV.Helpers.FloatMat.Show
-- uid: OpenCvSharp.Mat
-  commentId: T:OpenCvSharp.Mat
-  parent: OpenCvSharp
+- uid: Mat
   isExternal: true
   name: Mat
   nameWithType: Mat
-  fullName: OpenCvSharp.Mat
+  fullName: Mat
 - uid: System.String
   commentId: T:System.String
   parent: System
@@ -474,12 +187,6 @@ references:
   name: String
   nameWithType: String
   fullName: System.String
-- uid: OpenCvSharp
-  commentId: N:OpenCvSharp
-  isExternal: true
-  name: OpenCvSharp
-  nameWithType: OpenCvSharp
-  fullName: OpenCvSharp
 - uid: EvilDICOM.CV.Helpers.FloatMat.WindowLevelColor*
   commentId: Overload:EvilDICOM.CV.Helpers.FloatMat.WindowLevelColor
   name: WindowLevelColor

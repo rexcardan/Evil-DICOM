@@ -84,35 +84,11 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">MatrixExtensions</span></div>
               </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:EvilDICOM.CV.Extensions</h6>
               <h6><strong>Assembly</strong>:EvilDICOM.CV.dll</h6>
               <h5 id="_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public static class MatrixExtensions</code></pre>
+                <pre><code class="lang-csharp hljs">public static class MatrixExtensions : object</code></pre>
               </div>
               <h3 id="methods">Methods
               </h3>
@@ -120,7 +96,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs/#L259">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.DrawAllContours(OpenCvSharp.Mat,OpenCvSharp.Point[][],EvilDICOM.CV.Drawing.StructureLook)">DrawAllContours(Mat, Point[][], StructureLook)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.DrawAllContours(Mat,Point[][],EvilDICOM.CV.Drawing.StructureLook)">DrawAllContours(Mat, Point[][], StructureLook)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -138,12 +114,12 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>mat</em></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Point</span>[][]</td>
+                    <td><span class="xref">Point</span>[][]</td>
                     <td><em>ctrs</em></td>
                     <td></td>
                   </tr>
@@ -158,7 +134,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs/#L117">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLine(OpenCvSharp.Mat,EvilDICOM.CV.RT.IsodoseLevel)">Find2DIsodoseLine(Mat, IsodoseLevel)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLine(Mat,EvilDICOM.CV.RT.IsodoseLevel)">Find2DIsodoseLine(Mat, IsodoseLevel)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -176,7 +152,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>mat</em></td>
                     <td></td>
                   </tr>
@@ -197,7 +173,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Point</span>[][]</td>
+                    <td><span class="xref">Point</span>[][]</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -303,7 +279,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs/#L127">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.FindZeroLevelContours(OpenCvSharp.Mat,System.Func{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3},System.Int32)">FindZeroLevelContours(Mat, Func&lt;Vector3, Vector3&gt;, Int32)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.FindZeroLevelContours(Mat,Func{Vector3,Vector3},System.Int32)">FindZeroLevelContours(Mat, Func&lt;Vector3, Vector3&gt;, Int32)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -321,12 +297,12 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>mat</em></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.Func</span>&lt;<a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a>, <a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a>&gt;</td>
+                    <td><span class="xref">Func</span>&lt;<span class="xref">Vector3</span>, <span class="xref">Vector3</span>&gt;</td>
                     <td><em>imageToPatientFunc</em></td>
                     <td></td>
                   </tr>
@@ -356,7 +332,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs/#L60">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.HeatMap(OpenCvSharp.Mat)">HeatMap(Mat)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.HeatMap(Mat)">HeatMap(Mat)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -374,7 +350,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>mat</em></td>
                     <td></td>
                   </tr>
@@ -390,7 +366,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -399,7 +375,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs/#L67">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.Rotate90(OpenCvSharp.Mat)">Rotate90(Mat)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.Rotate90(Mat)">Rotate90(Mat)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -417,7 +393,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>mat</em></td>
                     <td></td>
                   </tr>
@@ -433,7 +409,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -498,7 +474,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs/#L18">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.To2DDoubleArray(OpenCvSharp.Mat)">To2DDoubleArray(Mat)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.To2DDoubleArray(Mat)">To2DDoubleArray(Mat)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -516,7 +492,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>mat</em></td>
                     <td></td>
                   </tr>
@@ -541,7 +517,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs/#L55">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(OpenCvSharp.Mat,EvilDICOM.CV.Helpers.WindowLevelPreset)">WindowAndLevel(Mat, WindowLevelPreset)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(Mat,EvilDICOM.CV.Helpers.WindowLevelPreset)">WindowAndLevel(Mat, WindowLevelPreset)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -559,7 +535,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>mat</em></td>
                     <td></td>
                   </tr>
@@ -580,7 +556,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -589,7 +565,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs/#L27">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(OpenCvSharp.Mat,System.Double,System.Double)">WindowAndLevel(Mat, Double, Double)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(Mat,System.Double,System.Double)">WindowAndLevel(Mat, Double, Double)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -607,7 +583,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>mat</em></td>
                     <td></td>
                   </tr>
@@ -633,7 +609,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>

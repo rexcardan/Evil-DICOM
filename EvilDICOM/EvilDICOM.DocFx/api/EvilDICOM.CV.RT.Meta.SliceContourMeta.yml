@@ -10,9 +10,9 @@ items:
   - EvilDICOM.CV.RT.Meta.SliceContourMeta.Children
   - EvilDICOM.CV.RT.Meta.SliceContourMeta.CompletelyContains(EvilDICOM.CV.RT.Meta.SliceContourMeta)
   - EvilDICOM.CV.RT.Meta.SliceContourMeta.ContourPoints
-  - EvilDICOM.CV.RT.Meta.SliceContourMeta.DrawOnSlice(OpenCvSharp.Mat,OpenCvSharp.Mat,System.Double)
-  - EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage(OpenCvSharp.Mat,OpenCvSharp.Vec2f[],System.Byte)
-  - EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImageFast(OpenCvSharp.Mat,OpenCvSharp.Mat,System.Byte,System.Double)
+  - EvilDICOM.CV.RT.Meta.SliceContourMeta.DrawOnSlice(Mat,Mat,System.Double)
+  - EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage(Mat,Vec2f[],System.Byte)
+  - EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImageFast(Mat,Mat,System.Byte,System.Double)
   - EvilDICOM.CV.RT.Meta.SliceContourMeta.Z
   langs:
   - csharp
@@ -25,7 +25,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SliceContourMeta
     path: ../EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
     startLine: 15
@@ -35,18 +35,12 @@ items:
   summary: "\nRepresents a closed contour on a given slice \n(can be multiple for the same stucture on the same slice)\n"
   example: []
   syntax:
-    content: public class SliceContourMeta
-    content.vb: Public Class SliceContourMeta
+    content: 'public class SliceContourMeta : object'
+    content.vb: >-
+      Public Class SliceContourMeta
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -60,15 +54,15 @@ items:
   langs:
   - csharp
   - vb
-  name: AddPoint(Point3f)
-  nameWithType: SliceContourMeta.AddPoint(Point3f)
+  name: AddPoint(OpenCvSharp.Point3f)
+  nameWithType: SliceContourMeta.AddPoint(OpenCvSharp.Point3f)
   fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta.AddPoint(OpenCvSharp.Point3f)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: AddPoint
     path: ../EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
     startLine: 17
@@ -76,11 +70,11 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.RT.Meta
   syntax:
-    content: public void AddPoint(Point3f pt)
+    content: public void AddPoint(OpenCvSharp.Point3f pt)
     parameters:
     - id: pt
       type: OpenCvSharp.Point3f
-    content.vb: Public Sub AddPoint(pt As Point3f)
+    content.vb: Public Sub AddPoint(pt As OpenCvSharp.Point3f)
   overload: EvilDICOM.CV.RT.Meta.SliceContourMeta.AddPoint*
   modifiers.csharp:
   - public
@@ -101,7 +95,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CompletelyContains
     path: ../EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
     startLine: 26
@@ -136,7 +130,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ContourPoints
     path: ../EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
     startLine: 34
@@ -144,11 +138,11 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.RT.Meta
   syntax:
-    content: public List<Point2f> ContourPoints { get; }
+    content: public List<OpenCvSharp.Point2f> ContourPoints { get; }
     parameters: []
     return:
-      type: System.Collections.Generic.List{OpenCvSharp.Point2f}
-    content.vb: Public ReadOnly Property ContourPoints As List(Of Point2f)
+      type: List{OpenCvSharp.Point2f}
+    content.vb: Public ReadOnly Property ContourPoints As List(Of OpenCvSharp.Point2f)
   overload: EvilDICOM.CV.RT.Meta.SliceContourMeta.ContourPoints*
   modifiers.csharp:
   - public
@@ -171,7 +165,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Z
     path: ../EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
     startLine: 35
@@ -206,7 +200,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CalculateArea
     path: ../EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
     startLine: 37
@@ -238,7 +232,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Children
     path: ../EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
     startLine: 54
@@ -251,7 +245,7 @@ items:
     content: public List<SliceContourMeta> Children { get; set; }
     parameters: []
     return:
-      type: System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.SliceContourMeta}
+      type: List{EvilDICOM.CV.RT.Meta.SliceContourMeta}
     content.vb: Public Property Children As List(Of SliceContourMeta)
   overload: EvilDICOM.CV.RT.Meta.SliceContourMeta.Children*
   modifiers.csharp:
@@ -260,22 +254,22 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: EvilDICOM.CV.RT.Meta.SliceContourMeta.DrawOnSlice(OpenCvSharp.Mat,OpenCvSharp.Mat,System.Double)
-  commentId: M:EvilDICOM.CV.RT.Meta.SliceContourMeta.DrawOnSlice(OpenCvSharp.Mat,OpenCvSharp.Mat,System.Double)
-  id: DrawOnSlice(OpenCvSharp.Mat,OpenCvSharp.Mat,System.Double)
+- uid: EvilDICOM.CV.RT.Meta.SliceContourMeta.DrawOnSlice(Mat,Mat,System.Double)
+  commentId: M:EvilDICOM.CV.RT.Meta.SliceContourMeta.DrawOnSlice(Mat,Mat,System.Double)
+  id: DrawOnSlice(Mat,Mat,System.Double)
   parent: EvilDICOM.CV.RT.Meta.SliceContourMeta
   langs:
   - csharp
   - vb
   name: DrawOnSlice(Mat, Mat, Double)
   nameWithType: SliceContourMeta.DrawOnSlice(Mat, Mat, Double)
-  fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta.DrawOnSlice(OpenCvSharp.Mat, OpenCvSharp.Mat, System.Double)
+  fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta.DrawOnSlice(Mat, Mat, System.Double)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DrawOnSlice
     path: ../EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
     startLine: 56
@@ -283,38 +277,38 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.RT.Meta
   syntax:
-    content: public Mat DrawOnSlice(Mat txMatrix, Mat slice, double scale = 1)
+    content: public Mat DrawOnSlice(Mat txMatrix, Mat slice, double scale = null)
     parameters:
     - id: txMatrix
-      type: OpenCvSharp.Mat
+      type: Mat
     - id: slice
-      type: OpenCvSharp.Mat
+      type: Mat
     - id: scale
       type: System.Double
     return:
-      type: OpenCvSharp.Mat
-    content.vb: Public Function DrawOnSlice(txMatrix As Mat, slice As Mat, scale As Double = 1) As Mat
+      type: Mat
+    content.vb: Public Function DrawOnSlice(txMatrix As Mat, slice As Mat, scale As Double = Nothing) As Mat
   overload: EvilDICOM.CV.RT.Meta.SliceContourMeta.DrawOnSlice*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImageFast(OpenCvSharp.Mat,OpenCvSharp.Mat,System.Byte,System.Double)
-  commentId: M:EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImageFast(OpenCvSharp.Mat,OpenCvSharp.Mat,System.Byte,System.Double)
-  id: MaskImageFast(OpenCvSharp.Mat,OpenCvSharp.Mat,System.Byte,System.Double)
+- uid: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImageFast(Mat,Mat,System.Byte,System.Double)
+  commentId: M:EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImageFast(Mat,Mat,System.Byte,System.Double)
+  id: MaskImageFast(Mat,Mat,System.Byte,System.Double)
   parent: EvilDICOM.CV.RT.Meta.SliceContourMeta
   langs:
   - csharp
   - vb
   name: MaskImageFast(Mat, Mat, Byte, Double)
   nameWithType: SliceContourMeta.MaskImageFast(Mat, Mat, Byte, Double)
-  fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImageFast(OpenCvSharp.Mat, OpenCvSharp.Mat, System.Byte, System.Double)
+  fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImageFast(Mat, Mat, System.Byte, System.Double)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MaskImageFast
     path: ../EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
     startLine: 85
@@ -324,13 +318,13 @@ items:
   summary: "\nMasks an image of the same voxel count as the input doseGrid. Voxels inside the\ncontour are filled with the specified color. Intent is white (0x255) on inside and outside\nareas/holes are left black (0x00)\n"
   example: []
   syntax:
-    content: public void MaskImageFast(Mat mask, Mat txMatrix, byte color = 255, double scale = 1)
+    content: public void MaskImageFast(Mat mask, Mat txMatrix, byte color = null, double scale = null)
     parameters:
     - id: mask
-      type: OpenCvSharp.Mat
+      type: Mat
       description: the mask to fill or modify (recursively)
     - id: txMatrix
-      type: OpenCvSharp.Mat
+      type: Mat
       description: the patient transform matrix from the imagematrix/dosematrix
     - id: color
       type: System.Byte
@@ -338,28 +332,28 @@ items:
     - id: scale
       type: System.Double
       description: the scale of the image (in case the image has been resampled)
-    content.vb: Public Sub MaskImageFast(mask As Mat, txMatrix As Mat, color As Byte = 255, scale As Double = 1)
+    content.vb: Public Sub MaskImageFast(mask As Mat, txMatrix As Mat, color As Byte = Nothing, scale As Double = Nothing)
   overload: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImageFast*
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-- uid: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage(OpenCvSharp.Mat,OpenCvSharp.Vec2f[],System.Byte)
-  commentId: M:EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage(OpenCvSharp.Mat,OpenCvSharp.Vec2f[],System.Byte)
-  id: MaskImage(OpenCvSharp.Mat,OpenCvSharp.Vec2f[],System.Byte)
+- uid: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage(Mat,Vec2f[],System.Byte)
+  commentId: M:EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage(Mat,Vec2f[],System.Byte)
+  id: MaskImage(Mat,Vec2f[],System.Byte)
   parent: EvilDICOM.CV.RT.Meta.SliceContourMeta
   langs:
   - csharp
   - vb
   name: MaskImage(Mat, Vec2f[], Byte)
   nameWithType: SliceContourMeta.MaskImage(Mat, Vec2f[], Byte)
-  fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage(OpenCvSharp.Mat, OpenCvSharp.Vec2f[], System.Byte)
+  fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage(Mat, Vec2f[], System.Byte)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MaskImage
     path: ../EvilDICOM.CV/RT/Meta/SliceContourMeta.cs
     startLine: 119
@@ -369,25 +363,25 @@ items:
   summary: "\nMasks an image of the same voxel count as the input doseGrid. Voxels inside the\ncontour are filled with the specified color. Intent is white (0x255) on inside and outside\nareas/holes are left black (0x00)\n"
   example: []
   syntax:
-    content: public void MaskImage(Mat mask, Vec2f[] doseGridPts, byte color = 255)
+    content: public void MaskImage(Mat mask, Vec2f[] doseGridPts, byte color = null)
     parameters:
     - id: mask
-      type: OpenCvSharp.Mat
+      type: Mat
       description: the mask to fill or modify (recursively)
     - id: doseGridPts
-      type: OpenCvSharp.Vec2f[]
+      type: Vec2f[]
       description: the 2d (x,y) patient coordinates of the dose matrix slices
     - id: color
       type: System.Byte
       description: the color to fill the contour
-    content.vb: Public Sub MaskImage(mask As Mat, doseGridPts As Vec2f(), color As Byte = 255)
+    content.vb: Public Sub MaskImage(mask As Mat, doseGridPts As Vec2f(), color As Byte = Nothing)
   overload: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage*
   nameWithType.vb: SliceContourMeta.MaskImage(Mat, Vec2f(), Byte)
   modifiers.csharp:
   - public
   modifiers.vb:
   - Public
-  fullName.vb: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage(OpenCvSharp.Mat, OpenCvSharp.Vec2f(), System.Byte)
+  fullName.vb: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage(Mat, Vec2f(), System.Byte)
   name.vb: MaskImage(Mat, Vec2f(), Byte)
 references:
 - uid: EvilDICOM.CV.RT.Meta
@@ -402,285 +396,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -693,18 +408,11 @@ references:
   nameWithType: SliceContourMeta.AddPoint
   fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta.AddPoint
 - uid: OpenCvSharp.Point3f
-  commentId: T:OpenCvSharp.Point3f
-  parent: OpenCvSharp
+  commentId: '!:OpenCvSharp.Point3f'
   isExternal: true
-  name: Point3f
-  nameWithType: Point3f
+  name: OpenCvSharp.Point3f
+  nameWithType: OpenCvSharp.Point3f
   fullName: OpenCvSharp.Point3f
-- uid: OpenCvSharp
-  commentId: N:OpenCvSharp
-  isExternal: true
-  name: OpenCvSharp
-  nameWithType: OpenCvSharp
-  fullName: OpenCvSharp
 - uid: EvilDICOM.CV.RT.Meta.SliceContourMeta.CompletelyContains*
   commentId: Overload:EvilDICOM.CV.RT.Meta.SliceContourMeta.CompletelyContains
   name: CompletelyContains
@@ -728,95 +436,87 @@ references:
   name: ContourPoints
   nameWithType: SliceContourMeta.ContourPoints
   fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta.ContourPoints
-- uid: System.Collections.Generic.List{OpenCvSharp.Point2f}
-  commentId: T:System.Collections.Generic.List{OpenCvSharp.Point2f}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
-  name: List<Point2f>
-  nameWithType: List<Point2f>
-  fullName: System.Collections.Generic.List<OpenCvSharp.Point2f>
-  nameWithType.vb: List(Of Point2f)
-  fullName.vb: System.Collections.Generic.List(Of OpenCvSharp.Point2f)
-  name.vb: List(Of Point2f)
+- uid: List{OpenCvSharp.Point2f}
+  commentId: '!:List{OpenCvSharp.Point2f}'
+  definition: List`1
+  name: List<OpenCvSharp.Point2f>
+  nameWithType: List<OpenCvSharp.Point2f>
+  fullName: List<OpenCvSharp.Point2f>
+  nameWithType.vb: List(Of OpenCvSharp.Point2f)
+  fullName.vb: List(Of OpenCvSharp.Point2f)
+  name.vb: List(Of OpenCvSharp.Point2f)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
   - uid: OpenCvSharp.Point2f
-    name: Point2f
-    nameWithType: Point2f
+    name: OpenCvSharp.Point2f
+    nameWithType: OpenCvSharp.Point2f
     fullName: OpenCvSharp.Point2f
     isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
   - uid: OpenCvSharp.Point2f
-    name: Point2f
-    nameWithType: Point2f
+    name: OpenCvSharp.Point2f
+    nameWithType: OpenCvSharp.Point2f
     fullName: OpenCvSharp.Point2f
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+- uid: List`1
   isExternal: true
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: EvilDICOM.CV.RT.Meta.SliceContourMeta.Z*
   commentId: Overload:EvilDICOM.CV.RT.Meta.SliceContourMeta.Z
   name: Z
@@ -846,21 +546,20 @@ references:
   name: Children
   nameWithType: SliceContourMeta.Children
   fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta.Children
-- uid: System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.SliceContourMeta}
-  commentId: T:System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.SliceContourMeta}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: List{EvilDICOM.CV.RT.Meta.SliceContourMeta}
+  commentId: '!:List{EvilDICOM.CV.RT.Meta.SliceContourMeta}'
+  definition: List`1
   name: List<SliceContourMeta>
   nameWithType: List<SliceContourMeta>
-  fullName: System.Collections.Generic.List<EvilDICOM.CV.RT.Meta.SliceContourMeta>
+  fullName: List<EvilDICOM.CV.RT.Meta.SliceContourMeta>
   nameWithType.vb: List(Of SliceContourMeta)
-  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.CV.RT.Meta.SliceContourMeta)
+  fullName.vb: List(Of EvilDICOM.CV.RT.Meta.SliceContourMeta)
   name.vb: List(Of SliceContourMeta)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -873,10 +572,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -893,13 +592,11 @@ references:
   name: DrawOnSlice
   nameWithType: SliceContourMeta.DrawOnSlice
   fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta.DrawOnSlice
-- uid: OpenCvSharp.Mat
-  commentId: T:OpenCvSharp.Mat
-  parent: OpenCvSharp
+- uid: Mat
   isExternal: true
   name: Mat
   nameWithType: Mat
-  fullName: OpenCvSharp.Mat
+  fullName: Mat
 - uid: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImageFast*
   commentId: Overload:EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImageFast
   name: MaskImageFast
@@ -917,28 +614,28 @@ references:
   name: MaskImage
   nameWithType: SliceContourMeta.MaskImage
   fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta.MaskImage
-- uid: OpenCvSharp.Vec2f[]
+- uid: Vec2f[]
   isExternal: true
   name: Vec2f[]
   nameWithType: Vec2f[]
-  fullName: OpenCvSharp.Vec2f[]
+  fullName: Vec2f[]
   nameWithType.vb: Vec2f()
-  fullName.vb: OpenCvSharp.Vec2f()
+  fullName.vb: Vec2f()
   name.vb: Vec2f()
   spec.csharp:
-  - uid: OpenCvSharp.Vec2f
+  - uid: Vec2f
     name: Vec2f
     nameWithType: Vec2f
-    fullName: OpenCvSharp.Vec2f
+    fullName: Vec2f
     isExternal: true
   - name: '[]'
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: OpenCvSharp.Vec2f
+  - uid: Vec2f
     name: Vec2f
     nameWithType: Vec2f
-    fullName: OpenCvSharp.Vec2f
+    fullName: Vec2f
     isExternal: true
   - name: ()
     nameWithType: ()

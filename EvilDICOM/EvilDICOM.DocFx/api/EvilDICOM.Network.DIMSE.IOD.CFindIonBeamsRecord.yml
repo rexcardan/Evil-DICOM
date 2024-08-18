@@ -26,7 +26,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CFindIonBeamsRecord
     path: ../EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
     startLine: 10
@@ -88,7 +88,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: .ctor
     path: ../EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
     startLine: 12
@@ -118,7 +118,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: .ctor
     path: ../EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
     startLine: 17
@@ -151,7 +151,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ReferencedBeamNumber
     path: ../EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
     startLine: 22
@@ -186,7 +186,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CurrentFractionNumber
     path: ../EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
     startLine: 40
@@ -221,7 +221,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: TreatmentDeliveryType
     path: ../EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
     startLine: 58
@@ -256,7 +256,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: TreatmentTerminationStatus
     path: ../EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
     startLine: 76
@@ -291,7 +291,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DeliveredPrimaryMeterset
     path: ../EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
     startLine: 94
@@ -326,7 +326,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: TreatmentDateSQ
     path: ../EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
     startLine: 112
@@ -361,7 +361,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: TreatmentTimeSQ
     path: ../EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
     startLine: 130
@@ -396,7 +396,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CalculatedDose
     path: ../EvilDICOM/Network/DIMSE/IOD/CFindIonBeamsRecord.cs
     startLine: 148
@@ -408,7 +408,7 @@ items:
     parameters: []
     return:
       type: System.ValueTuple{System.Int32,System.Double}
-    content.vb: Public Property CalculatedDose As(doseReferenceNumber As Integer, doseValue As Double)
+    content.vb: Public Property CalculatedDose As(doseReferenceNumber As Integer, doseValue As Double)(Of Integer , Double)
   overload: EvilDICOM.Network.DIMSE.IOD.CFindIonBeamsRecord.CalculatedDose*
   modifiers.csharp:
   - public
@@ -1074,17 +1074,17 @@ references:
 - uid: System.ValueTuple{System.Int32,System.Double}
   commentId: T:System.ValueTuple{System.Int32,System.Double}
   parent: System
-  isExternal: true
-  name: ValueTuple<Int32, Double>
-  nameWithType: ValueTuple<Int32, Double>
+  definition: System.ValueTuple`2
+  name: (T1, T2)<Int32, Double>
+  nameWithType: (T1, T2)<Int32, Double>
   fullName: System.ValueTuple<System.Int32, System.Double>
-  nameWithType.vb: ValueTuple(Of Int32, Double)
+  nameWithType.vb: (T1, T2)(Of Int32, Double)
   fullName.vb: System.ValueTuple(Of System.Int32, System.Double)
-  name.vb: ValueTuple(Of Int32, Double)
+  name.vb: (T1, T2)(Of Int32, Double)
   spec.csharp:
   - uid: System.ValueTuple`2
-    name: ValueTuple
-    nameWithType: ValueTuple
+    name: (T1, T2)
+    nameWithType: (T1, T2)
     fullName: System.ValueTuple
     isExternal: true
   - name: <
@@ -1108,8 +1108,8 @@ references:
     fullName: '>'
   spec.vb:
   - uid: System.ValueTuple`2
-    name: ValueTuple
-    nameWithType: ValueTuple
+    name: (T1, T2)
+    nameWithType: (T1, T2)
     fullName: System.ValueTuple
     isExternal: true
   - name: '(Of '
@@ -1128,6 +1128,57 @@ references:
     nameWithType: Double
     fullName: System.Double
     isExternal: true
+  - name: )
+    nameWithType: )
+    fullName: )
+- uid: System.ValueTuple`2
+  commentId: T:System.ValueTuple`2
+  isExternal: true
+  name: (T1, T2)<T1, T2>
+  nameWithType: (T1, T2)<T1, T2>
+  fullName: System.ValueTuple<T1, T2>
+  nameWithType.vb: (T1, T2)(Of T1, T2)
+  fullName.vb: System.ValueTuple(Of T1, T2)
+  name.vb: (T1, T2)(Of T1, T2)
+  spec.csharp:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`2
+    name: (T1, T2)
+    nameWithType: (T1, T2)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
   - name: )
     nameWithType: )
     fullName: )

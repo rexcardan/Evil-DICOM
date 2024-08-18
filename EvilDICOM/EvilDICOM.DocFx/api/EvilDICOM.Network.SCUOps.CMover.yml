@@ -23,7 +23,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CMover
     path: ../EvilDICOM/Network/SCUOps/CMover.cs
     startLine: 12
@@ -68,7 +68,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: .ctor
     path: ../EvilDICOM/Network/SCUOps/CMover.cs
     startLine: 17
@@ -103,7 +103,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SendCMove
     path: ../EvilDICOM/Network/SCUOps/CMover.cs
     startLine: 33
@@ -113,11 +113,11 @@ items:
   summary: "\nEmits a CMove operation to an entity which moves an image from the entity to the specified AETitle\n"
   example: []
   syntax:
-    content: public CMoveResponse SendCMove(CFindInstanceIOD iod, string toAETite, ref ushort msgId)
+    content: public CMoveResponse SendCMove(CFindInstanceIOD iod, string toAETitle, ref ushort msgId)
     parameters:
     - id: iod
       type: EvilDICOM.Network.DIMSE.IOD.CFindInstanceIOD
-    - id: toAETite
+    - id: toAETitle
       type: System.String
       description: the entity title which will receive the image
     - id: msgId
@@ -126,7 +126,7 @@ items:
     return:
       type: EvilDICOM.Network.DIMSE.CMoveResponse
       description: the move response
-    content.vb: Public Function SendCMove(iod As CFindInstanceIOD, toAETite As String, ByRef msgId As UShort) As CMoveResponse
+    content.vb: Public Function SendCMove(iod As CFindInstanceIOD, toAETitle As String, ByRef msgId As UShort) As CMoveResponse
   overload: EvilDICOM.Network.SCUOps.CMover.SendCMove*
   nameWithType.vb: CMover.SendCMove(CFindInstanceIOD, String, ByRef UInt16)
   modifiers.csharp:
@@ -150,7 +150,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SendCMove
     path: ../EvilDICOM/Network/SCUOps/CMover.cs
     startLine: 44
@@ -158,17 +158,17 @@ items:
   - EvilDICOM
   namespace: EvilDICOM.Network.SCUOps
   syntax:
-    content: public CMoveResponse SendCMove(CFindSeriesIOD iod, string toAETite, ref ushort msgId)
+    content: public CMoveResponse SendCMove(CFindSeriesIOD iod, string toAETitle, ref ushort msgId)
     parameters:
     - id: iod
       type: EvilDICOM.Network.DIMSE.IOD.CFindSeriesIOD
-    - id: toAETite
+    - id: toAETitle
       type: System.String
     - id: msgId
       type: System.UInt16
     return:
       type: EvilDICOM.Network.DIMSE.CMoveResponse
-    content.vb: Public Function SendCMove(iod As CFindSeriesIOD, toAETite As String, ByRef msgId As UShort) As CMoveResponse
+    content.vb: Public Function SendCMove(iod As CFindSeriesIOD, toAETitle As String, ByRef msgId As UShort) As CMoveResponse
   overload: EvilDICOM.Network.SCUOps.CMover.SendCMove*
   nameWithType.vb: CMover.SendCMove(CFindSeriesIOD, String, ByRef UInt16)
   modifiers.csharp:
@@ -192,7 +192,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SendCMove
     path: ../EvilDICOM/Network/SCUOps/CMover.cs
     startLine: 55
@@ -200,17 +200,17 @@ items:
   - EvilDICOM
   namespace: EvilDICOM.Network.SCUOps
   syntax:
-    content: public CMoveResponse SendCMove(CMoveIOD iod, string toAETite, ref ushort msgId)
+    content: public CMoveResponse SendCMove(CMoveIOD iod, string toAETitle, ref ushort msgId)
     parameters:
     - id: iod
       type: EvilDICOM.Network.DIMSE.IOD.CMoveIOD
-    - id: toAETite
+    - id: toAETitle
       type: System.String
     - id: msgId
       type: System.UInt16
     return:
       type: EvilDICOM.Network.DIMSE.CMoveResponse
-    content.vb: Public Function SendCMove(iod As CMoveIOD, toAETite As String, ByRef msgId As UShort) As CMoveResponse
+    content.vb: Public Function SendCMove(iod As CMoveIOD, toAETitle As String, ByRef msgId As UShort) As CMoveResponse
   overload: EvilDICOM.Network.SCUOps.CMover.SendCMove*
   nameWithType.vb: CMover.SendCMove(CMoveIOD, String, ByRef UInt16)
   modifiers.csharp:
@@ -234,7 +234,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SendCMove
     path: ../EvilDICOM/Network/SCUOps/CMover.cs
     startLine: 61
@@ -242,17 +242,17 @@ items:
   - EvilDICOM
   namespace: EvilDICOM.Network.SCUOps
   syntax:
-    content: public CMoveResponse SendCMove(CFindStudyIOD iod, string toAETite, ref ushort msgId)
+    content: public CMoveResponse SendCMove(CFindStudyIOD iod, string toAETitle, ref ushort msgId)
     parameters:
     - id: iod
       type: EvilDICOM.Network.DIMSE.IOD.CFindStudyIOD
-    - id: toAETite
+    - id: toAETitle
       type: System.String
     - id: msgId
       type: System.UInt16
     return:
       type: EvilDICOM.Network.DIMSE.CMoveResponse
-    content.vb: Public Function SendCMove(iod As CFindStudyIOD, toAETite As String, ByRef msgId As UShort) As CMoveResponse
+    content.vb: Public Function SendCMove(iod As CFindStudyIOD, toAETitle As String, ByRef msgId As UShort) As CMoveResponse
   overload: EvilDICOM.Network.SCUOps.CMover.SendCMove*
   nameWithType.vb: CMover.SendCMove(CFindStudyIOD, String, ByRef UInt16)
   modifiers.csharp:
@@ -276,7 +276,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ProgressUpdated
     path: ../EvilDICOM/Network/SCUOps/CMover.cs
     startLine: 79
@@ -307,7 +307,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/SCUOps/CMover.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Dispose
     path: ../EvilDICOM/Network/SCUOps/CMover.cs
     startLine: 93

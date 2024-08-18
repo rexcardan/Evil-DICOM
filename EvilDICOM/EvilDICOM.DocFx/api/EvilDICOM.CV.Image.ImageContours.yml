@@ -6,7 +6,7 @@ items:
   parent: EvilDICOM.CV.Image
   children:
   - EvilDICOM.CV.Image.ImageContours.BuildFromImage(EvilDICOM.CV.RT.Meta.StructureMeta,EvilDICOM.CV.Image.Matrix)
-  - EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(OpenCvSharp.Mat,System.Int32,EvilDICOM.CV.Drawing.StructureLook)
+  - EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(Mat,System.Int32,EvilDICOM.CV.Drawing.StructureLook)
   - EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(System.Int32,EvilDICOM.CV.Drawing.StructureLook)
   - EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceX(System.Int32)
   - EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceY(System.Int32)
@@ -28,7 +28,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ImageContours
     path: ../EvilDICOM.CV/Image/ImageContours.cs
     startLine: 18
@@ -38,18 +38,12 @@ items:
   summary: "\nClass that holds image contours on a given 3D image\n"
   example: []
   syntax:
-    content: public class ImageContours
-    content.vb: Public Class ImageContours
+    content: 'public class ImageContours : object'
+    content.vb: >-
+      Public Class ImageContours
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -71,7 +65,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: BuildFromImage
     path: ../EvilDICOM.CV/Image/ImageContours.cs
     startLine: 39
@@ -115,7 +109,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MinX
     path: ../EvilDICOM.CV/Image/ImageContours.cs
     startLine: 46
@@ -150,7 +144,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MaxX
     path: ../EvilDICOM.CV/Image/ImageContours.cs
     startLine: 47
@@ -185,7 +179,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MinY
     path: ../EvilDICOM.CV/Image/ImageContours.cs
     startLine: 49
@@ -220,7 +214,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MaxY
     path: ../EvilDICOM.CV/Image/ImageContours.cs
     startLine: 50
@@ -255,7 +249,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MinZ
     path: ../EvilDICOM.CV/Image/ImageContours.cs
     startLine: 52
@@ -290,7 +284,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MaxZ
     path: ../EvilDICOM.CV/Image/ImageContours.cs
     startLine: 53
@@ -325,7 +319,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetContoursOnSliceZ
     path: ../EvilDICOM.CV/Image/ImageContours.cs
     startLine: 56
@@ -333,13 +327,13 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.Image
   syntax:
-    content: public Point[][] GetContoursOnSliceZ(int zIdx)
+    content: public OpenCvSharp.Point[][] GetContoursOnSliceZ(int zIdx)
     parameters:
     - id: zIdx
       type: System.Int32
     return:
       type: OpenCvSharp.Point[][]
-    content.vb: Public Function GetContoursOnSliceZ(zIdx As Integer) As Point()()
+    content.vb: Public Function GetContoursOnSliceZ(zIdx As Integer) As OpenCvSharp.Point()()
   overload: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceZ*
   modifiers.csharp:
   - public
@@ -360,7 +354,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetContoursOnSliceY
     path: ../EvilDICOM.CV/Image/ImageContours.cs
     startLine: 68
@@ -368,13 +362,13 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.Image
   syntax:
-    content: public Point[][] GetContoursOnSliceY(int yIdx)
+    content: public OpenCvSharp.Point[][] GetContoursOnSliceY(int yIdx)
     parameters:
     - id: yIdx
       type: System.Int32
     return:
       type: OpenCvSharp.Point[][]
-    content.vb: Public Function GetContoursOnSliceY(yIdx As Integer) As Point()()
+    content.vb: Public Function GetContoursOnSliceY(yIdx As Integer) As OpenCvSharp.Point()()
   overload: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceY*
   modifiers.csharp:
   - public
@@ -395,7 +389,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetContoursOnSliceX
     path: ../EvilDICOM.CV/Image/ImageContours.cs
     startLine: 80
@@ -403,13 +397,13 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.Image
   syntax:
-    content: public Point[][] GetContoursOnSliceX(int xIdx)
+    content: public OpenCvSharp.Point[][] GetContoursOnSliceX(int xIdx)
     parameters:
     - id: xIdx
       type: System.Int32
     return:
       type: OpenCvSharp.Point[][]
-    content.vb: Public Function GetContoursOnSliceX(xIdx As Integer) As Point()()
+    content.vb: Public Function GetContoursOnSliceX(xIdx As Integer) As OpenCvSharp.Point()()
   overload: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceX*
   modifiers.csharp:
   - public
@@ -430,7 +424,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DrawContourOnSlice
     path: ../EvilDICOM.CV/Image/ImageContours.cs
     startLine: 151
@@ -448,7 +442,7 @@ items:
     - id: look
       type: EvilDICOM.CV.Drawing.StructureLook
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
       description: ''
     content.vb: Public Function DrawContourOnSlice(z As Integer, look As StructureLook) As Mat
   overload: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice*
@@ -456,22 +450,22 @@ items:
   - public
   modifiers.vb:
   - Public
-- uid: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(OpenCvSharp.Mat,System.Int32,EvilDICOM.CV.Drawing.StructureLook)
-  commentId: M:EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(OpenCvSharp.Mat,System.Int32,EvilDICOM.CV.Drawing.StructureLook)
-  id: DrawContourOnSlice(OpenCvSharp.Mat,System.Int32,EvilDICOM.CV.Drawing.StructureLook)
+- uid: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(Mat,System.Int32,EvilDICOM.CV.Drawing.StructureLook)
+  commentId: M:EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(Mat,System.Int32,EvilDICOM.CV.Drawing.StructureLook)
+  id: DrawContourOnSlice(Mat,System.Int32,EvilDICOM.CV.Drawing.StructureLook)
   parent: EvilDICOM.CV.Image.ImageContours
   langs:
   - csharp
   - vb
   name: DrawContourOnSlice(Mat, Int32, StructureLook)
   nameWithType: ImageContours.DrawContourOnSlice(Mat, Int32, StructureLook)
-  fullName: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(OpenCvSharp.Mat, System.Int32, EvilDICOM.CV.Drawing.StructureLook)
+  fullName: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice(Mat, System.Int32, EvilDICOM.CV.Drawing.StructureLook)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/ImageContours.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DrawContourOnSlice
     path: ../EvilDICOM.CV/Image/ImageContours.cs
     startLine: 183
@@ -484,14 +478,14 @@ items:
     content: public Mat DrawContourOnSlice(Mat imSlice, int z, StructureLook look)
     parameters:
     - id: imSlice
-      type: OpenCvSharp.Mat
+      type: Mat
     - id: z
       type: System.Int32
       description: the z slice to draw the structure
     - id: look
       type: EvilDICOM.CV.Drawing.StructureLook
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
       description: ''
     content.vb: Public Function DrawContourOnSlice(imSlice As Mat, z As Integer, look As StructureLook) As Mat
   overload: EvilDICOM.CV.Image.ImageContours.DrawContourOnSlice*
@@ -512,285 +506,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -869,16 +584,16 @@ references:
   fullName: EvilDICOM.CV.Image.ImageContours.GetContoursOnSliceZ
 - uid: OpenCvSharp.Point[][]
   isExternal: true
-  name: Point[][]
-  nameWithType: Point[][]
+  name: OpenCvSharp.Point[][]
+  nameWithType: OpenCvSharp.Point[][]
   fullName: OpenCvSharp.Point[][]
-  nameWithType.vb: Point()()
+  nameWithType.vb: OpenCvSharp.Point()()
   fullName.vb: OpenCvSharp.Point()()
-  name.vb: Point()()
+  name.vb: OpenCvSharp.Point()()
   spec.csharp:
   - uid: OpenCvSharp.Point
-    name: Point
-    nameWithType: Point
+    name: OpenCvSharp.Point
+    nameWithType: OpenCvSharp.Point
     fullName: OpenCvSharp.Point
     isExternal: true
   - name: '[]'
@@ -889,8 +604,8 @@ references:
     fullName: '[]'
   spec.vb:
   - uid: OpenCvSharp.Point
-    name: Point
-    nameWithType: Point
+    name: OpenCvSharp.Point
+    nameWithType: OpenCvSharp.Point
     fullName: OpenCvSharp.Point
     isExternal: true
   - name: ()
@@ -920,21 +635,13 @@ references:
   name: StructureLook
   nameWithType: StructureLook
   fullName: EvilDICOM.CV.Drawing.StructureLook
-- uid: OpenCvSharp.Mat
-  commentId: T:OpenCvSharp.Mat
-  parent: OpenCvSharp
+- uid: Mat
   isExternal: true
   name: Mat
   nameWithType: Mat
-  fullName: OpenCvSharp.Mat
+  fullName: Mat
 - uid: EvilDICOM.CV.Drawing
   commentId: N:EvilDICOM.CV.Drawing
   name: EvilDICOM.CV.Drawing
   nameWithType: EvilDICOM.CV.Drawing
   fullName: EvilDICOM.CV.Drawing
-- uid: OpenCvSharp
-  commentId: N:OpenCvSharp
-  isExternal: true
-  name: OpenCvSharp
-  nameWithType: OpenCvSharp
-  fullName: OpenCvSharp

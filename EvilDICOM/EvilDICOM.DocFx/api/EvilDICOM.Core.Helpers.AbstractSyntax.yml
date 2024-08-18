@@ -29,7 +29,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: AbstractSyntax
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
     startLine: 8
@@ -171,6 +171,7 @@ items:
   - EvilDICOM.Core.Helpers.SOPClassUID.RTStructureSetStorage
   - EvilDICOM.Core.Helpers.SOPClassUID.RTBeamsTreatmentRecordStorage
   - EvilDICOM.Core.Helpers.SOPClassUID.RTPlanStorage
+  - EvilDICOM.Core.Helpers.SOPClassUID.HalcyonRTPlanStorage
   - EvilDICOM.Core.Helpers.SOPClassUID.RTBrachyTreatmentRecordStorage
   - EvilDICOM.Core.Helpers.SOPClassUID.RTTreatmentSummaryRecordStorage
   - EvilDICOM.Core.Helpers.SOPClassUID.RTIonPlanStorage
@@ -207,7 +208,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: VERIFICATION
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
     startLine: 11
@@ -240,7 +241,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PATIENT_FIND
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
     startLine: 14
@@ -273,7 +274,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PATIENT_MOVE
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
     startLine: 15
@@ -306,7 +307,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PATIENT_GET
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
     startLine: 16
@@ -339,7 +340,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: STUDY_FIND
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
     startLine: 19
@@ -372,7 +373,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: STUDY_MOVE
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
     startLine: 21
@@ -405,7 +406,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: STUDY_GET
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
     startLine: 22
@@ -438,7 +439,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PATIENT_STUDY_FIND
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
     startLine: 25
@@ -471,7 +472,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PATIENT_STUDY_MOVE
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
     startLine: 27
@@ -504,7 +505,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MODALITY_WORKLIST_FIND
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
     startLine: 30
@@ -537,7 +538,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: VARIAN_MOTION_MANAGEMENT_PROTOCOL
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
     startLine: 32
@@ -570,7 +571,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ALL_RADIOTHERAPY_STORAGE
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
     startLine: 35
@@ -603,10 +604,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Helpers/AbstractSyntax.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: StorageCommitment_Push
     path: ../EvilDICOM/Core/Helpers/AbstractSyntax.cs
-    startLine: 62
+    startLine: 63
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Helpers
@@ -1396,6 +1397,12 @@ references:
   name: RTPlanStorage
   nameWithType: SOPClassUID.RTPlanStorage
   fullName: EvilDICOM.Core.Helpers.SOPClassUID.RTPlanStorage
+- uid: EvilDICOM.Core.Helpers.SOPClassUID.HalcyonRTPlanStorage
+  commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.HalcyonRTPlanStorage
+  parent: EvilDICOM.Core.Helpers.SOPClassUID
+  name: HalcyonRTPlanStorage
+  nameWithType: SOPClassUID.HalcyonRTPlanStorage
+  fullName: EvilDICOM.Core.Helpers.SOPClassUID.HalcyonRTPlanStorage
 - uid: EvilDICOM.Core.Helpers.SOPClassUID.RTBrachyTreatmentRecordStorage
   commentId: F:EvilDICOM.Core.Helpers.SOPClassUID.RTBrachyTreatmentRecordStorage
   parent: EvilDICOM.Core.Helpers.SOPClassUID

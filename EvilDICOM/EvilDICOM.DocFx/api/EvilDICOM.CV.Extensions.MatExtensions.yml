@@ -5,9 +5,9 @@ items:
   id: MatExtensions
   parent: EvilDICOM.CV.Extensions
   children:
-  - EvilDICOM.CV.Extensions.MatExtensions.Show(OpenCvSharp.Mat,System.String)
-  - EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3d(OpenCvSharp.Mat,OpenCvSharp.Point3d)
-  - EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3f(OpenCvSharp.Mat,OpenCvSharp.Point3f)
+  - EvilDICOM.CV.Extensions.MatExtensions.Show(Mat,System.String)
+  - EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3d(Mat,Point3d)
+  - EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3f(Mat,Point3f)
   langs:
   - csharp
   - vb
@@ -19,7 +19,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MatExtensions
     path: ../EvilDICOM.CV/Extensions/MatExtensions.cs
     startLine: 9
@@ -27,18 +27,12 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.Extensions
   syntax:
-    content: public static class MatExtensions
-    content.vb: Public Module MatExtensions
+    content: 'public static class MatExtensions : object'
+    content.vb: >-
+      Public Module MatExtensions
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - static
@@ -46,9 +40,9 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3f(OpenCvSharp.Mat,OpenCvSharp.Point3f)
-  commentId: M:EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3f(OpenCvSharp.Mat,OpenCvSharp.Point3f)
-  id: TransformPoint3f(OpenCvSharp.Mat,OpenCvSharp.Point3f)
+- uid: EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3f(Mat,Point3f)
+  commentId: M:EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3f(Mat,Point3f)
+  id: TransformPoint3f(Mat,Point3f)
   isExtensionMethod: true
   parent: EvilDICOM.CV.Extensions.MatExtensions
   langs:
@@ -56,13 +50,13 @@ items:
   - vb
   name: TransformPoint3f(Mat, Point3f)
   nameWithType: MatExtensions.TransformPoint3f(Mat, Point3f)
-  fullName: EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3f(OpenCvSharp.Mat, OpenCvSharp.Point3f)
+  fullName: EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3f(Mat, Point3f)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: TransformPoint3f
     path: ../EvilDICOM.CV/Extensions/MatExtensions.cs
     startLine: 11
@@ -73,11 +67,11 @@ items:
     content: public static Point3f TransformPoint3f(this Mat pose, Point3f point)
     parameters:
     - id: pose
-      type: OpenCvSharp.Mat
+      type: Mat
     - id: point
-      type: OpenCvSharp.Point3f
+      type: Point3f
     return:
-      type: OpenCvSharp.Point3f
+      type: Point3f
     content.vb: >-
       <ExtensionAttribute>
 
@@ -89,9 +83,9 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3d(OpenCvSharp.Mat,OpenCvSharp.Point3d)
-  commentId: M:EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3d(OpenCvSharp.Mat,OpenCvSharp.Point3d)
-  id: TransformPoint3d(OpenCvSharp.Mat,OpenCvSharp.Point3d)
+- uid: EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3d(Mat,Point3d)
+  commentId: M:EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3d(Mat,Point3d)
+  id: TransformPoint3d(Mat,Point3d)
   isExtensionMethod: true
   parent: EvilDICOM.CV.Extensions.MatExtensions
   langs:
@@ -99,13 +93,13 @@ items:
   - vb
   name: TransformPoint3d(Mat, Point3d)
   nameWithType: MatExtensions.TransformPoint3d(Mat, Point3d)
-  fullName: EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3d(OpenCvSharp.Mat, OpenCvSharp.Point3d)
+  fullName: EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3d(Mat, Point3d)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: TransformPoint3d
     path: ../EvilDICOM.CV/Extensions/MatExtensions.cs
     startLine: 40
@@ -116,11 +110,11 @@ items:
     content: public static Point3d TransformPoint3d(this Mat pose, Point3d point)
     parameters:
     - id: pose
-      type: OpenCvSharp.Mat
+      type: Mat
     - id: point
-      type: OpenCvSharp.Point3d
+      type: Point3d
     return:
-      type: OpenCvSharp.Point3d
+      type: Point3d
     content.vb: >-
       <ExtensionAttribute>
 
@@ -132,9 +126,9 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Extensions.MatExtensions.Show(OpenCvSharp.Mat,System.String)
-  commentId: M:EvilDICOM.CV.Extensions.MatExtensions.Show(OpenCvSharp.Mat,System.String)
-  id: Show(OpenCvSharp.Mat,System.String)
+- uid: EvilDICOM.CV.Extensions.MatExtensions.Show(Mat,System.String)
+  commentId: M:EvilDICOM.CV.Extensions.MatExtensions.Show(Mat,System.String)
+  id: Show(Mat,System.String)
   isExtensionMethod: true
   parent: EvilDICOM.CV.Extensions.MatExtensions
   langs:
@@ -142,13 +136,13 @@ items:
   - vb
   name: Show(Mat, String)
   nameWithType: MatExtensions.Show(Mat, String)
-  fullName: EvilDICOM.CV.Extensions.MatExtensions.Show(OpenCvSharp.Mat, System.String)
+  fullName: EvilDICOM.CV.Extensions.MatExtensions.Show(Mat, System.String)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Show
     path: ../EvilDICOM.CV/Extensions/MatExtensions.cs
     startLine: 69
@@ -159,7 +153,7 @@ items:
     content: public static void Show(this Mat mat, string windowName = "CV Window")
     parameters:
     - id: mat
-      type: OpenCvSharp.Mat
+      type: Mat
     - id: windowName
       type: System.String
     content.vb: >-
@@ -186,285 +180,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -476,38 +191,26 @@ references:
   name: TransformPoint3f
   nameWithType: MatExtensions.TransformPoint3f
   fullName: EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3f
-- uid: OpenCvSharp.Mat
-  commentId: T:OpenCvSharp.Mat
-  parent: OpenCvSharp
+- uid: Mat
   isExternal: true
   name: Mat
   nameWithType: Mat
-  fullName: OpenCvSharp.Mat
-- uid: OpenCvSharp.Point3f
-  commentId: T:OpenCvSharp.Point3f
-  parent: OpenCvSharp
+  fullName: Mat
+- uid: Point3f
   isExternal: true
   name: Point3f
   nameWithType: Point3f
-  fullName: OpenCvSharp.Point3f
-- uid: OpenCvSharp
-  commentId: N:OpenCvSharp
-  isExternal: true
-  name: OpenCvSharp
-  nameWithType: OpenCvSharp
-  fullName: OpenCvSharp
+  fullName: Point3f
 - uid: EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3d*
   commentId: Overload:EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3d
   name: TransformPoint3d
   nameWithType: MatExtensions.TransformPoint3d
   fullName: EvilDICOM.CV.Extensions.MatExtensions.TransformPoint3d
-- uid: OpenCvSharp.Point3d
-  commentId: T:OpenCvSharp.Point3d
-  parent: OpenCvSharp
+- uid: Point3d
   isExternal: true
   name: Point3d
   nameWithType: Point3d
-  fullName: OpenCvSharp.Point3d
+  fullName: Point3d
 - uid: EvilDICOM.CV.Extensions.MatExtensions.Show*
   commentId: Overload:EvilDICOM.CV.Extensions.MatExtensions.Show
   name: Show

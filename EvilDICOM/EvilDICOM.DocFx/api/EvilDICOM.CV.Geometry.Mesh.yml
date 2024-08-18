@@ -21,7 +21,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Geometry/Mesh.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Mesh
     path: ../EvilDICOM.CV/Geometry/Mesh.cs
     startLine: 9
@@ -29,18 +29,12 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.Geometry
   syntax:
-    content: public class Mesh
-    content.vb: Public Class Mesh
+    content: 'public class Mesh : object'
+    content.vb: >-
+      Public Class Mesh
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -62,7 +56,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Geometry/Mesh.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetTriangles
     path: ../EvilDICOM.CV/Geometry/Mesh.cs
     startLine: 11
@@ -72,7 +66,7 @@ items:
   syntax:
     content: public List<Triangle> GetTriangles()
     return:
-      type: System.Collections.Generic.List{EvilDICOM.CV.Geometry.Triangle}
+      type: List{EvilDICOM.CV.Geometry.Triangle}
     content.vb: Public Function GetTriangles As List(Of Triangle)
   overload: EvilDICOM.CV.Geometry.Mesh.GetTriangles*
   modifiers.csharp:
@@ -94,7 +88,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Geometry/Mesh.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CalculateVolumeCC
     path: ../EvilDICOM.CV/Geometry/Mesh.cs
     startLine: 25
@@ -126,7 +120,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Geometry/Mesh.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Vertices
     path: ../EvilDICOM.CV/Geometry/Mesh.cs
     startLine: 30
@@ -136,7 +130,7 @@ items:
   syntax:
     content: public List<Vector3> Vertices
     return:
-      type: System.Collections.Generic.List{EvilDICOM.Core.Helpers.Vector3}
+      type: List{Vector3}
     content.vb: Public Vertices As List(Of Vector3)
   modifiers.csharp:
   - public
@@ -157,7 +151,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Geometry/Mesh.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Indices
     path: ../EvilDICOM.CV/Geometry/Mesh.cs
     startLine: 31
@@ -167,7 +161,7 @@ items:
   syntax:
     content: public List<int> Indices
     return:
-      type: System.Collections.Generic.List{System.Int32}
+      type: List{System.Int32}
     content.vb: Public Indices As List(Of Integer)
   modifiers.csharp:
   - public
@@ -188,7 +182,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Geometry/Mesh.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Export
     path: ../EvilDICOM.CV/Geometry/Mesh.cs
     startLine: 33
@@ -219,285 +213,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -509,21 +224,20 @@ references:
   name: GetTriangles
   nameWithType: Mesh.GetTriangles
   fullName: EvilDICOM.CV.Geometry.Mesh.GetTriangles
-- uid: System.Collections.Generic.List{EvilDICOM.CV.Geometry.Triangle}
-  commentId: T:System.Collections.Generic.List{EvilDICOM.CV.Geometry.Triangle}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: List{EvilDICOM.CV.Geometry.Triangle}
+  commentId: '!:List{EvilDICOM.CV.Geometry.Triangle}'
+  definition: List`1
   name: List<Triangle>
   nameWithType: List<Triangle>
-  fullName: System.Collections.Generic.List<EvilDICOM.CV.Geometry.Triangle>
+  fullName: List<EvilDICOM.CV.Geometry.Triangle>
   nameWithType.vb: List(Of Triangle)
-  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.CV.Geometry.Triangle)
+  fullName.vb: List(Of EvilDICOM.CV.Geometry.Triangle)
   name.vb: List(Of Triangle)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -536,10 +250,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -551,51 +265,44 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.List`1
-  commentId: T:System.Collections.Generic.List`1
+- uid: List`1
   isExternal: true
-  name: List<T>
-  nameWithType: List<T>
-  fullName: System.Collections.Generic.List<T>
-  nameWithType.vb: List(Of T)
-  fullName.vb: System.Collections.Generic.List(Of T)
-  name.vb: List(Of T)
+  name: List<>
+  nameWithType: List<>
+  fullName: List<>
+  nameWithType.vb: List(Of )
+  fullName.vb: List(Of )
+  name.vb: List(Of )
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic
-  commentId: N:System.Collections.Generic
-  isExternal: true
-  name: System.Collections.Generic
-  nameWithType: System.Collections.Generic
-  fullName: System.Collections.Generic
 - uid: EvilDICOM.CV.Geometry.Mesh.CalculateVolumeCC*
   commentId: Overload:EvilDICOM.CV.Geometry.Mesh.CalculateVolumeCC
   name: CalculateVolumeCC
@@ -608,65 +315,63 @@ references:
   name: Double
   nameWithType: Double
   fullName: System.Double
-- uid: System.Collections.Generic.List{EvilDICOM.Core.Helpers.Vector3}
-  commentId: T:System.Collections.Generic.List{EvilDICOM.Core.Helpers.Vector3}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: List{Vector3}
+  commentId: '!:List{Vector3}'
+  definition: List`1
   name: List<Vector3>
   nameWithType: List<Vector3>
-  fullName: System.Collections.Generic.List<EvilDICOM.Core.Helpers.Vector3>
+  fullName: List<Vector3>
   nameWithType.vb: List(Of Vector3)
-  fullName.vb: System.Collections.Generic.List(Of EvilDICOM.Core.Helpers.Vector3)
+  fullName.vb: List(Of Vector3)
   name.vb: List(Of Vector3)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: System.Collections.Generic.List{System.Int32}
-  commentId: T:System.Collections.Generic.List{System.Int32}
-  parent: System.Collections.Generic
-  definition: System.Collections.Generic.List`1
+- uid: List{System.Int32}
+  commentId: '!:List{System.Int32}'
+  definition: List`1
   name: List<Int32>
   nameWithType: List<Int32>
-  fullName: System.Collections.Generic.List<System.Int32>
+  fullName: List<System.Int32>
   nameWithType.vb: List(Of Int32)
-  fullName.vb: System.Collections.Generic.List(Of System.Int32)
+  fullName.vb: List(Of System.Int32)
   name.vb: List(Of Int32)
   spec.csharp:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: <
     nameWithType: <
@@ -680,10 +385,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Collections.Generic.List`1
+  - uid: List`1
     name: List
     nameWithType: List
-    fullName: System.Collections.Generic.List
+    fullName: List
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '

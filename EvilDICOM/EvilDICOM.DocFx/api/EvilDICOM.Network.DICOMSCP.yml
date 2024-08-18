@@ -6,6 +6,7 @@ items:
   parent: EvilDICOM.Network
   children:
   - EvilDICOM.Network.DICOMSCP.#ctor(EvilDICOM.Network.Entity)
+  - EvilDICOM.Network.DICOMSCP.IdleTimeout
   - EvilDICOM.Network.DICOMSCP.IsListening
   - EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations(System.Boolean)
   - EvilDICOM.Network.DICOMSCP.RaisedSCPStopped
@@ -22,7 +23,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DICOMSCP
     path: ../EvilDICOM/Network/DICOMSCP.cs
     startLine: 15
@@ -57,6 +58,43 @@ items:
   modifiers.vb:
   - Public
   - Class
+- uid: EvilDICOM.Network.DICOMSCP.IdleTimeout
+  commentId: P:EvilDICOM.Network.DICOMSCP.IdleTimeout
+  id: IdleTimeout
+  parent: EvilDICOM.Network.DICOMSCP
+  langs:
+  - csharp
+  - vb
+  name: IdleTimeout
+  nameWithType: DICOMSCP.IdleTimeout
+  fullName: EvilDICOM.Network.DICOMSCP.IdleTimeout
+  type: Property
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM
+    id: IdleTimeout
+    path: ../EvilDICOM/Network/DICOMSCP.cs
+    startLine: 26
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Network
+  summary: "\nIdleTimeout in milliseconds. Default value: 25000ms.\n"
+  example: []
+  syntax:
+    content: public int IdleTimeout { get; set; }
+    parameters: []
+    return:
+      type: System.Int32
+    content.vb: Public Property IdleTimeout As Integer
+  overload: EvilDICOM.Network.DICOMSCP.IdleTimeout*
+  modifiers.csharp:
+  - public
+  - get
+  - set
+  modifiers.vb:
+  - Public
 - uid: EvilDICOM.Network.DICOMSCP.#ctor(EvilDICOM.Network.Entity)
   commentId: M:EvilDICOM.Network.DICOMSCP.#ctor(EvilDICOM.Network.Entity)
   id: '#ctor(EvilDICOM.Network.Entity)'
@@ -72,10 +110,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: .ctor
     path: ../EvilDICOM/Network/DICOMSCP.cs
-    startLine: 23
+    startLine: 28
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Network
@@ -105,10 +143,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: IsListening
     path: ../EvilDICOM/Network/DICOMSCP.cs
-    startLine: 33
+    startLine: 38
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Network
@@ -140,15 +178,15 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ListenForIncomingAssociations
     path: ../EvilDICOM/Network/DICOMSCP.cs
-    startLine: 38
+    startLine: 43
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Network
   syntax:
-    content: public void ListenForIncomingAssociations(bool keepListenerRunning)
+    content: public async void ListenForIncomingAssociations(bool keepListenerRunning)
     parameters:
     - id: keepListenerRunning
       type: System.Boolean
@@ -156,6 +194,7 @@ items:
   overload: EvilDICOM.Network.DICOMSCP.ListenForIncomingAssociations*
   modifiers.csharp:
   - public
+  - async
   modifiers.vb:
   - Public
 - uid: EvilDICOM.Network.DICOMSCP.Stop
@@ -173,10 +212,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Stop
     path: ../EvilDICOM/Network/DICOMSCP.cs
-    startLine: 94
+    startLine: 99
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Network
@@ -203,10 +242,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SCPStopped
     path: ../EvilDICOM/Network/DICOMSCP.cs
-    startLine: 102
+    startLine: 107
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Network
@@ -234,10 +273,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/DICOMSCP.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: RaisedSCPStopped
     path: ../EvilDICOM/Network/DICOMSCP.cs
-    startLine: 104
+    startLine: 109
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Network
@@ -589,6 +628,18 @@ references:
   name: System
   nameWithType: System
   fullName: System
+- uid: EvilDICOM.Network.DICOMSCP.IdleTimeout*
+  commentId: Overload:EvilDICOM.Network.DICOMSCP.IdleTimeout
+  name: IdleTimeout
+  nameWithType: DICOMSCP.IdleTimeout
+  fullName: EvilDICOM.Network.DICOMSCP.IdleTimeout
+- uid: System.Int32
+  commentId: T:System.Int32
+  parent: System
+  isExternal: true
+  name: Int32
+  nameWithType: Int32
+  fullName: System.Int32
 - uid: EvilDICOM.Network.DICOMSCP.#ctor*
   commentId: Overload:EvilDICOM.Network.DICOMSCP.#ctor
   name: DICOMSCP

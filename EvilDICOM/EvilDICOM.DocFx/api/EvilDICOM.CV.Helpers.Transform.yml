@@ -5,13 +5,13 @@ items:
   id: Transform
   parent: EvilDICOM.CV.Helpers
   children:
-  - EvilDICOM.CV.Helpers.Transform.BEVTransform(System.Double,System.Double,System.Double,OpenCvSharp.Mat)
-  - EvilDICOM.CV.Helpers.Transform.DICOM2IEC(EvilDICOM.Core.Enums.Orientation)
-  - EvilDICOM.CV.Helpers.Transform.DICOM2Isocenter(EvilDICOM.Core.Enums.Orientation,OpenCvSharp.Point3f)
+  - EvilDICOM.CV.Helpers.Transform.BEVTransform(System.Double,System.Double,System.Double,Mat)
+  - EvilDICOM.CV.Helpers.Transform.DICOM2IEC(Orientation)
+  - EvilDICOM.CV.Helpers.Transform.DICOM2Isocenter(Orientation,Point3f)
   - EvilDICOM.CV.Helpers.Transform.GantryTransform(System.Double)
-  - EvilDICOM.CV.Helpers.Transform.IECToDICOM(EvilDICOM.Core.Enums.Orientation)
-  - EvilDICOM.CV.Helpers.Transform.Iso2DICOM(EvilDICOM.Core.Enums.Orientation,OpenCvSharp.Point3f)
-  - EvilDICOM.CV.Helpers.Transform.TransformOffset(EvilDICOM.Core.Helpers.Vector3,System.ValueTuple{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3})
+  - EvilDICOM.CV.Helpers.Transform.IECToDICOM(Orientation)
+  - EvilDICOM.CV.Helpers.Transform.Iso2DICOM(Orientation,Point3f)
+  - EvilDICOM.CV.Helpers.Transform.TransformOffset(Vector3,System.ValueTuple{Vector3,Vector3,Vector3})
   langs:
   - csharp
   - vb
@@ -23,7 +23,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Transform
     path: ../EvilDICOM.CV/Helpers/Transform.cs
     startLine: 13
@@ -31,40 +31,34 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.Helpers
   syntax:
-    content: public class Transform
-    content.vb: Public Class Transform
+    content: 'public class Transform : object'
+    content.vb: >-
+      Public Class Transform
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: EvilDICOM.CV.Helpers.Transform.DICOM2IEC(EvilDICOM.Core.Enums.Orientation)
-  commentId: M:EvilDICOM.CV.Helpers.Transform.DICOM2IEC(EvilDICOM.Core.Enums.Orientation)
-  id: DICOM2IEC(EvilDICOM.Core.Enums.Orientation)
+- uid: EvilDICOM.CV.Helpers.Transform.DICOM2IEC(Orientation)
+  commentId: M:EvilDICOM.CV.Helpers.Transform.DICOM2IEC(Orientation)
+  id: DICOM2IEC(Orientation)
   parent: EvilDICOM.CV.Helpers.Transform
   langs:
   - csharp
   - vb
   name: DICOM2IEC(Orientation)
   nameWithType: Transform.DICOM2IEC(Orientation)
-  fullName: EvilDICOM.CV.Helpers.Transform.DICOM2IEC(EvilDICOM.Core.Enums.Orientation)
+  fullName: EvilDICOM.CV.Helpers.Transform.DICOM2IEC(Orientation)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DICOM2IEC
     path: ../EvilDICOM.CV/Helpers/Transform.cs
     startLine: 21
@@ -77,10 +71,10 @@ items:
     content: public static Mat<float> DICOM2IEC(Orientation orient)
     parameters:
     - id: orient
-      type: EvilDICOM.Core.Enums.Orientation
+      type: Orientation
       description: ''
     return:
-      type: OpenCvSharp.Mat{System.Single}
+      type: Mat{System.Single}
       description: 4x4 transformation matrix
     content.vb: Public Shared Function DICOM2IEC(orient As Orientation) As Mat(Of Single)
   overload: EvilDICOM.CV.Helpers.Transform.DICOM2IEC*
@@ -90,22 +84,22 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Helpers.Transform.Iso2DICOM(EvilDICOM.Core.Enums.Orientation,OpenCvSharp.Point3f)
-  commentId: M:EvilDICOM.CV.Helpers.Transform.Iso2DICOM(EvilDICOM.Core.Enums.Orientation,OpenCvSharp.Point3f)
-  id: Iso2DICOM(EvilDICOM.Core.Enums.Orientation,OpenCvSharp.Point3f)
+- uid: EvilDICOM.CV.Helpers.Transform.Iso2DICOM(Orientation,Point3f)
+  commentId: M:EvilDICOM.CV.Helpers.Transform.Iso2DICOM(Orientation,Point3f)
+  id: Iso2DICOM(Orientation,Point3f)
   parent: EvilDICOM.CV.Helpers.Transform
   langs:
   - csharp
   - vb
   name: Iso2DICOM(Orientation, Point3f)
   nameWithType: Transform.Iso2DICOM(Orientation, Point3f)
-  fullName: EvilDICOM.CV.Helpers.Transform.Iso2DICOM(EvilDICOM.Core.Enums.Orientation, OpenCvSharp.Point3f)
+  fullName: EvilDICOM.CV.Helpers.Transform.Iso2DICOM(Orientation, Point3f)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Iso2DICOM
     path: ../EvilDICOM.CV/Helpers/Transform.cs
     startLine: 85
@@ -116,11 +110,11 @@ items:
     content: public static Mat<float> Iso2DICOM(Orientation orient, Point3f iso)
     parameters:
     - id: orient
-      type: EvilDICOM.Core.Enums.Orientation
+      type: Orientation
     - id: iso
-      type: OpenCvSharp.Point3f
+      type: Point3f
     return:
-      type: OpenCvSharp.Mat{System.Single}
+      type: Mat{System.Single}
     content.vb: Public Shared Function Iso2DICOM(orient As Orientation, iso As Point3f) As Mat(Of Single)
   overload: EvilDICOM.CV.Helpers.Transform.Iso2DICOM*
   modifiers.csharp:
@@ -129,22 +123,22 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Helpers.Transform.IECToDICOM(EvilDICOM.Core.Enums.Orientation)
-  commentId: M:EvilDICOM.CV.Helpers.Transform.IECToDICOM(EvilDICOM.Core.Enums.Orientation)
-  id: IECToDICOM(EvilDICOM.Core.Enums.Orientation)
+- uid: EvilDICOM.CV.Helpers.Transform.IECToDICOM(Orientation)
+  commentId: M:EvilDICOM.CV.Helpers.Transform.IECToDICOM(Orientation)
+  id: IECToDICOM(Orientation)
   parent: EvilDICOM.CV.Helpers.Transform
   langs:
   - csharp
   - vb
   name: IECToDICOM(Orientation)
   nameWithType: Transform.IECToDICOM(Orientation)
-  fullName: EvilDICOM.CV.Helpers.Transform.IECToDICOM(EvilDICOM.Core.Enums.Orientation)
+  fullName: EvilDICOM.CV.Helpers.Transform.IECToDICOM(Orientation)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: IECToDICOM
     path: ../EvilDICOM.CV/Helpers/Transform.cs
     startLine: 99
@@ -157,10 +151,10 @@ items:
     content: public static Mat<float> IECToDICOM(Orientation orient)
     parameters:
     - id: orient
-      type: EvilDICOM.Core.Enums.Orientation
+      type: Orientation
       description: ''
     return:
-      type: OpenCvSharp.Mat{System.Single}
+      type: Mat{System.Single}
       description: 4x4 transformation matrix
     content.vb: Public Shared Function IECToDICOM(orient As Orientation) As Mat(Of Single)
   overload: EvilDICOM.CV.Helpers.Transform.IECToDICOM*
@@ -185,7 +179,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GantryTransform
     path: ../EvilDICOM.CV/Helpers/Transform.cs
     startLine: 107
@@ -198,7 +192,7 @@ items:
     - id: gantryAngle
       type: System.Double
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: Public Shared Function GantryTransform(gantryAngle As Double) As Mat
   overload: EvilDICOM.CV.Helpers.Transform.GantryTransform*
   modifiers.csharp:
@@ -207,22 +201,22 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Helpers.Transform.BEVTransform(System.Double,System.Double,System.Double,OpenCvSharp.Mat)
-  commentId: M:EvilDICOM.CV.Helpers.Transform.BEVTransform(System.Double,System.Double,System.Double,OpenCvSharp.Mat)
-  id: BEVTransform(System.Double,System.Double,System.Double,OpenCvSharp.Mat)
+- uid: EvilDICOM.CV.Helpers.Transform.BEVTransform(System.Double,System.Double,System.Double,Mat)
+  commentId: M:EvilDICOM.CV.Helpers.Transform.BEVTransform(System.Double,System.Double,System.Double,Mat)
+  id: BEVTransform(System.Double,System.Double,System.Double,Mat)
   parent: EvilDICOM.CV.Helpers.Transform
   langs:
   - csharp
   - vb
   name: BEVTransform(Double, Double, Double, Mat)
   nameWithType: Transform.BEVTransform(Double, Double, Double, Mat)
-  fullName: EvilDICOM.CV.Helpers.Transform.BEVTransform(System.Double, System.Double, System.Double, OpenCvSharp.Mat)
+  fullName: EvilDICOM.CV.Helpers.Transform.BEVTransform(System.Double, System.Double, System.Double, Mat)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: BEVTransform
     path: ../EvilDICOM.CV/Helpers/Transform.cs
     startLine: 124
@@ -244,9 +238,9 @@ items:
       type: System.Double
       description: support anlge in degrees (IEC)
     - id: dicomToIEC
-      type: OpenCvSharp.Mat
+      type: Mat
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
       description: ''
     content.vb: Public Shared Function BEVTransform(gantryAngle As Double, collimatorAngle As Double, patientSupportAngle As Double, dicomToIEC As Mat) As Mat
   overload: EvilDICOM.CV.Helpers.Transform.BEVTransform*
@@ -256,22 +250,22 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Helpers.Transform.DICOM2Isocenter(EvilDICOM.Core.Enums.Orientation,OpenCvSharp.Point3f)
-  commentId: M:EvilDICOM.CV.Helpers.Transform.DICOM2Isocenter(EvilDICOM.Core.Enums.Orientation,OpenCvSharp.Point3f)
-  id: DICOM2Isocenter(EvilDICOM.Core.Enums.Orientation,OpenCvSharp.Point3f)
+- uid: EvilDICOM.CV.Helpers.Transform.DICOM2Isocenter(Orientation,Point3f)
+  commentId: M:EvilDICOM.CV.Helpers.Transform.DICOM2Isocenter(Orientation,Point3f)
+  id: DICOM2Isocenter(Orientation,Point3f)
   parent: EvilDICOM.CV.Helpers.Transform
   langs:
   - csharp
   - vb
   name: DICOM2Isocenter(Orientation, Point3f)
   nameWithType: Transform.DICOM2Isocenter(Orientation, Point3f)
-  fullName: EvilDICOM.CV.Helpers.Transform.DICOM2Isocenter(EvilDICOM.Core.Enums.Orientation, OpenCvSharp.Point3f)
+  fullName: EvilDICOM.CV.Helpers.Transform.DICOM2Isocenter(Orientation, Point3f)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DICOM2Isocenter
     path: ../EvilDICOM.CV/Helpers/Transform.cs
     startLine: 154
@@ -284,13 +278,13 @@ items:
     content: public static Mat<float> DICOM2Isocenter(Orientation orient, Point3f iso)
     parameters:
     - id: orient
-      type: EvilDICOM.Core.Enums.Orientation
+      type: Orientation
       description: patient orienation
     - id: iso
-      type: OpenCvSharp.Point3f
+      type: Point3f
       description: isocenter position
     return:
-      type: OpenCvSharp.Mat{System.Single}
+      type: Mat{System.Single}
       description: 4x4 transformation matrix
     content.vb: Public Shared Function DICOM2Isocenter(orient As Orientation, iso As Point3f) As Mat(Of Single)
   overload: EvilDICOM.CV.Helpers.Transform.DICOM2Isocenter*
@@ -300,22 +294,22 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Helpers.Transform.TransformOffset(EvilDICOM.Core.Helpers.Vector3,System.ValueTuple{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3})
-  commentId: M:EvilDICOM.CV.Helpers.Transform.TransformOffset(EvilDICOM.Core.Helpers.Vector3,System.ValueTuple{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3})
-  id: TransformOffset(EvilDICOM.Core.Helpers.Vector3,System.ValueTuple{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3})
+- uid: EvilDICOM.CV.Helpers.Transform.TransformOffset(Vector3,System.ValueTuple{Vector3,Vector3,Vector3})
+  commentId: M:EvilDICOM.CV.Helpers.Transform.TransformOffset(Vector3,System.ValueTuple{Vector3,Vector3,Vector3})
+  id: TransformOffset(Vector3,System.ValueTuple{Vector3,Vector3,Vector3})
   parent: EvilDICOM.CV.Helpers.Transform
   langs:
   - csharp
   - vb
   name: TransformOffset(Vector3, (Vector3 xDir, Vector3 yDir, Vector3 zDir))
   nameWithType: Transform.TransformOffset(Vector3, (Vector3 xDir, Vector3 yDir, Vector3 zDir))
-  fullName: EvilDICOM.CV.Helpers.Transform.TransformOffset(EvilDICOM.Core.Helpers.Vector3, System.ValueTuple<EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3>)
+  fullName: EvilDICOM.CV.Helpers.Transform.TransformOffset(Vector3, System.ValueTuple<Vector3, Vector3, Vector3>)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: TransformOffset
     path: ../EvilDICOM.CV/Helpers/Transform.cs
     startLine: 173
@@ -328,24 +322,24 @@ items:
     content: public static Vector3 TransformOffset(Vector3 offset, (Vector3 xDir, Vector3 yDir, Vector3 zDir) imageOrientation)
     parameters:
     - id: offset
-      type: EvilDICOM.Core.Helpers.Vector3
+      type: Vector3
       description: ''
     - id: imageOrientation
-      type: System.ValueTuple{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3}
+      type: System.ValueTuple{Vector3,Vector3,Vector3}
     return:
-      type: EvilDICOM.Core.Helpers.Vector3
+      type: Vector3
       description: ''
-    content.vb: Public Shared Function TransformOffset(offset As Vector3, imageOrientation As(xDir As Vector3, yDir As Vector3, zDir As Vector3)) As Vector3
+    content.vb: Public Shared Function TransformOffset(offset As Vector3, imageOrientation As(xDir As Vector3, yDir As Vector3, zDir As Vector3)(Of Vector3 , Vector3, Vector3)) As Vector3
   overload: EvilDICOM.CV.Helpers.Transform.TransformOffset*
-  nameWithType.vb: Transform.TransformOffset(Vector3, (xDir As Vector3, yDir As Vector3, zDir As Vector3))
+  nameWithType.vb: Transform.TransformOffset(Vector3, (xDir As Vector3, yDir As Vector3, zDir As Vector3)(Of Vector3, Vector3, Vector3))
   modifiers.csharp:
   - public
   - static
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: EvilDICOM.CV.Helpers.Transform.TransformOffset(EvilDICOM.Core.Helpers.Vector3, System.ValueTuple(Of EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3))
-  name.vb: TransformOffset(Vector3, (xDir As Vector3, yDir As Vector3, zDir As Vector3))
+  fullName.vb: EvilDICOM.CV.Helpers.Transform.TransformOffset(Vector3, System.ValueTuple(Of Vector3, Vector3, Vector3))
+  name.vb: TransformOffset(Vector3, (xDir As Vector3, yDir As Vector3, zDir As Vector3)(Of Vector3, Vector3, Vector3))
 references:
 - uid: EvilDICOM.CV.Helpers
   commentId: N:EvilDICOM.CV.Helpers
@@ -359,285 +353,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -649,27 +364,25 @@ references:
   name: DICOM2IEC
   nameWithType: Transform.DICOM2IEC
   fullName: EvilDICOM.CV.Helpers.Transform.DICOM2IEC
-- uid: EvilDICOM.Core.Enums.Orientation
-  commentId: T:EvilDICOM.Core.Enums.Orientation
-  parent: EvilDICOM.Core.Enums
+- uid: Orientation
+  isExternal: true
   name: Orientation
   nameWithType: Orientation
-  fullName: EvilDICOM.Core.Enums.Orientation
-- uid: OpenCvSharp.Mat{System.Single}
-  commentId: T:OpenCvSharp.Mat{System.Single}
-  parent: OpenCvSharp
-  definition: OpenCvSharp.Mat`1
+  fullName: Orientation
+- uid: Mat{System.Single}
+  commentId: '!:Mat{System.Single}'
+  definition: Mat`1
   name: Mat<Single>
   nameWithType: Mat<Single>
-  fullName: OpenCvSharp.Mat<System.Single>
+  fullName: Mat<System.Single>
   nameWithType.vb: Mat(Of Single)
-  fullName.vb: OpenCvSharp.Mat(Of System.Single)
+  fullName.vb: Mat(Of System.Single)
   name.vb: Mat(Of Single)
   spec.csharp:
-  - uid: OpenCvSharp.Mat`1
+  - uid: Mat`1
     name: Mat
     nameWithType: Mat
-    fullName: OpenCvSharp.Mat
+    fullName: Mat
     isExternal: true
   - name: <
     nameWithType: <
@@ -683,10 +396,10 @@ references:
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: OpenCvSharp.Mat`1
+  - uid: Mat`1
     name: Mat
     nameWithType: Mat
-    fullName: OpenCvSharp.Mat
+    fullName: Mat
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
@@ -699,68 +412,54 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: EvilDICOM.Core.Enums
-  commentId: N:EvilDICOM.Core.Enums
-  name: EvilDICOM.Core.Enums
-  nameWithType: EvilDICOM.Core.Enums
-  fullName: EvilDICOM.Core.Enums
-- uid: OpenCvSharp.Mat`1
-  commentId: T:OpenCvSharp.Mat`1
+- uid: Mat`1
   isExternal: true
-  name: Mat<TElem>
-  nameWithType: Mat<TElem>
-  fullName: OpenCvSharp.Mat<TElem>
-  nameWithType.vb: Mat(Of TElem)
-  fullName.vb: OpenCvSharp.Mat(Of TElem)
-  name.vb: Mat(Of TElem)
+  name: Mat<>
+  nameWithType: Mat<>
+  fullName: Mat<>
+  nameWithType.vb: Mat(Of )
+  fullName.vb: Mat(Of )
+  name.vb: Mat(Of )
   spec.csharp:
-  - uid: OpenCvSharp.Mat`1
+  - uid: Mat`1
     name: Mat
     nameWithType: Mat
-    fullName: OpenCvSharp.Mat
+    fullName: Mat
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: TElem
-    nameWithType: TElem
-    fullName: TElem
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: OpenCvSharp.Mat`1
+  - uid: Mat`1
     name: Mat
     nameWithType: Mat
-    fullName: OpenCvSharp.Mat
+    fullName: Mat
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: TElem
-    nameWithType: TElem
-    fullName: TElem
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )
-- uid: OpenCvSharp
-  commentId: N:OpenCvSharp
-  isExternal: true
-  name: OpenCvSharp
-  nameWithType: OpenCvSharp
-  fullName: OpenCvSharp
 - uid: EvilDICOM.CV.Helpers.Transform.Iso2DICOM*
   commentId: Overload:EvilDICOM.CV.Helpers.Transform.Iso2DICOM
   name: Iso2DICOM
   nameWithType: Transform.Iso2DICOM
   fullName: EvilDICOM.CV.Helpers.Transform.Iso2DICOM
-- uid: OpenCvSharp.Point3f
-  commentId: T:OpenCvSharp.Point3f
-  parent: OpenCvSharp
+- uid: Point3f
   isExternal: true
   name: Point3f
   nameWithType: Point3f
-  fullName: OpenCvSharp.Point3f
+  fullName: Point3f
 - uid: EvilDICOM.CV.Helpers.Transform.IECToDICOM*
   commentId: Overload:EvilDICOM.CV.Helpers.Transform.IECToDICOM
   name: IECToDICOM
@@ -778,13 +477,11 @@ references:
   name: Double
   nameWithType: Double
   fullName: System.Double
-- uid: OpenCvSharp.Mat
-  commentId: T:OpenCvSharp.Mat
-  parent: OpenCvSharp
+- uid: Mat
   isExternal: true
   name: Mat
   nameWithType: Mat
-  fullName: OpenCvSharp.Mat
+  fullName: Mat
 - uid: EvilDICOM.CV.Helpers.Transform.BEVTransform*
   commentId: Overload:EvilDICOM.CV.Helpers.Transform.BEVTransform
   name: BEVTransform
@@ -800,90 +497,146 @@ references:
   name: TransformOffset
   nameWithType: Transform.TransformOffset
   fullName: EvilDICOM.CV.Helpers.Transform.TransformOffset
-- uid: EvilDICOM.Core.Helpers.Vector3
-  commentId: T:EvilDICOM.Core.Helpers.Vector3
-  parent: EvilDICOM.Core.Helpers
+- uid: Vector3
+  isExternal: true
   name: Vector3
   nameWithType: Vector3
-  fullName: EvilDICOM.Core.Helpers.Vector3
-- uid: System.ValueTuple{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3}
-  commentId: T:System.ValueTuple{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3}
-  parent: System
-  isExternal: true
-  name: ValueTuple<Vector3, Vector3, Vector3>
-  nameWithType: ValueTuple<Vector3, Vector3, Vector3>
-  fullName: System.ValueTuple<EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3>
-  nameWithType.vb: ValueTuple(Of Vector3, Vector3, Vector3)
-  fullName.vb: System.ValueTuple(Of EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3)
-  name.vb: ValueTuple(Of Vector3, Vector3, Vector3)
+  fullName: Vector3
+- uid: System.ValueTuple{Vector3,Vector3,Vector3}
+  commentId: '!:System.ValueTuple{Vector3,Vector3,Vector3}'
+  definition: System.ValueTuple`3
+  name: (, , )<Vector3, Vector3, Vector3>
+  nameWithType: (, , )<Vector3, Vector3, Vector3>
+  fullName: System.ValueTuple<Vector3, Vector3, Vector3>
+  nameWithType.vb: (, , )(Of Vector3, Vector3, Vector3)
+  fullName.vb: System.ValueTuple(Of Vector3, Vector3, Vector3)
+  name.vb: (, , )(Of Vector3, Vector3, Vector3)
   spec.csharp:
   - uid: System.ValueTuple`3
-    name: ValueTuple
-    nameWithType: ValueTuple
+    name: (, , )
+    nameWithType: (, , )
     fullName: System.ValueTuple
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
   - uid: System.ValueTuple`3
-    name: ValueTuple
-    nameWithType: ValueTuple
+    name: (, , )
+    nameWithType: (, , )
     fullName: System.ValueTuple
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: EvilDICOM.Core.Helpers
-  commentId: N:EvilDICOM.Core.Helpers
-  name: EvilDICOM.Core.Helpers
-  nameWithType: EvilDICOM.Core.Helpers
-  fullName: EvilDICOM.Core.Helpers
+- uid: System.ValueTuple`3
+  commentId: T:System.ValueTuple`3
+  isExternal: true
+  name: (T1, T2, T3)<T1, T2, T3>
+  nameWithType: (T1, T2, T3)<T1, T2, T3>
+  fullName: System.ValueTuple<T1, T2, T3>
+  nameWithType.vb: (T1, T2, T3)(Of T1, T2, T3)
+  fullName.vb: System.ValueTuple(Of T1, T2, T3)
+  name.vb: (T1, T2, T3)(Of T1, T2, T3)
+  spec.csharp:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: <
+    nameWithType: <
+    fullName: <
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: '>'
+    nameWithType: '>'
+    fullName: '>'
+  spec.vb:
+  - uid: System.ValueTuple`3
+    name: (T1, T2, T3)
+    nameWithType: (T1, T2, T3)
+    fullName: System.ValueTuple
+    isExternal: true
+  - name: '(Of '
+    nameWithType: '(Of '
+    fullName: '(Of '
+  - name: T1
+    nameWithType: T1
+    fullName: T1
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T2
+    nameWithType: T2
+    fullName: T2
+  - name: ', '
+    nameWithType: ', '
+    fullName: ', '
+  - name: T3
+    nameWithType: T3
+    fullName: T3
+  - name: )
+    nameWithType: )
+    fullName: )

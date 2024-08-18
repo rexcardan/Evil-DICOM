@@ -12,6 +12,8 @@ items:
   - EvilDICOM.Core.Wrapping.DICOMObjectWrapper.GetWrappedSequence``1(EvilDICOM.Core.Element.Tag)
   - EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetValue``1(EvilDICOM.Core.Element.Tag,``0)
   - EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetWrappedSequence``1(EvilDICOM.Core.Element.Tag,System.Collections.Generic.List{``0})
+  - EvilDICOM.Core.Wrapping.DICOMObjectWrapper.Write(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  - EvilDICOM.Core.Wrapping.DICOMObjectWrapper.WriteAddMeta(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)
   langs:
   - csharp
   - vb
@@ -23,10 +25,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DICOMObjectWrapper
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 10
+    startLine: 11
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -66,10 +68,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DCM
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 12
+    startLine: 13
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -101,10 +103,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: .ctor
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 14
+    startLine: 15
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -131,10 +133,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: .ctor
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 18
+    startLine: 19
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -164,10 +166,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetValue
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 23
+    startLine: 24
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -204,10 +206,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SetValue
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 28
+    startLine: 29
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -244,10 +246,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetWrappedSequence
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 39
+    startLine: 40
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -291,10 +293,10 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SetWrappedSequence
     path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
-    startLine: 52
+    startLine: 53
   assemblies:
   - EvilDICOM
   namespace: EvilDICOM.Core.Wrapping
@@ -322,6 +324,76 @@ items:
   - Public
   fullName.vb: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.SetWrappedSequence(Of T)(EvilDICOM.Core.Element.Tag, System.Collections.Generic.List(Of T))
   name.vb: SetWrappedSequence(Of T)(Tag, List(Of T))
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.Write(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  commentId: M:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.Write(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  id: Write(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  parent: EvilDICOM.Core.Wrapping.DICOMObjectWrapper
+  langs:
+  - csharp
+  - vb
+  name: Write(String, DICOMIOSettings)
+  nameWithType: DICOMObjectWrapper.Write(String, DICOMIOSettings)
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.Write(System.String, EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM
+    id: Write
+    path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
+    startLine: 58
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Wrapping
+  syntax:
+    content: public void Write(string filePath, DICOMIOSettings settings = null)
+    parameters:
+    - id: filePath
+      type: System.String
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+    content.vb: Public Sub Write(filePath As String, settings As DICOMIOSettings = Nothing)
+  overload: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.Write*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.WriteAddMeta(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  commentId: M:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.WriteAddMeta(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  id: WriteAddMeta(System.String,EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  parent: EvilDICOM.Core.Wrapping.DICOMObjectWrapper
+  langs:
+  - csharp
+  - vb
+  name: WriteAddMeta(String, DICOMIOSettings)
+  nameWithType: DICOMObjectWrapper.WriteAddMeta(String, DICOMIOSettings)
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.WriteAddMeta(System.String, EvilDICOM.Core.IO.Writing.DICOMIOSettings)
+  type: Method
+  source:
+    remote:
+      path: EvilDICOM/EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
+      branch: master
+      repo: https://github.com/rexcardan/Evil-DICOM
+    id: WriteAddMeta
+    path: ../EvilDICOM/Core/Wapping/DICOMObjectWrapper.cs
+    startLine: 63
+  assemblies:
+  - EvilDICOM
+  namespace: EvilDICOM.Core.Wrapping
+  syntax:
+    content: public void WriteAddMeta(string filePath, DICOMIOSettings settings = null)
+    parameters:
+    - id: filePath
+      type: System.String
+    - id: settings
+      type: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+    content.vb: Public Sub WriteAddMeta(filePath As String, settings As DICOMIOSettings = Nothing)
+  overload: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.WriteAddMeta*
+  modifiers.csharp:
+  - public
+  modifiers.vb:
+  - Public
 references:
 - uid: EvilDICOM.Core.Wrapping
   commentId: N:EvilDICOM.Core.Wrapping
@@ -916,3 +988,31 @@ references:
   name: System.Collections.Generic
   nameWithType: System.Collections.Generic
   fullName: System.Collections.Generic
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.Write*
+  commentId: Overload:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.Write
+  name: Write
+  nameWithType: DICOMObjectWrapper.Write
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.Write
+- uid: System.String
+  commentId: T:System.String
+  parent: System
+  isExternal: true
+  name: String
+  nameWithType: String
+  fullName: System.String
+- uid: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  commentId: T:EvilDICOM.Core.IO.Writing.DICOMIOSettings
+  parent: EvilDICOM.Core.IO.Writing
+  name: DICOMIOSettings
+  nameWithType: DICOMIOSettings
+  fullName: EvilDICOM.Core.IO.Writing.DICOMIOSettings
+- uid: EvilDICOM.Core.IO.Writing
+  commentId: N:EvilDICOM.Core.IO.Writing
+  name: EvilDICOM.Core.IO.Writing
+  nameWithType: EvilDICOM.Core.IO.Writing
+  fullName: EvilDICOM.Core.IO.Writing
+- uid: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.WriteAddMeta*
+  commentId: Overload:EvilDICOM.Core.Wrapping.DICOMObjectWrapper.WriteAddMeta
+  name: WriteAddMeta
+  nameWithType: DICOMObjectWrapper.WriteAddMeta
+  fullName: EvilDICOM.Core.Wrapping.DICOMObjectWrapper.WriteAddMeta

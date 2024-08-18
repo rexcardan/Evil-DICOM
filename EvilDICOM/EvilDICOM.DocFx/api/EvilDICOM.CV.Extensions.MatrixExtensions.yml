@@ -5,18 +5,18 @@ items:
   id: MatrixExtensions
   parent: EvilDICOM.CV.Extensions
   children:
-  - EvilDICOM.CV.Extensions.MatrixExtensions.DrawAllContours(OpenCvSharp.Mat,OpenCvSharp.Point[][],EvilDICOM.CV.Drawing.StructureLook)
-  - EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLine(OpenCvSharp.Mat,EvilDICOM.CV.RT.IsodoseLevel)
+  - EvilDICOM.CV.Extensions.MatrixExtensions.DrawAllContours(Mat,Point[][],EvilDICOM.CV.Drawing.StructureLook)
+  - EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLine(Mat,EvilDICOM.CV.RT.IsodoseLevel)
   - EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.Image.Matrix,EvilDICOM.CV.RT.IsodoseLevel[])
   - EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(EvilDICOM.CV.Image.Matrix,System.Double)
-  - EvilDICOM.CV.Extensions.MatrixExtensions.FindZeroLevelContours(OpenCvSharp.Mat,System.Func{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3},System.Int32)
-  - EvilDICOM.CV.Extensions.MatrixExtensions.HeatMap(OpenCvSharp.Mat)
-  - EvilDICOM.CV.Extensions.MatrixExtensions.Rotate90(OpenCvSharp.Mat)
+  - EvilDICOM.CV.Extensions.MatrixExtensions.FindZeroLevelContours(Mat,Func{Vector3,Vector3},System.Int32)
+  - EvilDICOM.CV.Extensions.MatrixExtensions.HeatMap(Mat)
+  - EvilDICOM.CV.Extensions.MatrixExtensions.Rotate90(Mat)
   - EvilDICOM.CV.Extensions.MatrixExtensions.ShowAllSlices(EvilDICOM.CV.Image.Matrix)
   - EvilDICOM.CV.Extensions.MatrixExtensions.ShowSDFMatrix(EvilDICOM.CV.Image.Matrix)
-  - EvilDICOM.CV.Extensions.MatrixExtensions.To2DDoubleArray(OpenCvSharp.Mat)
-  - EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(OpenCvSharp.Mat,EvilDICOM.CV.Helpers.WindowLevelPreset)
-  - EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(OpenCvSharp.Mat,System.Double,System.Double)
+  - EvilDICOM.CV.Extensions.MatrixExtensions.To2DDoubleArray(Mat)
+  - EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(Mat,EvilDICOM.CV.Helpers.WindowLevelPreset)
+  - EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(Mat,System.Double,System.Double)
   langs:
   - csharp
   - vb
@@ -28,7 +28,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MatrixExtensions
     path: ../EvilDICOM.CV/Extensions/MatrixExtensions.cs
     startLine: 15
@@ -36,18 +36,12 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.Extensions
   syntax:
-    content: public static class MatrixExtensions
-    content.vb: Public Module MatrixExtensions
+    content: 'public static class MatrixExtensions : object'
+    content.vb: >-
+      Public Module MatrixExtensions
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - static
@@ -55,9 +49,9 @@ items:
   modifiers.vb:
   - Public
   - Module
-- uid: EvilDICOM.CV.Extensions.MatrixExtensions.To2DDoubleArray(OpenCvSharp.Mat)
-  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.To2DDoubleArray(OpenCvSharp.Mat)
-  id: To2DDoubleArray(OpenCvSharp.Mat)
+- uid: EvilDICOM.CV.Extensions.MatrixExtensions.To2DDoubleArray(Mat)
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.To2DDoubleArray(Mat)
+  id: To2DDoubleArray(Mat)
   isExtensionMethod: true
   parent: EvilDICOM.CV.Extensions.MatrixExtensions
   langs:
@@ -65,13 +59,13 @@ items:
   - vb
   name: To2DDoubleArray(Mat)
   nameWithType: MatrixExtensions.To2DDoubleArray(Mat)
-  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.To2DDoubleArray(OpenCvSharp.Mat)
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.To2DDoubleArray(Mat)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: To2DDoubleArray
     path: ../EvilDICOM.CV/Extensions/MatrixExtensions.cs
     startLine: 17
@@ -82,7 +76,7 @@ items:
     content: public static double[, ] To2DDoubleArray(this Mat mat)
     parameters:
     - id: mat
-      type: OpenCvSharp.Mat
+      type: Mat
     return:
       type: System.Double[,]
     content.vb: >-
@@ -96,9 +90,9 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(OpenCvSharp.Mat,System.Double,System.Double)
-  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(OpenCvSharp.Mat,System.Double,System.Double)
-  id: WindowAndLevel(OpenCvSharp.Mat,System.Double,System.Double)
+- uid: EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(Mat,System.Double,System.Double)
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(Mat,System.Double,System.Double)
+  id: WindowAndLevel(Mat,System.Double,System.Double)
   isExtensionMethod: true
   parent: EvilDICOM.CV.Extensions.MatrixExtensions
   langs:
@@ -106,13 +100,13 @@ items:
   - vb
   name: WindowAndLevel(Mat, Double, Double)
   nameWithType: MatrixExtensions.WindowAndLevel(Mat, Double, Double)
-  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(OpenCvSharp.Mat, System.Double, System.Double)
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(Mat, System.Double, System.Double)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: WindowAndLevel
     path: ../EvilDICOM.CV/Extensions/MatrixExtensions.cs
     startLine: 26
@@ -123,13 +117,13 @@ items:
     content: public static Mat WindowAndLevel(this Mat mat, double level, double window)
     parameters:
     - id: mat
-      type: OpenCvSharp.Mat
+      type: Mat
     - id: level
       type: System.Double
     - id: window
       type: System.Double
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: >-
       <ExtensionAttribute>
 
@@ -141,9 +135,9 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(OpenCvSharp.Mat,EvilDICOM.CV.Helpers.WindowLevelPreset)
-  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(OpenCvSharp.Mat,EvilDICOM.CV.Helpers.WindowLevelPreset)
-  id: WindowAndLevel(OpenCvSharp.Mat,EvilDICOM.CV.Helpers.WindowLevelPreset)
+- uid: EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(Mat,EvilDICOM.CV.Helpers.WindowLevelPreset)
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(Mat,EvilDICOM.CV.Helpers.WindowLevelPreset)
+  id: WindowAndLevel(Mat,EvilDICOM.CV.Helpers.WindowLevelPreset)
   isExtensionMethod: true
   parent: EvilDICOM.CV.Extensions.MatrixExtensions
   langs:
@@ -151,13 +145,13 @@ items:
   - vb
   name: WindowAndLevel(Mat, WindowLevelPreset)
   nameWithType: MatrixExtensions.WindowAndLevel(Mat, WindowLevelPreset)
-  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(OpenCvSharp.Mat, EvilDICOM.CV.Helpers.WindowLevelPreset)
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel(Mat, EvilDICOM.CV.Helpers.WindowLevelPreset)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: WindowAndLevel
     path: ../EvilDICOM.CV/Extensions/MatrixExtensions.cs
     startLine: 54
@@ -168,11 +162,11 @@ items:
     content: public static Mat WindowAndLevel(this Mat mat, WindowLevelPreset preset)
     parameters:
     - id: mat
-      type: OpenCvSharp.Mat
+      type: Mat
     - id: preset
       type: EvilDICOM.CV.Helpers.WindowLevelPreset
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: >-
       <ExtensionAttribute>
 
@@ -184,9 +178,9 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Extensions.MatrixExtensions.HeatMap(OpenCvSharp.Mat)
-  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.HeatMap(OpenCvSharp.Mat)
-  id: HeatMap(OpenCvSharp.Mat)
+- uid: EvilDICOM.CV.Extensions.MatrixExtensions.HeatMap(Mat)
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.HeatMap(Mat)
+  id: HeatMap(Mat)
   isExtensionMethod: true
   parent: EvilDICOM.CV.Extensions.MatrixExtensions
   langs:
@@ -194,13 +188,13 @@ items:
   - vb
   name: HeatMap(Mat)
   nameWithType: MatrixExtensions.HeatMap(Mat)
-  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.HeatMap(OpenCvSharp.Mat)
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.HeatMap(Mat)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: HeatMap
     path: ../EvilDICOM.CV/Extensions/MatrixExtensions.cs
     startLine: 59
@@ -211,9 +205,9 @@ items:
     content: public static Mat HeatMap(this Mat mat)
     parameters:
     - id: mat
-      type: OpenCvSharp.Mat
+      type: Mat
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: >-
       <ExtensionAttribute>
 
@@ -225,9 +219,9 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Extensions.MatrixExtensions.Rotate90(OpenCvSharp.Mat)
-  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.Rotate90(OpenCvSharp.Mat)
-  id: Rotate90(OpenCvSharp.Mat)
+- uid: EvilDICOM.CV.Extensions.MatrixExtensions.Rotate90(Mat)
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.Rotate90(Mat)
+  id: Rotate90(Mat)
   isExtensionMethod: true
   parent: EvilDICOM.CV.Extensions.MatrixExtensions
   langs:
@@ -235,13 +229,13 @@ items:
   - vb
   name: Rotate90(Mat)
   nameWithType: MatrixExtensions.Rotate90(Mat)
-  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.Rotate90(OpenCvSharp.Mat)
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.Rotate90(Mat)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Rotate90
     path: ../EvilDICOM.CV/Extensions/MatrixExtensions.cs
     startLine: 66
@@ -252,9 +246,9 @@ items:
     content: public static Mat Rotate90(this Mat mat)
     parameters:
     - id: mat
-      type: OpenCvSharp.Mat
+      type: Mat
     return:
-      type: OpenCvSharp.Mat
+      type: Mat
     content.vb: >-
       <ExtensionAttribute>
 
@@ -282,7 +276,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Find2DIsodoseLines
     path: ../EvilDICOM.CV/Extensions/MatrixExtensions.cs
     startLine: 74
@@ -312,9 +306,9 @@ items:
   - Shared
   fullName.vb: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.Image.Matrix, EvilDICOM.CV.RT.IsodoseLevel())
   name.vb: Find2DIsodoseLines(Matrix, IsodoseLevel())
-- uid: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLine(OpenCvSharp.Mat,EvilDICOM.CV.RT.IsodoseLevel)
-  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLine(OpenCvSharp.Mat,EvilDICOM.CV.RT.IsodoseLevel)
-  id: Find2DIsodoseLine(OpenCvSharp.Mat,EvilDICOM.CV.RT.IsodoseLevel)
+- uid: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLine(Mat,EvilDICOM.CV.RT.IsodoseLevel)
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLine(Mat,EvilDICOM.CV.RT.IsodoseLevel)
+  id: Find2DIsodoseLine(Mat,EvilDICOM.CV.RT.IsodoseLevel)
   isExtensionMethod: true
   parent: EvilDICOM.CV.Extensions.MatrixExtensions
   langs:
@@ -322,13 +316,13 @@ items:
   - vb
   name: Find2DIsodoseLine(Mat, IsodoseLevel)
   nameWithType: MatrixExtensions.Find2DIsodoseLine(Mat, IsodoseLevel)
-  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLine(OpenCvSharp.Mat, EvilDICOM.CV.RT.IsodoseLevel)
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLine(Mat, EvilDICOM.CV.RT.IsodoseLevel)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Find2DIsodoseLine
     path: ../EvilDICOM.CV/Extensions/MatrixExtensions.cs
     startLine: 116
@@ -339,11 +333,11 @@ items:
     content: public static Point[][] Find2DIsodoseLine(this Mat mat, IsodoseLevel level)
     parameters:
     - id: mat
-      type: OpenCvSharp.Mat
+      type: Mat
     - id: level
       type: EvilDICOM.CV.RT.IsodoseLevel
     return:
-      type: OpenCvSharp.Point[][]
+      type: Point[][]
     content.vb: >-
       <ExtensionAttribute>
 
@@ -355,9 +349,9 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Extensions.MatrixExtensions.FindZeroLevelContours(OpenCvSharp.Mat,System.Func{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3},System.Int32)
-  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.FindZeroLevelContours(OpenCvSharp.Mat,System.Func{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3},System.Int32)
-  id: FindZeroLevelContours(OpenCvSharp.Mat,System.Func{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3},System.Int32)
+- uid: EvilDICOM.CV.Extensions.MatrixExtensions.FindZeroLevelContours(Mat,Func{Vector3,Vector3},System.Int32)
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.FindZeroLevelContours(Mat,Func{Vector3,Vector3},System.Int32)
+  id: FindZeroLevelContours(Mat,Func{Vector3,Vector3},System.Int32)
   isExtensionMethod: true
   parent: EvilDICOM.CV.Extensions.MatrixExtensions
   langs:
@@ -365,13 +359,13 @@ items:
   - vb
   name: FindZeroLevelContours(Mat, Func<Vector3, Vector3>, Int32)
   nameWithType: MatrixExtensions.FindZeroLevelContours(Mat, Func<Vector3, Vector3>, Int32)
-  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.FindZeroLevelContours(OpenCvSharp.Mat, System.Func<EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3>, System.Int32)
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.FindZeroLevelContours(Mat, Func<Vector3, Vector3>, System.Int32)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: FindZeroLevelContours
     path: ../EvilDICOM.CV/Extensions/MatrixExtensions.cs
     startLine: 126
@@ -382,9 +376,9 @@ items:
     content: public static SliceContourMeta FindZeroLevelContours(this Mat mat, Func<Vector3, Vector3> imageToPatientFunc, int z)
     parameters:
     - id: mat
-      type: OpenCvSharp.Mat
+      type: Mat
     - id: imageToPatientFunc
-      type: System.Func{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3}
+      type: Func{Vector3,Vector3}
     - id: z
       type: System.Int32
     return:
@@ -401,7 +395,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: EvilDICOM.CV.Extensions.MatrixExtensions.FindZeroLevelContours(OpenCvSharp.Mat, System.Func(Of EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3), System.Int32)
+  fullName.vb: EvilDICOM.CV.Extensions.MatrixExtensions.FindZeroLevelContours(Mat, Func(Of Vector3, Vector3), System.Int32)
   name.vb: FindZeroLevelContours(Mat, Func(Of Vector3, Vector3), Int32)
 - uid: EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(EvilDICOM.CV.Image.Matrix,System.Double)
   commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.FindStructureContour(EvilDICOM.CV.Image.Matrix,System.Double)
@@ -419,7 +413,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: FindStructureContour
     path: ../EvilDICOM.CV/Extensions/MatrixExtensions.cs
     startLine: 170
@@ -465,7 +459,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ShowAllSlices
     path: ../EvilDICOM.CV/Extensions/MatrixExtensions.cs
     startLine: 210
@@ -504,7 +498,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ShowSDFMatrix
     path: ../EvilDICOM.CV/Extensions/MatrixExtensions.cs
     startLine: 228
@@ -527,9 +521,9 @@ items:
   modifiers.vb:
   - Public
   - Shared
-- uid: EvilDICOM.CV.Extensions.MatrixExtensions.DrawAllContours(OpenCvSharp.Mat,OpenCvSharp.Point[][],EvilDICOM.CV.Drawing.StructureLook)
-  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.DrawAllContours(OpenCvSharp.Mat,OpenCvSharp.Point[][],EvilDICOM.CV.Drawing.StructureLook)
-  id: DrawAllContours(OpenCvSharp.Mat,OpenCvSharp.Point[][],EvilDICOM.CV.Drawing.StructureLook)
+- uid: EvilDICOM.CV.Extensions.MatrixExtensions.DrawAllContours(Mat,Point[][],EvilDICOM.CV.Drawing.StructureLook)
+  commentId: M:EvilDICOM.CV.Extensions.MatrixExtensions.DrawAllContours(Mat,Point[][],EvilDICOM.CV.Drawing.StructureLook)
+  id: DrawAllContours(Mat,Point[][],EvilDICOM.CV.Drawing.StructureLook)
   isExtensionMethod: true
   parent: EvilDICOM.CV.Extensions.MatrixExtensions
   langs:
@@ -537,13 +531,13 @@ items:
   - vb
   name: DrawAllContours(Mat, Point[][], StructureLook)
   nameWithType: MatrixExtensions.DrawAllContours(Mat, Point[][], StructureLook)
-  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.DrawAllContours(OpenCvSharp.Mat, OpenCvSharp.Point[][], EvilDICOM.CV.Drawing.StructureLook)
+  fullName: EvilDICOM.CV.Extensions.MatrixExtensions.DrawAllContours(Mat, Point[][], EvilDICOM.CV.Drawing.StructureLook)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Extensions/MatrixExtensions.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DrawAllContours
     path: ../EvilDICOM.CV/Extensions/MatrixExtensions.cs
     startLine: 258
@@ -554,9 +548,9 @@ items:
     content: public static void DrawAllContours(this Mat mat, Point[][] ctrs, StructureLook look)
     parameters:
     - id: mat
-      type: OpenCvSharp.Mat
+      type: Mat
     - id: ctrs
-      type: OpenCvSharp.Point[][]
+      type: Point[][]
     - id: look
       type: EvilDICOM.CV.Drawing.StructureLook
     content.vb: >-
@@ -571,7 +565,7 @@ items:
   modifiers.vb:
   - Public
   - Shared
-  fullName.vb: EvilDICOM.CV.Extensions.MatrixExtensions.DrawAllContours(OpenCvSharp.Mat, OpenCvSharp.Point()(), EvilDICOM.CV.Drawing.StructureLook)
+  fullName.vb: EvilDICOM.CV.Extensions.MatrixExtensions.DrawAllContours(Mat, Point()(), EvilDICOM.CV.Drawing.StructureLook)
   name.vb: DrawAllContours(Mat, Point()(), StructureLook)
 references:
 - uid: EvilDICOM.CV.Extensions
@@ -586,285 +580,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -876,13 +591,11 @@ references:
   name: To2DDoubleArray
   nameWithType: MatrixExtensions.To2DDoubleArray
   fullName: EvilDICOM.CV.Extensions.MatrixExtensions.To2DDoubleArray
-- uid: OpenCvSharp.Mat
-  commentId: T:OpenCvSharp.Mat
-  parent: OpenCvSharp
+- uid: Mat
   isExternal: true
   name: Mat
   nameWithType: Mat
-  fullName: OpenCvSharp.Mat
+  fullName: Mat
 - uid: System.Double[,]
   isExternal: true
   name: Double[,]
@@ -909,12 +622,6 @@ references:
   - name: (,)
     nameWithType: (,)
     fullName: (,)
-- uid: OpenCvSharp
-  commentId: N:OpenCvSharp
-  isExternal: true
-  name: OpenCvSharp
-  nameWithType: OpenCvSharp
-  fullName: OpenCvSharp
 - uid: EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel*
   commentId: Overload:EvilDICOM.CV.Extensions.MatrixExtensions.WindowAndLevel
   name: WindowAndLevel
@@ -1023,19 +730,19 @@ references:
   name: IsodoseLevel
   nameWithType: IsodoseLevel
   fullName: EvilDICOM.CV.RT.IsodoseLevel
-- uid: OpenCvSharp.Point[][]
+- uid: Point[][]
   isExternal: true
   name: Point[][]
   nameWithType: Point[][]
-  fullName: OpenCvSharp.Point[][]
+  fullName: Point[][]
   nameWithType.vb: Point()()
-  fullName.vb: OpenCvSharp.Point()()
+  fullName.vb: Point()()
   name.vb: Point()()
   spec.csharp:
-  - uid: OpenCvSharp.Point
+  - uid: Point
     name: Point
     nameWithType: Point
-    fullName: OpenCvSharp.Point
+    fullName: Point
     isExternal: true
   - name: '[]'
     nameWithType: '[]'
@@ -1044,10 +751,10 @@ references:
     nameWithType: '[]'
     fullName: '[]'
   spec.vb:
-  - uid: OpenCvSharp.Point
+  - uid: Point
     name: Point
     nameWithType: Point
-    fullName: OpenCvSharp.Point
+    fullName: Point
     isExternal: true
   - name: ()
     nameWithType: ()
@@ -1065,62 +772,61 @@ references:
   name: FindZeroLevelContours
   nameWithType: MatrixExtensions.FindZeroLevelContours
   fullName: EvilDICOM.CV.Extensions.MatrixExtensions.FindZeroLevelContours
-- uid: System.Func{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3}
-  commentId: T:System.Func{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3}
-  parent: System
-  definition: System.Func`2
+- uid: Func{Vector3,Vector3}
+  commentId: '!:Func{Vector3,Vector3}'
+  definition: Func`2
   name: Func<Vector3, Vector3>
   nameWithType: Func<Vector3, Vector3>
-  fullName: System.Func<EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3>
+  fullName: Func<Vector3, Vector3>
   nameWithType.vb: Func(Of Vector3, Vector3)
-  fullName.vb: System.Func(Of EvilDICOM.Core.Helpers.Vector3, EvilDICOM.Core.Helpers.Vector3)
+  fullName.vb: Func(Of Vector3, Vector3)
   name.vb: Func(Of Vector3, Vector3)
   spec.csharp:
-  - uid: System.Func`2
+  - uid: Func`2
     name: Func
     nameWithType: Func
-    fullName: System.Func
+    fullName: Func
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Func`2
+  - uid: Func`2
     name: Func
     nameWithType: Func
-    fullName: System.Func
+    fullName: Func
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: )
     nameWithType: )
@@ -1138,54 +844,54 @@ references:
   name: SliceContourMeta
   nameWithType: SliceContourMeta
   fullName: EvilDICOM.CV.RT.Meta.SliceContourMeta
-- uid: System.Func`2
-  commentId: T:System.Func`2
+- uid: Func`2
+  commentId: '!:Func`2'
   isExternal: true
-  name: Func<T, TResult>
-  nameWithType: Func<T, TResult>
-  fullName: System.Func<T, TResult>
-  nameWithType.vb: Func(Of T, TResult)
-  fullName.vb: System.Func(Of T, TResult)
-  name.vb: Func(Of T, TResult)
+  name: Func<, >
+  nameWithType: Func<, >
+  fullName: Func<, >
+  nameWithType.vb: Func(Of , )
+  fullName.vb: Func(Of , )
+  name.vb: Func(Of , )
   spec.csharp:
-  - uid: System.Func`2
+  - uid: Func`2
     name: Func
     nameWithType: Func
-    fullName: System.Func
+    fullName: Func
     isExternal: true
   - name: <
     nameWithType: <
     fullName: <
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: TResult
-    nameWithType: TResult
-    fullName: TResult
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: '>'
     nameWithType: '>'
     fullName: '>'
   spec.vb:
-  - uid: System.Func`2
+  - uid: Func`2
     name: Func
     nameWithType: Func
-    fullName: System.Func
+    fullName: Func
     isExternal: true
   - name: '(Of '
     nameWithType: '(Of '
     fullName: '(Of '
-  - name: T
-    nameWithType: T
-    fullName: T
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: ', '
     nameWithType: ', '
     fullName: ', '
-  - name: TResult
-    nameWithType: TResult
-    fullName: TResult
+  - name: ''
+    nameWithType: ''
+    fullName: ''
   - name: )
     nameWithType: )
     fullName: )

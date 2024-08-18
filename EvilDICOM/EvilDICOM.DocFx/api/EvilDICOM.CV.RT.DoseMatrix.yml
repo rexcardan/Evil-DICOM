@@ -7,7 +7,7 @@ items:
   children:
   - EvilDICOM.CV.RT.DoseMatrix.CalcDVH
   - EvilDICOM.CV.RT.DoseMatrix.Clone
-  - EvilDICOM.CV.RT.DoseMatrix.ConvertUnits(EvilDICOM.RT.Data.DoseUnit)
+  - EvilDICOM.CV.RT.DoseMatrix.ConvertUnits(DoseUnit)
   - EvilDICOM.CV.RT.DoseMatrix.DoseUnit
   - EvilDICOM.CV.RT.DoseMatrix.MaxDose
   - EvilDICOM.CV.RT.DoseMatrix.MaxDoseSlice
@@ -25,7 +25,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DoseMatrix
     path: ../EvilDICOM.CV/RT/DoseMatrix.cs
     startLine: 19
@@ -33,22 +33,19 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.RT
   syntax:
-    content: 'public class DoseMatrix : Matrix, IDisposable'
+    content: 'public class DoseMatrix : Matrix'
     content.vb: >-
       Public Class DoseMatrix
           Inherits Matrix
-          Implements IDisposable
   inheritance:
   - System.Object
   - EvilDICOM.CV.Image.Matrix
-  implements:
-  - System.IDisposable
   inheritedMembers:
   - EvilDICOM.CV.Image.Matrix.XRes
   - EvilDICOM.CV.Image.Matrix.YRes
   - EvilDICOM.CV.Image.Matrix.ZRes
   - EvilDICOM.CV.Image.Matrix.GetZPlaneBySlice(System.Int32)
-  - EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
+  - EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(Mat,System.Int32)
   - EvilDICOM.CV.Image.Matrix.CalculateZeroBoundaryVolumeCC
   - EvilDICOM.CV.Image.Matrix.ExcludeOutsideStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
   - EvilDICOM.CV.Image.Matrix.MaskToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
@@ -70,14 +67,14 @@ items:
   - EvilDICOM.CV.Image.Matrix.DimensionZ
   - EvilDICOM.CV.Image.Matrix.Origin
   - EvilDICOM.CV.Image.Matrix.PatientTransformMatrix
-  - EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.CV.Image.Matrix.IsInBounds(Vector3)
   - EvilDICOM.CV.Image.Matrix.GetPointValue(System.Double,System.Double,System.Double)
   - EvilDICOM.CV.Image.Matrix.GetValueByIndex(System.Int32,System.Int32,System.Int32)
   - EvilDICOM.CV.Image.Matrix.CropMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta,System.Double)
   - EvilDICOM.CV.Image.Matrix.ResampleMatrixToStructure(EvilDICOM.CV.RT.Meta.StructureMeta)
   - EvilDICOM.CV.Image.Matrix.PadZ(System.Int32)
-  - EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
-  - EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
+  - EvilDICOM.CV.Image.Matrix.GetPointValue(Vector3)
+  - EvilDICOM.CV.Image.Matrix.ImageToPatientTx(Vector3)
   - EvilDICOM.CV.Image.Matrix.CalculatePatientTransformMatrix
   - EvilDICOM.CV.Image.Matrix.GetImageGridPointsPatientCoordinates
   - EvilDICOM.CV.Image.Matrix.VolumeCC
@@ -87,13 +84,6 @@ items:
   - EvilDICOM.CV.Image.Matrix.MinMaxVal
   - EvilDICOM.CV.Image.Matrix.EmptyClone
   - EvilDICOM.CV.Image.Matrix.Dispose
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   extensionMethods:
   - EvilDICOM.CV.RT.DoseMatrix.EvilDICOM.CV.Extensions.DoseMatrixExtensions.ResampleToImage(EvilDICOM.CV.Image.ImageMatrix)
   - EvilDICOM.CV.Image.Matrix.EvilDICOM.CV.Extensions.MatrixExtensions.Find2DIsodoseLines(EvilDICOM.CV.RT.IsodoseLevel[])
@@ -121,7 +111,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MaxDose
     path: ../EvilDICOM.CV/RT/DoseMatrix.cs
     startLine: 23
@@ -156,7 +146,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: MaxDoseSlice
     path: ../EvilDICOM.CV/RT/DoseMatrix.cs
     startLine: 24
@@ -191,7 +181,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PlanUID
     path: ../EvilDICOM.CV/RT/DoseMatrix.cs
     startLine: 25
@@ -226,7 +216,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: SumType
     path: ../EvilDICOM.CV/RT/DoseMatrix.cs
     startLine: 26
@@ -237,7 +227,7 @@ items:
     content: public DoseSumType SumType { get; set; }
     parameters: []
     return:
-      type: EvilDICOM.RT.Data.DoseSumType
+      type: DoseSumType
     content.vb: Public Property SumType As DoseSumType
   overload: EvilDICOM.CV.RT.DoseMatrix.SumType*
   modifiers.csharp:
@@ -261,7 +251,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DoseUnit
     path: ../EvilDICOM.CV/RT/DoseMatrix.cs
     startLine: 27
@@ -272,7 +262,7 @@ items:
     content: public DoseUnit DoseUnit { get; set; }
     parameters: []
     return:
-      type: EvilDICOM.RT.Data.DoseUnit
+      type: DoseUnit
     content.vb: Public Property DoseUnit As DoseUnit
   overload: EvilDICOM.CV.RT.DoseMatrix.DoseUnit*
   modifiers.csharp:
@@ -296,7 +286,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: PrescriptionDoseGy
     path: ../EvilDICOM.CV/RT/DoseMatrix.cs
     startLine: 29
@@ -316,22 +306,22 @@ items:
   - set
   modifiers.vb:
   - Public
-- uid: EvilDICOM.CV.RT.DoseMatrix.ConvertUnits(EvilDICOM.RT.Data.DoseUnit)
-  commentId: M:EvilDICOM.CV.RT.DoseMatrix.ConvertUnits(EvilDICOM.RT.Data.DoseUnit)
-  id: ConvertUnits(EvilDICOM.RT.Data.DoseUnit)
+- uid: EvilDICOM.CV.RT.DoseMatrix.ConvertUnits(DoseUnit)
+  commentId: M:EvilDICOM.CV.RT.DoseMatrix.ConvertUnits(DoseUnit)
+  id: ConvertUnits(DoseUnit)
   parent: EvilDICOM.CV.RT.DoseMatrix
   langs:
   - csharp
   - vb
   name: ConvertUnits(DoseUnit)
   nameWithType: DoseMatrix.ConvertUnits(DoseUnit)
-  fullName: EvilDICOM.CV.RT.DoseMatrix.ConvertUnits(EvilDICOM.RT.Data.DoseUnit)
+  fullName: EvilDICOM.CV.RT.DoseMatrix.ConvertUnits(DoseUnit)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: ConvertUnits
     path: ../EvilDICOM.CV/RT/DoseMatrix.cs
     startLine: 31
@@ -342,7 +332,7 @@ items:
     content: public void ConvertUnits(DoseUnit desiredUnits)
     parameters:
     - id: desiredUnits
-      type: EvilDICOM.RT.Data.DoseUnit
+      type: DoseUnit
     content.vb: Public Sub ConvertUnits(desiredUnits As DoseUnit)
   overload: EvilDICOM.CV.RT.DoseMatrix.ConvertUnits*
   modifiers.csharp:
@@ -364,7 +354,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: CalcDVH
     path: ../EvilDICOM.CV/RT/DoseMatrix.cs
     startLine: 72
@@ -398,7 +388,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/RT/DoseMatrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Clone
     path: ../EvilDICOM.CV/RT/DoseMatrix.cs
     startLine: 89
@@ -434,13 +424,6 @@ references:
   name: Matrix
   nameWithType: Matrix
   fullName: EvilDICOM.CV.Image.Matrix
-- uid: System.IDisposable
-  commentId: T:System.IDisposable
-  parent: System
-  isExternal: true
-  name: IDisposable
-  nameWithType: IDisposable
-  fullName: System.IDisposable
 - uid: EvilDICOM.CV.Image.Matrix.XRes
   commentId: P:EvilDICOM.CV.Image.Matrix.XRes
   parent: EvilDICOM.CV.Image.Matrix
@@ -498,25 +481,25 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
-  commentId: M:EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
+- uid: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(Mat,System.Int32)
+  commentId: M:EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(Mat,System.Int32)
   parent: EvilDICOM.CV.Image.Matrix
   isExternal: true
   name: SetZPlaneBySlice(Mat, Int32)
   nameWithType: Matrix.SetZPlaneBySlice(Mat, Int32)
-  fullName: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat, System.Int32)
+  fullName: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(Mat, System.Int32)
   spec.csharp:
-  - uid: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
+  - uid: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(Mat,System.Int32)
     name: SetZPlaneBySlice
     nameWithType: Matrix.SetZPlaneBySlice
     fullName: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice
   - name: (
     nameWithType: (
     fullName: (
-  - uid: OpenCvSharp.Mat
+  - uid: Mat
     name: Mat
     nameWithType: Mat
-    fullName: OpenCvSharp.Mat
+    fullName: Mat
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -530,17 +513,17 @@ references:
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(OpenCvSharp.Mat,System.Int32)
+  - uid: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice(Mat,System.Int32)
     name: SetZPlaneBySlice
     nameWithType: Matrix.SetZPlaneBySlice
     fullName: EvilDICOM.CV.Image.Matrix.SetZPlaneBySlice
   - name: (
     nameWithType: (
     fullName: (
-  - uid: OpenCvSharp.Mat
+  - uid: Mat
     name: Mat
     nameWithType: Mat
-    fullName: OpenCvSharp.Mat
+    fullName: Mat
     isExternal: true
   - name: ', '
     nameWithType: ', '
@@ -926,41 +909,41 @@ references:
   name: PatientTransformMatrix
   nameWithType: Matrix.PatientTransformMatrix
   fullName: EvilDICOM.CV.Image.Matrix.PatientTransformMatrix
-- uid: EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
-  commentId: M:EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+- uid: EvilDICOM.CV.Image.Matrix.IsInBounds(Vector3)
+  commentId: M:EvilDICOM.CV.Image.Matrix.IsInBounds(Vector3)
   parent: EvilDICOM.CV.Image.Matrix
   isExternal: true
   name: IsInBounds(Vector3)
   nameWithType: Matrix.IsInBounds(Vector3)
-  fullName: EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+  fullName: EvilDICOM.CV.Image.Matrix.IsInBounds(Vector3)
   spec.csharp:
-  - uid: EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+  - uid: EvilDICOM.CV.Image.Matrix.IsInBounds(Vector3)
     name: IsInBounds
     nameWithType: Matrix.IsInBounds
     fullName: EvilDICOM.CV.Image.Matrix.IsInBounds
   - name: (
     nameWithType: (
     fullName: (
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: EvilDICOM.CV.Image.Matrix.IsInBounds(EvilDICOM.Core.Helpers.Vector3)
+  - uid: EvilDICOM.CV.Image.Matrix.IsInBounds(Vector3)
     name: IsInBounds
     nameWithType: Matrix.IsInBounds
     fullName: EvilDICOM.CV.Image.Matrix.IsInBounds
   - name: (
     nameWithType: (
     fullName: (
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: )
     nameWithType: )
@@ -1235,80 +1218,80 @@ references:
   - name: )
     nameWithType: )
     fullName: )
-- uid: EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
-  commentId: M:EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
+- uid: EvilDICOM.CV.Image.Matrix.GetPointValue(Vector3)
+  commentId: M:EvilDICOM.CV.Image.Matrix.GetPointValue(Vector3)
   parent: EvilDICOM.CV.Image.Matrix
   isExternal: true
   name: GetPointValue(Vector3)
   nameWithType: Matrix.GetPointValue(Vector3)
-  fullName: EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
+  fullName: EvilDICOM.CV.Image.Matrix.GetPointValue(Vector3)
   spec.csharp:
-  - uid: EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
+  - uid: EvilDICOM.CV.Image.Matrix.GetPointValue(Vector3)
     name: GetPointValue
     nameWithType: Matrix.GetPointValue
     fullName: EvilDICOM.CV.Image.Matrix.GetPointValue
   - name: (
     nameWithType: (
     fullName: (
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: EvilDICOM.CV.Image.Matrix.GetPointValue(EvilDICOM.Core.Helpers.Vector3)
+  - uid: EvilDICOM.CV.Image.Matrix.GetPointValue(Vector3)
     name: GetPointValue
     nameWithType: Matrix.GetPointValue
     fullName: EvilDICOM.CV.Image.Matrix.GetPointValue
   - name: (
     nameWithType: (
     fullName: (
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
-- uid: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
-  commentId: M:EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
+- uid: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(Vector3)
+  commentId: M:EvilDICOM.CV.Image.Matrix.ImageToPatientTx(Vector3)
   parent: EvilDICOM.CV.Image.Matrix
   isExternal: true
   name: ImageToPatientTx(Vector3)
   nameWithType: Matrix.ImageToPatientTx(Vector3)
-  fullName: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
+  fullName: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(Vector3)
   spec.csharp:
-  - uid: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
+  - uid: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(Vector3)
     name: ImageToPatientTx
     nameWithType: Matrix.ImageToPatientTx
     fullName: EvilDICOM.CV.Image.Matrix.ImageToPatientTx
   - name: (
     nameWithType: (
     fullName: (
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: )
     nameWithType: )
     fullName: )
   spec.vb:
-  - uid: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(EvilDICOM.Core.Helpers.Vector3)
+  - uid: EvilDICOM.CV.Image.Matrix.ImageToPatientTx(Vector3)
     name: ImageToPatientTx
     nameWithType: Matrix.ImageToPatientTx
     fullName: EvilDICOM.CV.Image.Matrix.ImageToPatientTx
   - name: (
     nameWithType: (
     fullName: (
-  - uid: EvilDICOM.Core.Helpers.Vector3
+  - uid: Vector3
     name: Vector3
     nameWithType: Vector3
-    fullName: EvilDICOM.Core.Helpers.Vector3
+    fullName: Vector3
     isExternal: true
   - name: )
     nameWithType: )
@@ -1624,285 +1607,6 @@ references:
     name: Dispose
     nameWithType: Matrix.Dispose
     fullName: EvilDICOM.CV.Image.Matrix.Dispose
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
   - name: (
     nameWithType: (
     fullName: (
@@ -2387,36 +2091,29 @@ references:
   name: SumType
   nameWithType: DoseMatrix.SumType
   fullName: EvilDICOM.CV.RT.DoseMatrix.SumType
-- uid: EvilDICOM.RT.Data.DoseSumType
-  commentId: T:EvilDICOM.RT.Data.DoseSumType
-  parent: EvilDICOM.RT.Data
+- uid: DoseSumType
+  commentId: '!:DoseSumType'
+  isExternal: true
   name: DoseSumType
   nameWithType: DoseSumType
-  fullName: EvilDICOM.RT.Data.DoseSumType
-- uid: EvilDICOM.RT.Data
-  commentId: N:EvilDICOM.RT.Data
-  name: EvilDICOM.RT.Data
-  nameWithType: EvilDICOM.RT.Data
-  fullName: EvilDICOM.RT.Data
+  fullName: DoseSumType
 - uid: EvilDICOM.CV.RT.DoseMatrix.DoseUnit*
   commentId: Overload:EvilDICOM.CV.RT.DoseMatrix.DoseUnit
   name: DoseUnit
   nameWithType: DoseMatrix.DoseUnit
   fullName: EvilDICOM.CV.RT.DoseMatrix.DoseUnit
-- uid: EvilDICOM.RT.Data.DoseUnit
-  commentId: T:EvilDICOM.RT.Data.DoseUnit
-  parent: EvilDICOM.RT.Data
+- uid: DoseUnit
+  isExternal: true
   name: DoseUnit
   nameWithType: DoseUnit
-  fullName: EvilDICOM.RT.Data.DoseUnit
+  fullName: DoseUnit
 - uid: EvilDICOM.CV.RT.DoseMatrix.PrescriptionDoseGy*
   commentId: Overload:EvilDICOM.CV.RT.DoseMatrix.PrescriptionDoseGy
   name: PrescriptionDoseGy
   nameWithType: DoseMatrix.PrescriptionDoseGy
   fullName: EvilDICOM.CV.RT.DoseMatrix.PrescriptionDoseGy
 - uid: System.Nullable{System.Double}
-  commentId: T:System.Nullable{System.Double}
-  parent: System
+  commentId: '!:System.Nullable{System.Double}'
   definition: System.Nullable`1
   name: Nullable<Double>
   nameWithType: Nullable<Double>

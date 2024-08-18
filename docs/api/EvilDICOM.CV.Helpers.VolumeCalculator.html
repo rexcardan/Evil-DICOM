@@ -84,35 +84,11 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">VolumeCalculator</span></div>
               </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:EvilDICOM.CV.Helpers</h6>
               <h6><strong>Assembly</strong>:EvilDICOM.CV.dll</h6>
               <h5 id="_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class VolumeCalculator</code></pre>
+                <pre><code class="lang-csharp hljs">public class VolumeCalculator : object</code></pre>
               </div>
               <h3 id="methods">Methods
               </h3>
@@ -120,7 +96,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Helpers/VolumeCalculator.cs/#L17">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.VolumeCalculator.CalculateVolume(System.Collections.Generic.List{EvilDICOM.CV.RT.Meta.SliceContourMeta})">CalculateVolume(List&lt;SliceContourMeta&gt;)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.VolumeCalculator.CalculateVolume(List{EvilDICOM.CV.RT.Meta.SliceContourMeta})">CalculateVolume(List&lt;SliceContourMeta&gt;)</h4>
               <div class="markdown level1 summary"><p>Calculates the volume in cubic centimeters of a structure using slice contours</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -139,7 +115,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<a class="xref" href="EvilDICOM.CV.RT.Meta.SliceContourMeta.html">SliceContourMeta</a>&gt;</td>
+                    <td><span class="xref">List</span>&lt;<a class="xref" href="EvilDICOM.CV.RT.Meta.SliceContourMeta.html">SliceContourMeta</a>&gt;</td>
                     <td><em>sliceContours</em></td>
                     <td><p>the contours for all slices of a structure</p>
 </td>
@@ -166,7 +142,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Helpers/VolumeCalculator.cs/#L39">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.VolumeCalculator.CalculateVolume(System.Collections.Generic.List{System.Double},System.Double)">CalculateVolume(List&lt;Double&gt;, Double)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.VolumeCalculator.CalculateVolume(List{System.Double},System.Double)">CalculateVolume(List&lt;Double&gt;, Double)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -184,7 +160,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">System.Collections.Generic.List</span>&lt;<span class="xref">System.Double</span>&gt;</td>
+                    <td><span class="xref">List</span>&lt;<span class="xref">System.Double</span>&gt;</td>
                     <td><em>areas</em></td>
                     <td></td>
                   </tr>

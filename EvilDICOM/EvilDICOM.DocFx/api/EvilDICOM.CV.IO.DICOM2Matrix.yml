@@ -5,7 +5,7 @@ items:
   id: DICOM2Matrix
   parent: EvilDICOM.CV.IO
   children:
-  - EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix,EvilDICOM.Core.DICOMObject)
+  - EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix,DICOMObject)
   langs:
   - csharp
   - vb
@@ -17,7 +17,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/IO/DICOM2Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: DICOM2Matrix
     path: ../EvilDICOM.CV/IO/DICOM2Matrix.cs
     startLine: 12
@@ -25,43 +25,37 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.IO
   syntax:
-    content: public class DICOM2Matrix
-    content.vb: Public Class DICOM2Matrix
+    content: 'public class DICOM2Matrix : object'
+    content.vb: >-
+      Public Class DICOM2Matrix
+          Inherits Object
   inheritance:
   - System.Object
   derivedClasses:
   - EvilDICOM.CV.IO.DICOM2DoseMatrix
   - EvilDICOM.CV.IO.DICOM2ImageMatrix
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
   modifiers.vb:
   - Public
   - Class
-- uid: EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix,EvilDICOM.Core.DICOMObject)
-  commentId: M:EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix,EvilDICOM.Core.DICOMObject)
-  id: FillMetadata(EvilDICOM.CV.Image.Matrix,EvilDICOM.Core.DICOMObject)
+- uid: EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix,DICOMObject)
+  commentId: M:EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix,DICOMObject)
+  id: FillMetadata(EvilDICOM.CV.Image.Matrix,DICOMObject)
   parent: EvilDICOM.CV.IO.DICOM2Matrix
   langs:
   - csharp
   - vb
   name: FillMetadata(Matrix, DICOMObject)
   nameWithType: DICOM2Matrix.FillMetadata(Matrix, DICOMObject)
-  fullName: EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix, EvilDICOM.Core.DICOMObject)
+  fullName: EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata(EvilDICOM.CV.Image.Matrix, DICOMObject)
   type: Method
   source:
     remote:
       path: EvilDICOM/EvilDICOM.CV/IO/DICOM2Matrix.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: FillMetadata
     path: ../EvilDICOM.CV/IO/DICOM2Matrix.cs
     startLine: 14
@@ -74,7 +68,7 @@ items:
     - id: mat
       type: EvilDICOM.CV.Image.Matrix
     - id: dcm
-      type: EvilDICOM.Core.DICOMObject
+      type: DICOMObject
     content.vb: Protected Shared Sub FillMetadata(mat As Matrix, dcm As DICOMObject)
   overload: EvilDICOM.CV.IO.DICOM2Matrix.FillMetadata*
   modifiers.csharp:
@@ -96,285 +90,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -392,19 +107,13 @@ references:
   name: Matrix
   nameWithType: Matrix
   fullName: EvilDICOM.CV.Image.Matrix
-- uid: EvilDICOM.Core.DICOMObject
-  commentId: T:EvilDICOM.Core.DICOMObject
-  parent: EvilDICOM.Core
+- uid: DICOMObject
+  isExternal: true
   name: DICOMObject
   nameWithType: DICOMObject
-  fullName: EvilDICOM.Core.DICOMObject
+  fullName: DICOMObject
 - uid: EvilDICOM.CV.Image
   commentId: N:EvilDICOM.CV.Image
   name: EvilDICOM.CV.Image
   nameWithType: EvilDICOM.CV.Image
   fullName: EvilDICOM.CV.Image
-- uid: EvilDICOM.Core
-  commentId: N:EvilDICOM.Core
-  name: EvilDICOM.Core
-  nameWithType: EvilDICOM.Core
-  fullName: EvilDICOM.Core

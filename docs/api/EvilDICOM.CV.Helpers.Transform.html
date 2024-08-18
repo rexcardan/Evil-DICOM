@@ -84,35 +84,11 @@
                   <div class="level0"><span class="xref">System.Object</span></div>
                   <div class="level1"><span class="xref">Transform</span></div>
               </div>
-              <div class="inheritedMembers">
-                <h5>Inherited Members</h5>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.Equals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetHashCode()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.GetType()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.MemberwiseClone()</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ReferenceEquals(System.Object, System.Object)</span>
-                </div>
-                <div>
-                  <span class="xref">System.Object.ToString()</span>
-                </div>
-              </div>
               <h6><strong>Namespace</strong>:EvilDICOM.CV.Helpers</h6>
               <h6><strong>Assembly</strong>:EvilDICOM.CV.dll</h6>
               <h5 id="_syntax">Syntax</h5>
               <div class="codewrapper">
-                <pre><code class="lang-csharp hljs">public class Transform</code></pre>
+                <pre><code class="lang-csharp hljs">public class Transform : object</code></pre>
               </div>
               <h3 id="methods">Methods
               </h3>
@@ -120,7 +96,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs/#L125">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.Transform.BEVTransform(System.Double,System.Double,System.Double,OpenCvSharp.Mat)">BEVTransform(Double, Double, Double, Mat)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.Transform.BEVTransform(System.Double,System.Double,System.Double,Mat)">BEVTransform(Double, Double, Double, Mat)</h4>
               <div class="markdown level1 summary"><p>Provides the transform from </p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -157,7 +133,7 @@
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td><em>dicomToIEC</em></td>
                     <td></td>
                   </tr>
@@ -173,7 +149,7 @@
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -182,7 +158,7 @@
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs/#L22">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.Transform.DICOM2IEC(EvilDICOM.Core.Enums.Orientation)">DICOM2IEC(Orientation)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.Transform.DICOM2IEC(Orientation)">DICOM2IEC(Orientation)</h4>
               <div class="markdown level1 summary"><p>Provides the transformation from patient DICOM coordinates to IEC coordinates. Useful for rendering
 structures.</p>
 </div>
@@ -202,7 +178,7 @@ structures.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="EvilDICOM.Core.Enums.Orientation.html">Orientation</a></td>
+                    <td><span class="xref">Orientation</span></td>
                     <td><em>orient</em></td>
                     <td></td>
                   </tr>
@@ -218,7 +194,7 @@ structures.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+                    <td><span class="xref">Mat</span>&lt;<span class="xref">System.Single</span>&gt;</td>
                     <td><p>4x4 transformation matrix</p>
 </td>
                   </tr>
@@ -228,7 +204,7 @@ structures.</p>
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs/#L155">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.Transform.DICOM2Isocenter(EvilDICOM.Core.Enums.Orientation,OpenCvSharp.Point3f)">DICOM2Isocenter(Orientation, Point3f)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.Transform.DICOM2Isocenter(Orientation,Point3f)">DICOM2Isocenter(Orientation, Point3f)</h4>
               <div class="markdown level1 summary"><p>Provides the transformation from patient DICOM coordinates to IEC coordinates, adjusted for the isocenter position.
 Useful for rendering structures.</p>
 </div>
@@ -248,13 +224,13 @@ Useful for rendering structures.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="EvilDICOM.Core.Enums.Orientation.html">Orientation</a></td>
+                    <td><span class="xref">Orientation</span></td>
                     <td><em>orient</em></td>
                     <td><p>patient orienation</p>
 </td>
                   </tr>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Point3f</span></td>
+                    <td><span class="xref">Point3f</span></td>
                     <td><em>iso</em></td>
                     <td><p>isocenter position</p>
 </td>
@@ -271,7 +247,7 @@ Useful for rendering structures.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+                    <td><span class="xref">Mat</span>&lt;<span class="xref">System.Single</span>&gt;</td>
                     <td><p>4x4 transformation matrix</p>
 </td>
                   </tr>
@@ -315,7 +291,7 @@ Useful for rendering structures.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span></td>
+                    <td><span class="xref">Mat</span></td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -324,7 +300,7 @@ Useful for rendering structures.</p>
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs/#L100">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.Transform.IECToDICOM(EvilDICOM.Core.Enums.Orientation)">IECToDICOM(Orientation)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.Transform.IECToDICOM(Orientation)">IECToDICOM(Orientation)</h4>
               <div class="markdown level1 summary"><p>Provides the transformation from IEC coordinates to patient DICOM coordinates. Useful for rendering
 structures.</p>
 </div>
@@ -344,7 +320,7 @@ structures.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="EvilDICOM.Core.Enums.Orientation.html">Orientation</a></td>
+                    <td><span class="xref">Orientation</span></td>
                     <td><em>orient</em></td>
                     <td></td>
                   </tr>
@@ -360,7 +336,7 @@ structures.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+                    <td><span class="xref">Mat</span>&lt;<span class="xref">System.Single</span>&gt;</td>
                     <td><p>4x4 transformation matrix</p>
 </td>
                   </tr>
@@ -370,7 +346,7 @@ structures.</p>
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs/#L86">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.Transform.Iso2DICOM(EvilDICOM.Core.Enums.Orientation,OpenCvSharp.Point3f)">Iso2DICOM(Orientation, Point3f)</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.Transform.Iso2DICOM(Orientation,Point3f)">Iso2DICOM(Orientation, Point3f)</h4>
               <div class="markdown level1 summary"></div>
               <div class="markdown level1 conceptual"></div>
               <h5 class="decalaration">Declaration</h5>
@@ -388,12 +364,12 @@ structures.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="EvilDICOM.Core.Enums.Orientation.html">Orientation</a></td>
+                    <td><span class="xref">Orientation</span></td>
                     <td><em>orient</em></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Point3f</span></td>
+                    <td><span class="xref">Point3f</span></td>
                     <td><em>iso</em></td>
                     <td></td>
                   </tr>
@@ -409,7 +385,7 @@ structures.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><span class="xref">OpenCvSharp.Mat</span>&lt;<span class="xref">System.Single</span>&gt;</td>
+                    <td><span class="xref">Mat</span>&lt;<span class="xref">System.Single</span>&gt;</td>
                     <td></td>
                   </tr>
                 </tbody>
@@ -418,7 +394,7 @@ structures.</p>
               <span class="small pull-right mobile-hide">
                 <a href="https://github.com/rexcardan/Evil-DICOM/blob/master/EvilDICOM/EvilDICOM.CV/Helpers/Transform.cs/#L174">View Source</a>
               </span>
-              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.Transform.TransformOffset(EvilDICOM.Core.Helpers.Vector3,System.ValueTuple{EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3,EvilDICOM.Core.Helpers.Vector3})">TransformOffset(Vector3, (Vector3 xDir, Vector3 yDir, Vector3 zDir))</h4>
+              <h4 id="methods" data-uid="EvilDICOM.CV.Helpers.Transform.TransformOffset(Vector3,System.ValueTuple{Vector3,Vector3,Vector3})">TransformOffset(Vector3, (Vector3 xDir, Vector3 yDir, Vector3 zDir))</h4>
               <div class="markdown level1 summary"><p>Transforms a vector offset into a new coordinate system defined by xDir, yDir, and zDir</p>
 </div>
               <div class="markdown level1 conceptual"></div>
@@ -437,12 +413,12 @@ structures.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a></td>
+                    <td><span class="xref">Vector3</span></td>
                     <td><em>offset</em></td>
                     <td></td>
                   </tr>
                   <tr>
-                    <td><span class="xref">System.ValueTuple</span>&lt;<a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a>, <a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a>, <a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a>&gt;</td>
+                    <td><span class="xref">System.ValueTuple</span>&lt;<span class="xref">Vector3</span>, <span class="xref">Vector3</span>, <span class="xref">Vector3</span>&gt;</td>
                     <td><em>imageOrientation</em></td>
                     <td></td>
                   </tr>
@@ -458,7 +434,7 @@ structures.</p>
                 </thead>
                 <tbody>
                   <tr>
-                    <td><a class="xref" href="EvilDICOM.Core.Helpers.Vector3.html">Vector3</a></td>
+                    <td><span class="xref">Vector3</span></td>
                     <td></td>
                   </tr>
                 </tbody>

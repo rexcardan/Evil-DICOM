@@ -19,7 +19,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Slicer3D.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Slicer3D
     path: ../EvilDICOM.CV/Image/Slicer3D.cs
     startLine: 11
@@ -27,18 +27,12 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.Image
   syntax:
-    content: public class Slicer3D
-    content.vb: Public Class Slicer3D
+    content: 'public class Slicer3D : object'
+    content.vb: >-
+      Public Class Slicer3D
+          Inherits Object
   inheritance:
   - System.Object
-  inheritedMembers:
-  - System.Object.Equals(System.Object)
-  - System.Object.Equals(System.Object,System.Object)
-  - System.Object.GetHashCode
-  - System.Object.GetType
-  - System.Object.MemberwiseClone
-  - System.Object.ReferenceEquals(System.Object,System.Object)
-  - System.Object.ToString
   modifiers.csharp:
   - public
   - class
@@ -60,7 +54,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Slicer3D.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetZPlane
     path: ../EvilDICOM.CV/Image/Slicer3D.cs
     startLine: 13
@@ -68,7 +62,7 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.Image
   syntax:
-    content: public static Mat GetZPlane(IMatrix _mat, double z, double xiScale = 1, double yiScale = 1)
+    content: public static Mat GetZPlane(IMatrix _mat, double z, double xiScale = null, double yiScale = null)
     parameters:
     - id: _mat
       type: EvilDICOM.CV.Interfaces.IMatrix
@@ -79,8 +73,8 @@ items:
     - id: yiScale
       type: System.Double
     return:
-      type: OpenCvSharp.Mat
-    content.vb: Public Shared Function GetZPlane(_mat As IMatrix, z As Double, xiScale As Double = 1, yiScale As Double = 1) As Mat
+      type: Mat
+    content.vb: Public Shared Function GetZPlane(_mat As IMatrix, z As Double, xiScale As Double = Nothing, yiScale As Double = Nothing) As Mat
   overload: EvilDICOM.CV.Image.Slicer3D.GetZPlane*
   modifiers.csharp:
   - public
@@ -103,7 +97,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Slicer3D.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetXPlane
     path: ../EvilDICOM.CV/Image/Slicer3D.cs
     startLine: 52
@@ -111,7 +105,7 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.Image
   syntax:
-    content: public static Mat GetXPlane(IMatrix _mat, double xPositionMM, double xiScale = 1, double yiScale = 1)
+    content: public static Mat GetXPlane(IMatrix _mat, double xPositionMM, double xiScale = null, double yiScale = null)
     parameters:
     - id: _mat
       type: EvilDICOM.CV.Interfaces.IMatrix
@@ -122,8 +116,8 @@ items:
     - id: yiScale
       type: System.Double
     return:
-      type: OpenCvSharp.Mat
-    content.vb: Public Shared Function GetXPlane(_mat As IMatrix, xPositionMM As Double, xiScale As Double = 1, yiScale As Double = 1) As Mat
+      type: Mat
+    content.vb: Public Shared Function GetXPlane(_mat As IMatrix, xPositionMM As Double, xiScale As Double = Nothing, yiScale As Double = Nothing) As Mat
   overload: EvilDICOM.CV.Image.Slicer3D.GetXPlane*
   modifiers.csharp:
   - public
@@ -146,7 +140,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM.CV/Image/Slicer3D.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: GetYPlane
     path: ../EvilDICOM.CV/Image/Slicer3D.cs
     startLine: 97
@@ -154,7 +148,7 @@ items:
   - EvilDICOM.CV
   namespace: EvilDICOM.CV.Image
   syntax:
-    content: public static Mat GetYPlane(IMatrix _mat, double yPositionMM, double xiScale = 1, double yiScale = 1)
+    content: public static Mat GetYPlane(IMatrix _mat, double yPositionMM, double xiScale = null, double yiScale = null)
     parameters:
     - id: _mat
       type: EvilDICOM.CV.Interfaces.IMatrix
@@ -165,8 +159,8 @@ items:
     - id: yiScale
       type: System.Double
     return:
-      type: OpenCvSharp.Mat
-    content.vb: Public Shared Function GetYPlane(_mat As IMatrix, yPositionMM As Double, xiScale As Double = 1, yiScale As Double = 1) As Mat
+      type: Mat
+    content.vb: Public Shared Function GetYPlane(_mat As IMatrix, yPositionMM As Double, xiScale As Double = Nothing, yiScale As Double = Nothing) As Mat
   overload: EvilDICOM.CV.Image.Slicer3D.GetYPlane*
   modifiers.csharp:
   - public
@@ -187,285 +181,6 @@ references:
   name: Object
   nameWithType: Object
   fullName: System.Object
-- uid: System.Object.Equals(System.Object)
-  commentId: M:System.Object.Equals(System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object)
-  nameWithType: Object.Equals(Object)
-  fullName: System.Object.Equals(System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.Equals(System.Object,System.Object)
-  commentId: M:System.Object.Equals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: Equals(Object, Object)
-  nameWithType: Object.Equals(Object, Object)
-  fullName: System.Object.Equals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.Equals(System.Object,System.Object)
-    name: Equals
-    nameWithType: Object.Equals
-    fullName: System.Object.Equals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetHashCode
-  commentId: M:System.Object.GetHashCode
-  parent: System.Object
-  isExternal: true
-  name: GetHashCode()
-  nameWithType: Object.GetHashCode()
-  fullName: System.Object.GetHashCode()
-  spec.csharp:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetHashCode
-    name: GetHashCode
-    nameWithType: Object.GetHashCode
-    fullName: System.Object.GetHashCode
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.GetType
-  commentId: M:System.Object.GetType
-  parent: System.Object
-  isExternal: true
-  name: GetType()
-  nameWithType: Object.GetType()
-  fullName: System.Object.GetType()
-  spec.csharp:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.GetType
-    name: GetType
-    nameWithType: Object.GetType
-    fullName: System.Object.GetType
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.MemberwiseClone
-  commentId: M:System.Object.MemberwiseClone
-  parent: System.Object
-  isExternal: true
-  name: MemberwiseClone()
-  nameWithType: Object.MemberwiseClone()
-  fullName: System.Object.MemberwiseClone()
-  spec.csharp:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.MemberwiseClone
-    name: MemberwiseClone
-    nameWithType: Object.MemberwiseClone
-    fullName: System.Object.MemberwiseClone
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ReferenceEquals(System.Object,System.Object)
-  commentId: M:System.Object.ReferenceEquals(System.Object,System.Object)
-  parent: System.Object
-  isExternal: true
-  name: ReferenceEquals(Object, Object)
-  nameWithType: Object.ReferenceEquals(Object, Object)
-  fullName: System.Object.ReferenceEquals(System.Object, System.Object)
-  spec.csharp:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ReferenceEquals(System.Object,System.Object)
-    name: ReferenceEquals
-    nameWithType: Object.ReferenceEquals
-    fullName: System.Object.ReferenceEquals
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: ', '
-    nameWithType: ', '
-    fullName: ', '
-  - uid: System.Object
-    name: Object
-    nameWithType: Object
-    fullName: System.Object
-    isExternal: true
-  - name: )
-    nameWithType: )
-    fullName: )
-- uid: System.Object.ToString
-  commentId: M:System.Object.ToString
-  parent: System.Object
-  isExternal: true
-  name: ToString()
-  nameWithType: Object.ToString()
-  fullName: System.Object.ToString()
-  spec.csharp:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
-  spec.vb:
-  - uid: System.Object.ToString
-    name: ToString
-    nameWithType: Object.ToString
-    fullName: System.Object.ToString
-    isExternal: true
-  - name: (
-    nameWithType: (
-    fullName: (
-  - name: )
-    nameWithType: )
-    fullName: )
 - uid: System
   commentId: N:System
   isExternal: true
@@ -490,24 +205,16 @@ references:
   name: Double
   nameWithType: Double
   fullName: System.Double
-- uid: OpenCvSharp.Mat
-  commentId: T:OpenCvSharp.Mat
-  parent: OpenCvSharp
+- uid: Mat
   isExternal: true
   name: Mat
   nameWithType: Mat
-  fullName: OpenCvSharp.Mat
+  fullName: Mat
 - uid: EvilDICOM.CV.Interfaces
   commentId: N:EvilDICOM.CV.Interfaces
   name: EvilDICOM.CV.Interfaces
   nameWithType: EvilDICOM.CV.Interfaces
   fullName: EvilDICOM.CV.Interfaces
-- uid: OpenCvSharp
-  commentId: N:OpenCvSharp
-  isExternal: true
-  name: OpenCvSharp
-  nameWithType: OpenCvSharp
-  fullName: OpenCvSharp
 - uid: EvilDICOM.CV.Image.Slicer3D.GetXPlane*
   commentId: Overload:EvilDICOM.CV.Image.Slicer3D.GetXPlane
   name: GetXPlane

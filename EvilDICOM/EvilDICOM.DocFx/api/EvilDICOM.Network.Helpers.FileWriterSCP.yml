@@ -20,7 +20,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Helpers/FileWriterSCP.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: FileWriterSCP
     path: ../EvilDICOM/Network/Helpers/FileWriterSCP.cs
     startLine: 18
@@ -63,7 +63,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Helpers/FileWriterSCP.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: .ctor
     path: ../EvilDICOM/Network/Helpers/FileWriterSCP.cs
     startLine: 26
@@ -98,7 +98,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Helpers/FileWriterSCP.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: OrganizeByPatientId
     path: ../EvilDICOM/Network/Helpers/FileWriterSCP.cs
     startLine: 34
@@ -133,7 +133,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Helpers/FileWriterSCP.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Start
     path: ../EvilDICOM/Network/Helpers/FileWriterSCP.cs
     startLine: 36
@@ -141,13 +141,14 @@ items:
   - EvilDICOM
   namespace: EvilDICOM.Network.Helpers
   syntax:
-    content: public Task Start()
+    content: public async Task Start()
     return:
       type: System.Threading.Tasks.Task
     content.vb: Public Function Start As Task
   overload: EvilDICOM.Network.Helpers.FileWriterSCP.Start*
   modifiers.csharp:
   - public
+  - async
   modifiers.vb:
   - Public
 - uid: EvilDICOM.Network.Helpers.FileWriterSCP.Stop
@@ -165,7 +166,7 @@ items:
     remote:
       path: EvilDICOM/EvilDICOM/Network/Helpers/FileWriterSCP.cs
       branch: master
-      repo: https://github.com/rexcardan/Evil-DICOM.git
+      repo: https://github.com/rexcardan/Evil-DICOM
     id: Stop
     path: ../EvilDICOM/Network/Helpers/FileWriterSCP.cs
     startLine: 62
@@ -173,13 +174,14 @@ items:
   - EvilDICOM
   namespace: EvilDICOM.Network.Helpers
   syntax:
-    content: public Task Stop()
+    content: public async Task Stop()
     return:
       type: System.Threading.Tasks.Task
     content.vb: Public Function Stop As Task
   overload: EvilDICOM.Network.Helpers.FileWriterSCP.Stop*
   modifiers.csharp:
   - public
+  - async
   modifiers.vb:
   - Public
 references:
