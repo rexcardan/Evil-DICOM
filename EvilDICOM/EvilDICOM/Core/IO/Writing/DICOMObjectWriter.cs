@@ -5,14 +5,25 @@ using EvilDICOM.Core.Interfaces;
 using EvilDICOM.Core.Logging;
 using Microsoft.Extensions.Logging;
 using System;
+using System.Text;
 
 #endregion
 
 namespace EvilDICOM.Core.IO.Writing
 {
-    public class DICOMObjectWriter
+    public static class DICOMObjectWriter
     {
-        static ILogger _logger = EvilLogger.LoggerFactory.CreateLogger<DICOMObjectWriter>();
+
+        // Static constructor
+        static DICOMObjectWriter()
+        {
+            // This code will run only once, before any static members are accessed
+            #if NETCOREAPP || NET || NETSTANDARD
+             Encoding.RegisterProvider(CodePagesEncodingProvider.Instance);
+            #endif
+        }
+
+        static ILogger _logger = EvilLogger.LoggerFactory.CreateLogger<DICOMBinaryWriter>();
         public static bool IsFileMetaGroup(IDICOMElement el)
         {
             return el.Tag.Group == "0002";

@@ -1,6 +1,6 @@
 {
   "homepages": [],
-  "source_base_path": "C:/Users/rexca/Source/Repos/rexcardan/Evil-DICOM/EvilDICOM/EvilDICOM.DocFx",
+  "source_base_path": "C:/Users/rcardan/Source/Repos/rexcardan/Evil-DICOM/EvilDICOM/EvilDICOM.DocFx",
   "xrefmap": "xrefmap.yml",
   "files": [
     {
@@ -3784,6 +3784,9 @@
       "version": ""
     },
     {
+      "log_codes": [
+        "DuplicateUids"
+      ],
       "type": "ManagedReference",
       "source_relative_path": "api/EvilDICOM.Network.Messaging.SendStatus.yml",
       "output": {
@@ -4624,9 +4627,6 @@
       "version": ""
     },
     {
-      "log_codes": [
-        "DuplicateUids"
-      ],
       "type": "ManagedReference",
       "source_relative_path": "api/Evil_DICOM.Network.Messaging.SendStatus.yml",
       "output": {
